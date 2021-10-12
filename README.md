@@ -1,2 +1,2 @@
-# code-generator
+# Introduction
 Code Generator
