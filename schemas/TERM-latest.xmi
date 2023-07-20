@@ -1,0 +1,536 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xmi:XMI xmlns:uml='http://www.omg.org/spec/UML/20131001' xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:DSL_Customization='http://www.magicdraw.com/schemas/DSL_Customization.xmi' xmlns:openEHR_UML_profile='http://www.magicdraw.com/schemas/openEHR_UML_profile.xmi' xmlns:StandardProfile='http://www.omg.org/spec/UML/20131001/StandardProfile' xmlns:Validation_Profile='http://www.magicdraw.com/schemas/Validation_Profile.xmi' xmlns:MagicDraw_Profile='http://www.omg.org/spec/UML/20131001/MagicDrawProfile'>
+	<xmi:Documentation>
+		<xmi:exporter>MagicDraw UML</xmi:exporter>
+		<xmi:exporterVersion>19.0 v9</xmi:exporterVersion>
+	</xmi:Documentation>
+	<uml:Model xmi:type='uml:Model' xmi:id='eee_1045467100313_135436_1' name='Model'>
+		<ownedComment xmi:type='uml:Comment' xmi:id='_18_1beta_8c90288_1415101994820_370998_4336' body='Author:Thomas.&#10;Created:11/8/17 3:57 PM.&#10;Title:.&#10;Comment:.&#10;'>
+			<annotatedElement xmi:idref='eee_1045467100313_135436_1'/>
+		</ownedComment>
+		<packagedElement xmi:type='uml:Package' xmi:id='_18_5_2_83e026d_1510164009867_274129_5192' name='TERM'>
+			<packagedElement xmi:type='uml:Package' xmi:id='_18_5_2_83e026d_1510164020460_817914_5193' name='org'>
+				<packagedElement xmi:type='uml:Package' xmi:id='_18_5_2_83e026d_1510164028458_307392_5194' name='openehr'>
+					<packagedElement xmi:type='uml:Package' xmi:id='_19_0_3_8fe028d_1676201714967_554106_5170' name='term'>
+						<packagedElement xmi:type='uml:Package' xmi:id='_18_5_2_83e026d_1510167269870_162331_5281' name='terminology'>
+							<packagedElement xmi:type='uml:Class' xmi:id='_18_5_2_83e026d_1510167281075_276933_5282' name='CODE_SET'>
+								<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_2_83e026d_1510486373317_55599_5550' body='A code set.'>
+									<annotatedElement xmi:idref='_18_5_2_83e026d_1510167281075_276933_5282'/>
+								</ownedComment>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_19_0_3_8fe028d_1676199594610_318714_5144' name='name' visibility='public'>
+									<type href='openEHR_UML-BASE.mdzip#_18_1_83e026d_1437045555791_888328_4996'>
+										<xmi:Extension extender='MagicDraw UML 19.0'>
+											<referenceExtension referentPath='BASE::org::openehr::base::foundation_types::primitive_types::String' referentType='Class'/>
+										</xmi:Extension>
+									</type>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_19_0_3_8fe028d_1676200616867_693998_5165' body='Name of this code set.'>
+										<annotatedElement xmi:idref='_19_0_3_8fe028d_1676199594610_318714_5144'/>
+									</ownedComment>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_19_0_3_8fe028d_1676199623440_32693_5146' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_19_0_3_8fe028d_1676199623442_402339_5147' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+								</ownedAttribute>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_18_5_2_83e026d_1510167981922_926441_5788' name='openehr_id' visibility='public'>
+									<type href='http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String'>
+										<xmi:Extension extender='MagicDraw UML 19.0'>
+											<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String' referentType='PrimitiveType'/>
+										</xmi:Extension>
+									</type>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_2_83e026d_1510338162718_107032_5539' body='Identifier used for code set in the openEHR Reference Model. The value is inferred from the `_name_` attribute.&#10;&#10;Valid values take the form of an xs:NCName value, i.e. cannot contain:&#10;&#10;* symbol characters `:, @, $, %, &amp;, /, +, ,, ;`;&#10;* whitespace characters or different parentheses. &#10;&#10;An NCName cannot begin with a number, dot or minus character although these can appear later in the value.'>
+										<annotatedElement xmi:idref='_18_5_2_83e026d_1510167981922_926441_5788'/>
+									</ownedComment>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_18_5_2_83e026d_1510167993076_448028_5790' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_18_5_2_83e026d_1510167993076_895207_5791' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+								</ownedAttribute>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_18_5_2_83e026d_1510167968968_647182_5784' name='issuer' visibility='public'>
+									<type href='http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String'>
+										<xmi:Extension extender='MagicDraw UML 19.0'>
+											<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String' referentType='PrimitiveType'/>
+										</xmi:Extension>
+									</type>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_2_83e026d_1510338134887_226612_5538' body='Name of the issuing organisation.'>
+										<annotatedElement xmi:idref='_18_5_2_83e026d_1510167968968_647182_5784'/>
+									</ownedComment>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_18_5_2_83e026d_1510167979485_183672_5786' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_18_5_2_83e026d_1510167979485_220239_5787' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+								</ownedAttribute>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_18_5_2_83e026d_1510168144284_549656_5838' name='codes' visibility='public' aggregation='composite' type='_18_5_2_83e026d_1510167847155_63569_5750' association='_18_5_2_83e026d_1510168144284_515293_5837'>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_2_83e026d_1510486398571_313127_5551' body='Codes in this code set.'>
+										<annotatedElement xmi:idref='_18_5_2_83e026d_1510168144284_549656_5838'/>
+									</ownedComment>
+									<lowerValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_18_5_2_83e026d_1510168159676_979996_5860'/>
+									<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_18_5_2_83e026d_1510168159676_395730_5861' value='*'/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_18_5_2_83e026d_1510168001105_498378_5792' name='external_id' visibility='public'>
+									<type href='http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String'>
+										<xmi:Extension extender='MagicDraw UML 19.0'>
+											<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String' referentType='PrimitiveType'/>
+										</xmi:Extension>
+									</type>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_2_83e026d_1510338192032_559715_5540' body='An optional identifier assumed by openEHR to be the identifier of this code set, based on its published name, with spaces replaced by underscores.&#10;&#10;Valid values take the form of an xs:NCName value, i.e. cannot contain:&#10;&#10;* symbol characters `:, @, $, %, &amp;, /, +, ,, ;`;&#10;* whitespace characters or different parentheses. &#10;&#10;An NCName cannot begin with a number, dot or minus character although these can appear later in the value.'>
+										<annotatedElement xmi:idref='_18_5_2_83e026d_1510168001105_498378_5792'/>
+									</ownedComment>
+									<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_18_5_2_83e026d_1510168017941_990661_5794'/>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_18_5_2_83e026d_1510168017941_897267_5795' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+								</ownedAttribute>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_19_0_3_8fe028d_1676199626523_713835_5148' name='status' visibility='public' type='_19_0_3_8fe028d_1676301317832_820525_5192'>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_19_0_3_8fe028d_1676200406446_924102_5156' body='Status of this code set.'>
+										<annotatedElement xmi:idref='_19_0_3_8fe028d_1676199626523_713835_5148'/>
+									</ownedComment>
+									<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_19_0_3_8fe028d_1676199641257_660437_5150'/>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_19_0_3_8fe028d_1676199641257_901776_5151' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+									<defaultValue xmi:type='uml:InstanceValue' xmi:id='_19_0_3_8fe028d_1676301487118_177082_5220' instance='_19_0_3_8fe028d_1676301356649_24267_5214'/>
+								</ownedAttribute>
+								<nestedClassifier xmi:type='uml:Association' xmi:id='_18_5_2_83e026d_1510168144284_515293_5837'>
+									<memberEnd xmi:idref='_18_5_2_83e026d_1510168144284_549656_5838'/>
+									<memberEnd xmi:idref='_18_5_2_83e026d_1510168144284_224906_5839'/>
+									<ownedEnd xmi:type='uml:Property' xmi:id='_18_5_2_83e026d_1510168144284_224906_5839' visibility='private' type='_18_5_2_83e026d_1510167281075_276933_5282' association='_18_5_2_83e026d_1510168144284_515293_5837'/>
+								</nestedClassifier>
+							</packagedElement>
+							<packagedElement xmi:type='uml:Class' xmi:id='_18_5_2_83e026d_1510167290293_389864_5283' name='TERMINOLOGY_GROUP'>
+								<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_2_83e026d_1510486546172_172625_5558' body='A single vocabulary, in a particular language, within a Terminology.'>
+									<annotatedElement xmi:idref='_18_5_2_83e026d_1510167290293_389864_5283'/>
+								</ownedComment>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_18_5_2_83e026d_1510168053345_202891_5796' name='name' visibility='public'>
+									<type href='http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String'>
+										<xmi:Extension extender='MagicDraw UML 19.0'>
+											<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String' referentType='PrimitiveType'/>
+										</xmi:Extension>
+									</type>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_2_83e026d_1510486526740_628604_5557' body='Name of this vocabulary.'>
+										<annotatedElement xmi:idref='_18_5_2_83e026d_1510168053345_202891_5796'/>
+									</ownedComment>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_18_5_2_83e026d_1510168063111_139527_5798' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_18_5_2_83e026d_1510168063111_904461_5799' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+								</ownedAttribute>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_18_5_2_83e026d_1510168165690_411162_5871' name='concepts' visibility='public' aggregation='composite' type='_18_5_2_83e026d_1510168075558_312296_5801' association='_18_5_2_83e026d_1510168165690_177642_5870'>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_19_0_3_8fe028d_1676201997020_602898_5174' body='List of concepts (i.e. coded terms) in this vocabulary.'>
+										<annotatedElement xmi:idref='_18_5_2_83e026d_1510168165690_411162_5871'/>
+									</ownedComment>
+									<lowerValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_18_5_2_83e026d_1510168181866_176148_5893'/>
+									<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_18_5_2_83e026d_1510168181866_803968_5894' value='*'/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_19_0_3_8fe028d_1676200580173_752988_5160' name='openehr_id' visibility='public'>
+									<type href='http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String'>
+										<xmi:Extension extender='MagicDraw UML 19.0'>
+											<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String' referentType='PrimitiveType'/>
+										</xmi:Extension>
+									</type>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_19_0_3_8fe028d_1676200580179_655242_5162' body='Identifier used for terminology group in the openEHR Reference Model. The value is inferred from the `_name_` attribute.&#10;&#10;Valid values take the form of an xs:NCName value, i.e. cannot contain:&#10;&#10;* symbol characters `:, @, $, %, &amp;, /, +, ,, ;`;&#10;* whitespace characters or different parentheses. &#10;&#10;An NCName cannot begin with a number, dot or minus character although these can appear later in the value.'>
+										<annotatedElement xmi:idref='_19_0_3_8fe028d_1676200580173_752988_5160'/>
+									</ownedComment>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_19_0_3_8fe028d_1676200580179_955859_5163' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_19_0_3_8fe028d_1676200580178_373480_5161' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+								</ownedAttribute>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_19_0_3_8fe028d_1676301529610_813562_5233' name='status' visibility='public' type='_19_0_3_8fe028d_1676301317832_820525_5192'>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_19_0_3_8fe028d_1676301529611_553936_5235' body='Status of this vocabulary.'>
+										<annotatedElement xmi:idref='_19_0_3_8fe028d_1676301529610_813562_5233'/>
+									</ownedComment>
+									<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_19_0_3_8fe028d_1676301529611_620896_5236'/>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_19_0_3_8fe028d_1676301529611_204572_5234' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+									<defaultValue xmi:type='uml:InstanceValue' xmi:id='_19_0_3_8fe028d_1676301529612_443031_5237' instance='_19_0_3_8fe028d_1676301356649_24267_5214'/>
+								</ownedAttribute>
+								<nestedClassifier xmi:type='uml:Association' xmi:id='_18_5_2_83e026d_1510168165690_177642_5870'>
+									<memberEnd xmi:idref='_18_5_2_83e026d_1510168165690_411162_5871'/>
+									<memberEnd xmi:idref='_18_5_2_83e026d_1510168165690_769474_5872'/>
+									<ownedEnd xmi:type='uml:Property' xmi:id='_18_5_2_83e026d_1510168165690_769474_5872' visibility='private' type='_18_5_2_83e026d_1510167290293_389864_5283' association='_18_5_2_83e026d_1510168165690_177642_5870'/>
+								</nestedClassifier>
+							</packagedElement>
+							<packagedElement xmi:type='uml:Class' xmi:id='_18_5_2_83e026d_1510167847155_63569_5750' name='CODE'>
+								<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_2_83e026d_1510486414544_119286_5552' body='A single code entity in a code set.'>
+									<annotatedElement xmi:idref='_18_5_2_83e026d_1510167847155_63569_5750'/>
+								</ownedComment>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_18_5_2_83e026d_1510167869306_284171_5774' name='value' visibility='public'>
+									<type href='http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String'>
+										<xmi:Extension extender='MagicDraw UML 19.0'>
+											<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String' referentType='PrimitiveType'/>
+										</xmi:Extension>
+									</type>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_2_83e026d_1510486433338_681103_5553' body='The code string for this code entity, e.g. `&quot;AF&quot;`.'>
+										<annotatedElement xmi:idref='_18_5_2_83e026d_1510167869306_284171_5774'/>
+									</ownedComment>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_18_5_2_83e026d_1510167882354_908302_5776' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_18_5_2_83e026d_1510167882354_683372_5777' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+								</ownedAttribute>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_19_0_3_8fe028d_1676301004047_513371_5175' name='description' visibility='public'>
+									<type href='http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String'>
+										<xmi:Extension extender='MagicDraw UML 19.0'>
+											<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String' referentType='PrimitiveType'/>
+										</xmi:Extension>
+									</type>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_19_0_3_8fe028d_1676301042296_356156_5179' body='Optional description of this code, e.g. `&quot;AFGHANISTAN&quot;`.&#10;&#10;This field may be used to hold translations of the description in a language-specific copy of the English language original code set.'>
+										<annotatedElement xmi:idref='_19_0_3_8fe028d_1676301004047_513371_5175'/>
+									</ownedComment>
+									<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_19_0_3_8fe028d_1676301021004_528954_5177'/>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_19_0_3_8fe028d_1676301021005_441925_5178' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+								</ownedAttribute>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_19_0_3_8fe028d_1676301522502_795476_5221' name='status' visibility='public' type='_19_0_3_8fe028d_1676301317832_820525_5192'>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_19_0_3_8fe028d_1676301522503_709546_5223' body='Status of this code within the code set.'>
+										<annotatedElement xmi:idref='_19_0_3_8fe028d_1676301522502_795476_5221'/>
+									</ownedComment>
+									<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_19_0_3_8fe028d_1676301522503_443864_5224'/>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_19_0_3_8fe028d_1676301522502_372095_5222' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+									<defaultValue xmi:type='uml:InstanceValue' xmi:id='_19_0_3_8fe028d_1676301522504_882198_5225' instance='_19_0_3_8fe028d_1676301356649_24267_5214'/>
+								</ownedAttribute>
+							</packagedElement>
+							<packagedElement xmi:type='uml:Class' xmi:id='_18_5_2_83e026d_1510168075558_312296_5801' name='TERMINOLOGY_CONCEPT'>
+								<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_2_83e026d_1510486468735_186241_5554' body='A single terminology concept in a vocabulary.'>
+									<annotatedElement xmi:idref='_18_5_2_83e026d_1510168075558_312296_5801'/>
+								</ownedComment>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_18_5_2_83e026d_1510168098728_752902_5825' name='id' visibility='public'>
+									<type href='http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String'>
+										<xmi:Extension extender='MagicDraw UML 19.0'>
+											<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String' referentType='PrimitiveType'/>
+										</xmi:Extension>
+									</type>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_2_83e026d_1510486479487_404468_5555' body='The code of this concept.'>
+										<annotatedElement xmi:idref='_18_5_2_83e026d_1510168098728_752902_5825'/>
+									</ownedComment>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_18_5_2_83e026d_1510168109223_384676_5827' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_18_5_2_83e026d_1510168109223_105987_5828' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+								</ownedAttribute>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_18_5_2_83e026d_1510168111431_116181_5829' name='rubric' visibility='public'>
+									<type href='http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String'>
+										<xmi:Extension extender='MagicDraw UML 19.0'>
+											<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String' referentType='PrimitiveType'/>
+										</xmi:Extension>
+									</type>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_2_83e026d_1510486518755_472903_5556' body='The rubric, i.e. linguistic expression, of this concept, in the language of this terminology instance.'>
+										<annotatedElement xmi:idref='_18_5_2_83e026d_1510168111431_116181_5829'/>
+									</ownedComment>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_18_5_2_83e026d_1510168123013_121706_5831' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_18_5_2_83e026d_1510168123013_689820_5832' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+								</ownedAttribute>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_19_0_3_8fe028d_1676301526368_830018_5227' name='status' visibility='public' type='_19_0_3_8fe028d_1676301317832_820525_5192'>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_19_0_3_8fe028d_1676301526368_636491_5229' body='Status of this concept within the vocabulary.'>
+										<annotatedElement xmi:idref='_19_0_3_8fe028d_1676301526368_830018_5227'/>
+									</ownedComment>
+									<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_19_0_3_8fe028d_1676301526369_709518_5230'/>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_19_0_3_8fe028d_1676301526368_579040_5228' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+									<defaultValue xmi:type='uml:InstanceValue' xmi:id='_19_0_3_8fe028d_1676301526369_572635_5231' instance='_19_0_3_8fe028d_1676301356649_24267_5214'/>
+								</ownedAttribute>
+							</packagedElement>
+							<packagedElement xmi:type='uml:Class' xmi:id='_18_5_2_83e026d_1510168213268_247576_5900' name='TERMINOLOGY'>
+								<ownedComment xmi:type='uml:Comment' xmi:id='_19_0_3_8fe028d_1676201882587_958988_5171' body='Container for code sets and/or vocabularies that belong to a given logical terminology.'>
+									<annotatedElement xmi:idref='_18_5_2_83e026d_1510168213268_247576_5900'/>
+								</ownedComment>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_18_5_2_83e026d_1510168276260_350110_5928' name='name' visibility='public'>
+									<type href='http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String'>
+										<xmi:Extension extender='MagicDraw UML 19.0'>
+											<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String' referentType='PrimitiveType'/>
+										</xmi:Extension>
+									</type>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_19_0_3_8fe028d_1676201940200_73381_5172' body='Name of this terminology.'>
+										<annotatedElement xmi:idref='_18_5_2_83e026d_1510168276260_350110_5928'/>
+									</ownedComment>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_18_5_2_83e026d_1510168285406_98352_5930' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_18_5_2_83e026d_1510168285406_163565_5931' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+								</ownedAttribute>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_18_5_2_83e026d_1510168235428_319211_5924' name='language' visibility='public'>
+									<type href='http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String'>
+										<xmi:Extension extender='MagicDraw UML 19.0'>
+											<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String' referentType='PrimitiveType'/>
+										</xmi:Extension>
+									</type>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_19_0_3_8fe028d_1676201958305_998788_5173' body='Language of this terminology, as an ISO:639 2-letter code.'>
+										<annotatedElement xmi:idref='_18_5_2_83e026d_1510168235428_319211_5924'/>
+									</ownedComment>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_18_5_2_83e026d_1510168249982_120279_5926' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_18_5_2_83e026d_1510168249982_427757_5927' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+								</ownedAttribute>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_18_5_2_83e026d_1510169176161_591436_5941' name='code_sets' visibility='public' aggregation='composite' type='_18_5_2_83e026d_1510167281075_276933_5282' association='_18_5_2_83e026d_1510169176161_275869_5940'>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_2_83e026d_1510486329344_299292_5548' body='Code sets in this Terminology.'>
+										<annotatedElement xmi:idref='_18_5_2_83e026d_1510169176161_591436_5941'/>
+									</ownedComment>
+									<lowerValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_18_5_2_83e026d_1510169193614_959860_5963'/>
+									<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_18_5_2_83e026d_1510169193614_698437_5964' value='*'/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_18_5_2_83e026d_1510169218556_281833_5974' name='vocabularies' visibility='public' aggregation='composite' type='_18_5_2_83e026d_1510167290293_389864_5283' association='_18_5_2_83e026d_1510169218556_253624_5973'>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_2_83e026d_1510486347322_247517_5549' body='Vocabularies of coded terms in this terminology.'>
+										<annotatedElement xmi:idref='_18_5_2_83e026d_1510169218556_281833_5974'/>
+									</ownedComment>
+									<lowerValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_18_5_2_83e026d_1510254574888_804654_5996'/>
+									<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_18_5_2_83e026d_1510254574891_268215_5997' value='*'/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_19_0_3_8fe028d_1676301665171_471118_5239' name='version' visibility='public'>
+									<type href='openEHR_UML-BASE.mdzip#_18_1_83e026d_1437045555791_888328_4996'>
+										<xmi:Extension extender='MagicDraw UML 19.0'>
+											<referenceExtension referentPath='BASE::org::openehr::base::foundation_types::primitive_types::String' referentType='Class'/>
+										</xmi:Extension>
+									</type>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_19_0_3_8fe028d_1676301761808_466213_5247' body='Version of this instance of the terminology.'>
+										<annotatedElement xmi:idref='_19_0_3_8fe028d_1676301665171_471118_5239'/>
+									</ownedComment>
+									<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_19_0_3_8fe028d_1676301694191_345797_5241'/>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_19_0_3_8fe028d_1676301694191_755358_5242' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+								</ownedAttribute>
+								<ownedAttribute xmi:type='uml:Property' xmi:id='_19_0_3_8fe028d_1676301703418_492818_5243' name='date' visibility='public'>
+									<type href='openEHR_UML-BASE.mdzip#_18_2_83e026d_1461851902572_855852_4973'>
+										<xmi:Extension extender='MagicDraw UML 19.0'>
+											<referenceExtension referentPath='BASE::org::openehr::base::foundation_types::time::Iso8601_date' referentType='Class'/>
+										</xmi:Extension>
+									</type>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_19_0_3_8fe028d_1676301773245_209915_5248' body='Date of issue of this version of the terminology.'>
+										<annotatedElement xmi:idref='_19_0_3_8fe028d_1676301703418_492818_5243'/>
+									</ownedComment>
+									<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_19_0_3_8fe028d_1676301718987_234676_5245'/>
+									<xmi:Extension extender='MagicDraw UML 19.0'>
+										<modelExtension>
+											<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_19_0_3_8fe028d_1676301718987_38323_5246' value='1'/>
+										</modelExtension>
+									</xmi:Extension>
+								</ownedAttribute>
+								<nestedClassifier xmi:type='uml:Association' xmi:id='_18_5_2_83e026d_1510169176161_275869_5940'>
+									<memberEnd xmi:idref='_18_5_2_83e026d_1510169176161_591436_5941'/>
+									<memberEnd xmi:idref='_18_5_2_83e026d_1510169176161_743613_5942'/>
+									<ownedEnd xmi:type='uml:Property' xmi:id='_18_5_2_83e026d_1510169176161_743613_5942' visibility='private' type='_18_5_2_83e026d_1510168213268_247576_5900' association='_18_5_2_83e026d_1510169176161_275869_5940'/>
+								</nestedClassifier>
+								<nestedClassifier xmi:type='uml:Association' xmi:id='_18_5_2_83e026d_1510169218556_253624_5973'>
+									<memberEnd xmi:idref='_18_5_2_83e026d_1510169218556_281833_5974'/>
+									<memberEnd xmi:idref='_18_5_2_83e026d_1510169218556_254130_5975'/>
+									<ownedEnd xmi:type='uml:Property' xmi:id='_18_5_2_83e026d_1510169218556_254130_5975' visibility='private' type='_18_5_2_83e026d_1510168213268_247576_5900' association='_18_5_2_83e026d_1510169218556_253624_5973'/>
+								</nestedClassifier>
+							</packagedElement>
+							<packagedElement xmi:type='uml:Enumeration' xmi:id='_19_0_3_8fe028d_1676301317832_820525_5192' name='TERMINOLOGY_STATUS'>
+								<ownedComment xmi:type='uml:Comment' xmi:id='_19_0_3_8fe028d_1676301972287_424709_5249' body='Enumeration of possible lifecycle states of any part of the terminomlogy.'>
+									<annotatedElement xmi:idref='_19_0_3_8fe028d_1676301317832_820525_5192'/>
+								</ownedComment>
+								<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_19_0_3_8fe028d_1676301365507_24343_5216' name='trial'>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_19_0_3_8fe028d_1676301997040_897415_5250' body='Terminology element is in Trial state.'>
+										<annotatedElement xmi:idref='_19_0_3_8fe028d_1676301365507_24343_5216'/>
+									</ownedComment>
+								</ownedLiteral>
+								<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_19_0_3_8fe028d_1676301356649_24267_5214' name='active'>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_19_0_3_8fe028d_1676302010663_498097_5251' body='Terminology element is in Active state, i.e. published and in use.'>
+										<annotatedElement xmi:idref='_19_0_3_8fe028d_1676301356649_24267_5214'/>
+									</ownedComment>
+								</ownedLiteral>
+								<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_19_0_3_8fe028d_1676301387217_723403_5218' name='retired'>
+									<ownedComment xmi:type='uml:Comment' xmi:id='_19_0_3_8fe028d_1676302034219_531159_5252' body='Terminology element has been Retired, i.e. deprecated.'>
+										<annotatedElement xmi:idref='_19_0_3_8fe028d_1676301387217_723403_5218'/>
+									</ownedComment>
+								</ownedLiteral>
+							</packagedElement>
+						</packagedElement>
+					</packagedElement>
+				</packagedElement>
+			</packagedElement>
+			<packagedElement xmi:type='uml:Package' xmi:id='_18_5_2_83e026d_1510167371363_711278_5284' name='Class diagrams'>
+				<xmi:Extension extender='MagicDraw UML 19.0'>
+					<modelExtension>
+						<ownedDiagram xmi:type='uml:Diagram' xmi:id='_18_5_2_83e026d_1510167382911_692134_5285' name='TERM-term.terminology' visibility='public' ownerOfDiagram='_18_5_2_83e026d_1510167371363_711278_5284'>
+							<xmi:Extension extender='MagicDraw UML 19.0'>
+								<diagramRepresentation>
+									<diagram:DiagramRepresentationObject ID='_18_5_2_83e026d_1510167382948_108937_5306' diagramStyleID='_19_0_3_8fe028d_1583601503297_585664_5050' initialFrameSizeSet='true' requiredFeature=';UML_Standard_Profile.mdzip^UML_FEATURE~~' type='Class Diagram' umlType='Class Diagram' xmi:id='_g5_2QMS2EeePP7Aw7wPUPQ' xmi:version='2.0' xmlns:binary='http://www.nomagic.com/ns/cameo/client/binary/1.0' xmlns:diagram='http://www.nomagic.com/ns/magicdraw/core/diagram/1.0' xmlns:xmi='http://www.omg.org/XMI' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
+										<diagramContents contentHash='4640475d-0ffa-4288-91b7-3bd451827fa8' exporterName='MagicDraw UML' exporterVersion='19.0 v9' xmi:id='_g5_2QcS2EeePP7Aw7wPUPQ'>
+											<binaryObject streamContentID='BINARY-0298a5dd-1b29-43f5-811e-c39243ee5f76' xmi:id='_g5_2QsS2EeePP7Aw7wPUPQ' xsi:type='binary:StreamIdentityBinaryObject'/>
+											<usedObjects href='#_19_0_3_8fe028d_1676200580173_752988_5160'/>
+											<usedObjects href='#_18_5_2_83e026d_1510168098728_752902_5825'/>
+											<usedObjects href='#_19_0_3_8fe028d_1676301387217_723403_5218'/>
+											<usedObjects href='#_18_5_2_83e026d_1510168053345_202891_5796'/>
+											<usedObjects href='#_18_5_2_83e026d_1510169218556_281833_5974'/>
+											<usedObjects href='#_18_5_2_83e026d_1510168144284_224906_5839'/>
+											<usedObjects href='#_18_5_2_83e026d_1510167281075_276933_5282'/>
+											<usedObjects href='#_18_5_2_83e026d_1510168235428_319211_5924'/>
+											<usedObjects href='#_18_5_2_83e026d_1510167847155_63569_5750'/>
+											<usedObjects href='#_18_5_2_83e026d_1510169176161_591436_5941'/>
+											<usedObjects href='#_18_5_2_83e026d_1510167968968_647182_5784'/>
+											<usedObjects href='#_18_5_2_83e026d_1510167269870_162331_5281'/>
+											<usedObjects href='#_19_0_3_8fe028d_1676301356649_24267_5214'/>
+											<usedObjects href='#_18_5_2_83e026d_1510168276260_350110_5928'/>
+											<usedObjects href='#_19_0_3_8fe028d_1676301365507_24343_5216'/>
+											<usedObjects href='#_18_5_2_83e026d_1510168144284_515293_5837'/>
+											<usedObjects href='#_18_5_2_83e026d_1510168001105_498378_5792'/>
+											<usedObjects href='#_18_5_2_83e026d_1510168111431_116181_5829'/>
+											<usedObjects href='#_19_0_3_8fe028d_1676301703418_492818_5243'/>
+											<usedObjects href='#_19_0_3_8fe028d_1676301004047_513371_5175'/>
+											<usedObjects href='#_18_5_2_83e026d_1510169218556_253624_5973'/>
+											<usedObjects href='#_18_5_2_83e026d_1510168075558_312296_5801'/>
+											<usedObjects href='#_18_5_2_83e026d_1510168165690_411162_5871'/>
+											<usedObjects href='#_18_5_2_83e026d_1510168165690_769474_5872'/>
+											<usedObjects href='#_18_5_2_83e026d_1510167290293_389864_5283'/>
+											<usedObjects href='#_19_0_3_8fe028d_1676301665171_471118_5239'/>
+											<usedObjects href='#_18_5_2_83e026d_1510167981922_926441_5788'/>
+											<usedObjects href='#_18_5_2_83e026d_1510168213268_247576_5900'/>
+											<usedObjects href='#_18_5_2_83e026d_1510167869306_284171_5774'/>
+											<usedObjects href='#_18_5_2_83e026d_1510169176161_743613_5942'/>
+											<usedObjects href='#_19_0_3_8fe028d_1676301526368_830018_5227'/>
+											<usedObjects href='#_18_5_2_83e026d_1510169176161_275869_5940'/>
+											<usedObjects href='#_19_0_3_8fe028d_1676301317832_820525_5192'/>
+											<usedObjects href='#_19_0_3_8fe028d_1676301529610_813562_5233'/>
+											<usedObjects href='#_19_0_3_8fe028d_1676199594610_318714_5144'/>
+											<usedObjects href='#_18_5_2_83e026d_1510168165690_177642_5870'/>
+											<usedObjects href='#_19_0_3_8fe028d_1676301522502_795476_5221'/>
+											<usedObjects href='#_19_0_3_8fe028d_1676199626523_713835_5148'/>
+											<usedObjects href='#_18_5_2_83e026d_1510168144284_549656_5838'/>
+											<usedObjects href='#_18_5_2_83e026d_1510169218556_254130_5975'/>
+											<usedElements>_19_0_3_8fe028d_1676199626523_713835_5148</usedElements>
+											<usedElements>_18_5_2_83e026d_1510168165690_411162_5871</usedElements>
+											<usedElements>_19_0_3_8fe028d_1676301526368_830018_5227</usedElements>
+											<usedElements>_18_5_2_83e026d_1510168144284_224906_5839</usedElements>
+											<usedElements>_19_0_3_8fe028d_1676301387217_723403_5218</usedElements>
+											<usedElements>_19_0_3_8fe028d_1676301317832_820525_5192</usedElements>
+											<usedElements>_18_5_2_83e026d_1510167847155_63569_5750</usedElements>
+											<usedElements>_18_5_2_83e026d_1510168165690_769474_5872</usedElements>
+											<usedElements>_18_5_2_83e026d_1510169176161_743613_5942</usedElements>
+											<usedElements>_19_0_3_8fe028d_1676301522502_795476_5221</usedElements>
+											<usedElements>_18_5_2_83e026d_1510168075558_312296_5801</usedElements>
+											<usedElements>_18_5_2_83e026d_1510168001105_498378_5792</usedElements>
+											<usedElements>_18_5_2_83e026d_1510169218556_281833_5974</usedElements>
+											<usedElements>_18_5_2_83e026d_1510168144284_549656_5838</usedElements>
+											<usedElements>_18_5_2_83e026d_1510169218556_254130_5975</usedElements>
+											<usedElements>_18_5_2_83e026d_1510169176161_591436_5941</usedElements>
+											<usedElements>_18_5_2_83e026d_1510168144284_515293_5837</usedElements>
+											<usedElements>_18_5_2_83e026d_1510168213268_247576_5900</usedElements>
+											<usedElements>_18_5_2_83e026d_1510167981922_926441_5788</usedElements>
+											<usedElements>_18_5_2_83e026d_1510168235428_319211_5924</usedElements>
+											<usedElements>_18_5_2_83e026d_1510167269870_162331_5281</usedElements>
+											<usedElements>_19_0_3_8fe028d_1676301356649_24267_5214</usedElements>
+											<usedElements>_18_5_2_83e026d_1510168276260_350110_5928</usedElements>
+											<usedElements>_18_5_2_83e026d_1510169218556_253624_5973</usedElements>
+											<usedElements>_18_5_2_83e026d_1510167290293_389864_5283</usedElements>
+											<usedElements>_18_5_2_83e026d_1510169176161_275869_5940</usedElements>
+											<usedElements>_18_5_2_83e026d_1510168165690_177642_5870</usedElements>
+											<usedElements>_18_5_2_83e026d_1510168111431_116181_5829</usedElements>
+											<usedElements>_18_5_2_83e026d_1510167968968_647182_5784</usedElements>
+											<usedElements>_19_0_3_8fe028d_1676301365507_24343_5216</usedElements>
+											<usedElements>_18_5_2_83e026d_1510168098728_752902_5825</usedElements>
+											<usedElements>_19_0_3_8fe028d_1676301529610_813562_5233</usedElements>
+											<usedElements>_19_0_3_8fe028d_1676200580173_752988_5160</usedElements>
+											<usedElements>_19_0_3_8fe028d_1676301665171_471118_5239</usedElements>
+											<usedElements>_18_5_2_83e026d_1510168053345_202891_5796</usedElements>
+											<usedElements>_19_0_3_8fe028d_1676301004047_513371_5175</usedElements>
+											<usedElements>_18_5_2_83e026d_1510167281075_276933_5282</usedElements>
+											<usedElements>_18_5_2_83e026d_1510167869306_284171_5774</usedElements>
+											<usedElements>_19_0_3_8fe028d_1676301703418_492818_5243</usedElements>
+											<usedElements>_19_0_3_8fe028d_1676199594610_318714_5144</usedElements>
+										</diagramContents>
+									</diagram:DiagramRepresentationObject>
+								</diagramRepresentation>
+							</xmi:Extension>
+						</ownedDiagram>
+					</modelExtension>
+				</xmi:Extension>
+			</packagedElement>
+		</packagedElement>
+	</uml:Model>
+	<xmi:Extension extender='MagicDraw UML 19.0'>
+		<stereotypesHREFS>
+			<stereotype name='MagicDraw_Profile:DiagramInfo' stereotypeHREF='local:/PROJECT-877558e9224f114d50dea1f39a1c119?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_9_0_be00301_1108044380615_150487_0'/>
+			<tag name='MagicDraw_Profile:DiagramInfo:base_Element' tagID='_10_0EAPbeta_be00301_1123081772098_411862_275' tagURI='local:/PROJECT-877558e9224f114d50dea1f39a1c119?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_10_0EAPbeta_be00301_1123081772098_411862_275'/>
+			<tag name='MagicDraw_Profile:DiagramInfo:Creation_date' tagID='_be00301_1073306188629_537791_2' tagURI='local:/PROJECT-877558e9224f114d50dea1f39a1c119?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_be00301_1073306188629_537791_2'/>
+			<tag name='MagicDraw_Profile:DiagramInfo:Author' tagID='_be00301_1077726770128_871366_1' tagURI='local:/PROJECT-877558e9224f114d50dea1f39a1c119?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_be00301_1077726770128_871366_1'/>
+			<tag name='MagicDraw_Profile:DiagramInfo:Modification_date' tagID='_be00301_1073394345322_922552_1' tagURI='local:/PROJECT-877558e9224f114d50dea1f39a1c119?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_be00301_1073394345322_922552_1'/>
+			<tag name='MagicDraw_Profile:DiagramInfo:Last_modified_by' tagID='_16_8beta_8ca0285_1257244649124_794756_344' tagURI='local:/PROJECT-877558e9224f114d50dea1f39a1c119?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_16_8beta_8ca0285_1257244649124_794756_344'/>
+		</stereotypesHREFS>
+	</xmi:Extension>
+	<MagicDraw_Profile:DiagramInfo xmi:id='_18_5_2_83e026d_1510167382933_901732_5297' base_Diagram='_18_5_2_83e026d_1510167382911_692134_5285' Creation_date='11/8/17 4:56 PM' Modification_date='2/13/23 3:22 PM' Author='Thomas' Last_modified_by='thomas'/>
+</xmi:XMI>
