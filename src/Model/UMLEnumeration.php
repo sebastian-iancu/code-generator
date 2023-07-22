@@ -24,7 +24,7 @@ class UMLEnumeration extends AbstractItem
         }
         $this->enumerations = $enumerations;
 
-        $this->log('  Enumerations [%s] with %s was read.', $this->name, count($this->enumerations));
+        $this->log('  Enumerations [%s] with [%s] values was read.', $this->name, count($this->enumerations));
     }
 
 }

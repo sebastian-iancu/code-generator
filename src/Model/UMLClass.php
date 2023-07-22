@@ -16,6 +16,7 @@ class UMLClass extends AbstractItem
     public readonly Collection $umlTemplateParameters;
     public readonly ?UMLTemplateBinding $templateBinding;
     public readonly Collection $umlProperties;
+    public readonly Collection $umlOperations;
 
     public function __construct(SimpleXMLElement $xmlNode)
     {
@@ -47,11 +48,20 @@ class UMLClass extends AbstractItem
         }
         // collect properties
         $this->umlProperties = new Collection();
-        $nodes = $xmlNode->xpath("descendant::ownedAttribute[@xmi:type='uml:Property']") ?: [];
+        $nodes = $xmlNode->xpath("ownedAttribute[@xmi:type='uml:Property']") ?: [];
         foreach ($nodes as $umlPropertyNode) {
             $item = new UMLProperty($umlPropertyNode);
             $this->umlProperties->add($item);
         }
-        $this->log('  Class [%s], having %s properties, %s generalizations was read.', $this->name, $this->umlProperties->count(), $this->umlGeneralizations->count());
+        // collect functions
+        $this->umlOperations = new Collection();
+        $nodes = $xmlNode->xpath("ownedOperation[@xmi:type='uml:Operation']") ?: [];
+        foreach ($nodes as $umlOperationNode) {
+            $item = new UMLOperation($umlOperationNode);
+            $this->umlOperations->add($item);
+        }
+
+
+        $this->log('  Class [%s] was read.', $this->name);
     }
 }

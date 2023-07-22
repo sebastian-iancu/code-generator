@@ -36,6 +36,8 @@ class UMLFile extends AbstractItem
         $this->name = $this->umlPackage->name;
 //        $this->allUmlPackages = new Collection();
 //        $this->recursiveCollectUmlPackages($this->umlPackage, $this->name);
+
+        $this->log('  File [%s] was read.', $this->name);
     }
 
     protected function getMainPackageNode(): SimpleXMLElement
