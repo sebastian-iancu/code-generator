@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/7.1/phpunit.xsd"
+         bootstrap="bootstrap.php"
+         forceCoversAnnotation="false"
+         beStrictAboutCoversAnnotation="false"
+         beStrictAboutOutputDuringTests="true"
+         beStrictAboutTodoAnnotatedTests="true"
+         cacheResult="true"
+         cacheResultFile="/tmp/phpunit/.cache/.results"
+         noInteraction="true"
+         colors="true"
+         verbose="true">
+    <php>
+        <ini name="memory_limit" value="512M" />
+    </php>
+    <testsuites>
+        <testsuite name="default">
+            <directory suffix="Test.php">./</directory>
+        </testsuite>
+    </testsuites>
+
+    <coverage includeUncoveredFiles="true"
+              processUncoveredFiles="true"
+              cacheDirectory="/tmp/phpunit/.cache/code-coverage"
+              ignoreDeprecatedCodeUnits="true"
+              disableCodeCoverageIgnore="true">
+        <include>
+
+        </include>
+        <exclude>
+            <directory>../code</directory>
+        </exclude>
+        <report>
+            <cobertura outputFile="/tmp/phpunit/code-coverage/cobertura.xml"/>
+            <text outputFile="/tmp/phpunit/code-coverage/report.txt" showUncoveredFiles="true" showOnlySummary="false"/>
+        </report>
+    </coverage>
+    <logging>
+        <junit outputFile="/tmp/phpunit/results/junit.xml"/>
+        <testdoxText outputFile="/tmp/phpunit/results/testdox.txt"/>
+    </logging>
+</phpunit>

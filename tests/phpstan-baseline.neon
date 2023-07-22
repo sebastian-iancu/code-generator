@@ -1,0 +1,15 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Class OpenEHR\\\\Tools\\\\CodeGen\\\\Model\\\\AbstractItem has an uninitialized readonly property \\$id\\. Assign it in the constructor\\.$#"
+			count: 1
+			path: ../src/Model/AbstractItem.php
+
+		-
+			message: "#^Class OpenEHR\\\\Tools\\\\CodeGen\\\\Model\\\\AbstractItem has an uninitialized readonly property \\$name\\. Assign it in the constructor\\.$#"
+			count: 1
+			path: ../src/Model/AbstractItem.php
+
+
+
+
