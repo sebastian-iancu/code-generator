@@ -3,7 +3,7 @@
 namespace OpenEHR\Tools\CodeGen\Writer;
 
 use OpenEHR\Tools\CodeGen\Helper\ConsoleTrait;
-use OpenEHR\Tools\CodeGen\Helper\XMIReader;
+use OpenEHR\Tools\CodeGen\ReadManager;
 
 abstract class AbstractWriter
 {
@@ -11,7 +11,7 @@ abstract class AbstractWriter
     use ConsoleTrait;
 
     protected string $dir;
-    protected XMIReader $reader;
+    protected ReadManager $reader;
 
     public function setDir(string $dir): void
     {
@@ -21,7 +21,7 @@ abstract class AbstractWriter
         $this->dir = realpath($dir) ?: $dir;
     }
 
-    public function setReader(XMIReader $reader): void
+    public function setReader(ReadManager $reader): void
     {
         $this->reader = $reader;
     }

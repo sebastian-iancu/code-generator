@@ -1,16 +1,16 @@
 <?php
 
-namespace OpenEHR\Tools\CodeGen\Helper;
+namespace OpenEHR\Tools\CodeGen;
 
 use OpenEHR\Tools\CodeGen\Writer\AbstractWriter;
 
-class Writer {
+class WriteManager {
 
     /** @var AbstractWriter[] */
     protected array $writers;
 
     public function __construct(
-        protected readonly XMIReader $reader,
+        protected readonly ReadManager $reader,
         public readonly string $writerDir = __WRITER_DIR__,
     ) {
     }

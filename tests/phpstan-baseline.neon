@@ -10,6 +10,11 @@ parameters:
 			count: 1
 			path: ../src/Model/AbstractItem.php
 
+		-
+			message: "#^Property OpenEHR\\\\Tools\\\\CodeGen\\\\Model\\\\UMLFile\\:\\:\\$xmi \\(SimpleXMLElement\\) does not accept SimpleXMLElement\\|false\\.$#"
+			count: 1
+			path: ../src/Model/UMLFile.php
+
 
 
 

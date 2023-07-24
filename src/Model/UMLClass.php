@@ -17,6 +17,7 @@ class UMLClass extends AbstractItem
     public readonly ?UMLTemplateBinding $templateBinding;
     public readonly Collection $umlProperties;
     public readonly Collection $umlOperations;
+    public readonly Collection $umlConstraints;
 
     public function __construct(SimpleXMLElement $xmlNode)
     {
@@ -59,6 +60,13 @@ class UMLClass extends AbstractItem
         foreach ($nodes as $umlOperationNode) {
             $item = new UMLOperation($umlOperationNode);
             $this->umlOperations->add($item);
+        }
+        // collect constraints
+        $this->umlConstraints = new Collection();
+        $nodes = $xmlNode->xpath("ownedRule[@xmi:type='uml:Constraint' and specification/body]") ?: [];
+        foreach ($nodes as $umlConstraintNode) {
+            $item = new UMLConstraint($umlConstraintNode);
+            $this->umlConstraints->add($item);
         }
 
 

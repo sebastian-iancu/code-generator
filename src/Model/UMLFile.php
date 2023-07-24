@@ -17,6 +17,7 @@ class UMLFile extends AbstractItem
 
     public function __construct(string $fileName)
     {
+        $this->log('Reading [%s] filename...', $fileName);
         $contents = file_get_contents($fileName);
         if (!$contents) {
             throw new RuntimeException("File missing or not readable: $fileName.");

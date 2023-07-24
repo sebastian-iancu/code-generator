@@ -9,7 +9,7 @@ class UMLGeneralization extends AbstractItem
 
     public readonly string $id;
     public readonly string $name;
-    public readonly ?TypeReference $general;
+    public readonly TypeReference $general;
 
     public function __construct(SimpleXMLElement $xmlNode)
     {

@@ -14,8 +14,7 @@ class UMLTemplateParameterSubstitution extends AbstractItem
     public function __construct(SimpleXMLElement $xmlNode)
     {
         $this->id = (string)$xmlNode->attributes('xmi', true)?->id;
-        $ref = new TypeReference($xmlNode, (string)$xmlNode['formal']);
-        $this->name = $ref->name;
+        $this->name = (new TypeReference($xmlNode, (string)$xmlNode['formal']))->name;
         $this->actual = new TypeReference($xmlNode, (string)$xmlNode['actual']);
 
         $this->log('  ParameterSubstitution [%s] as [%s] was read.', $this->name, $this->actual->name);

@@ -1,10 +1,12 @@
 <?php
 
-namespace OpenEHR\Tools\CodeGen\Helper;
+namespace OpenEHR\Tools\CodeGen;
 
+use OpenEHR\Tools\CodeGen\Helper\Collection;
+use OpenEHR\Tools\CodeGen\Helper\ConsoleTrait;
 use OpenEHR\Tools\CodeGen\Model\UMLFile;
 
-class XMIReader {
+class ReadManager {
 
     use ConsoleTrait;
 
@@ -15,11 +17,9 @@ class XMIReader {
     }
 
     public function read(string $fileName): void {
-        $this->log('Reading [%s] filename...', $fileName);
         $umlFile = new UMLFile($this->readerDir . DIRECTORY_SEPARATOR . $fileName);
         $this->umlFiles->add($umlFile);
         $this->umlFiles->add($umlFile, $umlFile->umlPackage->id);
-        $this->log('  Filename [%s] read.', $umlFile->name);
     }
 
 

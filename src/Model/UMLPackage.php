@@ -57,7 +57,7 @@ class UMLPackage extends AbstractItem
             $item = new UMLEnumeration($umlClassNode);
             $this->umlClasses->add($item);
         }
-        $this->log('  Package [%s], containing %s subpackages and %s classes was read.', $this->name, $this->umlPackages->count(), $this->umlClasses->count());
+        $this->log('  Package [%s] containing %s subpackages and %s classes was read.', $this->name, $this->umlPackages->count(), $this->umlClasses->count());
     }
 
 
