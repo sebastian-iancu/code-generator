@@ -1,0 +1,1176 @@
+{
+    "bmm_version": "2.3",
+    "rm_publisher": "openehr",
+    "schema_name": "base",
+    "rm_release": "1.1.0",
+    "schema_revision": "1.1.0.1",
+    "schema_lifecycle_state": "stable",
+    "schema_description": "openEHR base types.",
+    "schema_author": "codegen",
+    "packages": {
+        "org.openehr.base.base_types": {
+            "name": "org.openehr.base.base_types",
+            "packages": {
+                "identification": {
+                    "name": "identification",
+                    "classes": [
+                        "ARCHETYPE_ID",
+                        "GENERIC_ID",
+                        "HIER_OBJECT_ID",
+                        "LOCATABLE_REF",
+                        "OBJECT_ID",
+                        "OBJECT_REF",
+                        "OBJECT_VERSION_ID",
+                        "PARTY_REF",
+                        "TERMINOLOGY_ID",
+                        "VERSION_TREE_ID",
+                        "UID_BASED_ID",
+                        "UUID",
+                        "INTERNET_ID",
+                        "UID",
+                        "ISO_OID",
+                        "TEMPLATE_ID",
+                        "ACCESS_GROUP_REF"
+                    ]
+                },
+                "definitions": {
+                    "name": "definitions",
+                    "classes": [
+                        "OPENEHR_DEFINITIONS",
+                        "BASIC_DEFINITIONS",
+                        "VALIDITY_KIND",
+                        "VERSION_STATUS"
+                    ]
+                }
+            }
+        },
+        "org.openehr.base.foundation_types": {
+            "name": "org.openehr.base.foundation_types",
+            "packages": {
+                "structures": {
+                    "name": "structures",
+                    "classes": [
+                        "Hash",
+                        "Container",
+                        "List",
+                        "Set",
+                        "Array"
+                    ]
+                },
+                "time": {
+                    "name": "time",
+                    "classes": [
+                        "Iso8601_date_time",
+                        "Iso8601_duration",
+                        "Iso8601_time",
+                        "Iso8601_timezone",
+                        "Iso8601_type",
+                        "Iso8601_date",
+                        "Time_Definitions",
+                        "Temporal"
+                    ]
+                },
+                "interval": {
+                    "name": "interval",
+                    "classes": [
+                        "Multiplicity_interval",
+                        "Proper_interval",
+                        "Interval",
+                        "Point_interval",
+                        "Cardinality"
+                    ]
+                },
+                "terminology": {
+                    "name": "terminology",
+                    "classes": [
+                        "Terminology_code",
+                        "Terminology_term"
+                    ]
+                }
+            },
+            "classes": [
+                "Any"
+            ]
+        },
+        "org.openehr.base.resource": {
+            "name": "org.openehr.base.resource",
+            "classes": [
+                "AUTHORED_RESOURCE",
+                "RESOURCE_DESCRIPTION",
+                "TRANSLATION_DETAILS",
+                "RESOURCE_DESCRIPTION_ITEM",
+                "RESOURCE_ANNOTATIONS"
+            ]
+        }
+    },
+    "primitives": {
+        "Any": {
+            "name": "Any",
+            "is_abstract": true,
+            "documentation": "Abstract supertype. Usually maps to a type like Any or Object in an object-oriented technology. Defined here to provide value and reference equality semantics."
+        },
+        "Hash": {
+            "name": "Hash",
+            "ancestors": [
+                "Container"
+            ],
+            "documentation": "Type representing a keyed table of values. V is the value type, and K the type of the keys. ",
+            "generic_parameter_defs": {
+                "K": {
+                    "name": "K",
+                    "conforms_to_type": "Ordered"
+                },
+                "V": {
+                    "name": "V"
+                }
+            }
+        },
+        "Container": {
+            "name": "Container",
+            "is_abstract": true,
+            "ancestors": [
+                "Any"
+            ],
+            "documentation": "Abstract ancestor of container types whose items are addressable in some way.",
+            "generic_parameter_defs": {
+                "T": {
+                    "name": "T",
+                    "conforms_to_type": "Any"
+                }
+            }
+        },
+        "List": {
+            "name": "List",
+            "ancestors": [
+                "Container"
+            ],
+            "documentation": "Ordered container that may contain duplicates.",
+            "generic_parameter_defs": {
+                "T": {
+                    "name": "T",
+                    "conforms_to_type": "Any"
+                }
+            }
+        },
+        "Set": {
+            "name": "Set",
+            "ancestors": [
+                "Container"
+            ],
+            "documentation": "Unordered container that may not contain duplicates.",
+            "generic_parameter_defs": {
+                "T": {
+                    "name": "T",
+                    "conforms_to_type": "Any"
+                }
+            }
+        },
+        "Array": {
+            "name": "Array",
+            "ancestors": [
+                "Container"
+            ],
+            "documentation": "Container whose storage is assumed to be contiguous.",
+            "generic_parameter_defs": {
+                "T": {
+                    "name": "T",
+                    "conforms_to_type": "Any"
+                }
+            }
+        },
+        "Iso8601_date_time": {
+            "name": "Iso8601_date_time",
+            "ancestors": [
+                "Iso8601_type"
+            ],
+            "documentation": "Represents an ISO 8601 date\/time, including partial and extended forms. Value may be:\n\n* `YYYY-MM-DDThh:mm:ss[,sss][Z | \u00b1hh[mm]]` (extended, preferred) or\n* `YYYYMMDDThhmmss[,sss][Z | \u00b1hh[mm]]` (compact)\n* or a partial variant.\n\nSee `_valid_iso8601_date_time()_` for validity.\n\nNote that this class includes 2 deviations from ISO 8601:2004:\n\n* for partial date\/times, any part of the date\/time up to the month may be missing, not just seconds and minutes as in the standard;\n* the time `24:00:00` is not allowed, since it would mean the date was really on the next day."
+        },
+        "Iso8601_duration": {
+            "name": "Iso8601_duration",
+            "ancestors": [
+                "Iso8601_type"
+            ],
+            "documentation": "Represents an ISO 8601 duration, which may have multiple parts from years down to seconds. Value is in format:\n\n* `P[nnY][nnM][nnW][nnD][T[nnH][nnM][nnS]]`"
+        },
+        "Iso8601_time": {
+            "name": "Iso8601_time",
+            "ancestors": [
+                "Iso8601_type"
+            ],
+            "documentation": "Represents an ISO 8601 time, including partial and extended forms. Value may be:\n\n* `hh:mm:ss[,sss][Z|\u00b1hh[mm]]` (extended, preferred) or\n* `hhmmss[,sss][Z|\u00b1hh[mm]]` (compact)\n* or a partial invariant.\n\nSee `_valid_iso8601_time()_` for validity.\n\nNOTE: A small deviation to the ISO 8601:2004 standard in this class is that the time `24:00:00` is not allowed, for consistency with `Iso8601_date_time`."
+        },
+        "Iso8601_type": {
+            "name": "Iso8601_type",
+            "is_abstract": true,
+            "ancestors": [
+                "Temporal",
+                "Time_Definitions"
+            ],
+            "documentation": "Abstract ancestor type of ISO 8601 types, defining interface for 'extended' and 'partial' concepts from ISO 8601.",
+            "properties": {
+                "value": {
+                    "name": "value",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Representation of all descendants is a single String."
+                }
+            }
+        },
+        "Iso8601_date": {
+            "name": "Iso8601_date",
+            "ancestors": [
+                "Iso8601_type"
+            ],
+            "documentation": "Represents an ISO 8601 date, including partial and extended forms. Value may be:\n\n* `YYYY-MM-DD` (extended, preferred)\n* `YYYYMMDD` (compactd)\n* a partial invariant.\n\nSee `Time_definitions._valid_iso8601_date()_` for validity."
+        },
+        "Temporal": {
+            "name": "Temporal",
+            "is_abstract": true,
+            "ancestors": [
+                "Ordered"
+            ],
+            "documentation": "Abstract ancestor of time-related classes."
+        },
+        "Multiplicity_interval": {
+            "name": "Multiplicity_interval",
+            "ancestors": [
+                "Proper_interval"
+            ],
+            "documentation": "An Interval of Integer, used to represent multiplicity, cardinality and optionality in models. ",
+            "properties": {
+                "Multiplicity_range_marker": {
+                    "name": "Multiplicity_range_marker",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Marker to use in string form of interval between limits."
+                },
+                "Multiplicity_unbounded_marker": {
+                    "name": "Multiplicity_unbounded_marker",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Character",
+                    "is_mandatory": true,
+                    "documentation": "Symbol to use to indicate upper limit unbounded."
+                }
+            }
+        },
+        "Interval": {
+            "name": "Interval",
+            "ancestors": [
+                "Any"
+            ],
+            "documentation": "Interval abstraction, featuring upper and lower limits that may be open or closed, included or not included.",
+            "generic_parameter_defs": {
+                "T": {
+                    "name": "T",
+                    "conforms_to_type": "Ordered"
+                }
+            },
+            "properties": {
+                "lower": {
+                    "name": "lower",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY_OPEN",
+                    "type": "T",
+                    "documentation": "Lower bound."
+                },
+                "upper": {
+                    "name": "upper",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY_OPEN",
+                    "type": "T",
+                    "documentation": "Upper bound."
+                },
+                "lower_unbounded": {
+                    "name": "lower_unbounded",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": "`lower` boundary open (i.e. = -infinity)."
+                },
+                "upper_unbounded": {
+                    "name": "upper_unbounded",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": "`upper` boundary open (i.e. = +infinity)."
+                },
+                "lower_included": {
+                    "name": "lower_included",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": "`lower` boundary value included in range if not `lower_unbounded`."
+                },
+                "upper_included": {
+                    "name": "upper_included",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": "`upper` boundary value included in range if not `upper_unbounded`."
+                }
+            }
+        },
+        "Cardinality": {
+            "name": "Cardinality",
+            "documentation": "Express constraints on the cardinality of container objects which are the values of multiply-valued attributes, including uniqueness and ordering, providing the means to state that a container acts like a logical list, set or bag.",
+            "properties": {
+                "interval": {
+                    "name": "interval",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Multiplicity_interval",
+                    "is_mandatory": true,
+                    "documentation": "The interval of this cardinality. "
+                },
+                "is_ordered": {
+                    "name": "is_ordered",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": "True if the members of the container attribute to which this cardinality refers are ordered. "
+                },
+                "is_unique": {
+                    "name": "is_unique",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": "True if the members of the container attribute to which this cardinality refers are unique."
+                }
+            }
+        },
+        "Terminology_code": {
+            "name": "Terminology_code",
+            "ancestors": [
+                "Any"
+            ],
+            "documentation": "Logically primitive type representing a reference to a terminology concept, in the form of a terminology identifier, optional version, and a code or code string from the terminology.",
+            "properties": {
+                "terminology_id": {
+                    "name": "terminology_id",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "The archetype environment namespace identifier used to identify a terminology. Typically a value like `\"snomed_ct\"` that is mapped elsewhere to the full URI identifying the terminology."
+                },
+                "terminology_version": {
+                    "name": "terminology_version",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Optional string value representing terminology version, typically a date or dotted numeric."
+                },
+                "code_string": {
+                    "name": "code_string",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "A terminology code or post-coordinated code expression, if supported by the terminology. The code may refer to a single term, a value set consisting of multiple terms, or some other entity representable within the terminology."
+                },
+                "uri": {
+                    "name": "uri",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Uri",
+                    "documentation": "The URI reference that may be used as a concrete key into a notional terminology service for queries that can obtain the term text, definition, and other associated elements."
+                }
+            }
+        },
+        "Terminology_term": {
+            "name": "Terminology_term",
+            "ancestors": [
+                "Any"
+            ],
+            "documentation": "Leaf type representing a term from a terminology, which consists of the term text and the code, i.e. a concept reference.",
+            "properties": {
+                "concept": {
+                    "name": "concept",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Terminology_code",
+                    "is_mandatory": true,
+                    "documentation": "Refrence to the terminology concept formally representing this term."
+                },
+                "text": {
+                    "name": "text",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Text of term."
+                }
+            }
+        }
+    },
+    "class_definitions": {
+        "ARCHETYPE_ID": {
+            "name": "ARCHETYPE_ID",
+            "ancestors": [
+                "OBJECT_ID"
+            ],
+            "documentation": "Identifier for archetypes. Ideally these would identify globally unique archetypes.\nLexical form: `rm_originator  '-' rm_name  '-' rm_entity  '.' concept_name {  '-' specialisation }*  '.v' number`."
+        },
+        "GENERIC_ID": {
+            "name": "GENERIC_ID",
+            "ancestors": [
+                "OBJECT_ID"
+            ],
+            "documentation": "Generic identifier type for identifiers whose format is otherwise unknown to openEHR. Includes an attribute for naming the identification scheme (which may well be local). ",
+            "properties": {
+                "scheme": {
+                    "name": "scheme",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Name of the scheme to which this identifier conforms. Ideally this name will be recognisable globally but realistically it may be a local ad hoc scheme whose name is not controlled or standardised in any way. "
+                }
+            }
+        },
+        "HIER_OBJECT_ID": {
+            "name": "HIER_OBJECT_ID",
+            "ancestors": [
+                "UID_BASED_ID"
+            ],
+            "documentation": "Concrete type corresponding to hierarchical identifiers of the form defined by UID_BASED_ID. "
+        },
+        "LOCATABLE_REF": {
+            "name": "LOCATABLE_REF",
+            "ancestors": [
+                "OBJECT_REF"
+            ],
+            "documentation": "Purpose Reference to a `LOCATABLE` instance inside the top-level content structure inside a `VERSION<T>`; the path attribute is applied to the object that `VERSION._data_` points to. ",
+            "properties": {
+                "path": {
+                    "name": "path",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "The path to an instance in question, as an absolute path with respect to the object found at `VERSION._data_`. An empty path means that the object referred to by id being specified. "
+                },
+                "id": {
+                    "name": "id",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "UID_BASED_ID",
+                    "is_mandatory": true,
+                    "documentation": "Globally unique id of an object, regardless of where it is stored."
+                }
+            }
+        },
+        "OBJECT_ID": {
+            "name": "OBJECT_ID",
+            "is_abstract": true,
+            "documentation": "Ancestor class of identifiers of informational objects. Ids may be completely meaningless, in which case their only job is to refer to something, or may carry some information to do with the identified object. \n\nObject ids are used inside an object to identify that object. To identify another object in another service, use an `OBJECT_REF`, or else use a UID for local objects identified by UID. If none of the subtypes is suitable, direct instances of this class may be used. ",
+            "properties": {
+                "value": {
+                    "name": "value",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "The value of the id in the form defined below. "
+                }
+            }
+        },
+        "OBJECT_REF": {
+            "name": "OBJECT_REF",
+            "documentation": "Class describing a reference to another object, which may exist locally or be maintained outside the current namespace, e.g. in another service. Services are usually external, e.g. available in a LAN (including on the same host) or the internet via Corba, SOAP, or some other distributed protocol. However, in small systems they may be part of the same executable as the data containing the Id. ",
+            "properties": {
+                "namespace": {
+                    "name": "namespace",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Namespace to which this identifier belongs in the local system context (and possibly in any other openEHR compliant environment) e.g.  terminology ,  demographic . These names are not yet standardised. Legal values for `_namespace_` are:\n\n* `\"local\"`\n* `\"unknown\"`\n* a string matching the regex `[a-zA-Z][a-zA-Z0-9_-:\/&+?]*`\n"
+                },
+                "type": {
+                    "name": "type",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Name of the  class (concrete or abstract) of object to which this identifier type refers, e.g. `PARTY`, `PERSON`,  `GUIDELINE`  etc. These class names are from the relevant reference model. The type name `ANY` can be used to indicate that any type is accepted (e.g. if the type is unknown). "
+                },
+                "id": {
+                    "name": "id",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "OBJECT_ID",
+                    "is_mandatory": true,
+                    "documentation": "Globally unique id of an object, regardless of where it is stored."
+                }
+            }
+        },
+        "OBJECT_VERSION_ID": {
+            "name": "OBJECT_VERSION_ID",
+            "ancestors": [
+                "UID_BASED_ID"
+            ],
+            "documentation": "Globally unique identifier for one version of a versioned object; lexical form: `object_id  '::' creating_system_id  '::' version_tree_id`."
+        },
+        "PARTY_REF": {
+            "name": "PARTY_REF",
+            "ancestors": [
+                "OBJECT_REF"
+            ],
+            "documentation": "Identifier for parties in a demographic or identity service. There are typically a number of subtypes of the `PARTY` class, including `PERSON`, `ORGANISATION`, etc. Abstract supertypes are allowed if the referenced object is of a type not known by the current implementation of this class (in other words, if the demographic model is changed by the addition of a new `PARTY` or `ACTOR` subtypes, valid `PARTY_REFs` can still be constructed to them). "
+        },
+        "TERMINOLOGY_ID": {
+            "name": "TERMINOLOGY_ID",
+            "ancestors": [
+                "OBJECT_ID"
+            ],
+            "documentation": "Identifier for terminologies such as accessed via a terminology query service. In this class, the value attribute identifies the Terminology in the terminology service, e.g.  SNOMED-CT . A terminology is assumed to be in a particular language, which must be explicitly specified.\n\nThe value if the id attribute is the precise terminology id identifier, including actual release (i.e. actual  version), local modifications etc; e.g. ICPC2.\n\nLexical form: `name [  '(' version  ')' ]`.\n"
+        },
+        "VERSION_TREE_ID": {
+            "name": "VERSION_TREE_ID",
+            "documentation": "Version tree identifier for one version. Lexical form: \n\n`trunk_version [  '.' branch_number  '.' branch_version ]`",
+            "properties": {
+                "value": {
+                    "name": "value",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "String form of this identifier."
+                }
+            }
+        },
+        "UID_BASED_ID": {
+            "name": "UID_BASED_ID",
+            "is_abstract": true,
+            "ancestors": [
+                "OBJECT_ID"
+            ],
+            "documentation": "Abstract model of UID-based identifiers consisting of a root part and an optional extension;\n\nlexical form: `root '::' extension`."
+        },
+        "UUID": {
+            "name": "UUID",
+            "ancestors": [
+                "UID"
+            ],
+            "documentation": "Model of the DCE Universal Unique Identifier or UUID which takes the form of hexadecimal integers separated by hyphens, following the pattern 8-4-4-4-12 as defined by the Open Group, CDE 1.1 Remote Procedure Call specification, Appendix A. Also known as a GUID."
+        },
+        "INTERNET_ID": {
+            "name": "INTERNET_ID",
+            "ancestors": [
+                "UID"
+            ],
+            "documentation": "Model of a reverse internet domain, as used to uniquely identify an internet domain. In the form of a dot-separated string in the reverse order of a domain name, specified by http:\/\/www.ietf.org\/rfc\/rfc1034.txt[IETF RFC 1034^]. "
+        },
+        "UID": {
+            "name": "UID",
+            "is_abstract": true,
+            "documentation": "Abstract parent of classes representing unique identifiers which identify information entities in a durable way. UIDs only ever identify one IE in time or space and are never re-used.",
+            "properties": {
+                "value": {
+                    "name": "value",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "The value of the id."
+                }
+            }
+        },
+        "ISO_OID": {
+            "name": "ISO_OID",
+            "ancestors": [
+                "UID"
+            ],
+            "documentation": "Model of ISO's Object Identifier (oid) as defined by the standard ISO\/IEC 8824. Oids are formed from integers separated by dots. Each non-leaf node in an Oid starting from the left corresponds to an assigning authority, and identifies that authority's namespace, inside which the remaining part of the identifier is locally unique. "
+        },
+        "TEMPLATE_ID": {
+            "name": "TEMPLATE_ID",
+            "ancestors": [
+                "OBJECT_ID"
+            ],
+            "documentation": "Identifier for templates. Lexical form to be determined."
+        },
+        "ACCESS_GROUP_REF": {
+            "name": "ACCESS_GROUP_REF",
+            "ancestors": [
+                "OBJECT_REF"
+            ],
+            "documentation": "Reference to access group in an access control service."
+        },
+        "OPENEHR_DEFINITIONS": {
+            "name": "OPENEHR_DEFINITIONS",
+            "ancestors": [
+                "BASIC_DEFINITIONS"
+            ],
+            "documentation": "Inheritance class to provide access to constants defined in other packages.",
+            "properties": {
+                "Local_terminology_id": {
+                    "name": "Local_terminology_id",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype"
+                }
+            }
+        },
+        "BASIC_DEFINITIONS": {
+            "name": "BASIC_DEFINITIONS",
+            "documentation": "Defines globally used constant values.",
+            "properties": {
+                "CR": {
+                    "name": "CR",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Character",
+                    "is_mandatory": true,
+                    "documentation": "Carriage return character."
+                },
+                "LF": {
+                    "name": "LF",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Character",
+                    "is_mandatory": true,
+                    "documentation": "Line feed character."
+                },
+                "Any_type": {
+                    "name": "Any_type",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": ""
+                },
+                "Regex_any_pattern": {
+                    "name": "Regex_any_pattern",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": ""
+                },
+                "Default_encoding": {
+                    "name": "Default_encoding",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": ""
+                }
+            }
+        },
+        "VALIDITY_KIND": {
+            "name": "VALIDITY_KIND",
+            "p_bmm_type": "P_BMM_ENUMERATION_STRING",
+            "ancestors": [
+                "String"
+            ],
+            "documentation": "An enumeration of three values that may commonly occur in constraint models.\n\nUse as the type of any attribute within this model, which expresses constraint on some attribute in a class in a reference model. For example to indicate validity\nof Date\/Time fields.",
+            "item_names": [
+                "mandatory",
+                "optional",
+                "prohibited"
+            ]
+        },
+        "VERSION_STATUS": {
+            "name": "VERSION_STATUS",
+            "p_bmm_type": "P_BMM_ENUMERATION_STRING",
+            "ancestors": [
+                "String"
+            ],
+            "documentation": "Status of a versioned artefact, as one of a number of possible values: uncontrolled, prerelease, release, build.",
+            "item_names": [
+                "alpha",
+                "beta",
+                "release_candidate",
+                "released",
+                "build"
+            ]
+        },
+        "Iso8601_timezone": {
+            "name": "Iso8601_timezone",
+            "ancestors": [
+                "Iso8601_type"
+            ],
+            "documentation": "ISO8601 timezone string, in format:\n\n* `Z | \u00b1hh[mm]`\n\nwhere:\n\n* `hh` is \"00\" - \"23\" (0-filled to two digits)\n* `mm` is \"00\" - \"59\" (0-filled to two digits)\n* `Z` is a literal meaning UTC (modern replacement for GMT), i.e. timezone `+0000`\n"
+        },
+        "Time_Definitions": {
+            "name": "Time_Definitions",
+            "documentation": "Definitions for date\/time classes. Note that the timezone limits are set by where the international dateline is. Thus, time in New Zealand is quoted using `+12:00`, not `-12:00`.",
+            "properties": {
+                "Seconds_in_minute": {
+                    "name": "Seconds_in_minute",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Integer",
+                    "is_mandatory": true,
+                    "documentation": ""
+                },
+                "Minutes_in_hour": {
+                    "name": "Minutes_in_hour",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Integer",
+                    "is_mandatory": true,
+                    "documentation": ""
+                },
+                "Hours_in_day": {
+                    "name": "Hours_in_day",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Integer",
+                    "is_mandatory": true,
+                    "documentation": ""
+                },
+                "Nominal_days_in_month": {
+                    "name": "Nominal_days_in_month",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Real",
+                    "is_mandatory": true,
+                    "documentation": "Used for conversions of durations containing months to days and \/ or seconds."
+                },
+                "Max_days_in_month": {
+                    "name": "Max_days_in_month",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Integer",
+                    "is_mandatory": true,
+                    "documentation": ""
+                },
+                "Days_in_year": {
+                    "name": "Days_in_year",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Integer",
+                    "is_mandatory": true,
+                    "documentation": ""
+                },
+                "Days_in_leap_year": {
+                    "name": "Days_in_leap_year",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Integer",
+                    "is_mandatory": true,
+                    "documentation": ""
+                },
+                "Max_days_in_year": {
+                    "name": "Max_days_in_year",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Integer",
+                    "is_mandatory": true,
+                    "documentation": ""
+                },
+                "Nominal_days_in_year": {
+                    "name": "Nominal_days_in_year",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Real",
+                    "is_mandatory": true,
+                    "documentation": "Used for conversions of durations containing years to days and \/ or seconds."
+                },
+                "Days_in_week": {
+                    "name": "Days_in_week",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Integer",
+                    "is_mandatory": true,
+                    "documentation": ""
+                },
+                "Months_in_year": {
+                    "name": "Months_in_year",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Integer",
+                    "is_mandatory": true,
+                    "documentation": ""
+                },
+                "Min_timezone_hour": {
+                    "name": "Min_timezone_hour",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Integer",
+                    "is_mandatory": true,
+                    "documentation": "Minimum hour value of a timezone (note that the -ve sign is supplied in the ISO8601_TIMEZONE class)."
+                },
+                "Max_timezone_hour": {
+                    "name": "Max_timezone_hour",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Integer",
+                    "is_mandatory": true,
+                    "documentation": ""
+                }
+            }
+        },
+        "Proper_interval": {
+            "name": "Proper_interval",
+            "ancestors": [
+                "Interval"
+            ],
+            "documentation": "Type representing a 'proper' Interval, i.e. any two-sided or one-sided interval.",
+            "generic_parameter_defs": {
+                "T": {
+                    "name": "T",
+                    "conforms_to_type": "Ordered"
+                }
+            }
+        },
+        "Point_interval": {
+            "name": "Point_interval",
+            "ancestors": [
+                "Interval"
+            ],
+            "documentation": "Type representing an Interval that happens to be a point value. Provides an efficient representation that is substitutable for `Interval<T>` where needed.",
+            "generic_parameter_defs": {
+                "T": {
+                    "name": "T",
+                    "conforms_to_type": "Ordered"
+                }
+            },
+            "properties": {
+                "lower_unbounded": {
+                    "name": "lower_unbounded",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": "lower boundary open (i.e. = -infinity)"
+                },
+                "upper_unbounded": {
+                    "name": "upper_unbounded",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": "upper boundary open (i.e. = +infinity)"
+                },
+                "lower_included": {
+                    "name": "lower_included",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": "lower boundary value included in range if not lower_unbounded."
+                },
+                "upper_included": {
+                    "name": "upper_included",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": "upper boundary value included in range if not upper_unbounded."
+                }
+            }
+        },
+        "AUTHORED_RESOURCE": {
+            "name": "AUTHORED_RESOURCE",
+            "is_abstract": true,
+            "documentation": "Abstract idea of an online resource created by a human author. \n",
+            "properties": {
+                "uid": {
+                    "name": "uid",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "UUID",
+                    "documentation": "Unique identifier of the family of archetypes having the same interface identifier (same major version)."
+                },
+                "original_language": {
+                    "name": "original_language",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Terminology_code",
+                    "is_mandatory": true,
+                    "documentation": "Language in which this resource was initially authored. Although there is no language primacy of resources overall, the language of original authoring is required to ensure natural language translations can preserve quality. Language is relevant in both the description and ontology sections. "
+                },
+                "description": {
+                    "name": "description",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "RESOURCE_DESCRIPTION",
+                    "documentation": "Description and lifecycle information of the resource."
+                },
+                "is_controlled": {
+                    "name": "is_controlled",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "documentation": "True if this resource is under any kind of change control (even file copying), in which case revision history is created. "
+                },
+                "annotations": {
+                    "name": "annotations",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "RESOURCE_ANNOTATIONS",
+                    "documentation": "Annotations on individual items within the resource, keyed by path. The inner table takes the form of a Hash table of String values keyed by String tags."
+                },
+                "translations": {
+                    "name": "translations",
+                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "TRANSLATION_DETAILS"
+                    },
+                    "cardinality": "|>=0|",
+                    "documentation": "List of details for each natural translation made of this resource, keyed by language code. For each translation listed here, there must be corresponding sections in all language-dependent parts of the resource. The `_original_language_` does not appear in this list."
+                }
+            }
+        },
+        "RESOURCE_DESCRIPTION": {
+            "name": "RESOURCE_DESCRIPTION",
+            "documentation": "Defines the descriptive meta-data of a resource.",
+            "properties": {
+                "original_author": {
+                    "name": "original_author",
+                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "String"
+                        ]
+                    },
+                    "is_mandatory": true,
+                    "documentation": "Original author of this resource, with all relevant details, including organisation."
+                },
+                "original_namespace": {
+                    "name": "original_namespace",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Namespace of original author's organisation, in reverse internet form, if applicable."
+                },
+                "original_publisher": {
+                    "name": "original_publisher",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Plain text name of organisation that originally published this artefact, if any."
+                },
+                "other_contributors": {
+                    "name": "other_contributors",
+                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "String"
+                    },
+                    "cardinality": "|>=0|",
+                    "documentation": "Other contributors to the resource, each listed in \"name <email>\"  form. "
+                },
+                "lifecycle_state": {
+                    "name": "lifecycle_state",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Terminology_code",
+                    "is_mandatory": true,
+                    "documentation": "Lifecycle state of the resource, typically including states such as: initial, in_development, in_review, published, superseded, obsolete. "
+                },
+                "parent_resource": {
+                    "name": "parent_resource",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "AUTHORED_RESOURCE",
+                    "is_mandatory": true,
+                    "documentation": "Reference to owning resource. "
+                },
+                "custodian_namespace": {
+                    "name": "custodian_namespace",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Namespace in reverse internet id form, of current custodian organisation."
+                },
+                "custodian_organisation": {
+                    "name": "custodian_organisation",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Plain text name of current custodian organisation."
+                },
+                "copyright": {
+                    "name": "copyright",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Optional copyright statement for the resource as a knowledge resource. \n"
+                },
+                "licence": {
+                    "name": "licence",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Licence of current artefact, in format \"short licence name <URL of licence>\", e.g. \"Apache 2.0 License <http:\/\/www.apache.org\/licenses\/LICENSE-2.0.html>\""
+                },
+                "ip_acknowledgements": {
+                    "name": "ip_acknowledgements",
+                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "String"
+                        ]
+                    },
+                    "documentation": "List of acknowledgements of other IP directly referenced in this archetype, typically terminology codes, ontology ids etc. Recommended keys are the widely known name or namespace for the IP source, as shown in the following example:\n\n----\nip_acknowledgements = <\n    [\"loinc\"] = <\"This content from LOINC\u00ae is copyright \u00a9 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http:\/\/loinc.org\/terms-of-use\">\n    [\"snomedct\"] = <\"Content from SNOMED CT\u00ae is copyright \u00a9 2007 IHTSDO <ihtsdo.org>\">\n>\n----"
+                },
+                "references": {
+                    "name": "references",
+                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "String"
+                        ]
+                    },
+                    "documentation": "List of references of material on which this artefact is based, as a keyed list of strings. The keys should be in a standard citation format."
+                },
+                "resource_package_uri": {
+                    "name": "resource_package_uri",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "URI of package to which this resource belongs."
+                },
+                "conversion_details": {
+                    "name": "conversion_details",
+                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "String"
+                        ]
+                    },
+                    "documentation": "Details related to conversion process that generated this model from an original, if relevant, as a list of name\/value pairs. Typical example with recommended tags:\n\n----\nconversion_details = <\n    [\"source_model\"] = <\"CEM model xyz <http:\/\/location.in.clinicalelementmodels.com>\">\n    [\"tool\"] = <\"cem2adl v6.3.0\">\n    [\"time\"] = <\"2014-11-03T09:05:00\">\n>\n----"
+                },
+                "other_details": {
+                    "name": "other_details",
+                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "String"
+                        ]
+                    },
+                    "documentation": "Additional non-language-sensitive resource meta-data, as a list of name\/value pairs."
+                },
+                "details": {
+                    "name": "details",
+                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "RESOURCE_DESCRIPTION_ITEM"
+                    },
+                    "cardinality": "|>=0|",
+                    "documentation": "Details of all parts of resource description that are natural language-dependent, keyed by language code."
+                }
+            }
+        },
+        "TRANSLATION_DETAILS": {
+            "name": "TRANSLATION_DETAILS",
+            "documentation": "Class providing details of a natural language translation. ",
+            "properties": {
+                "language": {
+                    "name": "language",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Terminology_code",
+                    "is_mandatory": true,
+                    "documentation": "Language of the translation, coded using ISO 639-1 (2 character) language codes."
+                },
+                "author": {
+                    "name": "author",
+                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "String"
+                        ]
+                    },
+                    "is_mandatory": true,
+                    "documentation": "Translator name and other demographic details."
+                },
+                "accreditaton": {
+                    "name": "accreditaton",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Accreditation of translator, usually a national translator's registration or association membership id."
+                },
+                "other_details": {
+                    "name": "other_details",
+                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "String"
+                        ]
+                    },
+                    "documentation": "Any other meta-data."
+                },
+                "version_last_translated": {
+                    "name": "version_last_translated",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Version of this resource last time it was translated into the language represented by this `TRANSLATION_DETAILS` object."
+                }
+            }
+        },
+        "RESOURCE_DESCRIPTION_ITEM": {
+            "name": "RESOURCE_DESCRIPTION_ITEM",
+            "documentation": "Language-specific detail of resource description. When a resource is translated for use in another language environment, each `RESOURCE_DESCRIPTION_ITEM` needs to be copied and translated into the new language.",
+            "properties": {
+                "language": {
+                    "name": "language",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Terminology_code",
+                    "is_mandatory": true,
+                    "documentation": "The localised language in which the items in this description item are written. Coded using ISO 639-1 (2 character) language codes."
+                },
+                "purpose": {
+                    "name": "purpose",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Purpose of the resource."
+                },
+                "keywords": {
+                    "name": "keywords",
+                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "String"
+                    },
+                    "cardinality": "|>=0|",
+                    "documentation": "Keywords which characterise this resource, used e.g. for indexing and searching. \n"
+                },
+                "use": {
+                    "name": "use",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Description of the uses of the resource, i.e. contexts in which it could be used. \n"
+                },
+                "misuse": {
+                    "name": "misuse",
+                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Description of any misuses of the resource, i.e. contexts in which it should not be used."
+                },
+                "original_resource_uri": {
+                    "name": "original_resource_uri",
+                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "String"
+                        ]
+                    },
+                    "documentation": "URIs of original clinical document(s) or description of which resource is a formalisation, in the language of this description item; keyed by meaning."
+                },
+                "other_details": {
+                    "name": "other_details",
+                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "String"
+                        ]
+                    },
+                    "documentation": "Additional language-senstive resource metadata, as a list of name\/value pairs. "
+                }
+            }
+        },
+        "RESOURCE_ANNOTATIONS": {
+            "name": "RESOURCE_ANNOTATIONS",
+            "documentation": "Object representing annotations on an archetype. These can be of various forms, with a documentation form defined so far, which has a multi-level tabular structure [ [ [String value, String key], path key], language key]. Example instance, showing the documentation structure.\n\n--------\n    documentation = <\n        [\"en\"] = <\n           [\"\/data[id2]\"] = <\n               [\"ui\"] = <\"passthrough\">\n           >\n           [\"\/data[id2]\/items[id3]\"] = <\n               [\"design note\"] = <\"this is a design note on Statement\">\n               [\"requirements note\"] = <\"this is a requirements note on Statement\">\n               [\"medline ref\"] = <\"this is a medline ref on Statement\">\n           >\n        >\n    >\n--------\n\nOther sub-structures might have different keys, e.g.  based on programming languages, UI toolkits etc.\n",
+            "properties": {
+                "documentation": {
+                    "name": "documentation",
+                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameter_defs": [
+                            {
+                                "p_bmm_type": "P_BMM_SIMPLE_TYPE",
+                                "type": "String"
+                            },
+                            {
+                                "p_bmm_type": "P_BMM_GENERIC_TYPE",
+                                "root_type": "Hash",
+                                "generic_parameter_defs": [
+                                    {
+                                        "p_bmm_type": "P_BMM_SIMPLE_TYPE",
+                                        "type": "String"
+                                    },
+                                    {
+                                        "p_bmm_type": "P_BMM_GENERIC_TYPE",
+                                        "root_type": "Hash",
+                                        "generic_parameters": [
+                                            "String",
+                                            "String"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "is_mandatory": true,
+                    "documentation": "Documentary annotations in a multi-level keyed structure."
+                }
+            }
+        }
+    }
+}
