@@ -1142,20 +1142,20 @@
                     "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
-                        "generic_parameter_defs": [
-                            {
+                        "generic_parameter_defs": {
+                            "K": {
                                 "p_bmm_type": "P_BMM_SIMPLE_TYPE",
                                 "type": "String"
                             },
-                            {
+                            "V": {
                                 "p_bmm_type": "P_BMM_GENERIC_TYPE",
                                 "root_type": "Hash",
-                                "generic_parameter_defs": [
-                                    {
+                                "generic_parameter_defs": {
+                                    "K": {
                                         "p_bmm_type": "P_BMM_SIMPLE_TYPE",
                                         "type": "String"
                                     },
-                                    {
+                                    "V": {
                                         "p_bmm_type": "P_BMM_GENERIC_TYPE",
                                         "root_type": "Hash",
                                         "generic_parameters": [
@@ -1163,9 +1163,9 @@
                                             "String"
                                         ]
                                     }
-                                ]
+                                }
                             }
-                        ]
+                        }
                     },
                     "is_mandatory": true,
                     "documentation": "Documentary annotations in a multi-level keyed structure."
