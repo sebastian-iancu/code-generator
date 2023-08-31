@@ -35,8 +35,6 @@ class UMLFile extends AbstractItem
         $mainPackageNode = $this->getMainPackageNode();
         $this->umlPackage = new UMLPackage($mainPackageNode);
         $this->name = $this->umlPackage->name;
-//        $this->allUmlPackages = new Collection();
-//        $this->recursiveCollectUmlPackages($this->umlPackage, $this->name);
 
         $this->log('  File [%s] was read.', $this->name);
     }
@@ -53,6 +51,13 @@ class UMLFile extends AbstractItem
         return $nodes[0];
     }
 
+    public function getRelease(): string {
+        return str_replace([
+            $this->name . '-v',
+            '.xmi'
+        ], '', $this->id);
+    }
+
 //    protected function recursiveCollectUmlPackages(UMLPackage $umlPackage, string $prefix): void
 //    {
 //        foreach ($umlPackage->umlPackages as $childUmlPackage) {
@@ -62,5 +67,22 @@ class UMLFile extends AbstractItem
 //        }
 //    }
 
+
+    public function getPackages(string $prefix): \Generator
+    {
+        $this->log('Searching for [%s] in [%s](%s)...', $prefix, $this->id, $this->name);
+        $parts = explode('::', $prefix);
+        $packageId = array_shift($parts);
+        if ($this->umlPackage->id === $packageId || $this->umlPackage->name === $packageId) {
+            $this->log('Found [%s](%s) umlPackage.', $this->umlPackage->id, $this->umlPackage->name);
+            if (!$parts) {
+                yield $this->umlPackage;
+            } else {
+                foreach ($this->umlPackage->getPackages(implode('::', $parts)) as $umlPackage) {
+                    yield $umlPackage;
+                }
+            }
+        }
+    }
 
 }

@@ -31,6 +31,11 @@ class Collection extends ArrayObject implements JsonSerializable
         return $this->offsetGet($key) ?: null;
     }
 
+    public function flush(): void {
+        $this->aliases = [];
+        $this->exchangeArray([]);
+    }
+
     /**
      * @return array<string, mixed>
      */

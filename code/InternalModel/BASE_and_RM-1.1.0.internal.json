@@ -371,7 +371,7 @@
                                                                 "id": "_18_5_1_83e026d_1503073094519_443263_7680",
                                                                 "name": "OBJECT_ID",
                                                                 "description": "Ancestor class of identifiers of informational objects. Ids may be completely meaningless, in which case their only job is to refer to something, or may carry some information to do with the identified object. \n\nObject ids are used inside an object to identify that object. To identify another object in another service, use an `OBJECT_REF`, or else use a UID for local objects identified by UID. If none of the subtypes is suitable, direct instances of this class may be used. ",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": [],
                                                                 "umlTemplateParameters": [],
                                                                 "templateBinding": null,
@@ -795,7 +795,7 @@
                                                                 "id": "_18_5_1_83e026d_1503073638540_947002_8168",
                                                                 "name": "UID_BASED_ID",
                                                                 "description": "Abstract model of UID-based identifiers consisting of a root part and an optional extension; lexical form: `root '::' extension`.",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_18_5_1_83e026d_1503073638545_566586_8174": "OBJECT_ID"
@@ -930,7 +930,7 @@
                                                                 "id": "_18_1_83e026d_1422968609347_843401_25644",
                                                                 "name": "UID",
                                                                 "description": "Abstract parent of classes representing unique identifiers which identify information entities in a durable way. UIDs only ever identify one IE in time or space and are never re-used.",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": [],
                                                                 "umlTemplateParameters": [],
                                                                 "templateBinding": null,
@@ -2241,7 +2241,7 @@
                                                                 "id": "_18_1_83e026d_1437045795525_923486_5138",
                                                                 "name": "Container",
                                                                 "description": "Abstract ancestor of container types whose items are addressable in some way.",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1437045820919_248915_5164": "Any"
@@ -2947,7 +2947,7 @@
                                                                 "id": "_18_1_83e026d_1423140533879_46330_7033",
                                                                 "name": "Comparable",
                                                                 "description": "",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": [],
                                                                 "umlTemplateParameters": [],
                                                                 "templateBinding": null,
@@ -2959,7 +2959,7 @@
                                                                 "id": "_18_1_83e026d_1423740418564_774954_4776",
                                                                 "name": "Ordered_Numeric",
                                                                 "description": "Abstract notional parent class of ordered, numeric types, which are types with both the `_less_than_()` and arithmetic functions defined.",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1423740470670_508938_4777": "Ordered",
@@ -3644,7 +3644,7 @@
                                                                 "id": "_18_1_83e026d_1437041647455_666508_4494",
                                                                 "name": "Numeric",
                                                                 "description": "Abstract parent class of numeric types, which are types which have various arithmetic and comparison operators defined.",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1437044194374_47225_4835": "Any"
@@ -4973,7 +4973,7 @@
                                                                 "id": "_18_1_83e026d_1422968609347_357665_25676",
                                                                 "name": "Ordered",
                                                                 "description": "Abstract parent class of ordered types i.e. types on which the '<' operator is defined.",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1437044216269_611967_4838": "Any"
@@ -6820,7 +6820,7 @@
                                                                 "id": "_18_2_83e026d_1461851902576_933652_4978",
                                                                 "name": "Iso8601_type",
                                                                 "description": "Abstract ancestor type of ISO 8601 types, defining interface for 'extended' and 'partial' concepts from ISO 8601.",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_19_0_83e026d_1541440337893_19295_4997": "Temporal",
@@ -8201,7 +8201,7 @@
                                                                 "id": "_19_0_83e026d_1541800849460_667680_5037",
                                                                 "name": "Temporal",
                                                                 "description": "Abstract ancestor of time-related classes.",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_19_0_83e026d_1541800900794_203176_5062": "Ordered"
@@ -8445,7 +8445,7 @@
                                                                 "id": "_18_1_83e026d_1422968609284_208630_25363",
                                                                 "name": "Interval",
                                                                 "description": "Interval abstraction, featuring upper and lower limits that may be open or closed, included or not included.",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1437045843666_715346_5168": "Any"
@@ -9325,7 +9325,7 @@
                                                         "id": "_18_1_83e026d_1422968609284_691010_25365",
                                                         "name": "Any",
                                                         "description": "Abstract ancestor class for all other classes. Usually maps to a type like `Any` or `Object` in an object-oriented technology. Defined here to provide value and reference equality semantics.",
-                                                        "isAbstract": false,
+                                                        "isAbstract": true,
                                                         "umlGeneralizations": [],
                                                         "umlTemplateParameters": [],
                                                         "templateBinding": null,
@@ -9517,7 +9517,7 @@
                                                         "id": "_18_1_83e026d_1422968609316_657335_25552",
                                                         "name": "AUTHORED_RESOURCE",
                                                         "description": "Abstract idea of an online resource created by a human author. \n",
-                                                        "isAbstract": false,
+                                                        "isAbstract": true,
                                                         "umlGeneralizations": [],
                                                         "umlTemplateParameters": [],
                                                         "templateBinding": null,
@@ -10549,7 +10549,7 @@
                                                                 "id": "_18_1_83e026d_1433773264287_752928_6656",
                                                                 "name": "PATHABLE",
                                                                 "description": "The `PATHABLE` class defines the pathing capabilities used by nearly all classes in the openEHR reference model, mostly via inheritance of `LOCATABLE`. The defining characteristics of `PATHABLE` objects are that they can locate child objects using paths, and they know their parent object in a compositional hierarchy. The parent feature is defined as abstract in the model, and may be implemented in any way convenient.",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_18_5_1_83e026d_1505228111048_752959_9937": "Any"
@@ -10825,7 +10825,7 @@
                                                                 "id": "_18_1_83e026d_1433773263740_28146_5429",
                                                                 "name": "LOCATABLE",
                                                                 "description": "Root class of all information model classes that can be archetyped. Most classes in the openEHR reference model inherit from the `LOCATABLE` class, which defines the idea of  locatability in an archetyped structure. `LOCATABLE` defines a runtime name and an `_archetype_node_id_`. ",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1433773263886_253404_5683": "PATHABLE"
@@ -12228,7 +12228,7 @@
                                                                 "id": "_18_1_83e026d_1433773263739_688356_5384",
                                                                 "name": "VERSION",
                                                                 "description": "Abstract model of one Version within a Version container, containing data, commit audit trail, and the identifier of its Contribution.",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": [],
                                                                 "umlTemplateParameters": {
                                                                     "__aliases": {
@@ -13215,7 +13215,7 @@
                                                                 "id": "_18_1_83e026d_1433773264427_804720_6958",
                                                                 "name": "PARTY_PROXY",
                                                                 "description": "Abstract concept of a proxy description of a party, including an optional link to data for this party in a demographic or other identity management system. Sub- typed into `PARTY_IDENTIFIED` and `PARTY_SELF`. ",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": [],
                                                                 "umlTemplateParameters": [],
                                                                 "templateBinding": null,
@@ -13656,7 +13656,7 @@
                                                                 "id": "_18_1_83e026d_1433773264127_138204_6352",
                                                                 "name": "AUTHORED_RESOURCE",
                                                                 "description": "Abstract idea of an online resource created by a human author. \n",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": [],
                                                                 "umlTemplateParameters": [],
                                                                 "templateBinding": null,
@@ -14481,7 +14481,7 @@
                                                                 "id": "_18_1_83e026d_1433773264743_78746_7750",
                                                                 "name": "ITEM_STRUCTURE",
                                                                 "description": "Abstract parent class of all spatial data types. ",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1433773265399_956148_9288": "DATA_STRUCTURE"
@@ -15256,7 +15256,7 @@
                                                                 "id": "_18_1_83e026d_1433773263739_664401_5381",
                                                                 "name": "EVENT",
                                                                 "description": "Defines the abstract notion of a single event in a series. This class is generic, allowing types to be generated which are locked to particular spatial types, such as `EVENT<ITEM_LIST>`. Subtypes express point or intveral data. ",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1433773264370_710014_6806": "LOCATABLE"
@@ -15796,7 +15796,7 @@
                                                                 "id": "_18_1_83e026d_1433773264178_996671_6475",
                                                                 "name": "ITEM",
                                                                 "description": "The abstract parent of `CLUSTER` and `ELEMENT` representation classes. ",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1433773264067_221200_6234": "LOCATABLE"
@@ -16010,7 +16010,7 @@
                                                         "id": "_18_1_83e026d_1433773264117_27544_6337",
                                                         "name": "DATA_STRUCTURE",
                                                         "description": "Abstract parent class of all data structure types. Includes the `_as_hierarchy_` function which can generate the equivalent CEN EN13606 single hierarchy for each subtype's physical representation. For example, the physical representation of an `ITEM_LIST` is `List<ELEMENT>`; its implementation of `_as_hierarchy_` will generate a `CLUSTER` containing the set of `ELEMENT` nodes from the list. ",
-                                                        "isAbstract": false,
+                                                        "isAbstract": true,
                                                         "umlGeneralizations": {
                                                             "__aliases": {
                                                                 "_18_1_83e026d_1433773264212_434933_6506": "LOCATABLE"
@@ -16081,7 +16081,7 @@
                                                                 "id": "_18_1_83e026d_1433773263871_514443_5678",
                                                                 "name": "DATA_VALUE",
                                                                 "description": "Abstract parent of all `DV_` data value types.",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1433773264663_287494_7590": "OPENEHR_DEFINITIONS"
@@ -16371,7 +16371,7 @@
                                                                 "id": "_18_1_83e026d_1433773265306_581295_9112",
                                                                 "name": "DV_ENCAPSULATED",
                                                                 "description": "Abstract class defining the common meta-data of all types of encapsulated data.",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1433773264853_867486_8013": "DATA_VALUE"
@@ -17701,7 +17701,7 @@
                                                                         "id": "_18_1_83e026d_1433773264656_155105_7557",
                                                                         "name": "DV_TEMPORAL",
                                                                         "description": "Specialised temporal variant of `DV_ABSOLUTE_QUANTITY` whose diff type is `DV_DURATION`. ",
-                                                                        "isAbstract": false,
+                                                                        "isAbstract": true,
                                                                         "umlGeneralizations": {
                                                                             "__aliases": {
                                                                                 "_18_1_83e026d_1433773264651_248727_7499": "DV_ABSOLUTE_QUANTITY"
@@ -18649,7 +18649,7 @@
                                                                 "id": "_18_1_83e026d_1433773265143_257597_8752",
                                                                 "name": "DV_ORDERED",
                                                                 "description": "Abstract class defining the concept of ordered values, which includes ordinals as well as true quantities. It defines the functions  `<` and `_is_strictly_comparable_to()_`, the latter of which must evaluate to `True` for instances being compared with the  `<` function, or used as limits in the `DV_INTERVAL<T>` class. \n\nData value types which are to be used as limits in the `DV_INTERVAL<T>` class must inherit from this class, and implement the function `_is_strictly_comparable_to()_` to ensure that instances compare meaningfully. For example, instances of `DV_QUANTITY` can only be compared if they measure the same kind of physical quantity. \n",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1433773265312_1180_9133": "DATA_VALUE",
@@ -19049,7 +19049,7 @@
                                                                 "id": "_18_1_83e026d_1433773264842_525947_7972",
                                                                 "name": "DV_QUANTIFIED",
                                                                 "description": "Abstract class defining the concept of true quantified values, i.e. values which are not only ordered, but which have a precise magnitude.",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1433773264509_67691_7156": "DV_ORDERED"
@@ -19804,7 +19804,7 @@
                                                                 "id": "_18_1_83e026d_1433773265406_277150_9330",
                                                                 "name": "DV_AMOUNT",
                                                                 "description": "Abstract class defining the concept of relative quantified  'amounts'. For relative quantities, the  `+` and  `-` operators are defined (unlike descendants of `DV_ABSOLUTE_QUANTITY`, such as the date\/time types). \n",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1433773264525_719551_7239": "DV_QUANTIFIED"
@@ -20686,7 +20686,7 @@
                                                                 "id": "_18_1_83e026d_1433773264751_297636_7767",
                                                                 "name": "DV_ABSOLUTE_QUANTITY",
                                                                 "description": "Abstract class defining the concept of quantified entities whose values are absolute with respect to an origin. Dates and Times are the main example.",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1433773264050_664290_6058": "DV_QUANTIFIED"
@@ -21413,7 +21413,7 @@
                                                                 "id": "_18_1_83e026d_1433773264726_367200_7718",
                                                                 "name": "DV_TIME_SPECIFICATION",
                                                                 "description": "This is an abstract class of which all timing specifications are specialisations. Specifies points in time, possibly linked to the calendar, or a real world repeating event, such as  breakfast. ",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1433773263778_618226_5547": "DATA_VALUE"
@@ -23017,7 +23017,7 @@
                                                         "id": "_18_1_83e026d_1433773265347_672404_9187",
                                                         "name": "EXTERNAL_ENVIRONMENT_ACCESS",
                                                         "description": "A mixin class providing access to services in the external environment.",
-                                                        "isAbstract": false,
+                                                        "isAbstract": true,
                                                         "umlGeneralizations": {
                                                             "__aliases": {
                                                                 "_18_1_83e026d_1433773264853_286797_7988": "TERMINOLOGY_SERVICE",
@@ -23075,7 +23075,7 @@
                                                                 "id": "_18_1_83e026d_1433773264382_782242_6902",
                                                                 "name": "ACCESS_CONTROL_SETTINGS",
                                                                 "description": "Access Control Settings for the EHR and components. Intended to support multiple access control schemes. Currently implementation dependent.",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": [],
                                                                 "umlTemplateParameters": [],
                                                                 "templateBinding": null,
@@ -24048,7 +24048,7 @@
                                                                 "id": "_18_1_83e026d_1433773265376_946307_9223",
                                                                 "name": "EXTRACT_CONTENT_ITEM",
                                                                 "description": "Abstract model of a wrapper for one content item in an Extract, containing various meta-data. Indicates whether it was part of the primary set and what its original path was. Intended to be subtyped for wrappers of specific types of content.",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1433773263778_602229_5540": "EXTRACT_ITEM"
@@ -24424,7 +24424,7 @@
                                                                 "id": "_18_1_83e026d_1433773264138_485477_6384",
                                                                 "name": "EXTRACT_ITEM",
                                                                 "description": "Abstract parent of Extract Folder and Content types.",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1433773263849_823210_5638": "LOCATABLE"
@@ -26295,7 +26295,7 @@
                                                                 "id": "_18_1_83e026d_1433773265014_309650_8516",
                                                                 "name": "MESSAGE_CONTENT",
                                                                 "description": "Abstract parent of message payload types.",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": [],
                                                                 "umlTemplateParameters": [],
                                                                 "templateBinding": null,
@@ -26333,7 +26333,7 @@
                                                         "id": "_18_1_83e026d_1433773264491_825671_7116",
                                                         "name": "PARTY",
                                                         "description": "Ancestor of all Party types, including real world entities and their roles. A Party is any entity which can participate in an activity. The `_name_` attribute inherited from `LOCATABLE` is used to indicate the actual type of party (note that the actual names, i.e. identities of parties are indicated in the `_identities_` attribute, not the `_name_` attribute).\n\nNOTE: It is strongly recommended that the inherited attribute `_uid_` be populated in `PARTY` objects, using the UID copied from the `_object_id()_` of the `_uid_` field of the enclosing `VERSION` object. +\nFor example, the `ORIGINAL_VERSION.uid` `87284370-2D4B-4e3d-A3F3-F303D2F4F34B::uk.nhs.ehr1::2`  would be copied to the `_uid_` field of the `PARTY` object.",
-                                                        "isAbstract": false,
+                                                        "isAbstract": true,
                                                         "umlGeneralizations": {
                                                             "__aliases": {
                                                                 "_18_1_83e026d_1433773264036_574696_6033": "LOCATABLE"
@@ -26860,7 +26860,7 @@
                                                         "id": "_18_1_83e026d_1433773264173_939218_6462",
                                                         "name": "ACTOR",
                                                         "description": "Ancestor of all real-world types, including people and organisations. An actor is any real-world entity capable of taking on a role.",
-                                                        "isAbstract": false,
+                                                        "isAbstract": true,
                                                         "umlGeneralizations": {
                                                             "__aliases": {
                                                                 "_18_1_83e026d_1433773264769_401258_7784": "PARTY"
@@ -27525,7 +27525,7 @@
                                                                         "id": "_18_1_83e026d_1433773264279_54340_6618",
                                                                         "name": "CARE_ENTRY",
                                                                         "description": "The abstract parent of all clinical `ENTRY` subtypes. A `CARE_ENTRY` defines protocol and guideline attributes for all clinical Entry subtypes. ",
-                                                                        "isAbstract": false,
+                                                                        "isAbstract": true,
                                                                         "umlGeneralizations": {
                                                                             "__aliases": {
                                                                                 "_18_1_83e026d_1433773264997_37116_8423": "ENTRY"
@@ -28129,7 +28129,7 @@
                                                                         "id": "_18_1_83e026d_1433773264997_829602_8426",
                                                                         "name": "ENTRY",
                                                                         "description": "The abstract parent of all `ENTRY` subtypes. An `ENTRY` is the root of a logical item of  hard  clinical information created in the  clinical statement  context, within a clinical session. There can be numerous such contexts in a clinical session. Observations and other Entry types only ever document information captured\/created in the event documented by the enclosing Composition.\n\nAn `ENTRY` is also the minimal unit of information any query should return, since a whole `ENTRY` (including subparts) records spatial structure, timing information, and contextual information, as well as the subject and generator of the information. ",
-                                                                        "isAbstract": false,
+                                                                        "isAbstract": true,
                                                                         "umlGeneralizations": {
                                                                             "__aliases": {
                                                                                 "_18_1_83e026d_1433773263737_231514_5299": "CONTENT_ITEM"
@@ -28445,7 +28445,7 @@
                                                                 "id": "_18_1_83e026d_1433773264370_311506_6812",
                                                                 "name": "CONTENT_ITEM",
                                                                 "description": "Abstract ancestor of all concrete content types.",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1433773264067_274614_6175": "LOCATABLE"
@@ -28487,7 +28487,7 @@
                                                                 "id": "_19_0_83e026d_1574366512275_872676_5058",
                                                                 "name": "VIEW_ENTRY",
                                                                 "description": "",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_19_0_83e026d_1574367124501_959231_5315": "VIEW_ITEM"
@@ -28686,7 +28686,7 @@
                                                                 "id": "_19_0_83e026d_1574427970078_290486_5430",
                                                                 "name": "VIEW_ITEM",
                                                                 "description": "",
-                                                                "isAbstract": false,
+                                                                "isAbstract": true,
                                                                 "umlGeneralizations": {
                                                                     "__aliases": {
                                                                         "_19_0_83e026d_1574428117150_501450_5466": "CONTENT_ITEM"
@@ -29255,7 +29255,7 @@
                                                         "id": "_19_0_83e026d_1572454244585_520385_5253",
                                                         "name": "RESOURCE_USE",
                                                         "description": "",
-                                                        "isAbstract": false,
+                                                        "isAbstract": true,
                                                         "umlGeneralizations": [],
                                                         "umlTemplateParameters": [],
                                                         "templateBinding": null,

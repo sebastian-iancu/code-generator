@@ -61,4 +61,30 @@ class UMLPackage extends AbstractItem
     }
 
 
+    public function getPackages(string $prefix): \Generator
+    {
+        /** @var UMLPackage|null $umlPackage */
+        $this->log('Searching for [%s] in [%s](%s)...', $prefix, $this->id, $this->name);
+        if ($prefix === '*' || $prefix === '') {
+            foreach ($this->umlPackages as $umlPackage) {
+                yield $umlPackage;
+            }
+        } else {
+            $parts = explode('::', $prefix);
+            $packageId = array_shift($parts);
+            $umlPackage = $this->umlPackages->get($packageId);
+            if ($umlPackage) {
+                $this->log('Found [%s](%s) umlPackage.', $umlPackage->id, $this->name);
+                if (!$parts) {
+                    yield $umlPackage;
+                } else {
+                    foreach ($umlPackage->getPackages(implode('::', $parts)) as $umlPackage) {
+                        yield $umlPackage;
+                    }
+                }
+            }
+
+        }
+    }
+
 }

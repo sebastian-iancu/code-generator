@@ -24,7 +24,7 @@ class UMLClass extends AbstractItem
         $this->id = (string)$xmlNode->attributes('xmi', true)?->id;
         $this->name = (string)$xmlNode['name'];
         $this->description = (string)$xmlNode->ownedComment['body'];
-        $this->isAbstract = (string)$xmlNode['name'] === 'true';
+        $this->isAbstract = (string)$xmlNode['isAbstract'] === 'true';
         // collect generalizations
         $this->umlGeneralizations = new Collection();
         $nodes = $xmlNode->xpath("generalization[@xmi:type='uml:Generalization']") ?: [];
