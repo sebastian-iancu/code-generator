@@ -38,6 +38,18 @@ class TypeReference extends AbstractItem
             $this->referenceMethod = 'idref';
             $this->referentType = null;
             $this->referentPath = null;
+        } elseif ($xmlNode->xpath('descendant::qualifier')) {
+            $id = $key ?: (string)$xmlNode->attributes('xmi', true)?->id;
+            $qualifierType = new self($xmlNode->qualifier->type);
+            if ((string)$xmlNode['aggregation'] === 'composite') {
+                $this->name = 'Hash<'.$qualifierType->name.', '.$this->getNameById($xmlNode, $id).'>';
+                $this->referenceMethod = 'qualifier-composite';
+            } else {
+                $this->name = $qualifierType->name;
+                $this->referenceMethod = 'qualifier';
+            }
+            $this->id = $this->getIdByName($xmlNode, $this->name);
+            $this->referentPath = null;
         } else {
             $this->id = $key ?: (string)$xmlNode->attributes('xmi', true)?->id;
             $this->name = $this->getNameById($xmlNode, $this->id);
@@ -74,6 +86,33 @@ class TypeReference extends AbstractItem
             return (string)$nodes[0]['name'];
         } elseif (isset($nodes[0]->ownedParameteredElement['name'])) {
             return (string)$nodes[0]->ownedParameteredElement['name'];
+        }
+
+        return '';
+    }
+
+    protected function getIdByName(SimpleXMLElement $node, string $name, string $type = '', string $otherPredicate = ''): string
+    {
+        $predicates = ['(@xmi:id)'];
+        if (preg_match('/^[^\'"]+$/', $name)) {
+            $predicates[] = "@name='$name'";
+        }
+        if (preg_match('/^\w+$/', $type)) {
+            $predicates[] = "@xmi:type='uml:$type'";
+        }
+        if (preg_match('/^[^\[\]\"]+$/', $otherPredicate)) {
+            $predicates[] = $otherPredicate;
+        }
+        if (count($predicates) === 1) {
+            $this->log("WARNING: While resolving Id by Name, insufficient predicates [Name:$name, type:$type, others:$otherPredicate] to query xml.");
+            return '';
+        }
+        $predicates = implode(' and ', $predicates);
+        $nodes = $node->xpath("//node()[$predicates]");
+        if (!$nodes) {
+            $this->log("WARNING: While resolving Id by Name, xml-node not found for [$predicates].");
+        } else {
+            return (string)$nodes[0]->attributes('xmi', true)?->id;
         }
 
         return '';

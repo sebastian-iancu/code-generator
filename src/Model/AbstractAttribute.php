@@ -46,7 +46,9 @@ class AbstractAttribute extends AbstractItem
         } else {
             $this->minOccurs = 1;
         }
-        if (isset($xmlNode->upperValue)) {
+        if ($this->type->referenceMethod === 'qualifier-composite') {
+            $this->maxOccurs = 1;
+        } elseif (isset($xmlNode->upperValue)) {
             $this->maxOccurs = (string)$xmlNode->upperValue['value'] === '*' ? -1 : (int)$xmlNode->upperValue['value'];
         } else {
             $this->maxOccurs = 1;

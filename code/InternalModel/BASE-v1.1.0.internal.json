@@ -6646,15 +6646,14 @@
                                                                 "id": "_18_2_83e026d_1456155732657_22041_4628",
                                                                 "name": "translations",
                                                                 "type": {
-                                                                    "id": "_18_1_83e026d_1422968609316_164205_25554",
-                                                                    "name": "TRANSLATION_DETAILS",
-                                                                    "referenceMethod": "lookup",
-                                                                    "referentPath": null,
-                                                                    "referentType": null
+                                                                    "id": "_18_2_83e026d_1453124256362_269917_4743",
+                                                                    "name": "Hash<String, TRANSLATION_DETAILS>",
+                                                                    "referenceMethod": "qualifier-composite",
+                                                                    "referentPath": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
-                                                                "maxOccurs": -1,
+                                                                "maxOccurs": 1,
                                                                 "description": "List of details for each natural translation made of this resource, keyed by language code. For each translation listed here, there must be corresponding sections in all language-dependent parts of the resource. The `_original_language_` does not appear in this list.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
@@ -7035,15 +7034,14 @@
                                                                 "id": "_18_2_83e026d_1453125717158_602776_4829",
                                                                 "name": "details",
                                                                 "type": {
-                                                                    "id": "_18_1_83e026d_1422968609316_808369_25555",
-                                                                    "name": "RESOURCE_DESCRIPTION_ITEM",
-                                                                    "referenceMethod": "lookup",
-                                                                    "referentPath": null,
-                                                                    "referentType": null
+                                                                    "id": "_18_2_83e026d_1453125164736_976750_4822",
+                                                                    "name": "Hash<String, RESOURCE_DESCRIPTION_ITEM>",
+                                                                    "referenceMethod": "qualifier-composite",
+                                                                    "referentPath": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
-                                                                "maxOccurs": -1,
+                                                                "maxOccurs": 1,
                                                                 "description": "Details of all parts of resource description that are natural language-dependent, keyed by language code.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,

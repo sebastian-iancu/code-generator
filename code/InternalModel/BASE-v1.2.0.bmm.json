@@ -886,12 +886,14 @@
                 },
                 "translations": {
                     "name": "translations",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
-                        "container_type": "List",
-                        "type": "TRANSLATION_DETAILS"
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "TRANSLATION_DETAILS"
+                        ]
                     },
-                    "cardinality": "|>=0|",
                     "documentation": "List of details for each natural translation made of this resource, keyed by language code. For each translation listed here, there must be corresponding sections in all language-dependent parts of the resource. The `_original_language_` does not appear in this list."
                 }
             }
@@ -1029,12 +1031,14 @@
                 },
                 "details": {
                     "name": "details",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
-                        "container_type": "List",
-                        "type": "RESOURCE_DESCRIPTION_ITEM"
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "RESOURCE_DESCRIPTION_ITEM"
+                        ]
                     },
-                    "cardinality": "|>=0|",
                     "documentation": "Details of all parts of resource description that are natural language-dependent, keyed by language code."
                 }
             }

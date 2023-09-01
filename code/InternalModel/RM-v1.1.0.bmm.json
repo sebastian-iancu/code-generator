@@ -626,7 +626,7 @@
                     "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
-                        "type": "VERSION"
+                        "type": "OBJECT_REF"
                     },
                     "cardinality": "|>=1|",
                     "is_mandatory": true,
@@ -654,7 +654,7 @@
                 "contribution": {
                     "name": "contribution",
                     "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
-                    "type": "CONTRIBUTION",
+                    "type": "OBJECT_REF",
                     "is_mandatory": true,
                     "documentation": "Contribution in which this version was added. "
                 },
@@ -997,7 +997,7 @@
                     "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
-                        "type": "VERSIONED_OBJECT"
+                        "type": "OBJECT_REF"
                     },
                     "cardinality": "|>=0|",
                     "documentation": "The list of references to other (usually) versioned objects logically in this folder. "
@@ -1040,12 +1040,14 @@
                 },
                 "translations": {
                     "name": "translations",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
-                        "container_type": "List",
-                        "type": "TRANSLATION_DETAILS"
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "TRANSLATION_DETAILS"
+                        ]
                     },
-                    "cardinality": "|>=0|",
                     "documentation": "List of details for each natural-language translation made of this resource, keyed by language. For each translation listed here, there must be corresponding sections in all language-dependent parts of the resource. The `_original_language_` does not appear in this list."
                 },
                 "description": {
@@ -1123,12 +1125,14 @@
                 },
                 "details": {
                     "name": "details",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
-                        "container_type": "List",
-                        "type": "RESOURCE_DESCRIPTION_ITEM"
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "RESOURCE_DESCRIPTION_ITEM"
+                        ]
                     },
-                    "cardinality": "|>=1|",
                     "is_mandatory": true,
                     "documentation": "Details of all parts of resource description that are natural language-dependent, keyed by language code. "
                 }
@@ -2643,7 +2647,7 @@
                     "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
-                        "type": "CONTRIBUTION"
+                        "type": "OBJECT_REF"
                     },
                     "cardinality": "|>=0|",
                     "documentation": "List of contributions causing changes to this EHR. Each contribution contains a list of versions, which may include references to any number of `VERSION` instances, i.e. items of type `VERSIONED_COMPOSITION` and `VERSIONED_FOLDER`. "
@@ -2651,14 +2655,14 @@
                 "ehr_status": {
                     "name": "ehr_status",
                     "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
-                    "type": "VERSIONED_EHR_STATUS",
+                    "type": "OBJECT_REF",
                     "is_mandatory": true,
                     "documentation": "Reference to `EHR_STATUS` object for this EHR."
                 },
                 "ehr_access": {
                     "name": "ehr_access",
                     "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
-                    "type": "VERSIONED_EHR_ACCESS",
+                    "type": "OBJECT_REF",
                     "is_mandatory": true,
                     "documentation": "Reference to `EHR_ACCESS` object for this EHR."
                 },
@@ -2667,7 +2671,7 @@
                     "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
-                        "type": "VERSIONED_COMPOSITION"
+                        "type": "OBJECT_REF"
                     },
                     "cardinality": "|>=0|",
                     "documentation": "Master list of all Versioned Composition references in this EHR."
@@ -2675,7 +2679,7 @@
                 "directory": {
                     "name": "directory",
                     "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
-                    "type": "VERSIONED_FOLDER",
+                    "type": "OBJECT_REF",
                     "documentation": "Optional directory structure for this EHR. If present, this is a reference to the first member of `_folders_`."
                 },
                 "time_created": {
@@ -2690,7 +2694,7 @@
                     "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
-                        "type": "VERSIONED_FOLDER"
+                        "type": "OBJECT_REF"
                     },
                     "cardinality": "|>=0|",
                     "documentation": "Optional additional Folder structures for this EHR. If set, the `_directory_` attribute refers to the first member."
@@ -2795,7 +2799,7 @@
                 "request_id": {
                     "name": "request_id",
                     "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
-                    "type": "EXTRACT_REQUEST",
+                    "type": "HIER_OBJECT_ID",
                     "documentation": "Reference to causing Request, if any."
                 },
                 "time_created": {
@@ -3276,7 +3280,7 @@
                 "owner_id": {
                     "name": "owner_id",
                     "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
-                    "type": "VERSIONED_OBJECT",
+                    "type": "OBJECT_REF",
                     "is_mandatory": true,
                     "documentation": "Owner_id from original `VERSIONED_OBJECT`, which identifies source EHR."
                 },
@@ -3529,7 +3533,7 @@
                     "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
-                        "type": "CONTRIBUTION"
+                        "type": "HIER_OBJECT_ID"
                     },
                     "cardinality": "|>=0|",
                     "documentation": "List of Contributions to include \/ that are included in the Extract."
@@ -3670,7 +3674,7 @@
                     "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
-                        "type": "PARTY_RELATIONSHIP"
+                        "type": "LOCATABLE_REF"
                     },
                     "cardinality": "|>=0|",
                     "documentation": "References to relationships in which this Party takes part as target."
@@ -3771,7 +3775,7 @@
                 "performer": {
                     "name": "performer",
                     "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
-                    "type": "ACTOR",
+                    "type": "PARTY_REF",
                     "is_mandatory": true,
                     "documentation": "Reference to Version container of Actor playing the role."
                 },
@@ -3810,7 +3814,7 @@
                     "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
-                        "type": "ROLE"
+                        "type": "PARTY_REF"
                     },
                     "cardinality": "|>=0|",
                     "documentation": "Identifiers of the Version container for each Role played by this Party."
@@ -3888,7 +3892,7 @@
                 "target": {
                     "name": "target",
                     "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
-                    "type": "PARTY",
+                    "type": "PARTY_REF",
                     "is_mandatory": true,
                     "documentation": "Target of relationship."
                 },
@@ -3906,7 +3910,7 @@
                 "source": {
                     "name": "source",
                     "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
-                    "type": "PARTY",
+                    "type": "PARTY_REF",
                     "is_mandatory": true,
                     "documentation": "Source of relationship."
                 }

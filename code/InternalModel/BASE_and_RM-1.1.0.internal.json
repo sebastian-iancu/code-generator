@@ -9624,15 +9624,14 @@
                                                                 "id": "_18_2_83e026d_1456155732657_22041_4628",
                                                                 "name": "translations",
                                                                 "type": {
-                                                                    "id": "_18_1_83e026d_1422968609316_164205_25554",
-                                                                    "name": "TRANSLATION_DETAILS",
-                                                                    "referenceMethod": "lookup",
-                                                                    "referentPath": null,
-                                                                    "referentType": null
+                                                                    "id": "_18_2_83e026d_1453124256362_269917_4743",
+                                                                    "name": "Hash<String, TRANSLATION_DETAILS>",
+                                                                    "referenceMethod": "qualifier-composite",
+                                                                    "referentPath": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
-                                                                "maxOccurs": -1,
+                                                                "maxOccurs": 1,
                                                                 "description": "List of details for each natural translation made of this resource, keyed by language code. For each translation listed here, there must be corresponding sections in all language-dependent parts of the resource. The `_original_language_` does not appear in this list.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
@@ -10013,15 +10012,14 @@
                                                                 "id": "_18_2_83e026d_1453125717158_602776_4829",
                                                                 "name": "details",
                                                                 "type": {
-                                                                    "id": "_18_1_83e026d_1422968609316_808369_25555",
-                                                                    "name": "RESOURCE_DESCRIPTION_ITEM",
-                                                                    "referenceMethod": "lookup",
-                                                                    "referentPath": null,
-                                                                    "referentType": null
+                                                                    "id": "_18_2_83e026d_1453125164736_976750_4822",
+                                                                    "name": "Hash<String, RESOURCE_DESCRIPTION_ITEM>",
+                                                                    "referenceMethod": "qualifier-composite",
+                                                                    "referentPath": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
-                                                                "maxOccurs": -1,
+                                                                "maxOccurs": 1,
                                                                 "description": "Details of all parts of resource description that are natural language-dependent, keyed by language code.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
@@ -12188,11 +12186,10 @@
                                                                         "id": "_18_1_83e026d_1433773264775_77705_7865",
                                                                         "name": "versions",
                                                                         "type": {
-                                                                            "id": "_18_1_83e026d_1433773263739_688356_5384",
-                                                                            "name": "VERSION",
-                                                                            "referenceMethod": "lookup",
-                                                                            "referentPath": null,
-                                                                            "referentType": null
+                                                                            "id": "",
+                                                                            "name": "OBJECT_REF",
+                                                                            "referenceMethod": "qualifier",
+                                                                            "referentPath": null
                                                                         },
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
@@ -12259,11 +12256,10 @@
                                                                         "id": "_18_1_83e026d_1433773264006_983395_6006",
                                                                         "name": "contribution",
                                                                         "type": {
-                                                                            "id": "_18_1_83e026d_1433773263737_717582_5324",
-                                                                            "name": "CONTRIBUTION",
-                                                                            "referenceMethod": "lookup",
-                                                                            "referentPath": null,
-                                                                            "referentType": null
+                                                                            "id": "",
+                                                                            "name": "OBJECT_REF",
+                                                                            "referenceMethod": "qualifier",
+                                                                            "referentPath": null
                                                                         },
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
@@ -13575,11 +13571,10 @@
                                                                         "id": "_18_1_83e026d_1433773264332_206458_6758",
                                                                         "name": "items",
                                                                         "type": {
-                                                                            "id": "_18_1_83e026d_1433773263739_814131_5406",
-                                                                            "name": "VERSIONED_OBJECT",
-                                                                            "referenceMethod": "lookup",
-                                                                            "referentPath": null,
-                                                                            "referentType": null
+                                                                            "id": "",
+                                                                            "name": "OBJECT_REF",
+                                                                            "referenceMethod": "qualifier",
+                                                                            "referentPath": null
                                                                         },
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 0,
@@ -13708,15 +13703,14 @@
                                                                         "id": "_18_1_83e026d_1433773263740_500503_5425",
                                                                         "name": "translations",
                                                                         "type": {
-                                                                            "id": "_18_1_83e026d_1433773264997_282699_8436",
-                                                                            "name": "TRANSLATION_DETAILS",
-                                                                            "referenceMethod": "lookup",
-                                                                            "referentPath": null,
-                                                                            "referentType": null
+                                                                            "id": "",
+                                                                            "name": "Hash<String, TRANSLATION_DETAILS>",
+                                                                            "referenceMethod": "qualifier-composite",
+                                                                            "referentPath": null
                                                                         },
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 0,
-                                                                        "maxOccurs": -1,
+                                                                        "maxOccurs": 1,
                                                                         "description": "List of details for each natural-language translation made of this resource, keyed by language. For each translation listed here, there must be corresponding sections in all language-dependent parts of the resource. The `_original_language_` does not appear in this list.",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
@@ -13962,15 +13956,14 @@
                                                                         "id": "_18_1_83e026d_1433773264451_600761_7025",
                                                                         "name": "details",
                                                                         "type": {
-                                                                            "id": "_18_1_83e026d_1433773264743_196570_7764",
-                                                                            "name": "RESOURCE_DESCRIPTION_ITEM",
-                                                                            "referenceMethod": "lookup",
-                                                                            "referentPath": null,
-                                                                            "referentType": null
+                                                                            "id": "",
+                                                                            "name": "Hash<String, RESOURCE_DESCRIPTION_ITEM>",
+                                                                            "referenceMethod": "qualifier-composite",
+                                                                            "referentPath": null
                                                                         },
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": -1,
+                                                                        "maxOccurs": 1,
                                                                         "description": "Details of all parts of resource description that are natural language-dependent, keyed by language code. ",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
@@ -23162,11 +23155,10 @@
                                                                 "id": "_18_1_83e026d_1433773264067_710995_6195",
                                                                 "name": "contributions",
                                                                 "type": {
-                                                                    "id": "_18_1_83e026d_1433773263737_717582_5324",
-                                                                    "name": "CONTRIBUTION",
-                                                                    "referenceMethod": "lookup",
-                                                                    "referentPath": null,
-                                                                    "referentType": null
+                                                                    "id": "",
+                                                                    "name": "OBJECT_REF",
+                                                                    "referenceMethod": "qualifier",
+                                                                    "referentPath": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
@@ -23180,11 +23172,10 @@
                                                                 "id": "_18_1_83e026d_1433773264869_672909_8060",
                                                                 "name": "ehr_status",
                                                                 "type": {
-                                                                    "id": "_18_1_83e026d_1433773263857_492519_5650",
-                                                                    "name": "VERSIONED_EHR_STATUS",
-                                                                    "referenceMethod": "lookup",
-                                                                    "referentPath": null,
-                                                                    "referentType": null
+                                                                    "id": "",
+                                                                    "name": "OBJECT_REF",
+                                                                    "referenceMethod": "qualifier",
+                                                                    "referentPath": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
@@ -23198,11 +23189,10 @@
                                                                 "id": "_18_1_83e026d_1433773264853_209664_7980",
                                                                 "name": "ehr_access",
                                                                 "type": {
-                                                                    "id": "_18_1_83e026d_1433773265252_752973_8963",
-                                                                    "name": "VERSIONED_EHR_ACCESS",
-                                                                    "referenceMethod": "lookup",
-                                                                    "referentPath": null,
-                                                                    "referentType": null
+                                                                    "id": "",
+                                                                    "name": "OBJECT_REF",
+                                                                    "referenceMethod": "qualifier",
+                                                                    "referentPath": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
@@ -23216,11 +23206,10 @@
                                                                 "id": "_18_1_83e026d_1433773263736_743242_5239",
                                                                 "name": "compositions",
                                                                 "type": {
-                                                                    "id": "_18_1_83e026d_1433773264555_590105_7357",
-                                                                    "name": "VERSIONED_COMPOSITION",
-                                                                    "referenceMethod": "lookup",
-                                                                    "referentPath": null,
-                                                                    "referentType": null
+                                                                    "id": "",
+                                                                    "name": "OBJECT_REF",
+                                                                    "referenceMethod": "qualifier",
+                                                                    "referentPath": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
@@ -23234,11 +23223,10 @@
                                                                 "id": "_18_1_83e026d_1433773264572_175192_7390",
                                                                 "name": "directory",
                                                                 "type": {
-                                                                    "id": "_18_1_83e026d_1433773264884_927841_8118",
-                                                                    "name": "VERSIONED_FOLDER",
-                                                                    "referenceMethod": "lookup",
-                                                                    "referentPath": null,
-                                                                    "referentType": null
+                                                                    "id": "",
+                                                                    "name": "OBJECT_REF",
+                                                                    "referenceMethod": "qualifier",
+                                                                    "referentPath": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
@@ -23270,11 +23258,10 @@
                                                                 "id": "_19_0_83e026d_1571432173293_303453_5096",
                                                                 "name": "folders",
                                                                 "type": {
-                                                                    "id": "_18_1_83e026d_1433773264884_927841_8118",
-                                                                    "name": "VERSIONED_FOLDER",
-                                                                    "referenceMethod": "lookup",
-                                                                    "referentPath": null,
-                                                                    "referentType": null
+                                                                    "id": "",
+                                                                    "name": "OBJECT_REF",
+                                                                    "referenceMethod": "qualifier",
+                                                                    "referentPath": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
@@ -23809,11 +23796,10 @@
                                                                         "id": "_18_1_83e026d_1433773265008_506578_8500",
                                                                         "name": "request_id",
                                                                         "type": {
-                                                                            "id": "_18_1_83e026d_1433773264295_519854_6671",
-                                                                            "name": "EXTRACT_REQUEST",
-                                                                            "referenceMethod": "lookup",
-                                                                            "referentPath": null,
-                                                                            "referentType": null
+                                                                            "id": "",
+                                                                            "name": "HIER_OBJECT_ID",
+                                                                            "referenceMethod": "qualifier",
+                                                                            "referentPath": null
                                                                         },
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 0,
@@ -25176,11 +25162,10 @@
                                                                         "id": "_18_1_83e026d_1433773265165_398481_8809",
                                                                         "name": "owner_id",
                                                                         "type": {
-                                                                            "id": "_18_1_83e026d_1433773263739_814131_5406",
-                                                                            "name": "VERSIONED_OBJECT",
-                                                                            "referenceMethod": "lookup",
-                                                                            "referentPath": null,
-                                                                            "referentType": null
+                                                                            "id": "",
+                                                                            "name": "OBJECT_REF",
+                                                                            "referenceMethod": "qualifier",
+                                                                            "referentPath": null
                                                                         },
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
@@ -26023,11 +26008,10 @@
                                                                         "id": "_18_1_83e026d_1433773265165_64430_8783",
                                                                         "name": "contribution_list",
                                                                         "type": {
-                                                                            "id": "_18_1_83e026d_1433773263737_717582_5324",
-                                                                            "name": "CONTRIBUTION",
-                                                                            "referenceMethod": "lookup",
-                                                                            "referentPath": null,
-                                                                            "referentType": null
+                                                                            "id": "",
+                                                                            "name": "HIER_OBJECT_ID",
+                                                                            "referenceMethod": "qualifier",
+                                                                            "referentPath": null
                                                                         },
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 0,
@@ -26418,11 +26402,10 @@
                                                                 "id": "_18_1_83e026d_1433773263849_354825_5635",
                                                                 "name": "reverse_relationships",
                                                                 "type": {
-                                                                    "id": "_18_1_83e026d_1433773263878_423251_5679",
-                                                                    "name": "PARTY_RELATIONSHIP",
-                                                                    "referenceMethod": "lookup",
-                                                                    "referentPath": null,
-                                                                    "referentType": null
+                                                                    "id": "",
+                                                                    "name": "LOCATABLE_REF",
+                                                                    "referenceMethod": "qualifier",
+                                                                    "referentPath": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
@@ -26811,11 +26794,10 @@
                                                                 "id": "_18_1_83e026d_1433773265171_887111_8822",
                                                                 "name": "performer",
                                                                 "type": {
-                                                                    "id": "_18_1_83e026d_1433773264173_939218_6462",
-                                                                    "name": "ACTOR",
-                                                                    "referenceMethod": "lookup",
-                                                                    "referentPath": null,
-                                                                    "referentType": null
+                                                                    "id": "",
+                                                                    "name": "PARTY_REF",
+                                                                    "referenceMethod": "qualifier",
+                                                                    "referentPath": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
@@ -26906,11 +26888,10 @@
                                                                 "id": "_18_1_83e026d_1433773264067_206452_6207",
                                                                 "name": "roles",
                                                                 "type": {
-                                                                    "id": "_18_1_83e026d_1433773265153_391210_8755",
-                                                                    "name": "ROLE",
-                                                                    "referenceMethod": "lookup",
-                                                                    "referentPath": null,
-                                                                    "referentType": null
+                                                                    "id": "",
+                                                                    "name": "PARTY_REF",
+                                                                    "referenceMethod": "qualifier",
+                                                                    "referentPath": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
@@ -27167,11 +27148,10 @@
                                                                 "id": "_18_1_83e026d_1433773264907_402793_8173",
                                                                 "name": "target",
                                                                 "type": {
-                                                                    "id": "_18_1_83e026d_1433773264491_825671_7116",
-                                                                    "name": "PARTY",
-                                                                    "referenceMethod": "lookup",
-                                                                    "referentPath": null,
-                                                                    "referentType": null
+                                                                    "id": "",
+                                                                    "name": "PARTY_REF",
+                                                                    "referenceMethod": "qualifier",
+                                                                    "referentPath": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
@@ -27203,11 +27183,10 @@
                                                                 "id": "_18_1_83e026d_1433773265382_995623_9227",
                                                                 "name": "source",
                                                                 "type": {
-                                                                    "id": "_18_1_83e026d_1433773264491_825671_7116",
-                                                                    "name": "PARTY",
-                                                                    "referenceMethod": "lookup",
-                                                                    "referentPath": null,
-                                                                    "referentType": null
+                                                                    "id": "",
+                                                                    "name": "PARTY_REF",
+                                                                    "referenceMethod": "qualifier",
+                                                                    "referentPath": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
