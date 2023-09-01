@@ -18,11 +18,11 @@ class UMLConstraint extends AbstractItem
         if (isset($xmlNode->specification->body)) {
             $this->rule = $xmlNode->specification->body;
         } else {
-            $this->log("WARNING: Constraint $this->id is missing Rule body.");
+            self::log("WARNING: Constraint $this->id is missing Rule body.");
             $this->rule = '';
         }
 
-        $this->log('  Constraint [%s] was read.', $this->name);
+        self::log('  Constraint [%s] was read.', $this->name);
     }
 
 }

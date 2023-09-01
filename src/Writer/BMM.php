@@ -74,6 +74,7 @@ class BMM extends AbstractWriter
         /** @var UMLClass $umlClass */
         foreach ($this->reader->umlFiles as $umlFile) {
             $schema_name = strtolower($umlFile->name);
+            self::log('generating to [%s] schema.', $schema_name);
             $schema = [
                 'bmm_version' => '2.3',
                 'rm_publisher' => 'openehr',
@@ -106,7 +107,7 @@ class BMM extends AbstractWriter
             // saving as file
             $filename = $this->dir . DIRECTORY_SEPARATOR . str_replace('.xmi', '', $umlFile->id) . '.bmm.json';
             $bytes = file_put_contents($filename, json_encode($schema, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-            $this->log('  Wrote %s bytes to %s file.', $bytes, $filename);
+            self::log('  Wrote %s bytes to %s file.', $bytes, $filename);
         }
     }
 
@@ -124,6 +125,7 @@ class BMM extends AbstractWriter
             $bmmChildUmlPackage = self::asBmmPackage($childUmlPackage, '', $collectedUmlClasses);
             $bmmPackage['packages'][$bmmChildUmlPackage['name']] = $bmmChildUmlPackage;
         }
+        self::log('  Generated [%s] package.', $bmmPackage['name']);
         return array_filter($bmmPackage);
     }
 
@@ -166,7 +168,7 @@ class BMM extends AbstractWriter
             $bmmClass['documentation'] = $umlClass->description;
             $bmmClass['item_names'] = $umlClass->enumerations;
         }
-
+        self::log('  Generated [%s] class.', $bmmClass['name']);
         return $bmmClass;
     }
 

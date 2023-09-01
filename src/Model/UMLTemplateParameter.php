@@ -24,7 +24,7 @@ class UMLTemplateParameter extends AbstractItem
             $this->type = new TypeReference();
         }
 
-        $this->log('  TemplateParameter [%s] as [%s](%s) was read.', $this->id, $this->name, $this->type->name);
+        self::log('  TemplateParameter [%s] as [%s](%s) was read.', $this->id, $this->name, $this->type->name);
     }
 
 }

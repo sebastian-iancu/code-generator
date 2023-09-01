@@ -31,7 +31,7 @@ class UMLProperty extends UMLParameter
             $this->default = null;
         }
 
-        $this->log('  Property [%s] of type [%s] was read.', $this->name, $this->type->name);
+        self::log('  Property [%s] of type [%s] was read.', $this->name, $this->type->name);
     }
 
 }

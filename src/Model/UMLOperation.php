@@ -29,7 +29,7 @@ class UMLOperation extends AbstractItem
         $nodes = $xmlNode->xpath("ownedParameter[@xmi:type='uml:Parameter' and @direction='return']");
         $this->return = $nodes ? (new UMLParameter($nodes[0]))->type : new TypeReference(null, 'void');
 
-        $this->log('  Operation [%s], with [%s] parameters was read.', $this->name, count($this->umlParameters));
+        self::log('  Operation [%s], with [%s] parameters was read.', $this->name, count($this->umlParameters));
     }
 
 }

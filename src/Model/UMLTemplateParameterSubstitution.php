@@ -17,7 +17,7 @@ class UMLTemplateParameterSubstitution extends AbstractItem
         $this->name = (new TypeReference($xmlNode, (string)$xmlNode['formal']))->name;
         $this->actual = new TypeReference($xmlNode, (string)$xmlNode['actual']);
 
-        $this->log('  ParameterSubstitution [%s] as [%s] was read.', $this->name, $this->actual->name);
+        self::log('  ParameterSubstitution [%s] as [%s] was read.', $this->name, $this->actual->name);
     }
 
 }

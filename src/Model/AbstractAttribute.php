@@ -26,7 +26,7 @@ class AbstractAttribute extends AbstractItem
         } elseif (isset($xmlNode->type)) {
             $type = new TypeReference($xmlNode->type);
         } else {
-            $this->log("WARNING: Type undefined for $this->id. Using [Any]. " . $xmlNode->saveXML());
+            self::log("WARNING: Type undefined for $this->id. Using [Any]. " . $xmlNode->saveXML());
             $type = new TypeReference($xmlNode, 'Any');
         }
         // detect if the type is a templateParameter

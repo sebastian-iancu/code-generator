@@ -29,12 +29,12 @@ class UMLTemplateBinding extends AbstractItem
                 $this->parameterSubstitutions->add($item);
             }
         } else {
-            $this->log("WARNING: TemplateBinding without reference at $this->id.");
+            self::log("WARNING: TemplateBinding without reference at $this->id.");
             $this->name = '';
             $this->parameterSubstitutions = new Collection();
         }
 
-        $this->log('  TemplateBinding [%s] was read.', $this->name);
+        self::log('  TemplateBinding [%s] was read.', $this->name);
     }
 
 }

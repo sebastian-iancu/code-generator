@@ -70,6 +70,6 @@ class UMLClass extends AbstractItem
         }
 
 
-        $this->log('  Class [%s] was read.', $this->name);
+        self::log('  Class [%s] was read.', $this->name);
     }
 }

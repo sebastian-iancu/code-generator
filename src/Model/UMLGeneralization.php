@@ -19,12 +19,12 @@ class UMLGeneralization extends AbstractItem
         } elseif ($xmlNode->general) {
             $this->general = new TypeReference($xmlNode->general);
         } else {
-            $this->log("WARNING: Generalization without [general] at $this->id.");
+            self::log("WARNING: Generalization without [general] at $this->id.");
             $this->general = new TypeReference();
         }
         $this->name = $this->general->name;
 
-        $this->log('  Generalization [%s] was read.', $this->name);
+        self::log('  Generalization [%s] was read.', $this->name);
     }
 
 }

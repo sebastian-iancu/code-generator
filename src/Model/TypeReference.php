@@ -58,7 +58,7 @@ class TypeReference extends AbstractItem
             $this->referentPath = null;
         }
 
-        $this->log('  TypeReference [%s] as [%s] was read.', $this->id, $this->name);
+        self::log('  TypeReference [%s] as [%s] was read.', $this->id, $this->name);
     }
 
 
@@ -75,13 +75,13 @@ class TypeReference extends AbstractItem
             $predicates[] = $otherPredicate;
         }
         if (count($predicates) === 1) {
-            $this->log("WARNING: While resolving Name by Id, insufficient predicates [id:$id, type:$type, others:$otherPredicate] to query xml.");
+            self::log("WARNING: While resolving Name by Id, insufficient predicates [id:$id, type:$type, others:$otherPredicate] to query xml.");
             return '';
         }
         $predicates = implode(' and ', $predicates);
         $nodes = $node->xpath("//node()[$predicates]");
         if (!$nodes) {
-            $this->log("WARNING: While resolving Name by Id, xml-node not found for [$predicates].");
+            self::log("WARNING: While resolving Name by Id, xml-node not found for [$predicates].");
         } elseif (isset($nodes[0]['name'])) {
             return (string)$nodes[0]['name'];
         } elseif (isset($nodes[0]->ownedParameteredElement['name'])) {
@@ -104,13 +104,13 @@ class TypeReference extends AbstractItem
             $predicates[] = $otherPredicate;
         }
         if (count($predicates) === 1) {
-            $this->log("WARNING: While resolving Id by Name, insufficient predicates [Name:$name, type:$type, others:$otherPredicate] to query xml.");
+            self::log("WARNING: While resolving Id by Name, insufficient predicates [Name:$name, type:$type, others:$otherPredicate] to query xml.");
             return '';
         }
         $predicates = implode(' and ', $predicates);
         $nodes = $node->xpath("//node()[$predicates]");
         if (!$nodes) {
-            $this->log("WARNING: While resolving Id by Name, xml-node not found for [$predicates].");
+            self::log("WARNING: While resolving Id by Name, xml-node not found for [$predicates].");
         } else {
             return (string)$nodes[0]->attributes('xmi', true)?->id;
         }
@@ -122,7 +122,7 @@ class TypeReference extends AbstractItem
     {
         $nodes = $node->xpath('descendant::referenceExtension');
         if (!$nodes) {
-            $this->log("WARNING: referenceExtension node not found.");
+            self::log("WARNING: referenceExtension node not found.");
             return '';
         }
         $parts = explode('::', (string)$nodes[0]['referentPath']);

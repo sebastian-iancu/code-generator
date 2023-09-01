@@ -57,14 +57,14 @@ class UMLPackage extends AbstractItem
             $item = new UMLEnumeration($umlClassNode);
             $this->umlClasses->add($item);
         }
-        $this->log('  Package [%s] containing %s subpackages and %s classes was read.', $this->name, $this->umlPackages->count(), $this->umlClasses->count());
+        self::log('  Package [%s] containing %s subpackages and %s classes was read.', $this->name, $this->umlPackages->count(), $this->umlClasses->count());
     }
 
 
     public function getPackages(string $prefix): \Generator
     {
         /** @var UMLPackage|null $umlPackage */
-        $this->log('Searching for [%s] in [%s](%s)...', $prefix, $this->id, $this->name);
+        self::log('Searching for [%s] in [%s](%s)...', $prefix, $this->id, $this->name);
         if ($prefix === '*' || $prefix === '') {
             foreach ($this->umlPackages as $umlPackage) {
                 yield $umlPackage;
@@ -74,7 +74,7 @@ class UMLPackage extends AbstractItem
             $packageId = array_shift($parts);
             $umlPackage = $this->umlPackages->get($packageId);
             if ($umlPackage) {
-                $this->log('Found [%s](%s) umlPackage.', $umlPackage->id, $this->name);
+                self::log('Found [%s](%s) umlPackage.', $umlPackage->id, $this->name);
                 if (!$parts) {
                     yield $umlPackage;
                 } else {

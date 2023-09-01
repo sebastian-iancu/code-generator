@@ -17,7 +17,7 @@ class UMLFile extends AbstractItem
 
     public function __construct(string $fileName)
     {
-        $this->log('Reading [%s] filename...', $fileName);
+        self::log('Reading [%s] filename...', $fileName);
         $contents = file_get_contents($fileName);
         if (!$contents) {
             throw new RuntimeException("File missing or not readable: $fileName.");
@@ -36,7 +36,7 @@ class UMLFile extends AbstractItem
         $this->umlPackage = new UMLPackage($mainPackageNode);
         $this->name = $this->umlPackage->name;
 
-        $this->log('  File [%s] was read.', $this->name);
+        self::log('  File [%s] was read.', $this->name);
     }
 
     protected function getMainPackageNode(): SimpleXMLElement
@@ -46,7 +46,7 @@ class UMLFile extends AbstractItem
             throw new RuntimeException("XMI errors in $this->id: main package not found.");
         }
         if (count($nodes) > 1) {
-            $this->log("WARNING: Found more then one UML Package in the $this->id file. This will only process the first one");
+            self::log("WARNING: Found more then one UML Package in the $this->id file. This will only process the first one");
         }
         return $nodes[0];
     }
@@ -70,11 +70,11 @@ class UMLFile extends AbstractItem
 
     public function getPackages(string $prefix): \Generator
     {
-        $this->log('Searching for [%s] in [%s](%s)...', $prefix, $this->id, $this->name);
+        self::log('Searching for [%s] in [%s](%s)...', $prefix, $this->id, $this->name);
         $parts = explode('::', $prefix);
         $packageId = array_shift($parts);
         if ($this->umlPackage->id === $packageId || $this->umlPackage->name === $packageId) {
-            $this->log('Found [%s](%s) umlPackage.', $this->umlPackage->id, $this->umlPackage->name);
+            self::log('Found [%s](%s) umlPackage.', $this->umlPackage->id, $this->umlPackage->name);
             if (!$parts) {
                 yield $this->umlPackage;
             } else {

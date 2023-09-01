@@ -14,7 +14,7 @@ class UMLInterface extends UMLClass
         parent::__construct($xmlNode);
         $this->isInterface = true;
 
-        $this->log('  Interface [%s] was read.', $this->name);
+        self::log('  Interface [%s] was read.', $this->name);
     }
 
 
