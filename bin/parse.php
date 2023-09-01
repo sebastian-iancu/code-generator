@@ -23,26 +23,37 @@ include $_composer_autoload_path ?? __DIR__ . '/../vendor/autoload.php';
 //$writer->addWriter(new InternalModel('all.json'));
 //$writer->write();
 
-
+// RM
 $reader = new ReadManager();
-//$reader->read('BASE-v1.1.0.xmi');
 $reader->read('BASE-v1.2.0.xmi');
+$writer = new WriteManager($reader);
+$writer->addWriter(new InternalModel('BASE-v1.2.0.internal.json'));
+$writer->write();
 $reader->read('RM-v1.1.0.xmi');
-
 $writer = new WriteManager($reader);
 $writer->addWriter(new InternalModel('BASE_and_RM-1.1.0.internal.json'));
 $writer->addWriter(new BMM());
 $writer->write();
 
-//$reader->read('AM-v2.2.0.xmi');
-//$writer = new WriteManager($reader);
-//$writer->addWriter(new InternalModel('all.json'));
-//$writer->write();
-
+// older BASE
 $reader = new ReadManager();
 $reader->read('BASE-v1.1.0.xmi');
 $writer = new WriteManager($reader);
+$writer->addWriter(new InternalModel('BASE-v1.1.0.internal.json'));
 $writer->addWriter(new BMM());
+$writer->write();
+
+// AM
+$reader = new ReadManager();
+$reader->read('BASE-v1.2.0.xmi');
+$reader->read('AM-v2.2.0.xmi');
+$writer = new WriteManager($reader);
+$writer->addWriter(new InternalModel('BASE_and_AM-v2.2.0.internal.json'));
+$writer->addWriter(new BMM());
+$writer->write();
+$reader->read('RM-v1.1.0.xmi');
+$writer = new WriteManager($reader);
+$writer->addWriter(new InternalModel('all.internal.json'));
 $writer->write();
 
 
