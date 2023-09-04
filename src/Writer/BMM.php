@@ -61,7 +61,7 @@ class BMM extends AbstractWriter
 
     public function setDir(string $dir): void
     {
-        $dir .= DIRECTORY_SEPARATOR . 'InternalModel';
+        $dir .= DIRECTORY_SEPARATOR . 'BMM';
         parent::setDir($dir);
     }
 
