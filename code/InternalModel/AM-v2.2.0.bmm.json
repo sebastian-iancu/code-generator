@@ -151,7 +151,7 @@
             }
         }
     },
-    "primitives": [],
+    "primitive_types": [],
     "class_definitions": {
         "ARCHETYPE": {
             "name": "ARCHETYPE",
@@ -160,41 +160,41 @@
             "properties": {
                 "parent_archetype_id": {
                     "name": "parent_archetype_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Archetype reference of the specialisation par-ent of this archetype, if applicable. May take the form of an archetype interface identifier, i.e. the identifier up to the major version only, or can be deeper."
                 },
                 "archetype_id": {
                     "name": "archetype_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ARCHETYPE_HRID",
                     "is_mandatory": true,
                     "documentation": "Identifier of this archetype."
                 },
                 "is_differential": {
                     "name": "is_differential",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "Flag indicating whether this archetype is differential or flat in its contents. Top-level source archetypes have this flag set to True."
                 },
                 "definition": {
                     "name": "definition",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "C_COMPLEX_OBJECT",
                     "is_mandatory": true,
                     "documentation": "Root node of the definition of this archetype."
                 },
                 "terminology": {
                     "name": "terminology",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ARCHETYPE_TERMINOLOGY",
                     "is_mandatory": true,
                     "documentation": "The terminology of the archetype."
                 },
                 "rules": {
                     "name": "rules",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "STATEMENT"
@@ -204,7 +204,7 @@
                 },
                 "rm_overlay": {
                     "name": "rm_overlay",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "RM_OVERLAY",
                     "documentation": ""
                 }
@@ -220,34 +220,34 @@
             "properties": {
                 "adl_version": {
                     "name": "adl_version",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "ADL version if archetype was read in from an ADL sharable archetype."
                 },
                 "build_uid": {
                     "name": "build_uid",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "UUID",
                     "is_mandatory": true,
                     "documentation": "Unique identifier of this archetype artefact instance. A new identifier is assigned every time the content is changed by a tool. Used by tools to distinguish different revisions and\/or interim snapshots of the same artefact."
                 },
                 "rm_release": {
                     "name": "rm_release",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Semver.org compatible release of the most recent reference model release on which the archetype in its current version is based. This does not imply conformance only to this release, since an archetype may be valid with respect to multiple releases of a reference model."
                 },
                 "is_generated": {
                     "name": "is_generated",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "If True, indicates that this artefact was machine-generated from some other source, in which case, tools would expect to overwrite this artefact on a new generation. Editing tools should set this value to False when a user starts to manually edit an archetype."
                 },
                 "other_meta_data": {
                     "name": "other_meta_data",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -269,7 +269,7 @@
             "properties": {
                 "overlays": {
                     "name": "overlays",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "TEMPLATE_OVERLAY"
@@ -288,7 +288,7 @@
             "properties": {
                 "component_terminologies": {
                     "name": "component_terminologies",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -300,7 +300,7 @@
                 },
                 "terminology_extracts": {
                     "name": "terminology_extracts",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -325,55 +325,55 @@
             "properties": {
                 "namespace": {
                     "name": "namespace",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Reverse domain name namespace identifier."
                 },
                 "rm_publisher": {
                     "name": "rm_publisher",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Name of the Reference Model publisher."
                 },
                 "rm_package": {
                     "name": "rm_package",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Name of the package in whose reachability graph the `_rm_class_` class is found (there can be more than one possibility in many reference models)."
                 },
                 "rm_class": {
                     "name": "rm_class",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Name of the root class of this archetype."
                 },
                 "concept_id": {
                     "name": "concept_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "The short concept name of the archetype as used in the multi-axial `_archetype_hrid_`."
                 },
                 "release_version": {
                     "name": "release_version",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "The full numeric version of this archetype consisting of 3 parts, e.g. `\"1.8.2\"`. The `_archetype_hrid_` feature includes only the major version."
                 },
                 "version_status": {
                     "name": "version_status",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "VERSION_STATUS",
                     "is_mandatory": true,
                     "documentation": "The status of the version, i.e.:\n\n* released: (empty string)\n* release_candidate: `\"rc\"`\n* alpha: `\"alpha\"`\n* beta: `\"beta\"`"
                 },
                 "build_count": {
                     "name": "build_count",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "The build count since last increment of any version part."
@@ -390,13 +390,13 @@
             "properties": {
                 "parent": {
                     "name": "parent",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ARCHETYPE_CONSTRAINT",
                     "documentation": "Parent node, except in the case of the top of a tree, i.e. root `C_COMPLEX_OBJECT` of an archetype definition."
                 },
                 "soc_parent": {
                     "name": "soc_parent",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "C_SECOND_ORDER",
                     "documentation": ""
                 }
@@ -412,33 +412,33 @@
             "properties": {
                 "rm_type_name": {
                     "name": "rm_type_name",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Reference model type that this node corresponds to. "
                 },
                 "occurrences": {
                     "name": "occurrences",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Multiplicity_interval",
                     "documentation": "Occurrences of this object node in the data, under the owning attribute. Upper limit can only be greater than 1 if owning attribute has a cardinality of more than 1.\nOnly set if it overrides the parent archetype in the case of specialised archetypes, or else the occurrences inferred from the underlying reference model existence and\/or cardinality of the containing attribute."
                 },
                 "node_id": {
                     "name": "node_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Semantic identifier of this node, used to distinguish sibling nodes. All nodes must have a `_node_id_`; for nodes under a container `C_ATTRIBUTE`, the id must be an id-code must be defined in the archetype terminology. For valid structures, all node ids are id-codes.\n\nFor `C_PRIMITIVE_OBJECTs` represented in ADL inline form, this attribute will have the special value `Primitive_node_id`; otherwise it will have the node id read during parsing."
                 },
                 "is_deprecated": {
                     "name": "is_deprecated",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "documentation": "True if this node and by implication all sub-nodes are deprecated for use."
                 },
                 "sibling_order": {
                     "name": "sibling_order",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "SIBLING_ORDER",
                     "documentation": "Optional indicator of order of this node with respect to another sibling. Only meaningful in a specialised archetype for a `C_OBJECT` within a `C_ATTRIBUTE` with `_is_multiple_` = True."
                 }
@@ -453,20 +453,20 @@
             "properties": {
                 "rm_attribute_name": {
                     "name": "rm_attribute_name",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Reference model attribute within the enclosing type represented by a `C_OBJECT`."
                 },
                 "existence": {
                     "name": "existence",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Multiplicity_interval",
                     "documentation": "Constraint settable on every attribute, regardless of whether it is singular or of a container type, which indicates whether its target object exists or not (i.e. is mandatory or not). Only set if it overrides the underlying reference model or parent archetype in the case of specialised archetypes."
                 },
                 "children": {
                     "name": "children",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "C_OBJECT"
@@ -476,19 +476,19 @@
                 },
                 "differential_path": {
                     "name": "differential_path",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Path to the parent object of this attribute (i.e. doesn\u2019t include the name of this attribute). Used only for attributes in differential form, specialised archetypes. Enables only the re-defined parts of a specialised archetype to be expressed, at the path where they occur."
                 },
                 "cardinality": {
                     "name": "cardinality",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Cardinality",
                     "documentation": "Cardinality constraint of attribute, if a container attribute."
                 },
                 "is_multiple": {
                     "name": "is_multiple",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "Flag indicating whether this attribute constraint is on a container (i.e. multiply-valued) attribute."
@@ -505,7 +505,7 @@
             "properties": {
                 "default_value": {
                     "name": "default_value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Any",
                     "documentation": "Default value set in a template, and present in an operational template. Generally limited to leaf and near-leaf nodes."
                 }
@@ -520,7 +520,7 @@
             "properties": {
                 "target_path": {
                     "name": "target_path",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Reference to an object node using archetype path notation."
@@ -536,7 +536,7 @@
             "properties": {
                 "includes": {
                     "name": "includes",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "ASSERTION"
@@ -546,7 +546,7 @@
                 },
                 "excludes": {
                     "name": "excludes",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "ASSERTION"
@@ -556,7 +556,7 @@
                 },
                 "is_closed": {
                     "name": "is_closed",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "True if this slot specification in this artefact is closed to further filling either in further specialisations or at runtime. Default value False, i.e. unless explicitly set, a slot remains open."
@@ -573,19 +573,19 @@
             "properties": {
                 "assumed_value": {
                     "name": "assumed_value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Any",
                     "documentation": "Value to be assumed if none sent in data."
                 },
                 "is_enumerated_type_constraint": {
                     "name": "is_enumerated_type_constraint",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "documentation": "True if this object represents a constraint on an enumerated type from the reference model, where the latter is assumed to be based on a primitive type, generally Integer or String."
                 },
                 "constraint": {
                     "name": "constraint",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Any",
                     "is_mandatory": true,
                     "documentation": "Constraint represented by this object; redefine in descendants.\n\nInstances of this type represented in ADL inline form, the `_node_id_` attribute will have the special value `Primitive_node_id`; otherwise it will have the node id read during parsing."
@@ -598,14 +598,14 @@
             "properties": {
                 "is_before": {
                     "name": "is_before",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "True if the order relationship is \u2018before\u2019, if False, it is \u2018after\u2019."
                 },
                 "sibling_node_id": {
                     "name": "sibling_node_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Node identifier of sibling before or after which this node should come."
@@ -621,7 +621,7 @@
             "properties": {
                 "tuples": {
                     "name": "tuples",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "C_PRIMITIVE_TUPLE"
@@ -631,7 +631,7 @@
                 },
                 "members": {
                     "name": "members",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "C_ATTRIBUTE"
@@ -650,7 +650,7 @@
             "properties": {
                 "members": {
                     "name": "members",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "C_PRIMITIVE_OBJECT"
@@ -668,7 +668,7 @@
             "properties": {
                 "members": {
                     "name": "members",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "ARCHETYPE_CONSTRAINT"
@@ -687,7 +687,7 @@
             "properties": {
                 "archetype_ref": {
                     "name": "archetype_ref",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Reference to archetype is being used to fill a slot or redefine an external reference. Typically an 'interface' archetype id, i.e. identifier with partial version information."
@@ -703,7 +703,7 @@
             "properties": {
                 "attributes": {
                     "name": "attributes",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "C_ATTRIBUTE"
@@ -713,7 +713,7 @@
                 },
                 "attribute_tuples": {
                     "name": "attribute_tuples",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "C_ATTRIBUTE_TUPLE"
@@ -729,28 +729,28 @@
             "properties": {
                 "code": {
                     "name": "code",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Code of this term. "
                 },
                 "text": {
                     "name": "text",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Short term text, typically for display."
                 },
                 "description": {
                     "name": "description",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Full description text."
                 },
                 "other_items": {
                     "name": "other_items",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -769,14 +769,14 @@
             "properties": {
                 "id": {
                     "name": "id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Code of source term of this relation."
                 },
                 "members": {
                     "name": "members",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "String"
@@ -800,37 +800,37 @@
             "properties": {
                 "is_differential": {
                     "name": "is_differential",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "True if this terminology only contains terms relating to a differential specialisation of the owning artefact, rather than a complete set."
                 },
                 "original_language": {
                     "name": "original_language",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Original language of the terminology, as set at artefact creation or parsing time; must be a code in the ISO 639-1 2 character language code-set.\n"
                 },
                 "concept_code": {
                     "name": "concept_code",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Term code defining the meaning of the artefact as a whole, and always used as the id-code on the root node of the artefact. Must be defined in the `_term_definitions_` property."
                 },
                 "term_definitions": {
                     "name": "term_definitions",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameter_defs": [
                             {
-                                "p_bmm_type": "P_BMM_SIMPLE_TYPE",
+                                "_type": "P_BMM_SIMPLE_TYPE",
                                 "type": "String"
                             },
                             {
-                                "p_bmm_type": "P_BMM_GENERIC_TYPE",
+                                "_type": "P_BMM_GENERIC_TYPE",
                                 "root_type": "Hash",
                                 "generic_parameters": [
                                     "String",
@@ -844,7 +844,7 @@
                 },
                 "term_bindings": {
                     "name": "term_bindings",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "err_type_def": "Hash <String, Hash<String, Uri>>"
                     },
@@ -852,14 +852,14 @@
                 },
                 "owner_archetype": {
                     "name": "owner_archetype",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ARCHETYPE",
                     "is_mandatory": true,
                     "documentation": "Archetype that owns this terminology."
                 },
                 "value_sets": {
                     "name": "value_sets",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -871,16 +871,16 @@
                 },
                 "terminology_extracts": {
                     "name": "terminology_extracts",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameter_defs": [
                             {
-                                "p_bmm_type": "P_BMM_SIMPLE_TYPE",
+                                "_type": "P_BMM_SIMPLE_TYPE",
                                 "type": "String"
                             },
                             {
-                                "p_bmm_type": "P_BMM_GENERIC_TYPE",
+                                "_type": "P_BMM_GENERIC_TYPE",
                                 "root_type": "Hash",
                                 "generic_parameters": [
                                     "String",
@@ -902,7 +902,7 @@
             "properties": {
                 "constraint": {
                     "name": "constraint",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "Boolean"
@@ -912,13 +912,13 @@
                 },
                 "assumed_value": {
                     "name": "assumed_value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "documentation": "Assumed Boolean value."
                 },
                 "default_value": {
                     "name": "default_value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "Default Boolean value."
@@ -934,7 +934,7 @@
             "properties": {
                 "constraint": {
                     "name": "constraint",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "String"
@@ -944,14 +944,14 @@
                 },
                 "default_value": {
                     "name": "default_value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Default String value."
                 },
                 "assumed_value": {
                     "name": "assumed_value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Assumed String value."
                 }
@@ -966,7 +966,7 @@
             "properties": {
                 "constraint": {
                     "name": "constraint",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Interval",
                         "generic_parameters": [
@@ -986,7 +986,7 @@
             "properties": {
                 "constraint": {
                     "name": "constraint",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Interval",
                         "generic_parameters": [
@@ -1013,7 +1013,7 @@
             "properties": {
                 "constraint": {
                     "name": "constraint",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "Interval"
@@ -1032,20 +1032,20 @@
             "properties": {
                 "constraint": {
                     "name": "constraint",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Type of individual constraint - a single string that can either be a local at-code, or a local ac-code signifying a locally defined value set. If an ac-code, assumed_value may contain an at-code from the value set of the ac-code."
                 },
                 "assumed_value": {
                     "name": "assumed_value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Terminology_code",
                     "documentation": "Assumed Terminology code value."
                 },
                 "default_value": {
                     "name": "default_value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Terminology_code",
                     "is_mandatory": true,
                     "documentation": ""
@@ -1067,7 +1067,7 @@
             "properties": {
                 "pattern_constraint": {
                     "name": "pattern_constraint",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Optional alternative constraint in the form of a pattern based on ISO8601. See descendants for details."
                 }
@@ -1082,7 +1082,7 @@
             "properties": {
                 "constraint": {
                     "name": "constraint",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Interval",
                         "generic_parameters": [
@@ -1102,7 +1102,7 @@
             "properties": {
                 "constraint": {
                     "name": "constraint",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Interval",
                         "generic_parameters": [
@@ -1122,7 +1122,7 @@
             "properties": {
                 "constraint": {
                     "name": "constraint",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Interval",
                         "generic_parameters": [
@@ -1142,7 +1142,7 @@
             "properties": {
                 "constraint": {
                     "name": "constraint",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Interval",
                         "generic_parameters": [
@@ -1159,49 +1159,49 @@
             "properties": {
                 "Id_code_leader": {
                     "name": "Id_code_leader",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "String leader of \u2018identifier\u2019 codes, i.e. codes used to identify archteype nodes."
                 },
                 "Value_code_leader": {
                     "name": "Value_code_leader",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "String leader of \u2018value\u2019 codes, i.e. codes used to identify codes values, including value set members."
                 },
                 "Value_set_code_leader": {
                     "name": "Value_set_code_leader",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "String leader of \u2018value set\u2019 codes, i.e. codes used to identify value sets."
                 },
                 "Specialisation_separator": {
                     "name": "Specialisation_separator",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Character",
                     "is_mandatory": true,
                     "documentation": "Character used to separate numeric parts of codes belonging to different specialisation levels."
                 },
                 "Code_regex_pattern": {
                     "name": "Code_regex_pattern",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Regex used to define the legal numeric part of any archetype code. Corresponds to the simple pattern of dotted numbers, as used in typical multi-level numbering schemes."
                 },
                 "Root_code_regex_pattern": {
                     "name": "Root_code_regex_pattern",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Regex pattern of the root id code of any archetype. Corresponds to codes of the form id1, id1.1, id1.1.1 etc.."
                 },
                 "Primitive_node_id": {
                     "name": "Primitive_node_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Code id used for C_PRIMITIVE_OBJECT nodes on creation."
@@ -1214,13 +1214,13 @@
             "properties": {
                 "visibility": {
                     "name": "visibility",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "VISIBILITY_TYPE",
                     "documentation": "Visibility setting of a non-archetyped RM attribute (RM attributes that are constrained or within the archetyped structure are visible by default)."
                 },
                 "alias": {
                     "name": "alias",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Terminology_code",
                     "documentation": "Optional alias for the attribute referenced by the path."
                 }
@@ -1232,7 +1232,7 @@
             "properties": {
                 "rm_visibility": {
                     "name": "rm_visibility",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1246,7 +1246,7 @@
         },
         "VISIBILITY_TYPE": {
             "name": "VISIBILITY_TYPE",
-            "p_bmm_type": "P_BMM_ENUMERATION_STRING",
+            "_type": "P_BMM_ENUMERATION_STRING",
             "ancestors": [
                 "String"
             ],
@@ -1265,7 +1265,7 @@
             "properties": {
                 "item": {
                     "name": "item",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "C_STRING",
                     "is_mandatory": true,
                     "documentation": "A C_STRING representing a regular expression for matching Archetype identifiers."
@@ -1281,14 +1281,14 @@
             "properties": {
                 "path": {
                     "name": "path",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "The path to the archetype node."
                 },
                 "item": {
                     "name": "item",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ARCHETYPE_CONSTRAINT",
                     "is_mandatory": true,
                     "documentation": ""
@@ -1304,7 +1304,7 @@
             "properties": {
                 "item": {
                     "name": "item",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "C_PRIMITIVE_OBJECT",
                     "is_mandatory": true,
                     "documentation": "The constraint."
@@ -1317,7 +1317,7 @@
             "properties": {
                 "aom_rm_type_substitutions": {
                     "name": "aom_rm_type_substitutions",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1329,7 +1329,7 @@
                 },
                 "aom_lifecycle_mappings": {
                     "name": "aom_lifecycle_mappings",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1341,14 +1341,14 @@
                 },
                 "profile_name": {
                     "name": "profile_name",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Name of this profile, usually based on the publisher it pertains to e.g. \"openEHR\", \"cdisc\", etc."
                 },
                 "aom_rm_type_mappings": {
                     "name": "aom_rm_type_mappings",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1360,7 +1360,7 @@
                 },
                 "rm_primitive_type_equivalences": {
                     "name": "rm_primitive_type_equivalences",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1378,21 +1378,21 @@
             "properties": {
                 "source_class_name": {
                     "name": "source_class_name",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Name of the AOM type being mapped to an RM type."
                 },
                 "target_class_name": {
                     "name": "target_class_name",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Name of the RM type in the mapping."
                 },
                 "property_mappings": {
                     "name": "property_mappings",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1410,14 +1410,14 @@
             "properties": {
                 "source_property_name": {
                     "name": "source_property_name",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Name of property in source class."
                 },
                 "target_property_name": {
                     "name": "target_property_name",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Name of property in target class."
@@ -1439,27 +1439,27 @@
             "properties": {
                 "rm_type_name": {
                     "name": "rm_type_name",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Reference model type that this node corresponds to. "
                 },
                 "occurrences": {
                     "name": "occurrences",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Occurrences of this object node in the data, under the owning attribute. Upper limit can only be greater than 1 if owning attribute has a cardinality of more than 1."
                 },
                 "node_id": {
                     "name": "node_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Semantic id of this node, used to differentiate sibling nodes of the same type. Each node_id must be defined in the archetype ontology as a term code. \n"
                 },
                 "is_deprecated": {
                     "name": "is_deprecated",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "documentation": ""
                 }
@@ -1474,20 +1474,20 @@
             "properties": {
                 "rm_attribute_name": {
                     "name": "rm_attribute_name",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Reference model attribute within the enclosing type represented by a C_OBJECT."
                 },
                 "existence": {
                     "name": "existence",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Constraint on every attribute, regardless of whether it is singular or of a container type, which indicates whether its target object exists or not (i.e. is mandatory or not)."
                 },
                 "children": {
                     "name": "children",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "P_C_OBJECT"
@@ -1497,19 +1497,19 @@
                 },
                 "differential_path": {
                     "name": "differential_path",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Within a differential specialised archetype, may be set to represent a deep path within the structure to which this constraint and its child constraints apply."
                 },
                 "cardinality": {
                     "name": "cardinality",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Cardinality constraint of attribute, if a container attribute."
                 },
                 "is_multiple": {
                     "name": "is_multiple",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "Flag indicating whether this attribute constraint is on a container (i.e. multiply-valued) attribute."
@@ -1526,13 +1526,13 @@
             "properties": {
                 "is_frozen": {
                     "name": "is_frozen",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "documentation": ""
                 },
                 "default_value": {
                     "name": "default_value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Any",
                     "is_mandatory": true,
                     "documentation": ""
@@ -1548,7 +1548,7 @@
             "properties": {
                 "target_path": {
                     "name": "target_path",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Reference to an object node using archetype path notation."
@@ -1564,7 +1564,7 @@
             "properties": {
                 "includes": {
                     "name": "includes",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": ""
@@ -1574,7 +1574,7 @@
                 },
                 "excludes": {
                     "name": "excludes",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": ""
@@ -1584,7 +1584,7 @@
                 },
                 "is_closed": {
                     "name": "is_closed",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": ""
@@ -1601,19 +1601,19 @@
             "properties": {
                 "assumed_value": {
                     "name": "assumed_value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Any",
                     "documentation": "Value to be assumed if none sent in data."
                 },
                 "is_enumerated_type_constraint": {
                     "name": "is_enumerated_type_constraint",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "documentation": "True if this constraint is actually of an enumerated type that conforms to a primitive type, not a primitive."
                 },
                 "constraint": {
                     "name": "constraint",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Any",
                     "is_mandatory": true,
                     "documentation": "Constraint represented by this object; redefine in descendants."
@@ -1629,7 +1629,7 @@
             "properties": {
                 "attributes": {
                     "name": "attributes",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "P_C_ATTRIBUTE"
@@ -1639,7 +1639,7 @@
                 },
                 "attribute_tuples": {
                     "name": "attribute_tuples",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "P_C_ATTRIBUTE_TUPLE"
@@ -1655,7 +1655,7 @@
             "properties": {
                 "members": {
                     "name": "members",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "String"
@@ -1674,7 +1674,7 @@
             "properties": {
                 "archetype_ref": {
                     "name": "archetype_ref",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
@@ -1690,7 +1690,7 @@
             "properties": {
                 "constraint": {
                     "name": "constraint",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "Boolean"
@@ -1700,13 +1700,13 @@
                 },
                 "assumed_value": {
                     "name": "assumed_value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "documentation": ""
                 },
                 "default_value": {
                     "name": "default_value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": ""
@@ -1722,7 +1722,7 @@
             "properties": {
                 "constraint": {
                     "name": "constraint",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "String"
@@ -1733,14 +1733,14 @@
                 },
                 "default_value": {
                     "name": "default_value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "assumed_value": {
                     "name": "assumed_value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": ""
                 }
@@ -1770,7 +1770,7 @@
             "properties": {
                 "constraint": {
                     "name": "constraint",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "Interval"
@@ -1790,20 +1790,20 @@
             "properties": {
                 "constraint": {
                     "name": "constraint",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "assumed_value": {
                     "name": "assumed_value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Terminology_code",
                     "documentation": ""
                 },
                 "default_value": {
                     "name": "default_value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Terminology_code",
                     "is_mandatory": true,
                     "documentation": ""
@@ -1825,7 +1825,7 @@
             "properties": {
                 "pattern_constraint": {
                     "name": "pattern_constraint",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Optional alternative constraint in the form of a pattern based on ISO8601. See descendants for details."
@@ -1855,41 +1855,41 @@
             "properties": {
                 "parent_archetype_id": {
                     "name": "parent_archetype_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Identifier of the specialisation parent of this archetype."
                 },
                 "archetype_id": {
                     "name": "archetype_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "P_ARCHETYPE_HRID",
                     "is_mandatory": true,
                     "documentation": "Identifier of this archetype."
                 },
                 "is_differential": {
                     "name": "is_differential",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "Flag indicating whether this archetype is differential or flat in its contents. Top-level source archetypes have this flag set to True."
                 },
                 "definition": {
                     "name": "definition",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "P_C_COMPLEX_OBJECT",
                     "is_mandatory": true,
                     "documentation": "Root node of the definition of this archetype."
                 },
                 "terminology": {
                     "name": "terminology",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "P_ARCHETYPE_TERMINOLOGY",
                     "is_mandatory": true,
                     "documentation": "The terminology of the archetype."
                 },
                 "rules": {
                     "name": "rules",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "STATEMENT"
@@ -1910,34 +1910,34 @@
             "properties": {
                 "adl_version": {
                     "name": "adl_version",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "ADL version if archteype was read in from an ADL sharable archetype."
                 },
                 "build_uid": {
                     "name": "build_uid",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "UID",
                     "is_mandatory": true,
                     "documentation": "Unique identifier of this archetype artefact instance. A new identifier is assigned every time the content is changed by a tool. Used by tools to distinguish different revisions and\/or interim snapshots of the same artefact."
                 },
                 "rm_release": {
                     "name": "rm_release",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Semver.org compatible release of the most recent reference model release on which the archetype in its current version is based. This does not imply conformance only to this release, since an archetype may be valid with respect to multiple releases of a reference model."
                 },
                 "is_generated": {
                     "name": "is_generated",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "If True, indicates that this artefact was machine-generated from some other source, in which case, tools would expect to overwrite this artefact on a new generation. Editing tools should set this value to False when a user starts to manually edit an archetype."
                 },
                 "other_meta_data": {
                     "name": "other_meta_data",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1966,7 +1966,7 @@
             "properties": {
                 "component_terminologies": {
                     "name": "component_terminologies",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1978,16 +1978,16 @@
                 },
                 "terminology_extracts": {
                     "name": "terminology_extracts",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameter_defs": [
                             {
-                                "p_bmm_type": "P_BMM_SIMPLE_TYPE",
+                                "_type": "P_BMM_SIMPLE_TYPE",
                                 "type": "String"
                             },
                             {
-                                "p_bmm_type": "P_BMM_GENERIC_TYPE",
+                                "_type": "P_BMM_GENERIC_TYPE",
                                 "root_type": "Hash",
                                 "generic_parameters": [
                                     "String",
@@ -2006,55 +2006,55 @@
             "properties": {
                 "namespace": {
                     "name": "namespace",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Reverse domain name namespace identifier."
                 },
                 "rm_publisher": {
                     "name": "rm_publisher",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Name of the Reference Model publisher."
                 },
                 "rm_package": {
                     "name": "rm_package",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Name of the package in whose reachability graph the rm_class class is found (there can be more than one possibility in many reference models)."
                 },
                 "rm_class": {
                     "name": "rm_class",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Name of the root class of this archetype."
                 },
                 "concept_id": {
                     "name": "concept_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "The short concept name of the archetype as used in the multi-axial archetype_hrid."
                 },
                 "release_version": {
                     "name": "release_version",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "The full numeric version of this archetype consisting of 3 parts, e.g. 1.8.2. The archetype_hrid feature includes only the major version."
                 },
                 "version_status": {
                     "name": "version_status",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "VERSION_STATUS",
                     "is_mandatory": true,
                     "documentation": "The status of the version, i.e. released, release_candidate etc."
                 },
                 "build_count": {
                     "name": "build_count",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "The build count since last increment of any version part."
@@ -2068,20 +2068,20 @@
             "properties": {
                 "original_language": {
                     "name": "original_language",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Language in which this resource was initially authored. Although there is no language primacy of resources overall, the language of original authoring is required to ensure natural language translations can preserve quality. Language is relevant in both the description and ontology sections. "
                 },
                 "is_controlled": {
                     "name": "is_controlled",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "documentation": "True if this resource is under any kind of change control (even file copying), in which case revision history is created. "
                 },
                 "translations": {
                     "name": "translations",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "TRANSLATION_DETAILS"
@@ -2091,28 +2091,28 @@
                 },
                 "description": {
                     "name": "description",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "RESOURCE_DESCRIPTION",
                     "documentation": "Description and lifecycle information of the resource."
                 },
                 "uid": {
                     "name": "uid",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Unique identifier of the family of archetypes having the same interface identifier (same major version)."
                 },
                 "annotations": {
                     "name": "annotations",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameter_defs": [
                             {
-                                "p_bmm_type": "P_BMM_SIMPLE_TYPE",
+                                "_type": "P_BMM_SIMPLE_TYPE",
                                 "type": "String"
                             },
                             {
-                                "p_bmm_type": "P_BMM_GENERIC_TYPE",
+                                "_type": "P_BMM_GENERIC_TYPE",
                                 "root_type": "Hash",
                                 "generic_parameters": [
                                     "String",
@@ -2131,30 +2131,30 @@
             "properties": {
                 "is_differential": {
                     "name": "is_differential",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "original_language": {
                     "name": "original_language",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "term_definitions": {
                     "name": "term_definitions",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameter_defs": [
                             {
-                                "p_bmm_type": "P_BMM_SIMPLE_TYPE",
+                                "_type": "P_BMM_SIMPLE_TYPE",
                                 "type": "String"
                             },
                             {
-                                "p_bmm_type": "P_BMM_GENERIC_TYPE",
+                                "_type": "P_BMM_GENERIC_TYPE",
                                 "root_type": "Hash",
                                 "generic_parameters": [
                                     "String",
@@ -2168,7 +2168,7 @@
                 },
                 "term_bindings": {
                     "name": "term_bindings",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "err_type_def": "Hash <String, Hash<String, Uri>>"
                     },
@@ -2176,7 +2176,7 @@
                 },
                 "value_sets": {
                     "name": "value_sets",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [

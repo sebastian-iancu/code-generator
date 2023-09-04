@@ -369,7 +369,7 @@
             ]
         }
     },
-    "primitives": [],
+    "primitive_types": [],
     "class_definitions": {
         "PATHABLE": {
             "name": "PATHABLE",
@@ -385,21 +385,21 @@
             "properties": {
                 "meaning": {
                     "name": "meaning",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_TEXT",
                     "is_mandatory": true,
                     "documentation": "Used to describe the relationship, usually in clinical terms, such as  in response to  (the relationship between test results and an order),  follow-up to  and so on. Such relationships can represent any clinically meaningful connection between pieces of information. Values for meaning include those described in Annex C, ENV 13606 pt 2 under the categories of  generic ,  documenting and reporting ,  organisational ,  clinical ,  circumstancial , and  view management ."
                 },
                 "type": {
                     "name": "type",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_TEXT",
                     "is_mandatory": true,
                     "documentation": "The type attribute is used to indicate a clinical or domain-level meaning for the kind of link, for example  problem  or  issue . If type values are designed appropriately, they can be used by the requestor of EHR extracts to categorise links which must be followed and which can be broken when the extract is created. \n"
                 },
                 "target": {
                     "name": "target",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_EHR_URI",
                     "is_mandatory": true,
                     "documentation": "The logical  to  object in the link relation, as per the linguistic sense of the meaning attribute."
@@ -416,27 +416,27 @@
             "properties": {
                 "name": {
                     "name": "name",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_TEXT",
                     "is_mandatory": true,
                     "documentation": "Runtime name of this fragment, used to build runtime paths. This is the term provided via a clinical application or batch process to name this EHR construct: its retention in the EHR faithfully preserves the original label by which this entry was known to end users. \n"
                 },
                 "archetype_node_id": {
                     "name": "archetype_node_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths. Always in the form of an at-code, e.g.  `at0005`. This value enables a 'standardised' name for this node to be generated, by referring to the generating archetype local terminology. \n\nAt an archetype root point, the value of this attribute is always the stringified form of the `_archetype_id_` found in the `_archetype_details_` object. \n"
                 },
                 "uid": {
                     "name": "uid",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "UID_BASED_ID",
                     "documentation": "Optional globally unique object identifier for root points of archetyped structures. "
                 },
                 "links": {
                     "name": "links",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "LINK"
@@ -446,13 +446,13 @@
                 },
                 "archetype_details": {
                     "name": "archetype_details",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ARCHETYPED",
                     "documentation": "Details of archetyping used on this node."
                 },
                 "feeder_audit": {
                     "name": "feeder_audit",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "FEEDER_AUDIT",
                     "documentation": "Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node. "
                 }
@@ -464,20 +464,20 @@
             "properties": {
                 "archetype_id": {
                     "name": "archetype_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ARCHETYPE_ID",
                     "is_mandatory": true,
                     "documentation": "Globally unique archetype identifier. "
                 },
                 "template_id": {
                     "name": "template_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "TEMPLATE_ID",
                     "documentation": "Globally unique template identifier, if a template was active at this point in the structure. Normally, a template would only be used at the top of a top-level structure, but the possibility exists for templates at lower levels. "
                 },
                 "rm_version": {
                     "name": "rm_version",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Version of the openEHR reference model used to create this object. Expressed in terms of the release version string, e.g.  1.0 ,  1.2.4 ."
@@ -490,7 +490,7 @@
             "properties": {
                 "originating_system_item_ids": {
                     "name": "originating_system_item_ids",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "DV_IDENTIFIER"
@@ -500,7 +500,7 @@
                 },
                 "feeder_system_item_ids": {
                     "name": "feeder_system_item_ids",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "DV_IDENTIFIER"
@@ -510,20 +510,20 @@
                 },
                 "original_content": {
                     "name": "original_content",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_ENCAPSULATED",
                     "documentation": "Optional inline inclusion of or reference to original content corresponding to the openEHR content at this node. Typically a URI reference to a document or message in a persistent store associated with the EHR. "
                 },
                 "originating_system_audit": {
                     "name": "originating_system_audit",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "FEEDER_AUDIT_DETAILS",
                     "is_mandatory": true,
                     "documentation": "Any audit information for the information item from the originating system. "
                 },
                 "feeder_system_audit": {
                     "name": "feeder_system_audit",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "FEEDER_AUDIT_DETAILS",
                     "documentation": "Any audit information for the information item from the feeder system, if different from the originating system."
                 }
@@ -535,44 +535,44 @@
             "properties": {
                 "system_id": {
                     "name": "system_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Identifier of the system which handled the information item. This is the IT system owned by the organisation legally responsible for handling the data, and at which the data were previously created or passed by an earlier system.\n"
                 },
                 "location": {
                     "name": "location",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "PARTY_IDENTIFIED",
                     "documentation": "Identifier of the particular site\/facility within an organisation which handled the item. For computability, this identifier needs to be e.g. a PKI identifier which can be included in the identifier list of the `PARTY_IDENTIFIED` object. "
                 },
                 "subject": {
                     "name": "subject",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "PARTY_PROXY",
                     "documentation": "Identifiers for subject of the received information item. "
                 },
                 "provider": {
                     "name": "provider",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "PARTY_IDENTIFIED",
                     "documentation": "Optional provider(s) who created, committed, forwarded or otherwise handled the item. "
                 },
                 "time": {
                     "name": "time",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_DATE_TIME",
                     "documentation": "Time of handling the item. For an originating system, this will be time of creation, for an intermediate feeder system, this will be a time of accession or other time of handling, where available."
                 },
                 "version_id": {
                     "name": "version_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Any identifier used in the system such as  \"interim\" ,  \"final\" , or numeric versions if available. "
                 },
                 "other_details": {
                     "name": "other_details",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ITEM_STRUCTURE",
                     "documentation": "Optional attribute to carry any custom meta-data. May be archetyped."
                 }
@@ -589,21 +589,21 @@
             "properties": {
                 "uid": {
                     "name": "uid",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "HIER_OBJECT_ID",
                     "is_mandatory": true,
                     "documentation": "Unique identifier of this version container in the form of a UID with no extension. This id will be the same in all instances of the same container in a distributed environment, meaning that it can be understood as the uid of the  virtual version tree. "
                 },
                 "owner_id": {
                     "name": "owner_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "OBJECT_REF",
                     "is_mandatory": true,
                     "documentation": "Reference to object to which this version container belongs, e.g. the id of the containing EHR or other relevant owning entity. "
                 },
                 "time_created": {
                     "name": "time_created",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_DATE_TIME",
                     "is_mandatory": true,
                     "documentation": "Time of initial creation of this versioned object. "
@@ -616,14 +616,14 @@
             "properties": {
                 "uid": {
                     "name": "uid",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "HIER_OBJECT_ID",
                     "is_mandatory": true,
                     "documentation": "Unique identifier for this Contribution. "
                 },
                 "versions": {
                     "name": "versions",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "OBJECT_REF"
@@ -634,7 +634,7 @@
                 },
                 "audit": {
                     "name": "audit",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "AUDIT_DETAILS",
                     "is_mandatory": true,
                     "documentation": "Audit trail corresponding to the committal of this Contribution. "
@@ -653,20 +653,20 @@
             "properties": {
                 "contribution": {
                     "name": "contribution",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "OBJECT_REF",
                     "is_mandatory": true,
                     "documentation": "Contribution in which this version was added. "
                 },
                 "signature": {
                     "name": "signature",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "OpenPGP digital signature or digest of content committed in this Version. "
                 },
                 "commit_audit": {
                     "name": "commit_audit",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "AUDIT_DETAILS",
                     "is_mandatory": true,
                     "documentation": "Audit trail corresponding to the committal of this version to the `VERSIONED_OBJECT`."
@@ -687,7 +687,7 @@
             "properties": {
                 "item": {
                     "name": "item",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ORIGINAL_VERSION",
                     "is_mandatory": true,
                     "documentation": "The `ORIGINAL_VERSION` object that was imported. "
@@ -708,20 +708,20 @@
             "properties": {
                 "uid": {
                     "name": "uid",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "OBJECT_VERSION_ID",
                     "is_mandatory": true,
                     "documentation": "Stored version of inheritance precursor. "
                 },
                 "preceding_version_uid": {
                     "name": "preceding_version_uid",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "OBJECT_VERSION_ID",
                     "documentation": "Stored version of inheritance precursor. "
                 },
                 "other_input_version_uids": {
                     "name": "other_input_version_uids",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "OBJECT_VERSION_ID"
@@ -731,14 +731,14 @@
                 },
                 "lifecycle_state": {
                     "name": "lifecycle_state",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_CODED_TEXT",
                     "is_mandatory": true,
                     "documentation": "Lifecycle state of the content item in this version; coded by openEHR vocabulary `version lifecycle state`."
                 },
                 "attestations": {
                     "name": "attestations",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "ATTESTATION"
@@ -748,7 +748,7 @@
                 },
                 "data": {
                     "name": "data",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "T",
                     "documentation": "Data content of this Version."
                 }
@@ -760,14 +760,14 @@
             "properties": {
                 "version_id": {
                     "name": "version_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "OBJECT_VERSION_ID",
                     "is_mandatory": true,
                     "documentation": "Version identifier for this revision. "
                 },
                 "audits": {
                     "name": "audits",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "AUDIT_DETAILS"
@@ -784,34 +784,34 @@
             "properties": {
                 "system_id": {
                     "name": "system_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Identifier of the logical EHR system where the change was committed. This is almost always owned by the organisation legally responsible for the EHR, and is distinct from any application, or any hosting infrastructure."
                 },
                 "time_committed": {
                     "name": "time_committed",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_DATE_TIME",
                     "is_mandatory": true,
                     "documentation": "Time of committal of the item. "
                 },
                 "change_type": {
                     "name": "change_type",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_CODED_TEXT",
                     "is_mandatory": true,
                     "documentation": "Type of change. Coded using the openEHR Terminology  audit change type  group."
                 },
                 "description": {
                     "name": "description",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_TEXT",
                     "documentation": "Reason for committal. This may be used to qualify the value in the `_change_type_` field. For example, if the change affects only the EHR directory, this field might be used to indicate 'Folder \"episode 2018-02-16\" added' or similar."
                 },
                 "committer": {
                     "name": "committer",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "PARTY_PROXY",
                     "is_mandatory": true,
                     "documentation": "Identity and optional reference into identity management service, of user who committed the item. "
@@ -827,19 +827,19 @@
             "properties": {
                 "attested_view": {
                     "name": "attested_view",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_MULTIMEDIA",
                     "documentation": "Optional visual representation of content attested e.g. screen image. "
                 },
                 "proof": {
                     "name": "proof",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Proof of attestation. "
                 },
                 "items": {
                     "name": "items",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "DV_EHR_URI"
@@ -849,14 +849,14 @@
                 },
                 "reason": {
                     "name": "reason",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_TEXT",
                     "is_mandatory": true,
                     "documentation": "Reason of this attestation. Optionally coded by the openEHR Terminology group  attestation reason ; includes values like  authorisation ,  witness  etc. "
                 },
                 "is_pending": {
                     "name": "is_pending",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "True if this attestation is outstanding; False means it has been completed."
@@ -869,27 +869,27 @@
             "properties": {
                 "function": {
                     "name": "function",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_TEXT",
                     "is_mandatory": true,
                     "documentation": "The function of the Party in this participation (note that a given party might participate in more than one way in a particular activity). This attribute should be coded, but cannot be limited to the HL7v3:ParticipationFunction vocabulary, since it is too limited and hospital-oriented. "
                 },
                 "mode": {
                     "name": "mode",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_CODED_TEXT",
                     "documentation": "Optional field for recording the 'mode' of the performer \/ activity interaction, e.g. present, by telephone, by email etc. "
                 },
                 "performer": {
                     "name": "performer",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "PARTY_PROXY",
                     "is_mandatory": true,
                     "documentation": "The id and possibly demographic system link of the party participating in the activity. "
                 },
                 "time": {
                     "name": "time",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "DV_INTERVAL",
                         "generic_parameters": [
@@ -907,7 +907,7 @@
             "properties": {
                 "external_ref": {
                     "name": "external_ref",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "PARTY_REF",
                     "documentation": "Optional reference to more detailed demographic or identification information for this party, in an external system. "
                 }
@@ -922,13 +922,13 @@
             "properties": {
                 "name": {
                     "name": "name",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Optional human-readable name (in String form)."
                 },
                 "identifiers": {
                     "name": "identifiers",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "DV_IDENTIFIER"
@@ -954,7 +954,7 @@
             "properties": {
                 "relationship": {
                     "name": "relationship",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_CODED_TEXT",
                     "is_mandatory": true,
                     "documentation": "Relationship of subject of this ENTRY to the subject of the record. May be coded. If it is the patient, coded as  self. "
@@ -967,7 +967,7 @@
             "properties": {
                 "items": {
                     "name": "items",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "REVISION_HISTORY_ITEM"
@@ -994,7 +994,7 @@
             "properties": {
                 "items": {
                     "name": "items",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "OBJECT_REF"
@@ -1004,7 +1004,7 @@
                 },
                 "folders": {
                     "name": "folders",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "FOLDER"
@@ -1014,7 +1014,7 @@
                 },
                 "details": {
                     "name": "details",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ITEM_STRUCTURE",
                     "documentation": "Archetypable meta-data for `FOLDER`."
                 }
@@ -1027,20 +1027,20 @@
             "properties": {
                 "original_language": {
                     "name": "original_language",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "CODE_PHRASE",
                     "is_mandatory": true,
                     "documentation": "Language in which this resource was initially authored. Although there is no language primacy of resources overall, the language of original authoring is required to ensure natural language translations can preserve quality. Language is relevant in both the description and ontology sections. "
                 },
                 "is_controlled": {
                     "name": "is_controlled",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "documentation": "True if this resource is under any kind of change control (even file copying), in which case revision history is created. "
                 },
                 "translations": {
                     "name": "translations",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1052,13 +1052,13 @@
                 },
                 "description": {
                     "name": "description",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "RESOURCE_DESCRIPTION",
                     "documentation": "Description and lifecycle information of the resource."
                 },
                 "revision_history": {
                     "name": "revision_history",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "REVISION_HISTORY",
                     "documentation": "The revision history of the resource. Only required if `_is_controlled_ = True` (avoids large revision histories for informal or private editing situations). "
                 }
@@ -1070,7 +1070,7 @@
             "properties": {
                 "original_author": {
                     "name": "original_author",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1083,7 +1083,7 @@
                 },
                 "other_contributors": {
                     "name": "other_contributors",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "String"
@@ -1093,20 +1093,20 @@
                 },
                 "lifecycle_state": {
                     "name": "lifecycle_state",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Lifecycle state of the resource, typically including states such as: `initial | submitted | experimental | awaiting_approval | approved | superseded | obsolete`."
                 },
                 "resource_package_uri": {
                     "name": "resource_package_uri",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "URI of package to which this resource belongs."
                 },
                 "other_details": {
                     "name": "other_details",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1118,14 +1118,14 @@
                 },
                 "parent_resource": {
                     "name": "parent_resource",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "AUTHORED_RESOURCE",
                     "is_mandatory": true,
                     "documentation": "Reference to owning resource. "
                 },
                 "details": {
                     "name": "details",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1144,14 +1144,14 @@
             "properties": {
                 "language": {
                     "name": "language",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "CODE_PHRASE",
                     "is_mandatory": true,
                     "documentation": "Language of the translation."
                 },
                 "author": {
                     "name": "author",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1164,13 +1164,13 @@
                 },
                 "accreditaton": {
                     "name": "accreditaton",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Accreditation of translator, usually a national translator's registration or association membership id."
                 },
                 "other_details": {
                     "name": "other_details",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1188,21 +1188,21 @@
             "properties": {
                 "language": {
                     "name": "language",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "CODE_PHRASE",
                     "is_mandatory": true,
                     "documentation": "The localised language in which the items in this description item are written. Coded from openEHR code set `languages`."
                 },
                 "purpose": {
                     "name": "purpose",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Purpose of the resource."
                 },
                 "keywords": {
                     "name": "keywords",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "String"
@@ -1212,25 +1212,25 @@
                 },
                 "use": {
                     "name": "use",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Description of the uses of the resource, i.e. contexts in which it could be used. \n"
                 },
                 "misuse": {
                     "name": "misuse",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Description of any misuses of the resource, i.e. contexts in which it should not be used."
                 },
                 "copyright": {
                     "name": "copyright",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Optional copyright statement for the resource as a knowledge resource. \n"
                 },
                 "original_resource_uri": {
                     "name": "original_resource_uri",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1242,7 +1242,7 @@
                 },
                 "other_details": {
                     "name": "other_details",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1260,33 +1260,33 @@
             "properties": {
                 "target": {
                     "name": "target",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "UID_BASED_ID",
                     "is_mandatory": true,
                     "documentation": "Identifier of target, which may be a `VERSIONED_OBJECT<T>` or a `VERSION<T>`."
                 },
                 "target_path": {
                     "name": "target_path",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Optional archetype (i.e. AQL) or RM path within `_target_`, in order to tag a fine-grained element."
                 },
                 "key": {
                     "name": "key",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "The tag key. May not be empty or contain leading or trailing whitespace."
                 },
                 "value": {
                     "name": "value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "The value. If set, may not be empty."
                 },
                 "owner_id": {
                     "name": "owner_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "OBJECT_REF",
                     "is_mandatory": true,
                     "documentation": "Identifier of owner object, such as EHR."
@@ -1318,7 +1318,7 @@
             "properties": {
                 "items": {
                     "name": "items",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "ITEM"
@@ -1337,7 +1337,7 @@
             "properties": {
                 "item": {
                     "name": "item",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ELEMENT",
                     "is_mandatory": true,
                     "documentation": ""
@@ -1353,7 +1353,7 @@
             "properties": {
                 "rows": {
                     "name": "rows",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "CLUSTER"
@@ -1372,7 +1372,7 @@
             "properties": {
                 "items": {
                     "name": "items",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "ELEMENT"
@@ -1398,20 +1398,20 @@
             "properties": {
                 "time": {
                     "name": "time",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_DATE_TIME",
                     "is_mandatory": true,
                     "documentation": "Time of this event. If the width is non-zero, it is the time point of the trailing edge of the event. "
                 },
                 "state": {
                     "name": "state",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ITEM_STRUCTURE",
                     "documentation": "Optional state data for this event."
                 },
                 "data": {
                     "name": "data",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY_OPEN",
+                    "_type": "P_BMM_SINGLE_PROPERTY_OPEN",
                     "type": "T",
                     "is_mandatory": true,
                     "documentation": "The data of this event."
@@ -1444,20 +1444,20 @@
             "properties": {
                 "width": {
                     "name": "width",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_DURATION",
                     "is_mandatory": true,
                     "documentation": "Duration of the time interval during which the values recorded under `data` are true and, if set, the values recorded under `state` are true. Void if an instantaneous event."
                 },
                 "sample_count": {
                     "name": "sample_count",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "documentation": "Optional count of original samples to which this event corresponds."
                 },
                 "math_function": {
                     "name": "math_function",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_CODED_TEXT",
                     "is_mandatory": true,
                     "documentation": "Mathematical function of the data of this event, e.g.  maximum, mean etc. Coded using https:\/\/github.com\/openEHR\/terminology\/blob\/master\/openEHR_RM\/en\/openehr_terminology.xml[openEHR vocabulary `event math function`]. Default value `640|actual|`, meaning 'actual value'."
@@ -1479,32 +1479,32 @@
             "properties": {
                 "origin": {
                     "name": "origin",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_DATE_TIME",
                     "is_mandatory": true,
                     "documentation": "Time origin of this event history. The first event is not necessarily at the origin point. "
                 },
                 "period": {
                     "name": "period",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_DURATION",
                     "documentation": "Period between samples in this segment if periodic."
                 },
                 "duration": {
                     "name": "duration",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_DURATION",
                     "documentation": "Duration of the entire History; either corresponds to the duration of all the events, and\/or the duration represented by the summary, if it exists. "
                 },
                 "summary": {
                     "name": "summary",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ITEM_STRUCTURE",
                     "documentation": "Optional summary data that aggregates, organizes, reduces and transforms the event series. This may be a text or image that presents a graphical presentation, or some data that assists with the interpretation of the data."
                 },
                 "events": {
                     "name": "events",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "EVENT"
@@ -1531,7 +1531,7 @@
             "properties": {
                 "items": {
                     "name": "items",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "ITEM"
@@ -1551,19 +1551,19 @@
             "properties": {
                 "null_flavour": {
                     "name": "null_flavour",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_CODED_TEXT",
                     "documentation": "Flavour of null value, e.g. `253|unknown|`, `271|no information|`, `272|masked|`, and `273|not applicable|`."
                 },
                 "value": {
                     "name": "value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DATA_VALUE",
                     "documentation": "Property representing leaf value object of `ELEMENT`. In real data, any concrete subtype of `DATA_VALUE` can be used."
                 },
                 "null_reason": {
                     "name": "null_reason",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_TEXT",
                     "documentation": "Optional specific reason for null value; if set, `_null_flavour_` must be set. Null reason may apply only to a minority of clinical data, commonly needed in reporting contexts."
                 }
@@ -1586,7 +1586,7 @@
             "properties": {
                 "value": {
                     "name": "value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "Boolean value of this item. Actual values may be language or implementation dependent."
@@ -1602,14 +1602,14 @@
             "properties": {
                 "value": {
                     "name": "value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_CODED_TEXT",
                     "is_mandatory": true,
                     "documentation": "The state name. State names are determined by a state\/event table defined in archetypes, and coded using openEHR Terminology or local archetype terms, as specified by the archetype. "
                 },
                 "is_terminal": {
                     "name": "is_terminal",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "Indicates whether this state is a terminal state, such as  \"aborted\",  \"completed\" etc. from which no further transitions are possible."
@@ -1625,26 +1625,26 @@
             "properties": {
                 "issuer": {
                     "name": "issuer",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Optional authority which issues the kind of id used in the id field of this object. "
                 },
                 "assigner": {
                     "name": "assigner",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Optional organisation that assigned the id to the item being identified."
                 },
                 "id": {
                     "name": "id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "The identifier value. Often structured, according to the definition of the issuing authority's rules. "
                 },
                 "type": {
                     "name": "type",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Optional identifier type, such as  prescription , or  Social Security Number . One day a controlled vocabulary might be possible for this."
                 }
@@ -1660,13 +1660,13 @@
             "properties": {
                 "charset": {
                     "name": "charset",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "CODE_PHRASE",
                     "documentation": "Name of character encoding scheme in which this value is encoded. Coded from openEHR Code Set  character sets . Unicode is the default assumption in openEHR, with UTF-8 being the assumed encoding. This attribute allows for variations from these assumptions. "
                 },
                 "language": {
                     "name": "language",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "CODE_PHRASE",
                     "documentation": "Optional indicator of the localised language in which the data is written, if relevant. Coded from openEHR Code Set `languages`."
                 }
@@ -1681,19 +1681,19 @@
             "properties": {
                 "alternate_text": {
                     "name": "alternate_text",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Text to display in lieu of multimedia display\/replay."
                 },
                 "uri": {
                     "name": "uri",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_URI",
                     "documentation": "URI reference to electronic information stored outside the record as a file, database entry etc, if supplied as a reference. \n"
                 },
                 "data": {
                     "name": "data",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "Byte"
@@ -1703,20 +1703,20 @@
                 },
                 "media_type": {
                     "name": "media_type",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "CODE_PHRASE",
                     "is_mandatory": true,
                     "documentation": "Data media type coded from openEHR code set  media types  (interface for the IANA MIME types code set). \n"
                 },
                 "compression_algorithm": {
                     "name": "compression_algorithm",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "CODE_PHRASE",
                     "documentation": "Compression type, a coded value from the openEHR Integrity check code set. Void means no compression. "
                 },
                 "integrity_check": {
                     "name": "integrity_check",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "Byte"
@@ -1726,19 +1726,19 @@
                 },
                 "integrity_check_algorithm": {
                     "name": "integrity_check_algorithm",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "CODE_PHRASE",
                     "documentation": "Type of integrity check, a coded value from the openEHR `Integrity check` code set. "
                 },
                 "thumbnail": {
                     "name": "thumbnail",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_MULTIMEDIA",
                     "documentation": "The thumbnail for this item, if one exists; mainly for graphics formats."
                 },
                 "size": {
                     "name": "size",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Original size in bytes of unencoded encapsulated data. I.e. encodings such as base64, hexadecimal etc do not change the value of this attribute."
@@ -1754,14 +1754,14 @@
             "properties": {
                 "value": {
                     "name": "value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "The string, which may validly be empty in some syntaxes."
                 },
                 "formalism": {
                     "name": "formalism",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Name of the formalism, e.g.  GLIF 1.0 ,  Proforma  etc."
@@ -1777,7 +1777,7 @@
             "properties": {
                 "items": {
                     "name": "items",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "DV_TEXT"
@@ -1797,26 +1797,26 @@
             "properties": {
                 "value": {
                     "name": "value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Displayable rendition of the item, regardless of its underlying structure. For `DV_CODED_TEXT`, this is the rubric of the complete term as provided by the terminology service.\n"
                 },
                 "hyperlink": {
                     "name": "hyperlink",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_URI",
                     "documentation": "DEPRECATED: this field is deprecated; use markdown link\/text in the `_value_` attribute, and `\"markdown\"` as the value of the `_formatting_` field.\n\nOriginal usage, prior to RM Release 1.0.4: Optional link sitting behind a section of plain text or coded term item."
                 },
                 "formatting": {
                     "name": "formatting",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "If set, contains one of the following values:\n\n* `\"plain\"`: use for plain text, possibly containing newlines, but otherwise unformatted (same as Void);\n* `\"plain_no_newlines\"`: use for text containing no newlines or other formatting;\n* `\"markdown\"`: use for markdown formatted text, strongly recommended in the format of the CommonMark specification.\n\nDEPRECATED usage: contains a string of the form `\"name:value; name:value...\"` , e.g. `\"font-weight : bold; font-family : Arial; font-size : 12pt;\"`. Values taken from W3C CSS2 properties lists for background and font . "
                 },
                 "mappings": {
                     "name": "mappings",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "TERM_MAPPING"
@@ -1826,13 +1826,13 @@
                 },
                 "language": {
                     "name": "language",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "CODE_PHRASE",
                     "documentation": "Optional indicator of the localised language in which the value is written. Coded from openEHR Code Set  languages . Only used when either the text object is in a different language from the enclosing `ENTRY`, or else the text object is being used outside of an `ENTRY` or other enclosing structure which indicates the language. "
                 },
                 "encoding": {
                     "name": "encoding",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "CODE_PHRASE",
                     "documentation": "Name of character encoding scheme in which this value is encoded. Coded from openEHR Code Set  character sets . Unicode is the default assumption in openEHR, with UTF-8 being the assumed encoding. This attribute allows for variations from these assumptions. \n"
                 }
@@ -1847,7 +1847,7 @@
             "properties": {
                 "defining_code": {
                     "name": "defining_code",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "CODE_PHRASE",
                     "is_mandatory": true,
                     "documentation": "The term of which the  `_value_` attribute is the textual rendition (i.e. rubric). \n"
@@ -1860,20 +1860,20 @@
             "properties": {
                 "match": {
                     "name": "match",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Character",
                     "is_mandatory": true,
                     "documentation": "The relative match of the target term with respect to the mapped text item. Result meanings: \n\n* `'>'`: the mapping is to a broader term e.g. orginal text =  arbovirus infection , target =  viral infection  \n* `'='`: the mapping is to a (supposedly) equivalent to the original item \n* `'<'`: the mapping is to a narrower term. e.g. original text =  diabetes , mapping =  diabetes mellitus . \n* `'?'`: the kind of mapping is unknown. \n\nThe first three values are taken from the ISO standards 2788 ( Guide to Establishment and development of monolingual thesauri) and 5964 (Guide to Establishment and development of multilingual thesauri). \n"
                 },
                 "purpose": {
                     "name": "purpose",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_CODED_TEXT",
                     "documentation": "Purpose of the mapping e.g. 'automated data mining', 'billing', 'interoperability'."
                 },
                 "target": {
                     "name": "target",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "CODE_PHRASE",
                     "is_mandatory": true,
                     "documentation": "The target term of the mapping. "
@@ -1886,21 +1886,21 @@
             "properties": {
                 "terminology_id": {
                     "name": "terminology_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "TERMINOLOGY_ID",
                     "is_mandatory": true,
                     "documentation": "Identifier of the distinct terminology from which the code_string (or its elements) was extracted."
                 },
                 "code_string": {
                     "name": "code_string",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "The key used by the terminology service to identify a concept or coordination of concepts. This string is most likely parsable inside the terminology service, but nothing can be assumed about its syntax outside that context. "
                 },
                 "preferred_term": {
                     "name": "preferred_term",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Optional attribute to carry preferred term corresponding to the code or expression in `_code_string_`. Typical use in integration situations which create mappings, and representing data for which both a (non-preferred) actual term and a preferred term are both required."
                 }
@@ -1917,19 +1917,19 @@
             "properties": {
                 "normal_status": {
                     "name": "normal_status",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "CODE_PHRASE",
                     "documentation": "Optional normal status indicator of value with respect to normal range for this value. Often included by lab, even if the normal range itself is not included. Coded by ordinals in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group  `normal_status`. "
                 },
                 "normal_range": {
                     "name": "normal_range",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_INTERVAL",
                     "documentation": "Optional normal range. "
                 },
                 "other_reference_ranges": {
                     "name": "other_reference_ranges",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "REFERENCE_RANGE"
@@ -1965,14 +1965,14 @@
             "properties": {
                 "meaning": {
                     "name": "meaning",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_TEXT",
                     "is_mandatory": true,
                     "documentation": "Term whose value indicates the meaning of this range, e.g.  normal,  critical,  therapeutic  etc."
                 },
                 "range": {
                     "name": "range",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_INTERVAL",
                     "is_mandatory": true,
                     "documentation": "The data range for this meaning, e.g. critical  etc."
@@ -1989,13 +1989,13 @@
             "properties": {
                 "magnitude_status": {
                     "name": "magnitude_status",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Optional status of magnitude with values: \n\n* `\"=\"`   :   magnitude is a point value \n* `\"<\"`   :   value is < magnitude \n* `\">\"`   :   value is > magnitude \n* `\"<=\"` : value is <= magnitude \n* `\">=\"` : value is >= magnitude \n* `\"~\"`   :   value is approximately magnitude \n\nIf not present, assumed meaning is  `\"=\"` . \n"
                 },
                 "accuracy": {
                     "name": "accuracy",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Any",
                     "documentation": "Accuracy of measurement. Exact form of expression determined in descendants."
                 }
@@ -2011,34 +2011,34 @@
             "properties": {
                 "numerator": {
                     "name": "numerator",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Real",
                     "is_mandatory": true,
                     "documentation": "Numerator of ratio"
                 },
                 "denominator": {
                     "name": "denominator",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Real",
                     "is_mandatory": true,
                     "documentation": "Denominator of ratio."
                 },
                 "type": {
                     "name": "type",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Indicates semantic type of proportion, including percent, unitary etc."
                 },
                 "precision": {
                     "name": "precision",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "documentation": "Precision  to  which  the  `_numerator_` and `_denominator_` values of  the  proportion are expressed, in terms of number  of decimal places. The value 0 implies an integral quantity. The value -1 implies no limit, i.e. any number of decimal places. "
                 },
                 "normal_range": {
                     "name": "normal_range",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "DV_INTERVAL",
                         "generic_parameters": [
@@ -2049,7 +2049,7 @@
                 },
                 "other_reference_ranges": {
                     "name": "other_reference_ranges",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "REFERENCE_RANGE",
                         "generic_parameters": [
@@ -2066,35 +2066,35 @@
             "properties": {
                 "pk_ratio": {
                     "name": "pk_ratio",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Ratio type. Numerator and denominator may be any value.\n"
                 },
                 "pk_unitary": {
                     "name": "pk_unitary",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Denominator must be 1."
                 },
                 "pk_percent": {
                     "name": "pk_percent",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Denominator is 100, numerator is understood as a percentage value."
                 },
                 "pk_fraction": {
                     "name": "pk_fraction",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Numerator and denominator are integral, and the presentation method uses a slash, e.g.  1\/2 . \n"
                 },
                 "pk_integer_fraction": {
                     "name": "pk_integer_fraction",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Numerator and denominator are integral, and the presentation method uses a slash, e.g.  1\/2 ; if the numerator is greater than the denominator, e.g. n=3, d=2, the presentation is  1 1\/2 ."
@@ -2111,13 +2111,13 @@
             "properties": {
                 "accuracy_is_percent": {
                     "name": "accuracy_is_percent",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "documentation": "If `True`, indicates that when this object was created, `_accuracy_` was recorded as a percent value; if `False`, as an absolute quantity value."
                 },
                 "accuracy": {
                     "name": "accuracy",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Real",
                     "documentation": "Accuracy of measurement, expressed either as a half-range percent value (`_accuracy_is_percent_` = `True`) or a half-range quantity. A value of `0` means that accuracy is 100%, i.e. no error.\n\nA value of `_unknown_accuracy_value_` means that accuracy was not recorded."
                 }
@@ -2132,27 +2132,27 @@
             "properties": {
                 "magnitude": {
                     "name": "magnitude",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Real",
                     "is_mandatory": true,
                     "documentation": "Numeric magnitude of the quantity."
                 },
                 "precision": {
                     "name": "precision",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "documentation": "Precision to which the value of the quantity is expressed, in terms of number of decimal places. The value 0 implies an integral quantity.\nThe value -1 implies no limit, i.e. any number of decimal places."
                 },
                 "units": {
                     "name": "units",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Quantity units, expressed as a code or syntax string from either UCUM (the default) or the units system specified in `_units_system_`, when set.\n\nIn either case, the value is the code or syntax - normally formed of standard ASCII - which is in principal not the same as the display string, although in simple cases such as 'm' (for meters) it will be.\n\nIf the `_units_display_name_` field is set, this may be used for display. If not, the implementations must effect the resolution of the `_units_` value to a display form locally, e.g. by lookup of reference tables, request to a terminology service etc.\n\nExample values from UCUM: \"kg\/m^2\", \u201cmm[Hg]\", \"ms-1\", \"km\/h\"."
                 },
                 "normal_range": {
                     "name": "normal_range",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "DV_INTERVAL",
                         "generic_parameters": [
@@ -2163,7 +2163,7 @@
                 },
                 "other_reference_ranges": {
                     "name": "other_reference_ranges",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "REFERENCE_RANGE",
                         "generic_parameters": [
@@ -2174,13 +2174,13 @@
                 },
                 "units_system": {
                     "name": "units_system",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Optional field used to specify a units system from which codes in `_units_` are defined. Value is a URI identifying a terminology containing units concepts from the  (https:\/\/www.hl7.org\/fhir\/terminologies-systems.html[HL7 FHIR terminologies list]).\n\nIf not set, the UCUM standard (case-sensitive codes) is assumed as the units system."
                 },
                 "units_display_name": {
                     "name": "units_display_name",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Optional field containing the displayable form of the `_units_` field, e.g. `'\u00b0C'`.\n\nIf not set, the application environment needs to determine the displayable form.\n\nNOTE: The display name may be language-dependent for various older and non-systematic units. For this reason, it is not recommended to add unit display names to archetypes, only to templates (for localisation purposes)."
                 }
@@ -2195,14 +2195,14 @@
             "properties": {
                 "magnitude": {
                     "name": "magnitude",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer64",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "normal_range": {
                     "name": "normal_range",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "DV_INTERVAL",
                         "generic_parameters": [
@@ -2213,7 +2213,7 @@
                 },
                 "other_reference_ranges": {
                     "name": "other_reference_ranges",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "REFERENCE_RANGE",
                         "generic_parameters": [
@@ -2234,7 +2234,7 @@
             "properties": {
                 "accuracy": {
                     "name": "accuracy",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_AMOUNT",
                     "documentation": ""
                 }
@@ -2249,14 +2249,14 @@
             "properties": {
                 "symbol": {
                     "name": "symbol",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_CODED_TEXT",
                     "is_mandatory": true,
                     "documentation": "Coded textual representation of this value in the enumeration, which may be strings made from  +  symbols, or other enumerations of terms such as  `mild`, `moderate`, `severe`, or even the same number series as the values, e.g. 1, 2, 3."
                 },
                 "value": {
                     "name": "value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Value in ordered enumeration of values. Any integer value can be used. \n"
@@ -2272,14 +2272,14 @@
             "properties": {
                 "symbol": {
                     "name": "symbol",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_CODED_TEXT",
                     "is_mandatory": true,
                     "documentation": "Coded textual representation of this value in the scale range, which may be strings made from symbols or other enumerations of terms such as  `no breathlessness`, `very very slight`, `slight breathlessness`. Codes come from archetypes.\n\nIn some cases, a scale may include values that have no code\/symbol. In this case, the symbol will be a `DV-CODED_TEXT` including the `_terminology_id_` and a blank String value for `_code_string_`."
                 },
                 "value": {
                     "name": "value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Real",
                     "is_mandatory": true,
                     "documentation": "Real number value of Scale item.\n"
@@ -2296,7 +2296,7 @@
             "properties": {
                 "value": {
                     "name": "value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "ISO8601 duration string, including described deviations to support negative values and weeks."
@@ -2313,7 +2313,7 @@
             "properties": {
                 "accuracy": {
                     "name": "accuracy",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_DURATION",
                     "documentation": "Time accuracy, expressed as a duration."
                 }
@@ -2329,7 +2329,7 @@
             "properties": {
                 "value": {
                     "name": "value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "ISO8601 date string."
@@ -2346,7 +2346,7 @@
             "properties": {
                 "value": {
                     "name": "value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "ISO8601 time string"
@@ -2363,7 +2363,7 @@
             "properties": {
                 "value": {
                     "name": "value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "ISO8601 date\/time string."
@@ -2380,7 +2380,7 @@
             "properties": {
                 "value": {
                     "name": "value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_PARSABLE",
                     "is_mandatory": true,
                     "documentation": "The specification, in the HL7v3 syntax for `PIVL` or `EIVL` types."
@@ -2410,7 +2410,7 @@
             "properties": {
                 "value": {
                     "name": "value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Value of URI as a String. 'Plain-text' URIs are allowed, enabling better readability, but must be RFC-3986 encoded in use."
@@ -2443,105 +2443,105 @@
             "properties": {
                 "Terminology_id_openehr": {
                     "name": "Terminology_id_openehr",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Name of openEHR's own terminology."
                 },
                 "Group_id_audit_change_type": {
                     "name": "Group_id_audit_change_type",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Group_id_attestation_reason": {
                     "name": "Group_id_attestation_reason",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Group_id_composition_category": {
                     "name": "Group_id_composition_category",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Group_id_event_math_function": {
                     "name": "Group_id_event_math_function",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Group_id_instruction_states": {
                     "name": "Group_id_instruction_states",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Group_id_instruction_transitions": {
                     "name": "Group_id_instruction_transitions",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Group_id_null_flavours": {
                     "name": "Group_id_null_flavours",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Group_id_property": {
                     "name": "Group_id_property",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Group_id_participation_function": {
                     "name": "Group_id_participation_function",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Group_id_participation_mode": {
                     "name": "Group_id_participation_mode",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Group_id_setting": {
                     "name": "Group_id_setting",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Group_id_term_mapping_purpose": {
                     "name": "Group_id_term_mapping_purpose",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Group_id_subject_relationship": {
                     "name": "Group_id_subject_relationship",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Group_id_version_life_cycle_state": {
                     "name": "Group_id_version_life_cycle_state",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
@@ -2554,49 +2554,49 @@
             "properties": {
                 "Code_set_id_character_sets": {
                     "name": "Code_set_id_character_sets",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Code_set_id_compression_algorithms": {
                     "name": "Code_set_id_compression_algorithms",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Code_set_id_countries": {
                     "name": "Code_set_id_countries",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Code_set_integrity_check_algorithms": {
                     "name": "Code_set_integrity_check_algorithms",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Code_set_id_languages": {
                     "name": "Code_set_id_languages",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Code_set_id_media_types": {
                     "name": "Code_set_id_media_types",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Code_set_id_normal_statuses": {
                     "name": "Code_set_id_normal_statuses",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
@@ -2630,21 +2630,21 @@
             "properties": {
                 "system_id": {
                     "name": "system_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "HIER_OBJECT_ID",
                     "is_mandatory": true,
                     "documentation": "The identifier of the logical EHR management system in which this EHR was created. \n"
                 },
                 "ehr_id": {
                     "name": "ehr_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "HIER_OBJECT_ID",
                     "is_mandatory": true,
                     "documentation": "The unique identifier of this EHR.\n\nNOTE: is is strongly recommended that a UUID always be used for this field."
                 },
                 "contributions": {
                     "name": "contributions",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "OBJECT_REF"
@@ -2654,21 +2654,21 @@
                 },
                 "ehr_status": {
                     "name": "ehr_status",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "OBJECT_REF",
                     "is_mandatory": true,
                     "documentation": "Reference to `EHR_STATUS` object for this EHR."
                 },
                 "ehr_access": {
                     "name": "ehr_access",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "OBJECT_REF",
                     "is_mandatory": true,
                     "documentation": "Reference to `EHR_ACCESS` object for this EHR."
                 },
                 "compositions": {
                     "name": "compositions",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "OBJECT_REF"
@@ -2678,20 +2678,20 @@
                 },
                 "directory": {
                     "name": "directory",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "OBJECT_REF",
                     "documentation": "Optional directory structure for this EHR. If present, this is a reference to the first member of `_folders_`."
                 },
                 "time_created": {
                     "name": "time_created",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_DATE_TIME",
                     "is_mandatory": true,
                     "documentation": "Time of creation of the EHR."
                 },
                 "folders": {
                     "name": "folders",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "OBJECT_REF"
@@ -2731,7 +2731,7 @@
             "properties": {
                 "settings": {
                     "name": "settings",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ACCESS_CONTROL_SETTINGS",
                     "documentation": "Access control settings for the EHR. Instance is a subtype of the type `ACCESS_CONTROL_SETTINGS`, allowing for the use of different access control schemes. "
                 }
@@ -2746,28 +2746,28 @@
             "properties": {
                 "subject": {
                     "name": "subject",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "PARTY_SELF",
                     "is_mandatory": true,
                     "documentation": "The subject of this EHR. The `_external_ref_` attribute can be used to contain a direct reference to the subject in a demographic or identity service. Alternatively, the association between patients and their records may be done elsewhere for security reasons. "
                 },
                 "is_queryable": {
                     "name": "is_queryable",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "True if this EHR should be included in population queries, i.e. if this EHR is considered active in the population."
                 },
                 "is_modifiable": {
                     "name": "is_modifiable",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "True if the EHR, other than the `EHR_STATUS` object, is allowed to be written to. The `EHR_STATUS` object itself can always be written to."
                 },
                 "other_details": {
                     "name": "other_details",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ITEM_STRUCTURE",
                     "documentation": "Any other details of the EHR summary object, in the form of an archetyped `ITEM_STRUCTURE`."
                 }
@@ -2782,7 +2782,7 @@
             "properties": {
                 "chapters": {
                     "name": "chapters",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "EXTRACT_CHAPTER"
@@ -2792,40 +2792,40 @@
                 },
                 "specification": {
                     "name": "specification",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "EXTRACT_SPEC",
                     "documentation": "The specification that this Extract actually conforms to; might not be identical with the specification of the corresponding request."
                 },
                 "request_id": {
                     "name": "request_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "HIER_OBJECT_ID",
                     "documentation": "Reference to causing Request, if any."
                 },
                 "time_created": {
                     "name": "time_created",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_DATE_TIME",
                     "is_mandatory": true,
                     "documentation": "Creation time of this Extract"
                 },
                 "system_id": {
                     "name": "system_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "HIER_OBJECT_ID",
                     "is_mandatory": true,
                     "documentation": "Identifier of creating system."
                 },
                 "sequence_nr": {
                     "name": "sequence_nr",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Number of this Extract response in sequence of responses to Extract request identified by `_request_id_`. If this is the sole response, or there was no request, value is 1."
                 },
                 "participations": {
                     "name": "participations",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "EXTRACT_PARTICIPATION"
@@ -2844,21 +2844,21 @@
             "properties": {
                 "request_id": {
                     "name": "request_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "OBJECT_REF",
                     "is_mandatory": true,
                     "documentation": "Identifier of previous `EXTRACT_REQUEST`."
                 },
                 "uid": {
                     "name": "uid",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "HIER_OBJECT_ID",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "action": {
                     "name": "action",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_CODED_TEXT",
                     "is_mandatory": true,
                     "documentation": "Requested action: `cancel | resend | send new`. Coded by openEHR Terminology group `'extract action type'`."
@@ -2874,7 +2874,7 @@
             "properties": {
                 "items": {
                     "name": "items",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "EXTRACT_ITEM"
@@ -2894,26 +2894,26 @@
             "properties": {
                 "is_primary": {
                     "name": "is_primary",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "True if the content item carried in this container was part of the primary set for the Extract, i.e. not added due to link-following."
                 },
                 "is_changed": {
                     "name": "is_changed",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "documentation": "True if the content item carried in this container is any kind of change since last send, in repeat sending situations."
                 },
                 "is_masked": {
                     "name": "is_masked",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "documentation": "True if the content of this item has not been included due to insufficient access rights of requestor."
                 },
                 "item": {
                     "name": "item",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Any",
                     "documentation": "Content object."
                 }
@@ -2928,7 +2928,7 @@
             "properties": {
                 "extract_id_key": {
                     "name": "extract_id_key",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Reference to entity, usually a demographic entity such as a patient that the content of this chapter relates to."
@@ -2941,26 +2941,26 @@
             "properties": {
                 "extract_id_key": {
                     "name": "extract_id_key",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Identifier by which this entity is known in the Extract. May be one of the other identifiers, e.g. ehr_id or subject_id, or it may be something else, including a simple integer."
                 },
                 "ehr_id": {
                     "name": "ehr_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "EHR \/ EMR identifier for the entity at the target system."
                 },
                 "subject_id": {
                     "name": "subject_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Subject (i.e. patient or similar) identifier for the entity at the target system."
                 },
                 "other_ids": {
                     "name": "other_ids",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "String"
@@ -2970,7 +2970,7 @@
                 },
                 "item_list": {
                     "name": "item_list",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "OBJECT_REF"
@@ -2986,13 +2986,13 @@
             "properties": {
                 "request_id": {
                     "name": "request_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "OBJECT_REF",
                     "documentation": ""
                 },
                 "reason": {
                     "name": "reason",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_TEXT",
                     "is_mandatory": true,
                     "documentation": ""
@@ -3008,7 +3008,7 @@
             "properties": {
                 "items": {
                     "name": "items",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "EXTRACT_ITEM"
@@ -3032,7 +3032,7 @@
             "properties": {
                 "entities": {
                     "name": "entities",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "EXTRACT_ENTITY_MANIFEST"
@@ -3049,7 +3049,7 @@
             "properties": {
                 "time": {
                     "name": "time",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "DV_INTERVAL",
                         "generic_parameters": [
@@ -3060,20 +3060,20 @@
                 },
                 "function": {
                     "name": "function",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_TEXT",
                     "is_mandatory": true,
                     "documentation": "The function of the Party in this participation (note that a given party might participate in more than one way in a particular activity). This attribute should be coded, but cannot be limited to the HL7v3:ParticipationFunction vocabulary, since it is too limited and hospital-oriented. "
                 },
                 "mode": {
                     "name": "mode",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_CODED_TEXT",
                     "documentation": "The mode of the performer \/ activity interaction, e.g. present, by telephone, by email etc. "
                 },
                 "performer": {
                     "name": "performer",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Uid of demographic entity within Extract who performed this participation."
@@ -3089,20 +3089,20 @@
             "properties": {
                 "extract_spec": {
                     "name": "extract_spec",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "EXTRACT_SPEC",
                     "is_mandatory": true,
                     "documentation": "Specification details of the request."
                 },
                 "update_spec": {
                     "name": "update_spec",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "EXTRACT_UPDATE_SPEC",
                     "documentation": "Update details of the request."
                 },
                 "uid": {
                     "name": "uid",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "HIER_OBJECT_ID",
                     "is_mandatory": true,
                     "documentation": "Identifier of this Request, generated by requestor."
@@ -3115,48 +3115,48 @@
             "properties": {
                 "version_spec": {
                     "name": "version_spec",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "EXTRACT_VERSION_SPEC",
                     "documentation": "Specification of which versions of information items to include in the Extract. If Void, the default is latest versions only (which is reasonable for non-versioning systems as well)."
                 },
                 "manifest": {
                     "name": "manifest",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "EXTRACT_MANIFEST",
                     "is_mandatory": true,
                     "documentation": "Specification of entities (e.g. records) to include in the Extract."
                 },
                 "extract_type": {
                     "name": "extract_type",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_CODED_TEXT",
                     "is_mandatory": true,
                     "documentation": "Coded term indicating the type of content required, e.g.\n\n* `|openehr-ehr|`\n* `|openehr-demographic|`\n* `|generic-emr|`\n* `|other|`\n\nCoded by openEHR Terminology group `'extract content type'`."
                 },
                 "include_multimedia": {
                     "name": "include_multimedia",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "Indicates whether in-line instances of `DV_MULTIMEDIA` in the source data are included or not."
                 },
                 "priority": {
                     "name": "priority",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Requested priority of this request to be handled by server. Priority schemes are likely to be local, and use values agreed by both ends.\n\nTBD: alternative is standard coded terms"
                 },
                 "link_depth": {
                     "name": "link_depth",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Degree of links to follow emanating from content items specified for inclusion. The kind of links to follow is dependent on the type of Extract.\n\nAll items at the target end of followed links at the given depth are also included in the extract; `EXTRACT_CONTENT_ITEM._is_primary_` is used to differentiate.\n\n* 0 = don't follow;\n* 1 = follow first degree links;\n* 2 = follow 2nd degree links;\n* ....\n* n = follow nth degree links\n"
                 },
                 "criteria": {
                     "name": "criteria",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "DV_PARSABLE"
@@ -3166,7 +3166,7 @@
                 },
                 "other_details": {
                     "name": "other_details",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ITEM_STRUCTURE",
                     "documentation": "Other specification items. Archetypable."
                 }
@@ -3178,20 +3178,20 @@
             "properties": {
                 "persist_in_server": {
                     "name": "persist_in_server",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "If True, this Request is persisted in the server until further notice."
                 },
                 "repeat_period": {
                     "name": "repeat_period",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_DURATION",
                     "documentation": "Period for resending update Extracts in response to original Request."
                 },
                 "trigger_events": {
                     "name": "trigger_events",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "DV_CODED_TEXT"
@@ -3201,7 +3201,7 @@
                 },
                 "update_method": {
                     "name": "update_method",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "CODE_PHRASE",
                     "is_mandatory": true,
                     "documentation": "Indicate mode of update. Can be: send only items that are changed (including logical deletions) or new since last send. For `_persist_in_server_` Requests only."
@@ -3214,14 +3214,14 @@
             "properties": {
                 "include_all_versions": {
                     "name": "include_all_versions",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "True if all versions of each item in the Extract are included."
                 },
                 "commit_time_interval": {
                     "name": "commit_time_interval",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "DV_INTERVAL",
                         "generic_parameters": [
@@ -3232,14 +3232,14 @@
                 },
                 "include_revision_history": {
                     "name": "include_revision_history",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "True if revision histories of the items in the Extract are included. If included, it is always the full revision history."
                 },
                 "include_data": {
                     "name": "include_data",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "`True` if the data of items matched by the content spec should be included. This is the default. If `False`, only revision history is included in serialised versions. Turning this option on in openEHR systems causes `X_VERSIONED_OBJECTs` to have `_revision_history_` set, but versions Void. Useful for interrogating a server without having to look at any content data. In other systems it may or may not have a sensible meaning."
@@ -3255,7 +3255,7 @@
             "properties": {
                 "item": {
                     "name": "item",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "X_VERSIONED_OBJECT",
                     "documentation": "Content object."
                 }
@@ -3272,48 +3272,48 @@
             "properties": {
                 "uid": {
                     "name": "uid",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "HIER_OBJECT_ID",
                     "is_mandatory": true,
                     "documentation": "Uid of original `VERSIONED_OBJECT`."
                 },
                 "owner_id": {
                     "name": "owner_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "OBJECT_REF",
                     "is_mandatory": true,
                     "documentation": "Owner_id from original `VERSIONED_OBJECT`, which identifies source EHR."
                 },
                 "time_created": {
                     "name": "time_created",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_DATE_TIME",
                     "is_mandatory": true,
                     "documentation": "Creation time of original `VERSIONED_OBJECT`."
                 },
                 "total_version_count": {
                     "name": "total_version_count",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Total number of versions in original `VERSIONED_OBJECT` at time of creation of this `X_VERSIONED_OBJECT`."
                 },
                 "extract_version_count": {
                     "name": "extract_version_count",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "The number of Versions in this extract for this Versioned object, i.e. the count of items in the versions attribute. May be 0 if only revision history is requested."
                 },
                 "revision_history": {
                     "name": "revision_history",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "REVISION_HISTORY",
                     "documentation": "Optional revision history of the original `VERSIONED_OBJECT`. If included, it is the complete revision history."
                 },
                 "versions": {
                     "name": "versions",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "ORIGINAL_VERSION"
@@ -3367,67 +3367,67 @@
             "properties": {
                 "item_type": {
                     "name": "item_type",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_CODED_TEXT",
                     "documentation": "Identifier of model or schema used to create the content."
                 },
                 "item_type_version": {
                     "name": "item_type_version",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Version of model or schema used to create the content item."
                 },
                 "author": {
                     "name": "author",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Reference to a demographic entity elsewhere in this Extract representing the author of the item version. The reference should be a UID corresponding to the UID of a `GENERIC_CONTENT_ITEM` containing the demographic information."
                 },
                 "creation_time": {
                     "name": "creation_time",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Iso8601_date_time",
                     "documentation": "Time of creation of this item version on the original system. This may be an earlier commit time, or it may be the time at which the item was created during the Extract generation process."
                 },
                 "authoriser": {
                     "name": "authoriser",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Reference to a demographic entity elsewhere in this Extract representing an authoriser of the item version, if relevant. The reference should be a UID corresponding to the UID of a `GENERIC_CONTENT_ITEM` containing the demographic information."
                 },
                 "authorisation_time": {
                     "name": "authorisation_time",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Iso8601_date_time",
                     "documentation": "Time of authorisation of this item version on the original system where relevant."
                 },
                 "item_status": {
                     "name": "item_status",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_CODED_TEXT",
                     "documentation": "Coded lifecycle status of the item."
                 },
                 "version_id": {
                     "name": "version_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Version id of this item in original system."
                 },
                 "version_set_id": {
                     "name": "version_set_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Version set id of this item in original system, where applicable."
                 },
                 "system_id": {
                     "name": "system_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Identifier of EMR or other system from which the item was created \/ extracted. Typically in the form of a domain name."
                 },
                 "other_details": {
                     "name": "other_details",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -3439,7 +3439,7 @@
                 },
                 "item": {
                     "name": "item",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "LOCATABLE",
                     "documentation": "Content object."
                 }
@@ -3454,7 +3454,7 @@
             "properties": {
                 "specification": {
                     "name": "specification",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "SYNC_EXTRACT_SPEC",
                     "is_mandatory": true,
                     "documentation": "Details of specification of synchronisation request."
@@ -3470,14 +3470,14 @@
             "properties": {
                 "specification": {
                     "name": "specification",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "SYNC_EXTRACT_SPEC",
                     "is_mandatory": true,
                     "documentation": "Details of specification of this Extract."
                 },
                 "items": {
                     "name": "items",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "X_CONTRIBUTION"
@@ -3493,21 +3493,21 @@
             "properties": {
                 "uid": {
                     "name": "uid",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "HIER_OBJECT_ID",
                     "is_mandatory": true,
                     "documentation": "Uid of Contribution in source system."
                 },
                 "audit": {
                     "name": "audit",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "AUDIT_DETAILS",
                     "is_mandatory": true,
                     "documentation": "Audit of Contribution in source system."
                 },
                 "versions": {
                     "name": "versions",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "VERSION"
@@ -3523,14 +3523,14 @@
             "properties": {
                 "includes_versions": {
                     "name": "includes_versions",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "True if the Versions from the Contribution are included; False if just the Contribution and its Audit are included."
                 },
                 "contribution_list": {
                     "name": "contribution_list",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "HIER_OBJECT_ID"
@@ -3540,13 +3540,13 @@
                 },
                 "contributions_since": {
                     "name": "contributions_since",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_DATE_TIME",
                     "documentation": "Specify Contributions included in Extract by threshold date."
                 },
                 "all_contributions": {
                     "name": "all_contributions",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "documentation": "True if all Contributions in the record are included."
                 }
@@ -3558,28 +3558,28 @@
             "properties": {
                 "audit": {
                     "name": "audit",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "AUDIT_DETAILS",
                     "is_mandatory": true,
                     "documentation": "Details of who actually created the message and when. This is the person who entered the data or otherwise caused the message to be created, or might be a piece of software."
                 },
                 "author": {
                     "name": "author",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "PARTY_PROXY",
                     "is_mandatory": true,
                     "documentation": "Party responsible for the message content, who may or may not be technically responsible for its creation (e.g. by data entry etc)."
                 },
                 "content": {
                     "name": "content",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "MESSAGE_CONTENT",
                     "is_mandatory": true,
                     "documentation": "Content of the message."
                 },
                 "signature": {
                     "name": "signature",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Optional signature by the author of message content in openPGP format. The signature is created as a Hash and optional signing of the serialisation of this message object with this signature field Void."
                 }
@@ -3591,21 +3591,21 @@
             "properties": {
                 "sender": {
                     "name": "sender",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Party sending the message."
                 },
                 "sender_reference": {
                     "name": "sender_reference",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Identification of message used by sender. This will be the same no matter how many times this message is sent to these recipients."
                 },
                 "addressees": {
                     "name": "addressees",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "String"
@@ -3616,13 +3616,13 @@
                 },
                 "urgency": {
                     "name": "urgency",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "documentation": "Urgency with which destination should deal with message:\n\n* -1 - low\n* 0 - normal\n* 1 - high"
                 },
                 "message": {
                     "name": "message",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "MESSAGE",
                     "is_mandatory": true,
                     "documentation": "The content of the message."
@@ -3644,7 +3644,7 @@
             "properties": {
                 "identities": {
                     "name": "identities",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "PARTY_IDENTITY"
@@ -3655,7 +3655,7 @@
                 },
                 "contacts": {
                     "name": "contacts",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "CONTACT"
@@ -3665,13 +3665,13 @@
                 },
                 "details": {
                     "name": "details",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ITEM_STRUCTURE",
                     "documentation": "All other details for this Party."
                 },
                 "reverse_relationships": {
                     "name": "reverse_relationships",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "LOCATABLE_REF"
@@ -3681,7 +3681,7 @@
                 },
                 "relationships": {
                     "name": "relationships",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "PARTY_RELATIONSHIP"
@@ -3700,7 +3700,7 @@
             "properties": {
                 "addresses": {
                     "name": "addresses",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "ADDRESS"
@@ -3711,7 +3711,7 @@
                 },
                 "time_validity": {
                     "name": "time_validity",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "DV_INTERVAL",
                         "generic_parameters": [
@@ -3731,7 +3731,7 @@
             "properties": {
                 "details": {
                     "name": "details",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ITEM_STRUCTURE",
                     "is_mandatory": true,
                     "documentation": "Archetypable structured address."
@@ -3747,7 +3747,7 @@
             "properties": {
                 "details": {
                     "name": "details",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ITEM_STRUCTURE",
                     "is_mandatory": true,
                     "documentation": "The value of the identity. This will often taken the form of a parseable string or a small structure of strings."
@@ -3763,7 +3763,7 @@
             "properties": {
                 "time_validity": {
                     "name": "time_validity",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "DV_INTERVAL",
                         "generic_parameters": [
@@ -3774,14 +3774,14 @@
                 },
                 "performer": {
                     "name": "performer",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "PARTY_REF",
                     "is_mandatory": true,
                     "documentation": "Reference to Version container of Actor playing the role."
                 },
                 "capabilities": {
                     "name": "capabilities",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "CAPABILITY"
@@ -3801,7 +3801,7 @@
             "properties": {
                 "languages": {
                     "name": "languages",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "DV_TEXT"
@@ -3811,7 +3811,7 @@
                 },
                 "roles": {
                     "name": "roles",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "PARTY_REF"
@@ -3830,14 +3830,14 @@
             "properties": {
                 "credentials": {
                     "name": "credentials",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ITEM_STRUCTURE",
                     "is_mandatory": true,
                     "documentation": "The qualifications of the performer of the role for this capability. This might include professional qualifications and official identifications such as provider numbers etc."
                 },
                 "time_validity": {
                     "name": "time_validity",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "DV_INTERVAL",
                         "generic_parameters": [
@@ -3885,20 +3885,20 @@
             "properties": {
                 "details": {
                     "name": "details",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ITEM_STRUCTURE",
                     "documentation": "The detailed description of the relationship."
                 },
                 "target": {
                     "name": "target",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "PARTY_REF",
                     "is_mandatory": true,
                     "documentation": "Target of relationship."
                 },
                 "time_validity": {
                     "name": "time_validity",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "DV_INTERVAL",
                         "generic_parameters": [
@@ -3909,7 +3909,7 @@
                 },
                 "source": {
                     "name": "source",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "PARTY_REF",
                     "is_mandatory": true,
                     "documentation": "Source of relationship."
@@ -3932,7 +3932,7 @@
             "properties": {
                 "data": {
                     "name": "data",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ITEM_TREE",
                     "is_mandatory": true,
                     "documentation": "The \u2018data\u2019 from the source message or record."
@@ -3948,41 +3948,41 @@
             "properties": {
                 "language": {
                     "name": "language",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "CODE_PHRASE",
                     "is_mandatory": true,
                     "documentation": "Mandatory indicator of the localised language in which this Composition is written. Coded from openEHR Code Set  `languages`. The language of an Entry if different from the Composition is indicated in `ENTRY._language_`. "
                 },
                 "territory": {
                     "name": "territory",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "CODE_PHRASE",
                     "is_mandatory": true,
                     "documentation": "Name of territory in which this Composition was written. Coded from openEHR  countries  code set, which is an expression of the ISO 3166 standard."
                 },
                 "category": {
                     "name": "category",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_CODED_TEXT",
                     "is_mandatory": true,
                     "documentation": "Temporal category of this Composition, i.e. \n\n* `431|persistent|` - of potential life-time validity;\n* `451|episodic|` - valid over the life of a care episode;\n* `433|event|` - valid at the time of recording (long-term validity requires subsequent clinical assessment).\n\nor any other code defined in the openEHR terminology group 'category'.\n"
                 },
                 "context": {
                     "name": "context",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "EVENT_CONTEXT",
                     "documentation": "The clinical session context of this Composition, i.e. the contextual attributes of the clinical session. "
                 },
                 "composer": {
                     "name": "composer",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "PARTY_PROXY",
                     "is_mandatory": true,
                     "documentation": "The person primarily responsible for the content of the Composition (but not necessarily its committal into the EHR system). This is the identifier which should appear on the screen. It may or may not be the person who entered the data. When it is the patient, the special self  instance of `PARTY_PROXY` will be used."
                 },
                 "content": {
                     "name": "content",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "CONTENT_ITEM"
@@ -4001,45 +4001,45 @@
             "properties": {
                 "start_time": {
                     "name": "start_time",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_DATE_TIME",
                     "is_mandatory": true,
                     "documentation": "Start time of the clinical session or other kind of event during which a provider performs a service of any kind for the patient. "
                 },
                 "end_time": {
                     "name": "end_time",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_DATE_TIME",
                     "documentation": "Optional end time of the clinical session. \n"
                 },
                 "location": {
                     "name": "location",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "The actual location where the session occurred, e.g. 'microbiology lab 2', 'home', 'ward A3'  and so on."
                 },
                 "setting": {
                     "name": "setting",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_CODED_TEXT",
                     "is_mandatory": true,
                     "documentation": "The setting in which the clinical session took place. Coded using the openEHR Terminology,  setting  group. "
                 },
                 "other_context": {
                     "name": "other_context",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ITEM_STRUCTURE",
                     "documentation": "Other optional context which will be archetyped."
                 },
                 "health_care_facility": {
                     "name": "health_care_facility",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "PARTY_IDENTIFIED",
                     "documentation": "The health care facility under whose care the event took place. This is the most specific workgroup or delivery unit within a care delivery enterprise that has an official identifier in the health system, and can be used to ensure medico-legal accountability. "
                 },
                 "participations": {
                     "name": "participations",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "PARTICIPATION"
@@ -4066,7 +4066,7 @@
             "properties": {
                 "items": {
                     "name": "items",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "CONTENT_ITEM"
@@ -4085,7 +4085,7 @@
             "properties": {
                 "data": {
                     "name": "data",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ITEM_STRUCTURE",
                     "is_mandatory": true,
                     "documentation": "Content of the Admin Entry."
@@ -4102,13 +4102,13 @@
             "properties": {
                 "protocol": {
                     "name": "protocol",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ITEM_STRUCTURE",
                     "documentation": "Description of the method (i.e. how) the information in this entry was arrived at. For `OBSERVATIONs`, this is a description of the method or instrument used. For `EVALUATIONs`, how the evaluation was arrived at. For `INSTRUCTIONs`, how to execute the Instruction. This may take the form of references to guidelines, including manually followed and executable; knowledge references such as a paper in Medline; clinical reasons within a larger care process. "
                 },
                 "guideline_id": {
                     "name": "guideline_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "OBJECT_REF",
                     "documentation": "Optional external identifier of guideline creating this Entry if relevant."
                 }
@@ -4123,7 +4123,7 @@
             "properties": {
                 "data": {
                     "name": "data",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "HISTORY",
                         "generic_parameters": [
@@ -4135,7 +4135,7 @@
                 },
                 "state": {
                     "name": "state",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "HISTORY",
                         "generic_parameters": [
@@ -4155,7 +4155,7 @@
             "properties": {
                 "data": {
                     "name": "data",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ITEM_STRUCTURE",
                     "is_mandatory": true,
                     "documentation": "The data of this evaluation, in the form of a spatial data structure."
@@ -4171,27 +4171,27 @@
             "properties": {
                 "time": {
                     "name": "time",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_DATE_TIME",
                     "is_mandatory": true,
                     "documentation": "Point in time at which this action completed. "
                 },
                 "ism_transition": {
                     "name": "ism_transition",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ISM_TRANSITION",
                     "is_mandatory": true,
                     "documentation": "Details of transition in the Instruction state machine caused by this Action."
                 },
                 "instruction_details": {
                     "name": "instruction_details",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "INSTRUCTION_DETAILS",
                     "documentation": "Details of the Instruction that caused this Action to be performed, if there was one."
                 },
                 "description": {
                     "name": "description",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ITEM_STRUCTURE",
                     "is_mandatory": true,
                     "documentation": "Description of the action that has been performed, in the form of an archetyped structure."
@@ -4207,20 +4207,20 @@
             "properties": {
                 "timing": {
                     "name": "timing",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_PARSABLE",
                     "documentation": "Timing of the activity, in the form of a parsable string. If used, the preferred syntax is ISO8601 'R' format, but other formats may be used including HL7 GTS.\n\nMay be omitted if:\n\n* timing is represented structurally in the `_description_` attribute (e.g. via archetyped elements), or\n* unavailable, e.g. imported legacy data; in such cases, the `INSTRUCTION._narrative_` should carry text that indicates the timing of its `_activities_`."
                 },
                 "action_archetype_id": {
                     "name": "action_archetype_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Perl-compliant regular expression pattern, enclosed in  '\/\/' delimiters, indicating the valid identifiers of archetypes for Actions corresponding to this Activity specification. \n\nDefaults to  `\/.*\/`, meaning any archetype."
                 },
                 "description": {
                     "name": "description",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ITEM_STRUCTURE",
                     "is_mandatory": true,
                     "documentation": "Description of the activity, in the form of an archetyped structure."
@@ -4236,26 +4236,26 @@
             "properties": {
                 "current_state": {
                     "name": "current_state",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_CODED_TEXT",
                     "is_mandatory": true,
                     "documentation": "The ISM current state. Coded by openEHR terminology group Instruction states."
                 },
                 "transition": {
                     "name": "transition",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_CODED_TEXT",
                     "documentation": "The ISM transition which occurred to arrive in the current_state. Coded by openEHR terminology group  Instruction transitions."
                 },
                 "careflow_step": {
                     "name": "careflow_step",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_CODED_TEXT",
                     "documentation": "The step in the careflow process which occurred as part of generating this action, e.g.  dispense ,  start_administration. This attribute represents the clinical  label for the activity, as  opposed to current_state which represents  the state machine (ISM)  computable form. Defined in archetype."
                 },
                 "reason": {
                     "name": "reason",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "DV_TEXT"
@@ -4274,21 +4274,21 @@
             "properties": {
                 "instruction_id": {
                     "name": "instruction_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "LOCATABLE_REF",
                     "is_mandatory": true,
                     "documentation": "Reference to causing Instruction."
                 },
                 "activity_id": {
                     "name": "activity_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Identifier of Activity within Instruction, in the form of its archetype path. "
                 },
                 "wf_details": {
                     "name": "wf_details",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ITEM_STRUCTURE",
                     "documentation": "Various workflow engine state details, potentially including such things as:\n\n* condition that fired to cause this Action to be done (with actual variables substituted); \n* list of notifications which actually occurred (with all variables substituted); \n* other workflow engine state. \n\nThis specification does not currently define the actual structure or semantics of this field. \n"
                 }
@@ -4304,21 +4304,21 @@
             "properties": {
                 "language": {
                     "name": "language",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "CODE_PHRASE",
                     "is_mandatory": true,
                     "documentation": "Mandatory indicator of the localised language in which this Entry is written. Coded from openEHR Code Set  languages . "
                 },
                 "encoding": {
                     "name": "encoding",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "CODE_PHRASE",
                     "is_mandatory": true,
                     "documentation": "Name of character set in which text values in this Entry are encoded. Coded from openEHR Code Set  character sets."
                 },
                 "other_participations": {
                     "name": "other_participations",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "PARTICIPATION"
@@ -4328,20 +4328,20 @@
                 },
                 "workflow_id": {
                     "name": "workflow_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "OBJECT_REF",
                     "documentation": "Identifier of externally held workflow engine data for this workflow execution, for this subject of care."
                 },
                 "subject": {
                     "name": "subject",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "PARTY_PROXY",
                     "is_mandatory": true,
                     "documentation": "Id of human subject of this `ENTRY`, e.g.: \n\n* organ donor \n* foetus \n* a family member \n* another clinically relevant person."
                 },
                 "provider": {
                     "name": "provider",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "PARTY_PROXY",
                     "documentation": "Optional identification of provider of the information in this `ENTRY`, which might be: \n\n* the patient \n* a patient agent, e.g. parent, guardian \n* the clinician \n* a device or software \n\nGenerally only used when the recorder needs to make it explicit. Otherwise, Composition composer and other participants are assumed. \n"
                 }
@@ -4356,26 +4356,26 @@
             "properties": {
                 "narrative": {
                     "name": "narrative",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_TEXT",
                     "is_mandatory": true,
                     "documentation": "Mandatory human-readable version of what the Instruction is about. "
                 },
                 "expiry_time": {
                     "name": "expiry_time",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_DATE_TIME",
                     "documentation": "Optional expiry date\/time to assist determination of when an Instruction can be assumed to have expired. This helps prevent false listing of Instructions as Active when they clearly must have been terminated in some way or other. "
                 },
                 "wf_definition": {
                     "name": "wf_definition",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_PARSABLE",
                     "documentation": "Optional workflow engine executable expression of the Instruction. "
                 },
                 "activities": {
                     "name": "activities",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "ACTIVITY"
@@ -4402,7 +4402,7 @@
             "properties": {
                 "items": {
                     "name": "items",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "VIEW_ITEM"
@@ -4427,27 +4427,27 @@
             "properties": {
                 "source_type": {
                     "name": "source_type",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": ""
                 },
                 "source_ref": {
                     "name": "source_ref",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "LOCATABLE_REF",
                     "is_mandatory": true,
                     "documentation": "Reference to original object."
                 },
                 "source_parent_ref": {
                     "name": "source_parent_ref",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "LOCATABLE_REF",
                     "is_mandatory": true,
                     "documentation": "Reference to target's owning object."
                 },
                 "resolved": {
                     "name": "resolved",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY_OPEN",
+                    "_type": "P_BMM_SINGLE_PROPERTY_OPEN",
                     "type": "L",
                     "is_mandatory": true,
                     "documentation": "Resolved form."
@@ -4464,7 +4464,7 @@
             "properties": {
                 "meta_data": {
                     "name": "meta_data",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "CLUSTER",
                     "documentation": ""
                 }
@@ -4472,7 +4472,7 @@
         },
         "VIEW_STATUS": {
             "name": "VIEW_STATUS",
-            "p_bmm_type": "P_BMM_ENUMERATION_STRING",
+            "_type": "P_BMM_ENUMERATION_STRING",
             "ancestors": [
                 "String"
             ],
@@ -4491,19 +4491,19 @@
             "properties": {
                 "identifier": {
                     "name": "identifier",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "GENERIC_ID",
                     "documentation": ""
                 },
                 "start_time": {
                     "name": "start_time",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Iso8601_date_time",
                     "documentation": ""
                 },
                 "duration": {
                     "name": "duration",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Iso8601_duration",
                     "documentation": ""
                 }
@@ -4516,7 +4516,7 @@
             "properties": {
                 "cost_data": {
                     "name": "cost_data",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "ITEM_STRUCTURE",
                     "documentation": ""
                 }
@@ -4531,7 +4531,7 @@
             "properties": {
                 "amount": {
                     "name": "amount",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DATA_VALUE",
                     "documentation": ""
                 }
@@ -4543,34 +4543,34 @@
             "properties": {
                 "prospective": {
                     "name": "prospective",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "RESOURCE_USE",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "actual": {
                     "name": "actual",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "RESOURCE_USE",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "type": {
                     "name": "type",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "DV_TEXT",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "description": {
                     "name": "description",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": ""
                 },
                 "reference": {
                     "name": "reference",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Any",
                     "documentation": ""
                 }

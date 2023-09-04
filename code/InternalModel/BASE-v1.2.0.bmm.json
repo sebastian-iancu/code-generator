@@ -103,7 +103,7 @@
             ]
         }
     },
-    "primitives": {
+    "primitive_types": {
         "Any": {
             "name": "Any",
             "is_abstract": true,
@@ -210,7 +210,7 @@
             "properties": {
                 "value": {
                     "name": "value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Representation of all descendants is a single String."
@@ -241,14 +241,14 @@
             "properties": {
                 "Multiplicity_range_marker": {
                     "name": "Multiplicity_range_marker",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Marker to use in string form of interval between limits."
                 },
                 "Multiplicity_unbounded_marker": {
                     "name": "Multiplicity_unbounded_marker",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Character",
                     "is_mandatory": true,
                     "documentation": "Symbol to use to indicate upper limit unbounded."
@@ -271,40 +271,40 @@
             "properties": {
                 "lower": {
                     "name": "lower",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY_OPEN",
+                    "_type": "P_BMM_SINGLE_PROPERTY_OPEN",
                     "type": "T",
                     "documentation": "Lower bound."
                 },
                 "upper": {
                     "name": "upper",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY_OPEN",
+                    "_type": "P_BMM_SINGLE_PROPERTY_OPEN",
                     "type": "T",
                     "documentation": "Upper bound."
                 },
                 "lower_unbounded": {
                     "name": "lower_unbounded",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "`lower` boundary open (i.e. = -infinity)."
                 },
                 "upper_unbounded": {
                     "name": "upper_unbounded",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "`upper` boundary open (i.e. = +infinity)."
                 },
                 "lower_included": {
                     "name": "lower_included",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "`lower` boundary value included in range if not `lower_unbounded`."
                 },
                 "upper_included": {
                     "name": "upper_included",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "`upper` boundary value included in range if not `upper_unbounded`."
@@ -317,21 +317,21 @@
             "properties": {
                 "interval": {
                     "name": "interval",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Multiplicity_interval",
                     "is_mandatory": true,
                     "documentation": "The interval of this cardinality. "
                 },
                 "is_ordered": {
                     "name": "is_ordered",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "True if the members of the container attribute to which this cardinality refers are ordered. "
                 },
                 "is_unique": {
                     "name": "is_unique",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "True if the members of the container attribute to which this cardinality refers are unique."
@@ -347,27 +347,27 @@
             "properties": {
                 "terminology_id": {
                     "name": "terminology_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "The archetype environment namespace identifier used to identify a terminology. Typically a value like `\"snomed_ct\"` that is mapped elsewhere to the full URI identifying the terminology."
                 },
                 "terminology_version": {
                     "name": "terminology_version",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Optional string value representing terminology version, typically a date or dotted numeric."
                 },
                 "code_string": {
                     "name": "code_string",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "A terminology code or post-coordinated code expression, if supported by the terminology. The code may refer to a single term, a value set consisting of multiple terms, or some other entity representable within the terminology."
                 },
                 "uri": {
                     "name": "uri",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Uri",
                     "documentation": "The URI reference that may be used as a concrete key into a notional terminology service for queries that can obtain the term text, definition, and other associated elements."
                 }
@@ -382,14 +382,14 @@
             "properties": {
                 "concept": {
                     "name": "concept",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Terminology_code",
                     "is_mandatory": true,
                     "documentation": "Reference to the terminology concept formally representing this term."
                 },
                 "text": {
                     "name": "text",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Text of term."
@@ -414,7 +414,7 @@
             "properties": {
                 "scheme": {
                     "name": "scheme",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Name of the scheme to which this identifier conforms. Ideally this name will be recognisable globally but realistically it may be a local ad hoc scheme whose name is not controlled or standardised in any way. "
@@ -437,13 +437,13 @@
             "properties": {
                 "path": {
                     "name": "path",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "The path to an instance in question, as an absolute path with respect to the object found at `VERSION._data_`. An empty path means that the object referred to by id being specified. "
                 },
                 "id": {
                     "name": "id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "UID_BASED_ID",
                     "is_mandatory": true,
                     "documentation": "Globally unique id of an object, regardless of where it is stored."
@@ -457,7 +457,7 @@
             "properties": {
                 "value": {
                     "name": "value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "The value of the id in the form defined below. "
@@ -470,21 +470,21 @@
             "properties": {
                 "namespace": {
                     "name": "namespace",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Namespace to which this identifier belongs in the local system context (and possibly in any other openEHR compliant environment) e.g.  terminology ,  demographic . These names are not yet standardised. Legal values for `_namespace_` are:\n\n* `\"local\"`\n* `\"unknown\"`\n* a string matching the standard regex `[a-zA-Z][a-zA-Z0-9_.:\\\/&?=+-]*`.\n\nNote that the first two are just special values of the regex, and will be matched by it."
                 },
                 "type": {
                     "name": "type",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Name of the  class (concrete or abstract) of object to which this identifier type refers, e.g. `PARTY`, `PERSON`,  `GUIDELINE`  etc. These class names are from the relevant reference model. The type name `ANY` can be used to indicate that any type is accepted (e.g. if the type is unknown). "
                 },
                 "id": {
                     "name": "id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "OBJECT_ID",
                     "is_mandatory": true,
                     "documentation": "Globally unique id of an object, regardless of where it is stored."
@@ -518,7 +518,7 @@
             "properties": {
                 "value": {
                     "name": "value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "String form of this identifier."
@@ -554,7 +554,7 @@
             "properties": {
                 "value": {
                     "name": "value",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "The value of the id."
@@ -591,7 +591,7 @@
             "properties": {
                 "Local_terminology_id": {
                     "name": "Local_terminology_id",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype"
@@ -604,42 +604,42 @@
             "properties": {
                 "CR": {
                     "name": "CR",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Character",
                     "is_mandatory": true,
                     "documentation": "Carriage return character."
                 },
                 "LF": {
                     "name": "LF",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Character",
                     "is_mandatory": true,
                     "documentation": "Line feed character."
                 },
                 "Any_type_name": {
                     "name": "Any_type_name",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Regex_any_pattern": {
                     "name": "Regex_any_pattern",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Default_encoding": {
                     "name": "Default_encoding",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "None_type_name": {
                     "name": "None_type_name",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
@@ -648,7 +648,7 @@
         },
         "VALIDITY_KIND": {
             "name": "VALIDITY_KIND",
-            "p_bmm_type": "P_BMM_ENUMERATION_STRING",
+            "_type": "P_BMM_ENUMERATION_STRING",
             "ancestors": [
                 "String"
             ],
@@ -661,7 +661,7 @@
         },
         "VERSION_STATUS": {
             "name": "VERSION_STATUS",
-            "p_bmm_type": "P_BMM_ENUMERATION_STRING",
+            "_type": "P_BMM_ENUMERATION_STRING",
             "ancestors": [
                 "String"
             ],
@@ -687,105 +687,105 @@
             "properties": {
                 "Seconds_in_minute": {
                     "name": "Seconds_in_minute",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Number of seconds in a minute."
                 },
                 "Minutes_in_hour": {
                     "name": "Minutes_in_hour",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Number of minutes in an hour."
                 },
                 "Hours_in_day": {
                     "name": "Hours_in_day",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Number of clock hours in a day, i.e. 24."
                 },
                 "Average_days_in_month": {
                     "name": "Average_days_in_month",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Real",
                     "is_mandatory": true,
                     "documentation": "Used for conversions of durations containing months to days and \/ or seconds."
                 },
                 "Max_days_in_month": {
                     "name": "Max_days_in_month",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Maximum number of days in any month."
                 },
                 "Days_in_year": {
                     "name": "Days_in_year",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Calendar days in a normal year, i.e. 365."
                 },
                 "Average_days_in_year": {
                     "name": "Average_days_in_year",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Real",
                     "is_mandatory": true,
                     "documentation": "Used for conversions of durations containing years to days and \/ or seconds."
                 },
                 "Days_in_leap_year": {
                     "name": "Days_in_leap_year",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Calendar days in a standard leap year, i.e. 366."
                 },
                 "Max_days_in_year": {
                     "name": "Max_days_in_year",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Maximum number of days in a year, i.e. accounting for leap years."
                 },
                 "Days_in_week": {
                     "name": "Days_in_week",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Number of days in a week."
                 },
                 "Months_in_year": {
                     "name": "Months_in_year",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Number of months in a year."
                 },
                 "Min_timezone_hour": {
                     "name": "Min_timezone_hour",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Minimum hour value of a timezone  according to ISO 8601 (note that the -ve sign is supplied in the `ISO8601_TIMEZONE` class)."
                 },
                 "Max_timezone_hour": {
                     "name": "Max_timezone_hour",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Maximum hour value of a timezone according to ISO 8601."
                 },
                 "Nominal_days_in_month": {
                     "name": "Nominal_days_in_month",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Real",
                     "is_mandatory": true,
                     "documentation": "Used for conversions of durations containing months to days and \/ or seconds."
                 },
                 "Nominal_days_in_year": {
                     "name": "Nominal_days_in_year",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Real",
                     "is_mandatory": true,
                     "documentation": "Used for conversions of durations containing years to days and \/ or seconds."
@@ -820,28 +820,28 @@
             "properties": {
                 "lower_unbounded": {
                     "name": "lower_unbounded",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "Lower boundary open (i.e. = -infinity)."
                 },
                 "upper_unbounded": {
                     "name": "upper_unbounded",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "Upper boundary open (i.e. = +infinity)."
                 },
                 "lower_included": {
                     "name": "lower_included",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "Lower boundary value included in range if not `_lower_unbounded_`."
                 },
                 "upper_included": {
                     "name": "upper_included",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "Upper boundary value included in range if not `_upper_unbounded_`."
@@ -855,38 +855,38 @@
             "properties": {
                 "uid": {
                     "name": "uid",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "UUID",
                     "documentation": "Unique identifier of the family of archetypes having the same interface identifier (same major version)."
                 },
                 "original_language": {
                     "name": "original_language",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Terminology_code",
                     "is_mandatory": true,
                     "documentation": "Language in which this resource was initially authored. Although there is no language primacy of resources overall, the language of original authoring is required to ensure natural language translations can preserve quality. Language is relevant in both the description and ontology sections. "
                 },
                 "description": {
                     "name": "description",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "RESOURCE_DESCRIPTION",
                     "documentation": "Description and lifecycle information of the resource."
                 },
                 "is_controlled": {
                     "name": "is_controlled",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "documentation": "True if this resource is under any kind of change control (even file copying), in which case revision history is created. "
                 },
                 "annotations": {
                     "name": "annotations",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "RESOURCE_ANNOTATIONS",
                     "documentation": "Annotations on individual items within the resource, keyed by path. The inner table takes the form of a Hash table of String values keyed by String tags."
                 },
                 "translations": {
                     "name": "translations",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -904,7 +904,7 @@
             "properties": {
                 "original_author": {
                     "name": "original_author",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -917,19 +917,19 @@
                 },
                 "original_namespace": {
                     "name": "original_namespace",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Namespace of original author's organisation, in reverse internet form, if applicable."
                 },
                 "original_publisher": {
                     "name": "original_publisher",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Plain text name of organisation that originally published this artefact, if any."
                 },
                 "other_contributors": {
                     "name": "other_contributors",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "String"
@@ -939,45 +939,45 @@
                 },
                 "lifecycle_state": {
                     "name": "lifecycle_state",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Terminology_code",
                     "is_mandatory": true,
                     "documentation": "Lifecycle state of the resource, typically including states such as: initial, in_development, in_review, published, superseded, obsolete. "
                 },
                 "parent_resource": {
                     "name": "parent_resource",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "AUTHORED_RESOURCE",
                     "is_mandatory": true,
                     "documentation": "Reference to owning resource. "
                 },
                 "custodian_namespace": {
                     "name": "custodian_namespace",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Namespace in reverse internet id form, of current custodian organisation."
                 },
                 "custodian_organisation": {
                     "name": "custodian_organisation",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Plain text name of current custodian organisation."
                 },
                 "copyright": {
                     "name": "copyright",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Optional copyright statement for the resource as a knowledge resource. \n"
                 },
                 "licence": {
                     "name": "licence",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Licence of current artefact, in format \"short licence name <URL of licence>\", e.g. \"Apache 2.0 License <http:\/\/www.apache.org\/licenses\/LICENSE-2.0.html>\""
                 },
                 "ip_acknowledgements": {
                     "name": "ip_acknowledgements",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -989,7 +989,7 @@
                 },
                 "references": {
                     "name": "references",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1001,13 +1001,13 @@
                 },
                 "resource_package_uri": {
                     "name": "resource_package_uri",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "URI of package to which this resource belongs."
                 },
                 "conversion_details": {
                     "name": "conversion_details",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1019,7 +1019,7 @@
                 },
                 "other_details": {
                     "name": "other_details",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1031,7 +1031,7 @@
                 },
                 "details": {
                     "name": "details",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1049,14 +1049,14 @@
             "properties": {
                 "language": {
                     "name": "language",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Terminology_code",
                     "is_mandatory": true,
                     "documentation": "Language of the translation, coded using ISO 639-1 (2 character) language codes."
                 },
                 "author": {
                     "name": "author",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1069,13 +1069,13 @@
                 },
                 "accreditation": {
                     "name": "accreditation",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Accreditation of primary translator or group, usually a national translator's registration or association membership id."
                 },
                 "other_details": {
                     "name": "other_details",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1087,13 +1087,13 @@
                 },
                 "version_last_translated": {
                     "name": "version_last_translated",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Version of this resource last time it was translated into the language represented by this `TRANSLATION_DETAILS` object."
                 },
                 "other_contributors": {
                     "name": "other_contributors",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "String"
@@ -1109,21 +1109,21 @@
             "properties": {
                 "language": {
                     "name": "language",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Terminology_code",
                     "is_mandatory": true,
                     "documentation": "The localised language in which the items in this description item are written. Coded using ISO 639-1 (2 character) language codes."
                 },
                 "purpose": {
                     "name": "purpose",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Purpose of the resource."
                 },
                 "keywords": {
                     "name": "keywords",
-                    "p_bmm_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
                         "type": "String"
@@ -1133,19 +1133,19 @@
                 },
                 "use": {
                     "name": "use",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Description of the uses of the resource, i.e. contexts in which it could be used. \n"
                 },
                 "misuse": {
                     "name": "misuse",
-                    "p_bmm_type": "P_BMM_SINGLE_PROPERTY",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Description of any misuses of the resource, i.e. contexts in which it should not be used."
                 },
                 "original_resource_uri": {
                     "name": "original_resource_uri",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1157,7 +1157,7 @@
                 },
                 "other_details": {
                     "name": "other_details",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
@@ -1175,24 +1175,24 @@
             "properties": {
                 "documentation": {
                     "name": "documentation",
-                    "p_bmm_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameter_defs": {
                             "K": {
-                                "p_bmm_type": "P_BMM_SIMPLE_TYPE",
+                                "_type": "P_BMM_SIMPLE_TYPE",
                                 "type": "String"
                             },
                             "V": {
-                                "p_bmm_type": "P_BMM_GENERIC_TYPE",
+                                "_type": "P_BMM_GENERIC_TYPE",
                                 "root_type": "Hash",
                                 "generic_parameter_defs": {
                                     "K": {
-                                        "p_bmm_type": "P_BMM_SIMPLE_TYPE",
+                                        "_type": "P_BMM_SIMPLE_TYPE",
                                         "type": "String"
                                     },
                                     "V": {
-                                        "p_bmm_type": "P_BMM_GENERIC_TYPE",
+                                        "_type": "P_BMM_GENERIC_TYPE",
                                         "root_type": "Hash",
                                         "generic_parameters": [
                                             "String",
