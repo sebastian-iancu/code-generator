@@ -73,9 +73,6 @@ class BMM extends AbstractWriter
     public function write(): void
     {
         /** @var UMLFile $umlFile */
-        /** @var UMLPackage $umlPackage */
-        /** @var UMLPackage $childUmlPackage */
-        /** @var UMLClass $umlClass */
         foreach ($this->reader->umlFiles as $umlFile) {
             $schema_name = strtolower($umlFile->name);
             self::log('generating to [%s] schema.', $schema_name);
@@ -91,6 +88,7 @@ class BMM extends AbstractWriter
             ];
             $collectedUmlClasses = new Collection();
             // serializing packages and their classes
+            /** @var UMLPackage $umlPackage */
             foreach ($umlFile->umlPackage->getPackages('org::openehr::' . $schema_name . '::*') as $umlPackage) {
                 if (in_array($umlPackage->name, self::SKIP_PACKAGES)) {
                     continue;
@@ -101,6 +99,7 @@ class BMM extends AbstractWriter
             // serializing primitive_types and class
             $schema['primitive_types'] = [];
             $schema['class_definitions'] = [];
+            /** @var UMLClass $umlClass */
             foreach ($collectedUmlClasses as $umlClass) {
                 if (in_array($umlClass->name, self::PRIMITIVES)) {
                     $schema['primitive_types'][$umlClass->name] = self::asBmmClass($umlClass, $collectedUmlClasses);
@@ -116,6 +115,12 @@ class BMM extends AbstractWriter
         }
     }
 
+    /**
+     * @param UMLPackage $umlPackage
+     * @param string $namePrefix
+     * @param Collection $collectedUmlClasses
+     * @return array<string, mixed>
+     */
     protected static function asBmmPackage(UMLPackage $umlPackage, string $namePrefix, Collection $collectedUmlClasses): array
     {
         $bmmPackage = [
@@ -123,6 +128,7 @@ class BMM extends AbstractWriter
             'packages' => [],
             'classes' => self::collectClassNames($umlPackage, $collectedUmlClasses),
         ];
+        /** @var UMLPackage $childUmlPackage */
         foreach ($umlPackage->umlPackages as $childUmlPackage) {
             if (in_array($childUmlPackage->name, self::SKIP_PACKAGES)) {
                 continue;
@@ -134,6 +140,11 @@ class BMM extends AbstractWriter
         return array_filter($bmmPackage);
     }
 
+    /**
+     * @param UMLPackage $umlPackage
+     * @param Collection $collectedUmlClasses
+     * @return string[]
+     */
     protected static function collectClassNames(UMLPackage $umlPackage, Collection $collectedUmlClasses): array
     {
         $names = [];
@@ -147,6 +158,11 @@ class BMM extends AbstractWriter
         return $names;
     }
 
+    /**
+     * @param UMLClass|UMLEnumeration $umlClass
+     * @param Collection $collectedUmlClasses
+     * @return array<string, mixed>
+     */
     protected static function asBmmClass(UMLClass|UMLEnumeration $umlClass, Collection $collectedUmlClasses): array
     {
         $bmmClass = [
@@ -160,9 +176,11 @@ class BMM extends AbstractWriter
                 $bmmClass['ancestors'] = array_keys((array)$umlClass->umlGeneralizations);
             }
             $bmmClass['documentation'] = $umlClass->description;
+            /** @var UMLTemplateParameter $umlTemplateParameter */
             foreach ($umlClass->umlTemplateParameters as $umlTemplateParameter) {
                 $bmmClass['generic_parameter_defs'][$umlTemplateParameter->name] = self::asBmmGenericParameterDefs($umlTemplateParameter);
             }
+            /** @var UMLProperty $umlProperty */
             foreach ($umlClass->umlProperties as $umlProperty) {
                 $bmmClass['properties'][$umlProperty->name] = self::asBmmProperty($umlProperty, $umlClass, $collectedUmlClasses);
             }
@@ -177,6 +195,10 @@ class BMM extends AbstractWriter
         return $bmmClass;
     }
 
+    /**
+     * @param UMLTemplateParameter $UMLTemplateParameter
+     * @return array<string, mixed>
+     */
     protected static function asBmmGenericParameterDefs(UMLTemplateParameter $UMLTemplateParameter): array
     {
         $bmmGenericParameterDef = [
@@ -188,6 +210,12 @@ class BMM extends AbstractWriter
         return $bmmGenericParameterDef;
     }
 
+    /**
+     * @param UMLProperty $umlProperty
+     * @param UMLClass $umlClass
+     * @param Collection $collectedUmlClasses
+     * @return array<string, mixed>
+     */
     protected static function asBmmProperty(UMLProperty $umlProperty, UMLClass $umlClass, Collection $collectedUmlClasses): array
     {
         $bmmProperty = [
@@ -195,7 +223,9 @@ class BMM extends AbstractWriter
         ];
         if ($umlProperty->templateParameterId) {
             $bmmProperty['_type'] = 'P_BMM_SINGLE_PROPERTY_OPEN';
-            $bmmProperty['type'] = $umlClass->umlTemplateParameters->get($umlProperty->templateParameterId)->name;
+            /** @var UMLTemplateParameter $umlTemplateParameter */
+            $umlTemplateParameter = $umlClass->umlTemplateParameters->get($umlProperty->templateParameterId);
+            $bmmProperty['type'] = $umlTemplateParameter->name;
         } elseif (str_contains($umlProperty->type->name, '<')) {
             $bmmProperty['_type'] = 'P_BMM_GENERIC_PROPERTY';
             $bmmProperty['type_def'] = self::asTypeDef($umlProperty->type->name, $collectedUmlClasses);
@@ -217,6 +247,11 @@ class BMM extends AbstractWriter
         return $bmmProperty;
     }
 
+    /**
+     * @param string $descriptor
+     * @param Collection $collectedUmlClasses
+     * @return array<string, mixed>
+     */
     public static function asTypeDef(string $descriptor, Collection $collectedUmlClasses): array
     {
         $typeDef = [];

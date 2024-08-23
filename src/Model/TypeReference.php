@@ -49,6 +49,7 @@ class TypeReference extends AbstractItem
                 $this->referenceMethod = 'qualifier';
             }
             $this->id = $this->getIdByName($xmlNode, $this->name);
+            $this->referentType = null;
             $this->referentPath = null;
         } else {
             $this->id = $key ?: (string)$xmlNode->attributes('xmi', true)?->id;
