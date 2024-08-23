@@ -2,7 +2,6 @@
 
 namespace OpenEHR\Tools\CodeGen\Model;
 
-use OpenEHR\Tools\CodeGen\Helper\Collection;
 use SimpleXMLElement;
 
 class AbstractAttribute extends AbstractItem

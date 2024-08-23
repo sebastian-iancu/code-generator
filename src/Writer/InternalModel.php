@@ -2,12 +2,15 @@
 
 namespace OpenEHR\Tools\CodeGen\Writer;
 
+use JsonException;
+
 class InternalModel extends AbstractWriter
 {
 
     public function __construct(
         public readonly string $file = 'all.json',
-    ) {
+    )
+    {
     }
 
     public function setDir(string $dir): void
@@ -17,6 +20,9 @@ class InternalModel extends AbstractWriter
     }
 
 
+    /**
+     * @throws JsonException
+     */
     public function write(): void
     {
         $filename = $this->dir . DIRECTORY_SEPARATOR . $this->file;

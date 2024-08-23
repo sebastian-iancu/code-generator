@@ -4,6 +4,7 @@ namespace OpenEHR\Tools\CodeGen\Writer;
 
 use OpenEHR\Tools\CodeGen\Helper\ConsoleTrait;
 use OpenEHR\Tools\CodeGen\ReadManager;
+use RuntimeException;
 
 abstract class AbstractWriter
 {
@@ -16,7 +17,7 @@ abstract class AbstractWriter
     public function setDir(string $dir): void
     {
         if (!is_dir($dir) && !mkdir($dir, 0777, true) && !is_dir($dir)) {
-            throw new \RuntimeException(sprintf('Directory "%s" was not created', $dir));
+            throw new RuntimeException(sprintf('Directory "%s" was not created', $dir));
         }
         $this->dir = realpath($dir) ?: $dir;
     }

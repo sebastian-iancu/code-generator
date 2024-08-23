@@ -42,7 +42,7 @@ class TypeReference extends AbstractItem
             $id = $key ?: (string)$xmlNode->attributes('xmi', true)?->id;
             $qualifierType = new self($xmlNode->qualifier->type);
             if ((string)$xmlNode['aggregation'] === 'composite') {
-                $this->name = 'Hash<'.$qualifierType->name.', '.$this->getNameById($xmlNode, $id).'>';
+                $this->name = 'Hash<' . $qualifierType->name . ', ' . $this->getNameById($xmlNode, $id) . '>';
                 $this->referenceMethod = 'qualifier-composite';
             } else {
                 $this->name = $qualifierType->name;
@@ -61,6 +61,24 @@ class TypeReference extends AbstractItem
         self::log('  TypeReference [%s] as [%s] was read.', $this->id, $this->name);
     }
 
+    protected function extractTypeName(SimpleXMLElement $node): string
+    {
+        $nodes = $node->xpath('descendant::referenceExtension');
+        if (!$nodes) {
+            self::log("WARNING: referenceExtension node not found.");
+            return '';
+        }
+        $parts = explode('::', (string)$nodes[0]['referentPath']);
+        $type = end($parts);
+        return match ($type) {
+            'boolean' => 'Boolean',
+            'char', 'byte' => 'Character',
+            'double' => 'Double',
+            'K' => 'String',
+            'V', 'T' => 'Any',
+            default => (string)$type,
+        };
+    }
 
     protected function getNameById(SimpleXMLElement $node, string $id = '', string $type = '', string $otherPredicate = ''): string
     {
@@ -116,24 +134,5 @@ class TypeReference extends AbstractItem
         }
 
         return '';
-    }
-
-    protected function extractTypeName(SimpleXMLElement $node): string
-    {
-        $nodes = $node->xpath('descendant::referenceExtension');
-        if (!$nodes) {
-            self::log("WARNING: referenceExtension node not found.");
-            return '';
-        }
-        $parts = explode('::', (string)$nodes[0]['referentPath']);
-        $type = end($parts);
-        return match ($type) {
-            'boolean' => 'Boolean',
-            'char', 'byte' => 'Character',
-            'double' => 'Double',
-            'K' => 'String',
-            'V', 'T' => 'Any',
-            default => (string)$type,
-        };
     }
 }

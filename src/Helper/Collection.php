@@ -1,4 +1,5 @@
 <?php
+/** @noinspection PhpMultipleClassDeclarationsInspection */
 
 namespace OpenEHR\Tools\CodeGen\Helper;
 
@@ -31,7 +32,8 @@ class Collection extends ArrayObject implements JsonSerializable
         return $this->offsetGet($key) ?: null;
     }
 
-    public function flush(): void {
+    public function flush(): void
+    {
         $this->aliases = [];
         $this->exchangeArray([]);
     }

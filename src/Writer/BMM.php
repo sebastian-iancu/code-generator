@@ -2,6 +2,7 @@
 
 namespace OpenEHR\Tools\CodeGen\Writer;
 
+use JsonException;
 use OpenEHR\Tools\CodeGen\Helper\Collection;
 use OpenEHR\Tools\CodeGen\Model\UMLClass;
 use OpenEHR\Tools\CodeGen\Model\UMLEnumeration;
@@ -13,12 +14,12 @@ use OpenEHR\Tools\CodeGen\Model\UMLTemplateParameter;
 class BMM extends AbstractWriter
 {
 
-    public const REVISION = '1';
-    public const AUTHOR = 'codegen';
+    public const string REVISION = '1';
+    public const string AUTHOR = 'codegen';
 
-    public const SKIP_PACKAGES = ['functional', 'primitive_types', 'builtins'];
+    public const array SKIP_PACKAGES = ['functional', 'primitive_types', 'builtins'];
 
-    public const PRIMITIVES = [
+    public const array PRIMITIVES = [
         'Any',
         'Ordered',
         'Numeric',
@@ -66,6 +67,9 @@ class BMM extends AbstractWriter
     }
 
 
+    /**
+     * @throws JsonException
+     */
     public function write(): void
     {
         /** @var UMLFile $umlFile */
@@ -106,7 +110,8 @@ class BMM extends AbstractWriter
             }
             // saving as file
             $filename = $this->dir . DIRECTORY_SEPARATOR . str_replace('.xmi', '', $umlFile->id) . '.bmm.json';
-            $bytes = file_put_contents($filename, json_encode($schema, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+            $content = json_encode($schema, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT) . PHP_EOL;
+            $bytes = file_put_contents($filename, $content);
             self::log('  Wrote %s bytes to %s file.', $bytes, $filename);
         }
     }
@@ -172,6 +177,17 @@ class BMM extends AbstractWriter
         return $bmmClass;
     }
 
+    protected static function asBmmGenericParameterDefs(UMLTemplateParameter $UMLTemplateParameter): array
+    {
+        $bmmGenericParameterDef = [
+            'name' => $UMLTemplateParameter->name,
+        ];
+        if ($UMLTemplateParameter->type->referenceMethod !== 'implicit') {
+            $bmmGenericParameterDef['conforms_to_type'] = $UMLTemplateParameter->type->name;
+        }
+        return $bmmGenericParameterDef;
+    }
+
     protected static function asBmmProperty(UMLProperty $umlProperty, UMLClass $umlClass, Collection $collectedUmlClasses): array
     {
         $bmmProperty = [
@@ -223,7 +239,7 @@ class BMM extends AbstractWriter
                     } else {
                         $typeDef['generic_parameter_defs'][$key] = array_merge([
                             '_type' => 'P_BMM_GENERIC_TYPE',
-                        ], self::asTypeDef($p[1].$p[2], $collectedUmlClasses));
+                        ], self::asTypeDef($p[1] . $p[2], $collectedUmlClasses));
                     }
                     next($keys);
                 }
@@ -234,16 +250,5 @@ class BMM extends AbstractWriter
             $typeDef['err_type_def'] = $descriptor;
         }
         return $typeDef;
-    }
-
-    protected static function asBmmGenericParameterDefs(UMLTemplateParameter $UMLTemplateParameter): array
-    {
-        $bmmGenericParameterDef = [
-            'name' => $UMLTemplateParameter->name,
-        ];
-        if ($UMLTemplateParameter->type->referenceMethod !== 'implicit') {
-            $bmmGenericParameterDef['conforms_to_type'] = $UMLTemplateParameter->type->name;
-        }
-        return $bmmGenericParameterDef;
     }
 }

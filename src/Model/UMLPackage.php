@@ -2,6 +2,7 @@
 
 namespace OpenEHR\Tools\CodeGen\Model;
 
+use Generator;
 use OpenEHR\Tools\CodeGen\Helper\Collection;
 use SimpleXMLElement;
 
@@ -61,7 +62,7 @@ class UMLPackage extends AbstractItem
     }
 
 
-    public function getPackages(string $prefix): \Generator
+    public function getPackages(string $prefix): Generator
     {
         /** @var UMLPackage|null $umlPackage */
         self::log('Searching for [%s] in [%s](%s)...', $prefix, $this->id, $this->name);

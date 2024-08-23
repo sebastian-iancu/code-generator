@@ -2,6 +2,7 @@
 
 namespace OpenEHR\Tools\CodeGen\Model;
 
+use Generator;
 use RuntimeException;
 use SimpleXMLElement;
 
@@ -10,9 +11,9 @@ class UMLFile extends AbstractItem
 
     public readonly string $id;
     public readonly string $name;
+    public readonly UMLPackage $umlPackage;
     protected readonly SimpleXMLElement $xmi;
 
-    public readonly UMLPackage $umlPackage;
 //    public readonly Collection $allUmlPackages;
 
     public function __construct(string $fileName)
@@ -51,7 +52,8 @@ class UMLFile extends AbstractItem
         return $nodes[0];
     }
 
-    public function getRelease(): string {
+    public function getRelease(): string
+    {
         return str_replace([
             $this->name . '-v',
             '.xmi'
@@ -68,7 +70,7 @@ class UMLFile extends AbstractItem
 //    }
 
 
-    public function getPackages(string $prefix): \Generator
+    public function getPackages(string $prefix): Generator
     {
         self::log('Searching for [%s] in [%s](%s)...', $prefix, $this->id, $this->name);
         $parts = explode('::', $prefix);
