@@ -9627,7 +9627,8 @@
                                                                     "id": "_18_2_83e026d_1453124256362_269917_4743",
                                                                     "name": "Hash<String, TRANSLATION_DETAILS>",
                                                                     "referenceMethod": "qualifier-composite",
-                                                                    "referentPath": null
+                                                                    "referentPath": null,
+                                                                    "referentType": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
@@ -10015,7 +10016,8 @@
                                                                     "id": "_18_2_83e026d_1453125164736_976750_4822",
                                                                     "name": "Hash<String, RESOURCE_DESCRIPTION_ITEM>",
                                                                     "referenceMethod": "qualifier-composite",
-                                                                    "referentPath": null
+                                                                    "referentPath": null,
+                                                                    "referentType": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
@@ -11043,7 +11045,8 @@
                                                                             "id": "_18_1_83e026d_1424957274901_487277_4570",
                                                                             "name": "Hash<String, ARCHETYPE_TERMINOLOGY>",
                                                                             "referenceMethod": "qualifier-composite",
-                                                                            "referentPath": null
+                                                                            "referentPath": null,
+                                                                            "referentType": null
                                                                         },
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 0,
@@ -11060,7 +11063,8 @@
                                                                             "id": "_18_1_83e026d_1424957274901_487277_4570",
                                                                             "name": "Hash<String, ARCHETYPE_TERMINOLOGY>",
                                                                             "referenceMethod": "qualifier-composite",
-                                                                            "referentPath": null
+                                                                            "referentPath": null,
+                                                                            "referentType": null
                                                                         },
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 0,
@@ -16703,7 +16707,8 @@
                                                                             "id": "",
                                                                             "name": "Hash<String, RM_ATTRIBUTE_VISIBILITY>",
                                                                             "referenceMethod": "qualifier-composite",
-                                                                            "referentPath": null
+                                                                            "referentPath": null,
+                                                                            "referentType": null
                                                                         },
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 0,
@@ -17000,7 +17005,8 @@
                                                                     "id": "_18_1_83e026d_1442526674664_326527_4821",
                                                                     "name": "Hash<String, AOM_TYPE_MAPPING>",
                                                                     "referenceMethod": "qualifier-composite",
-                                                                    "referentPath": null
+                                                                    "referentPath": null,
+                                                                    "referentType": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
@@ -17089,7 +17095,8 @@
                                                                     "id": "_18_1_83e026d_1442526003284_794292_4803",
                                                                     "name": "Hash<String, AOM_PROPERTY_MAPPING>",
                                                                     "referenceMethod": "qualifier-composite",
-                                                                    "referentPath": null
+                                                                    "referentPath": null,
+                                                                    "referentType": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
@@ -19095,7 +19102,8 @@
                                                                             "id": "",
                                                                             "name": "Hash<String, P_ARCHETYPE_TERMINOLOGY>",
                                                                             "referenceMethod": "qualifier-composite",
-                                                                            "referentPath": null
+                                                                            "referentPath": null,
+                                                                            "referentType": null
                                                                         },
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 0,

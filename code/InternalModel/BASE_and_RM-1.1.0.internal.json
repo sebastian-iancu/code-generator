@@ -9627,7 +9627,8 @@
                                                                     "id": "_18_2_83e026d_1453124256362_269917_4743",
                                                                     "name": "Hash<String, TRANSLATION_DETAILS>",
                                                                     "referenceMethod": "qualifier-composite",
-                                                                    "referentPath": null
+                                                                    "referentPath": null,
+                                                                    "referentType": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
@@ -10015,7 +10016,8 @@
                                                                     "id": "_18_2_83e026d_1453125164736_976750_4822",
                                                                     "name": "Hash<String, RESOURCE_DESCRIPTION_ITEM>",
                                                                     "referenceMethod": "qualifier-composite",
-                                                                    "referentPath": null
+                                                                    "referentPath": null,
+                                                                    "referentType": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
@@ -12189,7 +12191,8 @@
                                                                             "id": "",
                                                                             "name": "OBJECT_REF",
                                                                             "referenceMethod": "qualifier",
-                                                                            "referentPath": null
+                                                                            "referentPath": null,
+                                                                            "referentType": null
                                                                         },
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
@@ -12259,7 +12262,8 @@
                                                                             "id": "",
                                                                             "name": "OBJECT_REF",
                                                                             "referenceMethod": "qualifier",
-                                                                            "referentPath": null
+                                                                            "referentPath": null,
+                                                                            "referentType": null
                                                                         },
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
@@ -13574,7 +13578,8 @@
                                                                             "id": "",
                                                                             "name": "OBJECT_REF",
                                                                             "referenceMethod": "qualifier",
-                                                                            "referentPath": null
+                                                                            "referentPath": null,
+                                                                            "referentType": null
                                                                         },
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 0,
@@ -13706,7 +13711,8 @@
                                                                             "id": "",
                                                                             "name": "Hash<String, TRANSLATION_DETAILS>",
                                                                             "referenceMethod": "qualifier-composite",
-                                                                            "referentPath": null
+                                                                            "referentPath": null,
+                                                                            "referentType": null
                                                                         },
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 0,
@@ -13959,7 +13965,8 @@
                                                                             "id": "",
                                                                             "name": "Hash<String, RESOURCE_DESCRIPTION_ITEM>",
                                                                             "referenceMethod": "qualifier-composite",
-                                                                            "referentPath": null
+                                                                            "referentPath": null,
+                                                                            "referentType": null
                                                                         },
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
@@ -23158,7 +23165,8 @@
                                                                     "id": "",
                                                                     "name": "OBJECT_REF",
                                                                     "referenceMethod": "qualifier",
-                                                                    "referentPath": null
+                                                                    "referentPath": null,
+                                                                    "referentType": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
@@ -23175,7 +23183,8 @@
                                                                     "id": "",
                                                                     "name": "OBJECT_REF",
                                                                     "referenceMethod": "qualifier",
-                                                                    "referentPath": null
+                                                                    "referentPath": null,
+                                                                    "referentType": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
@@ -23192,7 +23201,8 @@
                                                                     "id": "",
                                                                     "name": "OBJECT_REF",
                                                                     "referenceMethod": "qualifier",
-                                                                    "referentPath": null
+                                                                    "referentPath": null,
+                                                                    "referentType": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
@@ -23209,7 +23219,8 @@
                                                                     "id": "",
                                                                     "name": "OBJECT_REF",
                                                                     "referenceMethod": "qualifier",
-                                                                    "referentPath": null
+                                                                    "referentPath": null,
+                                                                    "referentType": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
@@ -23226,7 +23237,8 @@
                                                                     "id": "",
                                                                     "name": "OBJECT_REF",
                                                                     "referenceMethod": "qualifier",
-                                                                    "referentPath": null
+                                                                    "referentPath": null,
+                                                                    "referentType": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
@@ -23261,7 +23273,8 @@
                                                                     "id": "",
                                                                     "name": "OBJECT_REF",
                                                                     "referenceMethod": "qualifier",
-                                                                    "referentPath": null
+                                                                    "referentPath": null,
+                                                                    "referentType": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
@@ -23799,7 +23812,8 @@
                                                                             "id": "",
                                                                             "name": "HIER_OBJECT_ID",
                                                                             "referenceMethod": "qualifier",
-                                                                            "referentPath": null
+                                                                            "referentPath": null,
+                                                                            "referentType": null
                                                                         },
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 0,
@@ -25165,7 +25179,8 @@
                                                                             "id": "",
                                                                             "name": "OBJECT_REF",
                                                                             "referenceMethod": "qualifier",
-                                                                            "referentPath": null
+                                                                            "referentPath": null,
+                                                                            "referentType": null
                                                                         },
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
@@ -26011,7 +26026,8 @@
                                                                             "id": "",
                                                                             "name": "HIER_OBJECT_ID",
                                                                             "referenceMethod": "qualifier",
-                                                                            "referentPath": null
+                                                                            "referentPath": null,
+                                                                            "referentType": null
                                                                         },
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 0,
@@ -26405,7 +26421,8 @@
                                                                     "id": "",
                                                                     "name": "LOCATABLE_REF",
                                                                     "referenceMethod": "qualifier",
-                                                                    "referentPath": null
+                                                                    "referentPath": null,
+                                                                    "referentType": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
@@ -26797,7 +26814,8 @@
                                                                     "id": "",
                                                                     "name": "PARTY_REF",
                                                                     "referenceMethod": "qualifier",
-                                                                    "referentPath": null
+                                                                    "referentPath": null,
+                                                                    "referentType": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
@@ -26891,7 +26909,8 @@
                                                                     "id": "",
                                                                     "name": "PARTY_REF",
                                                                     "referenceMethod": "qualifier",
-                                                                    "referentPath": null
+                                                                    "referentPath": null,
+                                                                    "referentType": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
@@ -27151,7 +27170,8 @@
                                                                     "id": "",
                                                                     "name": "PARTY_REF",
                                                                     "referenceMethod": "qualifier",
-                                                                    "referentPath": null
+                                                                    "referentPath": null,
+                                                                    "referentType": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
@@ -27186,7 +27206,8 @@
                                                                     "id": "",
                                                                     "name": "PARTY_REF",
                                                                     "referenceMethod": "qualifier",
-                                                                    "referentPath": null
+                                                                    "referentPath": null,
+                                                                    "referentType": null
                                                                 },
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
