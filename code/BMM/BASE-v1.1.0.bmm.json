@@ -6,7 +6,7 @@
     "schema_revision": "1.1.0.1",
     "schema_lifecycle_state": "stable",
     "schema_description": "openEHR base types.",
-    "schema_author": "codegen",
+    "schema_author": "xmi-code-generator",
     "packages": {
         "org.openehr.base.base_types": {
             "name": "org.openehr.base.base_types",
@@ -55,6 +55,24 @@
                         "List",
                         "Set",
                         "Array"
+                    ]
+                },
+                "primitive_types": {
+                    "name": "primitive_types",
+                    "classes": [
+                        "Uri",
+                        "Comparable",
+                        "Ordered_Numeric",
+                        "Integer",
+                        "Double",
+                        "Numeric",
+                        "Octet",
+                        "Character",
+                        "Boolean",
+                        "String",
+                        "Real",
+                        "Integer64",
+                        "Ordered"
                     ]
                 },
                 "time": {
@@ -177,6 +195,94 @@
                     "conforms_to_type": "Any"
                 }
             }
+        },
+        "Uri": {
+            "name": "Uri",
+            "ancestors": [
+                "String"
+            ],
+            "documentation": ""
+        },
+        "Ordered_Numeric": {
+            "name": "Ordered_Numeric",
+            "is_abstract": true,
+            "ancestors": [
+                "Ordered",
+                "Numeric"
+            ],
+            "documentation": "Abstract notional parent class of ordered, numeric types, which are types with \u2018<\u2018 and arithmetic operators defined."
+        },
+        "Integer": {
+            "name": "Integer",
+            "ancestors": [
+                "Ordered_Numeric"
+            ],
+            "documentation": "Class representing minimal interface of standard Integer type."
+        },
+        "Double": {
+            "name": "Double",
+            "ancestors": [
+                "Ordered_Numeric"
+            ],
+            "documentation": ""
+        },
+        "Numeric": {
+            "name": "Numeric",
+            "is_abstract": true,
+            "ancestors": [
+                "Any"
+            ],
+            "documentation": "Abstract notional parent class of numeric types, which are types which have various arithmetic and comparison operators defined."
+        },
+        "Octet": {
+            "name": "Octet",
+            "ancestors": [
+                "Ordered"
+            ],
+            "documentation": ""
+        },
+        "Character": {
+            "name": "Character",
+            "ancestors": [
+                "Ordered"
+            ],
+            "documentation": ""
+        },
+        "Boolean": {
+            "name": "Boolean",
+            "ancestors": [
+                "Any"
+            ],
+            "documentation": "Class representing minimal interface of standard Boolean type."
+        },
+        "String": {
+            "name": "String",
+            "ancestors": [
+                "Ordered"
+            ],
+            "documentation": "Strings of characters, as used to represent textual data in any natural or formal language."
+        },
+        "Real": {
+            "name": "Real",
+            "ancestors": [
+                "Ordered_Numeric"
+            ],
+            "documentation": "Type used to represent decimal numbers. Corresponds to a single-precision floating point value in most languages."
+        },
+        "Integer64": {
+            "name": "Integer64",
+            "ancestors": [
+                "Ordered_Numeric"
+            ],
+            "documentation": "Class representing minimal interface of standard Integer64 type."
+        },
+        "Ordered": {
+            "name": "Ordered",
+            "is_abstract": true,
+            "ancestors": [
+                "Any"
+            ],
+            "documentation": "Abstract notional parent class of ordered, types i.e. types on which the \u2018<\u2018 operator is defined."
         },
         "Iso8601_date_time": {
             "name": "Iso8601_date_time",
@@ -666,6 +772,11 @@
                 "build"
             ]
         },
+        "Comparable": {
+            "name": "Comparable",
+            "is_abstract": true,
+            "documentation": ""
+        },
         "Iso8601_timezone": {
             "name": "Iso8601_timezone",
             "ancestors": [
@@ -912,7 +1023,10 @@
                         "container_type": "List",
                         "type": "String"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Other contributors to the resource, each listed in \"name <email>\"  form. "
                 },
                 "lifecycle_state": {
@@ -1096,7 +1210,10 @@
                         "container_type": "List",
                         "type": "String"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Keywords which characterise this resource, used e.g. for indexing and searching. \n"
                 },
                 "use": {

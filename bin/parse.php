@@ -28,6 +28,7 @@ $reader = new ReadManager();
 $reader->read('BASE-v1.2.0.xmi');
 $writer = new WriteManager($reader);
 $writer->addWriter(new InternalModel('BASE-v1.2.0.internal.json'));
+$writer->addWriter(new BMM());
 $writer->write();
 $reader->read('RM-v1.1.0.xmi');
 $writer = new WriteManager($reader);

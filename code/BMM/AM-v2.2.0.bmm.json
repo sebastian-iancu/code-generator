@@ -6,7 +6,7 @@
     "schema_revision": "2.2.0.1",
     "schema_lifecycle_state": "stable",
     "schema_description": "openEHR Archetype Model",
-    "schema_author": "codegen",
+    "schema_author": "xmi-code-generator",
     "packages": {
         "org.openehr.am.aom2": {
             "name": "org.openehr.am.aom2",
@@ -199,7 +199,10 @@
                         "container_type": "List",
                         "type": "STATEMENT"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Rules relating to this archetype. Statements are expressed in first order predicate logic, and usually refer to at least two attributes."
                 },
                 "rm_overlay": {
@@ -274,7 +277,10 @@
                         "container_type": "List",
                         "type": "TEMPLATE_OVERLAY"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Overlay archetypes, i.e. partial archetypes that include full definition and terminology, but logically derive all their meta-data from from the owning template."
                 }
             }
@@ -471,7 +477,10 @@
                         "container_type": "List",
                         "type": "C_OBJECT"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Child `C_OBJECT` nodes. Each such node represents a constraint on the type of this attribute in its reference model. Multiples occur both for multiple items in the case of container attributes, and alternatives in the case of singular attributes. "
                 },
                 "differential_path": {
@@ -541,7 +550,10 @@
                         "container_type": "List",
                         "type": "ASSERTION"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "List of constraints defining other archetypes that could be included at this point. "
                 },
                 "excludes": {
@@ -551,7 +563,10 @@
                         "container_type": "List",
                         "type": "ASSERTION"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "List of constraints defining other archetypes that cannot be included at this point. "
                 },
                 "is_closed": {
@@ -626,7 +641,10 @@
                         "container_type": "List",
                         "type": "C_PRIMITIVE_TUPLE"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Tuple definitions."
                 },
                 "members": {
@@ -636,7 +654,10 @@
                         "container_type": "List",
                         "type": "C_ATTRIBUTE"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "List of `C_ATTRIBUTEs` forming the definition of the tuple."
                 }
             }
@@ -655,7 +676,10 @@
                         "container_type": "List",
                         "type": "C_PRIMITIVE_OBJECT"
                     },
-                    "cardinality": "|>=1|",
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
                     "is_mandatory": true,
                     "documentation": "Object constraint members of this tuple group."
                 }
@@ -673,7 +697,10 @@
                         "container_type": "List",
                         "type": "ARCHETYPE_CONSTRAINT"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Members of this second order constrainer. Normally redefined in descendants."
                 }
             }
@@ -708,7 +735,10 @@
                         "container_type": "List",
                         "type": "C_ATTRIBUTE"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "List of constraints on attributes of the reference model type represented by this object."
                 },
                 "attribute_tuples": {
@@ -718,7 +748,10 @@
                         "container_type": "List",
                         "type": "C_ATTRIBUTE_TUPLE"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "List of attribute tuple constraints under this object constraint, if any."
                 }
             }
@@ -781,7 +814,10 @@
                         "container_type": "List",
                         "type": "String"
                     },
-                    "cardinality": "|>=1|",
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
                     "is_mandatory": true,
                     "documentation": "List of target terms in this relation."
                 }
@@ -907,7 +943,10 @@
                         "container_type": "List",
                         "type": "Boolean"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Boolean constraint - a list of Boolean values."
                 },
                 "assumed_value": {
@@ -939,7 +978,10 @@
                         "container_type": "List",
                         "type": "String"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "String constraint - a list of literal strings and \/ or regular expression strings delimited by the \u2018\/\u2019 character.\n\nTo represent no constraint, use an empty list, or alternatively, a regex 'any' pattern, i.e. `\/.*\/`."
                 },
                 "default_value": {
@@ -1018,7 +1060,10 @@
                         "container_type": "List",
                         "type": "Interval"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Constraint in the form of a List of Intervals of the parameter type T. Concrete types generated in descendants via template binding."
                 }
             }
@@ -1492,7 +1537,10 @@
                         "container_type": "List",
                         "type": "P_C_OBJECT"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Child C_OBJECT nodes. Each such node represents a constraint on the type of this attribute in its reference model. Multiples occur both for multiple items in the case of container attributes, and alternatives in the case of singular attributes. "
                 },
                 "differential_path": {
@@ -1569,7 +1617,10 @@
                         "container_type": "List",
                         "type": ""
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "List of constraints defining other archetypes that could be included at this point. "
                 },
                 "excludes": {
@@ -1579,7 +1630,10 @@
                         "container_type": "List",
                         "type": ""
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "List of constraints defining other archetypes that cannot be included at this point. "
                 },
                 "is_closed": {
@@ -1634,7 +1688,10 @@
                         "container_type": "List",
                         "type": "P_C_ATTRIBUTE"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "List of constraints on attributes of the reference model type represented by this object."
                 },
                 "attribute_tuples": {
@@ -1644,7 +1701,10 @@
                         "container_type": "List",
                         "type": "P_C_ATTRIBUTE_TUPLE"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "List of attribute tuple constraints under this object constraint, if any."
                 }
             }
@@ -1660,7 +1720,10 @@
                         "container_type": "List",
                         "type": "String"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Member attribute constraint objects."
                 }
             }
@@ -1695,7 +1758,10 @@
                         "container_type": "List",
                         "type": "Boolean"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": ""
                 },
                 "assumed_value": {
@@ -1727,7 +1793,10 @@
                         "container_type": "List",
                         "type": "String"
                     },
-                    "cardinality": "|>=1|",
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
                     "is_mandatory": true,
                     "documentation": "String constraint - a list of literal strings and \/ or regular expression strings delimited by the \u2018\/\u2019 character."
                 },
@@ -1775,7 +1844,10 @@
                         "container_type": "List",
                         "type": "Interval"
                     },
-                    "cardinality": "|>=1|",
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
                     "is_mandatory": true,
                     "documentation": ""
                 }
@@ -1894,7 +1966,10 @@
                         "container_type": "List",
                         "type": "STATEMENT"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Rules relating to this archetype. Statements are expressed in first order predicate logic, and usually refer to at least two attributes."
                 }
             }
@@ -2086,7 +2161,10 @@
                         "container_type": "List",
                         "type": "TRANSLATION_DETAILS"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "List of details for each natural translation made of this resource, keyed by language. For each translation listed here, there must be corresponding sections in all language-dependent parts of the resource. The original_language does not appear in this list."
                 },
                 "description": {

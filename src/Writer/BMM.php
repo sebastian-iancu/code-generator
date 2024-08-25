@@ -15,9 +15,9 @@ class BMM extends AbstractWriter
 {
 
     public const string REVISION = '1';
-    public const string AUTHOR = 'codegen';
+    public const string AUTHOR = 'xmi-code-generator';
 
-    public const array SKIP_PACKAGES = ['functional', 'primitive_types', 'builtins'];
+    public const array SKIP_PACKAGES = ['functional', 'builtins'];
 
     public const array PRIMITIVES = [
         'Any',
@@ -235,7 +235,10 @@ class BMM extends AbstractWriter
                 'container_type' => 'List',
                 'type' => $umlProperty->type->name,
             ];
-            $bmmProperty['cardinality'] = "|>={$umlProperty->minOccurs}|";
+            $bmmProperty['cardinality'] = [
+                'lower' => $umlProperty->minOccurs,
+                'upper_unbounded' => true,
+            ];
         } else {
             $bmmProperty['_type'] = 'P_BMM_SINGLE_PROPERTY';
             $bmmProperty['type'] = $umlProperty->type->name;

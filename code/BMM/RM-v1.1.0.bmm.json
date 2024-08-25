@@ -6,7 +6,7 @@
     "schema_revision": "1.1.0.1",
     "schema_lifecycle_state": "stable",
     "schema_description": "openEHR Reference Model",
-    "schema_author": "codegen",
+    "schema_author": "xmi-code-generator",
     "packages": {
         "org.openehr.rm.common": {
             "name": "org.openehr.rm.common",
@@ -441,7 +441,10 @@
                         "container_type": "List",
                         "type": "LINK"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions. "
                 },
                 "archetype_details": {
@@ -495,7 +498,10 @@
                         "container_type": "List",
                         "type": "DV_IDENTIFIER"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Identifiers used for the item in the originating system, e.g. filler and placer ids. "
                 },
                 "feeder_system_item_ids": {
@@ -505,7 +511,10 @@
                         "container_type": "List",
                         "type": "DV_IDENTIFIER"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Identifiers used for the item in the feeder system, where the feeder system is distinct from the originating system. "
                 },
                 "original_content": {
@@ -628,7 +637,10 @@
                         "container_type": "List",
                         "type": "OBJECT_REF"
                     },
-                    "cardinality": "|>=1|",
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
                     "is_mandatory": true,
                     "documentation": "Set of references to Versions causing changes to this EHR. Each contribution contains a list of versions, which may include paths pointing to any number of versionable items, i.e. items of types such as `COMPOSITION` and `FOLDER`. "
                 },
@@ -726,7 +738,10 @@
                         "container_type": "List",
                         "type": "OBJECT_VERSION_ID"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Identifiers of other versions whose content was merged into this version, if any. "
                 },
                 "lifecycle_state": {
@@ -743,7 +758,10 @@
                         "container_type": "List",
                         "type": "ATTESTATION"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Set of attestations relating to this version. "
                 },
                 "data": {
@@ -772,7 +790,10 @@
                         "container_type": "List",
                         "type": "AUDIT_DETAILS"
                     },
-                    "cardinality": "|>=1|",
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
                     "is_mandatory": true,
                     "documentation": "The audits for this revision; there will always be at least one commit audit (which may itself be an `ATTESTATION`), there may also be further attestations. "
                 }
@@ -844,7 +865,10 @@
                         "container_type": "List",
                         "type": "DV_EHR_URI"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Items attested, expressed as fully qualified runtime paths to the items in question. Although not recommended, these may include fine-grained items which have been attested in some other system. Otherwise it is assumed to be for the entire VERSION with which it is associated. "
                 },
                 "reason": {
@@ -933,7 +957,10 @@
                         "container_type": "List",
                         "type": "DV_IDENTIFIER"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "One or more formal identifiers (possibly computable). \n"
                 }
             }
@@ -972,7 +999,10 @@
                         "container_type": "List",
                         "type": "REVISION_HISTORY_ITEM"
                     },
-                    "cardinality": "|>=1|",
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
                     "is_mandatory": true,
                     "documentation": "The items in this history in most-recent-last order. "
                 }
@@ -999,7 +1029,10 @@
                         "container_type": "List",
                         "type": "OBJECT_REF"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "The list of references to other (usually) versioned objects logically in this folder. "
                 },
                 "folders": {
@@ -1009,7 +1042,10 @@
                         "container_type": "List",
                         "type": "FOLDER"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Sub-folders of this `FOLDER`. "
                 },
                 "details": {
@@ -1088,7 +1124,10 @@
                         "container_type": "List",
                         "type": "String"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Other contributors to the resource, probably listed in  `'name <email>'`  form. "
                 },
                 "lifecycle_state": {
@@ -1207,7 +1246,10 @@
                         "container_type": "List",
                         "type": "String"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Keywords which characterise this resource, used e.g. for indexing and searching. "
                 },
                 "use": {
@@ -1323,7 +1365,10 @@
                         "container_type": "List",
                         "type": "ITEM"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "The items comprising the `ITEM_TREE`. Can include 0 or more `CLUSTERs` and\/or 0 or more individual `ELEMENTs`."
                 }
             }
@@ -1358,7 +1403,10 @@
                         "container_type": "List",
                         "type": "CLUSTER"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Physical representation of the table as a list of `CLUSTERs`, each containing the data of one row of the table. "
                 }
             }
@@ -1377,7 +1425,10 @@
                         "container_type": "List",
                         "type": "ELEMENT"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Physical representation of the list. "
                 }
             }
@@ -1509,7 +1560,10 @@
                         "container_type": "List",
                         "type": "EVENT"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "The events in the series. This attribute is of a generic type whose parameter must be a descendant of `ITEM_SUTRUCTURE`."
                 }
             }
@@ -1536,7 +1590,10 @@
                         "container_type": "List",
                         "type": "ITEM"
                     },
-                    "cardinality": "|>=1|",
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
                     "is_mandatory": true,
                     "documentation": "Ordered list of items - `CLUSTER` or `ELEMENT` objects - under this `CLUSTER`. "
                 }
@@ -1698,7 +1755,10 @@
                         "container_type": "List",
                         "type": "Byte"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "The actual data found at `_uri_`, if supplied inline."
                 },
                 "media_type": {
@@ -1721,7 +1781,10 @@
                         "container_type": "List",
                         "type": "Byte"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Binary cryptographic integrity checksum."
                 },
                 "integrity_check_algorithm": {
@@ -1782,7 +1845,10 @@
                         "container_type": "List",
                         "type": "DV_TEXT"
                     },
-                    "cardinality": "|>=1|",
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
                     "is_mandatory": true,
                     "documentation": "Items making up the paragraph, each of which is a text item (which may have its own formatting, and\/or have hyperlinks). "
                 }
@@ -1821,7 +1887,10 @@
                         "container_type": "List",
                         "type": "TERM_MAPPING"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Terms from other terminologies most closely matching this term, typically used where the originator (e.g. pathology lab) of information uses a local terminology but also supplies one or more equivalents from well known terminologies (e.g. LOINC). \n"
                 },
                 "language": {
@@ -1934,7 +2003,10 @@
                         "container_type": "List",
                         "type": "REFERENCE_RANGE"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Optional tagged other reference ranges for this value in its particular measurement context."
                 }
             }
@@ -2649,7 +2721,10 @@
                         "container_type": "List",
                         "type": "OBJECT_REF"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "List of contributions causing changes to this EHR. Each contribution contains a list of versions, which may include references to any number of `VERSION` instances, i.e. items of type `VERSIONED_COMPOSITION` and `VERSIONED_FOLDER`. "
                 },
                 "ehr_status": {
@@ -2673,7 +2748,10 @@
                         "container_type": "List",
                         "type": "OBJECT_REF"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Master list of all Versioned Composition references in this EHR."
                 },
                 "directory": {
@@ -2696,7 +2774,10 @@
                         "container_type": "List",
                         "type": "OBJECT_REF"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Optional additional Folder structures for this EHR. If set, the `_directory_` attribute refers to the first member."
                 }
             }
@@ -2787,7 +2868,10 @@
                         "container_type": "List",
                         "type": "EXTRACT_CHAPTER"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "The content extracted and serialised from the source repository for this Extract."
                 },
                 "specification": {
@@ -2830,7 +2914,10 @@
                         "container_type": "List",
                         "type": "EXTRACT_PARTICIPATION"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Participations relevant to the creation of this Extract."
                 }
             }
@@ -2879,7 +2966,10 @@
                         "container_type": "List",
                         "type": "EXTRACT_ITEM"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "The information content of this chapter."
                 }
             }
@@ -2965,7 +3055,10 @@
                         "container_type": "List",
                         "type": "String"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Other identifiers that may be used to find the entity at the target system, keyed by type. May include medicare numbers, drivers license number, tax number etc."
                 },
                 "item_list": {
@@ -2975,7 +3068,10 @@
                         "container_type": "List",
                         "type": "OBJECT_REF"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "List of Uids of items to be included in the Extract, in cases where individual items are being requested by id. More typically, this attribute is not used, and the `EXTRACT_SPEC._criteria query_` defines the Extract contents. If set, for openEHR data, these are Uids identifying the version containers."
                 }
             }
@@ -3013,7 +3109,10 @@
                         "container_type": "List",
                         "type": "EXTRACT_ITEM"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "List of Folders and content items in this Folder."
                 }
             }
@@ -3037,7 +3136,10 @@
                         "container_type": "List",
                         "type": "EXTRACT_ENTITY_MANIFEST"
                     },
-                    "cardinality": "|>=1|",
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
                     "is_mandatory": true,
                     "documentation": "List of entity manifests uids of items included in the Extract; for openEHR data, these are uids identifying the version containers."
                 }
@@ -3161,7 +3263,10 @@
                         "container_type": "List",
                         "type": "DV_PARSABLE"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Queries specifying the contents of this Extract."
                 },
                 "other_details": {
@@ -3196,7 +3301,10 @@
                         "container_type": "List",
                         "type": "DV_CODED_TEXT"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Set of Event names that will cause sending of update Extracts. Event types include:   \n\n* `|any_change|` - any change in content items matched by content specification, e.g. new versions of persistent compositions. If the content list allows matching of any, or a wide range of archetypes, this event type will match any additions to the record.\n* `|correction|` - match error corrections only, including deletions.\n* `|update|` - match updates (i.e. new versions) of included content items.\n\nCoded by openEHR Terminology group 'extract update trigger event type'."
                 },
                 "update_method": {
@@ -3318,7 +3426,10 @@
                         "container_type": "List",
                         "type": "ORIGINAL_VERSION"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "0 or more Versions from the original `VERSIONED_OBJECT`, according to the Extract specification."
                 }
             }
@@ -3482,7 +3593,10 @@
                         "container_type": "List",
                         "type": "X_CONTRIBUTION"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Content, in the form of a serialised Contributions."
                 }
             }
@@ -3512,7 +3626,10 @@
                         "container_type": "List",
                         "type": "VERSION"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Serialised Versions from Contribution in source system."
                 }
             }
@@ -3535,7 +3652,10 @@
                         "container_type": "List",
                         "type": "HIER_OBJECT_ID"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "List of Contributions to include \/ that are included in the Extract."
                 },
                 "contributions_since": {
@@ -3610,7 +3730,10 @@
                         "container_type": "List",
                         "type": "String"
                     },
-                    "cardinality": "|>=1|",
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
                     "is_mandatory": true,
                     "documentation": "Intended recipients, in the form of internet addresses."
                 },
@@ -3649,7 +3772,10 @@
                         "container_type": "List",
                         "type": "PARTY_IDENTITY"
                     },
-                    "cardinality": "|>=1|",
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
                     "is_mandatory": true,
                     "documentation": "Identities used by the party to identify itself, such as legal name, stage names, aliases, nicknames and so on."
                 },
@@ -3660,7 +3786,10 @@
                         "container_type": "List",
                         "type": "CONTACT"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Contacts for this party."
                 },
                 "details": {
@@ -3676,7 +3805,10 @@
                         "container_type": "List",
                         "type": "LOCATABLE_REF"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "References to relationships in which this Party takes part as target."
                 },
                 "relationships": {
@@ -3686,7 +3818,10 @@
                         "container_type": "List",
                         "type": "PARTY_RELATIONSHIP"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Relationships in which this Party takes part as source."
                 }
             }
@@ -3705,7 +3840,10 @@
                         "container_type": "List",
                         "type": "ADDRESS"
                     },
-                    "cardinality": "|>=1|",
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
                     "is_mandatory": true,
                     "documentation": "A set of address alternatives for this contact purpose and time validity combination."
                 },
@@ -3786,7 +3924,10 @@
                         "container_type": "List",
                         "type": "CAPABILITY"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "The capabilities of this role."
                 }
             }
@@ -3806,7 +3947,10 @@
                         "container_type": "List",
                         "type": "DV_TEXT"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Languages which can be used to communicate with this actor, in preferred order of use (if known, else order irrelevant)."
                 },
                 "roles": {
@@ -3816,7 +3960,10 @@
                         "container_type": "List",
                         "type": "PARTY_REF"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Identifiers of the Version container for each Role played by this Party."
                 }
             }
@@ -3987,7 +4134,10 @@
                         "container_type": "List",
                         "type": "CONTENT_ITEM"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "The content of this Composition. "
                 }
             }
@@ -4044,7 +4194,10 @@
                         "container_type": "List",
                         "type": "PARTICIPATION"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Parties involved in the healthcare event. These would normally include the physician(s) and often the patient (but not the latter if the clinical session is a pathology test for example). "
                 }
             }
@@ -4071,7 +4224,10 @@
                         "container_type": "List",
                         "type": "CONTENT_ITEM"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Ordered list of content items under this section, which may include:\n\n* more `SECTIONs`;\n* `ENTRYs`."
                 }
             }
@@ -4260,7 +4416,10 @@
                         "container_type": "List",
                         "type": "DV_TEXT"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Optional possibility of adding one or more reasons for this careflow step having been taken. Multiple reasons may occur in medication management for example."
                 }
             }
@@ -4323,7 +4482,10 @@
                         "container_type": "List",
                         "type": "PARTICIPATION"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "Other participations at `ENTRY` level. "
                 },
                 "workflow_id": {
@@ -4380,7 +4542,10 @@
                         "container_type": "List",
                         "type": "ACTIVITY"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": "List of all activities in Instruction. \n"
                 }
             }
@@ -4407,7 +4572,10 @@
                         "container_type": "List",
                         "type": "VIEW_ITEM"
                     },
-                    "cardinality": "|>=0|",
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
                     "documentation": ""
                 }
             }
