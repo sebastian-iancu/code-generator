@@ -227,14 +227,41 @@ class BMM extends AbstractWriter
             $umlTemplateParameter = $umlClass->umlTemplateParameters->get($umlProperty->templateParameterId);
             $bmmProperty['type'] = $umlTemplateParameter->name;
         } elseif (str_contains($umlProperty->type->name, '<')) {
-            $bmmProperty['_type'] = 'P_BMM_GENERIC_PROPERTY';
-            $bmmProperty['type_def'] = self::asTypeDef($umlProperty->type->name, $collectedUmlClasses);
+            if ($umlProperty->maxOccurs === -1) {
+                $bmmProperty['_type'] = 'P_BMM_CONTAINER_PROPERTY';
+                $bmmProperty['type_def'] = [
+                    'container_type' => 'List',
+                    'type_def' => array_merge(['_type' => 'P_BMM_GENERIC_TYPE'], self::asTypeDef($umlProperty->type->name, $collectedUmlClasses)),
+                ];
+            } else {
+                $bmmProperty['_type'] = 'P_BMM_GENERIC_PROPERTY';
+                $bmmProperty['type_def'] = self::asTypeDef($umlProperty->type->name, $collectedUmlClasses);
+            }
         } elseif ($umlProperty->maxOccurs === -1) {
             $bmmProperty['_type'] = 'P_BMM_CONTAINER_PROPERTY';
-            $bmmProperty['type_def'] = [
-                'container_type' => 'List',
-                'type' => $umlProperty->type->name,
-            ];
+            /** @var UMLClass $typeDefUmlClass */
+            $typeDefUmlClass = $collectedUmlClasses->get($umlProperty->type->name);
+            // exceptional situation on data = Octet[]
+            if ($umlProperty->type->name === 'Byte') {
+                $bmmProperty['type_def'] = [
+                    'container_type' => 'Array',
+                    'type' => 'Octet'
+                ];
+            } elseif ($typeDefUmlClass?->isGenericType()) {
+                $bmmProperty['type_def'] = [
+                    'container_type' => 'List',
+                    'type_def' => [
+                        '_type' => 'P_BMM_GENERIC_TYPE',
+                        'root_type' => $umlProperty->type->name,
+                        'generic_parameters' => $umlClass->isGenericType() ? $umlClass->getGenericParameterName() : $umlClass->name,
+                    ]
+                ];
+            } else {
+                $bmmProperty['type_def'] = [
+                    'container_type' => 'List',
+                    'type' => $umlProperty->type->name,
+                ];
+            }
             $bmmProperty['cardinality'] = [
                 'lower' => $umlProperty->minOccurs,
                 'upper_unbounded' => true,

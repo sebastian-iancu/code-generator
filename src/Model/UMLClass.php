@@ -69,7 +69,16 @@ class UMLClass extends AbstractItem
             $this->umlConstraints->add($item);
         }
 
-
         self::log('  Class [%s] was read.', $this->name);
+    }
+
+    public function isGenericType(): bool
+    {
+        return $this->umlTemplateParameters->count() > 0;
+    }
+
+    public function getGenericParameterName(): string
+    {
+        return (string)$this->umlTemplateParameters->getIterator()->key();
     }
 }

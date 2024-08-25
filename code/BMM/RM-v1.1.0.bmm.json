@@ -1558,7 +1558,11 @@
                     "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
-                        "type": "EVENT"
+                        "type_def": {
+                            "_type": "P_BMM_GENERIC_TYPE",
+                            "root_type": "EVENT",
+                            "generic_parameters": "T"
+                        }
                     },
                     "cardinality": {
                         "lower": 0,
@@ -1752,8 +1756,8 @@
                     "name": "data",
                     "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
-                        "container_type": "List",
-                        "type": "Byte"
+                        "container_type": "Array",
+                        "type": "Octet"
                     },
                     "cardinality": {
                         "lower": 0,
@@ -1778,8 +1782,8 @@
                     "name": "integrity_check",
                     "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
-                        "container_type": "List",
-                        "type": "Byte"
+                        "container_type": "Array",
+                        "type": "Octet"
                     },
                     "cardinality": {
                         "lower": 0,
@@ -2001,7 +2005,11 @@
                     "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
-                        "type": "REFERENCE_RANGE"
+                        "type_def": {
+                            "_type": "P_BMM_GENERIC_TYPE",
+                            "root_type": "REFERENCE_RANGE",
+                            "generic_parameters": "DV_ORDERED"
+                        }
                     },
                     "cardinality": {
                         "lower": 0,
@@ -2121,12 +2129,16 @@
                 },
                 "other_reference_ranges": {
                     "name": "other_reference_ranges",
-                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
-                        "root_type": "REFERENCE_RANGE",
-                        "generic_parameters": [
-                            "DV_PROPORTION"
-                        ]
+                        "container_type": "List",
+                        "type_def": {
+                            "_type": "P_BMM_GENERIC_TYPE",
+                            "root_type": "REFERENCE_RANGE",
+                            "generic_parameters": [
+                                "DV_PROPORTION"
+                            ]
+                        }
                     },
                     "documentation": "Optional tagged other reference ranges for this value in its particular measurement context."
                 }
@@ -2235,12 +2247,16 @@
                 },
                 "other_reference_ranges": {
                     "name": "other_reference_ranges",
-                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
-                        "root_type": "REFERENCE_RANGE",
-                        "generic_parameters": [
-                            "DV_QUANTITY"
-                        ]
+                        "container_type": "List",
+                        "type_def": {
+                            "_type": "P_BMM_GENERIC_TYPE",
+                            "root_type": "REFERENCE_RANGE",
+                            "generic_parameters": [
+                                "DV_QUANTITY"
+                            ]
+                        }
                     },
                     "documentation": "Optional tagged other reference ranges for this value in its particular measurement context."
                 },
@@ -2285,12 +2301,16 @@
                 },
                 "other_reference_ranges": {
                     "name": "other_reference_ranges",
-                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
-                        "root_type": "REFERENCE_RANGE",
-                        "generic_parameters": [
-                            "DV_COUNT"
-                        ]
+                        "container_type": "List",
+                        "type_def": {
+                            "_type": "P_BMM_GENERIC_TYPE",
+                            "root_type": "REFERENCE_RANGE",
+                            "generic_parameters": [
+                                "DV_COUNT"
+                            ]
+                        }
                     },
                     "documentation": "Optional tagged other reference ranges for this value in its particular measurement context."
                 }
@@ -3424,7 +3444,11 @@
                     "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
-                        "type": "ORIGINAL_VERSION"
+                        "type_def": {
+                            "_type": "P_BMM_GENERIC_TYPE",
+                            "root_type": "ORIGINAL_VERSION",
+                            "generic_parameters": "T"
+                        }
                     },
                     "cardinality": {
                         "lower": 0,
@@ -3624,7 +3648,11 @@
                     "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
                         "container_type": "List",
-                        "type": "VERSION"
+                        "type_def": {
+                            "_type": "P_BMM_GENERIC_TYPE",
+                            "root_type": "VERSION",
+                            "generic_parameters": "X_CONTRIBUTION"
+                        }
                     },
                     "cardinality": {
                         "lower": 0,

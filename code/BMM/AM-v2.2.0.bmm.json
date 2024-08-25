@@ -1008,12 +1008,16 @@
             "properties": {
                 "constraint": {
                     "name": "constraint",
-                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
-                        "root_type": "Interval",
-                        "generic_parameters": [
-                            "Integer"
-                        ]
+                        "container_type": "List",
+                        "type_def": {
+                            "_type": "P_BMM_GENERIC_TYPE",
+                            "root_type": "Interval",
+                            "generic_parameters": [
+                                "Integer"
+                            ]
+                        }
                     },
                     "documentation": "Formal constraint on `Integer`, in the form of `List<Interval<Integer>>`."
                 }
@@ -1028,12 +1032,16 @@
             "properties": {
                 "constraint": {
                     "name": "constraint",
-                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
-                        "root_type": "Interval",
-                        "generic_parameters": [
-                            "Real"
-                        ]
+                        "container_type": "List",
+                        "type_def": {
+                            "_type": "P_BMM_GENERIC_TYPE",
+                            "root_type": "Interval",
+                            "generic_parameters": [
+                                "Real"
+                            ]
+                        }
                     },
                     "documentation": "Formal constraint on `Real`, in the form of `List<Interval<Real>>`."
                 }
@@ -1127,12 +1135,16 @@
             "properties": {
                 "constraint": {
                     "name": "constraint",
-                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
-                        "root_type": "Interval",
-                        "generic_parameters": [
-                            "Iso8601_time"
-                        ]
+                        "container_type": "List",
+                        "type_def": {
+                            "_type": "P_BMM_GENERIC_TYPE",
+                            "root_type": "Interval",
+                            "generic_parameters": [
+                                "Iso8601_time"
+                            ]
+                        }
                     },
                     "documentation": "Formal constraint on the assumed primitive `Iso8601_time` type, in the form of one or more  `Interval<Iso8601_time>`.\n\nFor a pattern constraint or no constraint, use an empty list."
                 }
@@ -1147,12 +1159,16 @@
             "properties": {
                 "constraint": {
                     "name": "constraint",
-                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
-                        "root_type": "Interval",
-                        "generic_parameters": [
-                            "Iso8601_date"
-                        ]
+                        "container_type": "List",
+                        "type_def": {
+                            "_type": "P_BMM_GENERIC_TYPE",
+                            "root_type": "Interval",
+                            "generic_parameters": [
+                                "Iso8601_date"
+                            ]
+                        }
                     },
                     "documentation": "Formal constraint on the assumed primitive `Iso8601_date` type, in the form of one or more `Interval<Iso8601_date>`.\n\nFor a pattern constraint or no constraint, use an empty list."
                 }
@@ -1167,12 +1183,16 @@
             "properties": {
                 "constraint": {
                     "name": "constraint",
-                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
-                        "root_type": "Interval",
-                        "generic_parameters": [
-                            "Iso8601_date_time"
-                        ]
+                        "container_type": "List",
+                        "type_def": {
+                            "_type": "P_BMM_GENERIC_TYPE",
+                            "root_type": "Interval",
+                            "generic_parameters": [
+                                "Iso8601_date_time"
+                            ]
+                        }
                     },
                     "documentation": "Formal constraint on the assumed primitive `Iso8601_date_time` type, in the form of one or more `Interval<Iso8601_date_time>`.\n\nFor a pattern constraint or no constraint, use an empty list."
                 }
@@ -1187,12 +1207,16 @@
             "properties": {
                 "constraint": {
                     "name": "constraint",
-                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
                     "type_def": {
-                        "root_type": "Interval",
-                        "generic_parameters": [
-                            "Iso8601_duration"
-                        ]
+                        "container_type": "List",
+                        "type_def": {
+                            "_type": "P_BMM_GENERIC_TYPE",
+                            "root_type": "Interval",
+                            "generic_parameters": [
+                                "Iso8601_duration"
+                            ]
+                        }
                     },
                     "documentation": "Formal constraint on the assumed primitive `Iso8601_duration` type, in the form of one or more `Interval<Iso8601_duration>`.\n\nFor a pattern constraint or no constraint, use an empty list."
                 }
