@@ -239,7 +239,7 @@ class BMM extends AbstractWriter
             }
         } elseif ($umlProperty->maxOccurs === -1) {
             $bmmProperty['_type'] = 'P_BMM_CONTAINER_PROPERTY';
-            /** @var UMLClass $typeDefUmlClass */
+            /** @var UMLClass|null $typeDefUmlClass */
             $typeDefUmlClass = $collectedUmlClasses->get($umlProperty->type->name);
             // exceptional situation on data = Octet[]
             if ($umlProperty->type->name === 'Byte') {
@@ -247,7 +247,7 @@ class BMM extends AbstractWriter
                     'container_type' => 'Array',
                     'type' => 'Octet'
                 ];
-            } elseif ($typeDefUmlClass?->isGenericType()) {
+            } elseif ($typeDefUmlClass && $typeDefUmlClass->isGenericType()) {
                 $bmmProperty['type_def'] = [
                     'container_type' => 'List',
                     'type_def' => [
