@@ -40,7 +40,7 @@ ij_asciidoc_blank_lines_keep_after_header = 1
 ij_asciidoc_formatting_enabled = true
 ij_asciidoc_one_sentence_per_line = true
 
-[{*.ant,*.composition,*.fxml,*.jhm,*.jnlp,*.jrxml,*.opt,*.rng,*.tld,*.tom,*.wsdl,*.xml,*.xsd,*.xsl,*.xslt,*.xul,phpunit.xml.dist}]
+[{*.ant,*.composition,*.fxml,*.jhm,*.jnlp,*.jrxml,*.opt,*.rng,*.tld,*.tom,*.wsdl,*.xml,*.xsd,*.xsl,*.xslt,*.xmi,*.xul,phpunit.xml.dist}]
 ij_xml_align_attributes = true
 ij_xml_align_text = false
 ij_xml_attribute_wrap = normal
