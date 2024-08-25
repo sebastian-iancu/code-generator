@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+<?php
+
+namespace Console;
+
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use Console\Command\GenerateAll;
+use Console\Command\GenerateBmm;
+use Console\Command\GenerateInternalModel;
+use Symfony\Component\Console\Application;
+
+try {
+    $console = new Application();
+    $console->add(new GenerateBmm());
+    $console->add(new GenerateInternalModel());
+    $console->add(new GenerateAll());
+    exit($console->run());
+} catch (\Throwable $exception) {
+    error_log((string)$exception);
+    exit(1);
+}

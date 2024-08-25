@@ -9,7 +9,8 @@
         "ext-libxml": "*",
         "ext-simplexml": "*",
         "nette/php-generator": "^4.0.7",
-        "nikic/php-parser": "v5.1.0"
+        "nikic/php-parser": "v5.1.0",
+        "symfony/console": "^7.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^11.3",
@@ -34,6 +35,7 @@
     },
     "autoload": {
         "psr-4": {
+            "Console\\": "bin/",
             "OpenEHR\\Tools\\CodeGen\\": "src/"
         },
         "files": [
@@ -49,6 +51,7 @@
     "bin": [
     ],
     "scripts": {
+        "generate": "bin/generate",
         "phpunit": "phpunit --configuration tests/phpunit.xml",
         "phplint": "parallel-lint . --exclude vendor",
         "phpstan": "phpstan analyse --configuration tests/phpstan.neon --memory-limit 2G",
