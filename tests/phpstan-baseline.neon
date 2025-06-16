@@ -15,10 +15,6 @@ parameters:
 			count: 1
 			path: ../src/Model/UMLFile.php
 
-		-
-			message: "#^Ternary operator condition is always true\\.$#"
-			count: 1
-			path: ../src/Writer/BMM.php
 
 
 

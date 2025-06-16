@@ -8,14 +8,14 @@
         "ext-json": "*",
         "ext-libxml": "*",
         "ext-simplexml": "*",
-        "nette/php-generator": "^4.0.7",
-        "nikic/php-parser": "v5.1.0",
+        "nette/php-generator": "^4.1",
+        "nikic/php-parser": "^5.5",
         "symfony/console": "^7.1"
     },
     "require-dev": {
-        "phpunit/phpunit": "^11.3",
-        "phpstan/phpstan": "^1.11",
         "php-parallel-lint/php-parallel-lint": "^1.4",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^12.0",
         "roave/security-advisories": "dev-latest"
     },
     "authors": [
@@ -58,6 +58,7 @@
         "generate-phpstan-baseline": "@phpstan --generate-baseline tests/phpstan-baseline.neon"
     },
     "scripts-descriptions": {
+        "generate": "Runs generator",
         "phpunit": "Runs phpunit with tests/phpunit.xml configuration.",
         "phplint": "Checks the PHP syntax of some relevant project files. (runs in parallel threads).",
         "phpstan": "Runs static analizer based on tests/phpstan.neon file configration.",
