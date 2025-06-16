@@ -1,7 +1,7 @@
 {
-    "name": "code24-nl/xmi-code-generator",
+    "name": "sebastian-iancu/xmi-code-generator",
     "description": "XMI Code Generator for openEHR UML files",
-    "license": "proprietary",
+    "license": "Apache-2.0",
     "type": "project",
     "require": {
         "php": "^8.3",
