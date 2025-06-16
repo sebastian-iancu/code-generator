@@ -32,7 +32,7 @@ class GenerateAll extends Command
             $writer->write();
             $reader->read('RM-v1.1.0.xmi');
             $writer = new WriteManager($reader);
-            $writer->addWriter(new InternalModel('BASE_and_RM-v1.1.0.internal.json'));
+            $writer->addWriter(new InternalModel('BASE_v1.2.0_and_RM-v1.1.0.internal.json'));
             $writer->write();
 
             // older BASE
@@ -48,16 +48,31 @@ class GenerateAll extends Command
             $reader->read('BASE-v1.2.0.xmi');
             $reader->read('AM-v2.2.0.xmi');
             $writer = new WriteManager($reader);
-            $writer->addWriter(new InternalModel('BASE_and_AM-v2.2.0.internal.json'));
+            $writer->addWriter(new InternalModel('BASE_v1.2.0_and_AM-v2.2.0.internal.json'));
             $writer->write();
             $reader->read('RM-v1.1.0.xmi');
             $writer = new WriteManager($reader);
-            $writer->addWriter(new InternalModel('all.internal.json'));
+            $writer->addWriter(new InternalModel('BASE_v1.2.0_and_AM-v2.2.0_and_RM-v1.1.0.internal.json'));
+            $writer->addWriter(new BMM());
             $writer->write();
+            $reader->read('AM-v2.3.0.xmi');
             $writer = new WriteManager($reader);
+            $writer->addWriter(new InternalModel('BASE_v1.2.0_and_AM-v2.3.0_and_RM-v1.1.0.internal.json'));
             $writer->addWriter(new BMM());
             $writer->write();
 
+            // development
+            $reader = new ReadManager();
+            $reader->read('BASE-development.xmi');
+            $reader->read('AM-development.xmi');
+            $writer = new WriteManager($reader);
+            $writer->addWriter(new InternalModel('BASE_development_and_AM-development.internal.json'));
+            $writer->write();
+            $reader->read('RM-development.xmi');
+            $writer = new WriteManager($reader);
+            $writer->addWriter(new InternalModel('BASE_development_and_AM-development_and_RM-development.internal.json'));
+            $writer->addWriter(new BMM());
+            $writer->write();
 
         } catch (\UnhandledMatchError $e) {
             $output->writeln((string)$e);

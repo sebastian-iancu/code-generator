@@ -1,0 +1,3155 @@
+{
+    "bmm_version": "2.3",
+    "rm_publisher": "openehr",
+    "schema_name": "am",
+    "rm_release": "AM-development",
+    "schema_revision": "AM-development.1",
+    "schema_lifecycle_state": "stable",
+    "schema_description": "openEHR Archetype Model",
+    "schema_author": "xmi-code-generator",
+    "packages": {
+        "org.openehr.am.aom2": {
+            "name": "org.openehr.am.aom2",
+            "packages": {
+                "archetype": {
+                    "name": "archetype",
+                    "classes": [
+                        "ARCHETYPE",
+                        "AUTHORED_ARCHETYPE",
+                        "TEMPLATE",
+                        "OPERATIONAL_TEMPLATE",
+                        "TEMPLATE_OVERLAY",
+                        "ARCHETYPE_HRID"
+                    ]
+                },
+                "constraint_model": {
+                    "name": "constraint_model",
+                    "packages": {
+                        "primitive": {
+                            "name": "primitive",
+                            "classes": [
+                                "C_BOOLEAN",
+                                "C_STRING",
+                                "C_INTEGER",
+                                "C_REAL",
+                                "C_ORDERED",
+                                "C_TERMINOLOGY_CODE",
+                                "C_TEMPORAL",
+                                "C_TIME",
+                                "C_DATE",
+                                "C_DATE_TIME",
+                                "C_DURATION",
+                                "C_TEMPORAL_DEFINITIONS",
+                                "CONSTRAINT_STATUS"
+                            ]
+                        }
+                    },
+                    "classes": [
+                        "ARCHETYPE_CONSTRAINT",
+                        "C_OBJECT",
+                        "C_ATTRIBUTE",
+                        "C_DEFINED_OBJECT",
+                        "C_COMPLEX_OBJECT_PROXY",
+                        "ARCHETYPE_SLOT",
+                        "C_PRIMITIVE_OBJECT",
+                        "SIBLING_ORDER",
+                        "C_ATTRIBUTE_TUPLE",
+                        "C_PRIMITIVE_TUPLE",
+                        "C_SECOND_ORDER",
+                        "C_ARCHETYPE_ROOT",
+                        "C_COMPLEX_OBJECT",
+                        "ARCHETYPE_ID_CONSTRAINT"
+                    ]
+                },
+                "terminology": {
+                    "name": "terminology",
+                    "classes": [
+                        "ARCHETYPE_TERM",
+                        "TERMINOLOGY_RELATION",
+                        "VALUE_SET",
+                        "ARCHETYPE_TERMINOLOGY"
+                    ]
+                },
+                "definitions": {
+                    "name": "definitions",
+                    "classes": [
+                        "ADL_CODE_DEFINITIONS"
+                    ]
+                },
+                "rm_overlay": {
+                    "name": "rm_overlay",
+                    "classes": [
+                        "RM_ATTRIBUTE_VISIBILITY",
+                        "RM_OVERLAY",
+                        "VISIBILITY_TYPE"
+                    ]
+                },
+                "persistence": {
+                    "name": "persistence",
+                    "packages": {
+                        "constraint_model": {
+                            "name": "constraint_model",
+                            "classes": [
+                                "P_ARCHETYPE_CONSTRAINT",
+                                "P_C_OBJECT",
+                                "P_C_ATTRIBUTE",
+                                "P_C_DEFINED_OBJECT",
+                                "P_C_COMPLEX_OBJECT_PROXY",
+                                "P_ARCHETYPE_SLOT",
+                                "P_C_PRIMITIVE_OBJECT",
+                                "P_C_COMPLEX_OBJECT",
+                                "P_C_ATTRIBUTE_TUPLE",
+                                "P_C_ARCHETYPE_ROOT"
+                            ]
+                        },
+                        "primitive": {
+                            "name": "primitive",
+                            "classes": [
+                                "P_C_BOOLEAN",
+                                "P_C_STRING",
+                                "P_C_INTEGER",
+                                "P_C_REAL",
+                                "P_C_ORDERED",
+                                "P_C_TERMINOLOGY_CODE",
+                                "P_C_TEMPORAL",
+                                "P_C_TIME",
+                                "P_C_DATE",
+                                "P_C_DATE_TIME",
+                                "P_C_DURATION"
+                            ]
+                        },
+                        "archetype": {
+                            "name": "archetype",
+                            "classes": [
+                                "P_ARCHETYPE",
+                                "P_AUTHORED_ARCHETYPE",
+                                "P_TEMPLATE",
+                                "P_OPERATIONAL_TEMPLATE",
+                                "P_ARCHETYPE_HRID",
+                                "P_AUTHORED_RESOURCE"
+                            ]
+                        },
+                        "terminology": {
+                            "name": "terminology",
+                            "classes": [
+                                "P_ARCHETYPE_TERMINOLOGY"
+                            ]
+                        }
+                    }
+                },
+                "profile": {
+                    "name": "profile",
+                    "classes": [
+                        "AOM_PROFILE",
+                        "AOM_TYPE_MAPPING",
+                        "AOM_PROPERTY_MAPPING"
+                    ]
+                },
+                "rules": {
+                    "name": "rules",
+                    "classes": [
+                        "EXPR_ARCHETYPE_ID_CONSTRAINT",
+                        "EXPR_ARCHETYPE_REF",
+                        "EXPR_CONSTRAINT"
+                    ]
+                }
+            }
+        },
+        "org.openehr.am.aom14": {
+            "name": "org.openehr.am.aom14",
+            "packages": {
+                "openehr_archetype_profile": {
+                    "name": "openehr_archetype_profile",
+                    "classes": [
+                        "C_ORDINAL",
+                        "C_CODED_TEXT",
+                        "C_QUANTITY",
+                        "C_QUANTITY_ITEM",
+                        "ORDINAL"
+                    ]
+                },
+                "archetype": {
+                    "name": "archetype",
+                    "packages": {
+                        "assertion": {
+                            "name": "assertion",
+                            "classes": [
+                                "ASSERTION",
+                                "ASSERTION_VARIABLE",
+                                "EXPR_ITEM",
+                                "EXPR_LEAF",
+                                "EXPR_OPERATOR",
+                                "EXPR_UNARY_OPERATOR",
+                                "EXPR_BINARY_OPERATOR",
+                                "OPERATOR_KIND"
+                            ]
+                        },
+                        "constraint_model": {
+                            "name": "constraint_model",
+                            "classes": [
+                                "ARCHETYPE_CONSTRAINT",
+                                "C_OBJECT",
+                                "C_ATTRIBUTE",
+                                "C_DEFINED_OBJECT",
+                                "CARDINALITY",
+                                "ARCHETYPE_INTERNAL_REF",
+                                "ARCHETYPE_SLOT",
+                                "C_SINGLE_ATTRIBUTE",
+                                "CONSTRAINT_REF",
+                                "C_MULTIPLE_ATTRIBUTE",
+                                "C_DOMAIN_TYPE",
+                                "C_REFERENCE_OBJECT",
+                                "C_PRIMITIVE_OBJECT",
+                                "C_COMPLEX_OBJECT"
+                            ]
+                        },
+                        "ontology": {
+                            "name": "ontology",
+                            "classes": [
+                                "ARCHETYPE_TERM",
+                                "ARCHETYPE_ONTOLOGY"
+                            ]
+                        },
+                        "primitive": {
+                            "name": "primitive",
+                            "classes": [
+                                "C_BOOLEAN",
+                                "C_STRING",
+                                "C_INTEGER",
+                                "C_REAL",
+                                "C_TIME",
+                                "C_DATE",
+                                "C_DATE_TIME",
+                                "C_DURATION",
+                                "C_PRIMITIVE"
+                            ]
+                        }
+                    },
+                    "classes": [
+                        "ARCHETYPE"
+                    ]
+                }
+            }
+        }
+    },
+    "primitive_types": [],
+    "class_definitions": {
+        "ARCHETYPE": {
+            "name": "ARCHETYPE",
+            "ancestors": [
+                "AUTHORED_RESOURCE"
+            ],
+            "documentation": "Archetype equivalent to ARCHETYPED class in Common reference model. Defines semantics of identfication, lifecycle, versioning, composition and specialisation.",
+            "properties": {
+                "definition": {
+                    "name": "definition",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "C_COMPLEX_OBJECT",
+                    "is_mandatory": true,
+                    "documentation": "Root node of the definition of this archetype."
+                },
+                "ontology": {
+                    "name": "ontology",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "ARCHETYPE_ONTOLOGY",
+                    "is_mandatory": true,
+                    "documentation": "The ontology of the archetype."
+                },
+                "adl_version": {
+                    "name": "adl_version",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "ADL version if archetype was read in from an ADL sharable archetype."
+                },
+                "archetype_id": {
+                    "name": "archetype_id",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "ARCHETYPE_ID",
+                    "is_mandatory": true,
+                    "documentation": "Multi-axial identifier of this archetype in archetype space."
+                },
+                "uid": {
+                    "name": "uid",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "HIER_OBJECT_ID",
+                    "documentation": "OID identifier of this archetype."
+                },
+                "concept": {
+                    "name": "concept",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "The normative meaning of the archetype as a whole, expressed as a local archetype code, typically \u201cat0000\u201d."
+                },
+                "parent_archetype_id": {
+                    "name": "parent_archetype_id",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "ARCHETYPE_ID",
+                    "documentation": "Identifier of the specialisation parent of this archetype."
+                },
+                "invariants": {
+                    "name": "invariants",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "ASSERTION"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "Invariant statements about this object. Statements are expressed in first order predicate logic, and usually refer to at least two attributes."
+                }
+            }
+        },
+        "AUTHORED_ARCHETYPE": {
+            "name": "AUTHORED_ARCHETYPE",
+            "ancestors": [
+                "ARCHETYPE",
+                "AUTHORED_RESOURCE"
+            ],
+            "documentation": "Root object of a standalone, authored archetype, including all meta-data, description, other identifiers and lifecycle.",
+            "properties": {
+                "adl_version": {
+                    "name": "adl_version",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "ADL version if archetype was read in from an ADL sharable archetype."
+                },
+                "build_uid": {
+                    "name": "build_uid",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "UUID",
+                    "is_mandatory": true,
+                    "documentation": "Unique identifier of this archetype artefact instance. A new identifier is assigned every time the content is changed by a tool. Used by tools to distinguish different revisions and\/or interim snapshots of the same artefact."
+                },
+                "rm_release": {
+                    "name": "rm_release",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Semver.org compatible release of the most recent reference model release on which the archetype in its current version is based. This does not imply conformance only to this release, since an archetype may be valid with respect to multiple releases of a reference model."
+                },
+                "is_generated": {
+                    "name": "is_generated",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": "If True, indicates that this artefact was machine-generated from some other source, in which case, tools would expect to overwrite this artefact on a new generation. Editing tools should set this value to False when a user starts to manually edit an archetype."
+                },
+                "other_meta_data": {
+                    "name": "other_meta_data",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "String"
+                        ]
+                    },
+                    "is_mandatory": true,
+                    "documentation": ""
+                }
+            }
+        },
+        "TEMPLATE": {
+            "name": "TEMPLATE",
+            "ancestors": [
+                "AUTHORED_ARCHETYPE"
+            ],
+            "documentation": "Class representing source template, i.e. a kind of archetype that may include template overlays, and may be restricted by tools to only defining mandations, prohibitions, and restrictions on elements already defined in the flat parent.",
+            "properties": {
+                "overlays": {
+                    "name": "overlays",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "TEMPLATE_OVERLAY"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "Overlay archetypes, i.e. partial archetypes that include full definition and terminology, but logically derive all their meta-data from the owning template."
+                }
+            }
+        },
+        "OPERATIONAL_TEMPLATE": {
+            "name": "OPERATIONAL_TEMPLATE",
+            "ancestors": [
+                "AUTHORED_ARCHETYPE"
+            ],
+            "documentation": "Root object of an operational template. An operational template is derived from a `TEMPLATE` definition and the `ARCHETYPEs` and\/or `TEMPLATE_OVERLAYs` mentioned by that template by a process of flattening, and potentially removal of unneeded languages and terminologies.\n\nAn operational template is used for generating and validating RM-canonical instance data, and also as a source artefact for generating other downstream technical artefacts, including XML schemas, APIs and UI form definitions.",
+            "properties": {
+                "component_terminologies": {
+                    "name": "component_terminologies",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "ARCHETYPE_TERMINOLOGY"
+                        ]
+                    },
+                    "documentation": "Compendium of flattened terminologies of archetypes  referenced from this template, keyed by archetype identifier. This will almost always be present in a template."
+                },
+                "terminology_extracts": {
+                    "name": "terminology_extracts",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "ARCHETYPE_TERMINOLOGY"
+                        ]
+                    },
+                    "documentation": "Compendium of flattened terminology extracts (i.e. from external terminologies) from archetypes referenced from this template, keyed by archetype identifier."
+                }
+            }
+        },
+        "TEMPLATE_OVERLAY": {
+            "name": "TEMPLATE_OVERLAY",
+            "ancestors": [
+                "ARCHETYPE"
+            ],
+            "documentation": "A concrete form of the bare `ARCHETYPE` class, used to represent overlays in a source template. Overlays have no meta-data of their own, and are instead documented by their owning template."
+        },
+        "ARCHETYPE_HRID": {
+            "name": "ARCHETYPE_HRID",
+            "documentation": "Human-readable structured identifier (HRID) for an archetype or template.",
+            "properties": {
+                "namespace": {
+                    "name": "namespace",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Reverse domain name namespace identifier."
+                },
+                "rm_publisher": {
+                    "name": "rm_publisher",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Name of the Reference Model publisher."
+                },
+                "rm_package": {
+                    "name": "rm_package",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Name of the package in whose reachability graph the `_rm_class_` class is found (there can be more than one possibility in many reference models)."
+                },
+                "rm_class": {
+                    "name": "rm_class",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Name of the root class of this archetype."
+                },
+                "concept_id": {
+                    "name": "concept_id",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "The short concept name of the archetype as used in the multi-axial `_archetype_hrid_`."
+                },
+                "release_version": {
+                    "name": "release_version",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "The full numeric version of this archetype consisting of 3 parts, e.g. `\"1.8.2\"`. The `_archetype_hrid_` feature includes only the major version."
+                },
+                "version_status": {
+                    "name": "version_status",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "VERSION_STATUS",
+                    "is_mandatory": true,
+                    "documentation": "The status of the version, i.e.:\n\n* released: (empty string)\n* release_candidate: `\"rc\"`\n* alpha: `\"alpha\"`\n* beta: `\"beta\"`"
+                },
+                "build_count": {
+                    "name": "build_count",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "The build count since last increment of any version part."
+                }
+            }
+        },
+        "ARCHETYPE_CONSTRAINT": {
+            "name": "ARCHETYPE_CONSTRAINT",
+            "is_abstract": true,
+            "documentation": "Archetype equivalent to LOCATABLE class in openEHR Common reference model. Defines common constraints for any inheritor of LOCATABLE in any reference model. "
+        },
+        "C_OBJECT": {
+            "name": "C_OBJECT",
+            "is_abstract": true,
+            "ancestors": [
+                "ARCHETYPE_CONSTRAINT"
+            ],
+            "documentation": "Abstract model of constraint on any kind of object node. ",
+            "properties": {
+                "rm_type_name": {
+                    "name": "rm_type_name",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Reference model type that this node corresponds to. "
+                },
+                "occurrences": {
+                    "name": "occurrences",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Interval",
+                        "generic_parameters": [
+                            "Integer"
+                        ]
+                    },
+                    "is_mandatory": true,
+                    "documentation": "Occurrences of this object node in the data, under the owning attribute. Upper limit can only be greater than 1 if owning attribute has a cardinality of more than 1)."
+                },
+                "node_id": {
+                    "name": "node_id",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Semantic identifier of this node, used to dis-tinguish sibling nodes. All nodes must have a node_id; for nodes under a container C_ATTRIBUTE, the id must be an id-code must be defined in the archetype terminolo-gy. For valid structures, all node ids are id-codes.\nFor C_PRIMITIVE_OBJECTs, it will have the special value Primitive_node_id.\n"
+                }
+            }
+        },
+        "C_ATTRIBUTE": {
+            "name": "C_ATTRIBUTE",
+            "is_abstract": true,
+            "ancestors": [
+                "ARCHETYPE_CONSTRAINT"
+            ],
+            "documentation": "Abstract model of constraint on any kind of attribute node.",
+            "properties": {
+                "rm_attribute_name": {
+                    "name": "rm_attribute_name",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Reference model attribute within the enclosing type represented by a C_OBJECT."
+                },
+                "existence": {
+                    "name": "existence",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Interval",
+                        "generic_parameters": [
+                            "Integer"
+                        ]
+                    },
+                    "is_mandatory": true,
+                    "documentation": "Constraint on every attribute, regardless of whether it is singular or of a container type, which indicates whether its target object exists or not (i.e. is mandatory or not)."
+                },
+                "children": {
+                    "name": "children",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "C_OBJECT"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "Child C_OBJECT nodes. Each such node represents a constraint on the type of this attribute in its reference model. Multiples occur both for multiple items in the case of container attributes, and alternatives in the case of singular attributes. "
+                }
+            }
+        },
+        "C_DEFINED_OBJECT": {
+            "name": "C_DEFINED_OBJECT",
+            "is_abstract": true,
+            "ancestors": [
+                "C_OBJECT"
+            ],
+            "documentation": "Abstract parent type of C_OBJECT subtypes that are defined by value, i.e. whose definitions are actually in the archetype rather than being by reference. ",
+            "properties": {
+                "assumed_value": {
+                    "name": "assumed_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Any",
+                    "documentation": "Value to be assumed if none sent in data."
+                }
+            }
+        },
+        "C_COMPLEX_OBJECT_PROXY": {
+            "name": "C_COMPLEX_OBJECT_PROXY",
+            "ancestors": [
+                "C_OBJECT"
+            ],
+            "documentation": "A constraint defined by proxy, using a reference to an object constraint defined elsewhere in the same archetype. Note that since this object refers to another node, there are two objects with available occurrences values. The local occurrences value on a `COMPLEX_OBJECT_PROXY` should always be used; when setting this from a serialised form, if no occurrences is mentioned, the target occurrences should be used (not the standard default of `{1..1}`); otherwise the locally specified occurrences should be used as normal. When serialising out, if the occurrences is the same as that of the target, it can be left out. ",
+            "properties": {
+                "target_path": {
+                    "name": "target_path",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Reference to an object node using archetype path notation."
+                }
+            }
+        },
+        "ARCHETYPE_SLOT": {
+            "name": "ARCHETYPE_SLOT",
+            "ancestors": [
+                "C_REFERENCE_OBJECT"
+            ],
+            "documentation": "Constraint describing a  slot' where another archetype can occur. ",
+            "properties": {
+                "includes": {
+                    "name": "includes",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "ASSERTION"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "List of constraints defining other archetypes that could be included at this point. "
+                },
+                "excludes": {
+                    "name": "excludes",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "ASSERTION"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "List of constraints defining other archetypes that cannot be included at this point. "
+                }
+            }
+        },
+        "C_PRIMITIVE_OBJECT": {
+            "name": "C_PRIMITIVE_OBJECT",
+            "ancestors": [
+                "C_DEFINED_OBJECT"
+            ],
+            "documentation": "Constraint on a primitive type.",
+            "properties": {
+                "item": {
+                    "name": "item",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "C_PRIMITIVE",
+                    "is_mandatory": true,
+                    "documentation": "Object actually defining the constraint."
+                }
+            }
+        },
+        "SIBLING_ORDER": {
+            "name": "SIBLING_ORDER",
+            "documentation": "Defines the order indicator that can be used on a `C_OBJECT` within a container attribute in a specialised archetype to indicate its order with respect to a sibling defined in a higher specialisation level.\n\nMisuse: This type cannot be used on a `C_OBJECT` other than one within a container attribute in a specialised archetype.",
+            "properties": {
+                "is_before": {
+                    "name": "is_before",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": "True if the order relationship is \u2018before\u2019, if False, it is \u2018after\u2019."
+                },
+                "sibling_node_id": {
+                    "name": "sibling_node_id",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Node identifier of sibling before or after which this node should come."
+                }
+            }
+        },
+        "C_ATTRIBUTE_TUPLE": {
+            "name": "C_ATTRIBUTE_TUPLE",
+            "ancestors": [
+                "C_SECOND_ORDER"
+            ],
+            "documentation": "Object representing a constraint on an attribute tuple, i.e. a group of attributes that are constrained together. Typically used for representing co-varying constraints like `{units, range}` constraints.",
+            "properties": {
+                "tuples": {
+                    "name": "tuples",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "C_PRIMITIVE_TUPLE"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "Tuple definitions."
+                },
+                "members": {
+                    "name": "members",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "C_ATTRIBUTE"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "List of `C_ATTRIBUTEs` forming the definition of the tuple."
+                }
+            }
+        },
+        "C_PRIMITIVE_TUPLE": {
+            "name": "C_PRIMITIVE_TUPLE",
+            "ancestors": [
+                "C_SECOND_ORDER"
+            ],
+            "documentation": "Class representing a single object tuple instance in a tuple constraint. Each such instance is a vector of object constraints, where each member (each `C_PRIMITIVE_OBJECT`) corresponds to one of the `C_ATTRIBUTEs` referred to by the owning `C_ATTRIBUTE_TUPLE`.",
+            "properties": {
+                "members": {
+                    "name": "members",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "C_PRIMITIVE_OBJECT"
+                    },
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
+                    "is_mandatory": true,
+                    "documentation": "Object constraint members of this tuple group."
+                }
+            }
+        },
+        "C_SECOND_ORDER": {
+            "name": "C_SECOND_ORDER",
+            "is_abstract": true,
+            "documentation": "Abstract parent of classes defining second order constraints.",
+            "properties": {
+                "members": {
+                    "name": "members",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "ARCHETYPE_CONSTRAINT"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "Members of this second order constrainer. Normally redefined in descendants."
+                }
+            }
+        },
+        "C_ARCHETYPE_ROOT": {
+            "name": "C_ARCHETYPE_ROOT",
+            "ancestors": [
+                "C_COMPLEX_OBJECT"
+            ],
+            "documentation": "A specialisation of `C_COMPLEX_OBJECT` whose node_id attribute is an archetype identifier rather than the normal internal node code (i.e. id-code).\n\nUsed in two situations. The first is to represent an 'external reference' to an archetype from within another archetype or template. This supports re-use. The second use is within a template, where it is used as a slot-filler. \n\nFor a new external reference, the `_node_id_` is set in the normal way, i.e. with a new code at the specialisation level of the archetype.\n\nFor a slot-filler or a redefined external reference, the `_node_id_` is set to a specialised version of the `_node_id_` of the node being specialised, allowing matching to occur during flattening.\n\nIn all uses within source archetypes and templates, the `_children_` attribute is `Void`.\n\nIn an operational template, the `_node_id_` is converted to the `_archetype_ref_`, and the structure contains the result of flattening any template overlay structure and the underlying flat archetype.\n",
+            "properties": {
+                "archetype_ref": {
+                    "name": "archetype_ref",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Reference to archetype is being used to fill a slot or redefine an external reference. Typically an 'interface' archetype id, i.e. identifier with partial version information."
+                }
+            }
+        },
+        "C_COMPLEX_OBJECT": {
+            "name": "C_COMPLEX_OBJECT",
+            "ancestors": [
+                "C_DEFINED_OBJECT"
+            ],
+            "documentation": "Constraint on complex objects, i.e. any object that consists of other object constraints.",
+            "properties": {
+                "attributes": {
+                    "name": "attributes",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "C_ATTRIBUTE"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "List of constraints on attributes of the reference model type represented by this object."
+                }
+            }
+        },
+        "ARCHETYPE_ID_CONSTRAINT": {
+            "name": "ARCHETYPE_ID_CONSTRAINT",
+            "documentation": "Constraint expression representing a regex constraint on an archetype identifier.",
+            "properties": {
+                "constraint": {
+                    "name": "constraint",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "C_STRING",
+                    "is_mandatory": true,
+                    "documentation": "Right hand side of the constraint expression, in the form of a `C_STRING`, i.e. string value constrainer."
+                }
+            }
+        },
+        "C_BOOLEAN": {
+            "name": "C_BOOLEAN",
+            "ancestors": [
+                "C_PRIMITIVE"
+            ],
+            "documentation": "Constraint on instances of Boolean. Both attributes cannot be set to False, since this would mean that the Boolean value being constrained cannot be True or False.",
+            "properties": {
+                "true_valid": {
+                    "name": "true_valid",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": "True if the value True is allowed."
+                },
+                "false_valid": {
+                    "name": "false_valid",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": "True if the value False is allowed."
+                },
+                "assumed_value": {
+                    "name": "assumed_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "documentation": "The value to assume if this item is not included in data, due to being part of an optional structure."
+                }
+            }
+        },
+        "C_STRING": {
+            "name": "C_STRING",
+            "ancestors": [
+                "C_PRIMITIVE"
+            ],
+            "documentation": "Constraint on instances of STRING. ",
+            "properties": {
+                "pattern": {
+                    "name": "pattern",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Regular expression pattern for proposed instances of String to match."
+                },
+                "list": {
+                    "name": "list",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "String"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "Set of Strings specifying constraint."
+                },
+                "list_open": {
+                    "name": "list_open",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": "True if the list is being used to specify the constraint but is not considered exhaustive."
+                },
+                "assumed_value": {
+                    "name": "assumed_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "The value to assume if this item is not included in data, due to being part of an optional structure."
+                }
+            }
+        },
+        "C_INTEGER": {
+            "name": "C_INTEGER",
+            "ancestors": [
+                "C_PRIMITIVE"
+            ],
+            "documentation": "Constraint on instances of Integer.",
+            "properties": {
+                "list": {
+                    "name": "list",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "Integer"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "Set of Integers specifying constraint."
+                },
+                "range": {
+                    "name": "range",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Interval",
+                        "generic_parameters": [
+                            "Integer"
+                        ]
+                    },
+                    "documentation": "Range of Integers specifying constraint."
+                },
+                "assumed_value": {
+                    "name": "assumed_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Integer",
+                    "documentation": "The value to assume if this item is not included in data, due to being part of an optional structure."
+                }
+            }
+        },
+        "C_REAL": {
+            "name": "C_REAL",
+            "ancestors": [
+                "C_PRIMITIVE"
+            ],
+            "documentation": "Constraint on instances of Real.",
+            "properties": {
+                "list": {
+                    "name": "list",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "Real"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "Set of Reals specifying constraint."
+                },
+                "range": {
+                    "name": "range",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Interval",
+                        "generic_parameters": [
+                            "Real"
+                        ]
+                    },
+                    "documentation": "Range of Real specifying constraint."
+                },
+                "assumed_value": {
+                    "name": "assumed_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Real",
+                    "documentation": "The value to assume if this item is not included in data, due to being part of an optional structure."
+                }
+            }
+        },
+        "C_ORDERED": {
+            "name": "C_ORDERED",
+            "is_abstract": true,
+            "ancestors": [
+                "C_PRIMITIVE_OBJECT"
+            ],
+            "documentation": "Abstract parent of primitive constrainer classes based on `Ordered` base types, i.e. types like `Integer`, `Real`, and the Date\/Time types. The model constraint is a List of Intervals, which may include point Intervals, and acts as a efficient and formally tractable representation of any number of point values and\/or contiguous intervals of an ordered value domain.\n\nIn its simplest form, the constraint accessor returns just a single point `Interval<T>` object, representing a single value.\n\nThe next simplest form is a single proper `Interval <T>` (i.e. normal two-sided or half-open interval). The most complex form is a list of any combination of point and proper intervals.",
+            "generic_parameter_defs": {
+                "T": {
+                    "name": "T",
+                    "conforms_to_type": "Ordered"
+                }
+            },
+            "properties": {
+                "constraint": {
+                    "name": "constraint",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "Interval"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "Constraint in the form of a List of Intervals of the parameter type T. Concrete types generated in descendants via template binding."
+                },
+                "default_value": {
+                    "name": "default_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY_OPEN",
+                    "type": "T",
+                    "documentation": "Default value set in a template, and present in an operational template. Generally limited to leaf and near-leaf nodes."
+                },
+                "assumed_value": {
+                    "name": "assumed_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY_OPEN",
+                    "type": "T",
+                    "documentation": "Value to be assumed if none sent in data."
+                }
+            }
+        },
+        "C_TERMINOLOGY_CODE": {
+            "name": "C_TERMINOLOGY_CODE",
+            "ancestors": [
+                "C_PRIMITIVE_OBJECT"
+            ],
+            "documentation": "Constrainer type for instances of `Terminology_code`. The constraint attribute can contain:\n\n* a single at-code\n* a single ac-code, representing a value-set that is defined in the archetype terminology\n\nIf there is an assumed value for the ac-code case above, the `_assumed_value_` attribute contains a single at-code, which must come from the list of at-codes defined as the internal value set for the ac-code.\n\nThe `_constraint_status_` attribute and `_constraint_required_()` function together define whether the `_constraint_` is considered formal ('required') or not. In the non-required cases, a data-item matched to this constraint may be any coded term.",
+            "properties": {
+                "constraint": {
+                    "name": "constraint",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Type of individual constraint - a single string that can either be a local at-code, or a local ac-code signifying a locally defined value set. If an ac-code, assumed_value may contain an at-code from the value set of the ac-code.\n\nUse an empty string for no constraint."
+                },
+                "assumed_value": {
+                    "name": "assumed_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Terminology_code",
+                    "documentation": "Assumed Terminology code value."
+                },
+                "default_value": {
+                    "name": "default_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Terminology_code",
+                    "documentation": ""
+                },
+                "constraint_status": {
+                    "name": "constraint_status",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "CONSTRAINT_STATUS",
+                    "documentation": "Constraint status of this terminology constraint. If Void, the meaning is as follows:\n\n* in a top-level  archetype, equivalent to `required`;\n* in a specialised (source) archetype, the meaning is to inherit the value from the corresponding node in the parent.\n\nIn the case of a specialised archetype generated by flattening, the value of this field will be:\n\n* Void if it was Void in the parent;\n* otherwise, it will carry the same value as in the parent."
+                }
+            }
+        },
+        "C_TEMPORAL": {
+            "name": "C_TEMPORAL",
+            "is_abstract": true,
+            "ancestors": [
+                "C_ORDERED"
+            ],
+            "documentation": "Purpose Abstract parent of `C_ORDERED` types whose base type is an ISO date\/time type.",
+            "generic_parameter_defs": {
+                "T": {
+                    "name": "T",
+                    "conforms_to_type": "Temporal"
+                }
+            },
+            "properties": {
+                "pattern_constraint": {
+                    "name": "pattern_constraint",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Optional alternative constraint in the form of a pattern based on ISO8601. See descendants for details."
+                }
+            }
+        },
+        "C_TIME": {
+            "name": "C_TIME",
+            "ancestors": [
+                "C_PRIMITIVE"
+            ],
+            "documentation": "ISO 8601-compatible constraint on instances of Time. There is no validity flag for \u2018hour\u2019, since it must always be by definition mandatory in order to have a sensible time at all. Syntax expressions of instances of this class include \u201cHH:??:xx\u201d (time with optional minutes and seconds not allowed).",
+            "properties": {
+                "minute_validity": {
+                    "name": "minute_validity",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "VALIDITY_KIND",
+                    "documentation": "Validity of minute in constrained time."
+                },
+                "second_validity": {
+                    "name": "second_validity",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "VALIDITY_KIND",
+                    "documentation": "Validity of second in constrained time."
+                },
+                "millisecond_validity": {
+                    "name": "millisecond_validity",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "VALIDITY_KIND",
+                    "documentation": "Validity of millisecond in constrained time."
+                },
+                "timezone_validity": {
+                    "name": "timezone_validity",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "VALIDITY_KIND",
+                    "documentation": "Validity of timezone in constrained date."
+                },
+                "range": {
+                    "name": "range",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Interval",
+                        "generic_parameters": [
+                            "Iso8601_time"
+                        ]
+                    },
+                    "documentation": "Interval of Times specifying constraint."
+                },
+                "assumed_value": {
+                    "name": "assumed_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Iso8601_time",
+                    "documentation": "The value to assume if this item is not included in data, due to being part of an optional structure."
+                }
+            }
+        },
+        "C_DATE": {
+            "name": "C_DATE",
+            "ancestors": [
+                "C_PRIMITIVE"
+            ],
+            "documentation": "ISO 8601-compatible constraint on instances of Date in the form either of a set of validity values, or an actual date range. There is no validity flag for \u2018year\u2019, since it must always be by definition mandatory in order to have a sensible date at all. Syntax expressions of instances of this class include \u201cYYYY-??-??\u201d (date with optional month and day).",
+            "properties": {
+                "day_validity": {
+                    "name": "day_validity",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "VALIDITY_KIND",
+                    "documentation": "Validity of day in constrained date."
+                },
+                "month_validity": {
+                    "name": "month_validity",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "VALIDITY_KIND",
+                    "documentation": "Validity of month in constrained date."
+                },
+                "timezone_validity": {
+                    "name": "timezone_validity",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "VALIDITY_KIND",
+                    "documentation": "Validity of timezone in constrained date."
+                },
+                "range": {
+                    "name": "range",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Interval",
+                        "generic_parameters": [
+                            "Iso8601_date"
+                        ]
+                    },
+                    "documentation": "Interval of Dates specifying constraint."
+                },
+                "assumed_value": {
+                    "name": "assumed_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Iso8601_date",
+                    "documentation": "The value to assume if this item is not included in data, due to being part of an optional structure."
+                }
+            }
+        },
+        "C_DATE_TIME": {
+            "name": "C_DATE_TIME",
+            "ancestors": [
+                "C_PRIMITIVE"
+            ],
+            "documentation": "ISO 8601-compatible constraint on instances of Date_Time. There is no validity flag for \u2018year\u2019, since it must always be by definition mandatory in order to have a sensible date\/time at all. Syntax expressions of instances of this class include \u201cYYYY-MM-DDT??:??:??\u201d (date\/time with optional time) and \u201cYYYY-MMDDTHH:MM:xx\u201d (date\/time, seconds not allowed).",
+            "properties": {
+                "month_validity": {
+                    "name": "month_validity",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "VALIDITY_KIND",
+                    "documentation": "Validity of month in constrained date."
+                },
+                "day_validity": {
+                    "name": "day_validity",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "VALIDITY_KIND",
+                    "documentation": "Validity of day in constrained date."
+                },
+                "hour_validity": {
+                    "name": "hour_validity",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "VALIDITY_KIND",
+                    "documentation": "Validity of hour in constrained time."
+                },
+                "minute_validity": {
+                    "name": "minute_validity",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "VALIDITY_KIND",
+                    "documentation": "Validity of minute in constrained time."
+                },
+                "second_validity": {
+                    "name": "second_validity",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "VALIDITY_KIND",
+                    "documentation": "Validity of second in constrained time."
+                },
+                "millisecond_valdity": {
+                    "name": "millisecond_valdity",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "VALIDITY_KIND",
+                    "documentation": "Validity of millisecond in constrained time."
+                },
+                "timezone_valdity": {
+                    "name": "timezone_valdity",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "VALIDITY_KIND",
+                    "documentation": "Validity of timezone in constrained date."
+                },
+                "range": {
+                    "name": "range",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Interval",
+                        "generic_parameters": [
+                            "Iso8601_date_time"
+                        ]
+                    },
+                    "documentation": "Range of Date_times specifying constraint."
+                },
+                "assumed_value": {
+                    "name": "assumed_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Iso8601_date_time",
+                    "documentation": "The value to assume if this item is not included in data, due to being part of an optional structure."
+                }
+            }
+        },
+        "C_DURATION": {
+            "name": "C_DURATION",
+            "ancestors": [
+                "C_PRIMITIVE"
+            ],
+            "documentation": "ISO 8601-compatible constraint on instances of Duration. In ISO 8601 terms, constraints might are of the form \u201cPWD\u201d (weeks and\/or days), \u201cPDTHMS\u201d (days, hours, minutes, seconds) and so on.\n\nBoth range and the constraint pattern can be set at the same time, corresponding to the ADL constraint `\"PWD\/|P0W..P50W|\"`.\n\nAs for all of openEHR, two ISO 8601 exceptions are allowed: \n\n* the \u2018W\u2019 (week) designator can be mixed in - the allowed patterns are: `P[Y|y][M|m][D|d][T[H|h][M|m][S|s]]` and `P[W|w]`;\n* the values used in an interval constraint may be negated, i.e. a leading minus (`'-'`) sign may be used.\n",
+            "properties": {
+                "years_allowed": {
+                    "name": "years_allowed",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "documentation": ""
+                },
+                "months_allowed": {
+                    "name": "months_allowed",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "documentation": "True if months are allowed in the constrained Duration."
+                },
+                "weeks_allowed": {
+                    "name": "weeks_allowed",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "documentation": ""
+                },
+                "days_allowed": {
+                    "name": "days_allowed",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "documentation": "True if days are allowed in the constrained Duration."
+                },
+                "hours_allowed": {
+                    "name": "hours_allowed",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "documentation": "True if hours are allowed in the constrained Duration."
+                },
+                "minutes_allowed": {
+                    "name": "minutes_allowed",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "documentation": "True if minutes are allowed in the constrained Duration."
+                },
+                "seconds_allowed": {
+                    "name": "seconds_allowed",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "documentation": ""
+                },
+                "fractional_seconds_allowed": {
+                    "name": "fractional_seconds_allowed",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "documentation": "True if fractional seconds are allowed in the constrained Duration."
+                },
+                "range": {
+                    "name": "range",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Interval",
+                        "generic_parameters": [
+                            "Iso8601_duration"
+                        ]
+                    },
+                    "documentation": "Range of Durations specifying constraint."
+                },
+                "assumed_value": {
+                    "name": "assumed_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Iso8601_duration",
+                    "documentation": "The value to assume if this item is not included in data, due to being part of an optional structure."
+                }
+            }
+        },
+        "C_TEMPORAL_DEFINITIONS": {
+            "name": "C_TEMPORAL_DEFINITIONS",
+            "documentation": "Definitions related to `C_TEMPORAL` constraints.",
+            "properties": {
+                "valid_date_constraint_patterns": {
+                    "name": "valid_date_constraint_patterns",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "String"
+                    },
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
+                    "is_mandatory": true,
+                    "documentation": "List of allowed date constraints. Contains the values:\n\n```\n\"YYYY-MM-DD\"    -- full date required\n\"YYYY-MM-??\"    -- day optional\n\"YYYY-MM-XX\"    -- day prohibited\n\"YYYY-??-??\"    -- any partial or full date\n\"YYYY-??-XX\"    -- day prohibited\n\"YYYY-XX-XX\"    -- only prohibited\n```"
+                },
+                "valid_date_constraint_replacements": {
+                    "name": "valid_date_constraint_replacements",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameter_defs": [
+                            {
+                                "_type": "P_BMM_SIMPLE_TYPE",
+                                "type": "String"
+                            },
+                            {
+                                "_type": "P_BMM_GENERIC_TYPE",
+                                "root_type": "List",
+                                "generic_parameters": [
+                                    "String"
+                                ]
+                            }
+                        ]
+                    },
+                    "is_mandatory": true,
+                    "documentation": "List of allowed date constraint replacements e.g. in specialised archetype. Contains the values:\n\n----\n\"YYYY-MM-DD\": [],\n\n\"YYYY-MM-??\": [\"YYYY-MM-DD\", \n               \"YYYY-MM-XX\"],\n\n\"YYYY-MM-XX\": [],\n\n\"YYYY-??-??\": [\"YYYY-MM-??\",\n               \"YYYY-MM-DD\",\n               \"YYYY-MM-XX\",\n               \"YYYY-??-XX\",\n               \"YYYY-XX-XX\"],\n\n\"YYYY-??-XX\": [\"YYYY-MM-XX\", \n              \"YYYY-XX-XX\"],\n\n\"YYYY-XX-XX\": []\n----\n\nIn the above, an empty list value indicates no replacements possible."
+                },
+                "valid_time_constraint_patterns": {
+                    "name": "valid_time_constraint_patterns",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "String"
+                    },
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
+                    "is_mandatory": true,
+                    "documentation": "List of allowed time constraints. Contains the values:\n\n```\n\"HH:MM:SS\"    -- full time required\n\"HH:MM:??\"    -- seconds optional\n\"HH:MM:XX\"    -- minutes required, seconds prohibited\n\"HH:??:??\"    -- minutes and seconds optional\n\"HH:??:XX\"    -- minutes optional, seconds prohibited\n```"
+                },
+                "valid_time_constraint_replacements": {
+                    "name": "valid_time_constraint_replacements",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameter_defs": [
+                            {
+                                "_type": "P_BMM_SIMPLE_TYPE",
+                                "type": "String"
+                            },
+                            {
+                                "_type": "P_BMM_GENERIC_TYPE",
+                                "root_type": "List",
+                                "generic_parameters": [
+                                    "String"
+                                ]
+                            }
+                        ]
+                    },
+                    "is_mandatory": true,
+                    "documentation": "List of allowed time constraint replacements e.g. in specialised archetype. Contains the values:\n\n----\n\"HH:MM:SS\": [],\n\n\"HH:MM:??\": [\"HH:MM:SS\",\n             \"HH:MM:XX\"],\n\n\"HH:MM:XX\": [],\n\n\"HH-??-??\": [\"HH:MM:??\",\n             \"HH:MM:SS\",\n             \"HH:MM:XX\",\n             \"HH:??:XX\"],\n\n\"HH-??-XX\": [\"HH:MM:XX\"]\n----\n\nIn the above, an empty list value indicates no replacements possible."
+                },
+                "valid_date_time_constraint_patterns": {
+                    "name": "valid_date_time_constraint_patterns",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "String"
+                    },
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
+                    "is_mandatory": true,
+                    "documentation": "List of allowed date\/time constraints. Contains the values:\n\n```\n\"YYYY-MM-DDTHH:MM:SS\"    -- full date\/time required\n\"YYYY-MM-DDTHH:MM:??\"    -- seconds optional\n\"YYYY-MM-DDTHH:MM:XX\"    -- seconds prohibited\n\"YYYY-MM-DDTHH:??:??\"    -- minutes and seconds optional\n\"YYYY-MM-DDTHH:??:XX\"    -- minutes optional, seconds prohibited\n\"YYYY-??-??T??:??:??\"    -- any date\/time ok\n```"
+                },
+                "valid_date_time_constraint_replacements": {
+                    "name": "valid_date_time_constraint_replacements",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameter_defs": [
+                            {
+                                "_type": "P_BMM_SIMPLE_TYPE",
+                                "type": "String"
+                            },
+                            {
+                                "_type": "P_BMM_GENERIC_TYPE",
+                                "root_type": "List",
+                                "generic_parameters": [
+                                    "String"
+                                ]
+                            }
+                        ]
+                    },
+                    "is_mandatory": true,
+                    "documentation": "List of allowed date\/time constraint replacements e.g. in specialised archetype. Contains the values:\n\n----\n\"YYYY-MM-DDTHH:MM:SS\": [],\n\n\"YYYY-MM-DDTHH:MM:??\": [\"YYYY-MM-DDTHH:MM:SS\",\n                        \"YYYY-MM-DDTHH:MM:XX\"],\n\n\"YYYY-MM-DDTHH:MM:XX\": [],\n\n\"YYYY-MM-DDTHH:??:??\": [\"YYYY-MM-DDTHH:??:XX\",\n                        \"YYYY-MM-DDTHH:MM:SS\",\n                        \"YYYY-MM-DDTHH:MM:??\",\n                        \"YYYY-MM-DDTHH:MM:XX\"],\n\n\"YYYY-MM-DDTHH:??:XX\": [\"YYYY-MM-DDTHH:MM:XX\"],\n\n\"YYYY-??-??T??:??:??\": [\"YYYY-MM-DDTHH:MM:SS\",\n                        \"YYYY-MM-DDTHH:MM:??\",\n                        \"YYYY-MM-DDTHH:MM:XX\",\n                        \"YYYY-MM-DDTHH:??:??\",\n                        \"YYYY-MM-DDTHH:??:XX\"]\n----"
+                }
+            }
+        },
+        "CONSTRAINT_STATUS": {
+            "name": "CONSTRAINT_STATUS",
+            "_type": "P_BMM_ENUMERATION_STRING",
+            "ancestors": [
+                "String"
+            ],
+            "documentation": "Status of `_constraint_`, with values allowing for 'soft' constraints, which are effectively different kinds of suggestions.",
+            "item_names": [
+                "required",
+                "extensible",
+                "preferred",
+                "example"
+            ]
+        },
+        "ARCHETYPE_TERM": {
+            "name": "ARCHETYPE_TERM",
+            "documentation": "Representation of any coded entity (term or constraint) in the archetype ontology.",
+            "properties": {
+                "code": {
+                    "name": "code",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Code of this term. "
+                },
+                "items": {
+                    "name": "items",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "String"
+                        ]
+                    },
+                    "documentation": "Hash of keys (\u201ctext\u201d, \u201cdescription\u201d etc) and corresponding values."
+                }
+            }
+        },
+        "TERMINOLOGY_RELATION": {
+            "name": "TERMINOLOGY_RELATION",
+            "is_abstract": true,
+            "documentation": "Class whose instances represent any kind of 1:N relationship between a source term and 1-N target terms.",
+            "properties": {
+                "id": {
+                    "name": "id",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Code of source term of this relation."
+                },
+                "members": {
+                    "name": "members",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "String"
+                    },
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
+                    "is_mandatory": true,
+                    "documentation": "List of target terms in this relation."
+                }
+            }
+        },
+        "VALUE_SET": {
+            "name": "VALUE_SET",
+            "ancestors": [
+                "TERMINOLOGY_RELATION"
+            ],
+            "documentation": "Representation of a flat value set within the archetype terminology."
+        },
+        "ARCHETYPE_TERMINOLOGY": {
+            "name": "ARCHETYPE_TERMINOLOGY",
+            "documentation": "Local terminology of an archetype. This class defines the semantics of the terminology of an archetype.",
+            "properties": {
+                "is_differential": {
+                    "name": "is_differential",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": "True if this terminology only contains terms relating to a differential specialisation of the owning artefact, rather than a complete set."
+                },
+                "original_language": {
+                    "name": "original_language",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Original language of the terminology, as set at artefact creation or parsing time; must be a code in the ISO 639-1 2 character language code-set.\n"
+                },
+                "concept_code": {
+                    "name": "concept_code",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Term code defining the meaning of the artefact as a whole, and always used as the id-code on the root node of the artefact. Must be defined in the `_term_definitions_` property."
+                },
+                "term_definitions": {
+                    "name": "term_definitions",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameter_defs": [
+                            {
+                                "_type": "P_BMM_SIMPLE_TYPE",
+                                "type": "String"
+                            },
+                            {
+                                "_type": "P_BMM_GENERIC_TYPE",
+                                "root_type": "Hash",
+                                "generic_parameters": [
+                                    "String",
+                                    "ARCHETYPE_TERM"
+                                ]
+                            }
+                        ]
+                    },
+                    "is_mandatory": true,
+                    "documentation": "Directory of term definitions as a two-level table. The outer hash keys are language codes, e.g. `\"en\"`, `\"de\"`, while the inner hash keys are term codes, e.g. `\"id17\"`, `\"at4\"`."
+                },
+                "term_bindings": {
+                    "name": "term_bindings",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "err_type_def": "Hash <String, Hash<String, Uri>>"
+                    },
+                    "documentation": "Directory of bindings to external terminology codes and value sets, as a two-level table. The outer hash keys are terminology ids, e.g. `\"SNOMED_CT\"`, and the inner hash keys are constraint codes, e.g. `\"at4\"`, `\"ac13\"` or paths. The indexed `Uri` objects represent references to externally defined resources, either terms, ontology concepts, or terminology subsets \/ ref-sets."
+                },
+                "owner_archetype": {
+                    "name": "owner_archetype",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "ARCHETYPE",
+                    "is_mandatory": true,
+                    "documentation": "Archetype that owns this terminology."
+                },
+                "value_sets": {
+                    "name": "value_sets",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "String"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "Archetype-local value sets, each keyed by value-set id, i.e. an ac-code."
+                },
+                "terminology_extracts": {
+                    "name": "terminology_extracts",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameter_defs": [
+                            {
+                                "_type": "P_BMM_SIMPLE_TYPE",
+                                "type": "String"
+                            },
+                            {
+                                "_type": "P_BMM_GENERIC_TYPE",
+                                "root_type": "Hash",
+                                "generic_parameters": [
+                                    "String",
+                                    "ARCHETYPE_TERM"
+                                ]
+                            }
+                        ]
+                    },
+                    "documentation": "Directory of extracts of external terminologies, as a two-level table. The outer hash keys are terminology ids, e.g. `\"SNOMED_CT\"`, while the inner hash keys are term codes or code-phrases from the relevant terminology, e.g. `\"10094842\"`."
+                }
+            }
+        },
+        "ADL_CODE_DEFINITIONS": {
+            "name": "ADL_CODE_DEFINITIONS",
+            "documentation": "Definitions relating to the internal code system of archetypes.",
+            "properties": {
+                "Id_code_leader": {
+                    "name": "Id_code_leader",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "String leader of \u2018identifier\u2019 codes, i.e. codes used to identify archetype nodes."
+                },
+                "Value_code_leader": {
+                    "name": "Value_code_leader",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "String leader of \u2018value\u2019 codes, i.e. codes used to identify codes values, including value set members."
+                },
+                "Value_set_code_leader": {
+                    "name": "Value_set_code_leader",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "String leader of \u2018value set\u2019 codes, i.e. codes used to identify value sets."
+                },
+                "Specialisation_separator": {
+                    "name": "Specialisation_separator",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Character",
+                    "is_mandatory": true,
+                    "documentation": "Character used to separate numeric parts of codes belonging to different specialisation levels."
+                },
+                "Code_regex_pattern": {
+                    "name": "Code_regex_pattern",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Regex used to define the legal numeric part of any archetype code. Corresponds to the simple pattern of dotted numbers, as used in typical multi-level numbering schemes."
+                },
+                "Root_code_regex_pattern": {
+                    "name": "Root_code_regex_pattern",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Regex pattern of the root id code of any archetype. Corresponds to codes of the form `id1`, `id1.1`, `id1.1.1` etc.."
+                },
+                "Primitive_node_id": {
+                    "name": "Primitive_node_id",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Code id used for `C_PRIMITIVE_OBJECT` nodes on creation."
+                }
+            }
+        },
+        "RM_ATTRIBUTE_VISIBILITY": {
+            "name": "RM_ATTRIBUTE_VISIBILITY",
+            "documentation": "Definition of visibility of an RM attribute within a larger archetype structure.",
+            "properties": {
+                "visibility": {
+                    "name": "visibility",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "VISIBILITY_TYPE",
+                    "documentation": "Visibility setting of a non-archetyped RM attribute (RM attributes that are constrained or within the archetyped structure are visible by default)."
+                },
+                "alias": {
+                    "name": "alias",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Terminology_code",
+                    "documentation": "Optional alias for the attribute referenced by the path."
+                }
+            }
+        },
+        "RM_OVERLAY": {
+            "name": "RM_OVERLAY",
+            "documentation": "Container object for archetype statements relating to RM attributes, which may be directly on objects constrained within the archetype, or at deeper non-constrained RM paths from an object or the root.",
+            "properties": {
+                "rm_visibility": {
+                    "name": "rm_visibility",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "RM_ATTRIBUTE_VISIBILITY"
+                        ]
+                    },
+                    "documentation": "Optional structure in which visibility and aliasing of reference model elements can be specified. Key is path to an RM attribute, which is typically formed from a path to an archetyped node concatenated with a further pure RM attribute path; may also refer to a non-archetyped attribute."
+                }
+            }
+        },
+        "VISIBILITY_TYPE": {
+            "name": "VISIBILITY_TYPE",
+            "_type": "P_BMM_ENUMERATION_STRING",
+            "ancestors": [
+                "String"
+            ],
+            "documentation": "Enumeration of visibility settings for model elements.",
+            "item_names": [
+                "hide",
+                "show"
+            ]
+        },
+        "P_ARCHETYPE_CONSTRAINT": {
+            "name": "P_ARCHETYPE_CONSTRAINT",
+            "is_abstract": true,
+            "documentation": "Archetype equivalent to LOCATABLE class in openEHR Common reference model. Defines common constraints for any inheritor of LOCATABLE in any reference model. "
+        },
+        "P_C_OBJECT": {
+            "name": "P_C_OBJECT",
+            "is_abstract": true,
+            "ancestors": [
+                "P_ARCHETYPE_CONSTRAINT"
+            ],
+            "documentation": "Abstract model of constraint on any kind of object node. ",
+            "properties": {
+                "rm_type_name": {
+                    "name": "rm_type_name",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Reference model type that this node corresponds to. "
+                },
+                "occurrences": {
+                    "name": "occurrences",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Occurrences of this object node in the data, under the owning attribute. Upper limit can only be greater than 1 if owning attribute has a cardinality of more than 1."
+                },
+                "node_id": {
+                    "name": "node_id",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Semantic id of this node, used to differentiate sibling nodes of the same type. Each node_id must be defined in the archetype ontology as a term code. \n"
+                },
+                "is_deprecated": {
+                    "name": "is_deprecated",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "documentation": ""
+                }
+            }
+        },
+        "P_C_ATTRIBUTE": {
+            "name": "P_C_ATTRIBUTE",
+            "ancestors": [
+                "P_ARCHETYPE_CONSTRAINT"
+            ],
+            "documentation": "Abstract model of constraint on any kind of attribute node.",
+            "properties": {
+                "rm_attribute_name": {
+                    "name": "rm_attribute_name",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Reference model attribute within the enclosing type represented by a C_OBJECT."
+                },
+                "existence": {
+                    "name": "existence",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Constraint on every attribute, regardless of whether it is singular or of a container type, which indicates whether its target object exists or not (i.e. is mandatory or not)."
+                },
+                "children": {
+                    "name": "children",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "P_C_OBJECT"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "Child C_OBJECT nodes. Each such node represents a constraint on the type of this attribute in its reference model. Multiples occur both for multiple items in the case of container attributes, and alternatives in the case of singular attributes. "
+                },
+                "differential_path": {
+                    "name": "differential_path",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Within a differential specialised archetype, may be set to represent a deep path within the structure to which this constraint and its child constraints apply."
+                },
+                "cardinality": {
+                    "name": "cardinality",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Cardinality constraint of attribute, if a container attribute."
+                },
+                "is_multiple": {
+                    "name": "is_multiple",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": "Flag indicating whether this attribute constraint is on a container (i.e. multiply-valued) attribute."
+                }
+            }
+        },
+        "P_C_DEFINED_OBJECT": {
+            "name": "P_C_DEFINED_OBJECT",
+            "is_abstract": true,
+            "ancestors": [
+                "P_C_OBJECT"
+            ],
+            "documentation": "Abstract parent type of C_OBJECT subtypes that are defined by value, i.e. whose definitions are actually in the archetype rather than being by reference. ",
+            "properties": {
+                "is_frozen": {
+                    "name": "is_frozen",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "documentation": ""
+                },
+                "default_value": {
+                    "name": "default_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Any",
+                    "is_mandatory": true,
+                    "documentation": ""
+                }
+            }
+        },
+        "P_C_COMPLEX_OBJECT_PROXY": {
+            "name": "P_C_COMPLEX_OBJECT_PROXY",
+            "ancestors": [
+                "P_C_OBJECT"
+            ],
+            "documentation": "A constraint defined by proxy, using a reference to an object constraint defined elsewhere in the same archetype. Note that since this object refers to another node, there are two objects with available occurrences values. The local occurrences value on a COJMPLEX_OBJECT_PROXY should always be used; when setting this from a seri- alised form, if no occurrences is mentioned, the target occurrences should be used (not the standard default of {1..1}); otherwise the locally specified occurrences should be used as normal. When serialising out, if the occurrences is the same as that of the target, it can be left out. ",
+            "properties": {
+                "target_path": {
+                    "name": "target_path",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Reference to an object node using archetype path notation."
+                }
+            }
+        },
+        "P_ARCHETYPE_SLOT": {
+            "name": "P_ARCHETYPE_SLOT",
+            "ancestors": [
+                "P_C_OBJECT"
+            ],
+            "documentation": "Constraint describing a  slot' where another archetype can occur. ",
+            "properties": {
+                "includes": {
+                    "name": "includes",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": ""
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "List of constraints defining other archetypes that could be included at this point. "
+                },
+                "excludes": {
+                    "name": "excludes",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": ""
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "List of constraints defining other archetypes that cannot be included at this point. "
+                },
+                "is_closed": {
+                    "name": "is_closed",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": ""
+                }
+            }
+        },
+        "P_C_PRIMITIVE_OBJECT": {
+            "name": "P_C_PRIMITIVE_OBJECT",
+            "is_abstract": true,
+            "ancestors": [
+                "P_C_DEFINED_OBJECT"
+            ],
+            "documentation": "Parent of types representing constraints on primitive types.",
+            "properties": {
+                "assumed_value": {
+                    "name": "assumed_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Any",
+                    "documentation": "Value to be assumed if none sent in data."
+                },
+                "is_enumerated_type_constraint": {
+                    "name": "is_enumerated_type_constraint",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "documentation": "True if this constraint is actually of an enumerated type that conforms to a primitive type, not a primitive."
+                },
+                "constraint": {
+                    "name": "constraint",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Any",
+                    "is_mandatory": true,
+                    "documentation": "Constraint represented by this object; redefine in descendants."
+                }
+            }
+        },
+        "P_C_COMPLEX_OBJECT": {
+            "name": "P_C_COMPLEX_OBJECT",
+            "ancestors": [
+                "P_C_DEFINED_OBJECT"
+            ],
+            "documentation": "Constraint on complex objects, i.e. any object that consists of other object constraints.",
+            "properties": {
+                "attributes": {
+                    "name": "attributes",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "P_C_ATTRIBUTE"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "List of constraints on attributes of the reference model type represented by this object."
+                },
+                "attribute_tuples": {
+                    "name": "attribute_tuples",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "P_C_ATTRIBUTE_TUPLE"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "List of attribute tuple constraints under this object constraint, if any."
+                }
+            }
+        },
+        "P_C_ATTRIBUTE_TUPLE": {
+            "name": "P_C_ATTRIBUTE_TUPLE",
+            "documentation": "Object representing a constraint on an atttribute tuple, i.e. a group of attributes that are constrained together. Typically used for representing co-varying constraints like {units, range} constraints.",
+            "properties": {
+                "members": {
+                    "name": "members",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "String"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "Member attribute constraint objects."
+                }
+            }
+        },
+        "P_C_ARCHETYPE_ROOT": {
+            "name": "P_C_ARCHETYPE_ROOT",
+            "ancestors": [
+                "P_C_COMPLEX_OBJECT"
+            ],
+            "documentation": "",
+            "properties": {
+                "archetype_ref": {
+                    "name": "archetype_ref",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": ""
+                }
+            }
+        },
+        "P_C_BOOLEAN": {
+            "name": "P_C_BOOLEAN",
+            "ancestors": [
+                "P_C_PRIMITIVE_OBJECT"
+            ],
+            "documentation": "Constraint on instances of Boolean. Both attributes cannot be set to False, since this would mean that the Boolean value being constrained cannot be True or False.",
+            "properties": {
+                "constraint": {
+                    "name": "constraint",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "Boolean"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": ""
+                },
+                "assumed_value": {
+                    "name": "assumed_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "documentation": ""
+                },
+                "default_value": {
+                    "name": "default_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": ""
+                }
+            }
+        },
+        "P_C_STRING": {
+            "name": "P_C_STRING",
+            "ancestors": [
+                "P_C_PRIMITIVE_OBJECT"
+            ],
+            "documentation": "Constraint on instances of STRING. ",
+            "properties": {
+                "constraint": {
+                    "name": "constraint",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "String"
+                    },
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
+                    "is_mandatory": true,
+                    "documentation": "String constraint - a list of literal strings and \/ or regular expression strings delimited by the \u2018\/\u2019 character."
+                },
+                "default_value": {
+                    "name": "default_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": ""
+                },
+                "assumed_value": {
+                    "name": "assumed_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": ""
+                }
+            }
+        },
+        "P_C_INTEGER": {
+            "name": "P_C_INTEGER",
+            "documentation": "Constraint on instances of Integer."
+        },
+        "P_C_REAL": {
+            "name": "P_C_REAL",
+            "documentation": "Constraint on instances of Real."
+        },
+        "P_C_ORDERED": {
+            "name": "P_C_ORDERED",
+            "is_abstract": true,
+            "ancestors": [
+                "P_C_PRIMITIVE_OBJECT"
+            ],
+            "documentation": "Abstract parent of primitive constrainer classes based on ORDERED base types, i.e. types like Integer, Real, and the Date\/Time types. The model constraint is a List of Intervals, which may include point Intervals, and acts as a efficient and formally tractable representation of any number of point values and\/or contiguous intervals of an ordered value domain.\n\nIn its simplest form, the constraint accessor returns just a single point Interval<T> object, representing a single value.\n\nThe next simplest form is a single proper Interval <T> (i.e. normal two-sided or half-open interval). The most complex form is a list of any combination of point and proper intervals.",
+            "generic_parameter_defs": {
+                "T": {
+                    "name": "T",
+                    "conforms_to_type": "Ordered"
+                }
+            },
+            "properties": {
+                "constraint": {
+                    "name": "constraint",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "Interval"
+                    },
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
+                    "is_mandatory": true,
+                    "documentation": ""
+                }
+            }
+        },
+        "P_C_TERMINOLOGY_CODE": {
+            "name": "P_C_TERMINOLOGY_CODE",
+            "ancestors": [
+                "P_C_PRIMITIVE_OBJECT"
+            ],
+            "documentation": "Constrainer type for instances of TERMINOLOGY_CODE. The primary expression of the constraint is in the property `tuple_constraint', and comes in 3 variations:\n* a single at-code\n* a single ac-code, representing a value-set that is defined in the archetype terminology\n* a list of at- and\/or ac-codes, representing the possibilities of a tuple constraint\nThe last possibility above is enabled by the merge_tuple routine, which enables the constraint of another single-valued C_TERMINOLOGY_CODE to be merged with the current one.",
+            "properties": {
+                "constraint": {
+                    "name": "constraint",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": ""
+                },
+                "assumed_value": {
+                    "name": "assumed_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Terminology_code",
+                    "documentation": ""
+                },
+                "default_value": {
+                    "name": "default_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Terminology_code",
+                    "is_mandatory": true,
+                    "documentation": ""
+                }
+            }
+        },
+        "P_C_TEMPORAL": {
+            "name": "P_C_TEMPORAL",
+            "is_abstract": true,
+            "ancestors": [
+                "P_C_ORDERED"
+            ],
+            "documentation": "Purpose Abstract parent of C_ORDERED types whose base type is an ISO date\/time type.",
+            "generic_parameter_defs": {
+                "T": {
+                    "name": "T",
+                    "conforms_to_type": "Temporal"
+                }
+            },
+            "properties": {
+                "pattern_constraint": {
+                    "name": "pattern_constraint",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Optional alternative constraint in the form of a pattern based on ISO8601. See descendants for details."
+                }
+            }
+        },
+        "P_C_TIME": {
+            "name": "P_C_TIME",
+            "documentation": "ISO 8601-compatible constraint on instances of Time in the form either of a set of validity values, or else date ranges based on the C_ORDERED list constraint. There is no validity flag for \u2018hour\u2019, since it must always be by definition mandatory in order to have a sensible time at all. Syntax expressions of instances of this class include \u201cHH:??:xx\u201d (time with optional minutes and seconds not allowed)."
+        },
+        "P_C_DATE": {
+            "name": "P_C_DATE",
+            "documentation": "ISO 8601-compatible constraint on instances of Date in the form either of a set of validity values, or else date ranges based on the C_ORDERED list constraint. There is no validity flag for \u2018year\u2019, since it must always be by definition mandatory in order to have a sensible date at all. Syntax expressions of instances of this class include \u201cYYYY-??-??\u201d (date with optional month and day)."
+        },
+        "P_C_DATE_TIME": {
+            "name": "P_C_DATE_TIME",
+            "documentation": "ISO 8601-compatible constraint on instances of Date_Time. There is no validity flag for \u2018year\u2019, since it must always be by definition mandatory in order to have a sensible date\/time at all. Syntax expressions of instances of this class include \u201cYYYY-MM-DDT??:??:??\u201d (date\/time with optional time) and \u201cYYYY-MMDDTHH:MM:xx\u201d (date\/time, seconds not allowed)."
+        },
+        "P_C_DURATION": {
+            "name": "P_C_DURATION",
+            "documentation": ""
+        },
+        "P_ARCHETYPE": {
+            "name": "P_ARCHETYPE",
+            "is_abstract": true,
+            "documentation": "Archetype equivalent to ARCHETYPED class in Common reference model. Defines semantics of identfication, lifecycle, versioning, composition and specialisation.\n\nAn archetype is a modelled as a particular kind of AUTHORED_RESOURCE, and as such, includes descriptive meta-data, language information and revision history. The ARCHETYPE class adds identifying information, a definition - expressed in terms of constraints on instances of an object model, and an ontology.",
+            "properties": {
+                "parent_archetype_id": {
+                    "name": "parent_archetype_id",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Identifier of the specialisation parent of this archetype."
+                },
+                "archetype_id": {
+                    "name": "archetype_id",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "P_ARCHETYPE_HRID",
+                    "is_mandatory": true,
+                    "documentation": "Identifier of this archetype."
+                },
+                "is_differential": {
+                    "name": "is_differential",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": "Flag indicating whether this archetype is differential or flat in its contents. Top-level source archetypes have this flag set to True."
+                },
+                "definition": {
+                    "name": "definition",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "P_C_COMPLEX_OBJECT",
+                    "is_mandatory": true,
+                    "documentation": "Root node of the definition of this archetype."
+                },
+                "terminology": {
+                    "name": "terminology",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "P_ARCHETYPE_TERMINOLOGY",
+                    "is_mandatory": true,
+                    "documentation": "The terminology of the archetype."
+                },
+                "rules": {
+                    "name": "rules",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "EL_BOOLEAN_EXPRESSION"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "Rules relating to this archetype. Statements are expressed in first order predicate logic, and usually refer to at least two attributes."
+                }
+            }
+        },
+        "P_AUTHORED_ARCHETYPE": {
+            "name": "P_AUTHORED_ARCHETYPE",
+            "ancestors": [
+                "P_ARCHETYPE",
+                "AUTHORED_RESOURCE",
+                "P_AUTHORED_RESOURCE"
+            ],
+            "documentation": "Root object of a standalone, authored archetype, including all meta-data, description, other identifiers and lifecycle.",
+            "properties": {
+                "adl_version": {
+                    "name": "adl_version",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "ADL version if archteype was read in from an ADL sharable archetype."
+                },
+                "build_uid": {
+                    "name": "build_uid",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "UID",
+                    "is_mandatory": true,
+                    "documentation": "Unique identifier of this archetype artefact instance. A new identifier is assigned every time the content is changed by a tool. Used by tools to distinguish different revisions and\/or interim snapshots of the same artefact."
+                },
+                "rm_release": {
+                    "name": "rm_release",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Semver.org compatible release of the most recent reference model release on which the archetype in its current version is based. This does not imply conformance only to this release, since an archetype may be valid with respect to multiple releases of a reference model."
+                },
+                "is_generated": {
+                    "name": "is_generated",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": "If True, indicates that this artefact was machine-generated from some other source, in which case, tools would expect to overwrite this artefact on a new generation. Editing tools should set this value to False when a user starts to manually edit an archetype."
+                },
+                "other_meta_data": {
+                    "name": "other_meta_data",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "String"
+                        ]
+                    },
+                    "is_mandatory": true,
+                    "documentation": ""
+                }
+            }
+        },
+        "P_TEMPLATE": {
+            "name": "P_TEMPLATE",
+            "ancestors": [
+                "P_AUTHORED_ARCHETYPE"
+            ],
+            "documentation": "Class representing source template, i.e. a kind of archetype that may include template overlays, and may be restricted by tools to only defining mandations, prohibitions, and restrictions on elements already defined in the flat parent."
+        },
+        "P_OPERATIONAL_TEMPLATE": {
+            "name": "P_OPERATIONAL_TEMPLATE",
+            "ancestors": [
+                "P_AUTHORED_ARCHETYPE"
+            ],
+            "documentation": "Root object of an operational template. An operational template is derived from a TEMPLATE definition and the ARCHETYPEs and\/or TEMPLATE_OVERLAYs mentioned by that template by a process of flattening, and potentially removal of unneeded languages and terminologies.\n\nAn operational template is used for generating and validating canonical openEHR data, and also as a source artefact for generating other downstream technical artefacts, including XML schemas, APIs and UI form definitions.",
+            "properties": {
+                "component_terminologies": {
+                    "name": "component_terminologies",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "P_ARCHETYPE_TERMINOLOGY"
+                        ]
+                    },
+                    "documentation": "Compendium of flattened terminologies of archetypes externally referenced from this archetype, keyed by archetype identifier. This will almost always be present in a template."
+                },
+                "terminology_extracts": {
+                    "name": "terminology_extracts",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameter_defs": [
+                            {
+                                "_type": "P_BMM_SIMPLE_TYPE",
+                                "type": "String"
+                            },
+                            {
+                                "_type": "P_BMM_GENERIC_TYPE",
+                                "root_type": "Hash",
+                                "generic_parameters": [
+                                    "String",
+                                    "ARCHETYPE_TERM"
+                                ]
+                            }
+                        ]
+                    },
+                    "documentation": "Directory of term definitions as a two-level  table. The outer hash keys are term codes,  e.g. \"at4\", and the inner hash key are term  attribute names, e.g. \"text\", \"description\" etc."
+                }
+            }
+        },
+        "P_ARCHETYPE_HRID": {
+            "name": "P_ARCHETYPE_HRID",
+            "documentation": "Human_readable identifier (HRID) for an archetype or template.",
+            "properties": {
+                "namespace": {
+                    "name": "namespace",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Reverse domain name namespace identifier."
+                },
+                "rm_publisher": {
+                    "name": "rm_publisher",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Name of the Reference Model publisher."
+                },
+                "rm_package": {
+                    "name": "rm_package",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Name of the package in whose reachability graph the rm_class class is found (there can be more than one possibility in many reference models)."
+                },
+                "rm_class": {
+                    "name": "rm_class",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Name of the root class of this archetype."
+                },
+                "concept_id": {
+                    "name": "concept_id",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "The short concept name of the archetype as used in the multi-axial archetype_hrid."
+                },
+                "release_version": {
+                    "name": "release_version",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "The full numeric version of this archetype consisting of 3 parts, e.g. 1.8.2. The archetype_hrid feature includes only the major version."
+                },
+                "version_status": {
+                    "name": "version_status",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "VERSION_STATUS",
+                    "is_mandatory": true,
+                    "documentation": "The status of the version, i.e. released, release_candidate etc."
+                },
+                "build_count": {
+                    "name": "build_count",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "The build count since last increment of any version part."
+                }
+            }
+        },
+        "P_AUTHORED_RESOURCE": {
+            "name": "P_AUTHORED_RESOURCE",
+            "is_abstract": true,
+            "documentation": "Abstract idea of an online resource created by a human author. \n",
+            "properties": {
+                "original_language": {
+                    "name": "original_language",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Language in which this resource was initially authored. Although there is no language primacy of resources overall, the language of original authoring is required to ensure natural language translations can preserve quality. Language is relevant in both the description and ontology sections. "
+                },
+                "is_controlled": {
+                    "name": "is_controlled",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "documentation": "True if this resource is under any kind of change control (even file copying), in which case revision history is created. "
+                },
+                "translations": {
+                    "name": "translations",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "TRANSLATION_DETAILS"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "List of details for each natural translation made of this resource, keyed by language. For each translation listed here, there must be corresponding sections in all language-dependent parts of the resource. The original_language does not appear in this list."
+                },
+                "description": {
+                    "name": "description",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "RESOURCE_DESCRIPTION",
+                    "documentation": "Description and lifecycle information of the resource."
+                },
+                "uid": {
+                    "name": "uid",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Unique identifier of the family of archetypes having the same interface identifier (same major version)."
+                },
+                "annotations": {
+                    "name": "annotations",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameter_defs": [
+                            {
+                                "_type": "P_BMM_SIMPLE_TYPE",
+                                "type": "String"
+                            },
+                            {
+                                "_type": "P_BMM_GENERIC_TYPE",
+                                "root_type": "Hash",
+                                "generic_parameters": [
+                                    "String",
+                                    "String"
+                                ]
+                            }
+                        ]
+                    },
+                    "documentation": "Annotations on individual items within the resource, keyed by path. The inner table takes the form of a Hash table of String values keyed by String tags."
+                }
+            }
+        },
+        "P_ARCHETYPE_TERMINOLOGY": {
+            "name": "P_ARCHETYPE_TERMINOLOGY",
+            "documentation": "Local ontology of an archetype.",
+            "properties": {
+                "is_differential": {
+                    "name": "is_differential",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": ""
+                },
+                "original_language": {
+                    "name": "original_language",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": ""
+                },
+                "term_definitions": {
+                    "name": "term_definitions",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameter_defs": [
+                            {
+                                "_type": "P_BMM_SIMPLE_TYPE",
+                                "type": "String"
+                            },
+                            {
+                                "_type": "P_BMM_GENERIC_TYPE",
+                                "root_type": "Hash",
+                                "generic_parameters": [
+                                    "String",
+                                    "ARCHETYPE_TERM"
+                                ]
+                            }
+                        ]
+                    },
+                    "is_mandatory": true,
+                    "documentation": "Directory of term definitions as a two-level \ntable. The outer hash keys are term codes, \ne.g. \"at0004\", and the inner hash key are term \nattribute names, e.g. \"text\", \"description\" etc."
+                },
+                "term_bindings": {
+                    "name": "term_bindings",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "err_type_def": "Hash <String, Hash<String, Uri>>"
+                    },
+                    "documentation": "Directory of term bindings as a two-level \ntable. The outer hash keys are local term codes, \ne.g. \"at0004\", and the inner hash keys are terminology \ncode phrases, e.g. \"SNOMED(2003)::163034007\" etc."
+                },
+                "value_sets": {
+                    "name": "value_sets",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "VALUE_SET"
+                        ]
+                    },
+                    "documentation": ""
+                }
+            }
+        },
+        "AOM_PROFILE": {
+            "name": "AOM_PROFILE",
+            "documentation": "Profile of common settings relating to use of reference model(s) and terminology for a given archetype developing organisation.",
+            "properties": {
+                "profile_name": {
+                    "name": "profile_name",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Name of this profile, usually based on the publisher it pertains to e.g. \"openEHR\", \"CDISC\", etc."
+                },
+                "archetype_parent_class": {
+                    "name": "archetype_parent_class",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "States a class from the Reference Model that provides archetyping capability in RM data structures. This attribute is optional, and there need be no such class in the RM. Defining it here has the effect in tools that the class tree under which archetypes are arranged contains only RM classes inheriting from this class."
+                },
+                "archetype_data_value_parent_class": {
+                    "name": "archetype_data_value_parent_class",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "This attribute defines a base class from the Reference Model whose descendants are considered to be 'logical data types', i.e. of some higher level than the built-in primitive types String, Integer etc. This attribute is optional, even if the RM does have such a class, and is only used to help tooling to provide more intelligent display."
+                },
+                "aom_rm_type_mappings": {
+                    "name": "aom_rm_type_mappings",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "AOM_TYPE_MAPPING"
+                        ]
+                    },
+                    "documentation": "Mappings from AOM built-in types to actual types in RM: whenever the type name is encountered in an archetype, it is mapped to a specific RM type."
+                },
+                "archetype_visualise_descendants_of": {
+                    "name": "archetype_visualise_descendants_of",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "If `_archetype_parent_class_` is not set, designate a class whose descendants should be made visible in tree and grid renderings of the archetype definition."
+                },
+                "aom_rm_type_substitutions": {
+                    "name": "aom_rm_type_substitutions",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "String"
+                        ]
+                    },
+                    "documentation": "Allowed type substitutions: Actual RM type names keyed by AOM built-in types which can substitute for them in an archetype. E.g. `<key = \"ISO8601_DATE\", value = \"String\">` means that if RM property `TYPE._some_property_` is of type `String`, an `ISO8601_DATE` is allowed at that position in the archetype."
+                },
+                "aom_lifecycle_mappings": {
+                    "name": "aom_lifecycle_mappings",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "String"
+                        ]
+                    },
+                    "documentation": "List of mappings of lifecycle state names used in archetypes to AOM lifecycle state names: \n\n* key = source lifecycle state; \n* value = AOM lifecycle state."
+                },
+                "rm_primitive_type_equivalences": {
+                    "name": "rm_primitive_type_equivalences",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "String"
+                        ]
+                    },
+                    "documentation": "Equivalences of RM primitive types to in-built set of primitive types. Used to determine which AOM `C_PRIMITIVE_OBJECT` descendant is used for a primitive type. Typical entries:\n\n* `value`\t`key`\n* \"Real\"\t\"Double\"\n* \"Integer\"\t\"Integer64\""
+                }
+            }
+        },
+        "AOM_TYPE_MAPPING": {
+            "name": "AOM_TYPE_MAPPING",
+            "documentation": "Data object expressing a mapping between two types.",
+            "properties": {
+                "source_class_name": {
+                    "name": "source_class_name",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Name of the AOM type being mapped to an RM type."
+                },
+                "target_class_name": {
+                    "name": "target_class_name",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Name of the RM type in the mapping."
+                },
+                "property_mappings": {
+                    "name": "property_mappings",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "AOM_PROPERTY_MAPPING"
+                        ]
+                    },
+                    "documentation": "List of mappings of properties of this type to another type."
+                }
+            }
+        },
+        "AOM_PROPERTY_MAPPING": {
+            "name": "AOM_PROPERTY_MAPPING",
+            "documentation": "Data object expressing a mapping between two class properties.",
+            "properties": {
+                "source_property_name": {
+                    "name": "source_property_name",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Name of property in source class."
+                },
+                "target_property_name": {
+                    "name": "target_property_name",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Name of property in target class."
+                }
+            }
+        },
+        "EXPR_ARCHETYPE_ID_CONSTRAINT": {
+            "name": "EXPR_ARCHETYPE_ID_CONSTRAINT",
+            "ancestors": [
+                "EXPR_CONSTRAINT"
+            ],
+            "documentation": "Expression tree leaf item representing a constraint on an archetype identifier.",
+            "properties": {
+                "item": {
+                    "name": "item",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "C_STRING",
+                    "is_mandatory": true,
+                    "documentation": "A C_STRING representing a regular expression for matching Archetype identifiers."
+                }
+            }
+        },
+        "EXPR_ARCHETYPE_REF": {
+            "name": "EXPR_ARCHETYPE_REF",
+            "ancestors": [
+                "EXPR_VALUE_REF"
+            ],
+            "documentation": "Expression tree leaf item representing a reference to a value found in data at a location specified by a path in the archetype definition.\n\n* A path referring to a value in the archetype (paths with a leading \u2018\/\u2019 are in the definition section.\n* Paths with no leading \u2018\/\u2019 are in the outer part of the archetype, e.g. \u201carchetype_id\/value\u201d refers to the String value of the archetype_id attribute of the enclosing archetype.\n",
+            "properties": {
+                "path": {
+                    "name": "path",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "The path to the archetype node."
+                },
+                "item": {
+                    "name": "item",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "ARCHETYPE_CONSTRAINT",
+                    "is_mandatory": true,
+                    "documentation": ""
+                }
+            }
+        },
+        "EXPR_CONSTRAINT": {
+            "name": "EXPR_CONSTRAINT",
+            "ancestors": [
+                "EXPR_LEAF"
+            ],
+            "documentation": "Expression tree leaf item representing a constraint on a primitive type, expressed in the form of a concrete subtype of C_PRIMITIVE_OBJECT.",
+            "properties": {
+                "item": {
+                    "name": "item",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "C_PRIMITIVE_OBJECT",
+                    "is_mandatory": true,
+                    "documentation": "The constraint."
+                }
+            }
+        },
+        "C_ORDINAL": {
+            "name": "C_ORDINAL",
+            "ancestors": [
+                "C_DOMAIN_TYPE"
+            ],
+            "documentation": "Constrainer class for Ordinal data.",
+            "properties": {
+                "list": {
+                    "name": "list",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "ORDINAL"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "Value set of allowed Ordinals in the constraint."
+                }
+            }
+        },
+        "C_CODED_TEXT": {
+            "name": "C_CODED_TEXT",
+            "ancestors": [
+                "C_DOMAIN_TYPE"
+            ],
+            "documentation": "Constrainer class for Coded text data.",
+            "properties": {
+                "terminology": {
+                    "name": "terminology",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Terminology identifier."
+                },
+                "code_list": {
+                    "name": "code_list",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "List",
+                        "generic_parameters": [
+                            "String"
+                        ]
+                    },
+                    "documentation": "Optional list of codes from the terminology. No list means any code from the terminology is allowed."
+                },
+                "reference": {
+                    "name": "reference",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": ""
+                }
+            }
+        },
+        "C_QUANTITY": {
+            "name": "C_QUANTITY",
+            "ancestors": [
+                "C_DOMAIN_TYPE"
+            ],
+            "documentation": "Constrainer class for Quantity data.",
+            "properties": {
+                "property": {
+                    "name": "property",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Name of physical property for Quantities being constrained."
+                },
+                "list": {
+                    "name": "list",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "C_QUANTITY_ITEM"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "Value set of allowed individual Quantity item constraints in this Quantity constraint."
+                }
+            }
+        },
+        "C_QUANTITY_ITEM": {
+            "name": "C_QUANTITY_ITEM",
+            "documentation": "Constrainer class for a single Quantity.",
+            "properties": {
+                "magnitude": {
+                    "name": "magnitude",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Interval",
+                        "generic_parameters": [
+                            "Real"
+                        ]
+                    },
+                    "is_mandatory": true,
+                    "documentation": "Quantity magnitude constraint."
+                },
+                "units": {
+                    "name": "units",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Optional units constraint."
+                }
+            }
+        },
+        "ORDINAL": {
+            "name": "ORDINAL",
+            "documentation": "Constrainer object representing a single Ordinal value.",
+            "properties": {
+                "symbol": {
+                    "name": "symbol",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "CODE_PHRASE",
+                    "is_mandatory": true,
+                    "documentation": "Terminology code providing the Ordinal's symbol."
+                },
+                "value": {
+                    "name": "value",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Integer",
+                    "is_mandatory": true,
+                    "documentation": "Ordinal value."
+                }
+            }
+        },
+        "ASSERTION": {
+            "name": "ASSERTION",
+            "documentation": "Structural model of a typed first order predicate logic assertion, in the form of an expression tree, including optional variable definitions. ",
+            "properties": {
+                "tag": {
+                    "name": "tag",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "Expression tag, used for differentiating multiple assertions."
+                },
+                "string_expression": {
+                    "name": "string_expression",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "documentation": "String form of expression, in case an expression evaluator taking String expressions is used for evaluation. "
+                },
+                "expression": {
+                    "name": "expression",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "EXPR_ITEM",
+                    "is_mandatory": true,
+                    "documentation": "Root of expression tree."
+                },
+                "variables": {
+                    "name": "variables",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "ASSERTION_VARIABLE"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "Definitions of variables used in the assertion expression."
+                }
+            }
+        },
+        "ASSERTION_VARIABLE": {
+            "name": "ASSERTION_VARIABLE",
+            "documentation": "Definition of a named variable used in an assertion expression.",
+            "properties": {
+                "name": {
+                    "name": "name",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Name of variable."
+                },
+                "definition": {
+                    "name": "definition",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Formal definition of the variable."
+                }
+            }
+        },
+        "EXPR_ITEM": {
+            "name": "EXPR_ITEM",
+            "is_abstract": true,
+            "documentation": "Abstract parent of all expression tree items.",
+            "properties": {
+                "type": {
+                    "name": "type",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Type name of this item in the mathematical sense. For leaf nodes, must be the name of a primitive type, or else a reference model type. The type for any relational or boolean operator will be \u201cBoolean\u201d, while the type for any arithmetic operator, will be \u201cReal\u201d or \u201cInteger\u201d."
+                }
+            }
+        },
+        "EXPR_LEAF": {
+            "name": "EXPR_LEAF",
+            "ancestors": [
+                "EXPR_ITEM"
+            ],
+            "documentation": "Expression tree leaf item representing one of:\n\n* a manifest constant of any primitive type;\n* a path referring to a value in the archetype;\n* a constraint;\n* a variable reference.\n",
+            "properties": {
+                "reference_type": {
+                    "name": "reference_type",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Type of reference: \u201cconstant\u201d, \u201cattribute\u201d, \u201cfunction\u201d, \u201cconstraint\u201d. The first three are used to indicate the referencing mechanism for an operand. The last is used to indicate a constraint operand, as happens in the case of the right-hand operand of the \u2018matches\u2019 operator."
+                },
+                "item": {
+                    "name": "item",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Any",
+                    "is_mandatory": true,
+                    "documentation": "The value referred to; a manifest constant, an attribute path (in the form of a String), or for the right-hand side of a \u2018matches\u2019 node, a constraint, often a C_PRIMITIVE_OBJECT."
+                }
+            }
+        },
+        "EXPR_OPERATOR": {
+            "name": "EXPR_OPERATOR",
+            "is_abstract": true,
+            "ancestors": [
+                "EXPR_ITEM"
+            ],
+            "documentation": "Abstract parent of operator types.",
+            "properties": {
+                "precedence_overridden": {
+                    "name": "precedence_overridden",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "documentation": "True if the natural precedence of operators is overridden in the expression represented by this node of the expression tree. If True, parentheses should be introduced around the totality of the syntax expression corresponding to this operator node and its operands."
+                },
+                "operator": {
+                    "name": "operator",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "OPERATOR_KIND",
+                    "is_mandatory": true,
+                    "documentation": "Code of operator."
+                }
+            }
+        },
+        "EXPR_UNARY_OPERATOR": {
+            "name": "EXPR_UNARY_OPERATOR",
+            "ancestors": [
+                "EXPR_OPERATOR"
+            ],
+            "documentation": "Unary operator expression node.",
+            "properties": {
+                "operand": {
+                    "name": "operand",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "EXPR_ITEM",
+                    "is_mandatory": true,
+                    "documentation": "Operand node."
+                }
+            }
+        },
+        "EXPR_BINARY_OPERATOR": {
+            "name": "EXPR_BINARY_OPERATOR",
+            "ancestors": [
+                "EXPR_OPERATOR"
+            ],
+            "documentation": "Binary operator expression node.",
+            "properties": {
+                "left_operand": {
+                    "name": "left_operand",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "EXPR_ITEM",
+                    "is_mandatory": true,
+                    "documentation": "Left operand node."
+                },
+                "right_operand": {
+                    "name": "right_operand",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "EXPR_ITEM",
+                    "is_mandatory": true,
+                    "documentation": "Right operand node."
+                }
+            }
+        },
+        "OPERATOR_KIND": {
+            "name": "OPERATOR_KIND",
+            "_type": "P_BMM_ENUMERATION_STRING",
+            "ancestors": [
+                "String"
+            ],
+            "documentation": "Enumeration type for operator types in assertion expressions.",
+            "item_names": [
+                "op_eq",
+                "op_ne",
+                "op_le",
+                "op_lt",
+                "op_ge",
+                "op_gt",
+                "op_matches",
+                "op_not",
+                "op_and",
+                "op_or",
+                "op_xor",
+                "op_implies",
+                "op_for_all",
+                "op_exists",
+                "op_plus",
+                "op_minus",
+                "op_multiply",
+                "op_divide",
+                "op_exponent"
+            ]
+        },
+        "CARDINALITY": {
+            "name": "CARDINALITY",
+            "documentation": "Express constraints on the cardinality of container objects which are the values of multiply-valued attributes, including uniqueness and ordering, providing the means to state that a container acts like a logical list, set or bag. The cardinality cannot contradict the cardinality of the corresponding attribute within the relevant reference model.",
+            "properties": {
+                "interval": {
+                    "name": "interval",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
+                    "type_def": {
+                        "root_type": "Interval",
+                        "generic_parameters": [
+                            "Integer"
+                        ]
+                    },
+                    "is_mandatory": true,
+                    "documentation": "The interval of this cardinality. "
+                },
+                "is_ordered": {
+                    "name": "is_ordered",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": "True if the members of the container attribute to which this cardinality refers are ordered. "
+                },
+                "is_unique": {
+                    "name": "is_unique",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Boolean",
+                    "is_mandatory": true,
+                    "documentation": "True if the members of the container attribute to which this cardinality refers are unique."
+                }
+            }
+        },
+        "ARCHETYPE_INTERNAL_REF": {
+            "name": "ARCHETYPE_INTERNAL_REF",
+            "ancestors": [
+                "C_REFERENCE_OBJECT"
+            ],
+            "documentation": "A constraint defined by proxy, using a reference to an object constraint defined elsewhere in the same\narchetype.\n\nNote that since this object refers to another node, there are two objects with available occurrences values. The local occurrences value on an ARCHETYPE_INTERNAL_REF should always be used; when setting this from a serialised form, if no occurrences is mentioned, the target occurrences should be used (not the standard default of {1..1}); otherwise the locally specified occurrences should be used as normal. When serialising out, if the occurrences is the same as that of the target, it can be left out.",
+            "properties": {
+                "target_path": {
+                    "name": "target_path",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Reference to an object node using archetype path notation."
+                }
+            }
+        },
+        "C_SINGLE_ATTRIBUTE": {
+            "name": "C_SINGLE_ATTRIBUTE",
+            "ancestors": [
+                "C_ATTRIBUTE"
+            ],
+            "documentation": "Concrete model of constraint on a single-valued attribute node. The meaning of the inherited children attribute is that they are alternatives."
+        },
+        "CONSTRAINT_REF": {
+            "name": "CONSTRAINT_REF",
+            "ancestors": [
+                "C_REFERENCE_OBJECT"
+            ],
+            "documentation": "Reference to a constraint described in the same archetype, but outside the main constraint structure. This is used to refer to constraints expressed in terms of external resources, such as constraints on terminology value sets.",
+            "properties": {
+                "reference": {
+                    "name": "reference",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "String",
+                    "is_mandatory": true,
+                    "documentation": "Reference to a constraint in the archetype local ontology."
+                }
+            }
+        },
+        "C_MULTIPLE_ATTRIBUTE": {
+            "name": "C_MULTIPLE_ATTRIBUTE",
+            "ancestors": [
+                "C_ATTRIBUTE"
+            ],
+            "documentation": "Concrete model of constraint on multiply-valued (ie. container) attribute node.",
+            "properties": {
+                "cardinality": {
+                    "name": "cardinality",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "CARDINALITY",
+                    "is_mandatory": true,
+                    "documentation": "Cardinality of this attribute constraint, if it constraints a container attribute."
+                }
+            }
+        },
+        "C_DOMAIN_TYPE": {
+            "name": "C_DOMAIN_TYPE",
+            "is_abstract": true,
+            "ancestors": [
+                "C_DEFINED_OBJECT"
+            ],
+            "documentation": "Abstract parent type of domain-specific constrainer types, to be defined in external packages."
+        },
+        "C_REFERENCE_OBJECT": {
+            "name": "C_REFERENCE_OBJECT",
+            "is_abstract": true,
+            "ancestors": [
+                "C_OBJECT"
+            ],
+            "documentation": "Abstract parent type of C_OBJECT subtypes that are defined by reference."
+        },
+        "ARCHETYPE_ONTOLOGY": {
+            "name": "ARCHETYPE_ONTOLOGY",
+            "documentation": "Local ontology of an archetype.",
+            "properties": {
+                "term_codes": {
+                    "name": "term_codes",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "String"
+                    },
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
+                    "is_mandatory": true,
+                    "documentation": "List of all term codes in the ontology. Most of these correspond to \u201cat\u201d codes in an ADL archetype, which are the node_ids on C_OBJECT descendants. There may be an extra one, if a different term is used as the overall archetype concept from that used as the node_id of the outermost C_OBJECT in the definition part."
+                },
+                "constraint_codes": {
+                    "name": "constraint_codes",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "String"
+                    },
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
+                    "is_mandatory": true,
+                    "documentation": "List of all term codes in the ontology. These correspond to the \u201cac\u201d codes in an ADL archetype, or equivalently, the CONSTRAINT_REF.reference values in the archetype definition."
+                },
+                "parent_archetype": {
+                    "name": "parent_archetype",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "ARCHETYPE",
+                    "is_mandatory": true,
+                    "documentation": "Archetype which owns this terminology."
+                },
+                "terminologies_available": {
+                    "name": "terminologies_available",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "String"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    },
+                    "documentation": "List of terminologies to which term or constraint bindings exist in this terminology."
+                },
+                "specialisation_depth": {
+                    "name": "specialisation_depth",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Integer",
+                    "is_mandatory": true,
+                    "documentation": "Specialisation depth of this archetype. Unspecialised archetypes have depth 0, with each additional level of specialisation adding 1 to the specialisation_depth."
+                },
+                "term_attribute_names": {
+                    "name": "term_attribute_names",
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "String"
+                    },
+                    "cardinality": {
+                        "lower": 1,
+                        "upper_unbounded": true
+                    },
+                    "is_mandatory": true,
+                    "documentation": ""
+                }
+            }
+        },
+        "C_PRIMITIVE": {
+            "name": "C_PRIMITIVE",
+            "is_abstract": true,
+            "documentation": "Parent of types representing constraints on primitive types.",
+            "properties": {
+                "assumed_value": {
+                    "name": "assumed_value",
+                    "_type": "P_BMM_SINGLE_PROPERTY",
+                    "type": "Any",
+                    "documentation": "Value to be assumed if none sent in data."
+                }
+            }
+        }
+    }
+}
