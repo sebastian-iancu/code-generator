@@ -13,7 +13,7 @@ The output code is generated under `/code`.
 The code-generator is a Symfony Console application defined in `/bin/generate`.
 
 ## Usage
-This can be run this using attached docker compose.
+This can be run this using attached docker compose:
 ```bash
 docker compose run --rm php ...
 ```
@@ -23,7 +23,7 @@ For first time usage the `/vendor` composer directory needs to be populated:
 docker compose run --rm php composer install
 ```
 
-The generator application can be run either via composer:
+The generator application can be run either via `composer`:
 ```bash
 docker compose run --rm php composer run generate <...>
 ```
@@ -32,11 +32,11 @@ or directly:
 docker compose run --rm php ./bin/generate <...>
 ```
 
-Generating all files as predefined in application:
+Generating all files as predefined in the application:
 ```bash
 docker compose run --rm php ./bin/generate all
 ```
-or list available generators
+or list the available command for the generator tool (see list of available commands prefixed with `generate:`):
 ```bash
 docker compose run --rm php ./bin/generate list
 ```
