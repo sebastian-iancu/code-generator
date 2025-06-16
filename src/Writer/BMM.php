@@ -7,7 +7,9 @@ use OpenEHR\Tools\CodeGen\Helper\Collection;
 use OpenEHR\Tools\CodeGen\Model\UMLClass;
 use OpenEHR\Tools\CodeGen\Model\UMLEnumeration;
 use OpenEHR\Tools\CodeGen\Model\UMLFile;
+use OpenEHR\Tools\CodeGen\Model\UMLOperation;
 use OpenEHR\Tools\CodeGen\Model\UMLPackage;
+use OpenEHR\Tools\CodeGen\Model\UMLParameter;
 use OpenEHR\Tools\CodeGen\Model\UMLProperty;
 use OpenEHR\Tools\CodeGen\Model\UMLTemplateParameter;
 
@@ -77,7 +79,7 @@ class BMM extends AbstractWriter
             $schema_name = strtolower($umlFile->name);
             self::log('generating to [%s] schema.', $schema_name);
             $schema = [
-                'bmm_version' => '2.3',
+                'bmm_version' => '2.4',
                 'rm_publisher' => 'openehr',
                 'schema_name' => $schema_name,
                 'rm_release' => $umlFile->getRelease(),
@@ -184,6 +186,10 @@ class BMM extends AbstractWriter
             foreach ($umlClass->umlProperties as $umlProperty) {
                 $bmmClass['properties'][$umlProperty->name] = self::asBmmProperty($umlProperty, $umlClass, $collectedUmlClasses);
             }
+            /** @var UMLOperation $umlOperation */
+            foreach ($umlClass->umlOperations as $umlOperation) {
+                $bmmClass['functions'][$umlOperation->name] = self::asBmmFunction($umlOperation, $umlClass, $collectedUmlClasses);
+            }
         }
         if ($umlClass instanceof UMLEnumeration) {
             $bmmClass['_type'] = 'P_BMM_ENUMERATION_STRING';
@@ -210,6 +216,20 @@ class BMM extends AbstractWriter
         return $bmmGenericParameterDef;
     }
 
+    protected static function asBmmFunction(UMLOperation $umlOperation, UMLClass $umlClass, Collection $collectedUmlClasses): array
+    {
+        $bmmFunction = [
+            'name' => $umlOperation->name,
+            'description' => $umlOperation->description,
+        ];
+        /** @var UMLParameter $umlParameter */
+        foreach ($umlOperation->umlParameters as $umlParameter) {
+            $bmmFunction['parameters'][$umlParameter->name] = self::asType($umlParameter->type->name, $umlParameter->maxOccurs, $umlClass, $collectedUmlClasses);
+        }
+        $bmmFunction['result'] = self::asType($umlOperation->return->name, $umlOperation->maxOccurs, $umlClass, $collectedUmlClasses);
+        return $bmmFunction;
+    }
+
     /**
      * @param UMLProperty $umlProperty
      * @param UMLClass $umlClass
@@ -226,55 +246,66 @@ class BMM extends AbstractWriter
             /** @var UMLTemplateParameter $umlTemplateParameter */
             $umlTemplateParameter = $umlClass->umlTemplateParameters->get($umlProperty->templateParameterId);
             $bmmProperty['type'] = $umlTemplateParameter->name;
-        } elseif (str_contains($umlProperty->type->name, '<')) {
-            if ($umlProperty->maxOccurs === -1) {
-                $bmmProperty['_type'] = 'P_BMM_CONTAINER_PROPERTY';
-                $bmmProperty['type_def'] = [
-                    'container_type' => 'List',
-                    'type_def' => array_merge(['_type' => 'P_BMM_GENERIC_TYPE'], self::asTypeDef($umlProperty->type->name, $collectedUmlClasses)),
-                ];
-            } else {
-                $bmmProperty['_type'] = 'P_BMM_GENERIC_PROPERTY';
-                $bmmProperty['type_def'] = self::asTypeDef($umlProperty->type->name, $collectedUmlClasses);
-            }
-        } elseif ($umlProperty->maxOccurs === -1) {
-            $bmmProperty['_type'] = 'P_BMM_CONTAINER_PROPERTY';
-            /** @var UMLClass|null $typeDefUmlClass */
-            $typeDefUmlClass = $collectedUmlClasses->get($umlProperty->type->name);
-            // exceptional situation on data = Octet[]
-            if ($umlProperty->type->name === 'Byte') {
-                $bmmProperty['type_def'] = [
-                    'container_type' => 'Array',
-                    'type' => 'Octet'
-                ];
-            } elseif ($typeDefUmlClass && $typeDefUmlClass->isGenericType()) {
-                $bmmProperty['type_def'] = [
-                    'container_type' => 'List',
-                    'type_def' => [
-                        '_type' => 'P_BMM_GENERIC_TYPE',
-                        'root_type' => $umlProperty->type->name,
-                        'generic_parameters' => $umlClass->isGenericType() ? $umlClass->getGenericParameterName() : $umlClass->name,
-                    ]
-                ];
-            } else {
-                $bmmProperty['type_def'] = [
-                    'container_type' => 'List',
-                    'type' => $umlProperty->type->name,
-                ];
-            }
+        } else {
+            $bmmProperty = array_merge($bmmProperty, self::asType($umlProperty->type->name, $umlProperty->maxOccurs, $umlClass, $collectedUmlClasses));
+        }
+        if ($umlProperty->maxOccurs === -1 && $bmmProperty['_type'] = 'P_BMM_CONTAINER_PROPERTY') {
             $bmmProperty['cardinality'] = [
                 'lower' => $umlProperty->minOccurs,
                 'upper_unbounded' => true,
             ];
-        } else {
-            $bmmProperty['_type'] = 'P_BMM_SINGLE_PROPERTY';
-            $bmmProperty['type'] = $umlProperty->type->name;
         }
         if ($umlProperty->minOccurs) {
             $bmmProperty['is_mandatory'] = true;
         }
         $bmmProperty['documentation'] = $umlProperty->description;
         return $bmmProperty;
+    }
+
+    public static function asType(string $typeName, int $maxOccurs, UMLClass $umlClass, Collection $collectedUmlClasses): array
+    {
+        $bmmPropertyType = [];
+        if (str_contains($typeName, '<')) {
+            if ($maxOccurs === -1) {
+                $bmmPropertyType['_type'] = 'P_BMM_CONTAINER_PROPERTY';
+                $bmmPropertyType['type_def'] = [
+                    'container_type' => 'List',
+                    'type_def' => array_merge(['_type' => 'P_BMM_GENERIC_TYPE'], self::asTypeDef($typeName, $collectedUmlClasses)),
+                ];
+            } else {
+                $bmmPropertyType['_type'] = 'P_BMM_GENERIC_PROPERTY';
+                $bmmPropertyType['type_def'] = self::asTypeDef($typeName, $collectedUmlClasses);
+            }
+        } elseif ($maxOccurs === -1) {
+            $bmmPropertyType['_type'] = 'P_BMM_CONTAINER_PROPERTY';
+            /** @var UMLClass|null $typeDefUmlClass */
+            $typeDefUmlClass = $collectedUmlClasses->get($typeName);
+            // exceptional situation on data = Octet[]
+            if ($typeName === 'Byte') {
+                $bmmPropertyType['type_def'] = [
+                    'container_type' => 'Array',
+                    'type' => 'Octet'
+                ];
+            } elseif ($typeDefUmlClass && $typeDefUmlClass->isGenericType()) {
+                $bmmPropertyType['type_def'] = [
+                    'container_type' => 'List',
+                    'type_def' => [
+                        '_type' => 'P_BMM_GENERIC_TYPE',
+                        'root_type' => $typeName,
+                        'generic_parameters' => $umlClass->isGenericType() ? $umlClass->getGenericParameterName() : $umlClass->name,
+                    ]
+                ];
+            } else {
+                $bmmPropertyType['type_def'] = [
+                    'container_type' => 'List',
+                    'type' => $typeName,
+                ];
+            }
+        } else {
+//            $bmmPropertyType['_type'] = 'P_BMM_SINGLE_PROPERTY';
+            $bmmPropertyType['type'] = $typeName;
+        }
+        return $bmmPropertyType;
     }
 
     /**

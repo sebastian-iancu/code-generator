@@ -1,5 +1,5 @@
 {
-    "bmm_version": "2.3",
+    "bmm_version": "2.4",
     "rm_publisher": "openehr",
     "schema_name": "base",
     "rm_release": "BASE-development",
@@ -127,7 +127,69 @@
         "Any": {
             "name": "Any",
             "is_abstract": true,
-            "documentation": "Abstract ancestor class for all other classes. Usually maps to a type like `Any` or `Object` in an object-oriented technology. Defined here to provide value and reference equality semantics."
+            "documentation": "Abstract ancestor class for all other classes. Usually maps to a type like `Any` or `Object` in an object-oriented technology. Defined here to provide value and reference equality semantics.",
+            "functions": {
+                "is_equal": {
+                    "name": "is_equal",
+                    "description": "Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.",
+                    "parameters": {
+                        "other": {
+                            "type": "Any"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "equal": {
+                    "name": "equal",
+                    "description": "Reference equality for reference types, value equality for value types.",
+                    "parameters": {
+                        "other": {
+                            "type": "Any"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "instance_of": {
+                    "name": "instance_of",
+                    "description": "Create new instance of a type.",
+                    "parameters": {
+                        "a_type": {
+                            "type": "String"
+                        }
+                    },
+                    "result": {
+                        "type": "Any"
+                    }
+                },
+                "type_of": {
+                    "name": "type_of",
+                    "description": "Type name of an object as a string. May include generic parameters, as in `\"Interval<Time>\"`.",
+                    "parameters": {
+                        "an_object": {
+                            "type": "Any"
+                        }
+                    },
+                    "result": {
+                        "type": "String"
+                    }
+                },
+                "not_equal": {
+                    "name": "not_equal",
+                    "description": "True if current object not equal to `_other_`. Returns not `_equal_()`.",
+                    "parameters": {
+                        "other": {
+                            "type": "Ordered"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                }
+            }
         },
         "Hash": {
             "name": "Hash",
@@ -143,6 +205,32 @@
                 "V": {
                     "name": "V"
                 }
+            },
+            "functions": {
+                "has_key": {
+                    "name": "has_key",
+                    "description": "Test for presence of `_a_key_`.",
+                    "parameters": {
+                        "a_key": {
+                            "type": "Ordered"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "item": {
+                    "name": "item",
+                    "description": "Return item for key `_a_key_`.",
+                    "parameters": {
+                        "a_key": {
+                            "type": "Ordered"
+                        }
+                    },
+                    "result": {
+                        "type": "Any"
+                    }
+                }
             }
         },
         "Container": {
@@ -157,6 +245,86 @@
                     "name": "T",
                     "conforms_to_type": "Any"
                 }
+            },
+            "functions": {
+                "has": {
+                    "name": "has",
+                    "description": "Test for membership of a value.",
+                    "parameters": {
+                        "v": {
+                            "type": "Any"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "count": {
+                    "name": "count",
+                    "description": "Number of items in container.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "is_empty": {
+                    "name": "is_empty",
+                    "description": "True if container is empty.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "there_exists": {
+                    "name": "there_exists",
+                    "description": "Existential quantifier applied to container, taking one agent argument `_test_` whose signature is `(v:T): Boolean`.",
+                    "parameters": {
+                        "test": {
+                            "type": "Operation"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "for_all": {
+                    "name": "for_all",
+                    "description": "Universal quantifier applied to container, taking one agent argument `_test_` whose signature is `(v:T): Boolean`.",
+                    "parameters": {
+                        "test": {
+                            "type": "Operation"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "matching": {
+                    "name": "matching",
+                    "description": "Return a List all items matching the predicate function `_test_` which has signature `(v:T): Boolean`. If no matches, an empty List is returned.",
+                    "parameters": {
+                        "test": {
+                            "type": "Operation"
+                        }
+                    },
+                    "result": {
+                        "_type": "P_BMM_CONTAINER_PROPERTY",
+                        "type_def": {
+                            "container_type": "List",
+                            "type": "Any"
+                        }
+                    }
+                },
+                "select": {
+                    "name": "select",
+                    "description": "Return first item matching the predicate function `_test_` which has signature `(v:T): Boolean`, or Void if no match.",
+                    "parameters": {
+                        "test": {
+                            "type": "Operation"
+                        }
+                    },
+                    "result": {
+                        "type": "Any"
+                    }
+                }
             }
         },
         "List": {
@@ -169,6 +337,22 @@
                 "T": {
                     "name": "T",
                     "conforms_to_type": "Any"
+                }
+            },
+            "functions": {
+                "first": {
+                    "name": "first",
+                    "description": "Return first element.",
+                    "result": {
+                        "type": "Any"
+                    }
+                },
+                "last": {
+                    "name": "last",
+                    "description": "Return last element.",
+                    "result": {
+                        "type": "Any"
+                    }
                 }
             }
         },
@@ -196,6 +380,20 @@
                     "name": "T",
                     "conforms_to_type": "Any"
                 }
+            },
+            "functions": {
+                "item": {
+                    "name": "item",
+                    "description": "Return item for key  `_a_key_`.",
+                    "parameters": {
+                        "a_key": {
+                            "type": "Integer"
+                        }
+                    },
+                    "result": {
+                        "type": "Any"
+                    }
+                }
             }
         },
         "Uri": {
@@ -219,14 +417,243 @@
             "ancestors": [
                 "Ordered_Numeric"
             ],
-            "documentation": "Type representing minimal interface of built-in Integer type."
+            "documentation": "Type representing minimal interface of built-in Integer type.",
+            "functions": {
+                "add": {
+                    "name": "add",
+                    "description": "Integer addition.",
+                    "parameters": {
+                        "other": {
+                            "type": "Integer"
+                        }
+                    },
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "subtract": {
+                    "name": "subtract",
+                    "description": "Integer subtraction.",
+                    "parameters": {
+                        "other": {
+                            "type": "Integer"
+                        }
+                    },
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "multiply": {
+                    "name": "multiply",
+                    "description": "Integer multiplication.",
+                    "parameters": {
+                        "other": {
+                            "type": "Integer"
+                        }
+                    },
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "divide": {
+                    "name": "divide",
+                    "description": "Integer division.",
+                    "parameters": {
+                        "other": {
+                            "type": "Integer"
+                        }
+                    },
+                    "result": {
+                        "type": "Double"
+                    }
+                },
+                "exponent": {
+                    "name": "exponent",
+                    "description": "Integer exponentiation.",
+                    "parameters": {
+                        "other": {
+                            "type": "Double"
+                        }
+                    },
+                    "result": {
+                        "type": "Double"
+                    }
+                },
+                "modulo": {
+                    "name": "modulo",
+                    "description": "Return self modulo other.",
+                    "parameters": {
+                        "mod": {
+                            "type": "Integer"
+                        }
+                    },
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "less_than": {
+                    "name": "less_than",
+                    "description": "Returns True if current Integer is less than `_other_`.",
+                    "parameters": {
+                        "other": {
+                            "type": "Integer"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "negative": {
+                    "name": "negative",
+                    "description": "Generate negative of current Integer value.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "is_equal": {
+                    "name": "is_equal",
+                    "description": "Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.",
+                    "parameters": {
+                        "other": {
+                            "type": "Integer"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "equal": {
+                    "name": "equal",
+                    "description": "Reference equality for reference types, value equality for value types.",
+                    "parameters": {
+                        "other": {
+                            "type": "Integer"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                }
+            }
         },
         "Double": {
             "name": "Double",
             "ancestors": [
                 "Ordered_Numeric"
             ],
-            "documentation": "Type used to represent double-precision decimal numbers. Corresponds to a double-precision floating point value in most languages."
+            "documentation": "Type used to represent double-precision decimal numbers. Corresponds to a double-precision floating point value in most languages.",
+            "functions": {
+                "floor": {
+                    "name": "floor",
+                    "description": "Return the greatest integer no greater than the value of this object.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "add": {
+                    "name": "add",
+                    "description": "Double-precision real number addition.",
+                    "parameters": {
+                        "other": {
+                            "type": "Double"
+                        }
+                    },
+                    "result": {
+                        "type": "Double"
+                    }
+                },
+                "subtract": {
+                    "name": "subtract",
+                    "description": "Double-precision real number subtraction.",
+                    "parameters": {
+                        "other": {
+                            "type": "Double"
+                        }
+                    },
+                    "result": {
+                        "type": "Double"
+                    }
+                },
+                "multiply": {
+                    "name": "multiply",
+                    "description": "Double-precision real number multiplication.",
+                    "parameters": {
+                        "other": {
+                            "type": "Double"
+                        }
+                    },
+                    "result": {
+                        "type": "Double"
+                    }
+                },
+                "divide": {
+                    "name": "divide",
+                    "description": "Double-precision real number division.",
+                    "parameters": {
+                        "other": {
+                            "type": "Double"
+                        }
+                    },
+                    "result": {
+                        "type": "Double"
+                    }
+                },
+                "exponent": {
+                    "name": "exponent",
+                    "description": "Double-precision real number exponentiation.",
+                    "parameters": {
+                        "other": {
+                            "type": "Double"
+                        }
+                    },
+                    "result": {
+                        "type": "Double"
+                    }
+                },
+                "less_than": {
+                    "name": "less_than",
+                    "description": "Returns True if current Double is less than `_other_`.",
+                    "parameters": {
+                        "other": {
+                            "type": "Double"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "negative": {
+                    "name": "negative",
+                    "description": "Generate negative of current Double value.",
+                    "result": {
+                        "type": "Double"
+                    }
+                },
+                "is_equal": {
+                    "name": "is_equal",
+                    "description": "Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.",
+                    "parameters": {
+                        "other": {
+                            "type": "Double"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "equal": {
+                    "name": "equal",
+                    "description": "Reference equality for reference types, value equality for value types.",
+                    "parameters": {
+                        "other": {
+                            "type": "Double"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                }
+            }
         },
         "Numeric": {
             "name": "Numeric",
@@ -234,7 +661,76 @@
             "ancestors": [
                 "Any"
             ],
-            "documentation": "Abstract parent class of numeric types, which are types which have various arithmetic and comparison operators defined."
+            "documentation": "Abstract parent class of numeric types, which are types which have various arithmetic and comparison operators defined.",
+            "functions": {
+                "add": {
+                    "name": "add",
+                    "description": "Sum with `_other_` (commutative). Actual type of result depends on arithmetic balancing rules.",
+                    "parameters": {
+                        "other": {
+                            "type": "Numeric"
+                        }
+                    },
+                    "result": {
+                        "type": "Numeric"
+                    }
+                },
+                "subtract": {
+                    "name": "subtract",
+                    "description": "Result of subtracting `_other_`. Actual type of result depends on arithmetic balancing rules.",
+                    "parameters": {
+                        "other": {
+                            "type": "Numeric"
+                        }
+                    },
+                    "result": {
+                        "type": "Numeric"
+                    }
+                },
+                "multiply": {
+                    "name": "multiply",
+                    "description": "Product by `_other_`. Actual type of result depends on arithmetic balancing rules.",
+                    "parameters": {
+                        "other": {
+                            "type": "Numeric"
+                        }
+                    },
+                    "result": {
+                        "type": "Numeric"
+                    }
+                },
+                "divide": {
+                    "name": "divide",
+                    "description": "Divide by`_other_`. Actual type of result depends on arithmetic balancing rules.",
+                    "parameters": {
+                        "other": {
+                            "type": "Numeric"
+                        }
+                    },
+                    "result": {
+                        "type": "Numeric"
+                    }
+                },
+                "exponent": {
+                    "name": "exponent",
+                    "description": "Expontiation of this by `_other_`.",
+                    "parameters": {
+                        "other": {
+                            "type": "Numeric"
+                        }
+                    },
+                    "result": {
+                        "type": "Numeric"
+                    }
+                },
+                "negative": {
+                    "name": "negative",
+                    "description": "Generate negative of current value.",
+                    "result": {
+                        "type": "Numeric"
+                    }
+                }
+            }
         },
         "Octet": {
             "name": "Octet",
@@ -255,28 +751,397 @@
             "ancestors": [
                 "Any"
             ],
-            "documentation": "Type representing minimal interface of built-in Boolean type."
+            "documentation": "Type representing minimal interface of built-in Boolean type.",
+            "functions": {
+                "conjunction": {
+                    "name": "conjunction",
+                    "description": "Logical conjunction of this with `_other_`.",
+                    "parameters": {
+                        "other": {
+                            "type": "Boolean"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "semistrict_conjunction": {
+                    "name": "semistrict_conjunction",
+                    "description": "Boolean semi-strict conjunction with `_other_`.",
+                    "parameters": {
+                        "other": {
+                            "type": "Boolean"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "disjunction": {
+                    "name": "disjunction",
+                    "description": "Boolean disjunction with `_other_`.",
+                    "parameters": {
+                        "other": {
+                            "type": "Boolean"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "semistrict_disjunction": {
+                    "name": "semistrict_disjunction",
+                    "description": "Boolean semi-strict disjunction with `_other_`.",
+                    "parameters": {
+                        "other": {
+                            "type": "Boolean"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "exclusive_disjunction": {
+                    "name": "exclusive_disjunction",
+                    "description": "Boolean exclusive or with `_other_`.",
+                    "parameters": {
+                        "other": {
+                            "type": "Boolean"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "implication": {
+                    "name": "implication",
+                    "description": "Boolean implication of `_other_` (semi-strict)",
+                    "parameters": {
+                        "other": {
+                            "type": "Boolean"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "negation": {
+                    "name": "negation",
+                    "description": "Boolean negation of the current value.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                }
+            }
         },
         "String": {
             "name": "String",
             "ancestors": [
                 "Ordered"
             ],
-            "documentation": "Type representing minimal interface of built-in String type, as used to represent textual data in any natural or formal language."
+            "documentation": "Type representing minimal interface of built-in String type, as used to represent textual data in any natural or formal language.",
+            "functions": {
+                "is_empty": {
+                    "name": "is_empty",
+                    "description": "True if string is empty, i.e. equal to \"\".",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "is_integer": {
+                    "name": "is_integer",
+                    "description": "True if string can be parsed as an integer.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "as_integer": {
+                    "name": "as_integer",
+                    "description": "Return the integer corresponding to the integer value represented in this string.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "append": {
+                    "name": "append",
+                    "description": "Concatenation operator - causes `_other_` to be appended to this string.",
+                    "parameters": {
+                        "other": {
+                            "type": "String"
+                        }
+                    },
+                    "result": {
+                        "type": "String"
+                    }
+                },
+                "less_than": {
+                    "name": "less_than",
+                    "description": "Lexical comparison of string content based on ordering in relevant character set.",
+                    "parameters": {
+                        "other": {
+                            "type": "String"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "contains": {
+                    "name": "contains",
+                    "description": "Return True if this String contains `_other_` (case-sensitive).",
+                    "parameters": {
+                        "other": {
+                            "type": "String"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                }
+            }
         },
         "Real": {
             "name": "Real",
             "ancestors": [
                 "Ordered_Numeric"
             ],
-            "documentation": "Type used to represent decimal numbers. Corresponds to a single-precision floating point value in most languages."
+            "documentation": "Type used to represent decimal numbers. Corresponds to a single-precision floating point value in most languages.",
+            "functions": {
+                "floor": {
+                    "name": "floor",
+                    "description": "Return the greatest integer no greater than the value of this object.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "add": {
+                    "name": "add",
+                    "description": "Real number addition.",
+                    "parameters": {
+                        "other": {
+                            "type": "Real"
+                        }
+                    },
+                    "result": {
+                        "type": "Real"
+                    }
+                },
+                "subtract": {
+                    "name": "subtract",
+                    "description": "Real number subtraction.",
+                    "parameters": {
+                        "other": {
+                            "type": "Real"
+                        }
+                    },
+                    "result": {
+                        "type": "Real"
+                    }
+                },
+                "multiply": {
+                    "name": "multiply",
+                    "description": "Real number multiplication.",
+                    "parameters": {
+                        "other": {
+                            "type": "Real"
+                        }
+                    },
+                    "result": {
+                        "type": "Real"
+                    }
+                },
+                "divide": {
+                    "name": "divide",
+                    "description": "Real number division.",
+                    "parameters": {
+                        "other": {
+                            "type": "Real"
+                        }
+                    },
+                    "result": {
+                        "type": "Double"
+                    }
+                },
+                "exponent": {
+                    "name": "exponent",
+                    "description": "Real number exponentiation.",
+                    "parameters": {
+                        "other": {
+                            "type": "Double"
+                        }
+                    },
+                    "result": {
+                        "type": "Double"
+                    }
+                },
+                "less_than": {
+                    "name": "less_than",
+                    "description": "Returns True if current Real is less than `_other_`.",
+                    "parameters": {
+                        "other": {
+                            "type": "Real"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "negative": {
+                    "name": "negative",
+                    "description": "Generate negative of current Real value.",
+                    "result": {
+                        "type": "Real"
+                    }
+                },
+                "is_equal": {
+                    "name": "is_equal",
+                    "description": "Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.",
+                    "parameters": {
+                        "other": {
+                            "type": "Real"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "equal": {
+                    "name": "equal",
+                    "description": "Reference equality for reference types, value equality for value types.",
+                    "parameters": {
+                        "other": {
+                            "type": "Real"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                }
+            }
         },
         "Integer64": {
             "name": "Integer64",
             "ancestors": [
                 "Ordered_Numeric"
             ],
-            "documentation": "Type representing minimal interface of built-in Integer64 type."
+            "documentation": "Type representing minimal interface of built-in Integer64 type.",
+            "functions": {
+                "add": {
+                    "name": "add",
+                    "description": "Large integer addition.",
+                    "parameters": {
+                        "other": {
+                            "type": "Integer"
+                        }
+                    },
+                    "result": {
+                        "type": "Integer64"
+                    }
+                },
+                "subtract": {
+                    "name": "subtract",
+                    "description": "Large integer subtraction.",
+                    "parameters": {
+                        "other": {
+                            "type": "Integer"
+                        }
+                    },
+                    "result": {
+                        "type": "Integer64"
+                    }
+                },
+                "multiply": {
+                    "name": "multiply",
+                    "description": "Large integer multiplication.",
+                    "parameters": {
+                        "other": {
+                            "type": "Integer"
+                        }
+                    },
+                    "result": {
+                        "type": "Integer64"
+                    }
+                },
+                "divide": {
+                    "name": "divide",
+                    "description": "Large integer division.",
+                    "parameters": {
+                        "other": {
+                            "type": "Integer"
+                        }
+                    },
+                    "result": {
+                        "type": "Double"
+                    }
+                },
+                "exponent": {
+                    "name": "exponent",
+                    "description": "Large integer exponentiation.",
+                    "parameters": {
+                        "other": {
+                            "type": "Double"
+                        }
+                    },
+                    "result": {
+                        "type": "Double"
+                    }
+                },
+                "modulo": {
+                    "name": "modulo",
+                    "description": "Large integer modulus.",
+                    "parameters": {
+                        "mod": {
+                            "type": "Integer"
+                        }
+                    },
+                    "result": {
+                        "type": "Integer64"
+                    }
+                },
+                "less_than": {
+                    "name": "less_than",
+                    "description": "Returns True if current Integer is less than `_other_`.",
+                    "parameters": {
+                        "other": {
+                            "type": "Integer64"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "negative": {
+                    "name": "negative",
+                    "description": "Generate negative of current Integer value.",
+                    "result": {
+                        "type": "Integer64"
+                    }
+                },
+                "is_equal": {
+                    "name": "is_equal",
+                    "description": "Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.",
+                    "parameters": {
+                        "other": {
+                            "type": "Integer64"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "equal": {
+                    "name": "equal",
+                    "description": "Reference equality for reference types, value equality for value types.",
+                    "parameters": {
+                        "other": {
+                            "type": "Integer64"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                }
+            }
         },
         "Ordered": {
             "name": "Ordered",
@@ -284,7 +1149,57 @@
             "ancestors": [
                 "Any"
             ],
-            "documentation": "Abstract parent class of ordered types i.e. types on which the '<' operator is defined."
+            "documentation": "Abstract parent class of ordered types i.e. types on which the '<' operator is defined.",
+            "functions": {
+                "less_than": {
+                    "name": "less_than",
+                    "description": "Arithmetic value comparison. Returns True if current object is less than `_other_`. This operator is effected and\/or redefined in descendants to provide the appropriate ordering semantics for concrete types.\n\nIn conjunction with `=`, enables the definition of the related functions `_greater_than_()` etc.",
+                    "parameters": {
+                        "other": {
+                            "type": "Ordered"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "less_than_or_equal": {
+                    "name": "less_than_or_equal",
+                    "description": "True if current object less than or equal to `_other_`.",
+                    "parameters": {
+                        "other": {
+                            "type": "Ordered"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "greater_than": {
+                    "name": "greater_than",
+                    "description": "True if current object greater than `_other_`.",
+                    "parameters": {
+                        "other": {
+                            "type": "Ordered"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "greater_than_or_equal": {
+                    "name": "greater_than_or_equal",
+                    "description": "True if current object greater than or equal to `_other_`.",
+                    "parameters": {
+                        "other": {
+                            "type": "Ordered"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                }
+            }
         },
         "Byte": {
             "name": "Byte",
@@ -298,21 +1213,472 @@
             "ancestors": [
                 "Iso8601_type"
             ],
-            "documentation": "Represents an ISO 8601 date\/time, including partial and extended forms. Value may be:\n\n* `YYYY-MM-DDThh:mm:ss[(,|.)sss][Z | \u00b1hh[:mm]]` (extended, preferred) or\n* `YYYYMMDDThhmmss[(,|.)sss][Z | \u00b1hh[mm]]` (compact)\n* or a partial variant.\n\nSee `_valid_iso8601_date_time()_` for validity.\n\nNote that this class includes 2 deviations from ISO 8601:2004:\n\n* for partial date\/times, any part of the date\/time up to the month may be missing, not just seconds and minutes as in the standard;\n* the time `24:00:00` is not allowed, since it would mean the date was really on the next day."
+            "documentation": "Represents an ISO 8601 date\/time, including partial and extended forms. Value may be:\n\n* `YYYY-MM-DDThh:mm:ss[(,|.)sss][Z | \u00b1hh[:mm]]` (extended, preferred) or\n* `YYYYMMDDThhmmss[(,|.)sss][Z | \u00b1hh[mm]]` (compact)\n* or a partial variant.\n\nSee `_valid_iso8601_date_time()_` for validity.\n\nNote that this class includes 2 deviations from ISO 8601:2004:\n\n* for partial date\/times, any part of the date\/time up to the month may be missing, not just seconds and minutes as in the standard;\n* the time `24:00:00` is not allowed, since it would mean the date was really on the next day.",
+            "functions": {
+                "year": {
+                    "name": "year",
+                    "description": "Extract the year part of the date as an Integer.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "month": {
+                    "name": "month",
+                    "description": "Extract the month part of the date\/time as an Integer, or return 0 if not present.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "day": {
+                    "name": "day",
+                    "description": "Extract the day part of the date\/time as an Integer, or return 0 if not present.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "hour": {
+                    "name": "hour",
+                    "description": "Extract the hour part of the date\/time as an Integer, or return 0 if not present.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "minute": {
+                    "name": "minute",
+                    "description": "Extract the minute part of the date\/time as an Integer, or return 0 if not present.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "second": {
+                    "name": "second",
+                    "description": "Extract the integral seconds part of the date\/time (i.e. prior to any decimal sign) as an Integer, or return 0 if not present.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "fractional_second": {
+                    "name": "fractional_second",
+                    "description": "Extract the fractional seconds part of the date\/time (i.e. following to any decimal sign) as a Real, or return 0.0 if not present.",
+                    "result": {
+                        "type": "Real"
+                    }
+                },
+                "timezone": {
+                    "name": "timezone",
+                    "description": "Timezone; may be Void.",
+                    "result": {
+                        "type": "Iso8601_timezone"
+                    }
+                },
+                "month_unknown": {
+                    "name": "month_unknown",
+                    "description": "Indicates whether month in year is unknown.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "day_unknown": {
+                    "name": "day_unknown",
+                    "description": "Indicates whether day in month is unknown.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "minute_unknown": {
+                    "name": "minute_unknown",
+                    "description": "Indicates whether minute in hour is known.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "second_unknown": {
+                    "name": "second_unknown",
+                    "description": "Indicates whether minute in hour is known.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "is_decimal_sign_comma": {
+                    "name": "is_decimal_sign_comma",
+                    "description": "True if this time has a decimal part indicated by `','` (comma) rather than `'.'` (period).",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "is_partial": {
+                    "name": "is_partial",
+                    "description": "True if this date time is partial, i.e. if seconds or more is missing.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "is_extended": {
+                    "name": "is_extended",
+                    "description": "True if this date\/time uses `'-'`, `':'` separators.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "has_fractional_second": {
+                    "name": "has_fractional_second",
+                    "description": "True if the `_fractional_second_` part is significant (i.e. even if = 0.0).",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "as_string": {
+                    "name": "as_string",
+                    "description": "Return the string value in extended format.",
+                    "result": {
+                        "type": "String"
+                    }
+                },
+                "add": {
+                    "name": "add",
+                    "description": "Arithmetic addition of a duration to a date\/time.",
+                    "parameters": {
+                        "a_diff": {
+                            "type": "Iso8601_duration"
+                        }
+                    },
+                    "result": {
+                        "type": "Iso8601_date_time"
+                    }
+                },
+                "subtract": {
+                    "name": "subtract",
+                    "description": "Arithmetic subtraction of a duration from a date\/time.",
+                    "parameters": {
+                        "a_diff": {
+                            "type": "Iso8601_duration"
+                        }
+                    },
+                    "result": {
+                        "type": "Iso8601_date_time"
+                    }
+                },
+                "diff": {
+                    "name": "diff",
+                    "description": "Difference of two date\/times.",
+                    "parameters": {
+                        "a_date_time": {
+                            "type": "Iso8601_date_time"
+                        }
+                    },
+                    "result": {
+                        "type": "Iso8601_duration"
+                    }
+                },
+                "add_nominal": {
+                    "name": "add_nominal",
+                    "description": "Addition of nominal duration represented by `_a_diff_`. See `Iso8601_date._add_nominal_()` for semantics.",
+                    "parameters": {
+                        "a_diff": {
+                            "type": "Iso8601_duration"
+                        }
+                    },
+                    "result": {
+                        "type": "Iso8601_date"
+                    }
+                },
+                "subtract_nominal": {
+                    "name": "subtract_nominal",
+                    "description": "Subtraction of nominal duration represented by `_a_diff_`. See `_add_nominal_()` for semantics.",
+                    "parameters": {
+                        "a_diff": {
+                            "type": "Iso8601_duration"
+                        }
+                    },
+                    "result": {
+                        "type": "Iso8601_date"
+                    }
+                }
+            }
         },
         "Iso8601_duration": {
             "name": "Iso8601_duration",
             "ancestors": [
                 "Iso8601_type"
             ],
-            "documentation": "Represents an ISO 8601 duration, which may have multiple parts from years down to seconds. The `_value_` attribute is a String in the format:\n\n* `P[nnY][nnM][nnW][nnD][T[nnH][nnM][nnS]]`\n\nNOTE: two deviations from ISO 8601 are supported, the first, to allow a negative sign, and the second allowing the 'W' designator to be mixed with other designators."
+            "documentation": "Represents an ISO 8601 duration, which may have multiple parts from years down to seconds. The `_value_` attribute is a String in the format:\n\n* `P[nnY][nnM][nnW][nnD][T[nnH][nnM][nnS]]`\n\nNOTE: two deviations from ISO 8601 are supported, the first, to allow a negative sign, and the second allowing the 'W' designator to be mixed with other designators.",
+            "functions": {
+                "is_extended": {
+                    "name": "is_extended",
+                    "description": "Returns True.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "is_partial": {
+                    "name": "is_partial",
+                    "description": "Returns False.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "years": {
+                    "name": "years",
+                    "description": "Number of years in the `_value_`, i.e. the number preceding the `'Y'` in the `'YMD'` part, if one exists.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "months": {
+                    "name": "months",
+                    "description": "Number of months in the `_value_`, i.e. the value preceding the `'M'` in the `'YMD'` part, if one exists.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "days": {
+                    "name": "days",
+                    "description": "Number of days in the `_value_`, i.e. the number preceding the `'D'` in the `'YMD'` part, if one exists.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "hours": {
+                    "name": "hours",
+                    "description": "Number of hours in the `_value_`, i.e. the number preceding the `'H'` in the `'HMS'` part, if one exists.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "minutes": {
+                    "name": "minutes",
+                    "description": "Number of minutes in the `_value_`, i.e. the number preceding the `'M'` in the `'HMS'` part, if one exists.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "seconds": {
+                    "name": "seconds",
+                    "description": "Number of seconds in the `_value_`, i.e. the integer number preceding the `'S'` in the `'HMS'` part, if one exists.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "fractional_seconds": {
+                    "name": "fractional_seconds",
+                    "description": "Fractional seconds in the `_value_`, i.e. the decimal part of the number preceding the `'S'` in the `'HMS'` part, if one exists.",
+                    "result": {
+                        "type": "Real"
+                    }
+                },
+                "weeks": {
+                    "name": "weeks",
+                    "description": "Number of weeks in the `_value_`, i.e. the value preceding the `W`, if one exists.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "is_decimal_sign_comma": {
+                    "name": "is_decimal_sign_comma",
+                    "description": "True if this time has a decimal part indicated by ',' (comma) rather than '.' (period).",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "to_seconds": {
+                    "name": "to_seconds",
+                    "description": "Total number of seconds equivalent (including fractional) of entire duration. Where non-definite elements such as year and month (i.e. 'Y' and 'M') are included, the corresponding 'average' durations from `Time_definitions` are used to compute the result.",
+                    "result": {
+                        "type": "Real"
+                    }
+                },
+                "as_string": {
+                    "name": "as_string",
+                    "description": "Return the duration string value.",
+                    "result": {
+                        "type": "String"
+                    }
+                },
+                "add": {
+                    "name": "add",
+                    "description": "Arithmetic addition of a duration to a duration, via conversion to seconds, using `Time_definitions._Average_days_in_year_` and `Time_definitions._Average_days_in_month_`",
+                    "parameters": {
+                        "a_val": {
+                            "type": "Iso8601_duration"
+                        }
+                    },
+                    "result": {
+                        "type": "Iso8601_duration"
+                    }
+                },
+                "subtract": {
+                    "name": "subtract",
+                    "description": "Arithmetic subtraction of a duration from a duration, via conversion to seconds, using `Time_definitions._Average_days_in_year_` and `Time_definitions._Average_days_in_month_`",
+                    "parameters": {
+                        "a_val": {
+                            "type": "Iso8601_duration"
+                        }
+                    },
+                    "result": {
+                        "type": "Iso8601_duration"
+                    }
+                },
+                "multiply": {
+                    "name": "multiply",
+                    "description": "Arithmetic multiplication a duration by a number.",
+                    "parameters": {
+                        "a_val": {
+                            "type": "Real"
+                        }
+                    },
+                    "result": {
+                        "type": "Iso8601_duration"
+                    }
+                },
+                "divide": {
+                    "name": "divide",
+                    "description": "Arithmetic division of a duration by a number.",
+                    "parameters": {
+                        "a_val": {
+                            "type": "Real"
+                        }
+                    },
+                    "result": {
+                        "type": "Iso8601_duration"
+                    }
+                },
+                "negative": {
+                    "name": "negative",
+                    "description": "Generate negative of current duration value.",
+                    "result": {
+                        "type": "Iso8601_duration"
+                    }
+                }
+            }
         },
         "Iso8601_time": {
             "name": "Iso8601_time",
             "ancestors": [
                 "Iso8601_type"
             ],
-            "documentation": "Represents an ISO 8601 time, including partial and extended forms. Value may be:\n\n* `hh:mm:ss[(,|.)sss][Z|\u00b1hh[:mm]]` (extended, preferred) or\n* `hhmmss[(,|.)sss][Z|\u00b1hh[mm]]` (compact)\n* or a partial invariant.\n\nSee `_valid_iso8601_time()_` for validity.\n\nNOTE: A small deviation to the ISO 8601:2004 standard in this class is that the time `24:00:00` is not allowed, for consistency with `Iso8601_date_time`."
+            "documentation": "Represents an ISO 8601 time, including partial and extended forms. Value may be:\n\n* `hh:mm:ss[(,|.)sss][Z|\u00b1hh[:mm]]` (extended, preferred) or\n* `hhmmss[(,|.)sss][Z|\u00b1hh[mm]]` (compact)\n* or a partial invariant.\n\nSee `_valid_iso8601_time()_` for validity.\n\nNOTE: A small deviation to the ISO 8601:2004 standard in this class is that the time `24:00:00` is not allowed, for consistency with `Iso8601_date_time`.",
+            "functions": {
+                "hour": {
+                    "name": "hour",
+                    "description": "Extract the hour part of the date\/time as an Integer.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "minute": {
+                    "name": "minute",
+                    "description": "Extract the minute part of the time as an Integer, or return 0 if not present.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "second": {
+                    "name": "second",
+                    "description": "Extract the integral seconds part of the time (i.e. prior to any decimal sign) as an Integer, or return 0 if not present.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "fractional_second": {
+                    "name": "fractional_second",
+                    "description": "Extract the fractional seconds part of the time (i.e. following to any decimal sign) as a Real, or return 0.0 if not present.",
+                    "result": {
+                        "type": "Real"
+                    }
+                },
+                "timezone": {
+                    "name": "timezone",
+                    "description": "Timezone; may be Void.",
+                    "result": {
+                        "type": "Iso8601_timezone"
+                    }
+                },
+                "minute_unknown": {
+                    "name": "minute_unknown",
+                    "description": "Indicates whether minute is unknown. If so, the time is of the form \u201chh\u201d.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "second_unknown": {
+                    "name": "second_unknown",
+                    "description": "Indicates whether second is unknown. If so and month is known, the time is of the form `\"hh:mm\"` or `\"hhmm\"`.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "is_decimal_sign_comma": {
+                    "name": "is_decimal_sign_comma",
+                    "description": "True if this time has a decimal part indicated by `','` (comma) rather than `'.'` (period).",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "is_partial": {
+                    "name": "is_partial",
+                    "description": "True if this time is partial, i.e. if seconds or more is missing.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "is_extended": {
+                    "name": "is_extended",
+                    "description": "True if this time uses `'-'`, `':'` separators.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "has_fractional_second": {
+                    "name": "has_fractional_second",
+                    "description": "True if the `_fractional_second_` part is significant (i.e. even if = 0.0).",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "as_string": {
+                    "name": "as_string",
+                    "description": "Return string value in extended format.",
+                    "result": {
+                        "type": "String"
+                    }
+                },
+                "add": {
+                    "name": "add",
+                    "description": "Arithmetic addition of a duration to a time.",
+                    "parameters": {
+                        "a_diff": {
+                            "type": "Iso8601_duration"
+                        }
+                    },
+                    "result": {
+                        "type": "Iso8601_time"
+                    }
+                },
+                "subtract": {
+                    "name": "subtract",
+                    "description": "Arithmetic subtraction of a duration from a time.",
+                    "parameters": {
+                        "a_diff": {
+                            "type": "Iso8601_duration"
+                        }
+                    },
+                    "result": {
+                        "type": "Iso8601_time"
+                    }
+                },
+                "diff": {
+                    "name": "diff",
+                    "description": "Difference of two times.",
+                    "parameters": {
+                        "a_time": {
+                            "type": "Iso8601_time"
+                        }
+                    },
+                    "result": {
+                        "type": "Iso8601_duration"
+                    }
+                }
+            }
         },
         "Iso8601_type": {
             "name": "Iso8601_type",
@@ -325,10 +1691,25 @@
             "properties": {
                 "value": {
                     "name": "value",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Representation of all descendants is a single String."
+                }
+            },
+            "functions": {
+                "is_partial": {
+                    "name": "is_partial",
+                    "description": "True if this date time is partial, i.e. if trailing end (right hand) value(s) is\/are missing.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "is_extended": {
+                    "name": "is_extended",
+                    "description": "True if this ISO8601 string is in the 'extended' form, i.e. uses `'-'` and \/ or `':'` separators. This is the preferred format.",
+                    "result": {
+                        "type": "Boolean"
+                    }
                 }
             }
         },
@@ -337,7 +1718,132 @@
             "ancestors": [
                 "Iso8601_type"
             ],
-            "documentation": "Represents an ISO 8601 date, including partial and extended forms. Value may be:\n\n* `YYYY-MM-DD` (extended, preferred)\n* `YYYYMMDD` (compact)\n* a partial invariant.\n\nSee `Time_definitions._valid_iso8601_date()_` for validity."
+            "documentation": "Represents an ISO 8601 date, including partial and extended forms. Value may be:\n\n* `YYYY-MM-DD` (extended, preferred)\n* `YYYYMMDD` (compact)\n* a partial invariant.\n\nSee `Time_definitions._valid_iso8601_date()_` for validity.",
+            "functions": {
+                "year": {
+                    "name": "year",
+                    "description": "Extract the year part of the date as an Integer.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "month": {
+                    "name": "month",
+                    "description": "Extract the month part of the date as an Integer, or return 0 if not present.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "day": {
+                    "name": "day",
+                    "description": "Extract the day part of the date as an Integer, or return 0 if not present.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "timezone": {
+                    "name": "timezone",
+                    "description": "Timezone; may be Void.",
+                    "result": {
+                        "type": "Iso8601_timezone"
+                    }
+                },
+                "month_unknown": {
+                    "name": "month_unknown",
+                    "description": "Indicates whether month in year is unknown. If so, the date is of the form `\"YYYY\"`.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "day_unknown": {
+                    "name": "day_unknown",
+                    "description": "Indicates whether day in month is unknown. If so, and month is known, the date is of the form `\"YYYY-MM\"` or `\"YYYYMM\"`.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "is_partial": {
+                    "name": "is_partial",
+                    "description": "True if this date is partial, i.e. if days or more is missing.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "is_extended": {
+                    "name": "is_extended",
+                    "description": "True if this date uses `'-'` separators.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "as_string": {
+                    "name": "as_string",
+                    "description": "Return string value in extended format.",
+                    "result": {
+                        "type": "String"
+                    }
+                },
+                "add": {
+                    "name": "add",
+                    "description": "Arithmetic addition of a duration to a date.",
+                    "parameters": {
+                        "a_diff": {
+                            "type": "Iso8601_duration"
+                        }
+                    },
+                    "result": {
+                        "type": "Iso8601_date"
+                    }
+                },
+                "subtract": {
+                    "name": "subtract",
+                    "description": "Arithmetic subtraction of a duration from a date.",
+                    "parameters": {
+                        "a_diff": {
+                            "type": "Iso8601_duration"
+                        }
+                    },
+                    "result": {
+                        "type": "Iso8601_date"
+                    }
+                },
+                "diff": {
+                    "name": "diff",
+                    "description": "Difference of two dates.",
+                    "parameters": {
+                        "a_date": {
+                            "type": "Iso8601_date"
+                        }
+                    },
+                    "result": {
+                        "type": "Iso8601_duration"
+                    }
+                },
+                "add_nominal": {
+                    "name": "add_nominal",
+                    "description": "Addition of nominal duration represented by `_a_diff_`. For example, a duration of `'P1Y'` means advance to the same date next year, with the exception of the date 29 February in a leap year, to which the addition of a nominal year will result in 28 February of the following year. Similarly, `'P1M'` is understood here as a nominal month, the addition of which will result in one of:\n\n* the same day in the following month, if it exists, or;\n* one or two days less where the following month is shorter, or;\n* in the case of adding a month to the date 31 Jan, the result will be 28 Feb in a non-leap year (i.e. three less) and 29 Feb in a leap year (i.e. two less).",
+                    "parameters": {
+                        "a_diff": {
+                            "type": "Iso8601_duration"
+                        }
+                    },
+                    "result": {
+                        "type": "Iso8601_date"
+                    }
+                },
+                "subtract_nominal": {
+                    "name": "subtract_nominal",
+                    "description": "Subtraction of nominal duration represented by `_a_diff_`. See `_add_nominal_()` for semantics.",
+                    "parameters": {
+                        "a_diff": {
+                            "type": "Iso8601_duration"
+                        }
+                    },
+                    "result": {
+                        "type": "Iso8601_date"
+                    }
+                }
+            }
         },
         "Temporal": {
             "name": "Temporal",
@@ -356,17 +1862,45 @@
             "properties": {
                 "Multiplicity_range_marker": {
                     "name": "Multiplicity_range_marker",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Marker to use in string form of interval between limits."
                 },
                 "Multiplicity_unbounded_marker": {
                     "name": "Multiplicity_unbounded_marker",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Character",
                     "is_mandatory": true,
                     "documentation": "Symbol to use to indicate upper limit unbounded."
+                }
+            },
+            "functions": {
+                "is_open": {
+                    "name": "is_open",
+                    "description": "True if this interval imposes no constraints, i.e. is set to `0..*`.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "is_optional": {
+                    "name": "is_optional",
+                    "description": "True if this interval expresses optionality, i.e. `0..1`.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "is_mandatory": {
+                    "name": "is_mandatory",
+                    "description": "True if this interval expresses mandation, i.e. `1..1`.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "is_prohibited": {
+                    "name": "is_prohibited",
+                    "description": "True if this interval is set to `0..0`.",
+                    "result": {
+                        "type": "Boolean"
+                    }
                 }
             }
         },
@@ -398,31 +1932,77 @@
                 },
                 "lower_unbounded": {
                     "name": "lower_unbounded",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "True if `_lower_` boundary open (i.e. = `-infinity`)."
                 },
                 "upper_unbounded": {
                     "name": "upper_unbounded",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "True if `_upper_` boundary open (i.e. = `+infinity`)."
                 },
                 "lower_included": {
                     "name": "lower_included",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "True if `_lower_` boundary value included in range, if `not _lower_unbounded_`."
                 },
                 "upper_included": {
                     "name": "upper_included",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "True if `_upper_` boundary value included in range if `not _upper_unbounded_`."
+                }
+            },
+            "functions": {
+                "has": {
+                    "name": "has",
+                    "description": "True if the value `e` is properly contained in this Interval.",
+                    "parameters": {
+                        "e": {
+                            "type": "Ordered"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "intersects": {
+                    "name": "intersects",
+                    "description": "True if there is any overlap between intervals represented by Current and `_other_`. True if at least one limit of `_other_` is strictly inside the limits of this interval.",
+                    "parameters": {
+                        "other": {
+                            "type": "Interval"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "contains": {
+                    "name": "contains",
+                    "description": "True if current interval properly contains `_other_`? True if all points of `_other_` are inside the current interval.",
+                    "parameters": {
+                        "other": {
+                            "type": "Interval"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "is_equal": {
+                    "name": "is_equal",
+                    "description": "True if current object's interval is semantically same as `_other_`.",
+                    "parameters": {
+                        "other": {
+                            "type": "Any"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
                 }
             }
         },
@@ -432,24 +2012,44 @@
             "properties": {
                 "interval": {
                     "name": "interval",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Multiplicity_interval",
                     "is_mandatory": true,
                     "documentation": "The interval of this cardinality. "
                 },
                 "is_ordered": {
                     "name": "is_ordered",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "True if the members of the container attribute to which this cardinality refers are ordered. "
                 },
                 "is_unique": {
                     "name": "is_unique",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "True if the members of the container attribute to which this cardinality refers are unique."
+                }
+            },
+            "functions": {
+                "is_bag": {
+                    "name": "is_bag",
+                    "description": "True if the semantics of this cardinality represent a bag, i.e. unordered, non-unique membership.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "is_list": {
+                    "name": "is_list",
+                    "description": "True if the semantics of this cardinality represent a list, i.e. ordered, non-unique membership.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "is_set": {
+                    "name": "is_set",
+                    "description": "True if the semantics of this cardinality represent a set, i.e. unordered, unique membership.",
+                    "result": {
+                        "type": "Boolean"
+                    }
                 }
             }
         },
@@ -462,27 +2062,23 @@
             "properties": {
                 "terminology_id": {
                     "name": "terminology_id",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "The archetype environment namespace identifier used to identify a terminology. Typically a value like `\"snomed_ct\"` that is mapped elsewhere to the full URI identifying the terminology."
                 },
                 "terminology_version": {
                     "name": "terminology_version",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Optional string value representing terminology version, typically a date or dotted numeric."
                 },
                 "code_string": {
                     "name": "code_string",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "A terminology code or post-coordinated code expression, if supported by the terminology. The code may refer to a single term, a value set consisting of multiple terms, or some other entity representable within the terminology."
                 },
                 "uri": {
                     "name": "uri",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Uri",
                     "documentation": "The URI reference that may be used as a concrete key into a notional terminology service for queries that can obtain the term text, definition, and other associated elements."
                 }
@@ -497,14 +2093,12 @@
             "properties": {
                 "concept": {
                     "name": "concept",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Terminology_code",
                     "is_mandatory": true,
                     "documentation": "Reference to the terminology concept formally representing this term."
                 },
                 "text": {
                     "name": "text",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Text of term."
@@ -518,7 +2112,58 @@
             "ancestors": [
                 "OBJECT_ID"
             ],
-            "documentation": "Identifier for archetypes. Ideally these would identify globally unique archetypes.\n\nLexical form: `rm_originator  '-' rm_name  '-' rm_entity  '.' concept_name {  '-' specialisation }*  '.v' number`."
+            "documentation": "Identifier for archetypes. Ideally these would identify globally unique archetypes.\n\nLexical form: `rm_originator  '-' rm_name  '-' rm_entity  '.' concept_name {  '-' specialisation }*  '.v' number`.",
+            "functions": {
+                "qualified_rm_entity": {
+                    "name": "qualified_rm_entity",
+                    "description": "Globally qualified reference model entity, e.g.  `\"openehr-EHR-OBSERVATION\"`.",
+                    "result": {
+                        "type": "String"
+                    }
+                },
+                "domain_concept": {
+                    "name": "domain_concept",
+                    "description": "Name of the concept represented by this archetype, including specialisation, e.g. `\"Biochemistry_result-cholesterol\"`. ",
+                    "result": {
+                        "type": "String"
+                    }
+                },
+                "rm_originator": {
+                    "name": "rm_originator",
+                    "description": "Organisation originating the reference model on which this archetype is based, e.g. `\"openEHR\"`, `\"CEN\"`, `\"HL7\"`. ",
+                    "result": {
+                        "type": "String"
+                    }
+                },
+                "rm_name": {
+                    "name": "rm_name",
+                    "description": "Name of the reference model, e.g. `\"RIM\"`,  `\"EHR\"`,  `\"EN13606\"`. ",
+                    "result": {
+                        "type": "String"
+                    }
+                },
+                "rm_entity": {
+                    "name": "rm_entity",
+                    "description": "Name of the ontological level within the reference model to which this archetype is targeted, e.g. for openEHR:  `\"FOLDER\"`, `\"COMPOSITION\"`, `\"SECTION\"`, `\"OBSERVATION\"`.",
+                    "result": {
+                        "type": "String"
+                    }
+                },
+                "specialisation": {
+                    "name": "specialisation",
+                    "description": "Name of specialisation of concept, if this archetype is a specialisation of another archetype, e.g. `\"cholesterol\"`.",
+                    "result": {
+                        "type": "String"
+                    }
+                },
+                "version_id": {
+                    "name": "version_id",
+                    "description": "Version of this archetype. \n",
+                    "result": {
+                        "type": "String"
+                    }
+                }
+            }
         },
         "GENERIC_ID": {
             "name": "GENERIC_ID",
@@ -529,7 +2174,6 @@
             "properties": {
                 "scheme": {
                     "name": "scheme",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Name of the scheme to which this identifier conforms. Ideally this name will be recognisable globally but realistically it may be a local ad hoc scheme whose name is not controlled or standardised in any way. "
@@ -552,16 +2196,23 @@
             "properties": {
                 "path": {
                     "name": "path",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "The path to an instance, as an absolute path with respect to the object found at `VERSION._data_`. An empty path means that the object referred to by `_id_` is being specified. "
                 },
                 "id": {
                     "name": "id",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "UID_BASED_ID",
                     "is_mandatory": true,
                     "documentation": "Globally unique id of an object, regardless of where it is stored."
+                }
+            },
+            "functions": {
+                "as_uri": {
+                    "name": "as_uri",
+                    "description": "A URI form of the reference, created by concatenating the following: \n\n* scheme, e.g. `ehr:`, derived from `_namespace_`\n* `_id.value_`\n* `\/` + `_path_`, where `_path_` is non-empty\n",
+                    "result": {
+                        "type": "String"
+                    }
                 }
             }
         },
@@ -572,7 +2223,6 @@
             "properties": {
                 "value": {
                     "name": "value",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "The value of the id in the form defined below. "
@@ -585,21 +2235,18 @@
             "properties": {
                 "namespace": {
                     "name": "namespace",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Namespace to which this identifier belongs in the local system context (and possibly in any other openEHR compliant environment) e.g.  terminology ,  demographic . These names are not yet standardised. Legal values for `_namespace_` are:\n\n* `\"local\"`\n* `\"unknown\"`\n* a string matching the standard regex `[a-zA-Z][a-zA-Z0-9_.:\\\/&?=+-]*`.\n\nNote that the first two are just special values of the regex, and will be matched by it."
                 },
                 "type": {
                     "name": "type",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Name of the  class (concrete or abstract) of object to which this identifier type refers, e.g. `PARTY`, `PERSON`,  `GUIDELINE`  etc. These class names are from the relevant reference model. The type name `ANY` can be used to indicate that any type is accepted (e.g. if the type is unknown). "
                 },
                 "id": {
                     "name": "id",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "OBJECT_ID",
                     "is_mandatory": true,
                     "documentation": "Globally unique id of an object, regardless of where it is stored."
@@ -611,7 +2258,37 @@
             "ancestors": [
                 "UID_BASED_ID"
             ],
-            "documentation": "Globally unique identifier for one version of a versioned object; lexical form: `object_id  '::' creating_system_id  '::' version_tree_id`."
+            "documentation": "Globally unique identifier for one version of a versioned object; lexical form: `object_id  '::' creating_system_id  '::' version_tree_id`.",
+            "functions": {
+                "object_id": {
+                    "name": "object_id",
+                    "description": "Unique identifier for logical object of which this identifier identifies one version; normally the `_object_id_` will be the unique identifier of the version container containing the version referred to by this `OBJECT_VERSION_ID` instance. ",
+                    "result": {
+                        "type": "UID"
+                    }
+                },
+                "creating_system_id": {
+                    "name": "creating_system_id",
+                    "description": "Identifier of the system that created the Version corresponding to this Object version id.",
+                    "result": {
+                        "type": "UID"
+                    }
+                },
+                "version_tree_id": {
+                    "name": "version_tree_id",
+                    "description": "Tree identifier of this version with respect to other versions in the same version tree, as either 1 or 3 part dot-separated numbers, e.g.  1 ,  2.1.4 . ",
+                    "result": {
+                        "type": "VERSION_TREE_ID"
+                    }
+                },
+                "is_branch": {
+                    "name": "is_branch",
+                    "description": "True if this version identifier represents a branch.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                }
+            }
         },
         "PARTY_REF": {
             "name": "PARTY_REF",
@@ -625,7 +2302,23 @@
             "ancestors": [
                 "OBJECT_ID"
             ],
-            "documentation": "Identifier for terminologies such as accessed via a terminology query service. In this class, the value attribute identifies the Terminology in the terminology service, e.g.  SNOMED-CT . A terminology is assumed to be in a particular language, which must be explicitly specified.\n\nLexical form: `name [  '(' version  ')' ]`.\n"
+            "documentation": "Identifier for terminologies such as accessed via a terminology query service. In this class, the value attribute identifies the Terminology in the terminology service, e.g.  SNOMED-CT . A terminology is assumed to be in a particular language, which must be explicitly specified.\n\nLexical form: `name [  '(' version  ')' ]`.\n",
+            "functions": {
+                "name": {
+                    "name": "name",
+                    "description": "Return the terminology id (which includes the  version  in some cases). Distinct names correspond to distinct (i.e. non-compatible) terminologies. Thus the names  `\"ICD10AM\"` and `\"ICD10\"` refer to distinct terminologies. ",
+                    "result": {
+                        "type": "String"
+                    }
+                },
+                "version_id": {
+                    "name": "version_id",
+                    "description": "Version of this terminology, if versioning supported, else the empty string. ",
+                    "result": {
+                        "type": "String"
+                    }
+                }
+            }
         },
         "VERSION_TREE_ID": {
             "name": "VERSION_TREE_ID",
@@ -633,10 +2326,39 @@
             "properties": {
                 "value": {
                     "name": "value",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "String form of this identifier."
+                }
+            },
+            "functions": {
+                "trunk_version": {
+                    "name": "trunk_version",
+                    "description": "Trunk version number; numbering starts at 1. ",
+                    "result": {
+                        "type": "String"
+                    }
+                },
+                "is_branch": {
+                    "name": "is_branch",
+                    "description": "True if this version identifier represents a branch, i.e. has `_branch_number()_` and `_branch_version()_` parts.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "branch_number": {
+                    "name": "branch_number",
+                    "description": "Number of branch from the trunk point; numbering starts at 1. ",
+                    "result": {
+                        "type": "String"
+                    }
+                },
+                "branch_version": {
+                    "name": "branch_version",
+                    "description": "Version of the branch; numbering starts at 1. ",
+                    "result": {
+                        "type": "String"
+                    }
                 }
             }
         },
@@ -646,7 +2368,30 @@
             "ancestors": [
                 "OBJECT_ID"
             ],
-            "documentation": "Abstract model of UID-based identifiers consisting of a root part and an optional extension; lexical form: `root '::' extension`."
+            "documentation": "Abstract model of UID-based identifiers consisting of a root part and an optional extension; lexical form: `root '::' extension`.",
+            "functions": {
+                "root": {
+                    "name": "root",
+                    "description": "The identifier of the conceptual namespace in which the object exists, within the identification scheme. Returns the part to the left of the first '::' separator, if any, or else the whole string. ",
+                    "result": {
+                        "type": "UID"
+                    }
+                },
+                "extension": {
+                    "name": "extension",
+                    "description": "Optional local identifier of the object within the context of the root identifier. Returns the part to the right of the first '::' separator if any, or else any empty String.",
+                    "result": {
+                        "type": "String"
+                    }
+                },
+                "has_extension": {
+                    "name": "has_extension",
+                    "description": "True if not `_extension_.is_empty()`.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                }
+            }
         },
         "UUID": {
             "name": "UUID",
@@ -669,7 +2414,6 @@
             "properties": {
                 "value": {
                     "name": "value",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "The value of the id."
@@ -706,7 +2450,6 @@
             "properties": {
                 "Local_terminology_id": {
                     "name": "Local_terminology_id",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype"
@@ -719,42 +2462,36 @@
             "properties": {
                 "CR": {
                     "name": "CR",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Character",
                     "is_mandatory": true,
                     "documentation": "Carriage return character."
                 },
                 "LF": {
                     "name": "LF",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Character",
                     "is_mandatory": true,
                     "documentation": "Line feed character."
                 },
                 "Any_type_name": {
                     "name": "Any_type_name",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Regex_any_pattern": {
                     "name": "Regex_any_pattern",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "Default_encoding": {
                     "name": "Default_encoding",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
                 },
                 "None_type_name": {
                     "name": "None_type_name",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": ""
@@ -799,7 +2536,65 @@
             "ancestors": [
                 "Iso8601_type"
             ],
-            "documentation": "ISO8601 timezone string, in format:\n\n* `Z | \u00b1hh[mm]`\n\nwhere:\n\n* `hh` is \"00\" - \"23\" (0-filled to two digits)\n* `mm` is \"00\" - \"59\" (0-filled to two digits)\n* `Z` is a literal meaning UTC (modern replacement for GMT), i.e. timezone `+0000`\n"
+            "documentation": "ISO8601 timezone string, in format:\n\n* `Z | \u00b1hh[mm]`\n\nwhere:\n\n* `hh` is \"00\" - \"23\" (0-filled to two digits)\n* `mm` is \"00\" - \"59\" (0-filled to two digits)\n* `Z` is a literal meaning UTC (modern replacement for GMT), i.e. timezone `+0000`\n",
+            "functions": {
+                "hour": {
+                    "name": "hour",
+                    "description": "Extract the hour part of timezone, as an Integer in the range `00 - 14`.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "minute": {
+                    "name": "minute",
+                    "description": "Extract the hour part of timezone, as an Integer, usually either 0 or 30.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "sign": {
+                    "name": "sign",
+                    "description": "Direction of timezone expresssed as +1 or -1.",
+                    "result": {
+                        "type": "Integer"
+                    }
+                },
+                "minute_unknown": {
+                    "name": "minute_unknown",
+                    "description": "Indicates whether minute part known.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "is_partial": {
+                    "name": "is_partial",
+                    "description": "True if this time zone is partial, i.e. if minutes is missing.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "is_extended": {
+                    "name": "is_extended",
+                    "description": "True if this time-zone uses \u2018:\u2019 separators.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "is_gmt": {
+                    "name": "is_gmt",
+                    "description": "True if timezone is UTC, i.e. `+0000`.",
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "as_string": {
+                    "name": "as_string",
+                    "description": "Return timezone string in extended format.",
+                    "result": {
+                        "type": "String"
+                    }
+                }
+            }
         },
         "Time_Definitions": {
             "name": "Time_Definitions",
@@ -807,108 +2602,239 @@
             "properties": {
                 "Seconds_in_minute": {
                     "name": "Seconds_in_minute",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Number of seconds in a minute."
                 },
                 "Minutes_in_hour": {
                     "name": "Minutes_in_hour",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Number of minutes in an hour."
                 },
                 "Hours_in_day": {
                     "name": "Hours_in_day",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Number of clock hours in a day, i.e. 24."
                 },
                 "Average_days_in_month": {
                     "name": "Average_days_in_month",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Real",
                     "is_mandatory": true,
                     "documentation": "Used for conversions of durations containing months to days and \/ or seconds."
                 },
                 "Max_days_in_month": {
                     "name": "Max_days_in_month",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Maximum number of days in any month."
                 },
                 "Days_in_year": {
                     "name": "Days_in_year",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Calendar days in a normal year, i.e. 365."
                 },
                 "Average_days_in_year": {
                     "name": "Average_days_in_year",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Real",
                     "is_mandatory": true,
                     "documentation": "Used for conversions of durations containing years to days and \/ or seconds."
                 },
                 "Days_in_leap_year": {
                     "name": "Days_in_leap_year",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Calendar days in a standard leap year, i.e. 366."
                 },
                 "Max_days_in_year": {
                     "name": "Max_days_in_year",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Maximum number of days in a year, i.e. accounting for leap years."
                 },
                 "Days_in_week": {
                     "name": "Days_in_week",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Number of days in a week."
                 },
                 "Months_in_year": {
                     "name": "Months_in_year",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Number of months in a year."
                 },
                 "Min_timezone_hour": {
                     "name": "Min_timezone_hour",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Minimum hour value of a timezone  according to ISO 8601 (note that the -ve sign is supplied in the `ISO8601_TIMEZONE` class)."
                 },
                 "Max_timezone_hour": {
                     "name": "Max_timezone_hour",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Integer",
                     "is_mandatory": true,
                     "documentation": "Maximum hour value of a timezone according to ISO 8601."
                 },
                 "Nominal_days_in_month": {
                     "name": "Nominal_days_in_month",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Real",
                     "is_mandatory": true,
                     "documentation": "Used for conversions of durations containing months to days and \/ or seconds."
                 },
                 "Nominal_days_in_year": {
                     "name": "Nominal_days_in_year",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Real",
                     "is_mandatory": true,
                     "documentation": "Used for conversions of durations containing years to days and \/ or seconds."
+                }
+            },
+            "functions": {
+                "valid_year": {
+                    "name": "valid_year",
+                    "description": "True if `y >= 0`.",
+                    "parameters": {
+                        "y": {
+                            "type": "Integer"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "valid_month": {
+                    "name": "valid_month",
+                    "description": "True if `m >= 1 and m <= months_in_year`.",
+                    "parameters": {
+                        "m": {
+                            "type": "Integer"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "valid_day": {
+                    "name": "valid_day",
+                    "description": "True if `d >= 1 and d <= days_in_month (m, y)`.",
+                    "parameters": {
+                        "y": {
+                            "type": "Integer"
+                        },
+                        "m": {
+                            "type": "Integer"
+                        },
+                        "d": {
+                            "type": "Integer"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "valid_hour": {
+                    "name": "valid_hour",
+                    "description": "True if `(h >= 0 and h < Hours_in_day) or (h = Hours_in_day and m = 0 and s = 0)` .",
+                    "parameters": {
+                        "h": {
+                            "type": "Integer"
+                        },
+                        "m": {
+                            "type": "Integer"
+                        },
+                        "s": {
+                            "type": "Integer"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "valid_minute": {
+                    "name": "valid_minute",
+                    "description": "True if `m >= 0 and m < Minutes_in_hour`.",
+                    "parameters": {
+                        "m": {
+                            "type": "Integer"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "valid_second": {
+                    "name": "valid_second",
+                    "description": "True if `s >= 0 and s < Seconds_in_minute` .",
+                    "parameters": {
+                        "s": {
+                            "type": "Integer"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "valid_fractional_second": {
+                    "name": "valid_fractional_second",
+                    "description": "True if `fs >= 0.0` and `fs < 1.0` .",
+                    "parameters": {
+                        "fs": {
+                            "type": "Double"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "valid_iso8601_date": {
+                    "name": "valid_iso8601_date",
+                    "description": "String is a valid ISO 8601 date, i.e. takes the complete form:\n\n* `YYYY-MM-DD` (extended, preferred) or one of the partial forms `YYYY-MM` or `YYYY`\n* `YYYYMMDD` (compact) or a partial variant `YYYYMM`.\n\nWhere:\n\n* `YYYY` is the string form of any positive number in the range `0000` - `9999` (zero-filled to four digits)\n* `MM` is `01` - `12` (zero-filled to two digits)\n* `DD` is `01` - `31` (zero-filled to two digits)\n\nThe combinations of `YYYY`, `MM`, `DD` numbers must be correct with respect to the Gregorian calendar.",
+                    "parameters": {
+                        "s": {
+                            "type": "String"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "valid_iso8601_time": {
+                    "name": "valid_iso8601_time",
+                    "description": "String is a valid ISO 8601 date, i.e. takes the form:\n\n* `hh:mm:ss[(,|.)s+][Z|\u00b1hh[:mm]]` (extended)\n* `hhmmss[(,|.)s+][Z|\u00b1hh[mm]]` (compact)\n* or one of the partial forms:\n** `hh:mm` (extended)\n** `hhmm` or `hh` (compact)\n\nwith an additional optional timezone indicator of:\n\n* `Z` or `\u00b1hh[:mm]` (extended)  `\u00b1hh[mm]` (compact)\n\nWhere:\n\n* `hh` is \"00\" - \"23\" (0-filled to two digits)\n* `mm` is \"00\" - \"59\" (0-filled to two digits)\n* `ss` is \"00\" - \"60\" (0-filled to two digits)\n* `[(,|.)s+]` is an optional string consisting of a comma or decimal point followed by numeric string of 1 or more digits, representing a fractional second\n* `Z` is a literal meaning UTC (modern replacement for GMT), i.e. timezone `+0000`\n",
+                    "parameters": {
+                        "s": {
+                            "type": "String"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "valid_iso8601_date_time": {
+                    "name": "valid_iso8601_date_time",
+                    "description": "String is a valid ISO 8601 date-time, i.e. takes the form:\n\n* `YYYY-MM-DDThh:mm:ss[(,|.)s+][Z|\u00b1hh[:mm]]` (extended)\n* `YYYYMMDDThhmmss[(,|.)s+][Z|\u00b1hh[mm]]` (compact)\n* or one of the partial forms:\n** `YYYY-MM-DDThh:mm` or `YYYY-MM-DDThh` (extended)\n** `YYYYMMDDThhmm` or `YYYYMMDDThh` (compact)",
+                    "parameters": {
+                        "s": {
+                            "type": "String"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
+                },
+                "valid_iso8601_duration": {
+                    "name": "valid_iso8601_duration",
+                    "description": "String is a valid ISO 8601 duration, i.e. takes the form:\n\n* `P[nnY][nnM][nnW][nnD][T[nnH][nnM][nnS]]`\n\nWhere each nn represents a number of years, months, etc. `nnW` represents a number of 7-day weeks.\n\nNote: allowing the `W` designator in the same expression as other designators is an exception to the published standard, but necessary in clinical information (typically for representing pregnancy duration).",
+                    "parameters": {
+                        "s": {
+                            "type": "String"
+                        }
+                    },
+                    "result": {
+                        "type": "Boolean"
+                    }
                 }
             }
         },
@@ -940,28 +2866,24 @@
             "properties": {
                 "lower_unbounded": {
                     "name": "lower_unbounded",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "Lower boundary open (i.e. = -infinity)."
                 },
                 "upper_unbounded": {
                     "name": "upper_unbounded",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "Upper boundary open (i.e. = +infinity)."
                 },
                 "lower_included": {
                     "name": "lower_included",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "Lower boundary value included in range if not `_lower_unbounded_`."
                 },
                 "upper_included": {
                     "name": "upper_included",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "is_mandatory": true,
                     "documentation": "Upper boundary value included in range if not `_upper_unbounded_`."
@@ -974,21 +2896,18 @@
             "properties": {
                 "terminology_id": {
                     "name": "terminology_id",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "TERMINOLOGY_ID",
                     "is_mandatory": true,
                     "documentation": "Identifier of the distinct terminology from which the code_string (or its elements) was extracted."
                 },
                 "code_string": {
                     "name": "code_string",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "The key used by the terminology service to identify a concept or coordination of concepts. This string is most likely parsable inside the terminology service, but nothing can be assumed about its syntax outside that context. "
                 },
                 "preferred_term": {
                     "name": "preferred_term",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Optional attribute to carry preferred term corresponding to the code or expression in `_code_string_`. Typical use in integration situations which create mappings, and representing data for which both a (non-preferred) actual term and a preferred term are both required."
                 }
@@ -1001,32 +2920,27 @@
             "properties": {
                 "uid": {
                     "name": "uid",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "UUID",
                     "documentation": "Unique identifier of the family of archetypes having the same interface identifier (same major version)."
                 },
                 "original_language": {
                     "name": "original_language",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Terminology_code",
                     "is_mandatory": true,
                     "documentation": "Language in which this resource was initially authored. Although there is no language primacy of resources overall, the language of original authoring is required to ensure natural language translations can preserve quality. Language is relevant in both the description and ontology sections. "
                 },
                 "description": {
                     "name": "description",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "RESOURCE_DESCRIPTION",
                     "documentation": "Description and lifecycle information of the resource."
                 },
                 "is_controlled": {
                     "name": "is_controlled",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Boolean",
                     "documentation": "True if this resource is under any kind of change control (even file copying), in which case revision history is created. "
                 },
                 "annotations": {
                     "name": "annotations",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "RESOURCE_ANNOTATIONS",
                     "documentation": "Annotations on individual items within the resource, keyed by path. The inner table takes the form of a Hash table of String values keyed by String tags."
                 },
@@ -1041,6 +2955,26 @@
                         ]
                     },
                     "documentation": "List of details for each natural translation made of this resource, keyed by language code. For each translation listed here, there must be corresponding sections in all language-dependent parts of the resource. The `_original_language_` does not appear in this list."
+                }
+            },
+            "functions": {
+                "current_revision": {
+                    "name": "current_revision",
+                    "description": "Most recent revision in revision_history if is_controlled else  (uncontrolled) . ",
+                    "result": {
+                        "type": "String"
+                    }
+                },
+                "languages_available": {
+                    "name": "languages_available",
+                    "description": "Total list of languages available in this resource, derived from original_language and translations. ",
+                    "result": {
+                        "_type": "P_BMM_CONTAINER_PROPERTY",
+                        "type_def": {
+                            "container_type": "List",
+                            "type": "String"
+                        }
+                    }
                 }
             }
         },
@@ -1063,13 +2997,11 @@
                 },
                 "original_namespace": {
                     "name": "original_namespace",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Namespace of original author's organisation, in reverse internet form, if applicable."
                 },
                 "original_publisher": {
                     "name": "original_publisher",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Plain text name of organisation that originally published this artefact, if any."
                 },
@@ -1088,39 +3020,33 @@
                 },
                 "lifecycle_state": {
                     "name": "lifecycle_state",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Terminology_code",
                     "is_mandatory": true,
                     "documentation": "Lifecycle state of the resource, typically including states such as: initial, in_development, in_review, published, superseded, obsolete. "
                 },
                 "parent_resource": {
                     "name": "parent_resource",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "AUTHORED_RESOURCE",
                     "is_mandatory": true,
                     "documentation": "Reference to owning resource. "
                 },
                 "custodian_namespace": {
                     "name": "custodian_namespace",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Namespace in reverse internet id form, of current custodian organisation."
                 },
                 "custodian_organisation": {
                     "name": "custodian_organisation",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Plain text name of current custodian organisation."
                 },
                 "copyright": {
                     "name": "copyright",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Optional copyright statement for the resource as a knowledge resource. \n"
                 },
                 "licence": {
                     "name": "licence",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Licence of current artefact, in format \"short licence name <URL of licence>\", e.g. \"Apache 2.0 License <http:\/\/www.apache.org\/licenses\/LICENSE-2.0.html>\""
                 },
@@ -1150,7 +3076,6 @@
                 },
                 "resource_package_uri": {
                     "name": "resource_package_uri",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "URI of package to which this resource belongs."
                 },
@@ -1198,7 +3123,6 @@
             "properties": {
                 "language": {
                     "name": "language",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Terminology_code",
                     "is_mandatory": true,
                     "documentation": "Language of the translation, coded using ISO 639-1 (2 character) language codes."
@@ -1218,7 +3142,6 @@
                 },
                 "accreditation": {
                     "name": "accreditation",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Accreditation of primary translator or group, usually a national translator's registration or association membership id."
                 },
@@ -1236,7 +3159,6 @@
                 },
                 "version_last_translated": {
                     "name": "version_last_translated",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Version of this resource last time it was translated into the language represented by this `TRANSLATION_DETAILS` object."
                 },
@@ -1261,14 +3183,12 @@
             "properties": {
                 "language": {
                     "name": "language",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "Terminology_code",
                     "is_mandatory": true,
                     "documentation": "The localised language in which the items in this description item are written. Coded using ISO 639-1 (2 character) language codes."
                 },
                 "purpose": {
                     "name": "purpose",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "is_mandatory": true,
                     "documentation": "Purpose of the resource."
@@ -1288,13 +3208,11 @@
                 },
                 "use": {
                     "name": "use",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Description of the uses of the resource, i.e. contexts in which it could be used. \n"
                 },
                 "misuse": {
                     "name": "misuse",
-                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "type": "String",
                     "documentation": "Description of any misuses of the resource, i.e. contexts in which it should not be used."
                 },
