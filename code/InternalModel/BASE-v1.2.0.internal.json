@@ -115,6 +115,7 @@
                                                                         "name": "qualified_rm_entity",
                                                                         "description": "Globally qualified reference model entity, e.g.  `openehr-EHR-OBSERVATION`.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -130,6 +131,7 @@
                                                                         "name": "domain_concept",
                                                                         "description": "Name of the concept represented by this archetype, including specialisation, e.g. `Biochemistry_result-cholesterol`. ",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -145,6 +147,7 @@
                                                                         "name": "rm_originator",
                                                                         "description": "Organisation originating the reference model on which this archetype is based, e.g. openehr,  cen,  hl7 . ",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -160,6 +163,7 @@
                                                                         "name": "rm_name",
                                                                         "description": "Name of the reference model, e.g. rim,  ehr_rm,  en13606 . ",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -175,6 +179,7 @@
                                                                         "name": "rm_entity",
                                                                         "description": "Name of the ontological level within the reference model to which this archetype is targeted, e.g. for openEHR,  folder ,  composition ,  section ,  entry .",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -190,6 +195,7 @@
                                                                         "name": "specialisation",
                                                                         "description": "Name of specialisation of concept, if this archetype is a specialisation of another archetype, e.g.  cholesterol .",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -205,6 +211,7 @@
                                                                         "name": "version_id",
                                                                         "description": "Version of this archetype. \n",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -368,6 +375,7 @@
                                                                         "name": "as_uri",
                                                                         "description": "A URI form of the reference, created by concatenating the following: \n\n* scheme, e.g. `ehr:`, derived from `_namespace_`\n* `_id.value_`\n* `\/` + `_path_`, where `_path_` is non-empty\n",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -523,6 +531,7 @@
                                                                         "name": "object_id",
                                                                         "description": "Unique identifier for logical object of which this identifier identifies one version; normally the `_object_id_` will be the unique identifier of the version container containing the version referred to by this `OBJECT_VERSION_ID` instance. ",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1422968609347_843401_25644",
                                                                             "name": "UID",
@@ -538,6 +547,7 @@
                                                                         "name": "creating_system_id",
                                                                         "description": "Identifier of the system that created the Version corresponding to this Object version id.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1422968609347_843401_25644",
                                                                             "name": "UID",
@@ -553,6 +563,7 @@
                                                                         "name": "version_tree_id",
                                                                         "description": "Tree identifier of this version with respect to other versions in the same version tree, as either 1 or 3 part dot-separated numbers, e.g.  1 ,  2.1.4 . ",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_5_1_83e026d_1503073094522_121126_7685",
                                                                             "name": "VERSION_TREE_ID",
@@ -568,6 +579,7 @@
                                                                         "name": "is_branch",
                                                                         "description": "True if this version identifier represents a branch.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -651,6 +663,7 @@
                                                                         "name": "name",
                                                                         "description": "Return the terminology id (which includes the  version  in some cases). Distinct names correspond to distinct (i.e. non-compatible) terminologies. Thus the names  ICD10AM  and  ICD10  refer to distinct terminologies. ",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -666,6 +679,7 @@
                                                                         "name": "version_id",
                                                                         "description": "Version of this terminology, if versioning supported, else the empty string. ",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -722,6 +736,7 @@
                                                                         "name": "trunk_version",
                                                                         "description": "Trunk version number; numbering starts at 1. ",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -737,6 +752,7 @@
                                                                         "name": "is_branch",
                                                                         "description": "True if this version identifier represents a branch, i.e. has branch_number and branch_version parts.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -752,6 +768,7 @@
                                                                         "name": "branch_number",
                                                                         "description": "Number of branch from the trunk point; numbering starts at 1. ",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -767,6 +784,7 @@
                                                                         "name": "branch_version",
                                                                         "description": "Version of the branch; numbering starts at 1. ",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -860,6 +878,7 @@
                                                                         "name": "root",
                                                                         "description": "The identifier of the conceptual namespace in which the object exists, within the identification scheme. Returns the part to the left of the first '::' separator, if any, or else the whole string. ",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1422968609347_843401_25644",
                                                                             "name": "UID",
@@ -875,6 +894,7 @@
                                                                         "name": "extension",
                                                                         "description": "Optional local identifier of the object within the context of the root identifier. Returns the part to the right of the first '::' separator if any, or else any empty String.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -890,6 +910,7 @@
                                                                         "name": "has_extension",
                                                                         "description": "True if not `_extension_.is_empty()`.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -1349,6 +1370,7 @@
                                                                         "name": "current_date",
                                                                         "description": "Return today's date in the current locale.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902572_855852_4973",
                                                                             "name": "Iso8601_date",
@@ -1364,6 +1386,7 @@
                                                                         "name": "current_time",
                                                                         "description": "Return current time in the current locale.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902575_50880_4976",
                                                                             "name": "Iso8601_time",
@@ -1379,6 +1402,7 @@
                                                                         "name": "current_date_time",
                                                                         "description": "Return current date\/time in the current locale.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902574_544697_4974",
                                                                             "name": "Iso8601_date_time",
@@ -1394,6 +1418,7 @@
                                                                         "name": "current_time_zone",
                                                                         "description": "Return the timezone of the current locale.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902576_187607_4977",
                                                                             "name": "Iso8601_timezone",
@@ -1452,6 +1477,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041599239_313753_4467",
                                                                             "name": "Double",
@@ -1485,6 +1511,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041599239_313753_4467",
                                                                             "name": "Double",
@@ -1518,6 +1545,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041599239_313753_4467",
                                                                             "name": "Double",
@@ -1551,6 +1579,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041647455_666508_4494",
                                                                             "name": "Numeric",
@@ -1584,6 +1613,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041647455_666508_4494",
                                                                             "name": "Numeric",
@@ -1617,6 +1647,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041647455_666508_4494",
                                                                             "name": "Numeric",
@@ -1650,6 +1681,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041647455_666508_4494",
                                                                             "name": "Numeric",
@@ -1683,6 +1715,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041647455_666508_4494",
                                                                             "name": "Numeric",
@@ -1716,6 +1749,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041599239_313753_4467",
                                                                             "name": "Double",
@@ -1748,6 +1782,7 @@
                                                                         "name": "primary_language",
                                                                         "description": "Primary language of the current locale.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1423133121170_943500_5902",
                                                                             "name": "Terminology_code",
@@ -1800,6 +1835,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041599239_313753_4467",
                                                                             "name": "Double",
@@ -1833,6 +1869,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041599239_313753_4467",
                                                                             "name": "Double",
@@ -1866,6 +1903,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041599239_313753_4467",
                                                                             "name": "Double",
@@ -1961,6 +1999,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Real",
                                                                             "name": "Real",
@@ -2097,6 +2136,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -2130,6 +2170,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "Any",
                                                                             "name": "Any",
@@ -2391,6 +2432,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -2406,6 +2448,7 @@
                                                                         "name": "count",
                                                                         "description": "Number of items in container.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -2421,6 +2464,7 @@
                                                                         "name": "is_empty",
                                                                         "description": "True if container is empty.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437044417075_513888_4894",
                                                                             "name": "Boolean",
@@ -2454,6 +2498,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437044417075_513888_4894",
                                                                             "name": "Boolean",
@@ -2487,6 +2532,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437044417075_513888_4894",
                                                                             "name": "Boolean",
@@ -2520,6 +2566,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1422968609284_691010_25365",
                                                                             "name": "Any",
@@ -2553,6 +2600,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1422968609284_691010_25365",
                                                                             "name": "Any",
@@ -2617,6 +2665,7 @@
                                                                         "name": "first",
                                                                         "description": "Return first element.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1422968609284_691010_25365",
                                                                             "name": "Any",
@@ -2632,6 +2681,7 @@
                                                                         "name": "last",
                                                                         "description": "Return last element.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1422968609284_691010_25365",
                                                                             "name": "Any",
@@ -2772,6 +2822,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1422968609284_691010_25365",
                                                                             "name": "Any",
@@ -3154,6 +3205,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -3187,6 +3239,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -3220,6 +3273,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -3253,6 +3307,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041599239_313753_4467",
                                                                             "name": "Double",
@@ -3286,6 +3341,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041599239_313753_4467",
                                                                             "name": "Double",
@@ -3319,6 +3375,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041546251_646536_4412",
                                                                             "name": "Integer",
@@ -3352,6 +3409,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -3367,6 +3425,7 @@
                                                                         "name": "negative",
                                                                         "description": "Generate negative of current Integer value.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041546251_646536_4412",
                                                                             "name": "Integer",
@@ -3400,6 +3459,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -3433,6 +3493,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -3488,6 +3549,7 @@
                                                                         "name": "floor",
                                                                         "description": "Return the greatest integer no greater than the value of this object.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -3521,6 +3583,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041599239_313753_4467",
                                                                             "name": "Double",
@@ -3554,6 +3617,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041599239_313753_4467",
                                                                             "name": "Double",
@@ -3587,6 +3651,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041599239_313753_4467",
                                                                             "name": "Double",
@@ -3620,6 +3685,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041599239_313753_4467",
                                                                             "name": "Double",
@@ -3653,6 +3719,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041599239_313753_4467",
                                                                             "name": "Double",
@@ -3686,6 +3753,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -3701,6 +3769,7 @@
                                                                         "name": "negative",
                                                                         "description": "Generate negative of current Double value.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041599239_313753_4467",
                                                                             "name": "Double",
@@ -3734,6 +3803,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -3767,6 +3837,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -3836,6 +3907,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041647455_666508_4494",
                                                                             "name": "Numeric",
@@ -3869,6 +3941,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041647455_666508_4494",
                                                                             "name": "Numeric",
@@ -3902,6 +3975,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041647455_666508_4494",
                                                                             "name": "Numeric",
@@ -3935,6 +4009,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041647455_666508_4494",
                                                                             "name": "Numeric",
@@ -3968,6 +4043,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041647455_666508_4494",
                                                                             "name": "Numeric",
@@ -3983,6 +4059,7 @@
                                                                         "name": "negative",
                                                                         "description": "Generate negative of current value.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041647455_666508_4494",
                                                                             "name": "Numeric",
@@ -4107,6 +4184,22 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_18_1_83e026d_1437044738923_315031_4941": "Post_de_Morgan",
+                                                                                "_18_1_83e026d_1437044779874_633312_4943": "Post_commutative"
+                                                                            },
+                                                                            "Post_de_Morgan": {
+                                                                                "id": "_18_1_83e026d_1437044738923_315031_4941",
+                                                                                "name": "Post_de_Morgan",
+                                                                                "rule": "Result = not (not self or not other)"
+                                                                            },
+                                                                            "Post_commutative": {
+                                                                                "id": "_18_1_83e026d_1437044779874_633312_4943",
+                                                                                "name": "Post_commutative",
+                                                                                "rule": "Result = (other and self)"
+                                                                            }
+                                                                        },
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -4138,6 +4231,16 @@
                                                                                 "templateParameterId": null,
                                                                                 "minOccurs": 1,
                                                                                 "maxOccurs": 1
+                                                                            }
+                                                                        },
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_18_1_83e026d_1437044699627_952226_4939": "Post_de_Morgan"
+                                                                            },
+                                                                            "Post_de_Morgan": {
+                                                                                "id": "_18_1_83e026d_1437044699627_952226_4939",
+                                                                                "name": "Post_de_Morgan",
+                                                                                "rule": "Result = not (not self or else not other)"
                                                                             }
                                                                         },
                                                                         "return": {
@@ -4173,6 +4276,28 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_18_1_83e026d_1437044898570_372046_4952": "Post_de_Morgan",
+                                                                                "_18_1_83e026d_1437044934050_798875_4954": "Post_commutative",
+                                                                                "_18_1_83e026d_1437044964290_578102_4956": "Post_consistent_with_semi_strict"
+                                                                            },
+                                                                            "Post_de_Morgan": {
+                                                                                "id": "_18_1_83e026d_1437044898570_372046_4952",
+                                                                                "name": "Post_de_Morgan",
+                                                                                "rule": "Result = not (not self and not other)"
+                                                                            },
+                                                                            "Post_commutative": {
+                                                                                "id": "_18_1_83e026d_1437044934050_798875_4954",
+                                                                                "name": "Post_commutative",
+                                                                                "rule": "Result = (other or Current)"
+                                                                            },
+                                                                            "Post_consistent_with_semi_strict": {
+                                                                                "id": "_18_1_83e026d_1437044964290_578102_4956",
+                                                                                "name": "Post_consistent_with_semi_strict",
+                                                                                "rule": "Result implies (self or else other)"
+                                                                            }
+                                                                        },
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -4204,6 +4329,16 @@
                                                                                 "templateParameterId": null,
                                                                                 "minOccurs": 1,
                                                                                 "maxOccurs": 1
+                                                                            }
+                                                                        },
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_18_1_83e026d_1437045065865_367423_4965": "Post_de_Morgan"
+                                                                            },
+                                                                            "Post_de_Morgan": {
+                                                                                "id": "_18_1_83e026d_1437045065865_367423_4965",
+                                                                                "name": "Post_de_Morgan",
+                                                                                "rule": "Result = not (not self and then not other)"
                                                                             }
                                                                         },
                                                                         "return": {
@@ -4239,6 +4374,16 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_18_1_83e026d_1437045152831_866506_4973": "Post_definition"
+                                                                            },
+                                                                            "Post_definition": {
+                                                                                "id": "_18_1_83e026d_1437045152831_866506_4973",
+                                                                                "name": "Post_definition",
+                                                                                "rule": "Result = ((self or other) and not (self and other))"
+                                                                            }
+                                                                        },
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -4272,6 +4417,16 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_18_1_83e026d_1437045244504_805867_4983": "Post_definition"
+                                                                            },
+                                                                            "Post_definition": {
+                                                                                "id": "_18_1_83e026d_1437045244504_805867_4983",
+                                                                                "name": "Post_definition",
+                                                                                "rule": "Result = (not self or else other)"
+                                                                            }
+                                                                        },
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -4287,6 +4442,7 @@
                                                                         "name": "negation",
                                                                         "description": "Boolean negation of the current value.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437044417075_513888_4894",
                                                                             "name": "Boolean",
@@ -4359,6 +4515,7 @@
                                                                         "name": "is_empty",
                                                                         "description": "True if string is empty, i.e. equal to \"\".",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -4374,6 +4531,7 @@
                                                                         "name": "is_integer",
                                                                         "description": "True if string can be parsed as an integer.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -4389,6 +4547,7 @@
                                                                         "name": "as_integer",
                                                                         "description": "Return the integer corresponding to the integer value represented in this string.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -4422,6 +4581,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437045555791_888328_4996",
                                                                             "name": "String",
@@ -4455,6 +4615,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -4488,6 +4649,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437044417075_513888_4894",
                                                                             "name": "Boolean",
@@ -4543,6 +4705,7 @@
                                                                         "name": "floor",
                                                                         "description": "Return the greatest integer no greater than the value of this object.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -4576,6 +4739,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041568287_328416_4439",
                                                                             "name": "Real",
@@ -4609,6 +4773,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041568287_328416_4439",
                                                                             "name": "Real",
@@ -4642,6 +4807,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041568287_328416_4439",
                                                                             "name": "Real",
@@ -4675,6 +4841,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041599239_313753_4467",
                                                                             "name": "Double",
@@ -4708,6 +4875,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041599239_313753_4467",
                                                                             "name": "Double",
@@ -4741,6 +4909,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -4756,6 +4925,7 @@
                                                                         "name": "negative",
                                                                         "description": "Generate negative of current Real value.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041568287_328416_4439",
                                                                             "name": "Real",
@@ -4789,6 +4959,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -4822,6 +4993,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -4895,6 +5067,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1444386309067_464772_4821",
                                                                             "name": "Integer64",
@@ -4928,6 +5101,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1444386309067_464772_4821",
                                                                             "name": "Integer64",
@@ -4961,6 +5135,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1444386309067_464772_4821",
                                                                             "name": "Integer64",
@@ -4994,6 +5169,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041599239_313753_4467",
                                                                             "name": "Double",
@@ -5027,6 +5203,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041599239_313753_4467",
                                                                             "name": "Double",
@@ -5060,6 +5237,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1444386309067_464772_4821",
                                                                             "name": "Integer64",
@@ -5093,6 +5271,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -5108,6 +5287,7 @@
                                                                         "name": "negative",
                                                                         "description": "Generate negative of current Integer value.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1444386309067_464772_4821",
                                                                             "name": "Integer64",
@@ -5141,6 +5321,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -5174,6 +5355,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -5241,6 +5423,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -5272,6 +5455,16 @@
                                                                                 "templateParameterId": null,
                                                                                 "minOccurs": 1,
                                                                                 "maxOccurs": 1
+                                                                            }
+                                                                        },
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_19_0_3_8fe028d_1582293493526_682_5302": "Post_result"
+                                                                            },
+                                                                            "Post_result": {
+                                                                                "id": "_19_0_3_8fe028d_1582293493526_682_5302",
+                                                                                "name": "Post_result",
+                                                                                "rule": "not (other < self)"
                                                                             }
                                                                         },
                                                                         "return": {
@@ -5307,6 +5500,16 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_19_0_3_8fe028d_1582293307699_47605_5278": "Post_result"
+                                                                            },
+                                                                            "Post_result": {
+                                                                                "id": "_19_0_3_8fe028d_1582293307699_47605_5278",
+                                                                                "name": "Post_result",
+                                                                                "rule": "Result = (other < self)"
+                                                                            }
+                                                                        },
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437044417075_513888_4894",
                                                                             "name": "Boolean",
@@ -5338,6 +5541,16 @@
                                                                                 "templateParameterId": null,
                                                                                 "minOccurs": 1,
                                                                                 "maxOccurs": 1
+                                                                            }
+                                                                        },
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_19_0_3_8fe028d_1582293364645_252089_5281": "Post_result"
+                                                                            },
+                                                                            "Post_result": {
+                                                                                "id": "_19_0_3_8fe028d_1582293364645_252089_5281",
+                                                                                "name": "Post_result",
+                                                                                "rule": "Result = (other <= self)"
                                                                             }
                                                                         },
                                                                         "return": {
@@ -5692,6 +5905,7 @@
                                                                         "name": "year",
                                                                         "description": "Extract the year part of the date as an Integer.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -5707,6 +5921,16 @@
                                                                         "name": "month",
                                                                         "description": "Extract the month part of the date\/time as an Integer, or return 0 if not present.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_18_2_83e026d_1456057620983_420774_4828": "Pre"
+                                                                            },
+                                                                            "Pre": {
+                                                                                "id": "_18_2_83e026d_1456057620983_420774_4828",
+                                                                                "name": "Pre",
+                                                                                "rule": "not month_unknown"
+                                                                            }
+                                                                        },
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -5722,6 +5946,16 @@
                                                                         "name": "day",
                                                                         "description": "Extract the day part of the date\/time as an Integer, or return 0 if not present.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_18_2_83e026d_1456057620983_792926_4831": "Pre"
+                                                                            },
+                                                                            "Pre": {
+                                                                                "id": "_18_2_83e026d_1456057620983_792926_4831",
+                                                                                "name": "Pre",
+                                                                                "rule": "not day_unknown"
+                                                                            }
+                                                                        },
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -5737,6 +5971,16 @@
                                                                         "name": "hour",
                                                                         "description": "Extract the hour part of the date\/time as an Integer, or return 0 if not present.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_18_2_83e026d_1456057620984_183941_4838": "Pre"
+                                                                            },
+                                                                            "Pre": {
+                                                                                "id": "_18_2_83e026d_1456057620984_183941_4838",
+                                                                                "name": "Pre",
+                                                                                "rule": "not hour_unknown"
+                                                                            }
+                                                                        },
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -5752,6 +5996,16 @@
                                                                         "name": "minute",
                                                                         "description": "Extract the minute part of the date\/time as an Integer, or return 0 if not present.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_18_2_83e026d_1456057620985_927213_4841": "Pre"
+                                                                            },
+                                                                            "Pre": {
+                                                                                "id": "_18_2_83e026d_1456057620985_927213_4841",
+                                                                                "name": "Pre",
+                                                                                "rule": "not minute_unknown"
+                                                                            }
+                                                                        },
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -5767,6 +6021,16 @@
                                                                         "name": "second",
                                                                         "description": "Extract the integral seconds part of the date\/time (i.e. prior to any decimal sign) as an Integer, or return 0 if not present.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_18_2_83e026d_1456057620986_967768_4844": "Pre"
+                                                                            },
+                                                                            "Pre": {
+                                                                                "id": "_18_2_83e026d_1456057620986_967768_4844",
+                                                                                "name": "Pre",
+                                                                                "rule": "not second_unknown"
+                                                                            }
+                                                                        },
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -5782,6 +6046,7 @@
                                                                         "name": "fractional_second",
                                                                         "description": "Extract the fractional seconds part of the date\/time (i.e. following to any decimal sign) as a Real, or return 0.0 if not present.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Real",
                                                                             "name": "Real",
@@ -5797,6 +6062,7 @@
                                                                         "name": "timezone",
                                                                         "description": "Timezone; may be Void.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902576_187607_4977",
                                                                             "name": "Iso8601_timezone",
@@ -5812,6 +6078,7 @@
                                                                         "name": "month_unknown",
                                                                         "description": "Indicates whether month in year is unknown.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -5827,6 +6094,7 @@
                                                                         "name": "day_unknown",
                                                                         "description": "Indicates whether day in month is unknown.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -5842,6 +6110,7 @@
                                                                         "name": "minute_unknown",
                                                                         "description": "Indicates whether minute in hour is known.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -5857,6 +6126,7 @@
                                                                         "name": "second_unknown",
                                                                         "description": "Indicates whether minute in hour is known.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -5872,6 +6142,7 @@
                                                                         "name": "is_decimal_sign_comma",
                                                                         "description": "True if this time has a decimal part indicated by `','` (comma) rather than `'.'` (period).",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -5887,6 +6158,7 @@
                                                                         "name": "is_partial",
                                                                         "description": "True if this date time is partial, i.e. if seconds or more is missing.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -5902,6 +6174,7 @@
                                                                         "name": "is_extended",
                                                                         "description": "True if this date\/time uses `'-'`, `':'` separators.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -5917,6 +6190,7 @@
                                                                         "name": "has_fractional_second",
                                                                         "description": "True if the `_fractional_second_` part is significant (i.e. even if = 0.0).",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -5932,6 +6206,7 @@
                                                                         "name": "as_string",
                                                                         "description": "Return the string value in extended format.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -5965,6 +6240,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902574_544697_4974",
                                                                             "name": "Iso8601_date_time",
@@ -5998,6 +6274,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902574_544697_4974",
                                                                             "name": "Iso8601_date_time",
@@ -6031,6 +6308,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902575_496930_4975",
                                                                             "name": "Iso8601_duration",
@@ -6064,6 +6342,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902572_855852_4973",
                                                                             "name": "Iso8601_date",
@@ -6097,6 +6376,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902572_855852_4973",
                                                                             "name": "Iso8601_date",
@@ -6235,6 +6515,7 @@
                                                                         "name": "is_extended",
                                                                         "description": "Returns True.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -6250,6 +6531,7 @@
                                                                         "name": "is_partial",
                                                                         "description": "Returns False.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -6265,6 +6547,7 @@
                                                                         "name": "years",
                                                                         "description": "Number of years in the `_value_`, i.e. the number preceding the `'Y'` in the `'YMD'` part, if one exists.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -6280,6 +6563,7 @@
                                                                         "name": "months",
                                                                         "description": "Number of months in the `_value_`, i.e. the value preceding the `'M'` in the `'YMD'` part, if one exists.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -6295,6 +6579,7 @@
                                                                         "name": "days",
                                                                         "description": "Number of days in the `_value_`, i.e. the number preceding the `'D'` in the `'YMD'` part, if one exists.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -6310,6 +6595,7 @@
                                                                         "name": "hours",
                                                                         "description": "Number of hours in the `_value_`, i.e. the number preceding the `'H'` in the `'HMS'` part, if one exists.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -6325,6 +6611,7 @@
                                                                         "name": "minutes",
                                                                         "description": "Number of minutes in the `_value_`, i.e. the number preceding the `'M'` in the `'HMS'` part, if one exists.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -6340,6 +6627,7 @@
                                                                         "name": "seconds",
                                                                         "description": "Number of seconds in the `_value_`, i.e. the integer number preceding the `'S'` in the `'HMS'` part, if one exists.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -6355,6 +6643,7 @@
                                                                         "name": "fractional_seconds",
                                                                         "description": "Fractional seconds in the `_value_`, i.e. the decimal part of the number preceding the `'S'` in the `'HMS'` part, if one exists.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Real",
                                                                             "name": "Real",
@@ -6370,6 +6659,7 @@
                                                                         "name": "weeks",
                                                                         "description": "Number of weeks in the `_value_`, i.e. the value preceding the `W`, if one exists.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -6385,6 +6675,7 @@
                                                                         "name": "is_decimal_sign_comma",
                                                                         "description": "True if this time has a decimal part indicated by ',' (comma) rather than '.' (period).",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -6400,6 +6691,7 @@
                                                                         "name": "to_seconds",
                                                                         "description": "Total number of seconds equivalent (including fractional) of entire duration. Where non-definite elements such as year and month (i.e. 'Y' and 'M') are included, the corresponding 'average' durations from `Time_definitions` are used to compute the result.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_1_83e026d_1437041568287_328416_4439",
                                                                             "name": "Real",
@@ -6415,6 +6707,7 @@
                                                                         "name": "as_string",
                                                                         "description": "Return the duration string value.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -6448,6 +6741,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902575_496930_4975",
                                                                             "name": "Iso8601_duration",
@@ -6481,6 +6775,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902575_496930_4975",
                                                                             "name": "Iso8601_duration",
@@ -6514,6 +6809,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902575_496930_4975",
                                                                             "name": "Iso8601_duration",
@@ -6547,6 +6843,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902575_496930_4975",
                                                                             "name": "Iso8601_duration",
@@ -6562,6 +6859,7 @@
                                                                         "name": "negative",
                                                                         "description": "Generate negative of current duration value.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902575_496930_4975",
                                                                             "name": "Iso8601_duration",
@@ -6673,6 +6971,7 @@
                                                                         "name": "hour",
                                                                         "description": "Extract the hour part of the date\/time as an Integer.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -6688,6 +6987,7 @@
                                                                         "name": "minute",
                                                                         "description": "Extract the minute part of the time as an Integer, or return 0 if not present.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -6703,6 +7003,7 @@
                                                                         "name": "second",
                                                                         "description": "Extract the integral seconds part of the time (i.e. prior to any decimal sign) as an Integer, or return 0 if not present.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -6718,6 +7019,16 @@
                                                                         "name": "fractional_second",
                                                                         "description": "Extract the fractional seconds part of the time (i.e. following to any decimal sign) as a Real, or return 0.0 if not present.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_18_2_83e026d_1456057666143_996011_4990": "Pre"
+                                                                            },
+                                                                            "Pre": {
+                                                                                "id": "_18_2_83e026d_1456057666143_996011_4990",
+                                                                                "name": "Pre",
+                                                                                "rule": "not second_unknown"
+                                                                            }
+                                                                        },
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Real",
                                                                             "name": "Real",
@@ -6733,6 +7044,7 @@
                                                                         "name": "timezone",
                                                                         "description": "Timezone; may be Void.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902576_187607_4977",
                                                                             "name": "Iso8601_timezone",
@@ -6748,6 +7060,7 @@
                                                                         "name": "minute_unknown",
                                                                         "description": "Indicates whether minute is unknown. If so, the time is of the form \u201chh\u201d.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -6763,6 +7076,7 @@
                                                                         "name": "second_unknown",
                                                                         "description": "Indicates whether second is unknown. If so and month is known, the time is of the form `\"hh:mm\"` or `\"hhmm\"`.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -6778,6 +7092,7 @@
                                                                         "name": "is_decimal_sign_comma",
                                                                         "description": "True if this time has a decimal part indicated by `','` (comma) rather than `'.'` (period).",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -6793,6 +7108,7 @@
                                                                         "name": "is_partial",
                                                                         "description": "True if this time is partial, i.e. if seconds or more is missing.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -6808,6 +7124,7 @@
                                                                         "name": "is_extended",
                                                                         "description": "True if this time uses `'-'`, `':'` separators.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -6823,6 +7140,7 @@
                                                                         "name": "has_fractional_second",
                                                                         "description": "True if the `_fractional_second_` part is significant (i.e. even if = 0.0).",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -6838,6 +7156,7 @@
                                                                         "name": "as_string",
                                                                         "description": "Return string value in extended format.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -6871,6 +7190,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902575_50880_4976",
                                                                             "name": "Iso8601_time",
@@ -6904,6 +7224,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902575_50880_4976",
                                                                             "name": "Iso8601_time",
@@ -6937,6 +7258,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902575_496930_4975",
                                                                             "name": "Iso8601_duration",
@@ -7023,6 +7345,7 @@
                                                                         "name": "hour",
                                                                         "description": "Extract the hour part of timezone, as an Integer in the range `00 - 14`.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -7038,6 +7361,7 @@
                                                                         "name": "minute",
                                                                         "description": "Extract the hour part of timezone, as an Integer, usually either 0 or 30.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -7053,6 +7377,7 @@
                                                                         "name": "sign",
                                                                         "description": "Direction of timezone expresssed as +1 or -1.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -7068,6 +7393,7 @@
                                                                         "name": "minute_unknown",
                                                                         "description": "Indicates whether minute part known.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -7083,6 +7409,7 @@
                                                                         "name": "is_partial",
                                                                         "description": "True if this time zone is partial, i.e. if minutes is missing.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -7098,6 +7425,7 @@
                                                                         "name": "is_extended",
                                                                         "description": "True if this time-zone uses \u2018:\u2019 separators.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -7113,6 +7441,7 @@
                                                                         "name": "is_gmt",
                                                                         "description": "True if timezone is UTC, i.e. `+0000`.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -7128,6 +7457,7 @@
                                                                         "name": "as_string",
                                                                         "description": "Return timezone string in extended format.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -7236,6 +7566,7 @@
                                                                         "name": "is_partial",
                                                                         "description": "True if this date time is partial, i.e. if trailing end (right hand) value(s) is\/are missing.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -7251,6 +7582,7 @@
                                                                         "name": "is_extended",
                                                                         "description": "True if this ISO8601 string is in the 'extended' form, i.e. uses `'-'` and \/ or `':'` separators. This is the preferred format.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -7310,6 +7642,7 @@
                                                                         "name": "year",
                                                                         "description": "Extract the year part of the date as an Integer.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -7325,6 +7658,16 @@
                                                                         "name": "month",
                                                                         "description": "Extract the month part of the date as an Integer, or return 0 if not present.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_18_2_83e026d_1461764007998_113126_4895": "Pre"
+                                                                            },
+                                                                            "Pre": {
+                                                                                "id": "_18_2_83e026d_1461764007998_113126_4895",
+                                                                                "name": "Pre",
+                                                                                "rule": "not month_unknown"
+                                                                            }
+                                                                        },
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -7340,6 +7683,16 @@
                                                                         "name": "day",
                                                                         "description": "Extract the day part of the date as an Integer, or return 0 if not present.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_18_2_83e026d_1461764013458_786323_4901": "Pre"
+                                                                            },
+                                                                            "Pre": {
+                                                                                "id": "_18_2_83e026d_1461764013458_786323_4901",
+                                                                                "name": "Pre",
+                                                                                "rule": "not day_unknown"
+                                                                            }
+                                                                        },
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -7355,6 +7708,7 @@
                                                                         "name": "timezone",
                                                                         "description": "Timezone; may be Void.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902576_187607_4977",
                                                                             "name": "Iso8601_timezone",
@@ -7370,6 +7724,7 @@
                                                                         "name": "month_unknown",
                                                                         "description": "Indicates whether month in year is unknown. If so, the date is of the form `\"YYYY\"`.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -7385,6 +7740,7 @@
                                                                         "name": "day_unknown",
                                                                         "description": "Indicates whether day in month is unknown. If so, and month is known, the date is of the form `\"YYYY-MM\"` or `\"YYYYMM\"`.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -7400,6 +7756,7 @@
                                                                         "name": "is_partial",
                                                                         "description": "True if this date is partial, i.e. if days or more is missing.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -7415,6 +7772,7 @@
                                                                         "name": "is_extended",
                                                                         "description": "True if this date uses `'-'` separators.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -7430,6 +7788,7 @@
                                                                         "name": "as_string",
                                                                         "description": "Return string value in extended format.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -7463,6 +7822,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902572_855852_4973",
                                                                             "name": "Iso8601_date",
@@ -7496,6 +7856,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902572_855852_4973",
                                                                             "name": "Iso8601_date",
@@ -7529,6 +7890,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902575_496930_4975",
                                                                             "name": "Iso8601_duration",
@@ -7562,6 +7924,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902572_855852_4973",
                                                                             "name": "Iso8601_date",
@@ -7595,6 +7958,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "_18_2_83e026d_1461851902572_855852_4973",
                                                                             "name": "Iso8601_date",
@@ -8200,6 +8564,16 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_18_2_83e026d_1463653930995_6097_5833": "Post"
+                                                                            },
+                                                                            "Post": {
+                                                                                "id": "_18_2_83e026d_1463653930995_6097_5833",
+                                                                                "name": "Post",
+                                                                                "rule": "Result = y >= 0"
+                                                                            }
+                                                                        },
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -8231,6 +8605,16 @@
                                                                                 "templateParameterId": null,
                                                                                 "minOccurs": 1,
                                                                                 "maxOccurs": 1
+                                                                            }
+                                                                        },
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_18_2_83e026d_1463653930998_130756_5836": "Post"
+                                                                            },
+                                                                            "Post": {
+                                                                                "id": "_18_2_83e026d_1463653930998_130756_5836",
+                                                                                "name": "Post",
+                                                                                "rule": "Result = m >= 1 and m <= Months_in_year"
                                                                             }
                                                                         },
                                                                         "return": {
@@ -8296,6 +8680,16 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_18_2_83e026d_1463653930999_151241_5839": "Post"
+                                                                            },
+                                                                            "Post": {
+                                                                                "id": "_18_2_83e026d_1463653930999_151241_5839",
+                                                                                "name": "Post",
+                                                                                "rule": "Result = d >= 1 and d <= days_in_month (m, y)"
+                                                                            }
+                                                                        },
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -8359,6 +8753,16 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_18_2_83e026d_1463653931001_282762_5845": "Post"
+                                                                            },
+                                                                            "Post": {
+                                                                                "id": "_18_2_83e026d_1463653931001_282762_5845",
+                                                                                "name": "Post",
+                                                                                "rule": "Result = (h >= 0 and h < Hours_in_day) or (h = Hours_in_day and m = 0 and s = 0)"
+                                                                            }
+                                                                        },
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -8390,6 +8794,16 @@
                                                                                 "templateParameterId": null,
                                                                                 "minOccurs": 1,
                                                                                 "maxOccurs": 1
+                                                                            }
+                                                                        },
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_18_2_83e026d_1463653931003_342534_5851": "Post"
+                                                                            },
+                                                                            "Post": {
+                                                                                "id": "_18_2_83e026d_1463653931003_342534_5851",
+                                                                                "name": "Post",
+                                                                                "rule": "Result = m >= 0 and m < Minutes_in_hour"
                                                                             }
                                                                         },
                                                                         "return": {
@@ -8425,6 +8839,16 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_18_2_83e026d_1463653931004_379212_5855": "Post"
+                                                                            },
+                                                                            "Post": {
+                                                                                "id": "_18_2_83e026d_1463653931004_379212_5855",
+                                                                                "name": "Post",
+                                                                                "rule": "Result = s >= 0 and s < Seconds_in_minute"
+                                                                            }
+                                                                        },
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -8456,6 +8880,16 @@
                                                                                 "templateParameterId": null,
                                                                                 "minOccurs": 1,
                                                                                 "maxOccurs": 1
+                                                                            }
+                                                                        },
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_18_2_83e026d_1463653931005_650862_5859": "Post"
+                                                                            },
+                                                                            "Post": {
+                                                                                "id": "_18_2_83e026d_1463653931005_650862_5859",
+                                                                                "name": "Post",
+                                                                                "rule": "Result = fs >= 0.0 and fs < 1.0"
                                                                             }
                                                                         },
                                                                         "return": {
@@ -8491,6 +8925,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -8524,6 +8959,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -8557,6 +8993,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -8590,6 +9027,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -8744,6 +9182,7 @@
                                                                         "name": "is_open",
                                                                         "description": "True if this interval imposes no constraints, i.e. is set to `0..*`.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -8759,6 +9198,7 @@
                                                                         "name": "is_optional",
                                                                         "description": "True if this interval expresses optionality, i.e. `0..1`.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -8774,6 +9214,7 @@
                                                                         "name": "is_mandatory",
                                                                         "description": "True if this interval expresses mandation, i.e. `1..1`.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -8789,6 +9230,7 @@
                                                                         "name": "is_prohibited",
                                                                         "description": "True if this interval is set to `0..0`.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -9043,6 +9485,16 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": {
+                                                                            "__aliases": {
+                                                                                "_19_0_3_8fe028d_1582813870128_141521_5266": "Post_result"
+                                                                            },
+                                                                            "Post_result": {
+                                                                                "id": "_19_0_3_8fe028d_1582813870128_141521_5266",
+                                                                                "name": "Post_result",
+                                                                                "rule": "Result = (lower_unbounded or lower_included and v >= lower) or v > lower and (upper_unbounded or upper_included and v <= upper or v < upper)"
+                                                                            }
+                                                                        },
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -9076,6 +9528,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -9109,6 +9562,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -9142,6 +9596,7 @@
                                                                                 "maxOccurs": 1
                                                                             }
                                                                         },
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -9394,6 +9849,7 @@
                                                                         "name": "is_bag",
                                                                         "description": "True if the semantics of this cardinality represent a bag, i.e. unordered, non-unique membership.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -9409,6 +9865,7 @@
                                                                         "name": "is_list",
                                                                         "description": "True if the semantics of this cardinality represent a list, i.e. ordered, non-unique membership.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -9424,6 +9881,7 @@
                                                                         "name": "is_set",
                                                                         "description": "True if the semantics of this cardinality represent a set, i.e. unordered, unique membership.",
                                                                         "umlParameters": [],
+                                                                        "umlConstraints": [],
                                                                         "return": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -9789,6 +10247,7 @@
                                                                         "maxOccurs": 1
                                                                     }
                                                                 },
+                                                                "umlConstraints": [],
                                                                 "return": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                     "name": "Boolean",
@@ -9822,6 +10281,7 @@
                                                                         "maxOccurs": 1
                                                                     }
                                                                 },
+                                                                "umlConstraints": [],
                                                                 "return": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                     "name": "Boolean",
@@ -9855,6 +10315,7 @@
                                                                         "maxOccurs": 1
                                                                     }
                                                                 },
+                                                                "umlConstraints": [],
                                                                 "return": {
                                                                     "id": "_18_1_83e026d_1422968609284_691010_25365",
                                                                     "name": "Any",
@@ -9888,6 +10349,7 @@
                                                                         "maxOccurs": 1
                                                                     }
                                                                 },
+                                                                "umlConstraints": [],
                                                                 "return": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -9921,6 +10383,7 @@
                                                                         "maxOccurs": 1
                                                                     }
                                                                 },
+                                                                "umlConstraints": [],
                                                                 "return": {
                                                                     "id": "_18_1_83e026d_1437044417075_513888_4894",
                                                                     "name": "Boolean",
@@ -10087,6 +10550,16 @@
                                                                 "name": "current_revision",
                                                                 "description": "Most recent revision in revision_history if is_controlled else  (uncontrolled) . ",
                                                                 "umlParameters": [],
+                                                                "umlConstraints": {
+                                                                    "__aliases": {
+                                                                        "_18_1_83e026d_1444307199712_642557_4850": "Post"
+                                                                    },
+                                                                    "Post": {
+                                                                        "id": "_18_1_83e026d_1444307199712_642557_4850",
+                                                                        "name": "Post",
+                                                                        "rule": "Result = revision_history.most_recent_version"
+                                                                    }
+                                                                },
                                                                 "return": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -10102,6 +10575,7 @@
                                                                 "name": "languages_available",
                                                                 "description": "Total list of languages available in this resource, derived from original_language and translations. ",
                                                                 "umlParameters": [],
+                                                                "umlConstraints": [],
                                                                 "return": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",

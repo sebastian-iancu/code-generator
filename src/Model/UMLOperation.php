@@ -12,6 +12,7 @@ class UMLOperation extends AbstractItem
     public readonly string $name;
     public readonly string $description;
     public readonly Collection $umlParameters;
+    public readonly Collection $umlConstraints;
     public readonly TypeReference $return;
     public readonly int $minOccurs;
     public readonly int $maxOccurs;
@@ -26,6 +27,13 @@ class UMLOperation extends AbstractItem
         foreach ($xmlNode->xpath("ownedParameter[@xmi:type='uml:Parameter' and (not(@direction) or not(@direction='return'))]") as $umlParameterNode) {
             $item = new UMLParameter($umlParameterNode);
             $this->umlParameters->add($item);
+        }
+        // collect Pre- and Post-constraints
+        $this->umlConstraints = new Collection();
+        $nodes = $xmlNode->xpath("ownedRule[@xmi:type='uml:Constraint' and specification/body]") ?: [];
+        foreach ($nodes as $umlConstraintNode) {
+            $item = new UMLConstraint($umlConstraintNode);
+            $this->umlConstraints->add($item);
         }
         // detect return type
         $nodes = $xmlNode->xpath("ownedParameter[@xmi:type='uml:Parameter' and @direction='return']");
