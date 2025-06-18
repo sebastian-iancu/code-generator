@@ -13,6 +13,8 @@ class UMLOperation extends AbstractItem
     public readonly string $description;
     public readonly Collection $umlParameters;
     public readonly TypeReference $return;
+    public readonly int $minOccurs;
+    public readonly int $maxOccurs;
 
     public function __construct(SimpleXMLElement $xmlNode)
     {
@@ -27,7 +29,14 @@ class UMLOperation extends AbstractItem
         }
         // detect return type
         $nodes = $xmlNode->xpath("ownedParameter[@xmi:type='uml:Parameter' and @direction='return']");
-        $this->return = $nodes ? (new UMLParameter($nodes[0]))->type : new TypeReference(null, 'void');
+        if (count($nodes) === 1) {
+            $returnParameter = new UMLParameter($nodes[0]);
+            $this->return = $returnParameter->type;
+            $this->minOccurs = $returnParameter->minOccurs;
+            $this->maxOccurs = $returnParameter->maxOccurs;
+        } else {
+            $this->return = new TypeReference(null, 'void');
+        }
 
         self::log('  Operation [%s], with [%s] parameters was read.', $this->name, count($this->umlParameters));
     }
