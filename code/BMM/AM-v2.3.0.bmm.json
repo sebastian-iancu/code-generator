@@ -303,6 +303,9 @@
                             "type": "String"
                         }
                     },
+                    "post_conditions": {
+                        "post-condition": "Result.is_equal (definition.node_id)"
+                    },
                     "result": {
                         "type": "String"
                     }
@@ -337,6 +340,9 @@
                 "specialisation_depth": {
                     "name": "specialisation_depth",
                     "description": "Specialisation depth of this archetype; larger than 0 if this archetype has a parent. Derived from terminology.specialisation_depth.",
+                    "post_conditions": {
+                        "post-condition": "Result = terminology.specialisation_depth"
+                    },
                     "result": {
                         "type": "Integer"
                     }
@@ -344,6 +350,9 @@
                 "is_specialised": {
                     "name": "is_specialised",
                     "description": "True if this archetype is a specialisation of another. ",
+                    "post_conditions": {
+                        "post-condition": "Result implies parent_archetype_id \/= Void"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -351,6 +360,9 @@
                 "is_valid": {
                     "name": "is_valid",
                     "description": "True if the archetype is valid overall; various tests should be used, including checks on node_ids, internal references, and constraint references.",
+                    "post_conditions": {
+                        "Post": "not (node_ids_valid and internal_references_valid and constraint_references_valid) implies not Result"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -397,6 +409,15 @@
                         "type": "String"
                     }
                 }
+            },
+            "invariants": {
+                "Inv_concept_valid": "ontology.has_term_code (concept_code)",
+                "Inv_specialisation_validity": "is_specialised implies specialisation_depth > 0",
+                "Inv_invariants_valid": "invariants \/= Void implies not invariants.is_empty",
+                "Inv_uid_validity": "uid \/= Void implies not uid.is_empty",
+                "Inv_version_validity": "version \/= Void and then version.is_equal(archetype_id.version_id)",
+                "Inv_description_valid": "description \/= Void",
+                "Inv_original_language_valid": "original_language \/= void and then language \/= Void"
             }
         },
         "AUTHORED_ARCHETYPE": {
@@ -443,6 +464,11 @@
                     "is_mandatory": true,
                     "documentation": ""
                 }
+            },
+            "invariants": {
+                "Invariant_adl_version_validity": "valid_version_id (adl_version)",
+                "Invariant_rm_release": "valid_version_id (rm_release)",
+                "Description_validity": "description \/= Void"
             }
         },
         "TEMPLATE": {
@@ -465,6 +491,9 @@
                     },
                     "documentation": "Overlay archetypes, i.e. partial archetypes that include full definition and terminology, but logically derive all their meta-data from the owning template."
                 }
+            },
+            "invariants": {
+                "Inv_is_specialised": "is_specialised"
             }
         },
         "OPERATIONAL_TEMPLATE": {
@@ -508,10 +537,16 @@
                             "type": "String"
                         }
                     },
+                    "post_conditions": {
+                        "Inv_is_specialised": "is_specialised"
+                    },
                     "result": {
                         "type": "ARCHETYPE_TERMINOLOGY"
                     }
                 }
+            },
+            "invariants": {
+                "Specialisation_validity": "is_specialised"
             }
         },
         "TEMPLATE_OVERLAY": {
@@ -519,7 +554,10 @@
             "ancestors": [
                 "ARCHETYPE"
             ],
-            "documentation": "A concrete form of the bare `ARCHETYPE` class, used to represent overlays in a source template. Overlays have no meta-data of their own, and are instead documented by their owning template."
+            "documentation": "A concrete form of the bare `ARCHETYPE` class, used to represent overlays in a source template. Overlays have no meta-data of their own, and are instead documented by their owning template.",
+            "invariants": {
+                "Inv_is_specialised": "is_specialised"
+            }
         },
         "ARCHETYPE_HRID": {
             "name": "ARCHETYPE_HRID",
@@ -616,6 +654,13 @@
                         "type": "String"
                     }
                 }
+            },
+            "invariants": {
+                "Inv_rm_publisher_validity": "not rm_publisher.is_empty",
+                "Inv_rm_package_validity": "not rm_package.is_empty",
+                "Inv_class_name_validity": "not rm_class.is_empty",
+                "Inv_concept_id_validity": "not concept_id.is_empty",
+                "Inv_release_version_validity": "valid_version (release_version)"
             }
         },
         "ARCHETYPE_CONSTRAINT": {
@@ -661,6 +706,10 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Post": "Result = soc_parent \/= Void or parent.soc_parent \/= Void",
+                "Path_exists": "path \/= Void"
             }
         },
         "C_OBJECT": {
@@ -741,10 +790,18 @@
                 "any_allowed": {
                     "name": "any_allowed",
                     "description": "True if any value (i.e. instance) of the reference model attribute represented by this C_ATTIRBUTE is allowed.",
+                    "post_conditions": {
+                        "Post": "Result := children = Void or else children.is_empty"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Rm_attribute_name_valid": "not rm_attribute_name.is_empty",
+                "Existence_set": "existence.lower >= 0 and existence.upper <= 1",
+                "Children_validity": "any_allowed xor children \/= Void"
             }
         },
         "C_DEFINED_OBJECT": {
@@ -798,10 +855,16 @@
                 "any_allowed": {
                     "name": "any_allowed",
                     "description": "True if any value of the reference model type being constrained is allowed. Redefine in descendants.",
+                    "post_conditions": {
+                        "Post": "Result = attributes.is_empty"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Assumed_value_valid": "has_assumed_value implies valid_value(assumed_value)"
             }
         },
         "C_COMPLEX_OBJECT_PROXY": {
@@ -822,6 +885,9 @@
                 "use_target_occurrences": {
                     "name": "use_target_occurrences",
                     "description": "True if target occurrences are to be used as the value of occurrences in this object; by the time of runtime use, the target occurrences value has to be set into this object.",
+                    "post_conditions": {
+                        "Post": "Result = (occurrences = Void)"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -873,6 +939,11 @@
                     },
                     "documentation": "List of constraints defining other archetypes that cannot be included at this point. "
                 }
+            },
+            "invariants": {
+                "Includes_valid": "includes \/= Void implies not includes.is_empty",
+                "Excludes_valid": "excludes \/= Void implies not excludes.is_empty",
+                "Validity": "any_allowed xor (includes \/= Void or excludes \/= Void)"
             }
         },
         "C_PRIMITIVE_OBJECT": {
@@ -893,10 +964,16 @@
                 "any_allowed": {
                     "name": "any_allowed",
                     "description": "True if any value of the type being constrained in item is allowed.",
+                    "post_conditions": {
+                        "Post": "Result = item = Void"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Item_valid": "any_allowed xor item \/= Void"
             }
         },
         "SIBLING_ORDER": {
@@ -1143,10 +1220,16 @@
                 "any_allowed": {
                     "name": "any_allowed",
                     "description": "True if any value of the reference model type being constrained is allowed.",
+                    "post_conditions": {
+                        "Post": "Result = attributes.is_empty"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Attributes_valid": " any_allowed xor (attributes \/= Void and not attributes.is_empty)"
             }
         },
         "ARCHETYPE_ID_CONSTRAINT": {
@@ -1359,6 +1442,9 @@
                 "any_allowed": {
                     "name": "any_allowed",
                     "description": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
+                    "post_conditions": {
+                        "Post": "Result = constraint.is_empty"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -1488,6 +1574,9 @@
                 "any_allowed": {
                     "name": "any_allowed",
                     "description": "True if `_constraint_` is empty.",
+                    "post_conditions": {
+                        "Post": "Result := constraint.is_empty"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -1569,6 +1658,9 @@
                 "any_allowed": {
                     "name": "any_allowed",
                     "description": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
+                    "post_conditions": {
+                        "Post": "Result = precursor and pattern_constraint.is_empty"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -1651,6 +1743,13 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Pattern_validity": "pattern \/= Void implies valid_iso8601_time_constraint_pattern (pattern)",
+                "Minute_validity_optional": "minute_validity = {VALIDITY_KIND}.optional implies (second_validity = {VALIDITY_KIND}.optional or second_validity = {VALIDITY_KIND}.disallowed)",
+                "Minute_validity_disallowed": "minute_validity = {VALIDITY_KIND}.disallowed implies second_validity = {VALIDITY_KIND}.disallowed",
+                "Second_validity_optional": "second_validity = {VALIDITY_KIND}.optional implies (millisecond_validity = {VALIDITY_KIND}.optional or millisecond_validity = {VALIDITY_KIND}.disallowed)",
+                "Second_validity_disallowed": "second_validity = {VALIDITY_KIND}.disallowed implies millisecond_validity = {VALIDITY_KIND}.disallowed Validity_is_range: validity_is_range = (range \/= Void)"
             }
         },
         "C_DATE": {
@@ -1691,6 +1790,12 @@
                     "type": "Iso8601_date",
                     "documentation": "The value to assume if this item is not included in data, due to being part of an optional structure."
                 }
+            },
+            "invariants": {
+                "Pattern_validity": "pattern \/= Void implies valid_iso8601_date_constraint_pattern(pattern)",
+                "Month_validity_optional": "month_validity = {VALIDITY_KIND}.optional implies (day_validity = {VALIDITY_KIND}.optional or day_validity = {VALIDITY_KIND}.disallowed)",
+                "Month_validity_disallowed": "month_validity = {VALIDITY_KIND}.disallowed implies day_validity = {VALIDITY_KIND}.disallowed",
+                "Validity_is_range": "validity_is_range = (range \/= Void)"
             }
         },
         "C_DATE_TIME": {
@@ -1760,6 +1865,20 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Pattern_validity": "pattern \/= Void implies valid_iso8601_date_time_constraint_pattern(pattern)",
+                "Month_validity_optional:": "month_validity = {VALIDITY_KIND}.optional implies (day_validity = {VALIDITY_KIND}.optional or day_validity = {VALIDITY_KIND}.disallowed)",
+                "Month_validity_disallowed": "month_validity = {VALIDITY_KIND}.disallowed implies day_validity = {VALIDITY_KIND}.disallowed",
+                "Day_validity_optional": "day_validity = {VALIDITY_KIND}.optional implies (hour_validity = {VALIDITY_KIND}.optional or hour_validity = {VALIDITY_KIND}.disallowed)",
+                "Day_validity_disallowed": "day_validity = {VALIDITY_KIND}.disallowed implies hour_validity = {VALIDITY_KIND}.disallowed",
+                "Hour_validity_optional": "hour_validity = {VALIDITY_KIND}.optional implies (minute_validity = {VALIDITY_KIND}.optional or minute_validity = {VALIDITY_KIND}.disallowed)",
+                "Hour_validity_disallowed": "hour_validity = {VALIDITY_KIND}.disallowed implies minute_validity = {VALIDITY_KIND}.disallowed",
+                "Minute_validity_optional": "minute_validity = {VALIDITY_KIND}.optional implies (second_validity = {VALIDITY_KIND}.optional or second_validity = {VALIDITY_KIND}.disallowed)",
+                "Minute_validity_disallowed": "minute_validity = {VALIDITY_KIND}.disallowed implies second_validity = {VALIDITY_KIND}.disallowed",
+                "Second_validity_optional": "second_validity = {VALIDITY_KIND}.optional implies (millisecond_validity = {VALIDITY_KIND}.optional or millisecond_validity = {VALIDITY_KIND}.disallowed)",
+                "Second_validity_disallowed": "second_validity = {VALIDITY_KIND}.disallowed implies millisecond_validity = {VALIDITY_KIND}.disallowed",
+                "Validity_is_range": "validity_is_range = (range \/= Void)"
             }
         },
         "C_DURATION": {
@@ -2055,6 +2174,9 @@
                         }
                     }
                 }
+            },
+            "invariants": {
+                "Code_valid": "not code.is_empty"
             }
         },
         "TERMINOLOGY_RELATION": {
@@ -2274,6 +2396,9 @@
                             "type": "String"
                         }
                     },
+                    "pre_conditions": {
+                        "Pre": "has_term-definition (a_lang, a_code)"
+                    },
                     "result": {
                         "type": "ARCHETYPE_TERM"
                     }
@@ -2288,6 +2413,9 @@
                         "a_code": {
                             "type": "String"
                         }
+                    },
+                    "pre_conditions": {
+                        "Pre": "has_term_binding (a_terminology_id, a_code)"
                     },
                     "result": {
                         "type": "Uri"
@@ -2314,6 +2442,9 @@
                         "a_code": {
                             "type": "String"
                         }
+                    },
+                    "pre_conditions": {
+                        "Pre": "has_terminology_extract (a_terminology_id) and has_terminology_extract_code (a_code)"
                     },
                     "result": {
                         "type": "ARCHETYPE_TERM"
@@ -2342,6 +2473,12 @@
                         }
                     }
                 }
+            },
+            "invariants": {
+                "Original_language_validity": "code_set (Code_set_id_languages).has_concept_id (original_language)",
+                "concept_code_validity": "id_codes.has (concept_code)",
+                "Term_bindings_validity": "bindings \/= void implies not bindings.is_empty",
+                "Parent_archetype_valid": "parent_archetype.terminology = Current"
             }
         },
         "ADL_CODE_DEFINITIONS": {
@@ -2415,6 +2552,9 @@
                             "type": "String"
                         }
                     },
+                    "post_conditions": {
+                        "Post": "Result = is_id_code (a_code) or else is_value_code (a_code) or else is_value_set_code (a_code)"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -2426,6 +2566,9 @@
                         "a_code": {
                             "type": "String"
                         }
+                    },
+                    "post_conditions": {
+                        "Post": "Result = a_code.starts_with (Id_code_leader)"
                     },
                     "result": {
                         "type": "Boolean"
@@ -2439,6 +2582,9 @@
                             "type": "String"
                         }
                     },
+                    "post_conditions": {
+                        "Post": "Result = a_code.starts_with (Value_code_leader)"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -2450,6 +2596,9 @@
                         "a_code": {
                             "type": "String"
                         }
+                    },
+                    "post_conditions": {
+                        "Post": "Result = a_code.starts_with (Value_set_code_leader)"
                     },
                     "result": {
                         "type": "Boolean"
@@ -2498,6 +2647,9 @@
                     "type": "Terminology_code",
                     "documentation": "Optional alias for the attribute referenced by the path."
                 }
+            },
+            "invariants": {
+                "Inv_alias_validity": "alias \/= Void implies visibility \/= Void"
             }
         },
         "RM_OVERLAY": {
@@ -3618,6 +3770,10 @@
                     },
                     "documentation": "Definitions of variables used in the assertion expression."
                 }
+            },
+            "invariants": {
+                "Tag_valid": "tag \/= Void implies not tag.is_empty",
+                "Expression_valid": "expression \/= Void and then expression.type.is_equal(\u201cBOOLEAN\u201d)"
             }
         },
         "ASSERTION_VARIABLE": {
@@ -3824,6 +3980,10 @@
                     "is_mandatory": true,
                     "documentation": "Reference to an object node using archetype path notation."
                 }
+            },
+            "invariants": {
+                "Consistency": "not any_allowed",
+                "Target_path_valid": "target_path \/= Void and then not target_path.is_empty"
             }
         },
         "C_SINGLE_ATTRIBUTE": {
@@ -3844,6 +4004,9 @@
                         }
                     }
                 }
+            },
+            "invariants": {
+                "Members_valid": "alternatives \/= Void and then alternatives.for_all(co: C_OBJECT | co.occurrences.upper <= 1)"
             }
         },
         "CONSTRAINT_REF": {
@@ -3859,6 +4022,9 @@
                     "is_mandatory": true,
                     "documentation": "Reference to a constraint in the archetype local ontology."
                 }
+            },
+            "invariants": {
+                "Consistency": "not any_allowed"
             }
         },
         "C_MULTIPLE_ATTRIBUTE": {
@@ -4046,6 +4212,10 @@
                             "type": "String"
                         }
                     },
+                    "pre_conditions": {
+                        "Pre": "has_language (a_lang)",
+                        "Pre2": "has_term_code (a_code)"
+                    },
                     "result": {
                         "type": "ARCHETYPE_TERM"
                     }
@@ -4061,6 +4231,10 @@
                             "type": "String"
                         }
                     },
+                    "pre_conditions": {
+                        "Pre": "has_language (a_lang)",
+                        "Pre_2": "has_constraint_code (a_code)"
+                    },
                     "result": {
                         "type": "ARCHETYPE_TERM"
                     }
@@ -4075,6 +4249,9 @@
                         "a_code": {
                             "type": "String"
                         }
+                    },
+                    "pre_conditions": {
+                        "Pre": "has_term_binding (a_terminology_id, a_code)"
                     },
                     "result": {
                         "type": "CODE_PHRASE"
@@ -4095,6 +4272,12 @@
                         "type": "String"
                     }
                 }
+            },
+            "invariants": {
+                "Original_language_validity": "code_set (Code_set_id_languages).has_concept_id (original_language)",
+                "concept_code_validity": "id_codes.has (concept_code)",
+                "Term_bindings_validity": "bindings \/= void implies not bindings.is_empty",
+                "Parent_archetype_valid": "parent_archetype.ontology = Current"
             }
         },
         "C_PRIMITIVE": {
@@ -4135,6 +4318,9 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Assumed_value_valid": "has_assumed_value implies valid_value(assumed_value)"
             }
         }
     }

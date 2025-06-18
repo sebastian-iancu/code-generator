@@ -354,6 +354,10 @@
                         "type": "Any"
                     }
                 }
+            },
+            "invariants": {
+                "First_validity": "not is_empty implies first \/= Void",
+                "Last_validity": "not is_empty implies last \/= Void"
             }
         },
         "Set": {
@@ -761,6 +765,10 @@
                             "type": "Boolean"
                         }
                     },
+                    "post_conditions": {
+                        "Post_de_Morgan": "Result = not (not self or not other)",
+                        "Post_commutative": "Result = (other and self)"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -772,6 +780,9 @@
                         "other": {
                             "type": "Boolean"
                         }
+                    },
+                    "post_conditions": {
+                        "Post_de_Morgan": "Result = not (not self or else not other)"
                     },
                     "result": {
                         "type": "Boolean"
@@ -785,6 +796,11 @@
                             "type": "Boolean"
                         }
                     },
+                    "post_conditions": {
+                        "Post_de_Morgan": "Result = not (not self and not other)",
+                        "Post_commutative": "Result = (other or Current)",
+                        "Post_consistent_with_semi_strict": "Result implies (self or else other)"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -796,6 +812,9 @@
                         "other": {
                             "type": "Boolean"
                         }
+                    },
+                    "post_conditions": {
+                        "Post_de_Morgan": "Result = not (not self and then not other)"
                     },
                     "result": {
                         "type": "Boolean"
@@ -809,6 +828,9 @@
                             "type": "Boolean"
                         }
                     },
+                    "post_conditions": {
+                        "Post_definition": "Result = ((self or other) and not (self and other))"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -821,6 +843,9 @@
                             "type": "Boolean"
                         }
                     },
+                    "post_conditions": {
+                        "Post_definition": "Result = (not self or else other)"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -832,6 +857,11 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Involutive_negation": "is_equal (not (not self))",
+                "Non_contradiction": "not (self and (not self))",
+                "Completeness": "self or else (not self)"
             }
         },
         "String": {
@@ -1171,6 +1201,9 @@
                             "type": "Ordered"
                         }
                     },
+                    "post_conditions": {
+                        "Post_result": "not (other < self)"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -1183,6 +1216,9 @@
                             "type": "Ordered"
                         }
                     },
+                    "post_conditions": {
+                        "Post_result": "Result = (other < self)"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -1194,6 +1230,9 @@
                         "other": {
                             "type": "Ordered"
                         }
+                    },
+                    "post_conditions": {
+                        "Post_result": "Result = (other <= self)"
                     },
                     "result": {
                         "type": "Boolean"
@@ -1225,6 +1264,9 @@
                 "month": {
                     "name": "month",
                     "description": "Extract the month part of the date\/time as an Integer, or return 0 if not present.",
+                    "pre_conditions": {
+                        "Pre": "not month_unknown"
+                    },
                     "result": {
                         "type": "Integer"
                     }
@@ -1232,6 +1274,9 @@
                 "day": {
                     "name": "day",
                     "description": "Extract the day part of the date\/time as an Integer, or return 0 if not present.",
+                    "pre_conditions": {
+                        "Pre": "not day_unknown"
+                    },
                     "result": {
                         "type": "Integer"
                     }
@@ -1239,6 +1284,9 @@
                 "hour": {
                     "name": "hour",
                     "description": "Extract the hour part of the date\/time as an Integer, or return 0 if not present.",
+                    "pre_conditions": {
+                        "Pre": "not hour_unknown"
+                    },
                     "result": {
                         "type": "Integer"
                     }
@@ -1246,6 +1294,9 @@
                 "minute": {
                     "name": "minute",
                     "description": "Extract the minute part of the date\/time as an Integer, or return 0 if not present.",
+                    "pre_conditions": {
+                        "Pre": "not minute_unknown"
+                    },
                     "result": {
                         "type": "Integer"
                     }
@@ -1253,6 +1304,9 @@
                 "second": {
                     "name": "second",
                     "description": "Extract the integral seconds part of the date\/time (i.e. prior to any decimal sign) as an Integer, or return 0 if not present.",
+                    "pre_conditions": {
+                        "Pre": "not second_unknown"
+                    },
                     "result": {
                         "type": "Integer"
                     }
@@ -1394,6 +1448,20 @@
                         "type": "Iso8601_date"
                     }
                 }
+            },
+            "invariants": {
+                "Year_valid": "valid_year (year)",
+                "Month_valid": "valid_month (month)",
+                "Day_valid": "valid_day(year, month, day)",
+                "Hour_valid": "valid_hour (hour, minute, second)",
+                "Minute_valid": "not minute_unknown implies valid_minute(minute)",
+                "Second_valid": "not second_unknown implies valid_second (second)",
+                "Fractional_second_valid": "has_fractional_second implies (not second_unknown and valid_fractional_second (fractional_second))",
+                "Partial_validity_year": "not month_unknown",
+                "Partial_validity_month": "not month_unknown",
+                "Partial_validity_day": "not day_unknown",
+                "Partial_validity_hour": "not hour_unknown",
+                "Partial_validity_minute": "minute_unknown implies second_unknown"
             }
         },
         "Iso8601_duration": {
@@ -1549,6 +1617,16 @@
                         "type": "Iso8601_duration"
                     }
                 }
+            },
+            "invariants": {
+                "Years_valid": "years >= 0",
+                "Months_valid": "months >= 0",
+                "Weeks_valid": "weeks >= 0",
+                "Days_valid": "days >= 0",
+                "Hours_valid": "hours >= 0",
+                "Minutes_valid": "minutes >= 0",
+                "Seconds_valid": "seconds >= 0",
+                "Fractional_second_valid": "fractional_second >= 0.0 and fractional_second < 1.0"
             }
         },
         "Iso8601_time": {
@@ -1582,6 +1660,9 @@
                 "fractional_second": {
                     "name": "fractional_second",
                     "description": "Extract the fractional seconds part of the time (i.e. following to any decimal sign) as a Real, or return 0.0 if not present.",
+                    "pre_conditions": {
+                        "Pre": "not second_unknown"
+                    },
                     "result": {
                         "type": "Real"
                     }
@@ -1678,6 +1759,13 @@
                         "type": "Iso8601_duration"
                     }
                 }
+            },
+            "invariants": {
+                "Hour_valid": "valid_hour(hour, minute, second)",
+                "Minute_valid": "not minute_unknown implies valid_minute (minute)",
+                "Second_valid": "not second_unknown implies valid_second (second)",
+                "Fractional_second_valid": "has_fractional_second implies (not second_unknown and valid_fractional_second (fractional_second))",
+                "Partial_validity": "minute_unknown implies second_unknown"
             }
         },
         "Iso8601_type": {
@@ -1730,6 +1818,9 @@
                 "month": {
                     "name": "month",
                     "description": "Extract the month part of the date as an Integer, or return 0 if not present.",
+                    "pre_conditions": {
+                        "Pre": "not month_unknown"
+                    },
                     "result": {
                         "type": "Integer"
                     }
@@ -1737,6 +1828,9 @@
                 "day": {
                     "name": "day",
                     "description": "Extract the day part of the date as an Integer, or return 0 if not present.",
+                    "pre_conditions": {
+                        "Pre": "not day_unknown"
+                    },
                     "result": {
                         "type": "Integer"
                     }
@@ -1843,6 +1937,12 @@
                         "type": "Iso8601_date"
                     }
                 }
+            },
+            "invariants": {
+                "Year_valid": "valid_year (year)",
+                "Month_valid": "not month_unknown implies valid_month (month)",
+                "Day_valid": "not day_unknown implies valid_day (year, month, day)",
+                "Partial_validity": "month_unknown implies day_unknown"
             }
         },
         "Temporal": {
@@ -1964,6 +2064,9 @@
                             "type": "Ordered"
                         }
                     },
+                    "post_conditions": {
+                        "Post_result": "Result = (lower_unbounded or lower_included and v >= lower) or v > lower and (upper_unbounded or upper_included and v <= upper or v < upper)"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -2004,6 +2107,12 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Lower_included_valid": "lower_unbounded implies not lower_included",
+                "Upper_included_valid": "upper_unbounded implies not upper_included",
+                "Limits_consistent": "(not upper_unbounded and not lower_unbounded) implies lower <= upper",
+                "Limits_comparable": "(not upper_unbounded and not lower_unbounded) implies lower.strictly_comparable_to (upper)"
             }
         },
         "Cardinality": {
@@ -2295,7 +2404,10 @@
             "ancestors": [
                 "OBJECT_REF"
             ],
-            "documentation": "Identifier for parties in a demographic or identity service. There are typically a number of subtypes of the `PARTY` class, including `PERSON`, `ORGANISATION`, etc. Abstract supertypes are allowed if the referenced object is of a type not known by the current implementation of this class (in other words, if the demographic model is changed by the addition of a new `PARTY` or `ACTOR` subtypes, valid `PARTY_REFs` can still be constructed to them). "
+            "documentation": "Identifier for parties in a demographic or identity service. There are typically a number of subtypes of the `PARTY` class, including `PERSON`, `ORGANISATION`, etc. Abstract supertypes are allowed if the referenced object is of a type not known by the current implementation of this class (in other words, if the demographic model is changed by the addition of a new `PARTY` or `ACTOR` subtypes, valid `PARTY_REFs` can still be constructed to them). ",
+            "invariants": {
+                "Type_validity": "type.is_equal(\u201cPERSON\u201d) or type.is_equal(\u201cORGANISATION\u201d) or type.is_equal(\u201cGROUP\u201d) or type.is_equal(\u201cAGENT\u201d)or type.is_equal(\u201cROLE\u201d) or type.is_equal(\u201cPARTY\u201d) or type.is_equal(\u201cACTOR\u201d)"
+            }
         },
         "TERMINOLOGY_ID": {
             "name": "TERMINOLOGY_ID",
@@ -2360,6 +2472,15 @@
                         "type": "String"
                     }
                 }
+            },
+            "invariants": {
+                "Value_valid": "not value.is_empty",
+                "Trunk_version_valid": "trunk_version \/= Void and then trunk_version.is_integer and then trunk_version.as_integer >= 1",
+                "Branch_number_valid": "branch_number \/= Void implies branch_number.is_integer and then branch_number.as_integer >= 1",
+                "Branch_version_valid": "branch_version \/= Void implies branch_version.is_integer and then branch_version.as_integer >= 1",
+                "Branch_validity": "(branch_number = Void and branch_version = Void ) xor (branch_number \/= Void and branch_version \/= Void )",
+                "Is_branch_validity": "is_branch xor branch_number = Void",
+                "Is_first_validity": "not is_first xor trunk_version.is_equal(\u201c1\u201d)"
             }
         },
         "UID_BASED_ID": {
@@ -2391,6 +2512,9 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Has_extension_valid": "extension.is_empty xor has_extension"
             }
         },
         "UUID": {
@@ -2418,6 +2542,9 @@
                     "is_mandatory": true,
                     "documentation": "The value of the id."
                 }
+            },
+            "invariants": {
+                "Value_valid": "not value.empty"
             }
         },
         "ISO_OID": {
@@ -2439,7 +2566,10 @@
             "ancestors": [
                 "OBJECT_REF"
             ],
-            "documentation": "Reference to access group in an access control service."
+            "documentation": "Reference to access group in an access control service.",
+            "invariants": {
+                "Type_validity": "type.is_equal (\u201cACCESS_GROUP\u201d)"
+            }
         },
         "OPENEHR_DEFINITIONS": {
             "name": "OPENEHR_DEFINITIONS",
@@ -2594,6 +2724,12 @@
                         "type": "String"
                     }
                 }
+            },
+            "invariants": {
+                "Min_hour_valid": "sign = -1 implies hour > 0 and hour <= Min_timezone_hour",
+                "Max_hour_valid": "sign = 1 implies hour > 0 and hour <= Max_timezone_hour",
+                "Minute_valid": "not minute_unknown implies valid_minute (minute)",
+                "Sign_valid": "sign = 1 or sign = -1"
             }
         },
         "Time_Definitions": {
@@ -2700,6 +2836,9 @@
                             "type": "Integer"
                         }
                     },
+                    "post_conditions": {
+                        "Post": "Result = y >= 0"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -2711,6 +2850,9 @@
                         "m": {
                             "type": "Integer"
                         }
+                    },
+                    "post_conditions": {
+                        "Post": "Result = m >= 1 and m <= Months_in_year"
                     },
                     "result": {
                         "type": "Boolean"
@@ -2730,6 +2872,9 @@
                             "type": "Integer"
                         }
                     },
+                    "post_conditions": {
+                        "Post": "Result = d >= 1 and d <= days_in_month (m, y)"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -2748,6 +2893,9 @@
                             "type": "Integer"
                         }
                     },
+                    "post_conditions": {
+                        "Post": "Result = (h >= 0 and h < Hours_in_day) or (h = Hours_in_day and m = 0 and s = 0)"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -2759,6 +2907,9 @@
                         "m": {
                             "type": "Integer"
                         }
+                    },
+                    "post_conditions": {
+                        "Post": "Result = m >= 0 and m < Minutes_in_hour"
                     },
                     "result": {
                         "type": "Boolean"
@@ -2772,6 +2923,9 @@
                             "type": "Integer"
                         }
                     },
+                    "post_conditions": {
+                        "Post": "Result = s >= 0 and s < Seconds_in_minute"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -2783,6 +2937,9 @@
                         "fs": {
                             "type": "Double"
                         }
+                    },
+                    "post_conditions": {
+                        "Post": "Result = fs >= 0.0 and fs < 1.0"
                     },
                     "result": {
                         "type": "Boolean"
@@ -2849,6 +3006,9 @@
                     "name": "T",
                     "conforms_to_type": "Ordered"
                 }
+            },
+            "invariants": {
+                "Inv_not_point": "lower \/= upper"
             }
         },
         "Point_interval": {
@@ -2888,6 +3048,9 @@
                     "is_mandatory": true,
                     "documentation": "Upper boundary value included in range if not `_upper_unbounded_`."
                 }
+            },
+            "invariants": {
+                "Inv_point": "lower = upper"
             }
         },
         "CODE_PHRASE": {
@@ -2911,6 +3074,9 @@
                     "type": "String",
                     "documentation": "Optional attribute to carry preferred term corresponding to the code or expression in `_code_string_`. Typical use in integration situations which create mappings, and representing data for which both a (non-preferred) actual term and a preferred term are both required."
                 }
+            },
+            "invariants": {
+                "Code_string_valid": "not code_string.is_empty"
             }
         },
         "AUTHORED_RESOURCE": {
@@ -2961,6 +3127,9 @@
                 "current_revision": {
                     "name": "current_revision",
                     "description": "Most recent revision in revision_history if is_controlled else  (uncontrolled) . ",
+                    "post_conditions": {
+                        "Post": "Result = revision_history.most_recent_version"
+                    },
                     "result": {
                         "type": "String"
                     }
@@ -2976,6 +3145,14 @@
                         }
                     }
                 }
+            },
+            "invariants": {
+                "Original_language_valid": "code_set (Code_set_id_languages).has_code (original_language.as_string)",
+                "Current_revision_valid": "(current_revision \/= Void and not is_controlled) implies current_revision.is_equal (\"(uncontrolled)\")",
+                "Translations_valid": "translations \/= Void implies (not translations.is_empty and not translations.has (orginal_language.code_string))",
+                "Description_valid": "translations \/= Void implies (description.details.for_all (d &#124;\ntranslations.has_key (d.language.code_string)))",
+                "Languages_available_valid": "languages_available.has (original_language)",
+                "Revision_history_valid": "is_controlled xor revision_history = Void"
             }
         },
         "RESOURCE_DESCRIPTION": {

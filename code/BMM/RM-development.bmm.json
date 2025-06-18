@@ -368,6 +368,9 @@
                             "type": "String"
                         }
                     },
+                    "pre_conditions": {
+                        "Pre": "path_unique (a_path)"
+                    },
                     "result": {
                         "type": "Any"
                     }
@@ -396,6 +399,9 @@
                             "type": "String"
                         }
                     },
+                    "pre_conditions": {
+                        "Pre": "not a_path.is_empty"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -407,6 +413,9 @@
                         "a_path": {
                             "type": "String"
                         }
+                    },
+                    "pre_conditions": {
+                        "Pre": "path_exists (a_path)"
                     },
                     "result": {
                         "type": "Boolean"
@@ -514,6 +523,11 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Links_valid": "links \/= Void implies not links.is_empty",
+                "Archetyped_valid": "is_archetype_root xor archetype_details = Void",
+                "Archetype_node_id_valid": "not archetype_node_id.is_empty"
             }
         },
         "ARCHETYPED": {
@@ -537,6 +551,10 @@
                     "is_mandatory": true,
                     "documentation": "Version of the openEHR reference model used to create this object. Expressed in terms of the release version string, e.g.  1.0 ,  1.2.4 ."
                 }
+            },
+            "invariants": {
+                "rm_version_valid": "not rm_version.is_empty",
+                "Rm_version_valid": "not rm_version.is_empty"
             }
         },
         "FEEDER_AUDIT": {
@@ -627,6 +645,9 @@
                     "type": "ITEM_STRUCTURE",
                     "documentation": "Optional attribute to carry any custom meta-data. May be archetyped."
                 }
+            },
+            "invariants": {
+                "System_id_valid": "not system_id.is_empty"
             }
         },
         "VERSIONED_OBJECT": {
@@ -723,6 +744,9 @@
                             "type": "OBJECT_VERSION_ID"
                         }
                     },
+                    "pre_conditions": {
+                        "Pre": "has_version_id (a_ver_id)"
+                    },
                     "result": {
                         "type": "VERSION"
                     }
@@ -735,6 +759,9 @@
                             "type": "OBJECT_VERSION_ID"
                         }
                     },
+                    "pre_conditions": {
+                        "Pre": "has_version_id(a_ver_id)"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -746,6 +773,9 @@
                         "a_time": {
                             "type": "DV_DATE_TIME"
                         }
+                    },
+                    "pre_conditions": {
+                        "Pre": "has_version_at_time (a_time)"
                     },
                     "result": {
                         "type": "VERSION"
@@ -775,6 +805,9 @@
                 "trunk_lifecycle_state": {
                     "name": "trunk_lifecycle_state",
                     "description": "Return the lifecycle state from the latest trunk version. Useful for determining if the version container is logically deleted. ",
+                    "post_conditions": {
+                        "Post": "Result = latest_trunk_version.lifecycle_state"
+                    },
                     "result": {
                         "type": "DV_CODED_TEXT"
                     }
@@ -804,6 +837,9 @@
                         "signing_key": {
                             "type": "String"
                         }
+                    },
+                    "pre_conditions": {
+                        "Pre": "all_version_ids.has (a_preceding_version_uid) or else version_count = 0"
                     },
                     "result": {
                         "type": "void"
@@ -842,6 +878,9 @@
                             "type": "String"
                         }
                     },
+                    "pre_conditions": {
+                        "Pre": "all_version_ids.has (a_preceding_version_uid) or else version_count = 0"
+                    },
                     "result": {
                         "type": "void"
                     }
@@ -878,10 +917,20 @@
                             "type": "String"
                         }
                     },
+                    "pre_conditions": {
+                        "Pre": "has_version_id(a_ver_id)\nand is_original_version(a_ver_id)"
+                    },
                     "result": {
                         "type": "void"
                     }
                 }
+            },
+            "invariants": {
+                "Version_count_valid": "version_count >= 0",
+                "All_version_ids_valid": "all_version_ids.count = version_count",
+                "All_versions_valid": "all_versions.count = version_count",
+                "Latest_version_valid": "version_count > 0 implies latest_version \/= Void",
+                "Uid_validity": "extension.is_empty"
             }
         },
         "CONTRIBUTION": {
@@ -983,6 +1032,9 @@
                 "owner_id": {
                     "name": "owner_id",
                     "description": "Copy of the owning `VERSIONED_OBJECT._uid_` value; extracted from the local `_uid_` property's `_object_id_`.",
+                    "post_conditions": {
+                        "Post": "Result.value.is_equal (uid.object_id.value)"
+                    },
                     "result": {
                         "type": "HIER_OBJECT_ID"
                     }
@@ -994,6 +1046,11 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Owner_id_valid": "owner_id.value.is_equal (uid.object_id.value)",
+                "Preceding_version_uid_validity": "uid.version_tree_id.is_first xor preceding_version_uid \/= Void",
+                "Lifecycle_state_ valid": "lifecycle_state \/= Void and then terminology (Term_id_openehr).has_code_for_group_id (Group_id_version_lifecycle_state, lifecycle_state.defining_code)"
             }
         },
         "IMPORTED_VERSION": {
@@ -1019,6 +1076,9 @@
                 "uid": {
                     "name": "uid",
                     "description": "Computed version of inheritance precursor, derived as `_item.uid_`. ",
+                    "post_conditions": {
+                        "Post": "Result = item.uid"
+                    },
                     "result": {
                         "type": "OBJECT_VERSION_ID"
                     }
@@ -1026,6 +1086,9 @@
                 "preceding_version_uid": {
                     "name": "preceding_version_uid",
                     "description": "Computed version of inheritance precursor, derived as `_item.preceding_version_uid_`. ",
+                    "post_conditions": {
+                        "Post": "Result = item.preceding_version_uid"
+                    },
                     "result": {
                         "type": "OBJECT_VERSION_ID"
                     }
@@ -1115,6 +1178,11 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Attestations_valid": "attestations \/= Void implies not attestations.is_empty",
+                "Is_merged_validity": "other_input_version_ids = Void xor is_merged",
+                "Other_input_version_uids_valid": "other_input_version_uids \/= Void implies not other_input_version_uids.is_empty"
             }
         },
         "REVISION_HISTORY_ITEM": {
@@ -1141,6 +1209,9 @@
                     "is_mandatory": true,
                     "documentation": "The audits for this revision; there will always be at least one commit audit (which may itself be an `ATTESTATION`), there may also be further attestations. "
                 }
+            },
+            "invariants": {
+                "Audit_valid": "not audits.is_empty"
             }
         },
         "AUDIT_DETAILS": {
@@ -1176,6 +1247,10 @@
                     "is_mandatory": true,
                     "documentation": "Identity and optional reference into identity management service, of user who committed the item. "
                 }
+            },
+            "invariants": {
+                "System_id_valid": "not system_id.is_empty",
+                "Change_type_valid": "terminology (Terminology_id_openehr).has_code_for_group_id (Group_id_audit_change_type, change_type.defining_code)"
             }
         },
         "ATTESTATION": {
@@ -1220,6 +1295,10 @@
                     "is_mandatory": true,
                     "documentation": "True if this attestation is outstanding; False means it has been completed."
                 }
+            },
+            "invariants": {
+                "Items_valid": "items \/= Void implies not items.is_empty",
+                "Reason_valid": "(reason.generating_type.is_equal (\u201cDV_CODED_TEXT\u201d) implies terminology (Terminology_id_openehr).has_code_for_group_id (Group_id_attestation_reason, reason.defining_code))"
             }
         },
         "PARTICIPATION": {
@@ -1254,6 +1333,10 @@
                     },
                     "documentation": "The time interval during which the participation took place, if it is used in an observational context (i.e. recording facts about the past); or the intended time interval of the participation when used in future contexts, such as EHR Instructions. "
                 }
+            },
+            "invariants": {
+                "Function_valid": "function.generating_type.is_equal (\"DV_CODED_TEXT\") implies\nterminology (Terminology_id_openehr).has_code_for_group_id (Group_id_participation_function, function.defining_code)",
+                "Mode_valid": "mode \/= Void implies terminology (Terminology_id_openehr).has_code_for_group_id (Group_id_participation_mode, mode.defining_code)"
             }
         },
         "PARTY_PROXY": {
@@ -1293,6 +1376,11 @@
                     },
                     "documentation": "One or more formal identifiers (possibly computable). \n"
                 }
+            },
+            "invariants": {
+                "Basic_validity": "name \/= Void or identifiers \/= Void or external_ref \/= Void",
+                "Name_valid": "name \/= Void implies not name.is_empty",
+                "Identifiers_valid": "identifiers \/= Void implies not identifiers.is_empty"
             }
         },
         "PARTY_SELF": {
@@ -1315,6 +1403,9 @@
                     "is_mandatory": true,
                     "documentation": "Relationship of subject of this ENTRY to the subject of the record. May be coded. If it is the patient, coded as  self. "
                 }
+            },
+            "invariants": {
+                "Relationship_valid": "terminology (Terminology_id_openehr).has_code_for_group_id (Group_id_subject_relationship, relationship.defining_code)"
             }
         },
         "REVISION_HISTORY": {
@@ -1340,6 +1431,9 @@
                 "most_recent_version": {
                     "name": "most_recent_version",
                     "description": "The version id of the most recent item, as a String.",
+                    "post_conditions": {
+                        "Post": "Result.is_equal (items.last.version_id.value)"
+                    },
                     "result": {
                         "type": "String"
                     }
@@ -1347,6 +1441,9 @@
                 "most_recent_version_time_committed": {
                     "name": "most_recent_version_time_committed",
                     "description": "The commit date\/time of the most recent item, as a String. ",
+                    "post_conditions": {
+                        "Post": "Result.is_equal (items.last.audits.first. time_committed.value)"
+                    },
                     "result": {
                         "type": "String"
                     }
@@ -1398,6 +1495,9 @@
                     "type": "ITEM_STRUCTURE",
                     "documentation": "Archetypable meta-data for `FOLDER`."
                 }
+            },
+            "invariants": {
+                "Folders_valid": "not folders.is_empty"
             }
         },
         "AUTHORED_RESOURCE": {
@@ -1443,6 +1543,9 @@
                 "current_revision": {
                     "name": "current_revision",
                     "description": "Most recent revision in `_revision_history_` if `_is_controlled_` else  (uncontrolled) . ",
+                    "post_conditions": {
+                        "Post": "Result = revision_history.most_recent_version"
+                    },
                     "result": {
                         "type": "String"
                     }
@@ -1458,6 +1561,14 @@
                         }
                     }
                 }
+            },
+            "invariants": {
+                "Original_language_valid": "code_set (Code_set_id_languages).has_code (original_language.as_string)",
+                "Languages_available_valid": "languages_available.has (original_language)",
+                "Revision_history_valid": "is_controlled xor revision_history = Void",
+                "Current_revision_valid": "(current_revision \/= Void and not is_controlled) implies current_revision.is_equal (\u201c(uncontrolled)\u201d)",
+                "Translations_valid": "translations \/= Void implies (not translations.is_empty and not translations.has (orginal_language.code_string))",
+                "Description_valid": "translations \/= Void implies (description.details.for_all (d |\ntranslations.has_key (d.language.code_string)))"
             }
         },
         "RESOURCE_DESCRIPTION": {
@@ -1532,6 +1643,13 @@
                     "is_mandatory": true,
                     "documentation": "Details of all parts of resource description that are natural language-dependent, keyed by language code. "
                 }
+            },
+            "invariants": {
+                "Original_author_valid": "not original_author.is_empty",
+                "Lifecycle_state_valid": "not lifecycle_state.is_empty",
+                "Details_valid": "not details.is_empty",
+                "Language_valid": "parent_resource \/= Void implies details.for_all (d | parent_resource.languages_available.has (d.language.code_string))",
+                "Parent_resource_valid": "parent_resource \/= Void implies parent_resource.description = self"
             }
         },
         "TRANSLATION_DETAILS": {
@@ -1574,6 +1692,9 @@
                     },
                     "documentation": "Any other meta-data."
                 }
+            },
+            "invariants": {
+                "Language_valid": "code_set (Code_set_id_languages).has_code (language)"
             }
         },
         "RESOURCE_DESCRIPTION_ITEM": {
@@ -1644,6 +1765,13 @@
                     },
                     "documentation": "Additional language-senstive resource metadata, as a list of name\/value pairs. "
                 }
+            },
+            "invariants": {
+                "Language_valid": "code_set (Code_set_id_languages).has_code (language)",
+                "Purpose_valid": "not purpose.is_empty",
+                "Use_valid": "use \/= Void implies not use.is_empty",
+                "misuse_valid": "misuse \/= Void implies not misuse.is_empty",
+                "copyright_valid": "copyright \/= Void implies not copyright.is_empty"
             }
         },
         "ITEM_TAG": {
@@ -1678,6 +1806,10 @@
                     "is_mandatory": true,
                     "documentation": "Identifier of owner object, such as EHR."
                 }
+            },
+            "invariants": {
+                "Inv_key_valid": "not key.is_empty and key.is_justified",
+                "Inv_value_valid": "value \/= Void implies not value.is_empty"
             }
         },
         "DATA_STRUCTURE": {
@@ -1944,6 +2076,9 @@
                         "type": "CLUSTER"
                     }
                 }
+            },
+            "invariants": {
+                "Valid_structure": "rows.for_all (items.for_all (instance_of (\"ELEMENT\")))"
             }
         },
         "ITEM_LIST": {
@@ -2017,6 +2152,9 @@
                         "type": "CLUSTER"
                     }
                 }
+            },
+            "invariants": {
+                "Valid_structure": " items.forall (i:ITEM | i.type = \"ELEMENT\")"
             }
         },
         "EVENT": {
@@ -2056,10 +2194,17 @@
                 "offset": {
                     "name": "offset",
                     "description": "Offset of this event from origin, computed as time.diff(parent.origin).",
+                    "post_conditions": {
+                        "Post_condition": "Result = time.diff(parent.origin)"
+                    },
                     "result": {
                         "type": "DV_DURATION"
                     }
                 }
+            },
+            "invariants": {
+                "Offset_validity": "",
+                "Offset_validity1": "offset \/= Void and then offset = time.diff (parent.origin)"
             }
         },
         "POINT_EVENT": {
@@ -2112,6 +2257,10 @@
                         "type": "DV_DATE_TIME"
                     }
                 }
+            },
+            "invariants": {
+                "Math_function_validity": "terminology (Terminology_id_openehr).has_code_for_group_id (Group_id_event_math_function, math_function.defining_code)",
+                "Interval_start_time_valid": "interval_start_time = time - width"
             }
         },
         "HISTORY": {
@@ -2174,6 +2323,11 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Events_valid": "(events \/= Void and then not events.is_empty) or summary \/= Void",
+                "Periodic_validity": "is_periodic xor period = Void",
+                "Period_consistency": "is_periodic implies events.for_all (e: EVENT | e.offset. to_seconds.mod(period.to_seconds) = 0)"
             }
         },
         "ITEM": {
@@ -2238,6 +2392,12 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Inv_is_null_valid": "is_null() = (value = Void)",
+                "Inv_null_flavour_indicated": "is_null() xor null_flavour = Void",
+                "Inv_null_flavour_valid": "is_null implies terminology (Terminology_id_openehr).has_code_for_group_id (Group_id_null_flavour, null_flavour.defining_code)",
+                "Inv_null_reason_valid": "null_reason \/= Void implies is_null()"
             }
         },
         "DATA_VALUE": {
@@ -2312,6 +2472,12 @@
                     "type": "String",
                     "documentation": "Optional identifier type, such as  prescription , or  Social Security Number . One day a controlled vocabulary might be possible for this."
                 }
+            },
+            "invariants": {
+                "Issuer_valid": "not issuer.is_empty",
+                "Assigner_valid": "not assigner.is_empty",
+                "Id_valid": "not id.is_empty",
+                "Type_valid": "not type.is_empty"
             }
         },
         "DV_ENCAPSULATED": {
@@ -2332,6 +2498,11 @@
                     "type": "CODE_PHRASE",
                     "documentation": "Optional indicator of the localised language in which the data is written, if relevant. Coded from openEHR Code Set `languages`."
                 }
+            },
+            "invariants": {
+                "Size_valid": "size >= 0",
+                "Language_valid": "language \/= Void implies code_set (Code_set_id_languages).has_code (language)",
+                "Charset_valid": "charset \/= Void implies code_set (Code_set_id_character_sets).has_code (charset)"
             }
         },
         "DV_MULTIMEDIA": {
@@ -2434,6 +2605,14 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Not_empty": "is_inline or is_external",
+                "Media_type_valid": "media_type \/= Void and then code_set (Code_set_id_media_types).has_code (media_type)",
+                "Compression_algorithm_validity": "compression_algorithm \/= Void implies code_set (Code_set_id_compression_algorithms).has_code (compression_algorithm)",
+                "Integrity_check_validity": "integrity_check \/= Void implies integrity_check_algorithm \/= Void",
+                "Integrity_check_algorithm_validity": "integrity_check_algorithm \/= Void implies code_set (Code_set_id_integrity_check_algorithms).has_code (integrity_check_algorithm)",
+                "Size_valid": "size >= 0"
             }
         },
         "DV_PARSABLE": {
@@ -2464,6 +2643,10 @@
                         "type": "Integer"
                     }
                 }
+            },
+            "invariants": {
+                "Formalism_valid": "not formalism.is_empty",
+                "Size_valid": "size >= 0"
             }
         },
         "DV_PARAGRAPH": {
@@ -2487,6 +2670,9 @@
                     "is_mandatory": true,
                     "documentation": "Items making up the paragraph, each of which is a text item (which may have its own formatting, and\/or have hyperlinks). "
                 }
+            },
+            "invariants": {
+                "Items_valid": "not items.is_empty"
             }
         },
         "DV_TEXT": {
@@ -2535,6 +2721,13 @@
                     "type": "CODE_PHRASE",
                     "documentation": "Name of character encoding scheme in which this value is encoded. Coded from openEHR Code Set  character sets . Unicode is the default assumption in openEHR, with UTF-8 being the assumed encoding. This attribute allows for variations from these assumptions. \n"
                 }
+            },
+            "invariants": {
+                "Valid_value": "not value.is_empty",
+                "Language_valid": "language \/= Void implies code_set (Code_set_id_languages).has_code (language)",
+                "Encoding_valid": "encoding \/= Void implies code_set (Code_set_id_character_sets).has_code (encoding)",
+                "Mappings_valid": "mappings \/= void implies not mappings.is_empty",
+                "Formatting_valid": "formatting \/= void implies not formatting.is_empty"
             }
         },
         "DV_CODED_TEXT": {
@@ -2578,6 +2771,9 @@
                 "narrower": {
                     "name": "narrower",
                     "description": "The mapping is to a narrower term.",
+                    "post_conditions": {
+                        "Post": "match = \u2018<\u2019 implies Result"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -2585,6 +2781,9 @@
                 "broader": {
                     "name": "broader",
                     "description": "The mapping is to a broader term.",
+                    "post_conditions": {
+                        "Post": "match = \u2018>\u2019 implies Result"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -2599,6 +2798,9 @@
                 "unknown": {
                     "name": "unknown",
                     "description": "The kind of mapping is unknown.",
+                    "post_conditions": {
+                        "Post": "match = \u2018?\u2019 implies Result"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -2611,10 +2813,17 @@
                             "type": "Character"
                         }
                     },
+                    "post_conditions": {
+                        "Post": "Result := c = \u2018>\u2019 or c = \u2018=\u2019 or c = \u2018<\u2019 or c = \u2018?\u2019"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Purpose_valid": "purpose \/= Void implies terminology (Terminology_id_openehr).has_code_for_group_id (Group_id_term_mapping_purpose, purpose.defining_code)",
+                "Match_valid": "is_valid_match_code (match)"
             }
         },
         "CODE_PHRASE": {
@@ -2638,6 +2847,9 @@
                     "type": "String",
                     "documentation": "Optional attribute to carry preferred term corresponding to the code or expression in `_code_string_`. Typical use in integration situations which create mappings, and representing data for which both a (non-preferred) actual term and a preferred term are both required."
                 }
+            },
+            "invariants": {
+                "Code_string_valid": "not code_string.is_empty"
             }
         },
         "DV_ORDERED": {
@@ -2700,6 +2912,13 @@
                 "is_normal": {
                     "name": "is_normal",
                     "description": "Value is in the normal range, determined by comparison of the value to `_normal_range_` if present, or by the `_normal_status_` marker if present. \n",
+                    "pre_conditions": {
+                        "Pre": "normal_range \/= Void or normal_status \/= Void"
+                    },
+                    "post_conditions": {
+                        "Post_range": "normal_range \/= Void implies Result = normal_range.has (self)",
+                        "Post_status": "normal_status \/= Void implies normal_status.code_string.is_equal (\u201cN\u201d)"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -2716,6 +2935,12 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Other_reference_ranges_validity": "other_reference_ranges \/= Void implies not other_reference_ranges.is_empty",
+                "Is_simple_validity": "(normal_range = Void and other_reference_ranges = Void) implies is_simple",
+                "Normal_status_validity": "normal_status \/= Void implies code_set (Code_set_id_normal_statuses).has_code (normal_status)",
+                "Normal_range_and_status_consistency": "(normal_range \/= Void and normal_status \/= Void) implies (normal_status.code_string.is_equal (\u201cN\u201d) xor not normal_range.has (self))"
             }
         },
         "DV_INTERVAL": {
@@ -2730,6 +2955,9 @@
                     "name": "T",
                     "conforms_to_type": "DV_ORDERED"
                 }
+            },
+            "invariants": {
+                "Limits_consistent": "(not upper_unbounded and not lower_unbounded) implies (lower.is_strictly_comparable_to(upper) and lower <= upper)"
             }
         },
         "REFERENCE_RANGE": {
@@ -2768,6 +2996,9 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Range_is_simple": "(range.lower_unbounded or else range.lower.is_simple) and (range.upper_unbounded or else range.upper.is_simple)"
             }
         },
         "DV_QUANTIFIED": {
@@ -2793,6 +3024,9 @@
                 "valid_magnitude_status": {
                     "name": "valid_magnitude_status",
                     "description": "Test whether a string value is one of the valid values for the magnitude_status attribute. ",
+                    "post_conditions": {
+                        "Post": "Result = s in {\"=\", \"<\", \">\", \"<=\", \">=\", \"~\"}"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -2831,10 +3065,19 @@
                             "type": "DV_QUANTIFIED"
                         }
                     },
+                    "pre_conditions": {
+                        "Pre_comparable": "is_strictly_comparable()"
+                    },
+                    "post_conditions": {
+                        "Post_result": "Result = magnitude < other.magnitude"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Magnitude_status_valid": "magnitude_status \/= Void implies valid_magnitude_status (magnitude_status)"
             }
         },
         "DV_PROPORTION": {
@@ -2970,6 +3213,12 @@
                             "type": "DV_PROPORTION"
                         }
                     },
+                    "pre_conditions": {
+                        "Pre_comparable": "is_strictly_comparable()"
+                    },
+                    "post_conditions": {
+                        "Post_result": "Result = magnitude < other.magnitude"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -2986,6 +3235,15 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Type_validity": "valid_proportion_kind (type)",
+                "Precision_validity": "precision = 0 implies is_integral",
+                "Is_integral_validity": "is_integral implies (numerator.floor = numerator and denominator.floor = denominator)",
+                "Fraction_validity": "(type = pk_fraction or type = pk_integer_fraction) implies is_integral",
+                "Unitary_validity": "type = pk_unitary implies denominator = 1",
+                "Percent_validity": "type = pk_percent implies denominator = 100",
+                "Valid_denominator": "denominator \/= 0.0"
             }
         },
         "PROPORTION_KIND": {
@@ -3078,6 +3336,9 @@
                             "type": "DV_AMOUNT"
                         }
                     },
+                    "pre_conditions": {
+                        "Pre_comparable": "is_strictly_comparable_to (other)"
+                    },
                     "result": {
                         "type": "DV_AMOUNT"
                     }
@@ -3133,10 +3394,20 @@
                             "type": "DV_AMOUNT"
                         }
                     },
+                    "pre_conditions": {
+                        "Pre_comparable": "is_strictly_comparable()"
+                    },
+                    "post_conditions": {
+                        "Post_result": "Result = magnitude < other.magnitude"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Accuracy_is_percent_validity": "accuracy = 0 implies not accuracy_is_percent",
+                "Accuracy_validity": "accuracy_is_percent implies valid_percentage (accuracy)"
             }
         },
         "DV_QUANTITY": {
@@ -3248,6 +3519,12 @@
                         "other": {
                             "type": "DV_QUANTITY"
                         }
+                    },
+                    "pre_conditions": {
+                        "Pre_comparable": "is_strictly_comparable()"
+                    },
+                    "post_conditions": {
+                        "Post_result": "Result = magnitude < other.magnitude"
                     },
                     "result": {
                         "type": "Boolean"
@@ -3362,6 +3639,12 @@
                         "other": {
                             "type": "DV_COUNT"
                         }
+                    },
+                    "pre_conditions": {
+                        "Pre_comparable": "is_strictly_comparable()"
+                    },
+                    "post_conditions": {
+                        "Post_result": "Result = magnitude < other.magnitude"
                     },
                     "result": {
                         "type": "Boolean"
@@ -3479,6 +3762,10 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Limits_valid": "limits.meaning.is_equal (\u201climits\u201d)",
+                "Reference_range_valid": "other_reference_ranges.has (limits)"
             }
         },
         "DV_SCALE": {
@@ -3588,6 +3875,12 @@
                             "type": "DV_DURATION"
                         }
                     },
+                    "pre_conditions": {
+                        "Pre_comparable": "is_strictly_comparable()"
+                    },
+                    "post_conditions": {
+                        "Post_result": "Result = magnitude < other.magnitude"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -3618,6 +3911,9 @@
                         "type": "Double"
                     }
                 }
+            },
+            "invariants": {
+                "Value_valid": "valid_iso8601_duration (value)"
             }
         },
         "DV_TEMPORAL": {
@@ -3752,6 +4048,12 @@
                             "type": "DV_DATE"
                         }
                     },
+                    "pre_conditions": {
+                        "Pre_comparable": "is_strictly_comparable()"
+                    },
+                    "post_conditions": {
+                        "Post_result": "Result = magnitude < other.magnitude"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -3768,6 +4070,9 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Value_valid": "valid_iso8601_date(value)"
             }
         },
         "DV_TIME": {
@@ -3837,6 +4142,12 @@
                             "type": "DV_TIME"
                         }
                     },
+                    "pre_conditions": {
+                        "Pre_comparable": "is_strictly_comparable()"
+                    },
+                    "post_conditions": {
+                        "Post_result": "Result = magnitude < other.magnitude"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -3853,6 +4164,9 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Value_valid": "valid_iso8601_time (value)"
             }
         },
         "DV_DATE_TIME": {
@@ -3922,6 +4236,12 @@
                             "type": "DV_DATE_TIME"
                         }
                     },
+                    "pre_conditions": {
+                        "Pre_comparable": "is_strictly_comparable()"
+                    },
+                    "post_conditions": {
+                        "Post_result": "Result = magnitude < other.magnitude"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -3938,6 +4258,9 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Value_valid": "valid_iso8601_date_time (value)"
             }
         },
         "DV_TIME_SPECIFICATION": {
@@ -4014,6 +4337,9 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Value_valid": "value.formalism.is_equal (\u201cHL7:PIVL\u201d) or value.formalism. is_equal (\u201cHL7:EIVL\u201d)"
             }
         },
         "DV_GENERAL_TIME_SPECIFICATION": {
@@ -4089,6 +4415,9 @@
                         "type": "String"
                     }
                 }
+            },
+            "invariants": {
+                "Value_valid": "not value.is_empty"
             }
         },
         "DV_EHR_URI": {
@@ -4096,7 +4425,10 @@
             "ancestors": [
                 "DV_URI"
             ],
-            "documentation": "A `DV_EHR_URI` is a `DV_URI` which has the scheme name 'ehr', and which can only reference items in EHRs. \n\nUsed to reference items in an EHR, which may be the same as the current EHR (containing this link), or another."
+            "documentation": "A `DV_EHR_URI` is a `DV_URI` which has the scheme name 'ehr', and which can only reference items in EHRs. \n\nUsed to reference items in an EHR, which may be the same as the current EHR (containing this link), or another.",
+            "invariants": {
+                "Scheme_valid": "scheme.is_equal (Ehr_scheme)"
+            }
         },
         "EXTERNAL_ENVIRONMENT_ACCESS": {
             "name": "EXTERNAL_ENVIRONMENT_ACCESS",
@@ -4340,6 +4672,9 @@
                             "type": "String"
                         }
                     },
+                    "pre_conditions": {
+                        "Pre": "has_code_set (name)"
+                    },
                     "result": {
                         "type": "CODE_SET_ACCESS"
                     }
@@ -4351,6 +4686,9 @@
                         "id": {
                             "type": "String"
                         }
+                    },
+                    "pre_conditions": {
+                        "Pre": "valid_code_set_id (id)"
                     },
                     "result": {
                         "type": "CODE_SET_ACCESS"
@@ -4631,6 +4969,15 @@
                     },
                     "documentation": "Optional list of tags associated with this EHR. Tag `_target_` values can only be within the same EHR."
                 }
+            },
+            "invariants": {
+                "Contributions_valid": "for_all c in contributions | c.type.is_equal(\"CONTRIBUTION\")",
+                "Ehr_access_valid": "ehr_access.type.is_equal (\"VERSIONED_EHR_ACCESS\")",
+                "Ehr_status_valid": "ehr_status.type.is_equal(\"VERSIONED_EHR_STATUS\")",
+                "Compositions_valid": "for_all c in compositions | c.type.is_equal (\"VERSIONED_COMPOSITION\")",
+                "Directory_valid": "directory \/= Void implies directory.type.is_equal (\"VERSIONED_FOLDER\")",
+                "Folders_valid": "folders \/= Void implies for_all f in folders | f.type.is_equal(\"VERSIONED_FOLDER\")",
+                "Directory_in_folders": "folders \/= Void implies folders.item(1) = directory"
             }
         },
         "VERSIONED_EHR_ACCESS": {
@@ -4661,6 +5008,10 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Archetype_node_id_valid": "for_all v in all_versions | v.archetype_node_id.is_equal (all_versions.first.archetype_node_id)",
+                "Persistent_validity": "for_all v in all_versions | v.is_persistent = all_versions.first.data.is_persistent"
             }
         },
         "EHR_ACCESS": {
@@ -4684,6 +5035,10 @@
                         "type": "String"
                     }
                 }
+            },
+            "invariants": {
+                "Scheme_valid": "not scheme.is_empty",
+                "Is_archetype_root": "is_archetype_root"
             }
         },
         "EHR_STATUS": {
@@ -4716,6 +5071,9 @@
                     "type": "ITEM_STRUCTURE",
                     "documentation": "Any other details of the EHR summary object, in the form of an archetyped `ITEM_STRUCTURE`."
                 }
+            },
+            "invariants": {
+                "Is_archetype_root": "is_archetype_root"
             }
         },
         "ACCESS_CONTROL_SETTINGS": {
@@ -4784,6 +5142,9 @@
                     },
                     "documentation": "Participations relevant to the creation of this Extract."
                 }
+            },
+            "invariants": {
+                "Sequence_nr_valid": "sequence_nr >= 1"
             }
         },
         "EXTRACT_ACTION_REQUEST": {
@@ -4864,6 +5225,9 @@
                     "type": "Any",
                     "documentation": "Content object."
                 }
+            },
+            "invariants": {
+                "Item_validity": "is_masked xor item \/= Void"
             }
         },
         "EXTRACT_ENTITY_CHAPTER": {
@@ -5028,6 +5392,10 @@
                     "is_mandatory": true,
                     "documentation": "Uid of demographic entity within Extract who performed this participation."
                 }
+            },
+            "invariants": {
+                "Function_valid": "function \/= Void and then function.generating_type.is_equal (\u201cDV_CODED_TEXT\u201d) implies terminology (Terminology_id_openehr).has_code_for_group_id (Group_id_participation_function, function.defining_code)",
+                "Mode_valid": "mode \/= Void and terminology (Terminology_id_openehr).has_code_for_group_id (Group_id_participation_mode, mode.defining_code)"
             }
         },
         "EXTRACT_REQUEST": {
@@ -5149,6 +5517,11 @@
                     "is_mandatory": true,
                     "documentation": "Indicate mode of update. Can be: send only items that are changed (including logical deletions) or new since last send. For `_persist_in_server_` Requests only."
                 }
+            },
+            "invariants": {
+                "Overall_validity": "repeat_period \/= Void or trigger_events \/= Void",
+                "Trigger_events_validity": "trigger_events \/= Void implies not trigger_events.is_empty",
+                "Send_changes_only_validity": "send_changes_only implies persist_in_server"
             }
         },
         "EXTRACT_VERSION_SPEC": {
@@ -5184,6 +5557,9 @@
                     "is_mandatory": true,
                     "documentation": "`True` if the data of items matched by the content spec should be included. This is the default. If `False`, only revision history is included in serialised versions. Turning this option on in openEHR systems causes `X_VERSIONED_OBJECTs` to have `_revision_history_` set, but versions Void. Useful for interrogating a server without having to look at any content data. In other systems it may or may not have a sensible meaning."
                 }
+            },
+            "invariants": {
+                "Includes_revision_history_valid": "not include_data implies include_revision_history"
             }
         },
         "OPENEHR_CONTENT_ITEM": {
@@ -5639,6 +6015,15 @@
                         "type": "DV_TEXT"
                     }
                 }
+            },
+            "invariants": {
+                "Type_valid": "type = name",
+                "Identities_valid": "not identities.is_empty",
+                "Contacts_valid": "contacts \/= Void implies not contacts.is_empty",
+                "Relationships_validity": "relationships \/= Void implies (not relationships.is_empty and then relationships.for_all (r | r.source = self)",
+                "Reverse_relationships_validity": "reverse_relationships \/= Void implies (not reverse_relationships.empty and then reverse_relationships.for_all (item | repository (\"demographics\").all_party_relationships.has_object (item) and then repository(\"demographics\").all_party_relationships.object (item).target = self))",
+                "Is_archetype_root": "is_archetype_root",
+                "Uid_mandatory": "uid \/= Void"
             }
         },
         "CONTACT": {
@@ -5682,6 +6067,9 @@
                         "type": "DV_TEXT"
                     }
                 }
+            },
+            "invariants": {
+                "Purpose_valid": "purpose = name"
             }
         },
         "ADDRESS": {
@@ -5706,6 +6094,9 @@
                         "type": "DV_TEXT"
                     }
                 }
+            },
+            "invariants": {
+                "Type_valid": "type = name"
             }
         },
         "PARTY_IDENTITY": {
@@ -5730,6 +6121,9 @@
                         "type": "DV_TEXT"
                     }
                 }
+            },
+            "invariants": {
+                "Purpose_valid": "purpose = name"
             }
         },
         "ROLE": {
@@ -5769,6 +6163,9 @@
                     },
                     "documentation": "The capabilities of this role."
                 }
+            },
+            "invariants": {
+                "Capabilities_valid": "capabilities \/= Void implies not capabilities.empty"
             }
         },
         "ACTOR": {
@@ -5805,6 +6202,10 @@
                     },
                     "documentation": "Identifiers of the Version container for each Role played by this Party."
                 }
+            },
+            "invariants": {
+                "Roles_valid": "roles \/= Void implies not roles.is_empty",
+                "Legal_identity_exists": "has_legal_identity"
             }
         },
         "CAPABILITY": {
@@ -5905,6 +6306,11 @@
                         "type": "DV_TEXT"
                     }
                 }
+            },
+            "invariants": {
+                "Source_valid": "source \/= Void and then source.relationships.has (self)",
+                "Target_valid": "target \/= Void and then not target.reverse_relationships.has (self)",
+                "Type_validity": "type = name"
             }
         },
         "VERSIONED_PARTY": {
@@ -5987,6 +6393,17 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Setting_valid": "",
+                "unnamed2": "",
+                "unnamed3": "Terminology (Terminology_id_openehr).has_code_for_group_id (Group_id_setting, setting.defining_code)",
+                "Category_validity": "terminology (Terminology_id_openehr).has_code_for_group_id (Group_id_composition_category, category.defining_code)",
+                "Is_persistent_validity": "is_persistent implies context = Void",
+                "Territory_valid": "code_set(Code_set_id_countries).has_code(territory)",
+                "Language_valid": "code_set(Code_set_id_languages).has_code(language)",
+                "Content_valid": "content \/= Void implies not content.is_empty",
+                "Is_archetype_root": "is_archetype_root"
             }
         },
         "EVENT_CONTEXT": {
@@ -6041,6 +6458,11 @@
                     },
                     "documentation": "Parties involved in the healthcare event. These would normally include the physician(s) and often the patient (but not the latter if the clinical session is a pathology test for example). "
                 }
+            },
+            "invariants": {
+                "Setting_valid": "Terminology (Terminology_id_openehr).has_code_for_group_id (Group_id_setting, setting.defining_code)",
+                "Participations_validity": "participations \/= Void implies not participations.is_empty",
+                "location_valid": "location \/= Void implies not location.is_empty"
             }
         },
         "CONTENT_ITEM": {
@@ -6071,6 +6493,9 @@
                     },
                     "documentation": "Ordered list of content items under this section, which may include:\n\n* more `SECTIONs`;\n* `ENTRYs`."
                 }
+            },
+            "invariants": {
+                "Items_valid": "items \/= Void implies not items.is_empty"
             }
         },
         "ADMIN_ENTRY": {
@@ -6211,6 +6636,9 @@
                     "is_mandatory": true,
                     "documentation": "Description of the activity, in the form of an archetyped structure."
                 }
+            },
+            "invariants": {
+                "Action_archetype_id_valid": "not action_archetype_id.is_empty"
             }
         },
         "ISM_TRANSITION": {
@@ -6249,6 +6677,10 @@
                     },
                     "documentation": "Optional possibility of adding one or more reasons for this careflow step having been taken. Multiple reasons may occur in medication management for example."
                 }
+            },
+            "invariants": {
+                "Current_state_valid": "terminology (Terminology_id_openehr).has_code_for_group_id (Group_id_instruction_states, current_state.defining_code)",
+                "Transition_valid": "transition \/= Void implies terminology (Terminology_id_openehr).\nhas_code_for_group_id (Group_id_instruction_transitions, transition.defining_code)"
             }
         },
         "INSTRUCTION_DETAILS": {
@@ -6275,6 +6707,9 @@
                     "type": "ITEM_STRUCTURE",
                     "documentation": "Various workflow engine state details, potentially including such things as:\n\n* condition that fired to cause this Action to be done (with actual variables substituted); \n* list of notifications which actually occurred (with all variables substituted); \n* other workflow engine state. \n\nThis specification does not currently define the actual structure or semantics of this field. \n"
                 }
+            },
+            "invariants": {
+                "Activity_path_valid": "not activity_id.is_empty"
             }
         },
         "ENTRY": {
@@ -6331,10 +6766,20 @@
                 "subject_is_self": {
                     "name": "subject_is_self",
                     "description": "Returns True if this Entry is about the subject of the EHR, in which case the subject attribute is of type PARTY_SELF.",
+                    "post_conditions": {
+                        "Post_condition": "Result implies subject.generating_type = \u201cPARTY_SELF\u201d"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Language_valid": "code_set (Code_set_id_languages).has_code (language)",
+                "Encoding_valid": "code_set (Code_set_id_character_sets).has_code (encoding)",
+                "Subject_validity": "subject_is_self implies subject.generating_type = \u201cPARTY_SELF\u201d",
+                "Other_participations_valid": "other_participations \/= Void implies not other_participations.is_empty",
+                "Is_archetype_root": "is_archetype_root"
             }
         },
         "INSTRUCTION": {
@@ -6373,6 +6818,9 @@
                     },
                     "documentation": "List of all activities in Instruction. \n"
                 }
+            },
+            "invariants": {
+                "Activities_valid": "activities \/= Void implies not activities.is_empty"
             }
         }
     }

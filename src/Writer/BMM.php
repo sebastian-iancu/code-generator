@@ -5,6 +5,7 @@ namespace OpenEHR\Tools\CodeGen\Writer;
 use JsonException;
 use OpenEHR\Tools\CodeGen\Helper\Collection;
 use OpenEHR\Tools\CodeGen\Model\UMLClass;
+use OpenEHR\Tools\CodeGen\Model\UMLConstraint;
 use OpenEHR\Tools\CodeGen\Model\UMLEnumeration;
 use OpenEHR\Tools\CodeGen\Model\UMLFile;
 use OpenEHR\Tools\CodeGen\Model\UMLOperation;
@@ -190,6 +191,10 @@ class BMM extends AbstractWriter
             foreach ($umlClass->umlOperations as $umlOperation) {
                 $bmmClass['functions'][$umlOperation->name] = self::asBmmFunction($umlOperation, $umlClass, $collectedUmlClasses);
             }
+            /** @var UMLConstraint $umlConstraint */
+            foreach ($umlClass->umlConstraints as $umlConstraint) {
+                $bmmClass['invariants'][$umlConstraint->name] = $umlConstraint->rule;
+            }
         }
         if ($umlClass instanceof UMLEnumeration) {
             $bmmClass['_type'] = 'P_BMM_ENUMERATION_STRING';
@@ -225,6 +230,14 @@ class BMM extends AbstractWriter
         /** @var UMLParameter $umlParameter */
         foreach ($umlOperation->umlParameters as $umlParameter) {
             $bmmFunction['parameters'][$umlParameter->name] = self::asType($umlParameter->type->name, $umlParameter->maxOccurs, $umlClass, $collectedUmlClasses);
+        }
+        /** @var UMLConstraint $umlConstraint */
+        foreach ($umlOperation->umlConstraints as $umlConstraint) {
+            if (str_starts_with(strtolower($umlConstraint->name), 'pre')) {
+                $bmmFunction['pre_conditions'][$umlConstraint->name] = $umlConstraint->rule;
+            } else {
+                $bmmFunction['post_conditions'][$umlConstraint->name] = $umlConstraint->rule;
+            }
         }
         $bmmFunction['result'] = self::asType($umlOperation->return->name, $umlOperation->maxOccurs, $umlClass, $collectedUmlClasses);
         return $bmmFunction;

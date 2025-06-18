@@ -210,6 +210,9 @@
                 "concept_code": {
                     "name": "concept_code",
                     "description": "The concept code of the root object of the archetype, also standing for the concept of the archetype as a whole.",
+                    "post_conditions": {
+                        "post-condition": "Result.is_equal (definition.node_id)"
+                    },
                     "result": {
                         "type": "String"
                     }
@@ -244,6 +247,9 @@
                 "specialisation_depth": {
                     "name": "specialisation_depth",
                     "description": "Specialisation depth of this archetype; larger than 0 if this archetype has a parent. Derived from terminology.specialisation_depth.",
+                    "post_conditions": {
+                        "post-condition": "Result = terminology.specialisation_depth"
+                    },
                     "result": {
                         "type": "Integer"
                     }
@@ -251,10 +257,17 @@
                 "is_specialised": {
                     "name": "is_specialised",
                     "description": "True if this archetype is a specialisation of another. ",
+                    "post_conditions": {
+                        "post-condition": "Result implies parent_archetype_hrid \/= Void"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Invariant_concept_valid": "terminology.has_term_code (concept_code)",
+                "Invariant_specialisation_validity": "is_specialised implies specialisation_depth > 0"
             }
         },
         "AUTHORED_ARCHETYPE": {
@@ -301,6 +314,11 @@
                     "is_mandatory": true,
                     "documentation": ""
                 }
+            },
+            "invariants": {
+                "Invariant_adl_version_validity": "valid_version_id (adl_version)",
+                "Invariant_rm_release": "valid_version_id (rm_release)",
+                "Description_validity": "description \/= Void"
             }
         },
         "TEMPLATE": {
@@ -323,6 +341,9 @@
                     },
                     "documentation": "Overlay archetypes, i.e. partial archetypes that include full definition and terminology, but logically derive all their meta-data from from the owning template."
                 }
+            },
+            "invariants": {
+                "Inv_is_specialised": "is_specialised"
             }
         },
         "OPERATIONAL_TEMPLATE": {
@@ -366,10 +387,16 @@
                             "type": "String"
                         }
                     },
+                    "post_conditions": {
+                        "Inv_is_specialised": "is_specialised"
+                    },
                     "result": {
                         "type": "ARCHETYPE_TERMINOLOGY"
                     }
                 }
+            },
+            "invariants": {
+                "Specialisation_validity": "is_specialised"
             }
         },
         "TEMPLATE_OVERLAY": {
@@ -377,7 +404,10 @@
             "ancestors": [
                 "ARCHETYPE"
             ],
-            "documentation": "A concrete form of the bare `ARCHETYPE` class, used to represent overlays in a source template. Overlays have no meta-data of their own, and are instead documented by their owning template."
+            "documentation": "A concrete form of the bare `ARCHETYPE` class, used to represent overlays in a source template. Overlays have no meta-data of their own, and are instead documented by their owning template.",
+            "invariants": {
+                "Inv_is_specialised": "is_specialised"
+            }
         },
         "ARCHETYPE_HRID": {
             "name": "ARCHETYPE_HRID",
@@ -474,6 +504,13 @@
                         "type": "String"
                     }
                 }
+            },
+            "invariants": {
+                "Inv_rm_publisher_validity": "not rm_publisher.is_empty",
+                "Inv_rm_package_validity": "not rm_package.is_empty",
+                "Inv_class_name_validity": "not rm_class.is_empty",
+                "Inv_concept_id_validity": "not concept_id.is_empty",
+                "Inv_release_version_validity": "valid_version (release_version)"
             }
         },
         "ARCHETYPE_CONSTRAINT": {
@@ -556,6 +593,9 @@
                 "is_second_order_constrained": {
                     "name": "is_second_order_constrained",
                     "description": "True if there is a second order constraint such as a tuple constraint on this node.",
+                    "post_conditions": {
+                        "Post": "soc_parent \/= Void or else (parent \/= Void and then parent.is_second_order_constrained)"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -574,6 +614,9 @@
                         "type": "Boolean"
                     }
                 }
+            },
+            "invariants": {
+                "Post": "Result = soc_parent \/= Void or parent.soc_parent \/= Void"
             }
         },
         "C_OBJECT": {
@@ -678,6 +721,9 @@
                             "type": "C_OBJECT"
                         }
                     },
+                    "post_conditions": {
+                        "Post": "Result = codes_conformant (node_id, other.node_id)"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -685,6 +731,9 @@
                 "is_prohibited": {
                     "name": "is_prohibited",
                     "description": "True if this `C_OBJECT` node is prohibited, i.e. if its occurrences is 0..0.",
+                    "post_conditions": {
+                        "Post": "Result = occurrences \/= Void and then occurrences.is_prohibited"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -743,6 +792,9 @@
                 "any_allowed": {
                     "name": "any_allowed",
                     "description": "True if there is no effective constraint on the children of the RM attribute to which this `C_ATTRIBUTE` refers.",
+                    "post_conditions": {
+                        "Post": "Result := children.is_empty and not is_prohibited"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -750,6 +802,9 @@
                 "is_mandatory": {
                     "name": "is_mandatory",
                     "description": "True if this `C_ATTRIBUTE` has an existence constraint of 1..1, i..e. mandation.",
+                    "post_conditions": {
+                        "Post": "Result = existence \/= Void and then existence.is_mandatory"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -776,6 +831,9 @@
                             "type": "ARCHETYPE_CONSTRAINT"
                         }
                     },
+                    "post_conditions": {
+                        "Post": "Result = existence = Void and ((is_single and other.is_single) or (is_multiple and other.is_multiple and cardinality = Void))"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -795,6 +853,9 @@
                             }
                         }
                     },
+                    "post_conditions": {
+                        "Post": "Result = existence_conforms_to (other) and ((is_single and other.is_single) or else (is_multiple and cardinality_conforms_to (other)))"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -802,6 +863,9 @@
                 "is_prohibited": {
                     "name": "is_prohibited",
                     "description": "True if this `C_ATTRIBUTE` has an existence constraint of 0..0, i.e. prohibition.",
+                    "post_conditions": {
+                        "Post": "Result = existence \/= Void and then existence.is_prohibited"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -876,6 +940,9 @@
                 "use_target_occurrences": {
                     "name": "use_target_occurrences",
                     "description": "True if target occurrences are to be used as the value of occurrences in this object; by the time of runtime use, the target occurrences value has to be set into this object.",
+                    "post_conditions": {
+                        "Post": "Result = (occurrences = Void)"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -1284,6 +1351,9 @@
                 "any_allowed": {
                     "name": "any_allowed",
                     "description": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
+                    "post_conditions": {
+                        "Post": "Result = attributes.is_empty and not is_prohibited"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -1542,6 +1612,9 @@
                             "type": "String"
                         }
                     },
+                    "pre_conditions": {
+                        "Pre": "has_term-definition (a_lang, a_code)"
+                    },
                     "result": {
                         "type": "ARCHETYPE_TERM"
                     }
@@ -1556,6 +1629,9 @@
                         "a_code": {
                             "type": "String"
                         }
+                    },
+                    "pre_conditions": {
+                        "Pre": "has_term_binding (a_terminology_id, a_code)"
                     },
                     "result": {
                         "type": "Uri"
@@ -1582,6 +1658,9 @@
                         "a_code": {
                             "type": "String"
                         }
+                    },
+                    "pre_conditions": {
+                        "Pre": "has_terminology_extract (a_terminology_id) and has_terminology_extract_code (a_code)"
                     },
                     "result": {
                         "type": "ARCHETYPE_TERM"
@@ -1610,6 +1689,12 @@
                         }
                     }
                 }
+            },
+            "invariants": {
+                "Original_language_validity": "code_set (Code_set_id_languages).has_concept_id (original_language)",
+                "concept_code_validity": "id_codes.has (concept_code)",
+                "Term_bindings_validity": "bindings \/= void implies not bindings.is_empty",
+                "Parent_archetype_valid": "parent_archetype.terminology = Current"
             }
         },
         "C_BOOLEAN": {
@@ -1655,6 +1740,9 @@
                 "any_allowed": {
                     "name": "any_allowed",
                     "description": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
+                    "post_conditions": {
+                        "Post": "Result = constraint.is_empty"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -1740,6 +1828,9 @@
                 "any_allowed": {
                     "name": "any_allowed",
                     "description": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
+                    "post_conditions": {
+                        "Post": "Result = constraint.is_empty or else constraint.count = 1 and constraint.first.is_equal (Regex_any_string)"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -1858,6 +1949,9 @@
                 "any_allowed": {
                     "name": "any_allowed",
                     "description": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
+                    "post_conditions": {
+                        "Post": "Result = constraint.is_empty"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -1969,6 +2063,9 @@
                 "any_allowed": {
                     "name": "any_allowed",
                     "description": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
+                    "post_conditions": {
+                        "Post": "Result := constraint.is_empty"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -2049,6 +2146,9 @@
                 "any_allowed": {
                     "name": "any_allowed",
                     "description": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
+                    "post_conditions": {
+                        "Post": "Result = precursor and pattern_constraint.is_empty"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -2135,6 +2235,9 @@
                         "type": "VALIDITY_KIND"
                     }
                 }
+            },
+            "invariants": {
+                "Pattern_validity": "pattern \/= Void implies valid_iso8601_time_constraint_pattern (pattern)"
             }
         },
         "C_DATE": {
@@ -2182,10 +2285,16 @@
                 "timezone_validity": {
                     "name": "timezone_validity",
                     "description": "Validity of timezone in constrained date.",
+                    "post_conditions": {
+                        "": ""
+                    },
                     "result": {
                         "type": "VALIDITY_KIND"
                     }
                 }
+            },
+            "invariants": {
+                "Pattern_validity": "pattern \/= Void implies valid_iso8601_date_constraint_pattern(pattern)"
             }
         },
         "C_DATE_TIME": {
@@ -2233,6 +2342,9 @@
                 "timezone_validity": {
                     "name": "timezone_validity",
                     "description": "Validity of timezone in constrained date.",
+                    "post_conditions": {
+                        "": ""
+                    },
                     "result": {
                         "type": "VALIDITY_KIND"
                     }
@@ -2258,6 +2370,9 @@
                         "type": "VALIDITY_KIND"
                     }
                 }
+            },
+            "invariants": {
+                "Pattern_validity": "pattern \/= Void implies valid_iso8601_date_time_constraint_pattern(pattern)"
             }
         },
         "C_DURATION": {
@@ -2410,6 +2525,9 @@
                             "type": "String"
                         }
                     },
+                    "post_conditions": {
+                        "Post": "Result = is_id_code (a_code) or else is_value_code (a_code) or else is_value_set_code (a_code)"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -2421,6 +2539,9 @@
                         "a_code": {
                             "type": "String"
                         }
+                    },
+                    "post_conditions": {
+                        "Post": "Result = a_code.starts_with (Id_code_leader)"
                     },
                     "result": {
                         "type": "Boolean"
@@ -2434,6 +2555,9 @@
                             "type": "String"
                         }
                     },
+                    "post_conditions": {
+                        "Post": "Result = a_code.starts_with (Value_code_leader)"
+                    },
                     "result": {
                         "type": "Boolean"
                     }
@@ -2445,6 +2569,9 @@
                         "a_code": {
                             "type": "String"
                         }
+                    },
+                    "post_conditions": {
+                        "Post": "Result = a_code.starts_with (Value_set_code_leader)"
                     },
                     "result": {
                         "type": "Boolean"
@@ -2493,6 +2620,9 @@
                     "type": "Terminology_code",
                     "documentation": "Optional alias for the attribute referenced by the path."
                 }
+            },
+            "invariants": {
+                "Inv_alias_validity": "alias \/= Void implies visibility \/= Void"
             }
         },
         "RM_OVERLAY": {
