@@ -6,7 +6,7 @@
     "schema_revision": "1.1.0.1",
     "schema_lifecycle_state": "stable",
     "schema_description": "openEHR base types.",
-    "schema_author": "xmi-code-generator",
+    "schema_author": "code-generator",
     "packages": {
         "org.openehr.base.base_types": {
             "name": "org.openehr.base.base_types",

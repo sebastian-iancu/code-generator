@@ -1,6 +1,6 @@
 {
-    "name": "sebastian-iancu/xmi-code-generator",
-    "description": "XMI Code Generator for openEHR UML files",
+    "name": "sebastian-iancu/code-generator",
+    "description": "Code Generator based on openEHR type specifications",
     "license": "Apache-2.0",
     "type": "project",
     "require": {

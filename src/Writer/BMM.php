@@ -18,7 +18,7 @@ class BMM extends AbstractWriter
 {
 
     public const string REVISION = '1';
-    public const string AUTHOR = 'xmi-code-generator';
+    public const string AUTHOR = 'code-generator';
 
     public const array SKIP_PACKAGES = ['functional', 'builtins'];
 

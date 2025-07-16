@@ -6,7 +6,7 @@
     "schema_revision": "AM-development.1",
     "schema_lifecycle_state": "stable",
     "schema_description": "openEHR Archetype Model",
-    "schema_author": "xmi-code-generator",
+    "schema_author": "code-generator",
     "packages": {
         "org.openehr.am.aom2": {
             "name": "org.openehr.am.aom2",

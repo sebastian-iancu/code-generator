@@ -1,5 +1,5 @@
 # Introduction
-XMI Code Generator
+Code Generator based on openEHR type specifications
 
 This is console application made in PHP to generate code (types, modesl, etc.) using on openEHR XMI files as input. 
 It can generate followings: 

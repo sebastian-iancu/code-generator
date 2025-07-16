@@ -6,7 +6,7 @@
     "schema_revision": "RM-development.1",
     "schema_lifecycle_state": "stable",
     "schema_description": "openEHR Reference Model",
-    "schema_author": "xmi-code-generator",
+    "schema_author": "code-generator",
     "packages": {
         "org.openehr.rm.common": {
             "name": "org.openehr.rm.common",
