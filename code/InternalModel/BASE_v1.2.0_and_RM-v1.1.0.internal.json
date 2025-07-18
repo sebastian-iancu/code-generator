@@ -1,5 +1,5 @@
 {
-    "umlFiles": {
+    "files": {
         "__aliases": {
             "BASE-v1.2.0.xmi": "BASE",
             "_18_1_83e026d_1422974208201_356900_31408": "BASE",
@@ -31349,6 +31349,5 @@
                 "umlClasses": []
             }
         }
-    },
-    "readerDir": "\/opt\/project\/schemas"
+    }
 }
