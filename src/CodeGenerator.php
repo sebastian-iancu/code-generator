@@ -2,17 +2,17 @@
 
 namespace OpenEHR\Tools\CodeGen;
 
+use OpenEHR\Tools\CodeGen\Reader\AbstractReader;
 use OpenEHR\Tools\CodeGen\Writer\AbstractWriter;
 
-class WriteManager
+class CodeGenerator
 {
 
     /** @var AbstractWriter[] */
-    protected array $writers;
+    protected array $writers = [];
 
     public function __construct(
-        protected readonly ReadManager $reader,
-        public readonly string         $writerDir = __WRITER_DIR__,
+        protected readonly AbstractReader $reader,
     )
     {
     }
@@ -20,11 +20,11 @@ class WriteManager
     public function addWriter(AbstractWriter $writer): void
     {
         $writer->setReader($this->reader);
-        $writer->setDir($this->writerDir);
+        $writer->assureOutputDir();
         $this->writers[] = $writer;
     }
 
-    public function write(): void
+    public function generate(): void
     {
         foreach ($this->writers as $writer) {
             $writer->write();

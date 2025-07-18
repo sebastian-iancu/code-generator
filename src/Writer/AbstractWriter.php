@@ -3,7 +3,7 @@
 namespace OpenEHR\Tools\CodeGen\Writer;
 
 use OpenEHR\Tools\CodeGen\Helper\ConsoleTrait;
-use OpenEHR\Tools\CodeGen\ReadManager;
+use OpenEHR\Tools\CodeGen\Reader\AbstractReader;
 use RuntimeException;
 
 abstract class AbstractWriter
@@ -11,20 +11,29 @@ abstract class AbstractWriter
 
     use ConsoleTrait;
 
-    protected string $dir;
-    protected ReadManager $reader;
+    public const string DIR = __WRITER_DIR__ . DIRECTORY_SEPARATOR;
 
-    public function setDir(string $dir): void
-    {
-        if (!is_dir($dir) && !mkdir($dir, 0777, true) && !is_dir($dir)) {
-            throw new RuntimeException(sprintf('Directory "%s" was not created', $dir));
-        }
-        $this->dir = realpath($dir) ?: $dir;
-    }
+    protected AbstractReader $reader;
 
-    public function setReader(ReadManager $reader): void
+    public function setReader(AbstractReader $reader): void
     {
         $this->reader = $reader;
+    }
+
+    public function assureOutputDir(): void
+    {
+        if (!is_dir(static::DIR)) {
+            if (is_file(static::DIR) || is_link(static::DIR)) {
+                throw new RuntimeException(sprintf('The "%s" already exists but is not a directory.', static::DIR));
+            }
+            if (!@mkdir(static::DIR, 0777, true) && !is_dir(static::DIR)) {
+                throw new RuntimeException(sprintf('Directory "%s" does not exist and cannot be created.', static::DIR));
+            }
+        }
+        if (!is_writable(static::DIR)) {
+            throw new RuntimeException(sprintf('Directory "%s" is not writable.', static::DIR));
+
+        }
     }
 
     abstract public function write(): void;

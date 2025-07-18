@@ -14,8 +14,8 @@ class UMLOperation extends AbstractItem
     public readonly Collection $umlParameters;
     public readonly Collection $umlConstraints;
     public readonly TypeReference $return;
-    public readonly int $minOccurs;
-    public readonly int $maxOccurs;
+    public readonly ?int $minOccurs;
+    public readonly ?int $maxOccurs;
 
     public function __construct(SimpleXMLElement $xmlNode)
     {
@@ -44,6 +44,8 @@ class UMLOperation extends AbstractItem
             $this->maxOccurs = $returnParameter->maxOccurs;
         } else {
             $this->return = new TypeReference(null, 'void');
+            $this->minOccurs = null;
+            $this->maxOccurs = null;
         }
 
         self::log('  Operation [%s], with [%s] parameters was read.', $this->name, count($this->umlParameters));

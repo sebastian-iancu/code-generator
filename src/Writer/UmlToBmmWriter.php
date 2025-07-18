@@ -14,8 +14,10 @@ use OpenEHR\Tools\CodeGen\Model\UMLParameter;
 use OpenEHR\Tools\CodeGen\Model\UMLProperty;
 use OpenEHR\Tools\CodeGen\Model\UMLTemplateParameter;
 
-class BMM extends AbstractWriter
+class UmlToBmmWriter extends AbstractWriter
 {
+
+    public const string DIR = __WRITER_DIR__ . DIRECTORY_SEPARATOR . 'BMM' . DIRECTORY_SEPARATOR;
 
     public const string REVISION = '1';
     public const string AUTHOR = 'code-generator';
@@ -59,16 +61,6 @@ class BMM extends AbstractWriter
         'Hash',
     ];
 
-    public function __construct()
-    {
-    }
-
-    public function setDir(string $dir): void
-    {
-        $dir .= DIRECTORY_SEPARATOR . 'BMM';
-        parent::setDir($dir);
-    }
-
 
     /**
      * @throws JsonException
@@ -76,7 +68,7 @@ class BMM extends AbstractWriter
     public function write(): void
     {
         /** @var UMLFile $umlFile */
-        foreach ($this->reader->umlFiles as $umlFile) {
+        foreach ($this->reader->files as $umlFile) {
             $schema_name = strtolower($umlFile->name);
             self::log('generating to [%s] schema.', $schema_name);
             $schema = [
@@ -110,8 +102,8 @@ class BMM extends AbstractWriter
                     $schema['class_definitions'][$umlClass->name] = self::asBmmClass($umlClass, $collectedUmlClasses);
                 }
             }
-            // saving as file
-            $filename = $this->dir . DIRECTORY_SEPARATOR . str_replace('.xmi', '', $umlFile->id) . '.bmm.json';
+            // saving as a file
+            $filename = self::DIR . str_replace('.xmi', '', $umlFile->id) . '.bmm.json';
             $content = json_encode($schema, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT) . PHP_EOL;
             $bytes = file_put_contents($filename, $content);
             self::log('  Wrote %s bytes to %s file.', $bytes, $filename);

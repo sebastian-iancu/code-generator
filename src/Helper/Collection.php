@@ -20,7 +20,7 @@ class Collection extends ArrayObject implements JsonSerializable
     {
         $key = $item->name;
         $this->offsetSet($key, $item);
-        $alias ??= $item->id ?? null;
+        $this->aliases[$item->id] = $key;
         if ($alias) {
             $this->aliases[$alias] = $key;
         }

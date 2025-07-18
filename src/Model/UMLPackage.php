@@ -66,7 +66,7 @@ class UMLPackage extends AbstractItem
     {
         self::log('Searching for [%s] in [%s](%s)...', $prefix, $this->id, $this->name);
         if ($prefix === '*' || $prefix === '') {
-            /** @var UMLPackage|null $umlPackage */
+            /** @var UMLPackage $umlPackage */
             foreach ($this->umlPackages as $umlPackage) {
                 yield $umlPackage;
             }
