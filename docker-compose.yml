@@ -1,9 +1,12 @@
 services:
-    php:
-        build:
-            dockerfile: php.Dockerfile
-            context: .
-        volumes:
-            - .:/opt/project
-        tty: true
-        user: 1000:1000
+  php:
+    build:
+      dockerfile: php.Dockerfile
+      context: .
+    volumes:
+      - .:/opt/project
+    tty: true
+    environment:
+      READER_DIR: /opt/project/code
+      WRITER_DIR: /opt/project/code
+    user: 1000:1000

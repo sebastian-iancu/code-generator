@@ -8,7 +8,7 @@ It can generate followings:
 
 ## Structure
 The main source code located ub `/src`.
-XMI schema files need to be placed in `/schema`.
+XMI schema files need to be placed in `/code/XMI`.
 The output code is generated under `/code`.
 The code-generator is a Symfony Console application defined in `/bin/generate`.
 
