@@ -3,7 +3,7 @@
 namespace OpenEHR\Tools\CodeGen\Writer;
 
 use JsonException;
-use OpenEHR\Tools\CodeGen\Model\AbstractItem;
+use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
 
 class InternalModel extends AbstractWriter
 {
@@ -22,7 +22,7 @@ class InternalModel extends AbstractWriter
      */
     public function write(): void
     {
-        $filename = $this->filename ?: implode('_and_', array_map(function (AbstractItem $UMLFile) {
+        $filename = $this->filename ?: implode('_and_', array_map(function (CollectableInterface $UMLFile) {
             return $UMLFile->name;
         }, $this->reader->files->getArrayCopy()));
         $filename = self::DIR . $filename . '.internal.json';

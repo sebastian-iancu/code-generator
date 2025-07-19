@@ -1,14 +1,12 @@
 <?php
-/** @noinspection PhpMultipleClassDeclarationsInspection */
 
-namespace OpenEHR\Tools\CodeGen\Helper;
+namespace OpenEHR\Tools\CodeGen\Model;
 
 use ArrayObject;
 use JsonSerializable;
-use OpenEHR\Tools\CodeGen\Model\AbstractItem;
 
 /**
- * @template-extends ArrayObject<string, AbstractItem>
+ * @template-extends ArrayObject<string, CollectableInterface>
  */
 class Collection extends ArrayObject implements JsonSerializable
 {
@@ -16,17 +14,19 @@ class Collection extends ArrayObject implements JsonSerializable
     /** @var array<string, string> */
     public array $aliases = [];
 
-    public function add(AbstractItem $item, ?string $alias = null): void
+    public function add(CollectableInterface $item, ?string $additionalAlias = null): void
     {
-        $key = $item->name;
+        $key = $item->getName() ?: get_class($item);
         $this->offsetSet($key, $item);
-        $this->aliases[$item->id] = $key;
-        if ($alias) {
-            $this->aliases[$alias] = $key;
+        if ($item->getAlias()) {
+            $this->aliases[$item->getAlias()] = $key;
+        }
+        if ($additionalAlias) {
+            $this->aliases[$additionalAlias] = $key;
         }
     }
 
-    public function get(string $key): ?AbstractItem
+    public function get(string $key): ?CollectableInterface
     {
         $key = $this->aliases[$key] ?? $key;
         return $this->offsetGet($key) ?: null;

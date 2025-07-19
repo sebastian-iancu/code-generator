@@ -2,8 +2,8 @@
 
 namespace OpenEHR\Tools\CodeGen\Reader;
 
-use OpenEHR\Tools\CodeGen\Helper\Collection;
 use OpenEHR\Tools\CodeGen\Helper\ConsoleTrait;
+use OpenEHR\Tools\CodeGen\Model\Collection;
 
 abstract class AbstractReader
 {

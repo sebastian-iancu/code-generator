@@ -2,12 +2,16 @@
 
 namespace OpenEHR\Tools\CodeGen\Model\Uml;
 
-use OpenEHR\Tools\CodeGen\Model\AbstractItem;
+use OpenEHR\Tools\CodeGen\Helper\ConsoleTrait;
+use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
 use RuntimeException;
 use SimpleXMLElement;
 
-class UmlFile extends AbstractItem
+class UmlFile implements CollectableInterface
 {
+
+    use CollectableTrait;
+    use ConsoleTrait;
 
     public readonly string $id;
     public readonly string $name;

@@ -3,7 +3,7 @@
 namespace OpenEHR\Tools\CodeGen\Writer;
 
 use JsonException;
-use OpenEHR\Tools\CodeGen\Helper\Collection;
+use OpenEHR\Tools\CodeGen\Model\Collection;
 use OpenEHR\Tools\CodeGen\Model\Uml\UmlClass;
 use OpenEHR\Tools\CodeGen\Model\Uml\UmlConstraint;
 use OpenEHR\Tools\CodeGen\Model\Uml\UmlEnumeration;
