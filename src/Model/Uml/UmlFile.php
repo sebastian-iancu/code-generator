@@ -1,16 +1,17 @@
 <?php
 
-namespace OpenEHR\Tools\CodeGen\Model;
+namespace OpenEHR\Tools\CodeGen\Model\Uml;
 
+use OpenEHR\Tools\CodeGen\Model\AbstractItem;
 use RuntimeException;
 use SimpleXMLElement;
 
-class UMLFile extends AbstractItem
+class UmlFile extends AbstractItem
 {
 
     public readonly string $id;
     public readonly string $name;
-    public readonly UMLPackage $umlPackage;
+    public readonly UmlPackage $umlPackage;
 
     public function __construct(SimpleXMLElement $xmlNode, string $id)
     {
@@ -22,7 +23,7 @@ class UMLFile extends AbstractItem
         if (count($nodes) > 1) {
             self::log("WARNING: Found more then one UML Package in the $this->id file. This will only process the first one");
         }
-        $this->umlPackage = new UMLPackage($nodes[0]);
+        $this->umlPackage = new UmlPackage($nodes[0]);
         $this->name = $this->umlPackage->name;
     }
 

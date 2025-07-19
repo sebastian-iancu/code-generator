@@ -1,12 +1,13 @@
 <?php
 
-namespace OpenEHR\Tools\CodeGen\Model;
+namespace OpenEHR\Tools\CodeGen\Model\Uml;
 
 use Generator;
 use OpenEHR\Tools\CodeGen\Helper\Collection;
+use OpenEHR\Tools\CodeGen\Model\AbstractItem;
 use SimpleXMLElement;
 
-class UMLPackage extends AbstractItem
+class UmlPackage extends AbstractItem
 {
 
     public readonly string $id;
@@ -31,7 +32,7 @@ class UMLPackage extends AbstractItem
         ]);
         $nodes = $xmlNode->xpath("packagedElement[$predicates]") ?: [];
         foreach ($nodes as $umlPackageNode) {
-            $umlPackage = new UMLPackage($umlPackageNode);
+            $umlPackage = new UmlPackage($umlPackageNode);
             $this->umlPackages->add($umlPackage);
         }
         // collecting all classes
@@ -45,17 +46,17 @@ class UMLPackage extends AbstractItem
         ]);
         $nodes = $xmlNode->xpath("packagedElement[$predicates]") ?: [];
         foreach ($nodes as $umlClassNode) {
-            $item = new UMLClass($umlClassNode);
+            $item = new UmlClass($umlClassNode);
             $this->umlClasses->add($item);
         }
         $nodes = $xmlNode->xpath('packagedElement[@xmi:type="uml:Interface"]') ?: [];
         foreach ($nodes as $umlClassNode) {
-            $item = new UMLInterface($umlClassNode);
+            $item = new UmlInterface($umlClassNode);
             $this->umlClasses->add($item);
         }
         $nodes = $xmlNode->xpath('packagedElement[@xmi:type="uml:Enumeration"]') ?: [];
         foreach ($nodes as $umlClassNode) {
-            $item = new UMLEnumeration($umlClassNode);
+            $item = new UmlEnumeration($umlClassNode);
             $this->umlClasses->add($item);
         }
         self::log('  Package [%s] containing %s subpackages and %s classes was read.', $this->name, $this->umlPackages->count(), $this->umlClasses->count());
@@ -66,14 +67,14 @@ class UMLPackage extends AbstractItem
     {
         self::log('Searching for [%s] in [%s](%s)...', $prefix, $this->id, $this->name);
         if ($prefix === '*' || $prefix === '') {
-            /** @var UMLPackage $umlPackage */
+            /** @var UmlPackage $umlPackage */
             foreach ($this->umlPackages as $umlPackage) {
                 yield $umlPackage;
             }
         } else {
             $parts = explode('::', $prefix);
             $packageId = array_shift($parts);
-            /** @var UMLPackage|null $umlPackage */
+            /** @var UmlPackage|null $umlPackage */
             $umlPackage = $this->umlPackages->get($packageId);
             if ($umlPackage) {
                 self::log('Found [%s](%s) umlPackage.', $umlPackage->id, $this->name);

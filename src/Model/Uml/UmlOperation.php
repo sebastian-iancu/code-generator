@@ -1,11 +1,12 @@
 <?php
 
-namespace OpenEHR\Tools\CodeGen\Model;
+namespace OpenEHR\Tools\CodeGen\Model\Uml;
 
 use OpenEHR\Tools\CodeGen\Helper\Collection;
+use OpenEHR\Tools\CodeGen\Model\AbstractItem;
 use SimpleXMLElement;
 
-class UMLOperation extends AbstractItem
+class UmlOperation extends AbstractItem
 {
 
     public readonly string $id;
@@ -13,7 +14,7 @@ class UMLOperation extends AbstractItem
     public readonly string $description;
     public readonly Collection $umlParameters;
     public readonly Collection $umlConstraints;
-    public readonly TypeReference $return;
+    public readonly UmlTypeReference $return;
     public readonly ?int $minOccurs;
     public readonly ?int $maxOccurs;
 
@@ -25,25 +26,25 @@ class UMLOperation extends AbstractItem
         // collect parameters
         $this->umlParameters = new Collection();
         foreach ($xmlNode->xpath("ownedParameter[@xmi:type='uml:Parameter' and (not(@direction) or not(@direction='return'))]") as $umlParameterNode) {
-            $item = new UMLParameter($umlParameterNode);
+            $item = new UmlParameter($umlParameterNode);
             $this->umlParameters->add($item);
         }
         // collect Pre- and Post-constraints
         $this->umlConstraints = new Collection();
         $nodes = $xmlNode->xpath("ownedRule[@xmi:type='uml:Constraint' and specification/body]") ?: [];
         foreach ($nodes as $umlConstraintNode) {
-            $item = new UMLConstraint($umlConstraintNode);
+            $item = new UmlConstraint($umlConstraintNode);
             $this->umlConstraints->add($item);
         }
         // detect return type
         $nodes = $xmlNode->xpath("ownedParameter[@xmi:type='uml:Parameter' and @direction='return']");
         if (count($nodes) === 1) {
-            $returnParameter = new UMLParameter($nodes[0]);
+            $returnParameter = new UmlParameter($nodes[0]);
             $this->return = $returnParameter->type;
             $this->minOccurs = $returnParameter->minOccurs;
             $this->maxOccurs = $returnParameter->maxOccurs;
         } else {
-            $this->return = new TypeReference(null, 'void');
+            $this->return = new UmlTypeReference(null, 'void');
             $this->minOccurs = null;
             $this->maxOccurs = null;
         }

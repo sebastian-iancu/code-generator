@@ -1,10 +1,10 @@
 <?php
 
-namespace OpenEHR\Tools\CodeGen\Model;
+namespace OpenEHR\Tools\CodeGen\Model\Uml;
 
 use SimpleXMLElement;
 
-class UMLInterface extends UMLClass
+class UmlInterface extends UmlClass
 {
 
     public readonly bool $isInterface;

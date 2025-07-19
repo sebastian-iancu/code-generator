@@ -4,7 +4,6 @@ namespace OpenEHR\Tools\CodeGen\Writer;
 
 use JsonException;
 use OpenEHR\Tools\CodeGen\Model\AbstractItem;
-use OpenEHR\Tools\CodeGen\Model\UMLFile;
 
 class InternalModel extends AbstractWriter
 {

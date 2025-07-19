@@ -1,11 +1,12 @@
 <?php
 
-namespace OpenEHR\Tools\CodeGen\Model;
+namespace OpenEHR\Tools\CodeGen\Model\Uml;
 
 use OpenEHR\Tools\CodeGen\Helper\Collection;
+use OpenEHR\Tools\CodeGen\Model\AbstractItem;
 use SimpleXMLElement;
 
-class UMLTemplateBinding extends AbstractItem
+class UmlTemplateBinding extends AbstractItem
 {
 
     public readonly string $id;
@@ -25,7 +26,7 @@ class UMLTemplateBinding extends AbstractItem
             }
             $this->parameterSubstitutions = new Collection();
             foreach ($xmlNode->parameterSubstitution as $parameterSubstitutionNode) {
-                $item = new UMLTemplateParameterSubstitution($parameterSubstitutionNode);
+                $item = new UmlTemplateParameterSubstitution($parameterSubstitutionNode);
                 $this->parameterSubstitutions->add($item);
             }
         } else {

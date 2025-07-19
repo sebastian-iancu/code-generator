@@ -1,10 +1,10 @@
 <?php
 
-namespace OpenEHR\Tools\CodeGen\Model;
+namespace OpenEHR\Tools\CodeGen\Model\Uml;
 
 use SimpleXMLElement;
 
-class UMLParameter extends AbstractAttribute
+class UmlParameter extends AbstractUmlAttribute
 {
 
     public function __construct(SimpleXMLElement $xmlNode)

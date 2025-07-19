@@ -1,15 +1,16 @@
 <?php
 
-namespace OpenEHR\Tools\CodeGen\Model;
+namespace OpenEHR\Tools\CodeGen\Model\Uml;
 
+use OpenEHR\Tools\CodeGen\Model\AbstractItem;
 use SimpleXMLElement;
 
-class AbstractAttribute extends AbstractItem
+class AbstractUmlAttribute extends AbstractItem
 {
 
     public readonly string $id;
     public readonly string $name;
-    public readonly TypeReference $type;
+    public readonly UmlTypeReference $type;
     public readonly ?string $templateParameterId;
     public readonly int $minOccurs;
     public readonly int $maxOccurs;
@@ -21,17 +22,17 @@ class AbstractAttribute extends AbstractItem
 
         // detect type
         if (isset($xmlNode['type'])) {
-            $type = new TypeReference($xmlNode, (string)$xmlNode['type']);
+            $type = new UmlTypeReference($xmlNode, (string)$xmlNode['type']);
         } elseif (isset($xmlNode->type)) {
-            $type = new TypeReference($xmlNode->type);
+            $type = new UmlTypeReference($xmlNode->type);
         } else {
             self::log("WARNING: Type undefined for $this->id. Using [Any]. " . $xmlNode->saveXML());
-            $type = new TypeReference($xmlNode, 'Any');
+            $type = new UmlTypeReference($xmlNode, 'Any');
         }
         // detect if the type is a templateParameter
         $nodes = $xmlNode->xpath("ancestor::packagedElement[@xmi:type='uml:Class']/ownedTemplateSignature/ownedParameter[ownedParameteredElement/@xmi:id='{$type->id}']");
         if ($nodes) {
-            $templateParameter = new UMLTemplateParameter($nodes[0]);
+            $templateParameter = new UmlTemplateParameter($nodes[0]);
             $this->type = $templateParameter->type;
             $this->templateParameterId = $templateParameter->id;
         } else {

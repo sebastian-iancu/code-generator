@@ -1,10 +1,11 @@
 <?php
 
-namespace OpenEHR\Tools\CodeGen\Model;
+namespace OpenEHR\Tools\CodeGen\Model\Uml;
 
+use OpenEHR\Tools\CodeGen\Model\AbstractItem;
 use SimpleXMLElement;
 
-class TypeReference extends AbstractItem
+class UmlTypeReference extends AbstractItem
 {
 
     public readonly string $id;

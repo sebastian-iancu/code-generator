@@ -1,10 +1,10 @@
 <?php
 
-namespace OpenEHR\Tools\CodeGen\Model;
+namespace OpenEHR\Tools\CodeGen\Model\Uml;
 
 use SimpleXMLElement;
 
-class UMLProperty extends UMLParameter
+class UmlProperty extends UmlParameter
 {
 
     public readonly string $description;

@@ -2,7 +2,7 @@
 
 namespace OpenEHR\Tools\CodeGen\Reader;
 
-use OpenEHR\Tools\CodeGen\Model\UMLFile;
+use OpenEHR\Tools\CodeGen\Model\Uml\UmlFile;
 use RuntimeException;
 
 class XmiReader extends AbstractReader
@@ -25,7 +25,7 @@ class XmiReader extends AbstractReader
             throw new RuntimeException("libxml errors in $filename: {$e->getMessage()}.", previous: $e);
         }
 
-        $umlFile = new UMLFile($xml, $filename);
+        $umlFile = new UmlFile($xml, $filename);
         $this->files->add($umlFile, $umlFile->umlPackage->id);
     }
 
