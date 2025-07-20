@@ -14895,9 +14895,9 @@
                                                                                 "umlParameters": [],
                                                                                 "umlConstraints": {
                                                                                     "__aliases": {
-                                                                                        "_18_1_83e026d_1424966466280_220406_4674": ""
+                                                                                        "_18_1_83e026d_1424966466280_220406_4674": "OpenEHR\\Tools\\CodeGen\\Model\\Uml\\UmlConstraint"
                                                                                     },
-                                                                                    "": {
+                                                                                    "OpenEHR\\Tools\\CodeGen\\Model\\Uml\\UmlConstraint": {
                                                                                         "id": "_18_1_83e026d_1424966466280_220406_4674",
                                                                                         "name": "",
                                                                                         "rule": ""
