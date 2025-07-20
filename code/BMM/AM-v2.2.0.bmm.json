@@ -233,7 +233,9 @@
                     "description": "Set of language-dependent paths extracted from archetype. Paths obey the same syntax as physical_paths, but with node_ids replaced by their meanings from the terminology. ",
                     "parameters": {
                         "lang": {
-                            "type": "String"
+                            "name": "lang",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -384,7 +386,9 @@
                     "description": "",
                     "parameters": {
                         "an_id": {
-                            "type": "String"
+                            "name": "an_id",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -545,7 +549,9 @@
                     "description": "True if the relative path a_path exists at this node.",
                     "parameters": {
                         "a_path": {
-                            "type": "String"
+                            "name": "a_path",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -564,14 +570,18 @@
                     "description": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. \nTypically used during validation of special-ised archetype nodes.",
                     "parameters": {
                         "other": {
-                            "type": "ARCHETYPE_CONSTRAINT"
+                            "name": "other",
+                            "type": "ARCHETYPE_CONSTRAINT",
+                            "is_mandatory": true
                         },
                         "rmcc": {
+                            "name": "rmcc",
                             "_type": "P_BMM_GENERIC_PROPERTY",
                             "type_def": {
                                 "root_type": "FUNCTION",
                                 "generic_parameter_defs": []
-                            }
+                            },
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -583,7 +593,9 @@
                     "description": "True if constraints represented by this node contain no further redefinitions with respect to the node other, with the exception of node_id redefnition in `C_OBJECT` nodes. \n\nTypically used to test if an inherited node locally contains any constraints.",
                     "parameters": {
                         "other": {
-                            "type": "ARCHETYPE_CONSTRAINT"
+                            "name": "other",
+                            "type": "ARCHETYPE_CONSTRAINT",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -675,14 +687,18 @@
                     "description": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. \nTypically used during validation of special-ised archetype nodes.",
                     "parameters": {
                         "other": {
-                            "type": "ARCHETYPE_CONSTRAINT"
+                            "name": "other",
+                            "type": "ARCHETYPE_CONSTRAINT",
+                            "is_mandatory": true
                         },
                         "rmcc": {
+                            "name": "rmcc",
                             "_type": "P_BMM_GENERIC_PROPERTY",
                             "type_def": {
                                 "root_type": "FUNCTION",
                                 "generic_parameter_defs": []
-                            }
+                            },
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -694,7 +710,9 @@
                     "description": "True if constraints represented by this node contain no further redefinitions with respect to the node `_other_`, with the exception of node_id redefnition in `C_OBJECT` nodes. \n\nTypically used to test if an inherited node locally contains any constraints.",
                     "parameters": {
                         "other": {
-                            "type": "ARCHETYPE_CONSTRAINT"
+                            "name": "other",
+                            "type": "ARCHETYPE_CONSTRAINT",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -706,7 +724,9 @@
                     "description": "True if this node `_occurrences_` conforms to `_other.occurrences_`; `other' is assumed to be in a flat archetype.",
                     "parameters": {
                         "other": {
-                            "type": "C_OBJECT"
+                            "name": "other",
+                            "type": "C_OBJECT",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -718,7 +738,9 @@
                     "description": "True if this node id conforms to other.node_id, which includes the ids being identical; other is assumed to be in a flat archetype.",
                     "parameters": {
                         "other": {
-                            "type": "C_OBJECT"
+                            "name": "other",
+                            "type": "C_OBJECT",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -828,7 +850,9 @@
                     "description": "True if constraints represented by this node contain no further redefinitions with respect to the node other, with the exception of node_id redefnition in `C_OBJECT` nodes. \n\nTypically used to test if an inherited node locally contains any constraints.",
                     "parameters": {
                         "other": {
-                            "type": "ARCHETYPE_CONSTRAINT"
+                            "name": "other",
+                            "type": "ARCHETYPE_CONSTRAINT",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -843,14 +867,18 @@
                     "description": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. \nTypically used during validation of special-ised archetype nodes.",
                     "parameters": {
                         "other": {
-                            "type": "ARCHETYPE_CONSTRAINT"
+                            "name": "other",
+                            "type": "ARCHETYPE_CONSTRAINT",
+                            "is_mandatory": true
                         },
                         "rmcc": {
+                            "name": "rmcc",
                             "_type": "P_BMM_GENERIC_PROPERTY",
                             "type_def": {
                                 "root_type": "FUNCTION",
                                 "generic_parameter_defs": []
-                            }
+                            },
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -899,7 +927,9 @@
                     "description": "True if `_a_value_` is valid with respect to constraint expressed in concrete instance of this type.",
                     "parameters": {
                         "a_value": {
-                            "type": "Any"
+                            "name": "a_value",
+                            "type": "Any",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -952,7 +982,9 @@
                     "description": "True if this node occurrences conforms to `_other.occurrences_`; `_other_` is assumed to be in a flat archetype.\n\nIf `_other_` is a `C_COMPLEX_OBJECT`, then always `True`, since if occurrences defined on proxy node, it is an override of  the occurrences on the target, and it doesn't have to conform to anything except the containing attribute's cardinality. However, if `_other_` is also a `C_COMPLEX_OBJECT` then the override is of another use_node, and normal occurrences apply\n",
                     "parameters": {
                         "other": {
-                            "type": "C_OBJECT"
+                            "name": "other",
+                            "type": "C_OBJECT",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1056,14 +1088,18 @@
                     "description": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. \nTypically used during validation of special-ised archetype nodes.",
                     "parameters": {
                         "other": {
-                            "type": "C_PRIMITIVE_OBJECT"
+                            "name": "other",
+                            "type": "C_PRIMITIVE_OBJECT",
+                            "is_mandatory": true
                         },
                         "rmcc": {
+                            "name": "rmcc",
                             "_type": "P_BMM_GENERIC_PROPERTY",
                             "type_def": {
                                 "root_type": "FUNCTION",
                                 "generic_parameter_defs": []
-                            }
+                            },
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1075,7 +1111,9 @@
                     "description": "True if this node expresses a value constraint that conforms to that of `other`. Effected in descendants.",
                     "parameters": {
                         "other": {
-                            "type": "C_PRIMITIVE_OBJECT"
+                            "name": "other",
+                            "type": "C_PRIMITIVE_OBJECT",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1087,7 +1125,9 @@
                     "description": "True if constraints represented by this node contain no further redefinitions with respect to the node `_other_`, with the exception of node_id redefnition in `C_OBJECT` nodes. \n\nTypically used to test if an inherited node locally contains any constraints.",
                     "parameters": {
                         "other": {
-                            "type": "C_PRIMITIVE_OBJECT"
+                            "name": "other",
+                            "type": "C_PRIMITIVE_OBJECT",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1099,7 +1139,9 @@
                     "description": "True if this node expresses the same value constraint as `other`. Effected in descendants.",
                     "parameters": {
                         "other": {
-                            "type": "C_PRIMITIVE_OBJECT"
+                            "name": "other",
+                            "type": "C_PRIMITIVE_OBJECT",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1175,7 +1217,9 @@
                     "description": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. Typically used during validation of specialised archetype nodes.",
                     "parameters": {
                         "other": {
-                            "type": "C_SECOND_ORDER"
+                            "name": "other",
+                            "type": "C_SECOND_ORDER",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1187,7 +1231,9 @@
                     "description": "True if constraints represented by this node contain no further redefinitions with respect to the node other. Typically used to test if an inherited node locally contains any constraints.",
                     "parameters": {
                         "other": {
-                            "type": "C_SECOND_ORDER"
+                            "name": "other",
+                            "type": "C_SECOND_ORDER",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1224,7 +1270,9 @@
                     "description": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. Typically used during validation of specialised archetype nodes.",
                     "parameters": {
                         "other": {
-                            "type": "C_SECOND_ORDER"
+                            "name": "other",
+                            "type": "C_SECOND_ORDER",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1236,7 +1284,9 @@
                     "description": "True if constraints represented by this node contain no further redefinitions with respect to the node other. Typically used to test if an inherited node locally contains any constraints.",
                     "parameters": {
                         "other": {
-                            "type": "C_SECOND_ORDER"
+                            "name": "other",
+                            "type": "C_SECOND_ORDER",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1270,14 +1320,18 @@
                     "description": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. Typically used during validation of specialised archetype nodes.",
                     "parameters": {
                         "other": {
-                            "type": "C_SECOND_ORDER"
+                            "name": "other",
+                            "type": "C_SECOND_ORDER",
+                            "is_mandatory": true
                         },
                         "rmcc": {
+                            "name": "rmcc",
                             "_type": "P_BMM_GENERIC_PROPERTY",
                             "type_def": {
                                 "root_type": "FUNCTION",
                                 "generic_parameter_defs": []
-                            }
+                            },
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1289,7 +1343,9 @@
                     "description": "True if constraints represented by this node contain no further redefinitions with respect to the node other. Typically used to test if an inherited node locally contains any constraints.",
                     "parameters": {
                         "other": {
-                            "type": "C_SECOND_ORDER"
+                            "name": "other",
+                            "type": "C_SECOND_ORDER",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1570,7 +1626,9 @@
                     "description": "True if language `_a_lang_` is present in archetype terminology. ",
                     "parameters": {
                         "a_lang": {
-                            "type": "String"
+                            "name": "a_lang",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1582,7 +1640,9 @@
                     "description": "True if there are bindings to terminology `_a_terminology_id_` present.",
                     "parameters": {
                         "a_terminology_id": {
-                            "type": "String"
+                            "name": "a_terminology_id",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1594,7 +1654,9 @@
                     "description": "True if code `_a_code_` defined in this terminology.",
                     "parameters": {
                         "a_code": {
-                            "type": "String"
+                            "name": "a_code",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1606,10 +1668,14 @@
                     "description": "Term definition for a code, in a specified language. ",
                     "parameters": {
                         "a_lang": {
-                            "type": "String"
+                            "name": "a_lang",
+                            "type": "String",
+                            "is_mandatory": true
                         },
                         "a_code": {
-                            "type": "String"
+                            "name": "a_code",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -1624,10 +1690,14 @@
                     "description": "Binding of constraint corresponding to `_a_code_` in target external terminology `_a_terminology_id_`, as a string, which is usually a formal query expression.",
                     "parameters": {
                         "a_terminology": {
-                            "type": "String"
+                            "name": "a_terminology",
+                            "type": "String",
+                            "is_mandatory": true
                         },
                         "a_code": {
-                            "type": "String"
+                            "name": "a_code",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -1653,10 +1723,14 @@
                     "description": "Return an `ARCHETYPE_TERM` from specified terminology extract, for specified term code.",
                     "parameters": {
                         "a_terminology_id": {
-                            "type": "String"
+                            "name": "a_terminology_id",
+                            "type": "String",
+                            "is_mandatory": true
                         },
                         "a_code": {
-                            "type": "String"
+                            "name": "a_code",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -1671,7 +1745,9 @@
                     "description": "True if there is a provided terminology extract present.",
                     "parameters": {
                         "a_terminology_id": {
-                            "type": "String"
+                            "name": "a_terminology_id",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1752,7 +1828,9 @@
                     "description": "True if `_other.any_allowed_` or else every constraint in the `_constraint_` list exists in the `_other.constraint_`.",
                     "parameters": {
                         "other": {
-                            "type": "C_BOOLEAN"
+                            "name": "other",
+                            "type": "C_BOOLEAN",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1764,7 +1842,9 @@
                     "description": "True if the items in `_constraint_` are equal in number and identical pair-wise with those in `_other.constraint_`.",
                     "parameters": {
                         "other": {
-                            "type": "C_BOOLEAN"
+                            "name": "other",
+                            "type": "C_BOOLEAN",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1818,7 +1898,9 @@
                     "description": "True if a_value is valid with respect to constraint expressed in concrete instance of this type. ",
                     "parameters": {
                         "a_value": {
-                            "type": "String"
+                            "name": "a_value",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1840,7 +1922,9 @@
                     "description": "True if `_other.any_allowed_` or else every constraint in the `_constraint_` list exists in the `_other.constraint_`.",
                     "parameters": {
                         "other": {
-                            "type": "C_STRING"
+                            "name": "other",
+                            "type": "C_STRING",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1852,7 +1936,9 @@
                     "description": "True if the items in `_constraint_` are equal in number and identical pair-wise with those in `_other.constraint_`.",
                     "parameters": {
                         "other": {
-                            "type": "C_STRING"
+                            "name": "other",
+                            "type": "C_STRING",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1961,7 +2047,9 @@
                     "description": "True if `_other.any_allowed_` or else for every constraint in the `_constraint_` list there is a constraint in `_other.constraint_` that contains it.",
                     "parameters": {
                         "other": {
-                            "type": "C_ORDERED"
+                            "name": "other",
+                            "type": "C_ORDERED",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1973,7 +2061,9 @@
                     "description": "True if the items in `_constraint_` are equal in number and identical pair-wise with those in `_other.constraint_`.",
                     "parameters": {
                         "other": {
-                            "type": "C_ORDERED"
+                            "name": "other",
+                            "type": "C_ORDERED",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2046,7 +2136,9 @@
                     "description": "True if a `_value_` is valid with respect to constraint expressed in concrete instance of this type. ",
                     "parameters": {
                         "a_value": {
-                            "type": "Terminology_code"
+                            "name": "a_value",
+                            "type": "Terminology_code",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2075,7 +2167,9 @@
                     "description": "True if `_other.any_allowed_` or else every constraint in the `_constraint_` list exists in the `_other.constraint_`.",
                     "parameters": {
                         "other": {
-                            "type": "C_TERMINOLOGY_CODE"
+                            "name": "other",
+                            "type": "C_TERMINOLOGY_CODE",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2087,7 +2181,9 @@
                     "description": "True if `_constraint_` and `_other.constraint_` are both value-set ids, and expand to identical value sets, or else are identical value codes.",
                     "parameters": {
                         "other": {
-                            "type": "C_TERMINOLOGY_CODE"
+                            "name": "other",
+                            "type": "C_TERMINOLOGY_CODE",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2121,7 +2217,9 @@
                     "description": "True if `_a_pattern_` is a valid constraint. Define in concrete descendants.",
                     "parameters": {
                         "a_pattern": {
-                            "type": "String"
+                            "name": "a_pattern",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2133,10 +2231,14 @@
                     "description": "Return True if `_a_pattern_` can be replaced by `_an_other_pattern_` in a specialised constraint. Define in concrete subtypes.",
                     "parameters": {
                         "a_pattern": {
-                            "type": "String"
+                            "name": "a_pattern",
+                            "type": "String",
+                            "is_mandatory": true
                         },
                         "an_other_pattern": {
-                            "type": "String"
+                            "name": "an_other_pattern",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2158,7 +2260,9 @@
                     "description": "True if precursor() or else `_other.pattern_constraint_` is empty, or else `_pattern_constraint_` is a valid (narrower) replacement for `_other.pattern_constraint_`.",
                     "parameters": {
                         "other": {
-                            "type": "C_ORDERED"
+                            "name": "other",
+                            "type": "C_ORDERED",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2170,7 +2274,9 @@
                     "description": "True if `precursor (other)` and `_pattern_constraint_ ~ _other.pattern_constraint_`, i.e. either both `Void` or else both non-`Void` and identical.",
                     "parameters": {
                         "other": {
-                            "type": "C_ORDERED"
+                            "name": "other",
+                            "type": "C_ORDERED",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2507,10 +2613,14 @@
                     "description": "True if a_child_code conforms to a_parent_code in the sense of specialisation, i.e. is a_child_code the same as or more specialised than a_parent_code.",
                     "parameters": {
                         "a_child_code": {
-                            "type": "String"
+                            "name": "a_child_code",
+                            "type": "String",
+                            "is_mandatory": true
                         },
                         "a_parent_code": {
-                            "type": "String"
+                            "name": "a_parent_code",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2522,7 +2632,9 @@
                     "description": "True if a_code is any kind of ADL archetype local code.",
                     "parameters": {
                         "a_code": {
-                            "type": "String"
+                            "name": "a_code",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -2537,7 +2649,9 @@
                     "description": "True if a_code is an 'id' code.",
                     "parameters": {
                         "a_code": {
-                            "type": "String"
+                            "name": "a_code",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -2552,7 +2666,9 @@
                     "description": "True if a_code is an 'at' code, i.e. a code representing a single terminology item.",
                     "parameters": {
                         "a_code": {
-                            "type": "String"
+                            "name": "a_code",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -2567,7 +2683,9 @@
                     "description": "True if a_code is an 'ac' code, i.e. a code referring to a terminologyvalue set.",
                     "parameters": {
                         "a_code": {
-                            "type": "String"
+                            "name": "a_code",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -2582,7 +2700,9 @@
                     "description": "A code has been specialised if there is a non-zero code index anywhere above the last index e.g. \n\n* at0.0.1 -> False\n* at1.0.1 -> True",
                     "parameters": {
                         "a_code": {
-                            "type": "String"
+                            "name": "a_code",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2594,10 +2714,14 @@
                     "description": "Is `a_code' valid at level `a_level' or less, i.e. if we remove its trailing specialised part corresponding to specialisation below `a_level', and then any trailing '.0' pieces, do we end up with a valid code? If so it means that the code corresponds to a real node from `a_level' or higher.",
                     "parameters": {
                         "a-code": {
-                            "type": "String"
+                            "name": "a-code",
+                            "type": "String",
+                            "is_mandatory": true
                         },
                         "a_level": {
-                            "type": "Integer"
+                            "name": "a_level",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "result": {

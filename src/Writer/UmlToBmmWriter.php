@@ -221,7 +221,7 @@ class UmlToBmmWriter extends AbstractWriter
         ];
         /** @var UmlParameter $umlParameter */
         foreach ($umlOperation->umlParameters as $umlParameter) {
-            $bmmFunction['parameters'][$umlParameter->name] = self::asType($umlParameter->type->name, $umlParameter->maxOccurs, $umlClass, $collectedUmlClasses);
+            $bmmFunction['parameters'][$umlParameter->name] = self::asBmmParameter($umlParameter, $umlClass, $collectedUmlClasses);
         }
         /** @var UmlConstraint $umlConstraint */
         foreach ($umlOperation->umlConstraints as $umlConstraint) {
@@ -233,6 +233,31 @@ class UmlToBmmWriter extends AbstractWriter
         }
         $bmmFunction['result'] = self::asType($umlOperation->return->name, $umlOperation->maxOccurs, $umlClass, $collectedUmlClasses);
         return $bmmFunction;
+    }
+
+    protected static function asBmmParameter(UmlParameter $umlParameter, UmlClass $umlClass, Collection $collectedUmlClasses): array
+    {
+        $bmmParameter = [
+            'name' => $umlParameter->name,
+        ];
+        if ($umlParameter->templateParameterId) {
+            $bmmParameter['_type'] = 'P_BMM_SINGLE_PROPERTY_OPEN';
+            /** @var UmlTemplateParameter $umlTemplateParameter */
+            $umlTemplateParameter = $umlClass->umlTemplateParameters->get($umlParameter->templateParameterId);
+            $bmmParameter['type'] = $umlTemplateParameter->name;
+        } else {
+            $bmmParameter = array_merge($bmmParameter, self::asType($umlParameter->type->name, $umlParameter->maxOccurs, $umlClass, $collectedUmlClasses));
+        }
+        if ($umlParameter->maxOccurs === -1 && ($bmmParameter['_type'] === 'P_BMM_CONTAINER_PROPERTY')) {
+            $bmmParameter['cardinality'] = [
+                'lower' => $umlParameter->minOccurs,
+                'upper_unbounded' => true,
+            ];
+        }
+        if ($umlParameter->minOccurs) {
+            $bmmParameter['is_mandatory'] = true;
+        }
+        return $bmmParameter;
     }
 
     /**
@@ -254,7 +279,7 @@ class UmlToBmmWriter extends AbstractWriter
         } else {
             $bmmProperty = array_merge($bmmProperty, self::asType($umlProperty->type->name, $umlProperty->maxOccurs, $umlClass, $collectedUmlClasses));
         }
-        if ($umlProperty->maxOccurs === -1 && $bmmProperty['_type'] = 'P_BMM_CONTAINER_PROPERTY') {
+        if ($umlProperty->maxOccurs === -1 && ($bmmProperty['_type'] === 'P_BMM_CONTAINER_PROPERTY')) {
             $bmmProperty['cardinality'] = [
                 'lower' => $umlProperty->minOccurs,
                 'upper_unbounded' => true,

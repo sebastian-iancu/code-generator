@@ -365,7 +365,9 @@
                     "description": "The item at a path (relative to this item); only valid for unique paths, i.e. paths that resolve to a single item. ",
                     "parameters": {
                         "a_path": {
-                            "type": "String"
+                            "name": "a_path",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -380,7 +382,9 @@
                     "description": "List of items corresponding to a non-unique path.",
                     "parameters": {
                         "a_path": {
-                            "type": "String"
+                            "name": "a_path",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -396,7 +400,9 @@
                     "description": "True if the path exists in the data with respect to the current item. ",
                     "parameters": {
                         "a_path": {
-                            "type": "String"
+                            "name": "a_path",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -411,7 +417,9 @@
                     "description": "True if the path corresponds to a single item in the data. ",
                     "parameters": {
                         "a_path": {
-                            "type": "String"
+                            "name": "a_path",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -426,7 +434,9 @@
                     "description": "The path to an item relative to the root of this archetyped structure.",
                     "parameters": {
                         "a_loc": {
-                            "type": "PATHABLE"
+                            "name": "a_loc",
+                            "type": "PATHABLE",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -717,7 +727,9 @@
                     "description": "True if a version for time  `_a_time_` exists. ",
                     "parameters": {
                         "a_time": {
-                            "type": "DV_DATE_TIME"
+                            "name": "a_time",
+                            "type": "DV_DATE_TIME",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -729,7 +741,9 @@
                     "description": "True if a version with `_a_version_uid_` exists. ",
                     "parameters": {
                         "a_version_uid": {
-                            "type": "OBJECT_VERSION_ID"
+                            "name": "a_version_uid",
+                            "type": "OBJECT_VERSION_ID",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -741,7 +755,9 @@
                     "description": "Return the version with `_uid_` =  `_a_version_uid_`. \n",
                     "parameters": {
                         "a_version_uid": {
-                            "type": "OBJECT_VERSION_ID"
+                            "name": "a_version_uid",
+                            "type": "OBJECT_VERSION_ID",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -756,7 +772,9 @@
                     "description": "True if version with `_a_version_uid_` is an `ORIGINAL_VERSION`. ",
                     "parameters": {
                         "a_version_uid": {
-                            "type": "OBJECT_VERSION_ID"
+                            "name": "a_version_uid",
+                            "type": "OBJECT_VERSION_ID",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -771,7 +789,9 @@
                     "description": "Return the version for time  `_a_time_`. ",
                     "parameters": {
                         "a_time": {
-                            "type": "DV_DATE_TIME"
+                            "name": "a_time",
+                            "type": "DV_DATE_TIME",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -817,25 +837,39 @@
                     "description": "Add a new original version. ",
                     "parameters": {
                         "a_contribution": {
-                            "type": "OBJECT_REF"
+                            "name": "a_contribution",
+                            "type": "OBJECT_REF",
+                            "is_mandatory": true
                         },
                         "a_new_version_uid": {
-                            "type": "OBJECT_VERSION_ID"
+                            "name": "a_new_version_uid",
+                            "type": "OBJECT_VERSION_ID",
+                            "is_mandatory": true
                         },
                         "a_preceding_version_id": {
-                            "type": "OBJECT_VERSION_ID"
+                            "name": "a_preceding_version_id",
+                            "type": "OBJECT_VERSION_ID",
+                            "is_mandatory": true
                         },
                         "an_audit": {
-                            "type": "AUDIT_DETAILS"
+                            "name": "an_audit",
+                            "type": "AUDIT_DETAILS",
+                            "is_mandatory": true
                         },
                         "a_lifecycle_state": {
-                            "type": "DV_CODED_TEXT"
+                            "name": "a_lifecycle_state",
+                            "type": "DV_CODED_TEXT",
+                            "is_mandatory": true
                         },
                         "a_data": {
-                            "type": "T"
+                            "name": "a_data",
+                            "type": "T",
+                            "is_mandatory": true
                         },
                         "signing_key": {
-                            "type": "String"
+                            "name": "signing_key",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -850,32 +884,52 @@
                     "description": "Add a new original merged version. This commit function adds a parameter containing the ids of other versions merged into the current one. ",
                     "parameters": {
                         "a_contribution": {
-                            "type": "OBJECT_REF"
+                            "name": "a_contribution",
+                            "type": "OBJECT_REF",
+                            "is_mandatory": true
                         },
                         "a_new_version_uid": {
-                            "type": "OBJECT_VERSION_ID"
+                            "name": "a_new_version_uid",
+                            "type": "OBJECT_VERSION_ID",
+                            "is_mandatory": true
                         },
                         "a_preceding_version_id": {
-                            "type": "OBJECT_VERSION_ID"
+                            "name": "a_preceding_version_id",
+                            "type": "OBJECT_VERSION_ID",
+                            "is_mandatory": true
                         },
                         "an_audit": {
-                            "type": "AUDIT_DETAILS"
+                            "name": "an_audit",
+                            "type": "AUDIT_DETAILS",
+                            "is_mandatory": true
                         },
                         "a_lifecycle_state": {
-                            "type": "DV_CODED_TEXT"
+                            "name": "a_lifecycle_state",
+                            "type": "DV_CODED_TEXT",
+                            "is_mandatory": true
                         },
                         "a_data": {
-                            "type": "T"
+                            "name": "a_data",
+                            "type": "T",
+                            "is_mandatory": true
                         },
                         "an_other_input_uids": {
+                            "name": "an_other_input_uids",
                             "_type": "P_BMM_CONTAINER_PROPERTY",
                             "type_def": {
                                 "container_type": "List",
                                 "type": "OBJECT_VERSION_ID"
-                            }
+                            },
+                            "cardinality": {
+                                "lower": 1,
+                                "upper_unbounded": true
+                            },
+                            "is_mandatory": true
                         },
                         "signing_key": {
-                            "type": "String"
+                            "name": "signing_key",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -890,13 +944,19 @@
                     "description": "Add a new imported version. Details of version id etc come from the `ORIGINAL_VERSION` being committed. ",
                     "parameters": {
                         "a_contribution": {
-                            "type": "OBJECT_REF"
+                            "name": "a_contribution",
+                            "type": "OBJECT_REF",
+                            "is_mandatory": true
                         },
                         "an_audit": {
-                            "type": "AUDIT_DETAILS"
+                            "name": "an_audit",
+                            "type": "AUDIT_DETAILS",
+                            "is_mandatory": true
                         },
                         "a_version": {
-                            "type": "ORIGINAL_VERSION"
+                            "name": "a_version",
+                            "type": "ORIGINAL_VERSION",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -908,13 +968,19 @@
                     "description": "Add a new attestation to a specified original version. Attestations can only be added to Original versions. ",
                     "parameters": {
                         "an_attestation": {
-                            "type": "ATTESTATION"
+                            "name": "an_attestation",
+                            "type": "ATTESTATION",
+                            "is_mandatory": true
                         },
                         "a_ver_id": {
-                            "type": "OBJECT_VERSION_ID"
+                            "name": "a_ver_id",
+                            "type": "OBJECT_VERSION_ID",
+                            "is_mandatory": true
                         },
                         "signing_key": {
-                            "type": "String"
+                            "name": "signing_key",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -1864,7 +1930,9 @@
                     "description": "True if path  a_path' is a valid leaf path.\n",
                     "parameters": {
                         "a_path": {
-                            "type": "String"
+                            "name": "a_path",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1876,7 +1944,9 @@
                     "description": "Return the leaf element at the path  a_path'.",
                     "parameters": {
                         "a_path": {
-                            "type": "String"
+                            "name": "a_path",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1979,7 +2049,9 @@
                     "description": "Return i-th row.",
                     "parameters": {
                         "i": {
-                            "type": "Integer"
+                            "name": "i",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1991,7 +2063,9 @@
                     "description": "Return `True` if there is a column with name = `_a_key_`.",
                     "parameters": {
                         "a_key": {
-                            "type": "String"
+                            "name": "a_key",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2003,7 +2077,9 @@
                     "description": "Return `True` if there is a column with name = `_a_key_`.",
                     "parameters": {
                         "a_key": {
-                            "type": "String"
+                            "name": "a_key",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2015,7 +2091,9 @@
                     "description": "Return row with name = `_a_key_`.",
                     "parameters": {
                         "a_key": {
-                            "type": "String"
+                            "name": "a_key",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2027,10 +2105,15 @@
                     "description": "Return `True` if there is a row with key `_keys_`.",
                     "parameters": {
                         "keys": {
+                            "name": "keys",
                             "_type": "P_BMM_CONTAINER_PROPERTY",
                             "type_def": {
                                 "container_type": "List",
                                 "type": "String"
+                            },
+                            "cardinality": {
+                                "lower": 0,
+                                "upper_unbounded": true
                             }
                         }
                     },
@@ -2043,10 +2126,15 @@
                     "description": "Return rows with particular keys.",
                     "parameters": {
                         "keys": {
+                            "name": "keys",
                             "_type": "P_BMM_CONTAINER_PROPERTY",
                             "type_def": {
                                 "container_type": "List",
                                 "type": "String"
+                            },
+                            "cardinality": {
+                                "lower": 0,
+                                "upper_unbounded": true
                             }
                         }
                     },
@@ -2059,10 +2147,14 @@
                     "description": "Return cell at a particular location.",
                     "parameters": {
                         "i": {
-                            "type": "Integer"
+                            "name": "i",
+                            "type": "Integer",
+                            "is_mandatory": true
                         },
                         "j": {
-                            "type": "Integer"
+                            "name": "j",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2126,7 +2218,9 @@
                     "description": "Retrieve the item with name \u2018a_name\u2019.",
                     "parameters": {
                         "a_name": {
-                            "type": "String"
+                            "name": "a_name",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2138,7 +2232,9 @@
                     "description": "Retrieve the i-th item with name.",
                     "parameters": {
                         "i": {
-                            "type": "Integer"
+                            "name": "i",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2810,7 +2906,9 @@
                     "description": "True if match valid.",
                     "parameters": {
                         "c": {
-                            "type": "Character"
+                            "name": "c",
+                            "type": "Character",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -2895,7 +2993,9 @@
                     "description": "Test if two instances are strictly comparable. Effected in descendants.",
                     "parameters": {
                         "other": {
-                            "type": "DV_ORDERED"
+                            "name": "other",
+                            "type": "DV_ORDERED",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2928,7 +3028,9 @@
                     "description": "True if this Ordered object is less than `_other_`. Redefined in descendants.",
                     "parameters": {
                         "other": {
-                            "type": "DV_ORDERED"
+                            "name": "other",
+                            "type": "DV_ORDERED",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2989,7 +3091,9 @@
                     "description": "Indicates if the value  `_v_` is inside the range.\n",
                     "parameters": {
                         "v": {
-                            "type": "DV_ORDERED"
+                            "name": "v",
+                            "type": "DV_ORDERED",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3050,7 +3154,9 @@
                     "description": "Return True if this `DV_QUANTIFIED` is considered equal to `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_QUANTIFIED"
+                            "name": "other",
+                            "type": "DV_QUANTIFIED",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3062,7 +3168,9 @@
                     "description": "True if this Quantified object is less than `_other_`, based on comparison of `_magnitude_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_QUANTIFIED"
+                            "name": "other",
+                            "type": "DV_QUANTIFIED",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -3162,7 +3270,9 @@
                     "description": "Sum of two strictly comparable proportions.",
                     "parameters": {
                         "other": {
-                            "type": "DV_PROPORTION"
+                            "name": "other",
+                            "type": "DV_PROPORTION",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3174,7 +3284,9 @@
                     "description": "Difference between two strictly comparable proportions.",
                     "parameters": {
                         "other": {
-                            "type": "DV_PROPORTION"
+                            "name": "other",
+                            "type": "DV_PROPORTION",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3186,7 +3298,9 @@
                     "description": "Return True if this `DV_AMOUNT` is considered equal to `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_PROPORTION"
+                            "name": "other",
+                            "type": "DV_PROPORTION",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3198,7 +3312,9 @@
                     "description": "Product of this Proportion and `_factor_`.",
                     "parameters": {
                         "factor": {
-                            "type": "Real"
+                            "name": "factor",
+                            "type": "Real",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3210,7 +3326,9 @@
                     "description": "True if this Proportion is less than  `_other_`. Only valid if `_is_strictly_comparable_to()_` is True.",
                     "parameters": {
                         "other": {
-                            "type": "DV_PROPORTION"
+                            "name": "other",
+                            "type": "DV_PROPORTION",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -3228,7 +3346,9 @@
                     "description": "Return True if the `_type_` of this proportion is the same as the `_type_` of `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_ORDERED"
+                            "name": "other",
+                            "type": "DV_ORDERED",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3287,7 +3407,9 @@
                     "description": "True if n is one of the defined types. ",
                     "parameters": {
                         "nq": {
-                            "type": "Integer"
+                            "name": "nq",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3321,7 +3443,9 @@
                     "description": "Test whether a number is a valid percentage, i.e. between 0 and 100. ",
                     "parameters": {
                         "number": {
-                            "type": "Ordered_Numeric"
+                            "name": "number",
+                            "type": "Ordered_Numeric",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3333,7 +3457,9 @@
                     "description": "Sum of this amount and another. The value of accuracy in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* both operand accuracies are unknown_accuracy_value.\n\nIf the accuracy value is a percentage in one operand and not in the other, the form in the result is that of the larger operand.",
                     "parameters": {
                         "other": {
-                            "type": "DV_AMOUNT"
+                            "name": "other",
+                            "type": "DV_AMOUNT",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -3348,7 +3474,9 @@
                     "description": "Difference of this amount and another. The value of `_accuracy_` in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.\n\nIf the `_accuracy_` value is a percentage in one operand and not in the other, the form in the result is that of the larger operand.",
                     "parameters": {
                         "other": {
-                            "type": "DV_AMOUNT"
+                            "name": "other",
+                            "type": "DV_AMOUNT",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3360,7 +3488,9 @@
                     "description": "Return True if this `DV_AMOUNT` is considered equal to `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_AMOUNT"
+                            "name": "other",
+                            "type": "DV_AMOUNT",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3372,7 +3502,9 @@
                     "description": "Product of this Amount and `_factor_`.",
                     "parameters": {
                         "factor": {
-                            "type": "Real"
+                            "name": "factor",
+                            "type": "Real",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3391,7 +3523,9 @@
                     "description": "True if this object is less than `_other_`. Based on comparison of `_magnitude_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_AMOUNT"
+                            "name": "other",
+                            "type": "DV_AMOUNT",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -3481,7 +3615,9 @@
                     "description": "Sum of this `DV_QUANTITY` and `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_QUANTITY"
+                            "name": "other",
+                            "type": "DV_QUANTITY",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3493,7 +3629,9 @@
                     "description": "Difference of this `DV_QUANTITY` and `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_QUANTITY"
+                            "name": "other",
+                            "type": "DV_QUANTITY",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3505,7 +3643,9 @@
                     "description": "Product of this `DV_QUANTITY` and `_factor_`.",
                     "parameters": {
                         "factor": {
-                            "type": "Real"
+                            "name": "factor",
+                            "type": "Real",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3517,7 +3657,9 @@
                     "description": "True if this Quantity object is less than `_other_`, based on comparison of `_magnitude_`. Only valid if `_is_strictly_comparable_to()_` is True.",
                     "parameters": {
                         "other": {
-                            "type": "DV_QUANTITY"
+                            "name": "other",
+                            "type": "DV_QUANTITY",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -3542,7 +3684,9 @@
                     "description": "True if this quantity and `_other_` have the same `_units_` and also `_units_system_` if it exists.",
                     "parameters": {
                         "other": {
-                            "type": "DV_ORDERED"
+                            "name": "other",
+                            "type": "DV_ORDERED",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3601,7 +3745,9 @@
                     "description": "Sum of this `DV_COUNT` and `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_COUNT"
+                            "name": "other",
+                            "type": "DV_COUNT",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3613,7 +3759,9 @@
                     "description": "Difference of this `DV_COUNT` and `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_COUNT"
+                            "name": "other",
+                            "type": "DV_COUNT",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3625,7 +3773,9 @@
                     "description": "Product of this `DV_COUNT` and `_factor_`.",
                     "parameters": {
                         "factor": {
-                            "type": "Real"
+                            "name": "factor",
+                            "type": "Real",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3637,7 +3787,9 @@
                     "description": "True if this Quantified object is less than `_other_`, based on comparison of `_magnitude_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_COUNT"
+                            "name": "other",
+                            "type": "DV_COUNT",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -3655,7 +3807,9 @@
                     "description": "Return True.",
                     "parameters": {
                         "other": {
-                            "type": "DV_ORDERED"
+                            "name": "other",
+                            "type": "DV_ORDERED",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3684,7 +3838,9 @@
                     "description": "Addition of a differential amount to this quantity. \n\nThe value of accuracy in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.",
                     "parameters": {
                         "a_diff": {
-                            "type": "DV_AMOUNT"
+                            "name": "a_diff",
+                            "type": "DV_AMOUNT",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3696,7 +3852,9 @@
                     "description": "Result of subtracting a differential amount from this quantity.\n\nThe value of `_accuracy_` in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.",
                     "parameters": {
                         "a_diff": {
-                            "type": "DV_AMOUNT"
+                            "name": "a_diff",
+                            "type": "DV_AMOUNT",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3708,7 +3866,9 @@
                     "description": "Difference of two quantities.\n\nThe value of accuracy in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.",
                     "parameters": {
                         "other": {
-                            "type": "DV_ABSOLUTE_QUANTITY"
+                            "name": "other",
+                            "type": "DV_ABSOLUTE_QUANTITY",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3743,7 +3903,9 @@
                     "description": "True if this Ordinal value is less than `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_ORDINAL"
+                            "name": "other",
+                            "type": "DV_ORDINAL",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3755,7 +3917,9 @@
                     "description": "Test if this Ordinal is strictly comparable to `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_ORDINAL"
+                            "name": "other",
+                            "type": "DV_ORDINAL",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3794,7 +3958,9 @@
                     "description": "Test if this Scale value is strictly comparable to `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_SCALE"
+                            "name": "other",
+                            "type": "DV_SCALE",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3806,7 +3972,9 @@
                     "description": "True if this Scale value is less than `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_SCALE"
+                            "name": "other",
+                            "type": "DV_SCALE",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3836,7 +4004,9 @@
                     "description": "Sum of this Duration and `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_DURATION"
+                            "name": "other",
+                            "type": "DV_DURATION",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3848,7 +4018,9 @@
                     "description": "Difference of this Duration and `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_DURATION"
+                            "name": "other",
+                            "type": "DV_DURATION",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3860,7 +4032,9 @@
                     "description": "Product of this Duration and `_factor_`.",
                     "parameters": {
                         "factor": {
-                            "type": "Real"
+                            "name": "factor",
+                            "type": "Real",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3872,7 +4046,9 @@
                     "description": "True if this duration object is less than `_other_`, based on comparison of `_magnitude()_`. ",
                     "parameters": {
                         "other": {
-                            "type": "DV_DURATION"
+                            "name": "other",
+                            "type": "DV_DURATION",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -3890,7 +4066,9 @@
                     "description": "True, for any two Durations.",
                     "parameters": {
                         "other": {
-                            "type": "DV_DURATION"
+                            "name": "other",
+                            "type": "DV_DURATION",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3936,7 +4114,9 @@
                     "description": "Addition of a Duration to this temporal entity.",
                     "parameters": {
                         "a_diff": {
-                            "type": "DV_DURATION"
+                            "name": "a_diff",
+                            "type": "DV_DURATION",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3948,7 +4128,9 @@
                     "description": "Subtract a Duration from this temporal entity.",
                     "parameters": {
                         "a_diff": {
-                            "type": "DV_DURATION"
+                            "name": "a_diff",
+                            "type": "DV_DURATION",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3960,7 +4142,9 @@
                     "description": "Difference between this temporal entity and `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_TEMPORAL"
+                            "name": "other",
+                            "type": "DV_TEMPORAL",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -3997,7 +4181,9 @@
                     "description": "Return True if this `DV_QUANTIFIED` is considered equal to `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_QUANTIFIED"
+                            "name": "other",
+                            "type": "DV_QUANTIFIED",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4009,7 +4195,9 @@
                     "description": "Addition of a Duration to this Date.",
                     "parameters": {
                         "a_diff": {
-                            "type": "DV_DURATION"
+                            "name": "a_diff",
+                            "type": "DV_DURATION",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4021,7 +4209,9 @@
                     "description": "Subtract a Duration from this Date.",
                     "parameters": {
                         "a_diff": {
-                            "type": "DV_DURATION"
+                            "name": "a_diff",
+                            "type": "DV_DURATION",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4033,7 +4223,9 @@
                     "description": "Difference between this Date and `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_DATE"
+                            "name": "other",
+                            "type": "DV_DATE",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4045,7 +4237,9 @@
                     "description": "True if this date object is less than `_other_`, based on comparison of `_magnitude()_`. ",
                     "parameters": {
                         "other": {
-                            "type": "DV_DATE"
+                            "name": "other",
+                            "type": "DV_DATE",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -4063,7 +4257,9 @@
                     "description": "True, for any two Dates.",
                     "parameters": {
                         "other": {
-                            "type": "DV_DATE"
+                            "name": "other",
+                            "type": "DV_DATE",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4103,7 +4299,9 @@
                     "description": "Addition of a Duration to this Time.",
                     "parameters": {
                         "a_diff": {
-                            "type": "DV_DURATION"
+                            "name": "a_diff",
+                            "type": "DV_DURATION",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4115,7 +4313,9 @@
                     "description": "Subtract a Duration from this Time.",
                     "parameters": {
                         "a_diff": {
-                            "type": "DV_DURATION"
+                            "name": "a_diff",
+                            "type": "DV_DURATION",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4127,7 +4327,9 @@
                     "description": "Difference between this Time and `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_TIME"
+                            "name": "other",
+                            "type": "DV_TIME",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4139,7 +4341,9 @@
                     "description": "True if this time object is less than `_other_`, based on comparison of `_magnitude()_`. ",
                     "parameters": {
                         "other": {
-                            "type": "DV_TIME"
+                            "name": "other",
+                            "type": "DV_TIME",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -4157,7 +4361,9 @@
                     "description": "True, for any two Times.",
                     "parameters": {
                         "other": {
-                            "type": "DV_TIME"
+                            "name": "other",
+                            "type": "DV_TIME",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4197,7 +4403,9 @@
                     "description": "Addition of a Duration to this Date\/time.",
                     "parameters": {
                         "a_diff": {
-                            "type": "DV_DURATION"
+                            "name": "a_diff",
+                            "type": "DV_DURATION",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4209,7 +4417,9 @@
                     "description": "Subtract a Duration from this Date\/time.",
                     "parameters": {
                         "a_diff": {
-                            "type": "DV_DURATION"
+                            "name": "a_diff",
+                            "type": "DV_DURATION",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4221,7 +4431,9 @@
                     "description": "Difference between this Date\/time and `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "DV_DATE_TIME"
+                            "name": "other",
+                            "type": "DV_DATE_TIME",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4233,7 +4445,9 @@
                     "description": "True if this date-time object is less than `_other_`, based on comparison of `_magnitude()_`. ",
                     "parameters": {
                         "other": {
-                            "type": "DV_DATE_TIME"
+                            "name": "other",
+                            "type": "DV_DATE_TIME",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -4251,7 +4465,9 @@
                     "description": "True, for any two Date\/times.",
                     "parameters": {
                         "other": {
-                            "type": "DV_DATE_TIME"
+                            "name": "other",
+                            "type": "DV_DATE_TIME",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4448,7 +4664,9 @@
                     "description": "True if the units string  units' is a valid string according to the HL7 UCUM specification.",
                     "parameters": {
                         "units": {
-                            "type": "String"
+                            "name": "units",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4460,10 +4678,14 @@
                     "description": "True if two units strings correspond to the same measured property.",
                     "parameters": {
                         "units1": {
-                            "type": "String"
+                            "name": "units1",
+                            "type": "String",
+                            "is_mandatory": true
                         },
                         "units2": {
-                            "type": "String"
+                            "name": "units2",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4573,7 +4795,9 @@
                     "description": "Validity function to test if an identifier is in the set defined by this class. ",
                     "parameters": {
                         "an_id": {
-                            "type": "Boolean"
+                            "name": "an_id",
+                            "type": "Boolean",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4635,7 +4859,9 @@
                     "description": "Validity function to test if an identifier is in the set defined by this class.",
                     "parameters": {
                         "an_id": {
-                            "type": "String"
+                            "name": "an_id",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4657,7 +4883,9 @@
                     "description": "Return an interface to the terminology named name. Allowable names include:-\n\n* openehr, \n* centc251,\n* any name from are taken from the US NLM UMLS meta-data list at http:\/\/www.nlm.nih.gov\/research\/umls\/metaa1.html ",
                     "parameters": {
                         "name": {
-                            "type": "String"
+                            "name": "name",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4669,7 +4897,9 @@
                     "description": "Return an interface to the code_set identified by the external identifier name (e.g.  ISO_639-1). ",
                     "parameters": {
                         "name": {
-                            "type": "String"
+                            "name": "name",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -4684,7 +4914,9 @@
                     "description": "Return an interface to the code_set identified internally in openEHR by id. \n",
                     "parameters": {
                         "id": {
-                            "type": "String"
+                            "name": "id",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "pre_conditions": {
@@ -4699,7 +4931,9 @@
                     "description": "True if terminology named name known by this service. Allowable names include:-\n\n*  openehr  \n* centc251  \n* any name from are taken from the US NLM UMLS meta-data list at       http:\/\/www.nlm.nih.gov\/research\/umls\/metaa1.html",
                     "parameters": {
                         "name": {
-                            "type": "String"
+                            "name": "name",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4711,7 +4945,9 @@
                     "description": "True if code_set linked to internal name (e.g. languages ) is available. ",
                     "parameters": {
                         "name": {
-                            "type": "String"
+                            "name": "name",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4783,7 +5019,9 @@
                     "description": "True if code set knows about 'a_lang' .",
                     "parameters": {
                         "a_lang": {
-                            "type": "String"
+                            "name": "a_lang",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4795,7 +5033,9 @@
                     "description": "True if code set knows about  'a_code'.",
                     "parameters": {
                         "a_code": {
-                            "type": "String"
+                            "name": "a_code",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4827,7 +5067,9 @@
                     "description": "Return all codes under grouper 'a_group_id' from this terminology.",
                     "parameters": {
                         "a_group_id": {
-                            "type": "String"
+                            "name": "a_group_id",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4843,10 +5085,14 @@
                     "description": "Return all codes under grouper whose name in 'a_lang' is 'a_name' from this terminology.",
                     "parameters": {
                         "a_lang": {
-                            "type": "String"
+                            "name": "a_lang",
+                            "type": "String",
+                            "is_mandatory": true
                         },
                         "a_name": {
-                            "type": "String"
+                            "name": "a_name",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -4869,7 +5115,9 @@
                     "description": "Return all rubric of code  code' in language  lang'.",
                     "parameters": {
                         "a_code": {
-                            "type": "String"
+                            "name": "a_code",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {

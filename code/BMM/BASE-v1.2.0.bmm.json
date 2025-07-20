@@ -132,7 +132,9 @@
                     "description": "Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.",
                     "parameters": {
                         "other": {
-                            "type": "Any"
+                            "name": "other",
+                            "type": "Any",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -144,7 +146,9 @@
                     "description": "Reference equality for reference types, value equality for value types.",
                     "parameters": {
                         "other": {
-                            "type": "Any"
+                            "name": "other",
+                            "type": "Any",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -156,7 +160,9 @@
                     "description": "Create new instance of a type.",
                     "parameters": {
                         "a_type": {
-                            "type": "String"
+                            "name": "a_type",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -168,7 +174,9 @@
                     "description": "Type name of an object as a string. May include generic parameters, as in `\"Interval<Time>\"`.",
                     "parameters": {
                         "an_object": {
-                            "type": "Any"
+                            "name": "an_object",
+                            "type": "Any",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -180,7 +188,9 @@
                     "description": "True if current object not equal to `_other_`. Returns not `_equal_()`.",
                     "parameters": {
                         "other": {
-                            "type": "Ordered"
+                            "name": "other",
+                            "type": "Ordered",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -210,7 +220,10 @@
                     "description": "Test for presence of `_a_key_`.",
                     "parameters": {
                         "a_key": {
-                            "type": "Ordered"
+                            "name": "a_key",
+                            "_type": "P_BMM_SINGLE_PROPERTY_OPEN",
+                            "type": "K",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -222,7 +235,10 @@
                     "description": "Return item for key `_a_key_`.",
                     "parameters": {
                         "a_key": {
-                            "type": "Ordered"
+                            "name": "a_key",
+                            "_type": "P_BMM_SINGLE_PROPERTY_OPEN",
+                            "type": "K",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -250,7 +266,10 @@
                     "description": "Test for membership of a value.",
                     "parameters": {
                         "v": {
-                            "type": "Any"
+                            "name": "v",
+                            "_type": "P_BMM_SINGLE_PROPERTY_OPEN",
+                            "type": "T",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -276,7 +295,9 @@
                     "description": "Existential quantifier applied to container, taking one agent argument `_test_` whose signature is `(v:T): Boolean`.",
                     "parameters": {
                         "test": {
-                            "type": "Operation"
+                            "name": "test",
+                            "type": "Operation",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -288,7 +309,9 @@
                     "description": "Universal quantifier applied to container, taking one agent argument `_test_` whose signature is `(v:T): Boolean`.",
                     "parameters": {
                         "test": {
-                            "type": "Operation"
+                            "name": "test",
+                            "type": "Operation",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -300,7 +323,9 @@
                     "description": "Return a List all items matching the predicate function `_test_` which has signature `(v:T): Boolean`. If no matches, an empty List is returned.",
                     "parameters": {
                         "test": {
-                            "type": "Operation"
+                            "name": "test",
+                            "type": "Operation",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -316,7 +341,9 @@
                     "description": "Return first item matching the predicate function `_test_` which has signature `(v:T): Boolean`, or Void if no match.",
                     "parameters": {
                         "test": {
-                            "type": "Operation"
+                            "name": "test",
+                            "type": "Operation",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -389,7 +416,9 @@
                     "description": "Return item for key  `_a_key_`.",
                     "parameters": {
                         "a_key": {
-                            "type": "Integer"
+                            "name": "a_key",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -426,7 +455,9 @@
                     "description": "Integer addition.",
                     "parameters": {
                         "other": {
-                            "type": "Integer"
+                            "name": "other",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -438,7 +469,9 @@
                     "description": "Integer subtraction.",
                     "parameters": {
                         "other": {
-                            "type": "Integer"
+                            "name": "other",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -450,7 +483,9 @@
                     "description": "Integer multiplication.",
                     "parameters": {
                         "other": {
-                            "type": "Integer"
+                            "name": "other",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -462,7 +497,9 @@
                     "description": "Integer division.",
                     "parameters": {
                         "other": {
-                            "type": "Integer"
+                            "name": "other",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -474,7 +511,9 @@
                     "description": "Integer exponentiation.",
                     "parameters": {
                         "other": {
-                            "type": "Double"
+                            "name": "other",
+                            "type": "Double",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -486,7 +525,9 @@
                     "description": "Return self modulo other.",
                     "parameters": {
                         "mod": {
-                            "type": "Integer"
+                            "name": "mod",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -498,7 +539,9 @@
                     "description": "Returns True if current Integer is less than `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "Integer"
+                            "name": "other",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -517,7 +560,9 @@
                     "description": "Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.",
                     "parameters": {
                         "other": {
-                            "type": "Integer"
+                            "name": "other",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -529,7 +574,9 @@
                     "description": "Reference equality for reference types, value equality for value types.",
                     "parameters": {
                         "other": {
-                            "type": "Integer"
+                            "name": "other",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -557,7 +604,9 @@
                     "description": "Double-precision real number addition.",
                     "parameters": {
                         "other": {
-                            "type": "Double"
+                            "name": "other",
+                            "type": "Double",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -569,7 +618,9 @@
                     "description": "Double-precision real number subtraction.",
                     "parameters": {
                         "other": {
-                            "type": "Double"
+                            "name": "other",
+                            "type": "Double",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -581,7 +632,9 @@
                     "description": "Double-precision real number multiplication.",
                     "parameters": {
                         "other": {
-                            "type": "Double"
+                            "name": "other",
+                            "type": "Double",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -593,7 +646,9 @@
                     "description": "Double-precision real number division.",
                     "parameters": {
                         "other": {
-                            "type": "Double"
+                            "name": "other",
+                            "type": "Double",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -605,7 +660,9 @@
                     "description": "Double-precision real number exponentiation.",
                     "parameters": {
                         "other": {
-                            "type": "Double"
+                            "name": "other",
+                            "type": "Double",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -617,7 +674,9 @@
                     "description": "Returns True if current Double is less than `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "Double"
+                            "name": "other",
+                            "type": "Double",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -636,7 +695,9 @@
                     "description": "Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.",
                     "parameters": {
                         "other": {
-                            "type": "Double"
+                            "name": "other",
+                            "type": "Double",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -648,7 +709,9 @@
                     "description": "Reference equality for reference types, value equality for value types.",
                     "parameters": {
                         "other": {
-                            "type": "Double"
+                            "name": "other",
+                            "type": "Double",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -670,7 +733,9 @@
                     "description": "Sum with `_other_` (commutative). Actual type of result depends on arithmetic balancing rules.",
                     "parameters": {
                         "other": {
-                            "type": "Numeric"
+                            "name": "other",
+                            "type": "Numeric",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -682,7 +747,9 @@
                     "description": "Result of subtracting `_other_`. Actual type of result depends on arithmetic balancing rules.",
                     "parameters": {
                         "other": {
-                            "type": "Numeric"
+                            "name": "other",
+                            "type": "Numeric",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -694,7 +761,9 @@
                     "description": "Product by `_other_`. Actual type of result depends on arithmetic balancing rules.",
                     "parameters": {
                         "other": {
-                            "type": "Numeric"
+                            "name": "other",
+                            "type": "Numeric",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -706,7 +775,9 @@
                     "description": "Divide by`_other_`. Actual type of result depends on arithmetic balancing rules.",
                     "parameters": {
                         "other": {
-                            "type": "Numeric"
+                            "name": "other",
+                            "type": "Numeric",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -718,7 +789,9 @@
                     "description": "Expontiation of this by `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "Numeric"
+                            "name": "other",
+                            "type": "Numeric",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -760,7 +833,9 @@
                     "description": "Logical conjunction of this with `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "Boolean"
+                            "name": "other",
+                            "type": "Boolean",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -776,7 +851,9 @@
                     "description": "Boolean semi-strict conjunction with `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "Boolean"
+                            "name": "other",
+                            "type": "Boolean",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -791,7 +868,9 @@
                     "description": "Boolean disjunction with `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "Boolean"
+                            "name": "other",
+                            "type": "Boolean",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -808,7 +887,9 @@
                     "description": "Boolean semi-strict disjunction with `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "Boolean"
+                            "name": "other",
+                            "type": "Boolean",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -823,7 +904,9 @@
                     "description": "Boolean exclusive or with `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "Boolean"
+                            "name": "other",
+                            "type": "Boolean",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -838,7 +921,9 @@
                     "description": "Boolean implication of `_other_` (semi-strict)",
                     "parameters": {
                         "other": {
-                            "type": "Boolean"
+                            "name": "other",
+                            "type": "Boolean",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -895,7 +980,9 @@
                     "description": "Concatenation operator - causes `_other_` to be appended to this string.",
                     "parameters": {
                         "other": {
-                            "type": "String"
+                            "name": "other",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -907,7 +994,9 @@
                     "description": "Lexical comparison of string content based on ordering in relevant character set.",
                     "parameters": {
                         "other": {
-                            "type": "String"
+                            "name": "other",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -919,7 +1008,9 @@
                     "description": "Return True if this String contains `_other_` (case-sensitive).",
                     "parameters": {
                         "other": {
-                            "type": "String"
+                            "name": "other",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -947,7 +1038,9 @@
                     "description": "Real number addition.",
                     "parameters": {
                         "other": {
-                            "type": "Real"
+                            "name": "other",
+                            "type": "Real",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -959,7 +1052,9 @@
                     "description": "Real number subtraction.",
                     "parameters": {
                         "other": {
-                            "type": "Real"
+                            "name": "other",
+                            "type": "Real",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -971,7 +1066,9 @@
                     "description": "Real number multiplication.",
                     "parameters": {
                         "other": {
-                            "type": "Real"
+                            "name": "other",
+                            "type": "Real",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -983,7 +1080,9 @@
                     "description": "Real number division.",
                     "parameters": {
                         "other": {
-                            "type": "Real"
+                            "name": "other",
+                            "type": "Real",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -995,7 +1094,9 @@
                     "description": "Real number exponentiation.",
                     "parameters": {
                         "other": {
-                            "type": "Double"
+                            "name": "other",
+                            "type": "Double",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1007,7 +1108,9 @@
                     "description": "Returns True if current Real is less than `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "Real"
+                            "name": "other",
+                            "type": "Real",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1026,7 +1129,9 @@
                     "description": "Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.",
                     "parameters": {
                         "other": {
-                            "type": "Real"
+                            "name": "other",
+                            "type": "Real",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1038,7 +1143,9 @@
                     "description": "Reference equality for reference types, value equality for value types.",
                     "parameters": {
                         "other": {
-                            "type": "Real"
+                            "name": "other",
+                            "type": "Real",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1059,7 +1166,9 @@
                     "description": "Large integer addition.",
                     "parameters": {
                         "other": {
-                            "type": "Integer"
+                            "name": "other",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1071,7 +1180,9 @@
                     "description": "Large integer subtraction.",
                     "parameters": {
                         "other": {
-                            "type": "Integer"
+                            "name": "other",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1083,7 +1194,9 @@
                     "description": "Large integer multiplication.",
                     "parameters": {
                         "other": {
-                            "type": "Integer"
+                            "name": "other",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1095,7 +1208,9 @@
                     "description": "Large integer division.",
                     "parameters": {
                         "other": {
-                            "type": "Integer"
+                            "name": "other",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1107,7 +1222,9 @@
                     "description": "Large integer exponentiation.",
                     "parameters": {
                         "other": {
-                            "type": "Double"
+                            "name": "other",
+                            "type": "Double",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1119,7 +1236,9 @@
                     "description": "Large integer modulus.",
                     "parameters": {
                         "mod": {
-                            "type": "Integer"
+                            "name": "mod",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1131,7 +1250,9 @@
                     "description": "Returns True if current Integer is less than `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "Integer64"
+                            "name": "other",
+                            "type": "Integer64",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1150,7 +1271,9 @@
                     "description": "Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.",
                     "parameters": {
                         "other": {
-                            "type": "Integer64"
+                            "name": "other",
+                            "type": "Integer64",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1162,7 +1285,9 @@
                     "description": "Reference equality for reference types, value equality for value types.",
                     "parameters": {
                         "other": {
-                            "type": "Integer64"
+                            "name": "other",
+                            "type": "Integer64",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1184,7 +1309,9 @@
                     "description": "Arithmetic value comparison. Returns True if current object is less than `_other_`. This operator is effected and\/or redefined in descendants to provide the appropriate ordering semantics for concrete types.\n\nIn conjunction with `=`, enables the definition of the related functions `_greater_than_()` etc.",
                     "parameters": {
                         "other": {
-                            "type": "Ordered"
+                            "name": "other",
+                            "type": "Ordered",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1196,7 +1323,9 @@
                     "description": "True if current object less than or equal to `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "Ordered"
+                            "name": "other",
+                            "type": "Ordered",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -1211,7 +1340,9 @@
                     "description": "True if current object greater than `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "Ordered"
+                            "name": "other",
+                            "type": "Ordered",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -1226,7 +1357,9 @@
                     "description": "True if current object greater than or equal to `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "Ordered"
+                            "name": "other",
+                            "type": "Ordered",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -1384,7 +1517,9 @@
                     "description": "Arithmetic addition of a duration to a date\/time.",
                     "parameters": {
                         "a_diff": {
-                            "type": "Iso8601_duration"
+                            "name": "a_diff",
+                            "type": "Iso8601_duration",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1396,7 +1531,9 @@
                     "description": "Arithmetic subtraction of a duration from a date\/time.",
                     "parameters": {
                         "a_diff": {
-                            "type": "Iso8601_duration"
+                            "name": "a_diff",
+                            "type": "Iso8601_duration",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1408,7 +1545,9 @@
                     "description": "Difference of two date\/times.",
                     "parameters": {
                         "a_date_time": {
-                            "type": "Iso8601_date_time"
+                            "name": "a_date_time",
+                            "type": "Iso8601_date_time",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1420,7 +1559,9 @@
                     "description": "Addition of nominal duration represented by `_a_diff_`. See `Iso8601_date._add_nominal_()` for semantics.",
                     "parameters": {
                         "a_diff": {
-                            "type": "Iso8601_duration"
+                            "name": "a_diff",
+                            "type": "Iso8601_duration",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1432,7 +1573,9 @@
                     "description": "Subtraction of nominal duration represented by `_a_diff_`. See `_add_nominal_()` for semantics.",
                     "parameters": {
                         "a_diff": {
-                            "type": "Iso8601_duration"
+                            "name": "a_diff",
+                            "type": "Iso8601_duration",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1558,7 +1701,9 @@
                     "description": "Arithmetic addition of a duration to a duration, via conversion to seconds, using `Time_definitions._Average_days_in_year_` and `Time_definitions._Average_days_in_month_`",
                     "parameters": {
                         "a_val": {
-                            "type": "Iso8601_duration"
+                            "name": "a_val",
+                            "type": "Iso8601_duration",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1570,7 +1715,9 @@
                     "description": "Arithmetic subtraction of a duration from a duration, via conversion to seconds, using `Time_definitions._Average_days_in_year_` and `Time_definitions._Average_days_in_month_`",
                     "parameters": {
                         "a_val": {
-                            "type": "Iso8601_duration"
+                            "name": "a_val",
+                            "type": "Iso8601_duration",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1582,7 +1729,9 @@
                     "description": "Arithmetic multiplication a duration by a number.",
                     "parameters": {
                         "a_val": {
-                            "type": "Real"
+                            "name": "a_val",
+                            "type": "Real",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1594,7 +1743,9 @@
                     "description": "Arithmetic division of a duration by a number.",
                     "parameters": {
                         "a_val": {
-                            "type": "Real"
+                            "name": "a_val",
+                            "type": "Real",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1719,7 +1870,9 @@
                     "description": "Arithmetic addition of a duration to a time.",
                     "parameters": {
                         "a_diff": {
-                            "type": "Iso8601_duration"
+                            "name": "a_diff",
+                            "type": "Iso8601_duration",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1731,7 +1884,9 @@
                     "description": "Arithmetic subtraction of a duration from a time.",
                     "parameters": {
                         "a_diff": {
-                            "type": "Iso8601_duration"
+                            "name": "a_diff",
+                            "type": "Iso8601_duration",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1743,7 +1898,9 @@
                     "description": "Difference of two times.",
                     "parameters": {
                         "a_time": {
-                            "type": "Iso8601_time"
+                            "name": "a_time",
+                            "type": "Iso8601_time",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1873,7 +2030,9 @@
                     "description": "Arithmetic addition of a duration to a date.",
                     "parameters": {
                         "a_diff": {
-                            "type": "Iso8601_duration"
+                            "name": "a_diff",
+                            "type": "Iso8601_duration",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1885,7 +2044,9 @@
                     "description": "Arithmetic subtraction of a duration from a date.",
                     "parameters": {
                         "a_diff": {
-                            "type": "Iso8601_duration"
+                            "name": "a_diff",
+                            "type": "Iso8601_duration",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1897,7 +2058,9 @@
                     "description": "Difference of two dates.",
                     "parameters": {
                         "a_date": {
-                            "type": "Iso8601_date"
+                            "name": "a_date",
+                            "type": "Iso8601_date",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1909,7 +2072,9 @@
                     "description": "Addition of nominal duration represented by `_a_diff_`. For example, a duration of `'P1Y'` means advance to the same date next year, with the exception of the date 29 February in a leap year, to which the addition of a nominal year will result in 28 February of the following year. Similarly, `'P1M'` is understood here as a nominal month, the addition of which will result in one of:\n\n* the same day in the following month, if it exists, or;\n* one or two days less where the following month is shorter, or;\n* in the case of adding a month to the date 31 Jan, the result will be 28 Feb in a non-leap year (i.e. three less) and 29 Feb in a leap year (i.e. two less).",
                     "parameters": {
                         "a_diff": {
-                            "type": "Iso8601_duration"
+                            "name": "a_diff",
+                            "type": "Iso8601_duration",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1921,7 +2086,9 @@
                     "description": "Subtraction of nominal duration represented by `_a_diff_`. See `_add_nominal_()` for semantics.",
                     "parameters": {
                         "a_diff": {
-                            "type": "Iso8601_duration"
+                            "name": "a_diff",
+                            "type": "Iso8601_duration",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2052,7 +2219,10 @@
                     "description": "True if the value `e` is properly contained in this Interval.",
                     "parameters": {
                         "e": {
-                            "type": "Ordered"
+                            "name": "e",
+                            "_type": "P_BMM_SINGLE_PROPERTY_OPEN",
+                            "type": "T",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -2067,7 +2237,9 @@
                     "description": "True if there is any overlap between intervals represented by Current and `_other_`. True if at least one limit of other is strictly inside the limits of this interval.",
                     "parameters": {
                         "other": {
-                            "type": "Interval"
+                            "name": "other",
+                            "type": "Interval",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2079,7 +2251,9 @@
                     "description": "True if current interval properly contains `_other_`? True if all points of `_other_` are inside the current interval.",
                     "parameters": {
                         "other": {
-                            "type": "Interval"
+                            "name": "other",
+                            "type": "Interval",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2091,7 +2265,9 @@
                     "description": "True if current object's interval is semantically same as `_other_`.",
                     "parameters": {
                         "other": {
-                            "type": "Any"
+                            "name": "other",
+                            "type": "Any",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2824,7 +3000,9 @@
                     "description": "True if `y >= 0`.",
                     "parameters": {
                         "y": {
-                            "type": "Integer"
+                            "name": "y",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -2839,7 +3017,9 @@
                     "description": "True if `m >= 1 and m <= months_in_year`.",
                     "parameters": {
                         "m": {
-                            "type": "Integer"
+                            "name": "m",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -2854,13 +3034,19 @@
                     "description": "True if `d >= 1 and d <= days_in_month (m, y)`.",
                     "parameters": {
                         "y": {
-                            "type": "Integer"
+                            "name": "y",
+                            "type": "Integer",
+                            "is_mandatory": true
                         },
                         "m": {
-                            "type": "Integer"
+                            "name": "m",
+                            "type": "Integer",
+                            "is_mandatory": true
                         },
                         "d": {
-                            "type": "Integer"
+                            "name": "d",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -2875,13 +3061,19 @@
                     "description": "True if `(h >= 0 and h < Hours_in_day) or (h = Hours_in_day and m = 0 and s = 0)` .",
                     "parameters": {
                         "h": {
-                            "type": "Integer"
+                            "name": "h",
+                            "type": "Integer",
+                            "is_mandatory": true
                         },
                         "m": {
-                            "type": "Integer"
+                            "name": "m",
+                            "type": "Integer",
+                            "is_mandatory": true
                         },
                         "s": {
-                            "type": "Integer"
+                            "name": "s",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -2896,7 +3088,9 @@
                     "description": "True if `m >= 0 and m < Minutes_in_hour`.",
                     "parameters": {
                         "m": {
-                            "type": "Integer"
+                            "name": "m",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -2911,7 +3105,9 @@
                     "description": "True if `s >= 0 and s < Seconds_in_minute` .",
                     "parameters": {
                         "s": {
-                            "type": "Integer"
+                            "name": "s",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -2926,7 +3122,9 @@
                     "description": "True if `fs >= 0.0` and `fs < 1.0` .",
                     "parameters": {
                         "fs": {
-                            "type": "Double"
+                            "name": "fs",
+                            "type": "Double",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -2941,7 +3139,9 @@
                     "description": "String is a valid ISO 8601 date, i.e. takes the complete form:\n\n* `YYYY-MM-DD` (extended, preferred) or one of the partial forms `YYYY-MM` or `YYYY`\n* `YYYYMMDD` (compact) or a partial variant `YYYYMM`.\n\nWhere:\n\n* `YYYY` is the string form of any positive number in the range `0000` - `9999` (zero-filled to four digits)\n* `MM` is `01` - `12` (zero-filled to two digits)\n* `DD` is `01` - `31` (zero-filled to two digits)\n\nThe combinations of `YYYY`, `MM`, `DD` numbers must be correct with respect to the Gregorian calendar.",
                     "parameters": {
                         "s": {
-                            "type": "String"
+                            "name": "s",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2953,7 +3153,9 @@
                     "description": "String is a valid ISO 8601 date, i.e. takes the form:\n\n* `hh:mm:ss[(,|.)s+][Z|\u00b1hh[:mm]]` (extended)\n* `hhmmss[(,|.)s+][Z|\u00b1hh[mm]]` (compact)\n* or one of the partial forms:\n** `hh:mm` (extended)\n** `hhmm` or `hh` (compact)\n\nwith an additional optional timezone indicator of:\n\n* `Z` or `\u00b1hh[:mm]` (extended)  `\u00b1hh[mm]` (compact)\n\nWhere:\n\n* `hh` is \"00\" - \"23\" (0-filled to two digits)\n* `mm` is \"00\" - \"59\" (0-filled to two digits)\n* `ss` is \"00\" - \"60\" (0-filled to two digits)\n* `[(,|.)s+]` is an optional string consisting of a comma or decimal point followed by numeric string of 1 or more digits, representing a fractional second\n* `Z` is a literal meaning UTC (modern replacement for GMT), i.e. timezone `+0000`\n",
                     "parameters": {
                         "s": {
-                            "type": "String"
+                            "name": "s",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2965,7 +3167,9 @@
                     "description": "String is a valid ISO 8601 date-time, i.e. takes the form:\n\n* `YYYY-MM-DDThh:mm:ss[(,|.)s+][Z|\u00b1hh[:mm]]` (extended)\n* `YYYYMMDDThhmmss[(,|.)s+][Z|\u00b1hh[mm]]` (compact)\n* or one of the partial forms:\n** `YYYY-MM-DDThh:mm` or `YYYY-MM-DDThh` (extended)\n** `YYYYMMDDThhmm` or `YYYYMMDDThh` (compact)",
                     "parameters": {
                         "s": {
-                            "type": "String"
+                            "name": "s",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2977,7 +3181,9 @@
                     "description": "String is a valid ISO 8601 duration, i.e. takes the form:\n\n* `P[nnY][nnM][nnW][nnD][T[nnH][nnM][nnS]]`\n\nWhere each nn represents a number of years, months, etc. `nnW` represents a number of 7-day weeks.\n\nNote: allowing the `W` designator in the same expression as other designators is an exception to the published standard, but necessary in clinical information (typically for representing pregnancy duration).",
                     "parameters": {
                         "s": {
-                            "type": "String"
+                            "name": "s",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {

@@ -132,7 +132,9 @@
                     "description": "Value equality.",
                     "parameters": {
                         "other": {
-                            "type": "Any"
+                            "name": "other",
+                            "type": "Any",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -144,7 +146,9 @@
                     "description": "Reference equality.",
                     "parameters": {
                         "other": {
-                            "type": "Any"
+                            "name": "other",
+                            "type": "Any",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -156,7 +160,9 @@
                     "description": "Create new instance of a type.",
                     "parameters": {
                         "a_type": {
-                            "type": "String"
+                            "name": "a_type",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -168,7 +174,9 @@
                     "description": "Type name of an object as a string. May include generic parameters, as in \"Interval<Time>\".",
                     "parameters": {
                         "an_object": {
-                            "type": "Any"
+                            "name": "an_object",
+                            "type": "Any",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -198,7 +206,10 @@
                     "description": "Test for membership of a key.",
                     "parameters": {
                         "a_key": {
-                            "type": "Ordered"
+                            "name": "a_key",
+                            "_type": "P_BMM_SINGLE_PROPERTY_OPEN",
+                            "type": "K",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -210,7 +221,10 @@
                     "description": "Return item for key  a_key'.",
                     "parameters": {
                         "a_key": {
-                            "type": "Ordered"
+                            "name": "a_key",
+                            "_type": "P_BMM_SINGLE_PROPERTY_OPEN",
+                            "type": "K",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -238,7 +252,10 @@
                     "description": "Test for membership of a value.",
                     "parameters": {
                         "v": {
-                            "type": "Any"
+                            "name": "v",
+                            "_type": "P_BMM_SINGLE_PROPERTY_OPEN",
+                            "type": "T",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -363,7 +380,9 @@
                     "description": "Product by `other'. Actual type of result depends on arithmetic balancing rules.",
                     "parameters": {
                         "other": {
-                            "type": "Numeric"
+                            "name": "other",
+                            "type": "Numeric",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -375,7 +394,9 @@
                     "description": "Sum with `other' (commutative). Actual type of result depends on arithmetic balancing rules.",
                     "parameters": {
                         "other": {
-                            "type": "Numeric"
+                            "name": "other",
+                            "type": "Numeric",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -387,7 +408,9 @@
                     "description": "Result of subtracting `other'. Actual type of result depends on arithmetic balancing rules.",
                     "parameters": {
                         "other": {
-                            "type": "Numeric"
+                            "name": "other",
+                            "type": "Numeric",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -422,7 +445,9 @@
                     "description": "Logical conjunction",
                     "parameters": {
                         "other": {
-                            "type": "Boolean"
+                            "name": "other",
+                            "type": "Boolean",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -438,7 +463,9 @@
                     "description": "Boolean semi-strict conjunction with other",
                     "parameters": {
                         "other": {
-                            "type": "Boolean"
+                            "name": "other",
+                            "type": "Boolean",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -453,7 +480,9 @@
                     "description": "Boolean disjunction with other.",
                     "parameters": {
                         "other": {
-                            "type": "Boolean"
+                            "name": "other",
+                            "type": "Boolean",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -470,7 +499,9 @@
                     "description": "Boolean semi-strict disjunction with `other'.",
                     "parameters": {
                         "other": {
-                            "type": "Boolean"
+                            "name": "other",
+                            "type": "Boolean",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -485,7 +516,9 @@
                     "description": "Boolean exclusive or with `other'.",
                     "parameters": {
                         "other": {
-                            "type": "Boolean"
+                            "name": "other",
+                            "type": "Boolean",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -500,7 +533,9 @@
                     "description": "Boolean implication of `other' (semi-strict)",
                     "parameters": {
                         "other": {
-                            "type": "Boolean"
+                            "name": "other",
+                            "type": "Boolean",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -529,7 +564,9 @@
                     "description": "Concatenation operator - causes \u2018other\u2019 to be appended to this string.",
                     "parameters": {
                         "other": {
-                            "type": "String"
+                            "name": "other",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -595,7 +632,9 @@
                     "description": "Arithmetic comparison. In conjunction with \u2018=\u2019, enables the definition of the operators \u2018>\u2019, \u2018>=\u2019, \u2018<=\u2019, \u2018<>\u2019. In real type systems, this operator might be defined on another class for comparability.",
                     "parameters": {
                         "other": {
-                            "type": "Ordered"
+                            "name": "other",
+                            "type": "Ordered",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1206,7 +1245,10 @@
                     "description": "True if `(lower_unbounded or lower_included and v >= lower) or v > lower and (upper_unbounded or upper_included and v <= upper or v < upper)`.",
                     "parameters": {
                         "e": {
-                            "type": "Ordered"
+                            "name": "e",
+                            "_type": "P_BMM_SINGLE_PROPERTY_OPEN",
+                            "type": "T",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1218,7 +1260,9 @@
                     "description": "True if there is any overlap between intervals represented by Current and `other'. True if at least one limit of other is strictly inside the limits of this interval.",
                     "parameters": {
                         "other": {
-                            "type": "Interval"
+                            "name": "other",
+                            "type": "Interval",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1230,7 +1274,9 @@
                     "description": "True if current interval properly contains `other`? True if all points of `other` are inside the current interval.",
                     "parameters": {
                         "other": {
-                            "type": "Interval"
+                            "name": "other",
+                            "type": "Interval",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1242,7 +1288,9 @@
                     "description": "True if current object's interval is semantically same as `other`.",
                     "parameters": {
                         "other": {
-                            "type": "Any"
+                            "name": "other",
+                            "type": "Any",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -1957,7 +2005,9 @@
                     "description": "",
                     "parameters": {
                         "y": {
-                            "type": "Integer"
+                            "name": "y",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -1972,7 +2022,9 @@
                     "description": "",
                     "parameters": {
                         "m": {
-                            "type": "Integer"
+                            "name": "m",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -1987,13 +2039,19 @@
                     "description": "True if d >= 1 and d <= days_in_month (m, y)",
                     "parameters": {
                         "y": {
-                            "type": "Integer"
+                            "name": "y",
+                            "type": "Integer",
+                            "is_mandatory": true
                         },
                         "m": {
-                            "type": "Integer"
+                            "name": "m",
+                            "type": "Integer",
+                            "is_mandatory": true
                         },
                         "d": {
-                            "type": "Integer"
+                            "name": "d",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -2008,13 +2066,19 @@
                     "description": "True if (h >= 0 and h < Hours_in_day) or (h = Hours_in_day and m = 0 and s = 0)",
                     "parameters": {
                         "h": {
-                            "type": "Integer"
+                            "name": "h",
+                            "type": "Integer",
+                            "is_mandatory": true
                         },
                         "m": {
-                            "type": "Integer"
+                            "name": "m",
+                            "type": "Integer",
+                            "is_mandatory": true
                         },
                         "s": {
-                            "type": "Integer"
+                            "name": "s",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -2029,7 +2093,9 @@
                     "description": "True if m >= 0 and m < Minutes_in_hour.",
                     "parameters": {
                         "m": {
-                            "type": "Integer"
+                            "name": "m",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -2044,7 +2110,9 @@
                     "description": "True if s >= 0 and s < Seconds_in_minute .",
                     "parameters": {
                         "s": {
-                            "type": "Integer"
+                            "name": "s",
+                            "type": "Integer",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -2059,7 +2127,9 @@
                     "description": "True if fs >= 0.0 and fs < 1.0 .",
                     "parameters": {
                         "fs": {
-                            "type": "Double"
+                            "name": "fs",
+                            "type": "Double",
+                            "is_mandatory": true
                         }
                     },
                     "post_conditions": {
@@ -2074,7 +2144,9 @@
                     "description": "String is a valid ISO 8601 date, i.e. takes the complete form:\n\n* `YYYY-MM-DD` (extended, preferred) or one of the partial forms `YYYY-MM` or `YYYY`\n* `YYYYMMDD` (compact) or a partial variant `YYYYMM`.\n\nWhere:\n\n* `YYYY` is the string form of any positive number in the range `0000` - `9999` (zero-filled to four digits)\n* `MM` is `01` - `12` (zero-filled to two digits)\n* `DD` is `01` - `31` (zero-filled to two digits)\n\nThe combinations of `YYYY`, `MM`, `DD` numbers must be correct with respect to the Gregorian calendar.",
                     "parameters": {
                         "s": {
-                            "type": "String"
+                            "name": "s",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2086,7 +2158,9 @@
                     "description": "String is a valid ISO 8601 date, i.e. takes the form:\n\n* `hh:mm:ss[(,|.)s+][Z|\u00b1hh[:mm]]` (extended)\n* `hhmmss[(,|.)s+][Z|\u00b1hh[mm]]` (compact)\n* or one of the partial forms:\n** `hh:mm` (extended)\n** `hhmm` or `hh` (compact)\n\nwith an additional optional timezone indicator of:\n\n* `Z` or`\u00b1hh[:mm]` (extended)  `\u00b1hh[mm]` (compact)\n\nWhere:\n\n* `hh` is \"00\" - \"23\" (0-filled to two digits)\n* `mm` is \"00\" - \"59\" (0-filled to two digits)\n* `ss` is \"00\" - \"60\" (0-filled to two digits)\n* `[(,|.)s+]` is an optional string consisting of a comma or decimal point followed by numeric string of 1 or more digits, representing a fractional second\n* `Z` is a literal meaning UTC (modern replacement for GMT), i.e. timezone `+0000`\n",
                     "parameters": {
                         "s": {
-                            "type": "String"
+                            "name": "s",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2098,7 +2172,9 @@
                     "description": "String is a valid ISO 8601 date-time, i.e. takes the form:\n\n* `YYYY-MM-DDThh:mm:ss[(,|.)s+][Z|\u00b1hh[:mm]]` (extended)\n* `YYYYMMDDThhmmss[(,|.)s+][Z|\u00b1hh[mm]]` (compact)\n* or one of the partial forms:\n** `YYYY-MM-DDThh:mm` or `YYYY-MM-DDThh` (extended)\n** `YYYYMMDDThhmm` or `YYYYMMDDThh` (compact)",
                     "parameters": {
                         "s": {
-                            "type": "String"
+                            "name": "s",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
@@ -2110,7 +2186,9 @@
                     "description": "String is a valid ISO 8601 duration, i.e. takes the form:\n\n* `P[nnY][nnM][nnW][nnD][T[nnH][nnM][nnS]]`\n\nWhere each nn represents a number of years, months, etc. nnW represents a number of 7-day weeks.\n\nNote: allowing the `W` designator in the same expression as other designators is an exception to the published standard, but necessary in clinical information (typically for representing pregnancy duration).",
                     "parameters": {
                         "s": {
-                            "type": "String"
+                            "name": "s",
+                            "type": "String",
+                            "is_mandatory": true
                         }
                     },
                     "result": {
