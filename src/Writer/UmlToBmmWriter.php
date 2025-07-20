@@ -231,7 +231,12 @@ class UmlToBmmWriter extends AbstractWriter
                 $bmmFunction['post_conditions'][$umlConstraint->name] = $umlConstraint->rule;
             }
         }
-        $bmmFunction['result'] = self::asType($umlOperation->return->name, $umlOperation->maxOccurs, $umlClass, $collectedUmlClasses);
+        $bmmProperty = self::asType($umlOperation->return->name, $umlOperation->maxOccurs, $umlClass, $collectedUmlClasses);
+        $bmmFunction['result'] = match ($bmmProperty['_type'] ?? null) {
+            'P_BMM_GENERIC_PROPERTY' => array_merge(['_type' => 'P_BMM_GENERIC_TYPE'], $bmmProperty['type_def']),
+            'P_BMM_CONTAINER_PROPERTY' => array_merge(['_type' => 'P_BMM_CONTAINER_TYPE'], $bmmProperty['type_def']),
+            default => $bmmProperty,
+        };
         return $bmmFunction;
     }
 

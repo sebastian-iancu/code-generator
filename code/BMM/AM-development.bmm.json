@@ -316,11 +316,9 @@
                     "name": "physical_paths",
                     "description": "Set of language-independent paths extracted from archetype. Paths obey Xpath-like syntax and are formed from alternations of C_OBJECT.node_id and C_ATTRIBUTE.rm_attribute_name values. ",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "String"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "String"
                     }
                 },
                 "logical_paths": {
@@ -334,11 +332,9 @@
                         }
                     },
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "String"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "String"
                     }
                 },
                 "specialisation_depth": {
@@ -1561,33 +1557,27 @@
                     "name": "value_set_expanded",
                     "description": "Effective set of at-code values corresponding to an ac-code for a locally defined value set. Not defined for ac-codes that have no local value set.",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "String"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "String"
                     }
                 },
                 "value_set_substituted": {
                     "name": "value_set_substituted",
                     "description": "For locally defined value sets within individual code bindings: return the term URI(s) substituted from bindings for local at-codes in `_value_set_expanded_`.",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "Uri"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "Uri"
                     }
                 },
                 "value_set_resolved": {
                     "name": "value_set_resolved",
                     "description": "For locally defined value sets within individual code bindings: final set of external codes to which value set is resolved.",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "Terminology_code"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "Terminology_code"
                     }
                 },
                 "valid_value": {
@@ -2233,11 +2223,9 @@
                     "name": "keys",
                     "description": "List of all keys used in this term.",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "String"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "String"
                     }
                 }
             },
@@ -2386,33 +2374,27 @@
                     "name": "id_codes",
                     "description": "List of all id codes in the terminology., i.e. the 'id' codes in an ADL archetype, which are the `_node_id_` values on `C_OBJECT` descendants.",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "String"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "String"
                     }
                 },
                 "value_codes": {
                     "name": "value_codes",
                     "description": "List of all value term codes in the terminology, i.e. the 'at' codes in an ADL archetype, which are used as possible values on terminological constrainer nodes.",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "String"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "String"
                     }
                 },
                 "value_set_codes": {
                     "name": "value_set_codes",
                     "description": "List of all value set codes in the terminology defining value sets. These correspond to the 'ac' codes in an ADL archetype.",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "String"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "String"
                     }
                 },
                 "has_language": {
@@ -2505,11 +2487,9 @@
                     "name": "terminologies_available",
                     "description": "List of terminologies to which term or constraint bindings exist in this terminology, computed from bindings.",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "String"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "String"
                     }
                 },
                 "terminology_extract_term": {
@@ -2552,11 +2532,9 @@
                     "name": "languages_available",
                     "description": "List of languages in which terms in this terminology are available.",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "String"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "String"
                     }
                 }
             },
@@ -4101,11 +4079,9 @@
                     "name": "alternatives",
                     "description": "List of alternative constraints for the single child of this attribute within the data.",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "C_OBJECT"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "C_OBJECT"
                     }
                 }
             },
@@ -4150,11 +4126,9 @@
                     "name": "members",
                     "description": "List of constraints representing members of the container value of this attribute within the data. Semantics of the uniqueness and ordering of items in the container are given by the cardinality.",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "C_OBJECT"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "C_OBJECT"
                     }
                 }
             }

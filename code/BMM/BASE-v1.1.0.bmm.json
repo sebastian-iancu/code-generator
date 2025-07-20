@@ -2314,11 +2314,9 @@
                     "name": "languages_available",
                     "description": "Total list of languages available in this resource, derived from original_language and translations. ",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "String"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "String"
                     }
                 }
             },

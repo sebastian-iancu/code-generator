@@ -414,11 +414,9 @@
                         }
                     },
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "Any"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "Any"
                     }
                 },
                 "path_exists": {
@@ -726,25 +724,21 @@
                     "name": "all_version_ids",
                     "description": "Return a list of ids of all versions in this object. ",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "OBJECT_VERSION_ID"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "OBJECT_VERSION_ID"
                     }
                 },
                 "all_versions": {
                     "name": "all_versions",
                     "description": "Return a list of all versions in this object. ",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
                         "type_def": {
-                            "container_type": "List",
-                            "type_def": {
-                                "_type": "P_BMM_GENERIC_TYPE",
-                                "root_type": "VERSION",
-                                "generic_parameters": "T"
-                            }
+                            "_type": "P_BMM_GENERIC_TYPE",
+                            "root_type": "VERSION",
+                            "generic_parameters": "T"
                         }
                     }
                 },
@@ -1646,11 +1640,9 @@
                     "name": "languages_available",
                     "description": "Total list of languages available in this resource, derived from `_original_language_` and `_translations_`.\n",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "String"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "String"
                     }
                 }
             },
@@ -2052,22 +2044,18 @@
                     "name": "row_names",
                     "description": "Return set of row names.",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "DV_TEXT"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "DV_TEXT"
                     }
                 },
                 "column_names": {
                     "name": "column_names",
                     "description": "Return set of column names.",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "DV_TEXT"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "DV_TEXT"
                     }
                 },
                 "ith_row": {
@@ -2232,11 +2220,9 @@
                     "name": "names",
                     "description": "Retrieve the names of all items.",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "DV_TEXT"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "DV_TEXT"
                     }
                 },
                 "named_item": {
@@ -4984,36 +4970,30 @@
                     "name": "terminology_identifiers",
                     "description": "Set of all terminology identifiers known in the terminology service. Values from the US NLM UMLS meta-data list at:- http:\/\/www.nlm.nih.gov\/research\/umls\/metaa1.html ",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "String"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "String"
                     }
                 },
                 "openehr_code_sets": {
                     "name": "openehr_code_sets",
                     "description": "Set of all code set identifiers known in the terminology service. \n",
                     "result": {
-                        "_type": "P_BMM_GENERIC_PROPERTY",
-                        "type_def": {
-                            "root_type": "Hash",
-                            "generic_parameters": [
-                                "String",
-                                "String"
-                            ]
-                        }
+                        "_type": "P_BMM_GENERIC_TYPE",
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "String"
+                        ]
                     }
                 },
                 "code_set_identifiers": {
                     "name": "code_set_identifiers",
                     "description": "Set of all code sets identifiers for which there is an internal openEHR name; returned as a Map of ids keyed by internal name. ",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "String"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "String"
                     }
                 }
             }
@@ -5033,11 +5013,9 @@
                     "name": "all_codes",
                     "description": "Return all codes known in this code set.",
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "CODE_PHRASE"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "CODE_PHRASE"
                     }
                 },
                 "has_lang": {
@@ -5099,11 +5077,9 @@
                         }
                     },
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "CODE_PHRASE"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "CODE_PHRASE"
                     }
                 },
                 "codes_for_group_name": {
@@ -5122,11 +5098,9 @@
                         }
                     },
                     "result": {
-                        "_type": "P_BMM_CONTAINER_PROPERTY",
-                        "type_def": {
-                            "container_type": "List",
-                            "type": "CODE_PHRASE"
-                        }
+                        "_type": "P_BMM_CONTAINER_TYPE",
+                        "container_type": "List",
+                        "type": "CODE_PHRASE"
                     }
                 },
                 "has_code_for_group_id": {
