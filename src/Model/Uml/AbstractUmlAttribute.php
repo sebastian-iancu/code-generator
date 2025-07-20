@@ -37,7 +37,7 @@ class AbstractUmlAttribute implements CollectableInterface
         $nodes = $xmlNode->xpath("ancestor::packagedElement[@xmi:type='uml:Class']/ownedTemplateSignature/ownedParameter[ownedParameteredElement/@xmi:id='{$type->id}']");
         if ($nodes) {
             $templateParameter = new UmlTemplateParameter($nodes[0]);
-            $this->type = $templateParameter->type;
+            $this->type = $type;
             $this->templateParameterId = $templateParameter->id;
         } else {
             $this->type = $type;

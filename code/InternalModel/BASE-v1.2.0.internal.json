@@ -2125,9 +2125,9 @@
                                                                                 "id": "_18_1_83e026d_1422968609394_301885_26036",
                                                                                 "name": "a_key",
                                                                                 "type": {
-                                                                                    "id": "_18_1_83e026d_1422968609347_357665_25676",
-                                                                                    "name": "Ordered",
-                                                                                    "referenceMethod": "idref",
+                                                                                    "id": "_18_1_83e026d_1423238585821_726207_4325",
+                                                                                    "name": "K",
+                                                                                    "referenceMethod": "lookup",
                                                                                     "referentPath": null,
                                                                                     "referentType": null
                                                                                 },
@@ -2159,9 +2159,9 @@
                                                                                 "id": "_18_1_83e026d_1422968609409_654355_26039",
                                                                                 "name": "a_key",
                                                                                 "type": {
-                                                                                    "id": "_18_1_83e026d_1422968609347_357665_25676",
-                                                                                    "name": "Ordered",
-                                                                                    "referenceMethod": "idref",
+                                                                                    "id": "_18_1_83e026d_1423238585821_726207_4325",
+                                                                                    "name": "K",
+                                                                                    "referenceMethod": "lookup",
                                                                                     "referentPath": null,
                                                                                     "referentType": null
                                                                                 },
@@ -2172,9 +2172,9 @@
                                                                         },
                                                                         "umlConstraints": [],
                                                                         "return": {
-                                                                            "id": "Any",
-                                                                            "name": "Any",
-                                                                            "referenceMethod": "implicit",
+                                                                            "id": "_18_1_83e026d_1423127573578_205767_4910",
+                                                                            "name": "V",
+                                                                            "referenceMethod": "lookup",
                                                                             "referentPath": null,
                                                                             "referentType": null
                                                                         },
@@ -2421,9 +2421,9 @@
                                                                                 "id": "_18_1_83e026d_1437046557049_998290_5196",
                                                                                 "name": "v",
                                                                                 "type": {
-                                                                                    "id": "_18_1_83e026d_1422968609284_691010_25365",
-                                                                                    "name": "Any",
-                                                                                    "referenceMethod": "idref",
+                                                                                    "id": "_18_1_83e026d_1437046360991_140904_5190",
+                                                                                    "name": "T",
+                                                                                    "referenceMethod": "lookup",
                                                                                     "referentPath": null,
                                                                                     "referentType": null
                                                                                 },
@@ -2568,9 +2568,9 @@
                                                                         },
                                                                         "umlConstraints": [],
                                                                         "return": {
-                                                                            "id": "_18_1_83e026d_1422968609284_691010_25365",
-                                                                            "name": "Any",
-                                                                            "referenceMethod": "idref",
+                                                                            "id": "_18_1_83e026d_1437046360991_140904_5190",
+                                                                            "name": "T",
+                                                                            "referenceMethod": "lookup",
                                                                             "referentPath": null,
                                                                             "referentType": null
                                                                         },
@@ -2602,9 +2602,9 @@
                                                                         },
                                                                         "umlConstraints": [],
                                                                         "return": {
-                                                                            "id": "_18_1_83e026d_1422968609284_691010_25365",
-                                                                            "name": "Any",
-                                                                            "referenceMethod": "idref",
+                                                                            "id": "_18_1_83e026d_1437046360991_140904_5190",
+                                                                            "name": "T",
+                                                                            "referenceMethod": "lookup",
                                                                             "referentPath": null,
                                                                             "referentType": null
                                                                         },
@@ -2667,9 +2667,9 @@
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
-                                                                            "id": "_18_1_83e026d_1422968609284_691010_25365",
-                                                                            "name": "Any",
-                                                                            "referenceMethod": "idref",
+                                                                            "id": "_18_1_83e026d_1437046756435_830290_5212",
+                                                                            "name": "T",
+                                                                            "referenceMethod": "lookup",
                                                                             "referentPath": null,
                                                                             "referentType": null
                                                                         },
@@ -2683,9 +2683,9 @@
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
-                                                                            "id": "_18_1_83e026d_1422968609284_691010_25365",
-                                                                            "name": "Any",
-                                                                            "referenceMethod": "idref",
+                                                                            "id": "_18_1_83e026d_1437046756435_830290_5212",
+                                                                            "name": "T",
+                                                                            "referenceMethod": "lookup",
                                                                             "referentPath": null,
                                                                             "referentType": null
                                                                         },
@@ -2824,9 +2824,9 @@
                                                                         },
                                                                         "umlConstraints": [],
                                                                         "return": {
-                                                                            "id": "_18_1_83e026d_1422968609284_691010_25365",
-                                                                            "name": "Any",
-                                                                            "referenceMethod": "idref",
+                                                                            "id": "_18_1_83e026d_1437047039916_628158_5288",
+                                                                            "name": "T",
+                                                                            "referenceMethod": "lookup",
                                                                             "referentPath": null,
                                                                             "referentType": null
                                                                         },
@@ -9350,9 +9350,9 @@
                                                                         "id": "_18_1_83e026d_1422968609316_978889_25492",
                                                                         "name": "lower",
                                                                         "type": {
-                                                                            "id": "_18_1_83e026d_1422968609347_357665_25676",
-                                                                            "name": "Ordered",
-                                                                            "referenceMethod": "idref",
+                                                                            "id": "_18_1_83e026d_1422968609550_577611_27367",
+                                                                            "name": "T",
+                                                                            "referenceMethod": "lookup",
                                                                             "referentPath": null,
                                                                             "referentType": null
                                                                         },
@@ -9368,9 +9368,9 @@
                                                                         "id": "_18_1_83e026d_1422968609316_105724_25493",
                                                                         "name": "upper",
                                                                         "type": {
-                                                                            "id": "_18_1_83e026d_1422968609347_357665_25676",
-                                                                            "name": "Ordered",
-                                                                            "referenceMethod": "idref",
+                                                                            "id": "_18_1_83e026d_1422968609550_577611_27367",
+                                                                            "name": "T",
+                                                                            "referenceMethod": "lookup",
                                                                             "referentPath": null,
                                                                             "referentType": null
                                                                         },
@@ -9474,9 +9474,9 @@
                                                                                 "id": "_18_1_83e026d_1422968609394_109340_26009",
                                                                                 "name": "e",
                                                                                 "type": {
-                                                                                    "id": "_18_1_83e026d_1422968609347_357665_25676",
-                                                                                    "name": "Ordered",
-                                                                                    "referenceMethod": "idref",
+                                                                                    "id": "_18_1_83e026d_1422968609550_577611_27367",
+                                                                                    "name": "T",
+                                                                                    "referenceMethod": "lookup",
                                                                                     "referentPath": null,
                                                                                     "referentType": null
                                                                                 },

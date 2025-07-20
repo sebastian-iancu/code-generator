@@ -228,7 +228,7 @@
                         }
                     },
                     "result": {
-                        "type": "Any"
+                        "type": "V"
                     }
                 }
             }
@@ -295,14 +295,14 @@
                     "name": "first",
                     "description": "Return first element.",
                     "result": {
-                        "type": "Any"
+                        "type": "T"
                     }
                 },
                 "last": {
                     "name": "last",
                     "description": "Return last element.",
                     "result": {
-                        "type": "Any"
+                        "type": "T"
                     }
                 }
             },

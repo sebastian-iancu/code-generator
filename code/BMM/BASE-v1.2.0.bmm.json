@@ -242,7 +242,7 @@
                         }
                     },
                     "result": {
-                        "type": "Any"
+                        "type": "V"
                     }
                 }
             }
@@ -331,7 +331,7 @@
                     "result": {
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
-                        "type": "Any"
+                        "type": "T"
                     }
                 },
                 "select": {
@@ -345,7 +345,7 @@
                         }
                     },
                     "result": {
-                        "type": "Any"
+                        "type": "T"
                     }
                 }
             }
@@ -367,14 +367,14 @@
                     "name": "first",
                     "description": "Return first element.",
                     "result": {
-                        "type": "Any"
+                        "type": "T"
                     }
                 },
                 "last": {
                     "name": "last",
                     "description": "Return last element.",
                     "result": {
-                        "type": "Any"
+                        "type": "T"
                     }
                 }
             },
@@ -420,7 +420,7 @@
                         }
                     },
                     "result": {
-                        "type": "Any"
+                        "type": "T"
                     }
                 }
             }
