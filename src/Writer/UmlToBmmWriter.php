@@ -259,6 +259,10 @@ class UmlToBmmWriter extends AbstractWriter
                 'upper_unbounded' => true,
             ];
         }
+        // a bit hacky and silly solution, but it works
+        if (!empty($bmmParameter['_type'])) {
+            $bmmParameter['_type'] = str_replace('_PROPERTY', '_FUNCTION_PARAMETER', $bmmParameter['_type']);
+        }
         if ($umlParameter->minOccurs) {
             $bmmParameter['is_mandatory'] = true;
         }

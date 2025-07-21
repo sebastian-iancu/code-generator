@@ -572,7 +572,7 @@
                         },
                         "rmcc": {
                             "name": "rmcc",
-                            "_type": "P_BMM_GENERIC_PROPERTY",
+                            "_type": "P_BMM_GENERIC_FUNCTION_PARAMETER",
                             "type_def": {
                                 "root_type": "FUNCTION",
                                 "generic_parameter_defs": []
@@ -689,7 +689,7 @@
                         },
                         "rmcc": {
                             "name": "rmcc",
-                            "_type": "P_BMM_GENERIC_PROPERTY",
+                            "_type": "P_BMM_GENERIC_FUNCTION_PARAMETER",
                             "type_def": {
                                 "root_type": "FUNCTION",
                                 "generic_parameter_defs": []
@@ -869,7 +869,7 @@
                         },
                         "rmcc": {
                             "name": "rmcc",
-                            "_type": "P_BMM_GENERIC_PROPERTY",
+                            "_type": "P_BMM_GENERIC_FUNCTION_PARAMETER",
                             "type_def": {
                                 "root_type": "FUNCTION",
                                 "generic_parameter_defs": []
@@ -1090,7 +1090,7 @@
                         },
                         "rmcc": {
                             "name": "rmcc",
-                            "_type": "P_BMM_GENERIC_PROPERTY",
+                            "_type": "P_BMM_GENERIC_FUNCTION_PARAMETER",
                             "type_def": {
                                 "root_type": "FUNCTION",
                                 "generic_parameter_defs": []
@@ -1322,7 +1322,7 @@
                         },
                         "rmcc": {
                             "name": "rmcc",
-                            "_type": "P_BMM_GENERIC_PROPERTY",
+                            "_type": "P_BMM_GENERIC_FUNCTION_PARAMETER",
                             "type_def": {
                                 "root_type": "FUNCTION",
                                 "generic_parameter_defs": []

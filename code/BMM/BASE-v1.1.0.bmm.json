@@ -207,7 +207,7 @@
                     "parameters": {
                         "a_key": {
                             "name": "a_key",
-                            "_type": "P_BMM_SINGLE_PROPERTY_OPEN",
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN",
                             "type": "K",
                             "is_mandatory": true
                         }
@@ -222,7 +222,7 @@
                     "parameters": {
                         "a_key": {
                             "name": "a_key",
-                            "_type": "P_BMM_SINGLE_PROPERTY_OPEN",
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN",
                             "type": "K",
                             "is_mandatory": true
                         }
@@ -253,7 +253,7 @@
                     "parameters": {
                         "v": {
                             "name": "v",
-                            "_type": "P_BMM_SINGLE_PROPERTY_OPEN",
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN",
                             "type": "T",
                             "is_mandatory": true
                         }
@@ -1246,7 +1246,7 @@
                     "parameters": {
                         "e": {
                             "name": "e",
-                            "_type": "P_BMM_SINGLE_PROPERTY_OPEN",
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN",
                             "type": "T",
                             "is_mandatory": true
                         }

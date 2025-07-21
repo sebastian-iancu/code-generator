@@ -935,7 +935,7 @@
                         },
                         "an_other_input_uids": {
                             "name": "an_other_input_uids",
-                            "_type": "P_BMM_CONTAINER_PROPERTY",
+                            "_type": "P_BMM_CONTAINER_FUNCTION_PARAMETER",
                             "type_def": {
                                 "container_type": "List",
                                 "type": "OBJECT_VERSION_ID"
@@ -2120,7 +2120,7 @@
                     "parameters": {
                         "keys": {
                             "name": "keys",
-                            "_type": "P_BMM_CONTAINER_PROPERTY",
+                            "_type": "P_BMM_CONTAINER_FUNCTION_PARAMETER",
                             "type_def": {
                                 "container_type": "List",
                                 "type": "String"
@@ -2141,7 +2141,7 @@
                     "parameters": {
                         "keys": {
                             "name": "keys",
-                            "_type": "P_BMM_CONTAINER_PROPERTY",
+                            "_type": "P_BMM_CONTAINER_FUNCTION_PARAMETER",
                             "type_def": {
                                 "container_type": "List",
                                 "type": "String"
