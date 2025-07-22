@@ -244,7 +244,7 @@ class UmlToBmmWriter extends AbstractWriter
         $bmmParameter = [
             '_type' => null,
             'name' => $umlParameter->name,
-            'description' => $umlParameter->description,
+            'description' => $umlParameter->description ?? null,
             'is_mandatory' => (bool)$umlParameter->minOccurs,
         ];
         if ($umlParameter->templateParameterId) {
@@ -353,7 +353,7 @@ class UmlToBmmWriter extends AbstractWriter
     public static function asTypeDef(string $descriptor, Collection $collectedUmlClasses): array
     {
         $typeDef = [];
-        if (preg_match('/^(\w+)\<(.*)\>$/', $descriptor, $m)) {
+        if (preg_match('/^(\w+)\s*\<(.*)\>$/', $descriptor, $m)) {
             $typeDef['root_type'] = $m[1];
             if (str_contains($m[2], '<')) {
                 $descriptorPart = $m[2];

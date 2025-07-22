@@ -29,7 +29,7 @@ class Collection extends ArrayObject implements JsonSerializable
     public function get(string $key): ?CollectableInterface
     {
         $key = $this->aliases[$key] ?? $key;
-        return $this->offsetGet($key) ?: null;
+        return $this->offsetExists($key) ? $this->offsetGet($key) : null;
     }
 
     public function flush(): void
