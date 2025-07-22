@@ -2798,9 +2798,9 @@
             }
         },
         "VALIDITY_KIND": {
+            "_type": "P_BMM_ENUMERATION_STRING",
             "name": "VALIDITY_KIND",
             "documentation": "An enumeration of three values that may commonly occur in constraint models.\n\nUse as the type of any attribute within this model, which expresses constraint on some attribute in a class in a reference model. For example to indicate validity\nof Date\/Time fields.",
-            "_type": "P_BMM_ENUMERATION_STRING",
             "ancestors": [
                 "String"
             ],
@@ -2811,9 +2811,9 @@
             ]
         },
         "VERSION_STATUS": {
+            "_type": "P_BMM_ENUMERATION_STRING",
             "name": "VERSION_STATUS",
             "documentation": "Status of a versioned artefact, as one of a number of possible values: uncontrolled, prerelease, release, build.",
-            "_type": "P_BMM_ENUMERATION_STRING",
             "ancestors": [
                 "String"
             ],
@@ -3628,7 +3628,6 @@
                         "root_type": "Hash",
                         "generic_parameter_defs": {
                             "K": {
-                                "_type": "P_BMM_SIMPLE_TYPE",
                                 "type": "String"
                             },
                             "V": {
@@ -3636,7 +3635,6 @@
                                 "root_type": "Hash",
                                 "generic_parameter_defs": {
                                     "K": {
-                                        "_type": "P_BMM_SIMPLE_TYPE",
                                         "type": "String"
                                     },
                                     "V": {

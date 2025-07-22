@@ -343,7 +343,6 @@
             ]
         }
     },
-    "primitive_types": [],
     "class_definitions": {
         "PATHABLE": {
             "name": "PATHABLE",

@@ -369,7 +369,6 @@
             ]
         }
     },
-    "primitive_types": [],
     "class_definitions": {
         "PATHABLE": {
             "name": "PATHABLE",
@@ -7116,8 +7115,8 @@
             }
         },
         "VIEW_STATUS": {
-            "name": "VIEW_STATUS",
             "_type": "P_BMM_ENUMERATION_STRING",
+            "name": "VIEW_STATUS",
             "ancestors": [
                 "String"
             ],
