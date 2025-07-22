@@ -189,9 +189,33 @@ class UmlToBmmWriter extends AbstractWriter
             }
         }
         if ($umlClass instanceof UmlEnumeration) {
-            $bmmClass['_type'] = 'P_BMM_ENUMERATION_STRING';
-            $bmmClass['ancestors'] = ['String'];
-            $bmmClass['item_names'] = $umlClass->enumerations;
+            if ($umlClass->name === 'CONSTRAINT_STATUS') {
+                $bmmClass['_type'] = 'P_BMM_ENUMERATION_INTEGER';
+                $bmmClass['ancestors'] = ['Integer'];
+                $bmmClass['item_values'] = array_keys($umlClass->enumerations);
+            } else {
+                $bmmClass['_type'] = 'P_BMM_ENUMERATION_STRING';
+                $bmmClass['ancestors'] = ['String'];
+            }
+            $bmmClass['item_names'] = array_column($umlClass->enumerations, 'name');
+            $bmmClass['item_documentations'] = array_column($umlClass->enumerations, 'description');
+        }
+        if ($umlClass->name === 'PROPORTION_KIND') {
+            $itemNames = $itemValues = $itemDocumentations = [];
+            foreach ($umlClass->umlProperties as $umlProperty) {
+                $itemNames[] = $umlProperty->name;
+                $itemValues[] = (int)$umlProperty->default;
+                $itemDocumentations[] = $umlProperty->description;
+            }
+            $bmmClass = [
+                '_type' => 'P_BMM_ENUMERATION_INTEGER',
+                'name' => $umlClass->name,
+                'documentation' => $umlClass->description,
+                'ancestors' => ['Integer'],
+                'item_names' => $itemNames,
+                'item_values' => $itemValues,
+                'item_documentations' => $itemDocumentations,
+            ];
         }
         self::log('  Generated [%s] class.', $bmmClass['name']);
         return array_filter($bmmClass);

@@ -15,7 +15,7 @@ class UmlEnumeration implements CollectableInterface
     public readonly string $id;
     public readonly string $name;
     public readonly string $description;
-    /** @var string[] */
+    /** @var array<string, array<string, mixed>> */
     public readonly array $enumerations;
 
     public function __construct(SimpleXMLElement $xmlNode)
@@ -25,7 +25,10 @@ class UmlEnumeration implements CollectableInterface
         $this->description = (string)$xmlNode->ownedComment['body'];
         $enumerations = [];
         foreach ($xmlNode->ownedLiteral as $node) {
-            $enumerations[] = (string)$node['name'];
+            $enumerations[] = [
+                'name' => (string)$node['name'],
+                'description' => (string)$node->ownedComment['body'],
+            ];
         }
         $this->enumerations = $enumerations;
 

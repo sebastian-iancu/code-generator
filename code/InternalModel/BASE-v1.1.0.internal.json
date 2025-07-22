@@ -1297,9 +1297,18 @@
                                                                 "name": "VALIDITY_KIND",
                                                                 "description": "An enumeration of three values that may commonly occur in constraint models.\n\nUse as the type of any attribute within this model, which expresses constraint on some attribute in a class in a reference model. For example to indicate validity\nof Date\/Time fields.",
                                                                 "enumerations": [
-                                                                    "mandatory",
-                                                                    "optional",
-                                                                    "prohibited"
+                                                                    {
+                                                                        "name": "mandatory",
+                                                                        "description": "Constant to indicate mandatory presence of something."
+                                                                    },
+                                                                    {
+                                                                        "name": "optional",
+                                                                        "description": "Constant to indicate optional presence of something."
+                                                                    },
+                                                                    {
+                                                                        "name": "prohibited",
+                                                                        "description": "Constant to indicate disallowed presence of something."
+                                                                    }
                                                                 ]
                                                             },
                                                             "VERSION_STATUS": {
@@ -1307,11 +1316,26 @@
                                                                 "name": "VERSION_STATUS",
                                                                 "description": "Status of a versioned artefact, as one of a number of possible values: uncontrolled, prerelease, release, build.",
                                                                 "enumerations": [
-                                                                    "alpha",
-                                                                    "beta",
-                                                                    "release_candidate",
-                                                                    "released",
-                                                                    "build"
+                                                                    {
+                                                                        "name": "alpha",
+                                                                        "description": "Value representing a version which is 'unstable', i.e. contains an unknown size of change with respect to its base version. Rendered with the build number as a string in the form `N.M.P-alpha.B` e.g. `2.0.1-alpha.154`."
+                                                                    },
+                                                                    {
+                                                                        "name": "beta",
+                                                                        "description": "Value representing a version which is 'beta', i.e. contains an unknown but reducing size of change with respect to its base version. Rendered with the build number as a string in the form `N.M.P-beta.B` e.g. `2.0.1-beta.154`."
+                                                                    },
+                                                                    {
+                                                                        "name": "release_candidate",
+                                                                        "description": "Value representing a version which is 'release candidate', i.e. contains only patch-level changes on the base version. Rendered as a string as `N.M.P-rc.B` e.g. `2.0.1-rc.27`."
+                                                                    },
+                                                                    {
+                                                                        "name": "released",
+                                                                        "description": "Value representing a version which is 'released', i.e. is the definitive base version. Rendered with the build number as a string in the form `N.M.P` e.g. `2.0.1`."
+                                                                    },
+                                                                    {
+                                                                        "name": "build",
+                                                                        "description": "Value representing a version which is a build of the current base release. Rendered with the build number as a string in the form `N.M.P+B` e.g. `2.0.1+33`."
+                                                                    }
                                                                 ]
                                                             }
                                                         }

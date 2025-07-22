@@ -2167,17 +2167,29 @@
             }
         },
         "CONSTRAINT_STATUS": {
-            "_type": "P_BMM_ENUMERATION_STRING",
+            "_type": "P_BMM_ENUMERATION_INTEGER",
             "name": "CONSTRAINT_STATUS",
             "documentation": "Status of `_constraint_`, with values allowing for 'soft' constraints, which are effectively different kinds of suggestions.",
             "ancestors": [
-                "String"
+                "Integer"
             ],
             "item_names": [
                 "required",
                 "extensible",
                 "preferred",
                 "example"
+            ],
+            "item_values": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "item_documentations": [
+                "Data item is required to formally satisfy `_constraint_`.\n\nEnumeration value = 0.",
+                "Data item value should satisfy `_constraint_`, i.e. a term in `_constraint_` is to be used if it covers the data item meaning (including more generally); if not, another code may be used, including from another terminology.\n\nEnumeration value = 1.",
+                "Data item value is by preference one of the codes defined by `_constraint_`, but for local reasons may be another code, including from another terminology.\n\nEnumeration value = 2.",
+                "The `_constraint_` code or value-set is considered purely as an example, and the data item may have any value."
             ]
         },
         "ARCHETYPE_TERM": {
@@ -2758,6 +2770,10 @@
             "item_names": [
                 "hide",
                 "show"
+            ],
+            "item_documentations": [
+                "Indicates to a tool to hide the model element to which this marker is attached.",
+                "Indicates to a tool to show the model element to which this marker is attached."
             ]
         },
         "P_ARCHETYPE_CONSTRAINT": {
@@ -3975,6 +3991,27 @@
                 "op_multiply",
                 "op_divide",
                 "op_exponent"
+            ],
+            "item_documentations": [
+                "Equals operator (= or ==)",
+                "Not equals operator (!= or \/=)",
+                "Less-than or equals operator (<=)",
+                "Less-than operator (<=)",
+                "Greater-than or equals operator (>=)",
+                "Greater-than operator (>)",
+                "Matches operator (matches or is_in)",
+                "Not logical operator",
+                "And logical operator",
+                "Or logical operator.",
+                "Xor logical operator",
+                "Implies logical operator",
+                "For-all (universal) quantifier",
+                "Exists quantifier",
+                "Arithmetic plus operator (+)",
+                "Arithmetic minus operator (-)",
+                "Arithmetic multiplication operator (*)",
+                "Arithmetic division operator (\/)",
+                "Arithmetic exponentiation operator (^)"
             ]
         },
         "CARDINALITY": {
