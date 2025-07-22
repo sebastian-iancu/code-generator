@@ -1,8 +1,8 @@
 {
     "bmm_version": "2.4",
     "rm_publisher": "openehr",
-    "schema_name": "base",
     "rm_release": "1.2.0",
+    "schema_name": "base",
     "schema_revision": "1.2.0.1",
     "schema_lifecycle_state": "stable",
     "schema_description": "openEHR base types.",
@@ -124,8 +124,8 @@
     "primitive_types": {
         "Any": {
             "name": "Any",
-            "is_abstract": true,
             "documentation": "Abstract ancestor class for all other classes. Usually maps to a type like `Any` or `Object` in an object-oriented technology. Defined here to provide value and reference equality semantics.",
+            "is_abstract": true,
             "functions": {
                 "is_equal": {
                     "name": "is_equal",
@@ -133,8 +133,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Any",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Any"
                         }
                     },
                     "result": {
@@ -147,8 +147,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Any",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Any"
                         }
                     },
                     "result": {
@@ -161,8 +161,8 @@
                     "parameters": {
                         "a_type": {
                             "name": "a_type",
-                            "type": "String",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "String"
                         }
                     },
                     "result": {
@@ -175,8 +175,8 @@
                     "parameters": {
                         "an_object": {
                             "name": "an_object",
-                            "type": "Any",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Any"
                         }
                     },
                     "result": {
@@ -189,8 +189,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Ordered",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Ordered"
                         }
                     },
                     "result": {
@@ -201,10 +201,10 @@
         },
         "Hash": {
             "name": "Hash",
+            "documentation": "Type representing a keyed table of values. V is the value type, and K the type of the keys. ",
             "ancestors": [
                 "Container"
             ],
-            "documentation": "Type representing a keyed table of values. V is the value type, and K the type of the keys. ",
             "generic_parameter_defs": {
                 "K": {
                     "name": "K",
@@ -220,10 +220,10 @@
                     "description": "Test for presence of `_a_key_`.",
                     "parameters": {
                         "a_key": {
-                            "name": "a_key",
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN",
-                            "type": "K",
-                            "is_mandatory": true
+                            "name": "a_key",
+                            "is_mandatory": true,
+                            "type": "K"
                         }
                     },
                     "result": {
@@ -235,10 +235,10 @@
                     "description": "Return item for key `_a_key_`.",
                     "parameters": {
                         "a_key": {
-                            "name": "a_key",
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN",
-                            "type": "K",
-                            "is_mandatory": true
+                            "name": "a_key",
+                            "is_mandatory": true,
+                            "type": "K"
                         }
                     },
                     "result": {
@@ -249,11 +249,11 @@
         },
         "Container": {
             "name": "Container",
+            "documentation": "Abstract ancestor of container types whose items are addressable in some way.",
             "is_abstract": true,
             "ancestors": [
                 "Any"
             ],
-            "documentation": "Abstract ancestor of container types whose items are addressable in some way.",
             "generic_parameter_defs": {
                 "T": {
                     "name": "T",
@@ -266,10 +266,10 @@
                     "description": "Test for membership of a value.",
                     "parameters": {
                         "v": {
-                            "name": "v",
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN",
-                            "type": "T",
-                            "is_mandatory": true
+                            "name": "v",
+                            "is_mandatory": true,
+                            "type": "T"
                         }
                     },
                     "result": {
@@ -296,8 +296,8 @@
                     "parameters": {
                         "test": {
                             "name": "test",
-                            "type": "Operation",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Operation"
                         }
                     },
                     "result": {
@@ -310,8 +310,8 @@
                     "parameters": {
                         "test": {
                             "name": "test",
-                            "type": "Operation",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Operation"
                         }
                     },
                     "result": {
@@ -324,8 +324,8 @@
                     "parameters": {
                         "test": {
                             "name": "test",
-                            "type": "Operation",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Operation"
                         }
                     },
                     "result": {
@@ -340,8 +340,8 @@
                     "parameters": {
                         "test": {
                             "name": "test",
-                            "type": "Operation",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Operation"
                         }
                     },
                     "result": {
@@ -352,10 +352,10 @@
         },
         "List": {
             "name": "List",
+            "documentation": "Ordered container that may contain duplicates.",
             "ancestors": [
                 "Container"
             ],
-            "documentation": "Ordered container that may contain duplicates.",
             "generic_parameter_defs": {
                 "T": {
                     "name": "T",
@@ -385,10 +385,10 @@
         },
         "Set": {
             "name": "Set",
+            "documentation": "Unordered container that may not contain duplicates.",
             "ancestors": [
                 "Container"
             ],
-            "documentation": "Unordered container that may not contain duplicates.",
             "generic_parameter_defs": {
                 "T": {
                     "name": "T",
@@ -398,10 +398,10 @@
         },
         "Array": {
             "name": "Array",
+            "documentation": "Container whose storage is assumed to be contiguous.",
             "ancestors": [
                 "Container"
             ],
-            "documentation": "Container whose storage is assumed to be contiguous.",
             "generic_parameter_defs": {
                 "T": {
                     "name": "T",
@@ -415,8 +415,8 @@
                     "parameters": {
                         "a_key": {
                             "name": "a_key",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         }
                     },
                     "result": {
@@ -427,26 +427,26 @@
         },
         "Uri": {
             "name": "Uri",
+            "documentation": "A kind of String constrained to obey the syntax of RFC 3986.",
             "ancestors": [
                 "String"
-            ],
-            "documentation": "A kind of String constrained to obey the syntax of RFC 3986."
+            ]
         },
         "Ordered_Numeric": {
             "name": "Ordered_Numeric",
+            "documentation": "Abstract notional parent class of ordered, numeric types, which are types with both the `_less_than_()` and arithmetic functions defined.",
             "is_abstract": true,
             "ancestors": [
                 "Ordered",
                 "Numeric"
-            ],
-            "documentation": "Abstract notional parent class of ordered, numeric types, which are types with both the `_less_than_()` and arithmetic functions defined."
+            ]
         },
         "Integer": {
             "name": "Integer",
+            "documentation": "Type representing minimal interface of built-in Integer type.",
             "ancestors": [
                 "Ordered_Numeric"
             ],
-            "documentation": "Type representing minimal interface of built-in Integer type.",
             "functions": {
                 "add": {
                     "name": "add",
@@ -454,8 +454,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         }
                     },
                     "result": {
@@ -468,8 +468,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         }
                     },
                     "result": {
@@ -482,8 +482,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         }
                     },
                     "result": {
@@ -496,8 +496,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         }
                     },
                     "result": {
@@ -510,8 +510,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Double",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Double"
                         }
                     },
                     "result": {
@@ -524,8 +524,8 @@
                     "parameters": {
                         "mod": {
                             "name": "mod",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         }
                     },
                     "result": {
@@ -538,8 +538,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         }
                     },
                     "result": {
@@ -559,8 +559,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         }
                     },
                     "result": {
@@ -573,8 +573,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         }
                     },
                     "result": {
@@ -585,10 +585,10 @@
         },
         "Double": {
             "name": "Double",
+            "documentation": "Type used to represent double-precision decimal numbers. Corresponds to a double-precision floating point value in most languages.",
             "ancestors": [
                 "Ordered_Numeric"
             ],
-            "documentation": "Type used to represent double-precision decimal numbers. Corresponds to a double-precision floating point value in most languages.",
             "functions": {
                 "floor": {
                     "name": "floor",
@@ -603,8 +603,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Double",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Double"
                         }
                     },
                     "result": {
@@ -617,8 +617,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Double",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Double"
                         }
                     },
                     "result": {
@@ -631,8 +631,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Double",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Double"
                         }
                     },
                     "result": {
@@ -645,8 +645,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Double",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Double"
                         }
                     },
                     "result": {
@@ -659,8 +659,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Double",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Double"
                         }
                     },
                     "result": {
@@ -673,8 +673,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Double",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Double"
                         }
                     },
                     "result": {
@@ -694,8 +694,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Double",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Double"
                         }
                     },
                     "result": {
@@ -708,8 +708,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Double",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Double"
                         }
                     },
                     "result": {
@@ -720,11 +720,11 @@
         },
         "Numeric": {
             "name": "Numeric",
+            "documentation": "Abstract parent class of numeric types, which are types which have various arithmetic and comparison operators defined.",
             "is_abstract": true,
             "ancestors": [
                 "Any"
             ],
-            "documentation": "Abstract parent class of numeric types, which are types which have various arithmetic and comparison operators defined.",
             "functions": {
                 "add": {
                     "name": "add",
@@ -732,8 +732,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Numeric",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Numeric"
                         }
                     },
                     "result": {
@@ -746,8 +746,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Numeric",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Numeric"
                         }
                     },
                     "result": {
@@ -760,8 +760,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Numeric",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Numeric"
                         }
                     },
                     "result": {
@@ -774,8 +774,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Numeric",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Numeric"
                         }
                     },
                     "result": {
@@ -788,8 +788,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Numeric",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Numeric"
                         }
                     },
                     "result": {
@@ -807,24 +807,24 @@
         },
         "Octet": {
             "name": "Octet",
+            "documentation": "Type representing minimal interface of built-in Octet type.",
             "ancestors": [
                 "Ordered"
-            ],
-            "documentation": "Type representing minimal interface of built-in Octet type."
+            ]
         },
         "Character": {
             "name": "Character",
+            "documentation": "Type representing minimal interface of built-in Character type.",
             "ancestors": [
                 "Ordered"
-            ],
-            "documentation": "Type representing minimal interface of built-in Character type."
+            ]
         },
         "Boolean": {
             "name": "Boolean",
+            "documentation": "Type representing minimal interface of built-in Boolean type.",
             "ancestors": [
                 "Any"
             ],
-            "documentation": "Type representing minimal interface of built-in Boolean type.",
             "functions": {
                 "conjunction": {
                     "name": "conjunction",
@@ -832,8 +832,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Boolean",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Boolean"
                         }
                     },
                     "post_conditions": {
@@ -850,8 +850,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Boolean",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Boolean"
                         }
                     },
                     "post_conditions": {
@@ -867,8 +867,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Boolean",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Boolean"
                         }
                     },
                     "post_conditions": {
@@ -886,8 +886,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Boolean",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Boolean"
                         }
                     },
                     "post_conditions": {
@@ -903,8 +903,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Boolean",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Boolean"
                         }
                     },
                     "post_conditions": {
@@ -920,8 +920,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Boolean",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Boolean"
                         }
                     },
                     "post_conditions": {
@@ -947,10 +947,10 @@
         },
         "String": {
             "name": "String",
+            "documentation": "Type representing minimal interface of built-in String type, as used to represent textual data in any natural or formal language.",
             "ancestors": [
                 "Ordered"
             ],
-            "documentation": "Type representing minimal interface of built-in String type, as used to represent textual data in any natural or formal language.",
             "functions": {
                 "is_empty": {
                     "name": "is_empty",
@@ -979,8 +979,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "String",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "String"
                         }
                     },
                     "result": {
@@ -993,8 +993,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "String",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "String"
                         }
                     },
                     "result": {
@@ -1007,8 +1007,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "String",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "String"
                         }
                     },
                     "result": {
@@ -1019,10 +1019,10 @@
         },
         "Real": {
             "name": "Real",
+            "documentation": "Type used to represent decimal numbers. Corresponds to a single-precision floating point value in most languages.",
             "ancestors": [
                 "Ordered_Numeric"
             ],
-            "documentation": "Type used to represent decimal numbers. Corresponds to a single-precision floating point value in most languages.",
             "functions": {
                 "floor": {
                     "name": "floor",
@@ -1037,8 +1037,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Real",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Real"
                         }
                     },
                     "result": {
@@ -1051,8 +1051,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Real",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Real"
                         }
                     },
                     "result": {
@@ -1065,8 +1065,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Real",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Real"
                         }
                     },
                     "result": {
@@ -1079,8 +1079,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Real",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Real"
                         }
                     },
                     "result": {
@@ -1093,8 +1093,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Double",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Double"
                         }
                     },
                     "result": {
@@ -1107,8 +1107,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Real",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Real"
                         }
                     },
                     "result": {
@@ -1128,8 +1128,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Real",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Real"
                         }
                     },
                     "result": {
@@ -1142,8 +1142,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Real",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Real"
                         }
                     },
                     "result": {
@@ -1154,10 +1154,10 @@
         },
         "Integer64": {
             "name": "Integer64",
+            "documentation": "Type representing minimal interface of built-in Integer64 type.",
             "ancestors": [
                 "Ordered_Numeric"
             ],
-            "documentation": "Type representing minimal interface of built-in Integer64 type.",
             "functions": {
                 "add": {
                     "name": "add",
@@ -1165,8 +1165,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         }
                     },
                     "result": {
@@ -1179,8 +1179,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         }
                     },
                     "result": {
@@ -1193,8 +1193,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         }
                     },
                     "result": {
@@ -1207,8 +1207,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         }
                     },
                     "result": {
@@ -1221,8 +1221,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Double",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Double"
                         }
                     },
                     "result": {
@@ -1235,8 +1235,8 @@
                     "parameters": {
                         "mod": {
                             "name": "mod",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         }
                     },
                     "result": {
@@ -1249,8 +1249,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Integer64",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer64"
                         }
                     },
                     "result": {
@@ -1270,8 +1270,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Integer64",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer64"
                         }
                     },
                     "result": {
@@ -1284,8 +1284,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Integer64",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer64"
                         }
                     },
                     "result": {
@@ -1296,11 +1296,11 @@
         },
         "Ordered": {
             "name": "Ordered",
+            "documentation": "Abstract parent class of ordered types i.e. types on which the '<' operator is defined.",
             "is_abstract": true,
             "ancestors": [
                 "Any"
             ],
-            "documentation": "Abstract parent class of ordered types i.e. types on which the '<' operator is defined.",
             "functions": {
                 "less_than": {
                     "name": "less_than",
@@ -1308,8 +1308,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Ordered",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Ordered"
                         }
                     },
                     "result": {
@@ -1322,8 +1322,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Ordered",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Ordered"
                         }
                     },
                     "post_conditions": {
@@ -1339,8 +1339,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Ordered",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Ordered"
                         }
                     },
                     "post_conditions": {
@@ -1356,8 +1356,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Ordered",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Ordered"
                         }
                     },
                     "post_conditions": {
@@ -1371,10 +1371,10 @@
         },
         "Iso8601_date_time": {
             "name": "Iso8601_date_time",
+            "documentation": "Represents an ISO 8601 date\/time, including partial and extended forms. Value may be:\n\n* `YYYY-MM-DDThh:mm:ss[(,|.)sss][Z | \u00b1hh[:mm]]` (extended, preferred) or\n* `YYYYMMDDThhmmss[(,|.)sss][Z | \u00b1hh[mm]]` (compact)\n* or a partial variant.\n\nSee `_valid_iso8601_date_time()_` for validity.\n\nNote that this class includes 2 deviations from ISO 8601:2004:\n\n* for partial date\/times, any part of the date\/time up to the month may be missing, not just seconds and minutes as in the standard;\n* the time `24:00:00` is not allowed, since it would mean the date was really on the next day.",
             "ancestors": [
                 "Iso8601_type"
             ],
-            "documentation": "Represents an ISO 8601 date\/time, including partial and extended forms. Value may be:\n\n* `YYYY-MM-DDThh:mm:ss[(,|.)sss][Z | \u00b1hh[:mm]]` (extended, preferred) or\n* `YYYYMMDDThhmmss[(,|.)sss][Z | \u00b1hh[mm]]` (compact)\n* or a partial variant.\n\nSee `_valid_iso8601_date_time()_` for validity.\n\nNote that this class includes 2 deviations from ISO 8601:2004:\n\n* for partial date\/times, any part of the date\/time up to the month may be missing, not just seconds and minutes as in the standard;\n* the time `24:00:00` is not allowed, since it would mean the date was really on the next day.",
             "functions": {
                 "year": {
                     "name": "year",
@@ -1516,8 +1516,8 @@
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
-                            "type": "Iso8601_duration",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Iso8601_duration"
                         }
                     },
                     "result": {
@@ -1530,8 +1530,8 @@
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
-                            "type": "Iso8601_duration",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Iso8601_duration"
                         }
                     },
                     "result": {
@@ -1544,8 +1544,8 @@
                     "parameters": {
                         "a_date_time": {
                             "name": "a_date_time",
-                            "type": "Iso8601_date_time",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Iso8601_date_time"
                         }
                     },
                     "result": {
@@ -1558,8 +1558,8 @@
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
-                            "type": "Iso8601_duration",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Iso8601_duration"
                         }
                     },
                     "result": {
@@ -1572,8 +1572,8 @@
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
-                            "type": "Iso8601_duration",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Iso8601_duration"
                         }
                     },
                     "result": {
@@ -1598,10 +1598,10 @@
         },
         "Iso8601_duration": {
             "name": "Iso8601_duration",
+            "documentation": "Represents an ISO 8601 duration, which may have multiple parts from years down to seconds. The `_value_` attribute is a String in the format:\n\n* `P[nnY][nnM][nnW][nnD][T[nnH][nnM][nnS]]`\n\nNOTE: two deviations from ISO 8601 are supported, the first, to allow a negative sign, and the second allowing the 'W' designator to be mixed with other designators.",
             "ancestors": [
                 "Iso8601_type"
             ],
-            "documentation": "Represents an ISO 8601 duration, which may have multiple parts from years down to seconds. The `_value_` attribute is a String in the format:\n\n* `P[nnY][nnM][nnW][nnD][T[nnH][nnM][nnS]]`\n\nNOTE: two deviations from ISO 8601 are supported, the first, to allow a negative sign, and the second allowing the 'W' designator to be mixed with other designators.",
             "functions": {
                 "is_extended": {
                     "name": "is_extended",
@@ -1700,8 +1700,8 @@
                     "parameters": {
                         "a_val": {
                             "name": "a_val",
-                            "type": "Iso8601_duration",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Iso8601_duration"
                         }
                     },
                     "result": {
@@ -1714,8 +1714,8 @@
                     "parameters": {
                         "a_val": {
                             "name": "a_val",
-                            "type": "Iso8601_duration",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Iso8601_duration"
                         }
                     },
                     "result": {
@@ -1728,8 +1728,8 @@
                     "parameters": {
                         "a_val": {
                             "name": "a_val",
-                            "type": "Real",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Real"
                         }
                     },
                     "result": {
@@ -1742,8 +1742,8 @@
                     "parameters": {
                         "a_val": {
                             "name": "a_val",
-                            "type": "Real",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Real"
                         }
                     },
                     "result": {
@@ -1771,10 +1771,10 @@
         },
         "Iso8601_time": {
             "name": "Iso8601_time",
+            "documentation": "Represents an ISO 8601 time, including partial and extended forms. Value may be:\n\n* `hh:mm:ss[(,|.)sss][Z|\u00b1hh[:mm]]` (extended, preferred) or\n* `hhmmss[(,|.)sss][Z|\u00b1hh[mm]]` (compact)\n* or a partial invariant.\n\nSee `_valid_iso8601_time()_` for validity.\n\nNOTE: A small deviation to the ISO 8601:2004 standard in this class is that the time `24:00:00` is not allowed, for consistency with `Iso8601_date_time`.",
             "ancestors": [
                 "Iso8601_type"
             ],
-            "documentation": "Represents an ISO 8601 time, including partial and extended forms. Value may be:\n\n* `hh:mm:ss[(,|.)sss][Z|\u00b1hh[:mm]]` (extended, preferred) or\n* `hhmmss[(,|.)sss][Z|\u00b1hh[mm]]` (compact)\n* or a partial invariant.\n\nSee `_valid_iso8601_time()_` for validity.\n\nNOTE: A small deviation to the ISO 8601:2004 standard in this class is that the time `24:00:00` is not allowed, for consistency with `Iso8601_date_time`.",
             "functions": {
                 "hour": {
                     "name": "hour",
@@ -1869,8 +1869,8 @@
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
-                            "type": "Iso8601_duration",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Iso8601_duration"
                         }
                     },
                     "result": {
@@ -1883,8 +1883,8 @@
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
-                            "type": "Iso8601_duration",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Iso8601_duration"
                         }
                     },
                     "result": {
@@ -1897,8 +1897,8 @@
                     "parameters": {
                         "a_time": {
                             "name": "a_time",
-                            "type": "Iso8601_time",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Iso8601_time"
                         }
                     },
                     "result": {
@@ -1916,18 +1916,18 @@
         },
         "Iso8601_type": {
             "name": "Iso8601_type",
+            "documentation": "Abstract ancestor type of ISO 8601 types, defining interface for 'extended' and 'partial' concepts from ISO 8601.",
             "is_abstract": true,
             "ancestors": [
                 "Temporal",
                 "Time_Definitions"
             ],
-            "documentation": "Abstract ancestor type of ISO 8601 types, defining interface for 'extended' and 'partial' concepts from ISO 8601.",
             "properties": {
                 "value": {
                     "name": "value",
-                    "type": "String",
+                    "documentation": "Representation of all descendants is a single String.",
                     "is_mandatory": true,
-                    "documentation": "Representation of all descendants is a single String."
+                    "type": "String"
                 }
             },
             "functions": {
@@ -1949,10 +1949,10 @@
         },
         "Iso8601_date": {
             "name": "Iso8601_date",
+            "documentation": "Represents an ISO 8601 date, including partial and extended forms. Value may be:\n\n* `YYYY-MM-DD` (extended, preferred)\n* `YYYYMMDD` (compact)\n* a partial invariant.\n\nSee `Time_definitions._valid_iso8601_date()_` for validity.",
             "ancestors": [
                 "Iso8601_type"
             ],
-            "documentation": "Represents an ISO 8601 date, including partial and extended forms. Value may be:\n\n* `YYYY-MM-DD` (extended, preferred)\n* `YYYYMMDD` (compact)\n* a partial invariant.\n\nSee `Time_definitions._valid_iso8601_date()_` for validity.",
             "functions": {
                 "year": {
                     "name": "year",
@@ -2029,8 +2029,8 @@
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
-                            "type": "Iso8601_duration",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Iso8601_duration"
                         }
                     },
                     "result": {
@@ -2043,8 +2043,8 @@
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
-                            "type": "Iso8601_duration",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Iso8601_duration"
                         }
                     },
                     "result": {
@@ -2057,8 +2057,8 @@
                     "parameters": {
                         "a_date": {
                             "name": "a_date",
-                            "type": "Iso8601_date",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Iso8601_date"
                         }
                     },
                     "result": {
@@ -2071,8 +2071,8 @@
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
-                            "type": "Iso8601_duration",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Iso8601_duration"
                         }
                     },
                     "result": {
@@ -2085,8 +2085,8 @@
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
-                            "type": "Iso8601_duration",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Iso8601_duration"
                         }
                     },
                     "result": {
@@ -2103,30 +2103,30 @@
         },
         "Temporal": {
             "name": "Temporal",
+            "documentation": "Abstract ancestor of time-related classes.",
             "is_abstract": true,
             "ancestors": [
                 "Ordered"
-            ],
-            "documentation": "Abstract ancestor of time-related classes."
+            ]
         },
         "Multiplicity_interval": {
             "name": "Multiplicity_interval",
+            "documentation": "An Interval of Integer, used to represent multiplicity, cardinality and optionality in models. ",
             "ancestors": [
                 "Proper_interval"
             ],
-            "documentation": "An Interval of Integer, used to represent multiplicity, cardinality and optionality in models. ",
             "properties": {
                 "Multiplicity_range_marker": {
                     "name": "Multiplicity_range_marker",
-                    "type": "String",
+                    "documentation": "Marker to use in string form of interval between limits.",
                     "is_mandatory": true,
-                    "documentation": "Marker to use in string form of interval between limits."
+                    "type": "String"
                 },
                 "Multiplicity_unbounded_marker": {
                     "name": "Multiplicity_unbounded_marker",
-                    "type": "Character",
+                    "documentation": "Symbol to use to indicate upper limit unbounded.",
                     "is_mandatory": true,
-                    "documentation": "Symbol to use to indicate upper limit unbounded."
+                    "type": "Character"
                 }
             },
             "functions": {
@@ -2162,11 +2162,11 @@
         },
         "Interval": {
             "name": "Interval",
+            "documentation": "Interval abstraction, featuring upper and lower limits that may be open or closed, included or not included.",
             "is_abstract": true,
             "ancestors": [
                 "Any"
             ],
-            "documentation": "Interval abstraction, featuring upper and lower limits that may be open or closed, included or not included.",
             "generic_parameter_defs": {
                 "T": {
                     "name": "T",
@@ -2175,40 +2175,40 @@
             },
             "properties": {
                 "lower": {
-                    "name": "lower",
                     "_type": "P_BMM_SINGLE_PROPERTY_OPEN",
-                    "type": "T",
-                    "documentation": "Lower bound."
+                    "name": "lower",
+                    "documentation": "Lower bound.",
+                    "type": "T"
                 },
                 "upper": {
-                    "name": "upper",
                     "_type": "P_BMM_SINGLE_PROPERTY_OPEN",
-                    "type": "T",
-                    "documentation": "Upper bound."
+                    "name": "upper",
+                    "documentation": "Upper bound.",
+                    "type": "T"
                 },
                 "lower_unbounded": {
                     "name": "lower_unbounded",
-                    "type": "Boolean",
+                    "documentation": "`lower` boundary open (i.e. = -infinity).",
                     "is_mandatory": true,
-                    "documentation": "`lower` boundary open (i.e. = -infinity)."
+                    "type": "Boolean"
                 },
                 "upper_unbounded": {
                     "name": "upper_unbounded",
-                    "type": "Boolean",
+                    "documentation": "`upper` boundary open (i.e. = +infinity).",
                     "is_mandatory": true,
-                    "documentation": "`upper` boundary open (i.e. = +infinity)."
+                    "type": "Boolean"
                 },
                 "lower_included": {
                     "name": "lower_included",
-                    "type": "Boolean",
+                    "documentation": "`lower` boundary value included in range if not `lower_unbounded`.",
                     "is_mandatory": true,
-                    "documentation": "`lower` boundary value included in range if not `lower_unbounded`."
+                    "type": "Boolean"
                 },
                 "upper_included": {
                     "name": "upper_included",
-                    "type": "Boolean",
+                    "documentation": "`upper` boundary value included in range if not `upper_unbounded`.",
                     "is_mandatory": true,
-                    "documentation": "`upper` boundary value included in range if not `upper_unbounded`."
+                    "type": "Boolean"
                 }
             },
             "functions": {
@@ -2217,10 +2217,10 @@
                     "description": "True if the value `e` is properly contained in this Interval.",
                     "parameters": {
                         "e": {
-                            "name": "e",
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN",
-                            "type": "T",
-                            "is_mandatory": true
+                            "name": "e",
+                            "is_mandatory": true,
+                            "type": "T"
                         }
                     },
                     "post_conditions": {
@@ -2236,8 +2236,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Interval",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Interval"
                         }
                     },
                     "result": {
@@ -2250,8 +2250,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Interval",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Interval"
                         }
                     },
                     "result": {
@@ -2264,8 +2264,8 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "type": "Any",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Any"
                         }
                     },
                     "result": {
@@ -2286,21 +2286,21 @@
             "properties": {
                 "interval": {
                     "name": "interval",
-                    "type": "Multiplicity_interval",
+                    "documentation": "The interval of this cardinality. ",
                     "is_mandatory": true,
-                    "documentation": "The interval of this cardinality. "
+                    "type": "Multiplicity_interval"
                 },
                 "is_ordered": {
                     "name": "is_ordered",
-                    "type": "Boolean",
+                    "documentation": "True if the members of the container attribute to which this cardinality refers are ordered. ",
                     "is_mandatory": true,
-                    "documentation": "True if the members of the container attribute to which this cardinality refers are ordered. "
+                    "type": "Boolean"
                 },
                 "is_unique": {
                     "name": "is_unique",
-                    "type": "Boolean",
+                    "documentation": "True if the members of the container attribute to which this cardinality refers are unique.",
                     "is_mandatory": true,
-                    "documentation": "True if the members of the container attribute to which this cardinality refers are unique."
+                    "type": "Boolean"
                 }
             },
             "functions": {
@@ -2329,53 +2329,53 @@
         },
         "Terminology_code": {
             "name": "Terminology_code",
+            "documentation": "Primitive type representing a standalone reference to a terminology concept, in the form of a terminology identifier, optional version, and a code or code string from the terminology.",
             "ancestors": [
                 "Any"
             ],
-            "documentation": "Primitive type representing a standalone reference to a terminology concept, in the form of a terminology identifier, optional version, and a code or code string from the terminology.",
             "properties": {
                 "terminology_id": {
                     "name": "terminology_id",
-                    "type": "String",
+                    "documentation": "The archetype environment namespace identifier used to identify a terminology. Typically a value like `\"snomed_ct\"` that is mapped elsewhere to the full URI identifying the terminology.",
                     "is_mandatory": true,
-                    "documentation": "The archetype environment namespace identifier used to identify a terminology. Typically a value like `\"snomed_ct\"` that is mapped elsewhere to the full URI identifying the terminology."
+                    "type": "String"
                 },
                 "terminology_version": {
                     "name": "terminology_version",
-                    "type": "String",
-                    "documentation": "Optional string value representing terminology version, typically a date or dotted numeric."
+                    "documentation": "Optional string value representing terminology version, typically a date or dotted numeric.",
+                    "type": "String"
                 },
                 "code_string": {
                     "name": "code_string",
-                    "type": "String",
+                    "documentation": "A terminology code or post-coordinated code expression, if supported by the terminology. The code may refer to a single term, a value set consisting of multiple terms, or some other entity representable within the terminology.",
                     "is_mandatory": true,
-                    "documentation": "A terminology code or post-coordinated code expression, if supported by the terminology. The code may refer to a single term, a value set consisting of multiple terms, or some other entity representable within the terminology."
+                    "type": "String"
                 },
                 "uri": {
                     "name": "uri",
-                    "type": "Uri",
-                    "documentation": "The URI reference that may be used as a concrete key into a notional terminology service for queries that can obtain the term text, definition, and other associated elements."
+                    "documentation": "The URI reference that may be used as a concrete key into a notional terminology service for queries that can obtain the term text, definition, and other associated elements.",
+                    "type": "Uri"
                 }
             }
         },
         "Terminology_term": {
             "name": "Terminology_term",
+            "documentation": "Leaf type representing a standalone term from a terminology, which consists of the term text and the code, i.e. a concept reference.",
             "ancestors": [
                 "Any"
             ],
-            "documentation": "Leaf type representing a standalone term from a terminology, which consists of the term text and the code, i.e. a concept reference.",
             "properties": {
                 "concept": {
                     "name": "concept",
-                    "type": "Terminology_code",
+                    "documentation": "Reference to the terminology concept formally representing this term.",
                     "is_mandatory": true,
-                    "documentation": "Reference to the terminology concept formally representing this term."
+                    "type": "Terminology_code"
                 },
                 "text": {
                     "name": "text",
-                    "type": "String",
+                    "documentation": "Text of term.",
                     "is_mandatory": true,
-                    "documentation": "Text of term."
+                    "type": "String"
                 }
             }
         }
@@ -2383,10 +2383,10 @@
     "class_definitions": {
         "ARCHETYPE_ID": {
             "name": "ARCHETYPE_ID",
+            "documentation": "Identifier for archetypes. Ideally these would identify globally unique archetypes.\n\nLexical form: `rm_originator  '-' rm_name  '-' rm_entity  '.' concept_name {  '-' specialisation }*  '.v' number`.",
             "ancestors": [
                 "OBJECT_ID"
             ],
-            "documentation": "Identifier for archetypes. Ideally these would identify globally unique archetypes.\n\nLexical form: `rm_originator  '-' rm_name  '-' rm_entity  '.' concept_name {  '-' specialisation }*  '.v' number`.",
             "functions": {
                 "qualified_rm_entity": {
                     "name": "qualified_rm_entity",
@@ -2441,43 +2441,43 @@
         },
         "GENERIC_ID": {
             "name": "GENERIC_ID",
+            "documentation": "Generic identifier type for identifiers whose format is otherwise unknown to openEHR. Includes an attribute for naming the identification scheme (which may well be local). ",
             "ancestors": [
                 "OBJECT_ID"
             ],
-            "documentation": "Generic identifier type for identifiers whose format is otherwise unknown to openEHR. Includes an attribute for naming the identification scheme (which may well be local). ",
             "properties": {
                 "scheme": {
                     "name": "scheme",
-                    "type": "String",
+                    "documentation": "Name of the scheme to which this identifier conforms. Ideally this name will be recognisable globally but realistically it may be a local ad hoc scheme whose name is not controlled or standardised in any way. ",
                     "is_mandatory": true,
-                    "documentation": "Name of the scheme to which this identifier conforms. Ideally this name will be recognisable globally but realistically it may be a local ad hoc scheme whose name is not controlled or standardised in any way. "
+                    "type": "String"
                 }
             }
         },
         "HIER_OBJECT_ID": {
             "name": "HIER_OBJECT_ID",
+            "documentation": "Concrete type corresponding to hierarchical identifiers of the form defined by `UID_BASED_ID`. ",
             "ancestors": [
                 "UID_BASED_ID"
-            ],
-            "documentation": "Concrete type corresponding to hierarchical identifiers of the form defined by `UID_BASED_ID`. "
+            ]
         },
         "LOCATABLE_REF": {
             "name": "LOCATABLE_REF",
+            "documentation": "Purpose Reference to a `LOCATABLE` instance inside the top-level content structure inside a `VERSION<T>`; the path attribute is applied to the object that `VERSION._data_` points to. ",
             "ancestors": [
                 "OBJECT_REF"
             ],
-            "documentation": "Purpose Reference to a `LOCATABLE` instance inside the top-level content structure inside a `VERSION<T>`; the path attribute is applied to the object that `VERSION._data_` points to. ",
             "properties": {
                 "path": {
                     "name": "path",
-                    "type": "String",
-                    "documentation": "The path to an instance in question, as an absolute path with respect to the object found at `VERSION._data_`. An empty path means that the object referred to by id being specified. "
+                    "documentation": "The path to an instance in question, as an absolute path with respect to the object found at `VERSION._data_`. An empty path means that the object referred to by id being specified. ",
+                    "type": "String"
                 },
                 "id": {
                     "name": "id",
-                    "type": "UID_BASED_ID",
+                    "documentation": "Globally unique id of an object, regardless of where it is stored.",
                     "is_mandatory": true,
-                    "documentation": "Globally unique id of an object, regardless of where it is stored."
+                    "type": "UID_BASED_ID"
                 }
             },
             "functions": {
@@ -2492,14 +2492,14 @@
         },
         "OBJECT_ID": {
             "name": "OBJECT_ID",
-            "is_abstract": true,
             "documentation": "Ancestor class of identifiers of informational objects. Ids may be completely meaningless, in which case their only job is to refer to something, or may carry some information to do with the identified object. \n\nObject ids are used inside an object to identify that object. To identify another object in another service, use an `OBJECT_REF`, or else use a UID for local objects identified by UID. If none of the subtypes is suitable, direct instances of this class may be used. ",
+            "is_abstract": true,
             "properties": {
                 "value": {
                     "name": "value",
-                    "type": "String",
+                    "documentation": "The value of the id in the form defined below. ",
                     "is_mandatory": true,
-                    "documentation": "The value of the id in the form defined below. "
+                    "type": "String"
                 }
             }
         },
@@ -2509,30 +2509,30 @@
             "properties": {
                 "namespace": {
                     "name": "namespace",
-                    "type": "String",
+                    "documentation": "Namespace to which this identifier belongs in the local system context (and possibly in any other openEHR compliant environment) e.g.  terminology ,  demographic . These names are not yet standardised. Legal values for `_namespace_` are:\n\n* `\"local\"`\n* `\"unknown\"`\n* a string matching the standard regex `[a-zA-Z][a-zA-Z0-9_.:\\\/&?=+-]*`.\n\nNote that the first two are just special values of the regex, and will be matched by it.",
                     "is_mandatory": true,
-                    "documentation": "Namespace to which this identifier belongs in the local system context (and possibly in any other openEHR compliant environment) e.g.  terminology ,  demographic . These names are not yet standardised. Legal values for `_namespace_` are:\n\n* `\"local\"`\n* `\"unknown\"`\n* a string matching the standard regex `[a-zA-Z][a-zA-Z0-9_.:\\\/&?=+-]*`.\n\nNote that the first two are just special values of the regex, and will be matched by it."
+                    "type": "String"
                 },
                 "type": {
                     "name": "type",
-                    "type": "String",
+                    "documentation": "Name of the  class (concrete or abstract) of object to which this identifier type refers, e.g. `PARTY`, `PERSON`,  `GUIDELINE`  etc. These class names are from the relevant reference model. The type name `ANY` can be used to indicate that any type is accepted (e.g. if the type is unknown). ",
                     "is_mandatory": true,
-                    "documentation": "Name of the  class (concrete or abstract) of object to which this identifier type refers, e.g. `PARTY`, `PERSON`,  `GUIDELINE`  etc. These class names are from the relevant reference model. The type name `ANY` can be used to indicate that any type is accepted (e.g. if the type is unknown). "
+                    "type": "String"
                 },
                 "id": {
                     "name": "id",
-                    "type": "OBJECT_ID",
+                    "documentation": "Globally unique id of an object, regardless of where it is stored.",
                     "is_mandatory": true,
-                    "documentation": "Globally unique id of an object, regardless of where it is stored."
+                    "type": "OBJECT_ID"
                 }
             }
         },
         "OBJECT_VERSION_ID": {
             "name": "OBJECT_VERSION_ID",
+            "documentation": "Globally unique identifier for one version of a versioned object; lexical form: `object_id  '::' creating_system_id  '::' version_tree_id`.",
             "ancestors": [
                 "UID_BASED_ID"
             ],
-            "documentation": "Globally unique identifier for one version of a versioned object; lexical form: `object_id  '::' creating_system_id  '::' version_tree_id`.",
             "functions": {
                 "object_id": {
                     "name": "object_id",
@@ -2566,20 +2566,20 @@
         },
         "PARTY_REF": {
             "name": "PARTY_REF",
+            "documentation": "Identifier for parties in a demographic or identity service. There are typically a number of subtypes of the `PARTY` class, including `PERSON`, `ORGANISATION`, etc. Abstract supertypes are allowed if the referenced object is of a type not known by the current implementation of this class (in other words, if the demographic model is changed by the addition of a new `PARTY` or `ACTOR` subtypes, valid `PARTY_REFs` can still be constructed to them). ",
             "ancestors": [
                 "OBJECT_REF"
             ],
-            "documentation": "Identifier for parties in a demographic or identity service. There are typically a number of subtypes of the `PARTY` class, including `PERSON`, `ORGANISATION`, etc. Abstract supertypes are allowed if the referenced object is of a type not known by the current implementation of this class (in other words, if the demographic model is changed by the addition of a new `PARTY` or `ACTOR` subtypes, valid `PARTY_REFs` can still be constructed to them). ",
             "invariants": {
                 "Type_validity": "type.is_equal(\u201cPERSON\u201d) or type.is_equal(\u201cORGANISATION\u201d) or type.is_equal(\u201cGROUP\u201d) or type.is_equal(\u201cAGENT\u201d)or type.is_equal(\u201cROLE\u201d) or type.is_equal(\u201cPARTY\u201d) or type.is_equal(\u201cACTOR\u201d)"
             }
         },
         "TERMINOLOGY_ID": {
             "name": "TERMINOLOGY_ID",
+            "documentation": "Identifier for terminologies such as accessed via a terminology query service. In this class, the value attribute identifies the Terminology in the terminology service, e.g.  SNOMED-CT . A terminology is assumed to be in a particular language, which must be explicitly specified.\n\nThe value if the id attribute is the precise terminology id identifier, including actual release (i.e. actual  version), local modifications etc; e.g. ICPC2.\n\nLexical form: `name [  '(' version  ')' ]`.\n",
             "ancestors": [
                 "OBJECT_ID"
             ],
-            "documentation": "Identifier for terminologies such as accessed via a terminology query service. In this class, the value attribute identifies the Terminology in the terminology service, e.g.  SNOMED-CT . A terminology is assumed to be in a particular language, which must be explicitly specified.\n\nThe value if the id attribute is the precise terminology id identifier, including actual release (i.e. actual  version), local modifications etc; e.g. ICPC2.\n\nLexical form: `name [  '(' version  ')' ]`.\n",
             "functions": {
                 "name": {
                     "name": "name",
@@ -2603,9 +2603,9 @@
             "properties": {
                 "value": {
                     "name": "value",
-                    "type": "String",
+                    "documentation": "String form of this identifier.",
                     "is_mandatory": true,
-                    "documentation": "String form of this identifier."
+                    "type": "String"
                 }
             },
             "functions": {
@@ -2650,11 +2650,11 @@
         },
         "UID_BASED_ID": {
             "name": "UID_BASED_ID",
+            "documentation": "Abstract model of UID-based identifiers consisting of a root part and an optional extension; lexical form: `root '::' extension`.",
             "is_abstract": true,
             "ancestors": [
                 "OBJECT_ID"
             ],
-            "documentation": "Abstract model of UID-based identifiers consisting of a root part and an optional extension; lexical form: `root '::' extension`.",
             "functions": {
                 "root": {
                     "name": "root",
@@ -2684,28 +2684,28 @@
         },
         "UUID": {
             "name": "UUID",
+            "documentation": "Model of the DCE Universal Unique Identifier or UUID which takes the form of hexadecimal integers separated by hyphens, following the pattern 8-4-4-4-12 as defined by the Open Group, CDE 1.1 Remote Procedure Call specification, Appendix A. Also known as a GUID.",
             "ancestors": [
                 "UID"
-            ],
-            "documentation": "Model of the DCE Universal Unique Identifier or UUID which takes the form of hexadecimal integers separated by hyphens, following the pattern 8-4-4-4-12 as defined by the Open Group, CDE 1.1 Remote Procedure Call specification, Appendix A. Also known as a GUID."
+            ]
         },
         "INTERNET_ID": {
             "name": "INTERNET_ID",
+            "documentation": "Model of a reverse internet domain, as used to uniquely identify an internet domain. In the form of a dot-separated string in the reverse order of a domain name, specified by https:\/\/www.rfc-editor.org\/info\/rfc1034[IETF RFC 1034^]. ",
             "ancestors": [
                 "UID"
-            ],
-            "documentation": "Model of a reverse internet domain, as used to uniquely identify an internet domain. In the form of a dot-separated string in the reverse order of a domain name, specified by https:\/\/www.rfc-editor.org\/info\/rfc1034[IETF RFC 1034^]. "
+            ]
         },
         "UID": {
             "name": "UID",
-            "is_abstract": true,
             "documentation": "Abstract parent of classes representing unique identifiers which identify information entities in a durable way. UIDs only ever identify one IE in time or space and are never re-used.",
+            "is_abstract": true,
             "properties": {
                 "value": {
                     "name": "value",
-                    "type": "String",
+                    "documentation": "The value of the id.",
                     "is_mandatory": true,
-                    "documentation": "The value of the id."
+                    "type": "String"
                 }
             },
             "invariants": {
@@ -2714,40 +2714,40 @@
         },
         "ISO_OID": {
             "name": "ISO_OID",
+            "documentation": "Model of ISO's Object Identifier (oid) as defined by the standard ISO\/IEC 8824. Oids are formed from integers separated by dots. Each non-leaf node in an Oid starting from the left corresponds to an assigning authority, and identifies that authority's namespace, inside which the remaining part of the identifier is locally unique. ",
             "ancestors": [
                 "UID"
-            ],
-            "documentation": "Model of ISO's Object Identifier (oid) as defined by the standard ISO\/IEC 8824. Oids are formed from integers separated by dots. Each non-leaf node in an Oid starting from the left corresponds to an assigning authority, and identifies that authority's namespace, inside which the remaining part of the identifier is locally unique. "
+            ]
         },
         "TEMPLATE_ID": {
             "name": "TEMPLATE_ID",
+            "documentation": "Identifier for templates. Lexical form to be determined.",
             "ancestors": [
                 "OBJECT_ID"
-            ],
-            "documentation": "Identifier for templates. Lexical form to be determined."
+            ]
         },
         "ACCESS_GROUP_REF": {
             "name": "ACCESS_GROUP_REF",
+            "documentation": "Reference to access group in an access control service.",
             "ancestors": [
                 "OBJECT_REF"
             ],
-            "documentation": "Reference to access group in an access control service.",
             "invariants": {
                 "Type_validity": "type.is_equal (\u201cACCESS_GROUP\u201d)"
             }
         },
         "OPENEHR_DEFINITIONS": {
             "name": "OPENEHR_DEFINITIONS",
+            "documentation": "Inheritance class to provide access to constants defined in other packages.",
             "ancestors": [
                 "BASIC_DEFINITIONS"
             ],
-            "documentation": "Inheritance class to provide access to constants defined in other packages.",
             "properties": {
                 "Local_terminology_id": {
                     "name": "Local_terminology_id",
-                    "type": "String",
+                    "documentation": "Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype",
                     "is_mandatory": true,
-                    "documentation": "Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype"
+                    "type": "String"
                 }
             }
         },
@@ -2757,49 +2757,45 @@
             "properties": {
                 "CR": {
                     "name": "CR",
-                    "type": "Character",
+                    "documentation": "Carriage return character.",
                     "is_mandatory": true,
-                    "documentation": "Carriage return character."
+                    "type": "Character"
                 },
                 "LF": {
                     "name": "LF",
-                    "type": "Character",
+                    "documentation": "Line feed character.",
                     "is_mandatory": true,
-                    "documentation": "Line feed character."
+                    "type": "Character"
                 },
                 "Any_type_name": {
                     "name": "Any_type_name",
-                    "type": "String",
                     "is_mandatory": true,
-                    "documentation": ""
+                    "type": "String"
                 },
                 "Regex_any_pattern": {
                     "name": "Regex_any_pattern",
-                    "type": "String",
                     "is_mandatory": true,
-                    "documentation": ""
+                    "type": "String"
                 },
                 "Default_encoding": {
                     "name": "Default_encoding",
-                    "type": "String",
                     "is_mandatory": true,
-                    "documentation": ""
+                    "type": "String"
                 },
                 "None_type_name": {
                     "name": "None_type_name",
-                    "type": "String",
                     "is_mandatory": true,
-                    "documentation": ""
+                    "type": "String"
                 }
             }
         },
         "VALIDITY_KIND": {
             "name": "VALIDITY_KIND",
+            "documentation": "An enumeration of three values that may commonly occur in constraint models.\n\nUse as the type of any attribute within this model, which expresses constraint on some attribute in a class in a reference model. For example to indicate validity\nof Date\/Time fields.",
             "_type": "P_BMM_ENUMERATION_STRING",
             "ancestors": [
                 "String"
             ],
-            "documentation": "An enumeration of three values that may commonly occur in constraint models.\n\nUse as the type of any attribute within this model, which expresses constraint on some attribute in a class in a reference model. For example to indicate validity\nof Date\/Time fields.",
             "item_names": [
                 "mandatory",
                 "optional",
@@ -2808,11 +2804,11 @@
         },
         "VERSION_STATUS": {
             "name": "VERSION_STATUS",
+            "documentation": "Status of a versioned artefact, as one of a number of possible values: uncontrolled, prerelease, release, build.",
             "_type": "P_BMM_ENUMERATION_STRING",
             "ancestors": [
                 "String"
             ],
-            "documentation": "Status of a versioned artefact, as one of a number of possible values: uncontrolled, prerelease, release, build.",
             "item_names": [
                 "alpha",
                 "beta",
@@ -2823,15 +2819,14 @@
         },
         "Comparable": {
             "name": "Comparable",
-            "is_abstract": true,
-            "documentation": ""
+            "is_abstract": true
         },
         "Iso8601_timezone": {
             "name": "Iso8601_timezone",
+            "documentation": "ISO8601 timezone string, in format:\n\n* `Z | \u00b1hh[mm]`\n\nwhere:\n\n* `hh` is \"00\" - \"23\" (0-filled to two digits)\n* `mm` is \"00\" - \"59\" (0-filled to two digits)\n* `Z` is a literal meaning UTC (modern replacement for GMT), i.e. timezone `+0000`\n",
             "ancestors": [
                 "Iso8601_type"
             ],
-            "documentation": "ISO8601 timezone string, in format:\n\n* `Z | \u00b1hh[mm]`\n\nwhere:\n\n* `hh` is \"00\" - \"23\" (0-filled to two digits)\n* `mm` is \"00\" - \"59\" (0-filled to two digits)\n* `Z` is a literal meaning UTC (modern replacement for GMT), i.e. timezone `+0000`\n",
             "functions": {
                 "hour": {
                     "name": "hour",
@@ -2903,93 +2898,93 @@
             "properties": {
                 "Seconds_in_minute": {
                     "name": "Seconds_in_minute",
-                    "type": "Integer",
+                    "documentation": "Number of seconds in a minute.",
                     "is_mandatory": true,
-                    "documentation": "Number of seconds in a minute."
+                    "type": "Integer"
                 },
                 "Minutes_in_hour": {
                     "name": "Minutes_in_hour",
-                    "type": "Integer",
+                    "documentation": "Number of minutes in an hour.",
                     "is_mandatory": true,
-                    "documentation": "Number of minutes in an hour."
+                    "type": "Integer"
                 },
                 "Hours_in_day": {
                     "name": "Hours_in_day",
-                    "type": "Integer",
+                    "documentation": "Number of clock hours in a day, i.e. 24.",
                     "is_mandatory": true,
-                    "documentation": "Number of clock hours in a day, i.e. 24."
+                    "type": "Integer"
                 },
                 "Average_days_in_month": {
                     "name": "Average_days_in_month",
-                    "type": "Real",
+                    "documentation": "Used for conversions of durations containing months to days and \/ or seconds.",
                     "is_mandatory": true,
-                    "documentation": "Used for conversions of durations containing months to days and \/ or seconds."
+                    "type": "Real"
                 },
                 "Max_days_in_month": {
                     "name": "Max_days_in_month",
-                    "type": "Integer",
+                    "documentation": "Maximum number of days in any month.",
                     "is_mandatory": true,
-                    "documentation": "Maximum number of days in any month."
+                    "type": "Integer"
                 },
                 "Days_in_year": {
                     "name": "Days_in_year",
-                    "type": "Integer",
+                    "documentation": "Calendar days in a normal year, i.e. 365.",
                     "is_mandatory": true,
-                    "documentation": "Calendar days in a normal year, i.e. 365."
+                    "type": "Integer"
                 },
                 "Average_days_in_year": {
                     "name": "Average_days_in_year",
-                    "type": "Real",
+                    "documentation": "Used for conversions of durations containing years to days and \/ or seconds.",
                     "is_mandatory": true,
-                    "documentation": "Used for conversions of durations containing years to days and \/ or seconds."
+                    "type": "Real"
                 },
                 "Days_in_leap_year": {
                     "name": "Days_in_leap_year",
-                    "type": "Integer",
+                    "documentation": "Calendar days in a standard leap year, i.e. 366.",
                     "is_mandatory": true,
-                    "documentation": "Calendar days in a standard leap year, i.e. 366."
+                    "type": "Integer"
                 },
                 "Max_days_in_year": {
                     "name": "Max_days_in_year",
-                    "type": "Integer",
+                    "documentation": "Maximum number of days in a year, i.e. accounting for leap years.",
                     "is_mandatory": true,
-                    "documentation": "Maximum number of days in a year, i.e. accounting for leap years."
+                    "type": "Integer"
                 },
                 "Days_in_week": {
                     "name": "Days_in_week",
-                    "type": "Integer",
+                    "documentation": "Number of days in a week.",
                     "is_mandatory": true,
-                    "documentation": "Number of days in a week."
+                    "type": "Integer"
                 },
                 "Months_in_year": {
                     "name": "Months_in_year",
-                    "type": "Integer",
+                    "documentation": "Number of months in a year.",
                     "is_mandatory": true,
-                    "documentation": "Number of months in a year."
+                    "type": "Integer"
                 },
                 "Min_timezone_hour": {
                     "name": "Min_timezone_hour",
-                    "type": "Integer",
+                    "documentation": "Minimum hour value of a timezone  according to ISO 8601 (note that the -ve sign is supplied in the `ISO8601_TIMEZONE` class).",
                     "is_mandatory": true,
-                    "documentation": "Minimum hour value of a timezone  according to ISO 8601 (note that the -ve sign is supplied in the `ISO8601_TIMEZONE` class)."
+                    "type": "Integer"
                 },
                 "Max_timezone_hour": {
                     "name": "Max_timezone_hour",
-                    "type": "Integer",
+                    "documentation": "Maximum hour value of a timezone according to ISO 8601.",
                     "is_mandatory": true,
-                    "documentation": "Maximum hour value of a timezone according to ISO 8601."
+                    "type": "Integer"
                 },
                 "Nominal_days_in_month": {
                     "name": "Nominal_days_in_month",
-                    "type": "Real",
+                    "documentation": "Used for conversions of durations containing months to days and \/ or seconds.",
                     "is_mandatory": true,
-                    "documentation": "Used for conversions of durations containing months to days and \/ or seconds."
+                    "type": "Real"
                 },
                 "Nominal_days_in_year": {
                     "name": "Nominal_days_in_year",
-                    "type": "Real",
+                    "documentation": "Used for conversions of durations containing years to days and \/ or seconds.",
                     "is_mandatory": true,
-                    "documentation": "Used for conversions of durations containing years to days and \/ or seconds."
+                    "type": "Real"
                 }
             },
             "functions": {
@@ -2999,8 +2994,8 @@
                     "parameters": {
                         "y": {
                             "name": "y",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         }
                     },
                     "post_conditions": {
@@ -3016,8 +3011,8 @@
                     "parameters": {
                         "m": {
                             "name": "m",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         }
                     },
                     "post_conditions": {
@@ -3033,18 +3028,18 @@
                     "parameters": {
                         "y": {
                             "name": "y",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         },
                         "m": {
                             "name": "m",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         },
                         "d": {
                             "name": "d",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         }
                     },
                     "post_conditions": {
@@ -3060,18 +3055,18 @@
                     "parameters": {
                         "h": {
                             "name": "h",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         },
                         "m": {
                             "name": "m",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         },
                         "s": {
                             "name": "s",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         }
                     },
                     "post_conditions": {
@@ -3087,8 +3082,8 @@
                     "parameters": {
                         "m": {
                             "name": "m",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         }
                     },
                     "post_conditions": {
@@ -3104,8 +3099,8 @@
                     "parameters": {
                         "s": {
                             "name": "s",
-                            "type": "Integer",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Integer"
                         }
                     },
                     "post_conditions": {
@@ -3121,8 +3116,8 @@
                     "parameters": {
                         "fs": {
                             "name": "fs",
-                            "type": "Double",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "Double"
                         }
                     },
                     "post_conditions": {
@@ -3138,8 +3133,8 @@
                     "parameters": {
                         "s": {
                             "name": "s",
-                            "type": "String",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "String"
                         }
                     },
                     "result": {
@@ -3152,8 +3147,8 @@
                     "parameters": {
                         "s": {
                             "name": "s",
-                            "type": "String",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "String"
                         }
                     },
                     "result": {
@@ -3166,8 +3161,8 @@
                     "parameters": {
                         "s": {
                             "name": "s",
-                            "type": "String",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "String"
                         }
                     },
                     "result": {
@@ -3180,8 +3175,8 @@
                     "parameters": {
                         "s": {
                             "name": "s",
-                            "type": "String",
-                            "is_mandatory": true
+                            "is_mandatory": true,
+                            "type": "String"
                         }
                     },
                     "result": {
@@ -3192,10 +3187,10 @@
         },
         "Proper_interval": {
             "name": "Proper_interval",
+            "documentation": "Type representing a 'proper' Interval, i.e. any two-sided or one-sided interval.",
             "ancestors": [
                 "Interval"
             ],
-            "documentation": "Type representing a 'proper' Interval, i.e. any two-sided or one-sided interval.",
             "generic_parameter_defs": {
                 "T": {
                     "name": "T",
@@ -3208,10 +3203,10 @@
         },
         "Point_interval": {
             "name": "Point_interval",
+            "documentation": "Type representing an Interval that happens to be a point value. Provides an efficient representation that is substitutable for `Interval<T>` where needed.",
             "ancestors": [
                 "Interval"
             ],
-            "documentation": "Type representing an Interval that happens to be a point value. Provides an efficient representation that is substitutable for `Interval<T>` where needed.",
             "generic_parameter_defs": {
                 "T": {
                     "name": "T",
@@ -3221,27 +3216,27 @@
             "properties": {
                 "lower_unbounded": {
                     "name": "lower_unbounded",
-                    "type": "Boolean",
+                    "documentation": "Lower boundary open (i.e. = -infinity).",
                     "is_mandatory": true,
-                    "documentation": "Lower boundary open (i.e. = -infinity)."
+                    "type": "Boolean"
                 },
                 "upper_unbounded": {
                     "name": "upper_unbounded",
-                    "type": "Boolean",
+                    "documentation": "Upper boundary open (i.e. = +infinity).",
                     "is_mandatory": true,
-                    "documentation": "Upper boundary open (i.e. = +infinity)."
+                    "type": "Boolean"
                 },
                 "lower_included": {
                     "name": "lower_included",
-                    "type": "Boolean",
+                    "documentation": "Lower boundary value included in range if not `_lower_unbounded_`.",
                     "is_mandatory": true,
-                    "documentation": "Lower boundary value included in range if not `_lower_unbounded_`."
+                    "type": "Boolean"
                 },
                 "upper_included": {
                     "name": "upper_included",
-                    "type": "Boolean",
+                    "documentation": "Upper boundary value included in range if not `_upper_unbounded_`.",
                     "is_mandatory": true,
-                    "documentation": "Upper boundary value included in range if not `_upper_unbounded_`."
+                    "type": "Boolean"
                 }
             },
             "invariants": {
@@ -3250,46 +3245,46 @@
         },
         "AUTHORED_RESOURCE": {
             "name": "AUTHORED_RESOURCE",
-            "is_abstract": true,
             "documentation": "Abstract idea of an online resource created by a human author. \n",
+            "is_abstract": true,
             "properties": {
                 "uid": {
                     "name": "uid",
-                    "type": "UUID",
-                    "documentation": "Unique identifier of the family of archetypes having the same interface identifier (same major version)."
+                    "documentation": "Unique identifier of the family of archetypes having the same interface identifier (same major version).",
+                    "type": "UUID"
                 },
                 "original_language": {
                     "name": "original_language",
-                    "type": "Terminology_code",
+                    "documentation": "Language in which this resource was initially authored. Although there is no language primacy of resources overall, the language of original authoring is required to ensure natural language translations can preserve quality. Language is relevant in both the description and ontology sections. ",
                     "is_mandatory": true,
-                    "documentation": "Language in which this resource was initially authored. Although there is no language primacy of resources overall, the language of original authoring is required to ensure natural language translations can preserve quality. Language is relevant in both the description and ontology sections. "
+                    "type": "Terminology_code"
                 },
                 "description": {
                     "name": "description",
-                    "type": "RESOURCE_DESCRIPTION",
-                    "documentation": "Description and lifecycle information of the resource."
+                    "documentation": "Description and lifecycle information of the resource.",
+                    "type": "RESOURCE_DESCRIPTION"
                 },
                 "is_controlled": {
                     "name": "is_controlled",
-                    "type": "Boolean",
-                    "documentation": "True if this resource is under any kind of change control (even file copying), in which case revision history is created. "
+                    "documentation": "True if this resource is under any kind of change control (even file copying), in which case revision history is created. ",
+                    "type": "Boolean"
                 },
                 "annotations": {
                     "name": "annotations",
-                    "type": "RESOURCE_ANNOTATIONS",
-                    "documentation": "Annotations on individual items within the resource, keyed by path. The inner table takes the form of a Hash table of String values keyed by String tags."
+                    "documentation": "Annotations on individual items within the resource, keyed by path. The inner table takes the form of a Hash table of String values keyed by String tags.",
+                    "type": "RESOURCE_ANNOTATIONS"
                 },
                 "translations": {
-                    "name": "translations",
                     "_type": "P_BMM_GENERIC_PROPERTY",
+                    "name": "translations",
+                    "documentation": "List of details for each natural translation made of this resource, keyed by language code. For each translation listed here, there must be corresponding sections in all language-dependent parts of the resource. The `_original_language_` does not appear in this list.",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
                             "String",
                             "TRANSLATION_DETAILS"
                         ]
-                    },
-                    "documentation": "List of details for each natural translation made of this resource, keyed by language code. For each translation listed here, there must be corresponding sections in all language-dependent parts of the resource. The `_original_language_` does not appear in this list."
+                    }
                 }
             },
             "functions": {
@@ -3327,31 +3322,32 @@
             "documentation": "Defines the descriptive meta-data of a resource.",
             "properties": {
                 "original_author": {
-                    "name": "original_author",
                     "_type": "P_BMM_GENERIC_PROPERTY",
+                    "name": "original_author",
+                    "documentation": "Original author of this resource, with all relevant details, including organisation.",
+                    "is_mandatory": true,
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
                             "String",
                             "String"
                         ]
-                    },
-                    "is_mandatory": true,
-                    "documentation": "Original author of this resource, with all relevant details, including organisation."
+                    }
                 },
                 "original_namespace": {
                     "name": "original_namespace",
-                    "type": "String",
-                    "documentation": "Namespace of original author's organisation, in reverse internet form, if applicable."
+                    "documentation": "Namespace of original author's organisation, in reverse internet form, if applicable.",
+                    "type": "String"
                 },
                 "original_publisher": {
                     "name": "original_publisher",
-                    "type": "String",
-                    "documentation": "Plain text name of organisation that originally published this artefact, if any."
+                    "documentation": "Plain text name of organisation that originally published this artefact, if any.",
+                    "type": "String"
                 },
                 "other_contributors": {
-                    "name": "other_contributors",
                     "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "name": "other_contributors",
+                    "documentation": "Other contributors to the resource, each listed in \"name <email>\"  form. ",
                     "type_def": {
                         "container_type": "List",
                         "type": "String"
@@ -3359,105 +3355,104 @@
                     "cardinality": {
                         "lower": 0,
                         "upper_unbounded": true
-                    },
-                    "documentation": "Other contributors to the resource, each listed in \"name <email>\"  form. "
+                    }
                 },
                 "lifecycle_state": {
                     "name": "lifecycle_state",
-                    "type": "Terminology_code",
+                    "documentation": "Lifecycle state of the resource, typically including states such as: initial, in_development, in_review, published, superseded, obsolete. ",
                     "is_mandatory": true,
-                    "documentation": "Lifecycle state of the resource, typically including states such as: initial, in_development, in_review, published, superseded, obsolete. "
+                    "type": "Terminology_code"
                 },
                 "parent_resource": {
                     "name": "parent_resource",
-                    "type": "AUTHORED_RESOURCE",
+                    "documentation": "Reference to owning resource. ",
                     "is_mandatory": true,
-                    "documentation": "Reference to owning resource. "
+                    "type": "AUTHORED_RESOURCE"
                 },
                 "custodian_namespace": {
                     "name": "custodian_namespace",
-                    "type": "String",
-                    "documentation": "Namespace in reverse internet id form, of current custodian organisation."
+                    "documentation": "Namespace in reverse internet id form, of current custodian organisation.",
+                    "type": "String"
                 },
                 "custodian_organisation": {
                     "name": "custodian_organisation",
-                    "type": "String",
-                    "documentation": "Plain text name of current custodian organisation."
+                    "documentation": "Plain text name of current custodian organisation.",
+                    "type": "String"
                 },
                 "copyright": {
                     "name": "copyright",
-                    "type": "String",
-                    "documentation": "Optional copyright statement for the resource as a knowledge resource. \n"
+                    "documentation": "Optional copyright statement for the resource as a knowledge resource. \n",
+                    "type": "String"
                 },
                 "licence": {
                     "name": "licence",
-                    "type": "String",
-                    "documentation": "Licence of current artefact, in format \"short licence name <URL of licence>\", e.g. \"Apache 2.0 License <http:\/\/www.apache.org\/licenses\/LICENSE-2.0.html>\""
+                    "documentation": "Licence of current artefact, in format \"short licence name <URL of licence>\", e.g. \"Apache 2.0 License <http:\/\/www.apache.org\/licenses\/LICENSE-2.0.html>\"",
+                    "type": "String"
                 },
                 "ip_acknowledgements": {
-                    "name": "ip_acknowledgements",
                     "_type": "P_BMM_GENERIC_PROPERTY",
+                    "name": "ip_acknowledgements",
+                    "documentation": "List of acknowledgements of other IP directly referenced in this archetype, typically terminology codes, ontology ids etc. Recommended keys are the widely known name or namespace for the IP source, as shown in the following example:\n\n----\nip_acknowledgements = <\n    [\"loinc\"] = <\"This content from LOINC\u00ae is copyright \u00a9 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http:\/\/loinc.org\/terms-of-use\">\n    [\"snomedct\"] = <\"Content from SNOMED CT\u00ae is copyright \u00a9 2007 IHTSDO <ihtsdo.org>\">\n>\n----",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
                             "String",
                             "String"
                         ]
-                    },
-                    "documentation": "List of acknowledgements of other IP directly referenced in this archetype, typically terminology codes, ontology ids etc. Recommended keys are the widely known name or namespace for the IP source, as shown in the following example:\n\n----\nip_acknowledgements = <\n    [\"loinc\"] = <\"This content from LOINC\u00ae is copyright \u00a9 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http:\/\/loinc.org\/terms-of-use\">\n    [\"snomedct\"] = <\"Content from SNOMED CT\u00ae is copyright \u00a9 2007 IHTSDO <ihtsdo.org>\">\n>\n----"
+                    }
                 },
                 "references": {
-                    "name": "references",
                     "_type": "P_BMM_GENERIC_PROPERTY",
+                    "name": "references",
+                    "documentation": "List of references of material on which this artefact is based, as a keyed list of strings. The keys should be in a standard citation format.",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
                             "String",
                             "String"
                         ]
-                    },
-                    "documentation": "List of references of material on which this artefact is based, as a keyed list of strings. The keys should be in a standard citation format."
+                    }
                 },
                 "resource_package_uri": {
                     "name": "resource_package_uri",
-                    "type": "String",
-                    "documentation": "URI of package to which this resource belongs."
+                    "documentation": "URI of package to which this resource belongs.",
+                    "type": "String"
                 },
                 "conversion_details": {
-                    "name": "conversion_details",
                     "_type": "P_BMM_GENERIC_PROPERTY",
+                    "name": "conversion_details",
+                    "documentation": "Details related to conversion process that generated this model from an original, if relevant, as a list of name\/value pairs. Typical example with recommended tags:\n\n----\nconversion_details = <\n    [\"source_model\"] = <\"CEM model xyz <http:\/\/location.in.clinicalelementmodels.com>\">\n    [\"tool\"] = <\"cem2adl v6.3.0\">\n    [\"time\"] = <\"2014-11-03T09:05:00\">\n>\n----",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
                             "String",
                             "String"
                         ]
-                    },
-                    "documentation": "Details related to conversion process that generated this model from an original, if relevant, as a list of name\/value pairs. Typical example with recommended tags:\n\n----\nconversion_details = <\n    [\"source_model\"] = <\"CEM model xyz <http:\/\/location.in.clinicalelementmodels.com>\">\n    [\"tool\"] = <\"cem2adl v6.3.0\">\n    [\"time\"] = <\"2014-11-03T09:05:00\">\n>\n----"
+                    }
                 },
                 "other_details": {
-                    "name": "other_details",
                     "_type": "P_BMM_GENERIC_PROPERTY",
+                    "name": "other_details",
+                    "documentation": "Additional non-language-sensitive resource meta-data, as a list of name\/value pairs.",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
                             "String",
                             "String"
                         ]
-                    },
-                    "documentation": "Additional non-language-sensitive resource meta-data, as a list of name\/value pairs."
+                    }
                 },
                 "details": {
-                    "name": "details",
                     "_type": "P_BMM_GENERIC_PROPERTY",
+                    "name": "details",
+                    "documentation": "Details of all parts of resource description that are natural language-dependent, keyed by language code.",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
                             "String",
                             "RESOURCE_DESCRIPTION_ITEM"
                         ]
-                    },
-                    "documentation": "Details of all parts of resource description that are natural language-dependent, keyed by language code."
+                    }
                 }
             }
         },
@@ -3467,48 +3462,49 @@
             "properties": {
                 "language": {
                     "name": "language",
-                    "type": "Terminology_code",
+                    "documentation": "Language of the translation, coded using ISO 639-1 (2 character) language codes.",
                     "is_mandatory": true,
-                    "documentation": "Language of the translation, coded using ISO 639-1 (2 character) language codes."
+                    "type": "Terminology_code"
                 },
                 "author": {
-                    "name": "author",
                     "_type": "P_BMM_GENERIC_PROPERTY",
+                    "name": "author",
+                    "documentation": "Primary translator name and other demographic details.",
+                    "is_mandatory": true,
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
                             "String",
                             "String"
                         ]
-                    },
-                    "is_mandatory": true,
-                    "documentation": "Primary translator name and other demographic details."
+                    }
                 },
                 "accreditation": {
                     "name": "accreditation",
-                    "type": "String",
-                    "documentation": "Accreditation of primary translator or group, usually a national translator's registration or association membership id."
+                    "documentation": "Accreditation of primary translator or group, usually a national translator's registration or association membership id.",
+                    "type": "String"
                 },
                 "other_details": {
-                    "name": "other_details",
                     "_type": "P_BMM_GENERIC_PROPERTY",
+                    "name": "other_details",
+                    "documentation": "Any other meta-data.",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
                             "String",
                             "String"
                         ]
-                    },
-                    "documentation": "Any other meta-data."
+                    }
                 },
                 "version_last_translated": {
                     "name": "version_last_translated",
-                    "type": "String",
-                    "documentation": "Version of this resource last time it was translated into the language represented by this `TRANSLATION_DETAILS` object."
+                    "documentation": "Version of this resource last time it was translated into the language represented by this `TRANSLATION_DETAILS` object.",
+                    "type": "String"
                 },
                 "other_contributors": {
-                    "name": "other_contributors",
                     "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "name": "other_contributors",
+                    "documentation": "Additional contributors to this translation, each listed in the preferred format of the relevant organisation for the artefacts in question. A typical default is `\"name <email>\"` if nothing else is specified. ",
                     "type_def": {
                         "container_type": "List",
                         "type": "String"
@@ -3516,8 +3512,7 @@
                     "cardinality": {
                         "lower": 0,
                         "upper_unbounded": true
-                    },
-                    "documentation": "Additional contributors to this translation, each listed in the preferred format of the relevant organisation for the artefacts in question. A typical default is `\"name <email>\"` if nothing else is specified. "
+                    }
                 }
             }
         },
@@ -3527,19 +3522,20 @@
             "properties": {
                 "language": {
                     "name": "language",
-                    "type": "Terminology_code",
+                    "documentation": "The localised language in which the items in this description item are written. Coded using ISO 639-1 (2 character) language codes.",
                     "is_mandatory": true,
-                    "documentation": "The localised language in which the items in this description item are written. Coded using ISO 639-1 (2 character) language codes."
+                    "type": "Terminology_code"
                 },
                 "purpose": {
                     "name": "purpose",
-                    "type": "String",
+                    "documentation": "Purpose of the resource.",
                     "is_mandatory": true,
-                    "documentation": "Purpose of the resource."
+                    "type": "String"
                 },
                 "keywords": {
-                    "name": "keywords",
                     "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "name": "keywords",
+                    "documentation": "Keywords which characterise this resource, used e.g. for indexing and searching. \n",
                     "type_def": {
                         "container_type": "List",
                         "type": "String"
@@ -3547,42 +3543,41 @@
                     "cardinality": {
                         "lower": 0,
                         "upper_unbounded": true
-                    },
-                    "documentation": "Keywords which characterise this resource, used e.g. for indexing and searching. \n"
+                    }
                 },
                 "use": {
                     "name": "use",
-                    "type": "String",
-                    "documentation": "Description of the uses of the resource, i.e. contexts in which it could be used. \n"
+                    "documentation": "Description of the uses of the resource, i.e. contexts in which it could be used. \n",
+                    "type": "String"
                 },
                 "misuse": {
                     "name": "misuse",
-                    "type": "String",
-                    "documentation": "Description of any misuses of the resource, i.e. contexts in which it should not be used."
+                    "documentation": "Description of any misuses of the resource, i.e. contexts in which it should not be used.",
+                    "type": "String"
                 },
                 "original_resource_uri": {
-                    "name": "original_resource_uri",
                     "_type": "P_BMM_GENERIC_PROPERTY",
+                    "name": "original_resource_uri",
+                    "documentation": "URIs of original clinical document(s) or description of which resource is a formalisation, in the language of this description item; keyed by meaning.",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
                             "String",
                             "String"
                         ]
-                    },
-                    "documentation": "URIs of original clinical document(s) or description of which resource is a formalisation, in the language of this description item; keyed by meaning."
+                    }
                 },
                 "other_details": {
-                    "name": "other_details",
                     "_type": "P_BMM_GENERIC_PROPERTY",
+                    "name": "other_details",
+                    "documentation": "Additional language-senstive resource metadata, as a list of name\/value pairs. ",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
                             "String",
                             "String"
                         ]
-                    },
-                    "documentation": "Additional language-senstive resource metadata, as a list of name\/value pairs. "
+                    }
                 }
             }
         },
@@ -3591,8 +3586,10 @@
             "documentation": "Object representing annotations on an archetype. These can be of various forms, with a documentation form defined so far, which has a multi-level tabular structure [ [ [String value, String key], path key], language key]. Example instance, showing the documentation structure.\n\n--------\n    documentation = <\n        [\"en\"] = <\n           [\"\/data[id2]\"] = <\n               [\"ui\"] = <\"passthrough\">\n           >\n           [\"\/data[id2]\/items[id3]\"] = <\n               [\"design note\"] = <\"this is a design note on Statement\">\n               [\"requirements note\"] = <\"this is a requirements note on Statement\">\n               [\"medline ref\"] = <\"this is a medline ref on Statement\">\n           >\n        >\n    >\n--------\n\nOther sub-structures might have different keys, e.g.  based on programming languages, UI toolkits etc.\n",
             "properties": {
                 "documentation": {
-                    "name": "documentation",
                     "_type": "P_BMM_GENERIC_PROPERTY",
+                    "name": "documentation",
+                    "documentation": "Documentary annotations in a multi-level keyed structure.",
+                    "is_mandatory": true,
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameter_defs": {
@@ -3619,9 +3616,7 @@
                                 }
                             }
                         }
-                    },
-                    "is_mandatory": true,
-                    "documentation": "Documentary annotations in a multi-level keyed structure."
+                    }
                 }
             }
         }

@@ -72,10 +72,10 @@ class UmlToBmmWriter extends AbstractWriter
             $schema_name = strtolower($umlFile->name);
             self::log('generating to [%s] schema.', $schema_name);
             $schema = [
-                'bmm_version' => '2.4',
+                'bmm_version' => BmmSchema::BMM_VERSION,
                 'rm_publisher' => 'openehr',
-                'schema_name' => $schema_name,
                 'rm_release' => $umlFile->getRelease(),
+                'schema_name' => $schema_name,
                 'schema_revision' => $umlFile->getRelease() . '.' . self::REVISION,
                 'schema_lifecycle_state' => 'stable',
                 'schema_description' => $umlFile->umlPackage->description,
@@ -162,6 +162,7 @@ class UmlToBmmWriter extends AbstractWriter
     {
         $bmmClass = [
             'name' => $umlClass->name,
+            'documentation' => $umlClass->description,
         ];
         if ($umlClass instanceof UmlClass) {
             if ($umlClass->isAbstract) {
@@ -170,7 +171,6 @@ class UmlToBmmWriter extends AbstractWriter
             if ($umlClass->umlGeneralizations->count()) {
                 $bmmClass['ancestors'] = array_keys((array)$umlClass->umlGeneralizations);
             }
-            $bmmClass['documentation'] = $umlClass->description;
             /** @var UmlTemplateParameter $umlTemplateParameter */
             foreach ($umlClass->umlTemplateParameters as $umlTemplateParameter) {
                 $bmmClass['generic_parameter_defs'][$umlTemplateParameter->name] = self::asBmmGenericParameterDefs($umlTemplateParameter);
@@ -191,11 +191,10 @@ class UmlToBmmWriter extends AbstractWriter
         if ($umlClass instanceof UmlEnumeration) {
             $bmmClass['_type'] = 'P_BMM_ENUMERATION_STRING';
             $bmmClass['ancestors'] = ['String'];
-            $bmmClass['documentation'] = $umlClass->description;
             $bmmClass['item_names'] = $umlClass->enumerations;
         }
         self::log('  Generated [%s] class.', $bmmClass['name']);
-        return $bmmClass;
+        return array_filter($bmmClass);
     }
 
     /**
@@ -237,13 +236,16 @@ class UmlToBmmWriter extends AbstractWriter
             'P_BMM_CONTAINER_PROPERTY' => array_merge(['_type' => 'P_BMM_CONTAINER_TYPE'], $bmmProperty['type_def']),
             default => $bmmProperty,
         };
-        return $bmmFunction;
+        return array_filter($bmmFunction);
     }
 
     protected static function asBmmParameter(UmlParameter $umlParameter, UmlClass $umlClass, Collection $collectedUmlClasses): array
     {
         $bmmParameter = [
+            '_type' => null,
             'name' => $umlParameter->name,
+            'description' => $umlParameter->description,
+            'is_mandatory' => (bool)$umlParameter->minOccurs,
         ];
         if ($umlParameter->templateParameterId) {
             $bmmParameter['_type'] = 'P_BMM_SINGLE_PROPERTY_OPEN';
@@ -263,10 +265,7 @@ class UmlToBmmWriter extends AbstractWriter
         if (!empty($bmmParameter['_type'])) {
             $bmmParameter['_type'] = str_replace('_PROPERTY', '_FUNCTION_PARAMETER', $bmmParameter['_type']);
         }
-        if ($umlParameter->minOccurs) {
-            $bmmParameter['is_mandatory'] = true;
-        }
-        return $bmmParameter;
+        return array_filter($bmmParameter);
     }
 
     /**
@@ -278,7 +277,10 @@ class UmlToBmmWriter extends AbstractWriter
     protected static function asBmmProperty(UmlProperty $umlProperty, UmlClass $umlClass, Collection $collectedUmlClasses): array
     {
         $bmmProperty = [
+            '_type' => null,
             'name' => $umlProperty->name,
+            'documentation' => $umlProperty->description,
+            'is_mandatory' => (bool)$umlProperty->minOccurs,
         ];
         if ($umlProperty->templateParameterId) {
             $bmmProperty['_type'] = 'P_BMM_SINGLE_PROPERTY_OPEN';
@@ -294,11 +296,7 @@ class UmlToBmmWriter extends AbstractWriter
                 'upper_unbounded' => true,
             ];
         }
-        if ($umlProperty->minOccurs) {
-            $bmmProperty['is_mandatory'] = true;
-        }
-        $bmmProperty['documentation'] = $umlProperty->description;
-        return $bmmProperty;
+        return array_filter($bmmProperty);
     }
 
     public static function asType(string $typeName, int $maxOccurs, UmlClass $umlClass, Collection $collectedUmlClasses): array
@@ -331,7 +329,7 @@ class UmlToBmmWriter extends AbstractWriter
                     'type_def' => [
                         '_type' => 'P_BMM_GENERIC_TYPE',
                         'root_type' => $typeName,
-                        'generic_parameters' => $umlClass->isGenericType() ? $umlClass->getGenericParameterName() : $umlClass->name,
+                        'generic_parameters' => [$umlClass->isGenericType() ? $umlClass->getGenericParameterName() : $umlClass->name],
                     ]
                 ];
             } else {
