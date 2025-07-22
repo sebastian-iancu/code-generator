@@ -161,6 +161,7 @@ class UmlToBmmWriter extends AbstractWriter
     protected static function asBmmClass(UmlClass|UmlEnumeration $umlClass, Collection $collectedUmlClasses): array
     {
         $bmmClass = [
+            '_type' => null,
             'name' => $umlClass->name,
             'documentation' => $umlClass->description,
         ];
@@ -177,7 +178,11 @@ class UmlToBmmWriter extends AbstractWriter
             }
             /** @var UmlProperty $umlProperty */
             foreach ($umlClass->umlProperties as $umlProperty) {
-                $bmmClass['properties'][$umlProperty->name] = self::asBmmProperty($umlProperty, $umlClass, $collectedUmlClasses);
+                if ($umlProperty->isReadOnly && $umlProperty->isStatic) {
+                    $bmmClass['constants'][$umlProperty->name] = self::asBmmConstant($umlProperty, $umlClass, $collectedUmlClasses);
+                } else {
+                    $bmmClass['properties'][$umlProperty->name] = self::asBmmProperty($umlProperty, $umlClass, $collectedUmlClasses);
+                }
             }
             /** @var UmlOperation $umlOperation */
             foreach ($umlClass->umlOperations as $umlOperation) {
@@ -292,6 +297,19 @@ class UmlToBmmWriter extends AbstractWriter
         return array_filter($bmmParameter);
     }
 
+    protected static function asBmmConstant(UmlProperty $umlProperty, UmlClass $umlClass, Collection $collectedUmlClasses): array
+    {
+        $bmmConstant = [
+            '_type' => null,
+            'name' => $umlProperty->name,
+            'documentation' => $umlProperty->description ?? null,
+            'type' => $umlProperty->type->name,
+            'value' => $umlProperty->default,
+        ];
+
+        return array_filter($bmmConstant);
+    }
+
     /**
      * @param UmlProperty $umlProperty
      * @param UmlClass $umlClass
@@ -390,7 +408,6 @@ class UmlToBmmWriter extends AbstractWriter
                     $key = current($keys) ?: count($typeDef['generic_parameter_defs']);
                     if (empty($p[2])) {
                         $typeDef['generic_parameter_defs'][$key] = [
-                            '_type' => 'P_BMM_SIMPLE_TYPE',
                             'type' => $p[1],
                         ];
                     } else {

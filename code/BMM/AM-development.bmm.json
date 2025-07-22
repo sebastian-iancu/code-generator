@@ -2556,48 +2556,48 @@
         "ADL_CODE_DEFINITIONS": {
             "name": "ADL_CODE_DEFINITIONS",
             "documentation": "Definitions relating to the internal code system of archetypes.",
-            "properties": {
+            "constants": {
                 "Id_code_leader": {
                     "name": "Id_code_leader",
                     "documentation": "String leader of \u2018identifier\u2019 codes, i.e. codes used to identify archetype nodes.",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"id\""
                 },
                 "Value_code_leader": {
                     "name": "Value_code_leader",
                     "documentation": "String leader of \u2018value\u2019 codes, i.e. codes used to identify codes values, including value set members.",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"at\""
                 },
                 "Value_set_code_leader": {
                     "name": "Value_set_code_leader",
                     "documentation": "String leader of \u2018value set\u2019 codes, i.e. codes used to identify value sets.",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"ac\""
                 },
                 "Specialisation_separator": {
                     "name": "Specialisation_separator",
                     "documentation": "Character used to separate numeric parts of codes belonging to different specialisation levels.",
-                    "is_mandatory": true,
-                    "type": "Character"
+                    "type": "Character",
+                    "value": "'.'"
                 },
                 "Code_regex_pattern": {
                     "name": "Code_regex_pattern",
                     "documentation": "Regex used to define the legal numeric part of any archetype code. Corresponds to the simple pattern of dotted numbers, as used in typical multi-level numbering schemes.",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"(0|[1-9][0-9]*)(\\.(0|[1-9][0-9]*))*\""
                 },
                 "Root_code_regex_pattern": {
                     "name": "Root_code_regex_pattern",
                     "documentation": "Regex pattern of the root id code of any archetype. Corresponds to codes of the form `id1`, `id1.1`, `id1.1.1` etc..",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"^id1(\\.1)*$\""
                 },
                 "Primitive_node_id": {
                     "name": "Primitive_node_id",
                     "documentation": "Code id used for `C_PRIMITIVE_OBJECT` nodes on creation.",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"id9999\""
                 }
             },
             "functions": {

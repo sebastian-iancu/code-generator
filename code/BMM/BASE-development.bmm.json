@@ -2123,18 +2123,18 @@
             "ancestors": [
                 "Proper_interval"
             ],
-            "properties": {
+            "constants": {
                 "Multiplicity_range_marker": {
                     "name": "Multiplicity_range_marker",
                     "documentation": "Marker to use in string form of interval between limits.",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"..\""
                 },
                 "Multiplicity_unbounded_marker": {
                     "name": "Multiplicity_unbounded_marker",
                     "documentation": "Symbol to use to indicate upper limit unbounded.",
-                    "is_mandatory": true,
-                    "type": "Character"
+                    "type": "Character",
+                    "value": "'*'"
                 }
             },
             "functions": {
@@ -2762,38 +2762,38 @@
         "BASIC_DEFINITIONS": {
             "name": "BASIC_DEFINITIONS",
             "documentation": "Defines globally used constant values.",
-            "properties": {
+            "constants": {
                 "CR": {
                     "name": "CR",
                     "documentation": "Carriage return character.",
-                    "is_mandatory": true,
-                    "type": "Character"
+                    "type": "Character",
+                    "value": "'\\015'"
                 },
                 "LF": {
                     "name": "LF",
                     "documentation": "Line feed character.",
-                    "is_mandatory": true,
-                    "type": "Character"
+                    "type": "Character",
+                    "value": "'\\012'"
                 },
                 "Any_type_name": {
                     "name": "Any_type_name",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"Any\""
                 },
                 "Regex_any_pattern": {
                     "name": "Regex_any_pattern",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\".*\""
                 },
                 "Default_encoding": {
                     "name": "Default_encoding",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"UTF-8\""
                 },
                 "None_type_name": {
                     "name": "None_type_name",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"None\""
                 }
             }
         },
@@ -2915,96 +2915,95 @@
         "Time_Definitions": {
             "name": "Time_Definitions",
             "documentation": "Definitions for date\/time classes. Note that the timezone limits are set by where the international dateline is. Thus, time in New Zealand is quoted using `+12:00`, not `-12:00`.",
-            "properties": {
+            "constants": {
                 "Seconds_in_minute": {
                     "name": "Seconds_in_minute",
                     "documentation": "Number of seconds in a minute.",
-                    "is_mandatory": true,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "value": 60
                 },
                 "Minutes_in_hour": {
                     "name": "Minutes_in_hour",
                     "documentation": "Number of minutes in an hour.",
-                    "is_mandatory": true,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "value": 60
                 },
                 "Hours_in_day": {
                     "name": "Hours_in_day",
                     "documentation": "Number of clock hours in a day, i.e. 24.",
-                    "is_mandatory": true,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "value": 24
                 },
                 "Average_days_in_month": {
                     "name": "Average_days_in_month",
                     "documentation": "Used for conversions of durations containing months to days and \/ or seconds.",
-                    "is_mandatory": true,
-                    "type": "Real"
+                    "type": "Real",
+                    "value": 30.42
                 },
                 "Max_days_in_month": {
                     "name": "Max_days_in_month",
                     "documentation": "Maximum number of days in any month.",
-                    "is_mandatory": true,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "value": 31
                 },
                 "Days_in_year": {
                     "name": "Days_in_year",
                     "documentation": "Calendar days in a normal year, i.e. 365.",
-                    "is_mandatory": true,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "value": 365
                 },
                 "Average_days_in_year": {
                     "name": "Average_days_in_year",
                     "documentation": "Used for conversions of durations containing years to days and \/ or seconds.",
-                    "is_mandatory": true,
-                    "type": "Real"
+                    "type": "Real",
+                    "value": 365.24
                 },
                 "Days_in_leap_year": {
                     "name": "Days_in_leap_year",
                     "documentation": "Calendar days in a standard leap year, i.e. 366.",
-                    "is_mandatory": true,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "value": 366
                 },
                 "Max_days_in_year": {
                     "name": "Max_days_in_year",
                     "documentation": "Maximum number of days in a year, i.e. accounting for leap years.",
-                    "is_mandatory": true,
                     "type": "Integer"
                 },
                 "Days_in_week": {
                     "name": "Days_in_week",
                     "documentation": "Number of days in a week.",
-                    "is_mandatory": true,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "value": 7
                 },
                 "Months_in_year": {
                     "name": "Months_in_year",
                     "documentation": "Number of months in a year.",
-                    "is_mandatory": true,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "value": 12
                 },
                 "Min_timezone_hour": {
                     "name": "Min_timezone_hour",
                     "documentation": "Minimum hour value of a timezone  according to ISO 8601 (note that the -ve sign is supplied in the `ISO8601_TIMEZONE` class).",
-                    "is_mandatory": true,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "value": 12
                 },
                 "Max_timezone_hour": {
                     "name": "Max_timezone_hour",
                     "documentation": "Maximum hour value of a timezone according to ISO 8601.",
-                    "is_mandatory": true,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "value": 14
                 },
                 "Nominal_days_in_month": {
                     "name": "Nominal_days_in_month",
                     "documentation": "Used for conversions of durations containing months to days and \/ or seconds.",
-                    "is_mandatory": true,
-                    "type": "Real"
+                    "type": "Real",
+                    "value": 30.42
                 },
                 "Nominal_days_in_year": {
                     "name": "Nominal_days_in_year",
                     "documentation": "Used for conversions of durations containing years to days and \/ or seconds.",
-                    "is_mandatory": true,
-                    "type": "Real"
+                    "type": "Real",
+                    "value": 365.24
                 }
             },
             "functions": {

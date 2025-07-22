@@ -4687,82 +4687,82 @@
         "OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS": {
             "name": "OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS",
             "documentation": "List of identifiers for groups in the openEHR terminology. ",
-            "properties": {
+            "constants": {
                 "Terminology_id_openehr": {
                     "name": "Terminology_id_openehr",
                     "documentation": "Name of openEHR's own terminology.",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"openehr\""
                 },
                 "Group_id_audit_change_type": {
                     "name": "Group_id_audit_change_type",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"audit change type\""
                 },
                 "Group_id_attestation_reason": {
                     "name": "Group_id_attestation_reason",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"attestation reason\""
                 },
                 "Group_id_composition_category": {
                     "name": "Group_id_composition_category",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"composition category\""
                 },
                 "Group_id_event_math_function": {
                     "name": "Group_id_event_math_function",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"event math function\""
                 },
                 "Group_id_instruction_states": {
                     "name": "Group_id_instruction_states",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"instruction states\""
                 },
                 "Group_id_instruction_transitions": {
                     "name": "Group_id_instruction_transitions",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"instruction transitions\""
                 },
                 "Group_id_null_flavours": {
                     "name": "Group_id_null_flavours",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"null flavours\""
                 },
                 "Group_id_property": {
                     "name": "Group_id_property",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"property\""
                 },
                 "Group_id_participation_function": {
                     "name": "Group_id_participation_function",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"participation function\""
                 },
                 "Group_id_participation_mode": {
                     "name": "Group_id_participation_mode",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"participation mode\""
                 },
                 "Group_id_setting": {
                     "name": "Group_id_setting",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"setting\""
                 },
                 "Group_id_term_mapping_purpose": {
                     "name": "Group_id_term_mapping_purpose",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"term mapping purpose\""
                 },
                 "Group_id_subject_relationship": {
                     "name": "Group_id_subject_relationship",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"subject relationship\""
                 },
                 "Group_id_version_life_cycle_state": {
                     "name": "Group_id_version_life_cycle_state",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"version lifecycle state\""
                 }
             },
             "functions": {
@@ -4785,41 +4785,41 @@
         "OPENEHR_CODE_SET_IDENTIFIERS": {
             "name": "OPENEHR_CODE_SET_IDENTIFIERS",
             "documentation": "List of identifiers for code sets in the openEHR terminology. ",
-            "properties": {
+            "constants": {
                 "Code_set_id_character_sets": {
                     "name": "Code_set_id_character_sets",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"character sets\""
                 },
                 "Code_set_id_compression_algorithms": {
                     "name": "Code_set_id_compression_algorithms",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"compression algorithms\""
                 },
                 "Code_set_id_countries": {
                     "name": "Code_set_id_countries",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"countries\""
                 },
                 "Code_set_integrity_check_algorithms": {
                     "name": "Code_set_integrity_check_algorithms",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"integrity check algorithms\""
                 },
                 "Code_set_id_languages": {
                     "name": "Code_set_id_languages",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"languages\""
                 },
                 "Code_set_id_media_types": {
                     "name": "Code_set_id_media_types",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"media types\""
                 },
                 "Code_set_id_normal_statuses": {
                     "name": "Code_set_id_normal_statuses",
-                    "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "value": "\"normal statuses\""
                 }
             },
             "functions": {
