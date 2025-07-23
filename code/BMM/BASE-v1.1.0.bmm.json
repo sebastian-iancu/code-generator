@@ -1,12 +1,12 @@
 {
     "bmm_version": "2.4",
     "rm_publisher": "openehr",
-    "rm_release": "1.1.0",
     "schema_name": "base",
-    "schema_revision": "1.1.0.1",
+    "rm_release": "1.1.0",
+    "schema_revision": "1.1.0.2",
     "schema_lifecycle_state": "stable",
     "schema_description": "openEHR base types.",
-    "schema_author": "code-generator",
+    "schema_author": "Thomas Beale <thomas.beale@openehr.org>, code-generator",
     "packages": {
         "org.openehr.base.base_types": {
             "name": "org.openehr.base.base_types",

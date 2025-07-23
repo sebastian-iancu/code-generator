@@ -62,14 +62,14 @@ class AllXmi extends Command
 
             // development
             $reader = new XmiReader();
-            $reader->read('BASE-development.xmi');
-            $reader->read('AM-development.xmi');
+            $reader->read('BASE-v1.3.0-dev.xmi');
+            $reader->read('AM-v2.4.0-dev.xmi');
             $writer = new CodeGenerator($reader);
-            $writer->addWriter(new InternalModel('BASE_development_and_AM-development'));
+            $writer->addWriter(new InternalModel('BASE_v1.3.0-dev_and_AM-v2.4.0-dev'));
             $writer->generate();
-            $reader->read('RM-development.xmi');
+            $reader->read('RM-v1.2.0-dev.xmi');
             $writer = new CodeGenerator($reader);
-            $writer->addWriter(new InternalModel('BASE_development_and_AM-development_and_RM-development'));
+            $writer->addWriter(new InternalModel('BASE_v1.3.0-dev_and_AM-v2.4.0-dev_and_RM-v1.2.0-dev'));
             $writer->addWriter(new UmlToBmmWriter());
             $writer->generate();
 

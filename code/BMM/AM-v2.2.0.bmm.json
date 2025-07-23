@@ -1,12 +1,17 @@
 {
     "bmm_version": "2.4",
     "rm_publisher": "openehr",
-    "rm_release": "2.2.0",
     "schema_name": "am",
-    "schema_revision": "2.2.0.1",
+    "rm_release": "2.2.0",
+    "schema_revision": "2.2.0.2",
     "schema_lifecycle_state": "stable",
     "schema_description": "openEHR Archetype Model",
-    "schema_author": "code-generator",
+    "schema_author": "Thomas Beale <thomas.beale@openehr.org>, code-generator",
+    "includes": [
+        {
+            "id": "openehr_base_1.1.0"
+        }
+    ],
     "packages": {
         "org.openehr.am.aom2": {
             "name": "org.openehr.am.aom2",
