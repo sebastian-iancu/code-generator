@@ -354,14 +354,14 @@
             "functions": {
                 "parent": {
                     "name": "parent",
-                    "description": "Parent of this node in a compositional hierarchy. \n",
+                    "documentation": "Parent of this node in a compositional hierarchy. \n",
                     "result": {
                         "type": "PATHABLE"
                     }
                 },
                 "item_at_path": {
                     "name": "item_at_path",
-                    "description": "The item at a path (relative to this item); only valid for unique paths, i.e. paths that resolve to a single item. ",
+                    "documentation": "The item at a path (relative to this item); only valid for unique paths, i.e. paths that resolve to a single item. ",
                     "parameters": {
                         "a_path": {
                             "name": "a_path",
@@ -378,7 +378,7 @@
                 },
                 "items_at_path": {
                     "name": "items_at_path",
-                    "description": "List of items corresponding to a non-unique path.",
+                    "documentation": "List of items corresponding to a non-unique path.",
                     "parameters": {
                         "a_path": {
                             "name": "a_path",
@@ -394,7 +394,7 @@
                 },
                 "path_exists": {
                     "name": "path_exists",
-                    "description": "True if the path exists in the data with respect to the current item. ",
+                    "documentation": "True if the path exists in the data with respect to the current item. ",
                     "parameters": {
                         "a_path": {
                             "name": "a_path",
@@ -411,7 +411,7 @@
                 },
                 "path_unique": {
                     "name": "path_unique",
-                    "description": "True if the path corresponds to a single item in the data. ",
+                    "documentation": "True if the path corresponds to a single item in the data. ",
                     "parameters": {
                         "a_path": {
                             "name": "a_path",
@@ -428,7 +428,7 @@
                 },
                 "path_of_item": {
                     "name": "path_of_item",
-                    "description": "The path to an item relative to the root of this archetyped structure.",
+                    "documentation": "The path to an item relative to the root of this archetyped structure.",
                     "parameters": {
                         "a_loc": {
                             "name": "a_loc",
@@ -518,14 +518,14 @@
             "functions": {
                 "concept": {
                     "name": "concept",
-                    "description": "Clinical concept of the archetype as a whole (= derived from the archetype_node_id' of the root node) ",
+                    "documentation": "Clinical concept of the archetype as a whole (= derived from the archetype_node_id' of the root node) ",
                     "result": {
                         "type": "DV_TEXT"
                     }
                 },
                 "is_archetype_root": {
                     "name": "is_archetype_root",
-                    "description": "True if this node is the root of an archetyped structure.",
+                    "documentation": "True if this node is the root of an archetyped structure.",
                     "result": {
                         "type": "Boolean"
                     }
@@ -688,14 +688,14 @@
             "functions": {
                 "version_count": {
                     "name": "version_count",
-                    "description": "Return the total number of versions in this object.",
+                    "documentation": "Return the total number of versions in this object.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "all_version_ids": {
                     "name": "all_version_ids",
-                    "description": "Return a list of ids of all versions in this object. ",
+                    "documentation": "Return a list of ids of all versions in this object. ",
                     "result": {
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
@@ -704,7 +704,7 @@
                 },
                 "all_versions": {
                     "name": "all_versions",
-                    "description": "Return a list of all versions in this object. ",
+                    "documentation": "Return a list of all versions in this object. ",
                     "result": {
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
@@ -719,7 +719,7 @@
                 },
                 "has_version_at_time": {
                     "name": "has_version_at_time",
-                    "description": "True if a version for time  `_a_time_` exists. ",
+                    "documentation": "True if a version for time  `_a_time_` exists. ",
                     "parameters": {
                         "a_time": {
                             "name": "a_time",
@@ -733,7 +733,7 @@
                 },
                 "has_version_id": {
                     "name": "has_version_id",
-                    "description": "True if a version with `_a_version_uid_` exists. ",
+                    "documentation": "True if a version with `_a_version_uid_` exists. ",
                     "parameters": {
                         "a_version_uid": {
                             "name": "a_version_uid",
@@ -747,7 +747,7 @@
                 },
                 "version_with_id": {
                     "name": "version_with_id",
-                    "description": "Return the version with `_uid_` =  `_a_version_uid_`. \n",
+                    "documentation": "Return the version with `_uid_` =  `_a_version_uid_`. \n",
                     "parameters": {
                         "a_version_uid": {
                             "name": "a_version_uid",
@@ -764,7 +764,7 @@
                 },
                 "is_original_version": {
                     "name": "is_original_version",
-                    "description": "True if version with `_a_version_uid_` is an `ORIGINAL_VERSION`. ",
+                    "documentation": "True if version with `_a_version_uid_` is an `ORIGINAL_VERSION`. ",
                     "parameters": {
                         "a_version_uid": {
                             "name": "a_version_uid",
@@ -781,7 +781,7 @@
                 },
                 "version_at_time": {
                     "name": "version_at_time",
-                    "description": "Return the version for time  `_a_time_`. ",
+                    "documentation": "Return the version for time  `_a_time_`. ",
                     "parameters": {
                         "a_time": {
                             "name": "a_time",
@@ -798,28 +798,28 @@
                 },
                 "revision_history": {
                     "name": "revision_history",
-                    "description": "History of all audits and attestations in this versioned repository.",
+                    "documentation": "History of all audits and attestations in this versioned repository.",
                     "result": {
                         "type": "REVISION_HISTORY"
                     }
                 },
                 "latest_version": {
                     "name": "latest_version",
-                    "description": "Return the most recently added version (i.e. on trunk or any branch). ",
+                    "documentation": "Return the most recently added version (i.e. on trunk or any branch). ",
                     "result": {
                         "type": "VERSION"
                     }
                 },
                 "latest_trunk_version": {
                     "name": "latest_trunk_version",
-                    "description": "Return the most recently added trunk version. ",
+                    "documentation": "Return the most recently added trunk version. ",
                     "result": {
                         "type": "VERSION"
                     }
                 },
                 "trunk_lifecycle_state": {
                     "name": "trunk_lifecycle_state",
-                    "description": "Return the lifecycle state from the latest trunk version. Useful for determining if the version container is logically deleted. ",
+                    "documentation": "Return the lifecycle state from the latest trunk version. Useful for determining if the version container is logically deleted. ",
                     "post_conditions": {
                         "Post": "Result = latest_trunk_version.lifecycle_state"
                     },
@@ -829,7 +829,7 @@
                 },
                 "commit_original_version": {
                     "name": "commit_original_version",
-                    "description": "Add a new original version. ",
+                    "documentation": "Add a new original version. ",
                     "parameters": {
                         "a_contribution": {
                             "name": "a_contribution",
@@ -876,7 +876,7 @@
                 },
                 "commit_original_merged_version": {
                     "name": "commit_original_merged_version",
-                    "description": "Add a new original merged version. This commit function adds a parameter containing the ids of other versions merged into the current one. ",
+                    "documentation": "Add a new original merged version. This commit function adds a parameter containing the ids of other versions merged into the current one. ",
                     "parameters": {
                         "a_contribution": {
                             "name": "a_contribution",
@@ -936,7 +936,7 @@
                 },
                 "commit_imported_version": {
                     "name": "commit_imported_version",
-                    "description": "Add a new imported version. Details of version id etc come from the `ORIGINAL_VERSION` being committed. ",
+                    "documentation": "Add a new imported version. Details of version id etc come from the `ORIGINAL_VERSION` being committed. ",
                     "parameters": {
                         "a_contribution": {
                             "name": "a_contribution",
@@ -960,7 +960,7 @@
                 },
                 "commit_attestation": {
                     "name": "commit_attestation",
-                    "description": "Add a new attestation to a specified original version. Attestations can only be added to Original versions. ",
+                    "documentation": "Add a new attestation to a specified original version. Attestations can only be added to Original versions. ",
                     "parameters": {
                         "an_attestation": {
                             "name": "an_attestation",
@@ -1057,42 +1057,42 @@
             "functions": {
                 "uid": {
                     "name": "uid",
-                    "description": "Unique identifier of this `VERSION`, in the form of an `{object_id, a version_tree_id, creating_system_id}` triple, where the `_object_id_` has the same value as the containing `VERSIONED_OBJECT _uid_`.",
+                    "documentation": "Unique identifier of this `VERSION`, in the form of an `{object_id, a version_tree_id, creating_system_id}` triple, where the `_object_id_` has the same value as the containing `VERSIONED_OBJECT _uid_`.",
                     "result": {
                         "type": "OBJECT_VERSION_ID"
                     }
                 },
                 "preceding_version_uid": {
                     "name": "preceding_version_uid",
-                    "description": "Unique identifier of the version of which this version is a modification; Void if this is the first version.",
+                    "documentation": "Unique identifier of the version of which this version is a modification; Void if this is the first version.",
                     "result": {
                         "type": "OBJECT_VERSION_ID"
                     }
                 },
                 "data": {
                     "name": "data",
-                    "description": "The data of this Version.",
+                    "documentation": "The data of this Version.",
                     "result": {
                         "type": "T"
                     }
                 },
                 "lifecycle_state": {
                     "name": "lifecycle_state",
-                    "description": "Lifecycle state of this version; coded by openEHR vocabulary `version lifecycle state`.",
+                    "documentation": "Lifecycle state of this version; coded by openEHR vocabulary `version lifecycle state`.",
                     "result": {
                         "type": "DV_CODED_TEXT"
                     }
                 },
                 "canonical_form": {
                     "name": "canonical_form",
-                    "description": "A canonical serial form of this Version, suitable for generating reliable hashes and signatures.",
+                    "documentation": "A canonical serial form of this Version, suitable for generating reliable hashes and signatures.",
                     "result": {
                         "type": "String"
                     }
                 },
                 "owner_id": {
                     "name": "owner_id",
-                    "description": "Copy of the owning `VERSIONED_OBJECT._uid_` value; extracted from the local `_uid_` property's `_object_id_`.",
+                    "documentation": "Copy of the owning `VERSIONED_OBJECT._uid_` value; extracted from the local `_uid_` property's `_object_id_`.",
                     "post_conditions": {
                         "Post": "Result.value.is_equal (uid.object_id.value)"
                     },
@@ -1102,7 +1102,7 @@
                 },
                 "is_branch": {
                     "name": "is_branch",
-                    "description": "True if this Version represents a branch. Derived from `_uid_` attribute. ",
+                    "documentation": "True if this Version represents a branch. Derived from `_uid_` attribute. ",
                     "result": {
                         "type": "Boolean"
                     }
@@ -1136,7 +1136,7 @@
             "functions": {
                 "uid": {
                     "name": "uid",
-                    "description": "Computed version of inheritance precursor, derived as `_item.uid_`. ",
+                    "documentation": "Computed version of inheritance precursor, derived as `_item.uid_`. ",
                     "post_conditions": {
                         "Post": "Result = item.uid"
                     },
@@ -1146,7 +1146,7 @@
                 },
                 "preceding_version_uid": {
                     "name": "preceding_version_uid",
-                    "description": "Computed version of inheritance precursor, derived as `_item.preceding_version_uid_`. ",
+                    "documentation": "Computed version of inheritance precursor, derived as `_item.preceding_version_uid_`. ",
                     "post_conditions": {
                         "Post": "Result = item.preceding_version_uid"
                     },
@@ -1156,14 +1156,14 @@
                 },
                 "lifecycle_state": {
                     "name": "lifecycle_state",
-                    "description": "Lifecycle state of the content item in wrapped `ORIGINAL_VERSION`, derived as `_item.lifecycle_state_`; coded by openEHR vocabulary `version lifecycle state`.",
+                    "documentation": "Lifecycle state of the content item in wrapped `ORIGINAL_VERSION`, derived as `_item.lifecycle_state_`; coded by openEHR vocabulary `version lifecycle state`.",
                     "result": {
                         "type": "DV_CODED_TEXT"
                     }
                 },
                 "data": {
                     "name": "data",
-                    "description": "Original content of this Version. \n",
+                    "documentation": "Original content of this Version. \n",
                     "result": {
                         "type": "T"
                     }
@@ -1234,7 +1234,7 @@
             "functions": {
                 "is_merged": {
                     "name": "is_merged",
-                    "description": "True if this Version was created from more than just the preceding (checked out) version.",
+                    "documentation": "True if this Version was created from more than just the preceding (checked out) version.",
                     "result": {
                         "type": "Boolean"
                     }
@@ -1491,7 +1491,7 @@
             "functions": {
                 "most_recent_version": {
                     "name": "most_recent_version",
-                    "description": "The version id of the most recent item, as a String.",
+                    "documentation": "The version id of the most recent item, as a String.",
                     "post_conditions": {
                         "Post": "Result.is_equal (items.last.version_id.value)"
                     },
@@ -1501,7 +1501,7 @@
                 },
                 "most_recent_version_time_committed": {
                     "name": "most_recent_version_time_committed",
-                    "description": "The commit date\/time of the most recent item, as a String. ",
+                    "documentation": "The commit date\/time of the most recent item, as a String. ",
                     "post_conditions": {
                         "Post": "Result.is_equal (items.last.audits.first. time_committed.value)"
                     },
@@ -1603,7 +1603,7 @@
             "functions": {
                 "current_revision": {
                     "name": "current_revision",
-                    "description": "Most recent revision in `_revision_history_` if `_is_controlled_` else  (uncontrolled) . ",
+                    "documentation": "Most recent revision in `_revision_history_` if `_is_controlled_` else  (uncontrolled) . ",
                     "post_conditions": {
                         "Post": "Result = revision_history.most_recent_version"
                     },
@@ -1613,7 +1613,7 @@
                 },
                 "languages_available": {
                     "name": "languages_available",
-                    "description": "Total list of languages available in this resource, derived from `_original_language_` and `_translations_`.\n",
+                    "documentation": "Total list of languages available in this resource, derived from `_original_language_` and `_translations_`.\n",
                     "result": {
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
@@ -1881,7 +1881,7 @@
             "functions": {
                 "as_hierarchy": {
                     "name": "as_hierarchy",
-                    "description": "Hierarchical equivalent of the physical representation of each subtype, compatible with CEN EN 13606 structures. ",
+                    "documentation": "Hierarchical equivalent of the physical representation of each subtype, compatible with CEN EN 13606 structures. ",
                     "result": {
                         "type": "ITEM"
                     }
@@ -1920,7 +1920,7 @@
             "functions": {
                 "has_element_path": {
                     "name": "has_element_path",
-                    "description": "True if path  a_path' is a valid leaf path.\n",
+                    "documentation": "True if path  a_path' is a valid leaf path.\n",
                     "parameters": {
                         "a_path": {
                             "name": "a_path",
@@ -1934,7 +1934,7 @@
                 },
                 "element_at_path": {
                     "name": "element_at_path",
-                    "description": "Return the leaf element at the path  a_path'.",
+                    "documentation": "Return the leaf element at the path  a_path'.",
                     "parameters": {
                         "a_path": {
                             "name": "a_path",
@@ -1948,7 +1948,7 @@
                 },
                 "as_hierarchy": {
                     "name": "as_hierarchy",
-                    "description": "Generate a CEN EN13606-compatible hierarchy, which is the same as the tree's physical representation.",
+                    "documentation": "Generate a CEN EN13606-compatible hierarchy, which is the same as the tree's physical representation.",
                     "result": {
                         "type": "CLUSTER"
                     }
@@ -1971,7 +1971,7 @@
             "functions": {
                 "as_hierarchy": {
                     "name": "as_hierarchy",
-                    "description": "Generate a CEN EN13606-compatible hierarchy consisting of a single `ELEMENT`.",
+                    "documentation": "Generate a CEN EN13606-compatible hierarchy consisting of a single `ELEMENT`.",
                     "result": {
                         "type": "ELEMENT"
                     }
@@ -2002,21 +2002,21 @@
             "functions": {
                 "row_count": {
                     "name": "row_count",
-                    "description": "Number of rows in the table.",
+                    "documentation": "Number of rows in the table.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "column_count": {
                     "name": "column_count",
-                    "description": "Return number of columns in the table.",
+                    "documentation": "Return number of columns in the table.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "row_names": {
                     "name": "row_names",
-                    "description": "Return set of row names.",
+                    "documentation": "Return set of row names.",
                     "result": {
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
@@ -2025,7 +2025,7 @@
                 },
                 "column_names": {
                     "name": "column_names",
-                    "description": "Return set of column names.",
+                    "documentation": "Return set of column names.",
                     "result": {
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
@@ -2034,7 +2034,7 @@
                 },
                 "ith_row": {
                     "name": "ith_row",
-                    "description": "Return i-th row.",
+                    "documentation": "Return i-th row.",
                     "parameters": {
                         "i": {
                             "name": "i",
@@ -2048,7 +2048,7 @@
                 },
                 "has_row_with_name": {
                     "name": "has_row_with_name",
-                    "description": "Return `True` if there is a column with name = `_a_key_`.",
+                    "documentation": "Return `True` if there is a column with name = `_a_key_`.",
                     "parameters": {
                         "a_key": {
                             "name": "a_key",
@@ -2062,7 +2062,7 @@
                 },
                 "has_column_with_name": {
                     "name": "has_column_with_name",
-                    "description": "Return `True` if there is a column with name = `_a_key_`.",
+                    "documentation": "Return `True` if there is a column with name = `_a_key_`.",
                     "parameters": {
                         "a_key": {
                             "name": "a_key",
@@ -2076,7 +2076,7 @@
                 },
                 "named_row": {
                     "name": "named_row",
-                    "description": "Return row with name = `_a_key_`.",
+                    "documentation": "Return row with name = `_a_key_`.",
                     "parameters": {
                         "a_key": {
                             "name": "a_key",
@@ -2090,7 +2090,7 @@
                 },
                 "has_row_with_key": {
                     "name": "has_row_with_key",
-                    "description": "Return `True` if there is a row with key `_keys_`.",
+                    "documentation": "Return `True` if there is a row with key `_keys_`.",
                     "parameters": {
                         "keys": {
                             "_type": "P_BMM_CONTAINER_FUNCTION_PARAMETER",
@@ -2111,7 +2111,7 @@
                 },
                 "row_with_key": {
                     "name": "row_with_key",
-                    "description": "Return rows with particular keys.",
+                    "documentation": "Return rows with particular keys.",
                     "parameters": {
                         "keys": {
                             "_type": "P_BMM_CONTAINER_FUNCTION_PARAMETER",
@@ -2132,7 +2132,7 @@
                 },
                 "element_at_cell_ij": {
                     "name": "element_at_cell_ij",
-                    "description": "Return cell at a particular location.",
+                    "documentation": "Return cell at a particular location.",
                     "parameters": {
                         "i": {
                             "name": "i",
@@ -2151,7 +2151,7 @@
                 },
                 "as_hierarchy": {
                     "name": "as_hierarchy",
-                    "description": "Generate a CEN EN13606-compatible hierarchy consisting of a single `CLUSTER` containing the `CLUSTERs` representing the columns of this table. ",
+                    "documentation": "Generate a CEN EN13606-compatible hierarchy consisting of a single `CLUSTER` containing the `CLUSTERs` representing the columns of this table. ",
                     "result": {
                         "type": "CLUSTER"
                     }
@@ -2185,14 +2185,14 @@
             "functions": {
                 "item_count": {
                     "name": "item_count",
-                    "description": "Count of all items.",
+                    "documentation": "Count of all items.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "names": {
                     "name": "names",
-                    "description": "Retrieve the names of all items.",
+                    "documentation": "Retrieve the names of all items.",
                     "result": {
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
@@ -2201,7 +2201,7 @@
                 },
                 "named_item": {
                     "name": "named_item",
-                    "description": "Retrieve the item with name \u2018a_name\u2019.",
+                    "documentation": "Retrieve the item with name \u2018a_name\u2019.",
                     "parameters": {
                         "a_name": {
                             "name": "a_name",
@@ -2215,7 +2215,7 @@
                 },
                 "ith_item": {
                     "name": "ith_item",
-                    "description": "Retrieve the i-th item with name.",
+                    "documentation": "Retrieve the i-th item with name.",
                     "parameters": {
                         "i": {
                             "name": "i",
@@ -2229,7 +2229,7 @@
                 },
                 "as_hierarchy": {
                     "name": "as_hierarchy",
-                    "description": "Generate a CEN EN13606-compatible hierarchy consisting of a single `CLUSTER` containing the `ELEMENTs` of this list.",
+                    "documentation": "Generate a CEN EN13606-compatible hierarchy consisting of a single `CLUSTER` containing the `ELEMENTs` of this list.",
                     "result": {
                         "type": "CLUSTER"
                     }
@@ -2275,7 +2275,7 @@
             "functions": {
                 "offset": {
                     "name": "offset",
-                    "description": "Offset of this event from origin, computed as time.diff(parent.origin).",
+                    "documentation": "Offset of this event from origin, computed as time.diff(parent.origin).",
                     "post_conditions": {
                         "Post_condition": "Result = time.diff(parent.origin)"
                     },
@@ -2334,7 +2334,7 @@
             "functions": {
                 "interval_start_time": {
                     "name": "interval_start_time",
-                    "description": "Start time of the interval of this event.",
+                    "documentation": "Start time of the interval of this event.",
                     "result": {
                         "type": "DV_DATE_TIME"
                     }
@@ -2402,7 +2402,7 @@
             "functions": {
                 "is_periodic": {
                     "name": "is_periodic",
-                    "description": "Indicates whether history is periodic. \n",
+                    "documentation": "Indicates whether history is periodic. \n",
                     "result": {
                         "type": "Boolean"
                     }
@@ -2471,7 +2471,7 @@
             "functions": {
                 "is_null": {
                     "name": "is_null",
-                    "description": "True if value logically not known, e.g. if indeterminate, not asked etc. ",
+                    "documentation": "True if value logically not known, e.g. if indeterminate, not asked etc. ",
                     "result": {
                         "type": "Boolean"
                     }
@@ -2663,28 +2663,28 @@
             "functions": {
                 "is_external": {
                     "name": "is_external",
-                    "description": "Computed from the value of the `_uri_` attribute: True if  the data is stored externally to the record, as indicated by `_uri_`. A copy may also be stored internally, in which case `_is_expanded_` is also true.",
+                    "documentation": "Computed from the value of the `_uri_` attribute: True if  the data is stored externally to the record, as indicated by `_uri_`. A copy may also be stored internally, in which case `_is_expanded_` is also true.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_inline": {
                     "name": "is_inline",
-                    "description": "Computed from the value of the data attribute. True if  the  data is stored  in  expanded  form, ie within the EHR itself. ",
+                    "documentation": "Computed from the value of the data attribute. True if  the  data is stored  in  expanded  form, ie within the EHR itself. ",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_compressed": {
                     "name": "is_compressed",
-                    "description": "Computed from the value of the `_compression_algorithm_` attribute: True if  the  data is stored in compressed form. ",
+                    "documentation": "Computed from the value of the `_compression_algorithm_` attribute: True if  the  data is stored in compressed form. ",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "has_integrity_check": {
                     "name": "has_integrity_check",
-                    "description": "Computed from the value of the `_integrity_check_algorithm_` attribute: True if an integrity check has been computed. ",
+                    "documentation": "Computed from the value of the `_integrity_check_algorithm_` attribute: True if an integrity check has been computed. ",
                     "result": {
                         "type": "Boolean"
                     }
@@ -2722,7 +2722,7 @@
             "functions": {
                 "size": {
                     "name": "size",
-                    "description": "Size in bytes of value.",
+                    "documentation": "Size in bytes of value.",
                     "result": {
                         "type": "Integer"
                     }
@@ -2854,7 +2854,7 @@
             "functions": {
                 "narrower": {
                     "name": "narrower",
-                    "description": "The mapping is to a narrower term.",
+                    "documentation": "The mapping is to a narrower term.",
                     "post_conditions": {
                         "Post": "match = \u2018<\u2019 implies Result"
                     },
@@ -2864,7 +2864,7 @@
                 },
                 "broader": {
                     "name": "broader",
-                    "description": "The mapping is to a broader term.",
+                    "documentation": "The mapping is to a broader term.",
                     "post_conditions": {
                         "Post": "match = \u2018>\u2019 implies Result"
                     },
@@ -2874,14 +2874,14 @@
                 },
                 "equivalent": {
                     "name": "equivalent",
-                    "description": "The mapping is to an equivalent term.",
+                    "documentation": "The mapping is to an equivalent term.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "unknown": {
                     "name": "unknown",
-                    "description": "The kind of mapping is unknown.",
+                    "documentation": "The kind of mapping is unknown.",
                     "post_conditions": {
                         "Post": "match = \u2018?\u2019 implies Result"
                     },
@@ -2891,7 +2891,7 @@
                 },
                 "is_valid_match_code": {
                     "name": "is_valid_match_code",
-                    "description": "True if match valid.",
+                    "documentation": "True if match valid.",
                     "parameters": {
                         "c": {
                             "name": "c",
@@ -2980,7 +2980,7 @@
             "functions": {
                 "is_strictly_comparable_to": {
                     "name": "is_strictly_comparable_to",
-                    "description": "Test if two instances are strictly comparable. Effected in descendants.",
+                    "documentation": "Test if two instances are strictly comparable. Effected in descendants.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -2994,14 +2994,14 @@
                 },
                 "is_simple": {
                     "name": "is_simple",
-                    "description": "True if this quantity has no reference ranges.",
+                    "documentation": "True if this quantity has no reference ranges.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_normal": {
                     "name": "is_normal",
-                    "description": "Value is in the normal range, determined by comparison of the value to `_normal_range_` if present, or by the `_normal_status_` marker if present. \n",
+                    "documentation": "Value is in the normal range, determined by comparison of the value to `_normal_range_` if present, or by the `_normal_status_` marker if present. \n",
                     "pre_conditions": {
                         "Pre": "normal_range \/= Void or normal_status \/= Void"
                     },
@@ -3015,7 +3015,7 @@
                 },
                 "less_than": {
                     "name": "less_than",
-                    "description": "True if this Ordered object is less than `_other_`. Redefined in descendants.",
+                    "documentation": "True if this Ordered object is less than `_other_`. Redefined in descendants.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3078,7 +3078,7 @@
             "functions": {
                 "is_in_range": {
                     "name": "is_in_range",
-                    "description": "Indicates if the value  `_v_` is inside the range.\n",
+                    "documentation": "Indicates if the value  `_v_` is inside the range.\n",
                     "parameters": {
                         "v": {
                             "name": "v",
@@ -3117,7 +3117,7 @@
             "functions": {
                 "valid_magnitude_status": {
                     "name": "valid_magnitude_status",
-                    "description": "Test whether a string value is one of the valid values for the magnitude_status attribute. ",
+                    "documentation": "Test whether a string value is one of the valid values for the magnitude_status attribute. ",
                     "post_conditions": {
                         "Post": "Result = s in {\"=\", \"<\", \">\", \"<=\", \">=\", \"~\"}"
                     },
@@ -3133,14 +3133,14 @@
                 },
                 "accuracy_unknown": {
                     "name": "accuracy_unknown",
-                    "description": "True if accuracy is not known, e.g. due to not being recorded or discernable.",
+                    "documentation": "True if accuracy is not known, e.g. due to not being recorded or discernable.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_equal": {
                     "name": "is_equal",
-                    "description": "Return True if this `DV_QUANTIFIED` is considered equal to `_other_`.",
+                    "documentation": "Return True if this `DV_QUANTIFIED` is considered equal to `_other_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3154,7 +3154,7 @@
                 },
                 "less_than": {
                     "name": "less_than",
-                    "description": "True if this Quantified object is less than `_other_`, based on comparison of `_magnitude_`.",
+                    "documentation": "True if this Quantified object is less than `_other_`, based on comparison of `_magnitude_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3242,21 +3242,21 @@
             "functions": {
                 "magnitude": {
                     "name": "magnitude",
-                    "description": "Effective magnitude represented by ratio.",
+                    "documentation": "Effective magnitude represented by ratio.",
                     "result": {
                         "type": "Real"
                     }
                 },
                 "is_integral": {
                     "name": "is_integral",
-                    "description": "True if the `_numerator_` and `_denominator_` values are integers, i.e. if `_precision_` is 0.",
+                    "documentation": "True if the `_numerator_` and `_denominator_` values are integers, i.e. if `_precision_` is 0.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "add": {
                     "name": "add",
-                    "description": "Sum of two strictly comparable proportions.",
+                    "documentation": "Sum of two strictly comparable proportions.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3270,7 +3270,7 @@
                 },
                 "subtract": {
                     "name": "subtract",
-                    "description": "Difference between two strictly comparable proportions.",
+                    "documentation": "Difference between two strictly comparable proportions.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3284,7 +3284,7 @@
                 },
                 "is_equal": {
                     "name": "is_equal",
-                    "description": "Return True if this `DV_AMOUNT` is considered equal to `_other_`.",
+                    "documentation": "Return True if this `DV_AMOUNT` is considered equal to `_other_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3298,7 +3298,7 @@
                 },
                 "multiply": {
                     "name": "multiply",
-                    "description": "Product of this Proportion and `_factor_`.",
+                    "documentation": "Product of this Proportion and `_factor_`.",
                     "parameters": {
                         "factor": {
                             "name": "factor",
@@ -3312,7 +3312,7 @@
                 },
                 "less_than": {
                     "name": "less_than",
-                    "description": "True if this Proportion is less than  `_other_`. Only valid if `_is_strictly_comparable_to()_` is True.",
+                    "documentation": "True if this Proportion is less than  `_other_`. Only valid if `_is_strictly_comparable_to()_` is True.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3332,7 +3332,7 @@
                 },
                 "is_strictly_comparable_to": {
                     "name": "is_strictly_comparable_to",
-                    "description": "Return True if the `_type_` of this proportion is the same as the `_type_` of `_other_`.",
+                    "documentation": "Return True if the `_type_` of this proportion is the same as the `_type_` of `_other_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3406,7 +3406,7 @@
             "functions": {
                 "valid_percentage": {
                     "name": "valid_percentage",
-                    "description": "Test whether a number is a valid percentage, i.e. between 0 and 100. ",
+                    "documentation": "Test whether a number is a valid percentage, i.e. between 0 and 100. ",
                     "parameters": {
                         "number": {
                             "name": "number",
@@ -3420,7 +3420,7 @@
                 },
                 "add": {
                     "name": "add",
-                    "description": "Sum of this amount and another. The value of accuracy in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* both operand accuracies are unknown_accuracy_value.\n\nIf the accuracy value is a percentage in one operand and not in the other, the form in the result is that of the larger operand.",
+                    "documentation": "Sum of this amount and another. The value of accuracy in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* both operand accuracies are unknown_accuracy_value.\n\nIf the accuracy value is a percentage in one operand and not in the other, the form in the result is that of the larger operand.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3437,7 +3437,7 @@
                 },
                 "subtract": {
                     "name": "subtract",
-                    "description": "Difference of this amount and another. The value of `_accuracy_` in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.\n\nIf the `_accuracy_` value is a percentage in one operand and not in the other, the form in the result is that of the larger operand.",
+                    "documentation": "Difference of this amount and another. The value of `_accuracy_` in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.\n\nIf the `_accuracy_` value is a percentage in one operand and not in the other, the form in the result is that of the larger operand.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3451,7 +3451,7 @@
                 },
                 "is_equal": {
                     "name": "is_equal",
-                    "description": "Return True if this `DV_AMOUNT` is considered equal to `_other_`.",
+                    "documentation": "Return True if this `DV_AMOUNT` is considered equal to `_other_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3465,7 +3465,7 @@
                 },
                 "multiply": {
                     "name": "multiply",
-                    "description": "Product of this Amount and `_factor_`.",
+                    "documentation": "Product of this Amount and `_factor_`.",
                     "parameters": {
                         "factor": {
                             "name": "factor",
@@ -3479,14 +3479,14 @@
                 },
                 "negative": {
                     "name": "negative",
-                    "description": "Negated version of current object, such as used for representing a difference, e.g. a weight loss.",
+                    "documentation": "Negated version of current object, such as used for representing a difference, e.g. a weight loss.",
                     "result": {
                         "type": "DV_AMOUNT"
                     }
                 },
                 "less_than": {
                     "name": "less_than",
-                    "description": "True if this object is less than `_other_`. Based on comparison of `_magnitude_`.",
+                    "documentation": "True if this object is less than `_other_`. Based on comparison of `_magnitude_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3578,7 +3578,7 @@
             "functions": {
                 "add": {
                     "name": "add",
-                    "description": "Sum of this `DV_QUANTITY` and `_other_`.",
+                    "documentation": "Sum of this `DV_QUANTITY` and `_other_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3592,7 +3592,7 @@
                 },
                 "subtract": {
                     "name": "subtract",
-                    "description": "Difference of this `DV_QUANTITY` and `_other_`.",
+                    "documentation": "Difference of this `DV_QUANTITY` and `_other_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3606,7 +3606,7 @@
                 },
                 "multiply": {
                     "name": "multiply",
-                    "description": "Product of this `DV_QUANTITY` and `_factor_`.",
+                    "documentation": "Product of this `DV_QUANTITY` and `_factor_`.",
                     "parameters": {
                         "factor": {
                             "name": "factor",
@@ -3620,7 +3620,7 @@
                 },
                 "less_than": {
                     "name": "less_than",
-                    "description": "True if this Quantity object is less than `_other_`, based on comparison of `_magnitude_`. Only valid if `_is_strictly_comparable_to()_` is True.",
+                    "documentation": "True if this Quantity object is less than `_other_`, based on comparison of `_magnitude_`. Only valid if `_is_strictly_comparable_to()_` is True.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3640,14 +3640,14 @@
                 },
                 "is_integral": {
                     "name": "is_integral",
-                    "description": "True if `_precision_` = 0, meaning that the `_magnitude_` is a whole number.",
+                    "documentation": "True if `_precision_` = 0, meaning that the `_magnitude_` is a whole number.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_strictly_comparable_to": {
                     "name": "is_strictly_comparable_to",
-                    "description": "True if this quantity and `_other_` have the same `_units_` and also `_units_system_` if it exists.",
+                    "documentation": "True if this quantity and `_other_` have the same `_units_` and also `_units_system_` if it exists.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3707,7 +3707,7 @@
             "functions": {
                 "add": {
                     "name": "add",
-                    "description": "Sum of this `DV_COUNT` and `_other_`.",
+                    "documentation": "Sum of this `DV_COUNT` and `_other_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3721,7 +3721,7 @@
                 },
                 "subtract": {
                     "name": "subtract",
-                    "description": "Difference of this `DV_COUNT` and `_other_`.",
+                    "documentation": "Difference of this `DV_COUNT` and `_other_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3735,7 +3735,7 @@
                 },
                 "multiply": {
                     "name": "multiply",
-                    "description": "Product of this `DV_COUNT` and `_factor_`.",
+                    "documentation": "Product of this `DV_COUNT` and `_factor_`.",
                     "parameters": {
                         "factor": {
                             "name": "factor",
@@ -3749,7 +3749,7 @@
                 },
                 "less_than": {
                     "name": "less_than",
-                    "description": "True if this Quantified object is less than `_other_`, based on comparison of `_magnitude_`.",
+                    "documentation": "True if this Quantified object is less than `_other_`, based on comparison of `_magnitude_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3769,7 +3769,7 @@
                 },
                 "is_strictly_comparable_to": {
                     "name": "is_strictly_comparable_to",
-                    "description": "Return True.",
+                    "documentation": "Return True.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3799,7 +3799,7 @@
             "functions": {
                 "add": {
                     "name": "add",
-                    "description": "Addition of a differential amount to this quantity. \n\nThe value of accuracy in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.",
+                    "documentation": "Addition of a differential amount to this quantity. \n\nThe value of accuracy in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.",
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
@@ -3813,7 +3813,7 @@
                 },
                 "subtract": {
                     "name": "subtract",
-                    "description": "Result of subtracting a differential amount from this quantity.\n\nThe value of `_accuracy_` in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.",
+                    "documentation": "Result of subtracting a differential amount from this quantity.\n\nThe value of `_accuracy_` in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.",
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
@@ -3827,7 +3827,7 @@
                 },
                 "diff": {
                     "name": "diff",
-                    "description": "Difference of two quantities.\n\nThe value of accuracy in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.",
+                    "documentation": "Difference of two quantities.\n\nThe value of accuracy in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3864,7 +3864,7 @@
             "functions": {
                 "less_than": {
                     "name": "less_than",
-                    "description": "True if this Ordinal value is less than `_other_`.",
+                    "documentation": "True if this Ordinal value is less than `_other_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3878,7 +3878,7 @@
                 },
                 "is_strictly_comparable_to": {
                     "name": "is_strictly_comparable_to",
-                    "description": "Test if this Ordinal is strictly comparable to `_other_`.",
+                    "documentation": "Test if this Ordinal is strictly comparable to `_other_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3919,7 +3919,7 @@
             "functions": {
                 "is_strictly_comparable_to": {
                     "name": "is_strictly_comparable_to",
-                    "description": "Test if this Scale value is strictly comparable to `_other_`.",
+                    "documentation": "Test if this Scale value is strictly comparable to `_other_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3933,7 +3933,7 @@
                 },
                 "less_than": {
                     "name": "less_than",
-                    "description": "True if this Scale value is less than `_other_`.",
+                    "documentation": "True if this Scale value is less than `_other_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3965,7 +3965,7 @@
             "functions": {
                 "add": {
                     "name": "add",
-                    "description": "Sum of this Duration and `_other_`.",
+                    "documentation": "Sum of this Duration and `_other_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3979,7 +3979,7 @@
                 },
                 "subtract": {
                     "name": "subtract",
-                    "description": "Difference of this Duration and `_other_`.",
+                    "documentation": "Difference of this Duration and `_other_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3993,7 +3993,7 @@
                 },
                 "multiply": {
                     "name": "multiply",
-                    "description": "Product of this Duration and `_factor_`.",
+                    "documentation": "Product of this Duration and `_factor_`.",
                     "parameters": {
                         "factor": {
                             "name": "factor",
@@ -4007,7 +4007,7 @@
                 },
                 "less_than": {
                     "name": "less_than",
-                    "description": "True if this duration object is less than `_other_`, based on comparison of `_magnitude()_`. ",
+                    "documentation": "True if this duration object is less than `_other_`, based on comparison of `_magnitude()_`. ",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -4027,7 +4027,7 @@
                 },
                 "is_strictly_comparable_to": {
                     "name": "is_strictly_comparable_to",
-                    "description": "True, for any two Durations.",
+                    "documentation": "True, for any two Durations.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -4041,14 +4041,14 @@
                 },
                 "negative": {
                     "name": "negative",
-                    "description": "Negated version of current duration.\n\nAssuming the current duration is positive, the negated version represents a time prior to some origin point, or a negative age (e.g. so-called 'adjusted age' of premature infant).",
+                    "documentation": "Negated version of current duration.\n\nAssuming the current duration is positive, the negated version represents a time prior to some origin point, or a negative age (e.g. so-called 'adjusted age' of premature infant).",
                     "result": {
                         "type": "DV_DURATION"
                     }
                 },
                 "magnitude": {
                     "name": "magnitude",
-                    "description": "Numeric value of the duration as a number of seconds. Computed using the method `_to_seconds()_` inherited from `Iso8601_duration`.",
+                    "documentation": "Numeric value of the duration as a number of seconds. Computed using the method `_to_seconds()_` inherited from `Iso8601_duration`.",
                     "result": {
                         "type": "Double"
                     }
@@ -4075,7 +4075,7 @@
             "functions": {
                 "add": {
                     "name": "add",
-                    "description": "Addition of a Duration to this temporal entity.",
+                    "documentation": "Addition of a Duration to this temporal entity.",
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
@@ -4089,7 +4089,7 @@
                 },
                 "subtract": {
                     "name": "subtract",
-                    "description": "Subtract a Duration from this temporal entity.",
+                    "documentation": "Subtract a Duration from this temporal entity.",
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
@@ -4103,7 +4103,7 @@
                 },
                 "diff": {
                     "name": "diff",
-                    "description": "Difference between this temporal entity and `_other_`.",
+                    "documentation": "Difference between this temporal entity and `_other_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -4135,14 +4135,14 @@
             "functions": {
                 "magnitude": {
                     "name": "magnitude",
-                    "description": "Numeric value of the date as days since the calendar origin date `0001-01-01`.",
+                    "documentation": "Numeric value of the date as days since the calendar origin date `0001-01-01`.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "is_equal": {
                     "name": "is_equal",
-                    "description": "Return True if this `DV_QUANTIFIED` is considered equal to `_other_`.",
+                    "documentation": "Return True if this `DV_QUANTIFIED` is considered equal to `_other_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -4156,7 +4156,7 @@
                 },
                 "add": {
                     "name": "add",
-                    "description": "Addition of a Duration to this Date.",
+                    "documentation": "Addition of a Duration to this Date.",
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
@@ -4170,7 +4170,7 @@
                 },
                 "subtract": {
                     "name": "subtract",
-                    "description": "Subtract a Duration from this Date.",
+                    "documentation": "Subtract a Duration from this Date.",
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
@@ -4184,7 +4184,7 @@
                 },
                 "diff": {
                     "name": "diff",
-                    "description": "Difference between this Date and `_other_`.",
+                    "documentation": "Difference between this Date and `_other_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -4198,7 +4198,7 @@
                 },
                 "less_than": {
                     "name": "less_than",
-                    "description": "True if this date object is less than `_other_`, based on comparison of `_magnitude()_`. ",
+                    "documentation": "True if this date object is less than `_other_`, based on comparison of `_magnitude()_`. ",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -4218,7 +4218,7 @@
                 },
                 "is_strictly_comparable_to": {
                     "name": "is_strictly_comparable_to",
-                    "description": "True, for any two Dates.",
+                    "documentation": "True, for any two Dates.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -4253,14 +4253,14 @@
             "functions": {
                 "magnitude": {
                     "name": "magnitude",
-                    "description": "Numeric value of the time as seconds since the start of day, i.e. `00:00:00`. ",
+                    "documentation": "Numeric value of the time as seconds since the start of day, i.e. `00:00:00`. ",
                     "result": {
                         "type": "Real"
                     }
                 },
                 "add": {
                     "name": "add",
-                    "description": "Addition of a Duration to this Time.",
+                    "documentation": "Addition of a Duration to this Time.",
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
@@ -4274,7 +4274,7 @@
                 },
                 "subtract": {
                     "name": "subtract",
-                    "description": "Subtract a Duration from this Time.",
+                    "documentation": "Subtract a Duration from this Time.",
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
@@ -4288,7 +4288,7 @@
                 },
                 "diff": {
                     "name": "diff",
-                    "description": "Difference between this Time and `_other_`.",
+                    "documentation": "Difference between this Time and `_other_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -4302,7 +4302,7 @@
                 },
                 "less_than": {
                     "name": "less_than",
-                    "description": "True if this time object is less than `_other_`, based on comparison of `_magnitude()_`. ",
+                    "documentation": "True if this time object is less than `_other_`, based on comparison of `_magnitude()_`. ",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -4322,7 +4322,7 @@
                 },
                 "is_strictly_comparable_to": {
                     "name": "is_strictly_comparable_to",
-                    "description": "True, for any two Times.",
+                    "documentation": "True, for any two Times.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -4357,14 +4357,14 @@
             "functions": {
                 "magnitude": {
                     "name": "magnitude",
-                    "description": "Numeric value of the date\/time as seconds since the calendar origin date\/time `0001-01-01T00:00:00Z`. \n",
+                    "documentation": "Numeric value of the date\/time as seconds since the calendar origin date\/time `0001-01-01T00:00:00Z`. \n",
                     "result": {
                         "type": "Double"
                     }
                 },
                 "add": {
                     "name": "add",
-                    "description": "Addition of a Duration to this Date\/time.",
+                    "documentation": "Addition of a Duration to this Date\/time.",
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
@@ -4378,7 +4378,7 @@
                 },
                 "subtract": {
                     "name": "subtract",
-                    "description": "Subtract a Duration from this Date\/time.",
+                    "documentation": "Subtract a Duration from this Date\/time.",
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
@@ -4392,7 +4392,7 @@
                 },
                 "diff": {
                     "name": "diff",
-                    "description": "Difference between this Date\/time and `_other_`.",
+                    "documentation": "Difference between this Date\/time and `_other_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -4406,7 +4406,7 @@
                 },
                 "less_than": {
                     "name": "less_than",
-                    "description": "True if this date-time object is less than `_other_`, based on comparison of `_magnitude()_`. ",
+                    "documentation": "True if this date-time object is less than `_other_`, based on comparison of `_magnitude()_`. ",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -4426,7 +4426,7 @@
                 },
                 "is_strictly_comparable_to": {
                     "name": "is_strictly_comparable_to",
-                    "description": "True, for any two Date\/times.",
+                    "documentation": "True, for any two Date\/times.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -4461,21 +4461,21 @@
             "functions": {
                 "calendar_alignment": {
                     "name": "calendar_alignment",
-                    "description": "Indicates what prototypical point in the calendar the specification is aligned to, e.g.  5th of the month . Empty if not aligned. Extracted from the  value' attribute.",
+                    "documentation": "Indicates what prototypical point in the calendar the specification is aligned to, e.g.  5th of the month . Empty if not aligned. Extracted from the  value' attribute.",
                     "result": {
                         "type": "String"
                     }
                 },
                 "event_alignment": {
                     "name": "event_alignment",
-                    "description": "Indicates what real-world event the specification is aligned to if any. Extracted from the  value' attribute. ",
+                    "documentation": "Indicates what real-world event the specification is aligned to if any. Extracted from the  value' attribute. ",
                     "result": {
                         "type": "String"
                     }
                 },
                 "institution_specified": {
                     "name": "institution_specified",
-                    "description": "Indicates if the specification is aligned with institution schedules, e.g. a hospital nursing changeover or meal serving times. Extracted from the  value' attribute.",
+                    "documentation": "Indicates if the specification is aligned with institution schedules, e.g. a hospital nursing changeover or meal serving times. Extracted from the  value' attribute.",
                     "result": {
                         "type": "Boolean"
                     }
@@ -4491,28 +4491,28 @@
             "functions": {
                 "period": {
                     "name": "period",
-                    "description": "The period of the repetition, computationally derived from the syntax representation. Extracted from the  value' attribute.",
+                    "documentation": "The period of the repetition, computationally derived from the syntax representation. Extracted from the  value' attribute.",
                     "result": {
                         "type": "DV_DURATION"
                     }
                 },
                 "calendar_alignment": {
                     "name": "calendar_alignment",
-                    "description": "Calendar alignment extracted from value. ",
+                    "documentation": "Calendar alignment extracted from value. ",
                     "result": {
                         "type": "String"
                     }
                 },
                 "event_alignment": {
                     "name": "event_alignment",
-                    "description": "Event alignment extracted from value. ",
+                    "documentation": "Event alignment extracted from value. ",
                     "result": {
                         "type": "String"
                     }
                 },
                 "institution_specified": {
                     "name": "institution_specified",
-                    "description": "Extracted from value.",
+                    "documentation": "Extracted from value.",
                     "result": {
                         "type": "Boolean"
                     }
@@ -4531,21 +4531,21 @@
             "functions": {
                 "calendar_alignment": {
                     "name": "calendar_alignment",
-                    "description": "Calendar alignment extracted from value.",
+                    "documentation": "Calendar alignment extracted from value.",
                     "result": {
                         "type": "String"
                     }
                 },
                 "event_alignment": {
                     "name": "event_alignment",
-                    "description": "Event alignment extracted from value. ",
+                    "documentation": "Event alignment extracted from value. ",
                     "result": {
                         "type": "String"
                     }
                 },
                 "institution_specified": {
                     "name": "institution_specified",
-                    "description": "Extracted from value.",
+                    "documentation": "Extracted from value.",
                     "result": {
                         "type": "Boolean"
                     }
@@ -4569,28 +4569,28 @@
             "functions": {
                 "scheme": {
                     "name": "scheme",
-                    "description": "A distributed information 'space' in which  information objects  exist. The scheme simultaneously specifies an information space and a mechanism for accessing objects in  that  space.  For  example  if  scheme  = \"ftp\", it identifies the information space in which  all  ftp-able objects  exist,  and also the application - ftp - which can be used to access them. Values may include: \"ftp\", \"telnet\", \"mailto\", etc. Refer to RFC-3986 for a full list. \n",
+                    "documentation": "A distributed information 'space' in which  information objects  exist. The scheme simultaneously specifies an information space and a mechanism for accessing objects in  that  space.  For  example  if  scheme  = \"ftp\", it identifies the information space in which  all  ftp-able objects  exist,  and also the application - ftp - which can be used to access them. Values may include: \"ftp\", \"telnet\", \"mailto\", etc. Refer to RFC-3986 for a full list. \n",
                     "result": {
                         "type": "String"
                     }
                 },
                 "path": {
                     "name": "path",
-                    "description": "A string whose format is  a  function  of  the  scheme. Identifies   the   location  in  <scheme>-space  of  an information entity. Typical values include hierarchical directory  paths  for  any  machine.  For example, with scheme = \"ftp\", path might be `\"\/pub\/images\/image_01\"`. The strings \".\" and \"..\" are reserved for use in the path. Paths may include internet\/intranet location identifiers of the form: `sub_domain...domain`, e.g. `\"info.cern.ch\"`. ",
+                    "documentation": "A string whose format is  a  function  of  the  scheme. Identifies   the   location  in  <scheme>-space  of  an information entity. Typical values include hierarchical directory  paths  for  any  machine.  For example, with scheme = \"ftp\", path might be `\"\/pub\/images\/image_01\"`. The strings \".\" and \"..\" are reserved for use in the path. Paths may include internet\/intranet location identifiers of the form: `sub_domain...domain`, e.g. `\"info.cern.ch\"`. ",
                     "result": {
                         "type": "String"
                     }
                 },
                 "fragment_id": {
                     "name": "fragment_id",
-                    "description": "A part of, a  fragment  or  a  sub-function  within  an object. Allows references to sub-parts of objects, such as a certain line and character  position  in  a  text object. The  syntax  and semantics are defined by the application responsible for the object. \n",
+                    "documentation": "A part of, a  fragment  or  a  sub-function  within  an object. Allows references to sub-parts of objects, such as a certain line and character  position  in  a  text object. The  syntax  and semantics are defined by the application responsible for the object. \n",
                     "result": {
                         "type": "String"
                     }
                 },
                 "query": {
                     "name": "query",
-                    "description": "Query string to send to application implied  by  scheme and  path.  Enables  queries  to applications, including databases  to  be  included in  the  URI. Supports any query meaningful to the server, including SQL. \n",
+                    "documentation": "Query string to send to application implied  by  scheme and  path.  Enables  queries  to applications, including databases  to  be  included in  the  URI. Supports any query meaningful to the server, including SQL. \n",
                     "result": {
                         "type": "String"
                     }
@@ -4625,7 +4625,7 @@
             "functions": {
                 "is_valid_units_string": {
                     "name": "is_valid_units_string",
-                    "description": "True if the units string  units' is a valid string according to the HL7 UCUM specification.",
+                    "documentation": "True if the units string  units' is a valid string according to the HL7 UCUM specification.",
                     "parameters": {
                         "units": {
                             "name": "units",
@@ -4639,7 +4639,7 @@
                 },
                 "units_equivalent": {
                     "name": "units_equivalent",
-                    "description": "True if two units strings correspond to the same measured property.",
+                    "documentation": "True if two units strings correspond to the same measured property.",
                     "parameters": {
                         "units1": {
                             "name": "units1",
@@ -4742,7 +4742,7 @@
             "functions": {
                 "valid_terminology_group_id": {
                     "name": "valid_terminology_group_id",
-                    "description": "Validity function to test if an identifier is in the set defined by this class. ",
+                    "documentation": "Validity function to test if an identifier is in the set defined by this class. ",
                     "parameters": {
                         "an_id": {
                             "name": "an_id",
@@ -4799,7 +4799,7 @@
             "functions": {
                 "valid_code_set_id": {
                     "name": "valid_code_set_id",
-                    "description": "Validity function to test if an identifier is in the set defined by this class.",
+                    "documentation": "Validity function to test if an identifier is in the set defined by this class.",
                     "parameters": {
                         "an_id": {
                             "name": "an_id",
@@ -4823,7 +4823,7 @@
             "functions": {
                 "terminology": {
                     "name": "terminology",
-                    "description": "Return an interface to the terminology named name. Allowable names include:-\n\n* openehr, \n* centc251,\n* any name from are taken from the US NLM UMLS meta-data list at http:\/\/www.nlm.nih.gov\/research\/umls\/metaa1.html ",
+                    "documentation": "Return an interface to the terminology named name. Allowable names include:-\n\n* openehr, \n* centc251,\n* any name from are taken from the US NLM UMLS meta-data list at http:\/\/www.nlm.nih.gov\/research\/umls\/metaa1.html ",
                     "parameters": {
                         "name": {
                             "name": "name",
@@ -4837,7 +4837,7 @@
                 },
                 "code_set": {
                     "name": "code_set",
-                    "description": "Return an interface to the code_set identified by the external identifier name (e.g.  ISO_639-1). ",
+                    "documentation": "Return an interface to the code_set identified by the external identifier name (e.g.  ISO_639-1). ",
                     "parameters": {
                         "name": {
                             "name": "name",
@@ -4854,7 +4854,7 @@
                 },
                 "code_set_for_id": {
                     "name": "code_set_for_id",
-                    "description": "Return an interface to the code_set identified internally in openEHR by id. \n",
+                    "documentation": "Return an interface to the code_set identified internally in openEHR by id. \n",
                     "parameters": {
                         "id": {
                             "name": "id",
@@ -4871,7 +4871,7 @@
                 },
                 "has_terminology": {
                     "name": "has_terminology",
-                    "description": "True if terminology named name known by this service. Allowable names include:-\n\n*  openehr  \n* centc251  \n* any name from are taken from the US NLM UMLS meta-data list at       http:\/\/www.nlm.nih.gov\/research\/umls\/metaa1.html",
+                    "documentation": "True if terminology named name known by this service. Allowable names include:-\n\n*  openehr  \n* centc251  \n* any name from are taken from the US NLM UMLS meta-data list at       http:\/\/www.nlm.nih.gov\/research\/umls\/metaa1.html",
                     "parameters": {
                         "name": {
                             "name": "name",
@@ -4885,7 +4885,7 @@
                 },
                 "has_code_set": {
                     "name": "has_code_set",
-                    "description": "True if code_set linked to internal name (e.g. languages ) is available. ",
+                    "documentation": "True if code_set linked to internal name (e.g. languages ) is available. ",
                     "parameters": {
                         "name": {
                             "name": "name",
@@ -4899,7 +4899,7 @@
                 },
                 "terminology_identifiers": {
                     "name": "terminology_identifiers",
-                    "description": "Set of all terminology identifiers known in the terminology service. Values from the US NLM UMLS meta-data list at:- http:\/\/www.nlm.nih.gov\/research\/umls\/metaa1.html ",
+                    "documentation": "Set of all terminology identifiers known in the terminology service. Values from the US NLM UMLS meta-data list at:- http:\/\/www.nlm.nih.gov\/research\/umls\/metaa1.html ",
                     "result": {
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
@@ -4908,7 +4908,7 @@
                 },
                 "openehr_code_sets": {
                     "name": "openehr_code_sets",
-                    "description": "Set of all code set identifiers known in the terminology service. \n",
+                    "documentation": "Set of all code set identifiers known in the terminology service. \n",
                     "result": {
                         "_type": "P_BMM_GENERIC_TYPE",
                         "root_type": "Hash",
@@ -4920,7 +4920,7 @@
                 },
                 "code_set_identifiers": {
                     "name": "code_set_identifiers",
-                    "description": "Set of all code sets identifiers for which there is an internal openEHR name; returned as a Map of ids keyed by internal name. ",
+                    "documentation": "Set of all code sets identifiers for which there is an internal openEHR name; returned as a Map of ids keyed by internal name. ",
                     "result": {
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
@@ -4935,14 +4935,14 @@
             "functions": {
                 "id": {
                     "name": "id",
-                    "description": "External identifier of this code set.",
+                    "documentation": "External identifier of this code set.",
                     "result": {
                         "type": "String"
                     }
                 },
                 "all_codes": {
                     "name": "all_codes",
-                    "description": "Return all codes known in this code set.",
+                    "documentation": "Return all codes known in this code set.",
                     "result": {
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
@@ -4951,7 +4951,7 @@
                 },
                 "has_lang": {
                     "name": "has_lang",
-                    "description": "True if code set knows about 'a_lang' .",
+                    "documentation": "True if code set knows about 'a_lang' .",
                     "parameters": {
                         "a_lang": {
                             "name": "a_lang",
@@ -4965,7 +4965,7 @@
                 },
                 "has_code": {
                     "name": "has_code",
-                    "description": "True if code set knows about  'a_code'.",
+                    "documentation": "True if code set knows about  'a_code'.",
                     "parameters": {
                         "a_code": {
                             "name": "a_code",
@@ -4985,21 +4985,21 @@
             "functions": {
                 "id": {
                     "name": "id",
-                    "description": "Identification of this Terminology.",
+                    "documentation": "Identification of this Terminology.",
                     "result": {
                         "type": "String"
                     }
                 },
                 "all_codes": {
                     "name": "all_codes",
-                    "description": "Return all codes known in this terminology.",
+                    "documentation": "Return all codes known in this terminology.",
                     "result": {
                         "type": "CODE_PHRASE"
                     }
                 },
                 "codes_for_group_id": {
                     "name": "codes_for_group_id",
-                    "description": "Return all codes under grouper 'a_group_id' from this terminology.",
+                    "documentation": "Return all codes under grouper 'a_group_id' from this terminology.",
                     "parameters": {
                         "a_group_id": {
                             "name": "a_group_id",
@@ -5015,7 +5015,7 @@
                 },
                 "codes_for_group_name": {
                     "name": "codes_for_group_name",
-                    "description": "Return all codes under grouper whose name in 'a_lang' is 'a_name' from this terminology.",
+                    "documentation": "Return all codes under grouper whose name in 'a_lang' is 'a_name' from this terminology.",
                     "parameters": {
                         "a_lang": {
                             "name": "a_lang",
@@ -5036,14 +5036,14 @@
                 },
                 "has_code_for_group_id": {
                     "name": "has_code_for_group_id",
-                    "description": "True if  a_code' is known in group  group_id' in the openEHR terminology.",
+                    "documentation": "True if  a_code' is known in group  group_id' in the openEHR terminology.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "rubric_for_code": {
                     "name": "rubric_for_code",
-                    "description": "Return all rubric of code  code' in language  lang'.",
+                    "documentation": "Return all rubric of code  code' in language  lang'.",
                     "parameters": {
                         "a_code": {
                             "name": "a_code",
@@ -5182,7 +5182,7 @@
             "functions": {
                 "is_persistent": {
                     "name": "is_persistent",
-                    "description": "Indicates whether this composition set is persistent; derived from first version.",
+                    "documentation": "Indicates whether this composition set is persistent; derived from first version.",
                     "result": {
                         "type": "Boolean"
                     }
@@ -5209,7 +5209,7 @@
             "functions": {
                 "scheme": {
                     "name": "scheme",
-                    "description": "The name of the access control scheme in use; corresponds to the concrete instance of the settings attribute. ",
+                    "documentation": "The name of the access control scheme in use; corresponds to the concrete instance of the settings attribute. ",
                     "result": {
                         "type": "String"
                     }
@@ -6188,7 +6188,7 @@
             "functions": {
                 "type": {
                     "name": "type",
-                    "description": "Type of party, such as  `PERSON`,  `ORGANISATION`, etc. Role name, e.g.  general practitioner ,  nurse ,  private citizen . Taken from inherited `_name_` attribute.",
+                    "documentation": "Type of party, such as  `PERSON`,  `ORGANISATION`, etc. Role name, e.g.  general practitioner ,  nurse ,  private citizen . Taken from inherited `_name_` attribute.",
                     "result": {
                         "type": "DV_TEXT"
                     }
@@ -6240,7 +6240,7 @@
             "functions": {
                 "purpose": {
                     "name": "purpose",
-                    "description": "Purpose for which this contact is used, e.g. mail,  daytime phone, etc. Taken from value of inherited `_name_` attribute.",
+                    "documentation": "Purpose for which this contact is used, e.g. mail,  daytime phone, etc. Taken from value of inherited `_name_` attribute.",
                     "result": {
                         "type": "DV_TEXT"
                     }
@@ -6267,7 +6267,7 @@
             "functions": {
                 "type": {
                     "name": "type",
-                    "description": "Type of address, e.g. electronic,  locality. Taken from value of inherited `_name_` attribute.",
+                    "documentation": "Type of address, e.g. electronic,  locality. Taken from value of inherited `_name_` attribute.",
                     "result": {
                         "type": "DV_TEXT"
                     }
@@ -6294,7 +6294,7 @@
             "functions": {
                 "purpose": {
                     "name": "purpose",
-                    "description": "Purpose of identity, e.g. legal ,  stagename,  nickname,  tribal name,  trading name. Taken from value of inherited `_name_` attribute.",
+                    "documentation": "Purpose of identity, e.g. legal ,  stagename,  nickname,  tribal name,  trading name. Taken from value of inherited `_name_` attribute.",
                     "result": {
                         "type": "DV_TEXT"
                     }
@@ -6479,7 +6479,7 @@
             "functions": {
                 "type": {
                     "name": "type",
-                    "description": "Type of relationship, such as  employment,  authority,  health provision ",
+                    "documentation": "Type of relationship, such as  employment,  authority,  health provision ",
                     "result": {
                         "type": "DV_TEXT"
                     }
@@ -6566,7 +6566,7 @@
             "functions": {
                 "is_persistent": {
                     "name": "is_persistent",
-                    "description": "True if category is `431|persistent|`, False otherwise. Useful for finding Compositions in an EHR which are guaranteed to be of interest to most users. ",
+                    "documentation": "True if category is `431|persistent|`, False otherwise. Useful for finding Compositions in an EHR which are guaranteed to be of interest to most users. ",
                     "result": {
                         "type": "Boolean"
                     }
@@ -6943,7 +6943,7 @@
             "functions": {
                 "subject_is_self": {
                     "name": "subject_is_self",
-                    "description": "Returns True if this Entry is about the subject of the EHR, in which case the subject attribute is of type PARTY_SELF.",
+                    "documentation": "Returns True if this Entry is about the subject of the EHR, in which case the subject attribute is of type PARTY_SELF.",
                     "post_conditions": {
                         "Post_condition": "Result implies subject.generating_type = \u201cPARTY_SELF\u201d"
                     },

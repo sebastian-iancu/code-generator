@@ -129,7 +129,7 @@
             "functions": {
                 "is_equal": {
                     "name": "is_equal",
-                    "description": "Value equality.",
+                    "documentation": "Value equality.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -143,7 +143,7 @@
                 },
                 "infix =": {
                     "name": "infix =",
-                    "description": "Reference equality.",
+                    "documentation": "Reference equality.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -157,7 +157,7 @@
                 },
                 "instance_of": {
                     "name": "instance_of",
-                    "description": "Create new instance of a type.",
+                    "documentation": "Create new instance of a type.",
                     "parameters": {
                         "a_type": {
                             "name": "a_type",
@@ -171,7 +171,7 @@
                 },
                 "type_of": {
                     "name": "type_of",
-                    "description": "Type name of an object as a string. May include generic parameters, as in \"Interval<Time>\".",
+                    "documentation": "Type name of an object as a string. May include generic parameters, as in \"Interval<Time>\".",
                     "parameters": {
                         "an_object": {
                             "name": "an_object",
@@ -203,7 +203,7 @@
             "functions": {
                 "has_key": {
                     "name": "has_key",
-                    "description": "Test for membership of a key.",
+                    "documentation": "Test for membership of a key.",
                     "parameters": {
                         "a_key": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN",
@@ -218,7 +218,7 @@
                 },
                 "item": {
                     "name": "item",
-                    "description": "Return item for key  a_key'.",
+                    "documentation": "Return item for key  a_key'.",
                     "parameters": {
                         "a_key": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN",
@@ -249,7 +249,7 @@
             "functions": {
                 "has": {
                     "name": "has",
-                    "description": "Test for membership of a value.",
+                    "documentation": "Test for membership of a value.",
                     "parameters": {
                         "v": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN",
@@ -264,14 +264,14 @@
                 },
                 "count": {
                     "name": "count",
-                    "description": "Number of items in container.",
+                    "documentation": "Number of items in container.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "is_empty": {
                     "name": "is_empty",
-                    "description": "True if container is empty.",
+                    "documentation": "True if container is empty.",
                     "result": {
                         "type": "Boolean"
                     }
@@ -293,14 +293,14 @@
             "functions": {
                 "first": {
                     "name": "first",
-                    "description": "Return first element.",
+                    "documentation": "Return first element.",
                     "result": {
                         "type": "T"
                     }
                 },
                 "last": {
                     "name": "last",
-                    "description": "Return last element.",
+                    "documentation": "Return last element.",
                     "result": {
                         "type": "T"
                     }
@@ -375,7 +375,7 @@
             "functions": {
                 "infix *": {
                     "name": "infix *",
-                    "description": "Product by `other'. Actual type of result depends on arithmetic balancing rules.",
+                    "documentation": "Product by `other'. Actual type of result depends on arithmetic balancing rules.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -389,7 +389,7 @@
                 },
                 "infix +": {
                     "name": "infix +",
-                    "description": "Sum with `other' (commutative). Actual type of result depends on arithmetic balancing rules.",
+                    "documentation": "Sum with `other' (commutative). Actual type of result depends on arithmetic balancing rules.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -403,7 +403,7 @@
                 },
                 "infix -": {
                     "name": "infix -",
-                    "description": "Result of subtracting `other'. Actual type of result depends on arithmetic balancing rules.",
+                    "documentation": "Result of subtracting `other'. Actual type of result depends on arithmetic balancing rules.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -438,7 +438,7 @@
             "functions": {
                 "infix and": {
                     "name": "infix and",
-                    "description": "Logical conjunction",
+                    "documentation": "Logical conjunction",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -456,7 +456,7 @@
                 },
                 "infix and_then": {
                     "name": "infix and_then",
-                    "description": "Boolean semi-strict conjunction with other",
+                    "documentation": "Boolean semi-strict conjunction with other",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -473,7 +473,7 @@
                 },
                 "infix or": {
                     "name": "infix or",
-                    "description": "Boolean disjunction with other.",
+                    "documentation": "Boolean disjunction with other.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -492,7 +492,7 @@
                 },
                 "infix or_else": {
                     "name": "infix or_else",
-                    "description": "Boolean semi-strict disjunction with `other'.",
+                    "documentation": "Boolean semi-strict disjunction with `other'.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -509,7 +509,7 @@
                 },
                 "infix xor": {
                     "name": "infix xor",
-                    "description": "Boolean exclusive or with `other'.",
+                    "documentation": "Boolean exclusive or with `other'.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -526,7 +526,7 @@
                 },
                 "infix implies": {
                     "name": "infix implies",
-                    "description": "Boolean implication of `other' (semi-strict)",
+                    "documentation": "Boolean implication of `other' (semi-strict)",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -557,7 +557,7 @@
             "functions": {
                 "infix +": {
                     "name": "infix +",
-                    "description": "Concatenation operator - causes \u2018other\u2019 to be appended to this string.",
+                    "documentation": "Concatenation operator - causes \u2018other\u2019 to be appended to this string.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -571,21 +571,21 @@
                 },
                 "is_empty": {
                     "name": "is_empty",
-                    "description": "True if string is empty, i.e. equal to \"\".",
+                    "documentation": "True if string is empty, i.e. equal to \"\".",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_integer": {
                     "name": "is_integer",
-                    "description": "True if string can be parsed as an integer.",
+                    "documentation": "True if string can be parsed as an integer.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "as_integer": {
                     "name": "as_integer",
-                    "description": "Return the integer corresponding to the integer value represented in this string.",
+                    "documentation": "Return the integer corresponding to the integer value represented in this string.",
                     "result": {
                         "type": "Integer"
                     }
@@ -601,7 +601,7 @@
             "functions": {
                 "floor": {
                     "name": "floor",
-                    "description": "Return the greatest integer no greater than the value of this object.",
+                    "documentation": "Return the greatest integer no greater than the value of this object.",
                     "result": {
                         "type": "Integer"
                     }
@@ -625,7 +625,7 @@
             "functions": {
                 "infix <": {
                     "name": "infix <",
-                    "description": "Arithmetic comparison. In conjunction with \u2018=\u2019, enables the definition of the operators \u2018>\u2019, \u2018>=\u2019, \u2018<=\u2019, \u2018<>\u2019. In real type systems, this operator might be defined on another class for comparability.",
+                    "documentation": "Arithmetic comparison. In conjunction with \u2018=\u2019, enables the definition of the operators \u2018>\u2019, \u2018>=\u2019, \u2018<=\u2019, \u2018<>\u2019. In real type systems, this operator might be defined on another class for comparability.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -648,14 +648,14 @@
             "functions": {
                 "year": {
                     "name": "year",
-                    "description": "Year.",
+                    "documentation": "Year.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "month": {
                     "name": "month",
-                    "description": "Month in year.",
+                    "documentation": "Month in year.",
                     "pre_conditions": {
                         "Pre": "not month_unknown"
                     },
@@ -665,7 +665,7 @@
                 },
                 "day": {
                     "name": "day",
-                    "description": "Day in month.",
+                    "documentation": "Day in month.",
                     "pre_conditions": {
                         "Pre": "not day_unknown"
                     },
@@ -675,7 +675,7 @@
                 },
                 "hour": {
                     "name": "hour",
-                    "description": "Hour in day.",
+                    "documentation": "Hour in day.",
                     "pre_conditions": {
                         "Pre": "not hour_unknown"
                     },
@@ -685,7 +685,7 @@
                 },
                 "minute": {
                     "name": "minute",
-                    "description": "Minute in hour.",
+                    "documentation": "Minute in hour.",
                     "pre_conditions": {
                         "Pre": "not minute_unknown"
                     },
@@ -695,7 +695,7 @@
                 },
                 "second": {
                     "name": "second",
-                    "description": "Second in minute.",
+                    "documentation": "Second in minute.",
                     "pre_conditions": {
                         "Pre": "not second_unknown"
                     },
@@ -705,77 +705,77 @@
                 },
                 "fractional_second": {
                     "name": "fractional_second",
-                    "description": "Fractional seconds.",
+                    "documentation": "Fractional seconds.",
                     "result": {
                         "type": "Real"
                     }
                 },
                 "timezone": {
                     "name": "timezone",
-                    "description": "Timezone; may be Void.",
+                    "documentation": "Timezone; may be Void.",
                     "result": {
                         "type": "Iso8601_timezone"
                     }
                 },
                 "month_unknown": {
                     "name": "month_unknown",
-                    "description": "Indicates whether month in year is unknown.",
+                    "documentation": "Indicates whether month in year is unknown.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "day_unknown": {
                     "name": "day_unknown",
-                    "description": "Indicates whether day in month is unknown.",
+                    "documentation": "Indicates whether day in month is unknown.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "minute_unknown": {
                     "name": "minute_unknown",
-                    "description": "Indicates whether minute in hour is known.",
+                    "documentation": "Indicates whether minute in hour is known.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "second_unknown": {
                     "name": "second_unknown",
-                    "description": "Indicates whether minute in hour is known.",
+                    "documentation": "Indicates whether minute in hour is known.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_decimal_sign_comma": {
                     "name": "is_decimal_sign_comma",
-                    "description": "True if this time has a decimal part indicated by \u2018,\u2019 (comma) rather than \u2018.\u2019 (period).",
+                    "documentation": "True if this time has a decimal part indicated by \u2018,\u2019 (comma) rather than \u2018.\u2019 (period).",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_partial": {
                     "name": "is_partial",
-                    "description": "True if this date time is partial, i.e. if seconds or more is missing.",
+                    "documentation": "True if this date time is partial, i.e. if seconds or more is missing.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_extended": {
                     "name": "is_extended",
-                    "description": "True if this date\/time uses \u2018-\u2019, \u2018:\u2019 separators.",
+                    "documentation": "True if this date\/time uses \u2018-\u2019, \u2018:\u2019 separators.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "has_fractional_second": {
                     "name": "has_fractional_second",
-                    "description": "True if the fractional_second part is signficant (i.e. even if = 0.0).",
+                    "documentation": "True if the fractional_second part is signficant (i.e. even if = 0.0).",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "as_string": {
                     "name": "as_string",
-                    "description": "Return the string value in extended format.",
+                    "documentation": "Return the string value in extended format.",
                     "result": {
                         "type": "String"
                     }
@@ -805,91 +805,91 @@
             "functions": {
                 "seconds": {
                     "name": "seconds",
-                    "description": "Number of seconds.",
+                    "documentation": "Number of seconds.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "fractional_seconds": {
                     "name": "fractional_seconds",
-                    "description": "Fractional seconds.",
+                    "documentation": "Fractional seconds.",
                     "result": {
                         "type": "Real"
                     }
                 },
                 "is_decimal_sign_comma": {
                     "name": "is_decimal_sign_comma",
-                    "description": "True if this time has a decimal part indicated by ',' (comma) rather than '.' (period).",
+                    "documentation": "True if this time has a decimal part indicated by ',' (comma) rather than '.' (period).",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_partial": {
                     "name": "is_partial",
-                    "description": "Returns False.",
+                    "documentation": "Returns False.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_extended": {
                     "name": "is_extended",
-                    "description": "Returns True.",
+                    "documentation": "Returns True.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "months": {
                     "name": "months",
-                    "description": "Number of months.",
+                    "documentation": "Number of months.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "years": {
                     "name": "years",
-                    "description": "Number of years of nominal 365-day length.",
+                    "documentation": "Number of years of nominal 365-day length.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "weeks": {
                     "name": "weeks",
-                    "description": "Number of 7 day weeks.",
+                    "documentation": "Number of 7 day weeks.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "to_seconds": {
                     "name": "to_seconds",
-                    "description": "Total number of seconds equivalent (including fractional) of entire duration.",
+                    "documentation": "Total number of seconds equivalent (including fractional) of entire duration.",
                     "result": {
                         "type": "Real"
                     }
                 },
                 "minutes": {
                     "name": "minutes",
-                    "description": "Number of 60 second minutes.",
+                    "documentation": "Number of 60 second minutes.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "hours": {
                     "name": "hours",
-                    "description": "Number of 60 minute hours.",
+                    "documentation": "Number of 60 minute hours.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "days": {
                     "name": "days",
-                    "description": "Number of 24 hour days.",
+                    "documentation": "Number of 24 hour days.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "as_string": {
                     "name": "as_string",
-                    "description": "Return the duration string value.",
+                    "documentation": "Return the duration string value.",
                     "result": {
                         "type": "String"
                     }
@@ -915,28 +915,28 @@
             "functions": {
                 "hour": {
                     "name": "hour",
-                    "description": "Hour in day, in 24-hour time.",
+                    "documentation": "Hour in day, in 24-hour time.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "minute": {
                     "name": "minute",
-                    "description": "Minute in hour.",
+                    "documentation": "Minute in hour.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "second": {
                     "name": "second",
-                    "description": "Second in minute.",
+                    "documentation": "Second in minute.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "fractional_second": {
                     "name": "fractional_second",
-                    "description": "Fractional seconds.",
+                    "documentation": "Fractional seconds.",
                     "pre_conditions": {
                         "Pre": "not second_unknown"
                     },
@@ -946,56 +946,56 @@
                 },
                 "timezone": {
                     "name": "timezone",
-                    "description": "Timezone; may be Void.",
+                    "documentation": "Timezone; may be Void.",
                     "result": {
                         "type": "Iso8601_timezone"
                     }
                 },
                 "minute_unknown": {
                     "name": "minute_unknown",
-                    "description": "Indicates whether minute is unknown. If so, the time is of the form \u201chh\u201d.",
+                    "documentation": "Indicates whether minute is unknown. If so, the time is of the form \u201chh\u201d.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "second_unknown": {
                     "name": "second_unknown",
-                    "description": "Indicates whether second is unknown. If so and month is known, the time is of the form `\"hh:mm\"` or `\"hhmm\"`.",
+                    "documentation": "Indicates whether second is unknown. If so and month is known, the time is of the form `\"hh:mm\"` or `\"hhmm\"`.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_decimal_sign_comma": {
                     "name": "is_decimal_sign_comma",
-                    "description": "True if this time has a decimal part indicated by \u2018,\u2019 (comma) rather than \u2018.\u2019 (period).",
+                    "documentation": "True if this time has a decimal part indicated by \u2018,\u2019 (comma) rather than \u2018.\u2019 (period).",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_partial": {
                     "name": "is_partial",
-                    "description": "True if this time is partial, i.e. if seconds or more is missing.",
+                    "documentation": "True if this time is partial, i.e. if seconds or more is missing.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_extended": {
                     "name": "is_extended",
-                    "description": "True if this time uses \u2018-\u2019, \u2018:\u2019 separators.",
+                    "documentation": "True if this time uses \u2018-\u2019, \u2018:\u2019 separators.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "has_fractional_second": {
                     "name": "has_fractional_second",
-                    "description": "True if the fractional_second part is signficant (i.e. even if = 0.0).",
+                    "documentation": "True if the fractional_second part is signficant (i.e. even if = 0.0).",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "as_string": {
                     "name": "as_string",
-                    "description": "Return string value in extended format.",
+                    "documentation": "Return string value in extended format.",
                     "result": {
                         "type": "String"
                     }
@@ -1028,14 +1028,14 @@
             "functions": {
                 "is_partial": {
                     "name": "is_partial",
-                    "description": "True if this date time is partial, i.e. if trailing end (right hand) value(s) is\/are missing.",
+                    "documentation": "True if this date time is partial, i.e. if trailing end (right hand) value(s) is\/are missing.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_extended": {
                     "name": "is_extended",
-                    "description": "True if this ISO8601 string is in the 'extended' form, i.e. uses \u2018-\u2019 and \/ or \u2018:\u2019 separators. This is the preferred format.",
+                    "documentation": "True if this ISO8601 string is in the 'extended' form, i.e. uses \u2018-\u2019 and \/ or \u2018:\u2019 separators. This is the preferred format.",
                     "result": {
                         "type": "Boolean"
                     }
@@ -1051,14 +1051,14 @@
             "functions": {
                 "year": {
                     "name": "year",
-                    "description": "Year.",
+                    "documentation": "Year.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "month": {
                     "name": "month",
-                    "description": "Month in year.",
+                    "documentation": "Month in year.",
                     "pre_conditions": {
                         "Pre": "not month_unknown"
                     },
@@ -1068,7 +1068,7 @@
                 },
                 "day": {
                     "name": "day",
-                    "description": "Day in month.",
+                    "documentation": "Day in month.",
                     "pre_conditions": {
                         "Pre": "not day_unknown"
                     },
@@ -1078,42 +1078,42 @@
                 },
                 "timezone": {
                     "name": "timezone",
-                    "description": "Timezone; may be Void.",
+                    "documentation": "Timezone; may be Void.",
                     "result": {
                         "type": "Iso8601_timezone"
                     }
                 },
                 "month_unknown": {
                     "name": "month_unknown",
-                    "description": "Indicates whether month in year is unknown. If so, the date is of the form `\"YYYY\"`.",
+                    "documentation": "Indicates whether month in year is unknown. If so, the date is of the form `\"YYYY\"`.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "day_unknown": {
                     "name": "day_unknown",
-                    "description": "Indicates whether day in month is unknown. If so, and month is known, the date is of the form `\"YYYY-MM\"` or `\"YYYYMM\"`.",
+                    "documentation": "Indicates whether day in month is unknown. If so, and month is known, the date is of the form `\"YYYY-MM\"` or `\"YYYYMM\"`.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_partial": {
                     "name": "is_partial",
-                    "description": "True if this date is partial, i.e. if days or more is missing.",
+                    "documentation": "True if this date is partial, i.e. if days or more is missing.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_extended": {
                     "name": "is_extended",
-                    "description": "True if this date uses `'-'` separators.",
+                    "documentation": "True if this date uses `'-'` separators.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "as_string": {
                     "name": "as_string",
-                    "description": "Return string value in extended format.",
+                    "documentation": "Return string value in extended format.",
                     "result": {
                         "type": "String"
                     }
@@ -1157,28 +1157,28 @@
             "functions": {
                 "is_open": {
                     "name": "is_open",
-                    "description": "True if this interval imposes no constraints, i.e. is set to `0..*`.",
+                    "documentation": "True if this interval imposes no constraints, i.e. is set to `0..*`.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_optional": {
                     "name": "is_optional",
-                    "description": "True if this interval expresses optionality, i.e. `0..1`.",
+                    "documentation": "True if this interval expresses optionality, i.e. `0..1`.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_mandatory": {
                     "name": "is_mandatory",
-                    "description": "True if this interval expresses mandation, i.e. `1..1`.",
+                    "documentation": "True if this interval expresses mandation, i.e. `1..1`.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_prohibited": {
                     "name": "is_prohibited",
-                    "description": "True if this interval is set to `0..0`.",
+                    "documentation": "True if this interval is set to `0..0`.",
                     "result": {
                         "type": "Boolean"
                     }
@@ -1238,7 +1238,7 @@
             "functions": {
                 "has": {
                     "name": "has",
-                    "description": "True if `(lower_unbounded or lower_included and v >= lower) or v > lower and (upper_unbounded or upper_included and v <= upper or v < upper)`.",
+                    "documentation": "True if `(lower_unbounded or lower_included and v >= lower) or v > lower and (upper_unbounded or upper_included and v <= upper or v < upper)`.",
                     "parameters": {
                         "e": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN",
@@ -1253,7 +1253,7 @@
                 },
                 "intersects": {
                     "name": "intersects",
-                    "description": "True if there is any overlap between intervals represented by Current and `other'. True if at least one limit of other is strictly inside the limits of this interval.",
+                    "documentation": "True if there is any overlap between intervals represented by Current and `other'. True if at least one limit of other is strictly inside the limits of this interval.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1267,7 +1267,7 @@
                 },
                 "contains": {
                     "name": "contains",
-                    "description": "True if current interval properly contains `other`? True if all points of `other` are inside the current interval.",
+                    "documentation": "True if current interval properly contains `other`? True if all points of `other` are inside the current interval.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1281,7 +1281,7 @@
                 },
                 "is_equal": {
                     "name": "is_equal",
-                    "description": "True if current object's interval is semantically same as `other`.",
+                    "documentation": "True if current object's interval is semantically same as `other`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1327,21 +1327,21 @@
             "functions": {
                 "is_bag": {
                     "name": "is_bag",
-                    "description": "True if the semantics of this cardinality represent a bag, i.e. unordered, non-unique membership.",
+                    "documentation": "True if the semantics of this cardinality represent a bag, i.e. unordered, non-unique membership.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_list": {
                     "name": "is_list",
-                    "description": "True if the semantics of this cardinality represent a list, i.e. ordered, non-unique membership.",
+                    "documentation": "True if the semantics of this cardinality represent a list, i.e. ordered, non-unique membership.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_set": {
                     "name": "is_set",
-                    "description": "True if the semantics of this cardinality represent a set, i.e. unordered, unique membership.",
+                    "documentation": "True if the semantics of this cardinality represent a set, i.e. unordered, unique membership.",
                     "result": {
                         "type": "Boolean"
                     }
@@ -1411,49 +1411,49 @@
             "functions": {
                 "qualified_rm_entity": {
                     "name": "qualified_rm_entity",
-                    "description": "Globally qualified reference model entity, e.g.  `openehr-EHR-OBSERVATION`.",
+                    "documentation": "Globally qualified reference model entity, e.g.  `openehr-EHR-OBSERVATION`.",
                     "result": {
                         "type": "String"
                     }
                 },
                 "domain_concept": {
                     "name": "domain_concept",
-                    "description": "Name of the concept represented by this archetype, including specialisation, e.g. `Biochemistry_result-cholesterol`. ",
+                    "documentation": "Name of the concept represented by this archetype, including specialisation, e.g. `Biochemistry_result-cholesterol`. ",
                     "result": {
                         "type": "String"
                     }
                 },
                 "rm_originator": {
                     "name": "rm_originator",
-                    "description": "Organisation originating the reference model on which this archetype is based, e.g. openehr,  cen,  hl7 . ",
+                    "documentation": "Organisation originating the reference model on which this archetype is based, e.g. openehr,  cen,  hl7 . ",
                     "result": {
                         "type": "String"
                     }
                 },
                 "rm_name": {
                     "name": "rm_name",
-                    "description": "Name of the reference model, e.g. rim,  ehr_rm,  en13606 . ",
+                    "documentation": "Name of the reference model, e.g. rim,  ehr_rm,  en13606 . ",
                     "result": {
                         "type": "String"
                     }
                 },
                 "rm_entity": {
                     "name": "rm_entity",
-                    "description": "Name of the ontological level within the reference model to which this archetype is targeted, e.g. for openEHR,  folder ,  composition ,  section ,  entry .",
+                    "documentation": "Name of the ontological level within the reference model to which this archetype is targeted, e.g. for openEHR,  folder ,  composition ,  section ,  entry .",
                     "result": {
                         "type": "String"
                     }
                 },
                 "specialisation": {
                     "name": "specialisation",
-                    "description": "Name of specialisation of concept, if this archetype is a specialisation of another archetype, e.g.  cholesterol .",
+                    "documentation": "Name of specialisation of concept, if this archetype is a specialisation of another archetype, e.g.  cholesterol .",
                     "result": {
                         "type": "String"
                     }
                 },
                 "version_id": {
                     "name": "version_id",
-                    "description": "Version of this archetype. \n",
+                    "documentation": "Version of this archetype. \n",
                     "result": {
                         "type": "String"
                     }
@@ -1504,7 +1504,7 @@
             "functions": {
                 "as_uri": {
                     "name": "as_uri",
-                    "description": "A URI form of the reference, created by concatenating the following: \n\n* scheme, e.g. `ehr:`, derived from `_namespace_`\n* `_id.value_`\n* `\/` + `_path_`, where `_path_` is non-empty\n",
+                    "documentation": "A URI form of the reference, created by concatenating the following: \n\n* scheme, e.g. `ehr:`, derived from `_namespace_`\n* `_id.value_`\n* `\/` + `_path_`, where `_path_` is non-empty\n",
                     "result": {
                         "type": "String"
                     }
@@ -1557,28 +1557,28 @@
             "functions": {
                 "object_id": {
                     "name": "object_id",
-                    "description": "Unique identifier for logical object of which this identifier identifies one version; normally the `_object_id_` will be the unique identifier of the version container containing the version referred to by this `OBJECT_VERSION_ID` instance. ",
+                    "documentation": "Unique identifier for logical object of which this identifier identifies one version; normally the `_object_id_` will be the unique identifier of the version container containing the version referred to by this `OBJECT_VERSION_ID` instance. ",
                     "result": {
                         "type": "UID"
                     }
                 },
                 "version_tree_id": {
                     "name": "version_tree_id",
-                    "description": "Tree identifier of this version with respect to other versions in the same version tree, as either 1 or 3 part dot-separated numbers, e.g.  1 ,  2.1.4 . ",
+                    "documentation": "Tree identifier of this version with respect to other versions in the same version tree, as either 1 or 3 part dot-separated numbers, e.g.  1 ,  2.1.4 . ",
                     "result": {
                         "type": "VERSION_TREE_ID"
                     }
                 },
                 "creating_system_id": {
                     "name": "creating_system_id",
-                    "description": "Identifier of the system that created the Version corresponding to this Object version id.",
+                    "documentation": "Identifier of the system that created the Version corresponding to this Object version id.",
                     "result": {
                         "type": "UID"
                     }
                 },
                 "is_branch": {
                     "name": "is_branch",
-                    "description": "True if this version identifier represents a branch.",
+                    "documentation": "True if this version identifier represents a branch.",
                     "result": {
                         "type": "Boolean"
                     }
@@ -1604,14 +1604,14 @@
             "functions": {
                 "name": {
                     "name": "name",
-                    "description": "Return the terminology id (which includes the  version  in some cases). Distinct names correspond to distinct (i.e. non-compatible) terminologies. Thus the names  ICD10AM  and  ICD10  refer to distinct terminologies. ",
+                    "documentation": "Return the terminology id (which includes the  version  in some cases). Distinct names correspond to distinct (i.e. non-compatible) terminologies. Thus the names  ICD10AM  and  ICD10  refer to distinct terminologies. ",
                     "result": {
                         "type": "String"
                     }
                 },
                 "version_id": {
                     "name": "version_id",
-                    "description": "Version of this terminology, if versioning supported, else the empty string. ",
+                    "documentation": "Version of this terminology, if versioning supported, else the empty string. ",
                     "result": {
                         "type": "String"
                     }
@@ -1632,28 +1632,28 @@
             "functions": {
                 "trunk_version": {
                     "name": "trunk_version",
-                    "description": "Trunk version number; numbering starts at 1. ",
+                    "documentation": "Trunk version number; numbering starts at 1. ",
                     "result": {
                         "type": "String"
                     }
                 },
                 "is_branch": {
                     "name": "is_branch",
-                    "description": "True if this version identifier represents a branch, i.e. has branch_number and branch_version parts.",
+                    "documentation": "True if this version identifier represents a branch, i.e. has branch_number and branch_version parts.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "branch_number": {
                     "name": "branch_number",
-                    "description": "Number of branch from the trunk point; numbering starts at 1. ",
+                    "documentation": "Number of branch from the trunk point; numbering starts at 1. ",
                     "result": {
                         "type": "String"
                     }
                 },
                 "branch_version": {
                     "name": "branch_version",
-                    "description": "Version of the branch; numbering starts at 1. ",
+                    "documentation": "Version of the branch; numbering starts at 1. ",
                     "result": {
                         "type": "String"
                     }
@@ -1679,21 +1679,21 @@
             "functions": {
                 "root": {
                     "name": "root",
-                    "description": "The identifier of the conceptual namespace in which the object exists, within the identification scheme. Returns the part to the left of the first '::' separator, if any, or else the whole string. ",
+                    "documentation": "The identifier of the conceptual namespace in which the object exists, within the identification scheme. Returns the part to the left of the first '::' separator, if any, or else the whole string. ",
                     "result": {
                         "type": "UID"
                     }
                 },
                 "extension": {
                     "name": "extension",
-                    "description": "Optional local identifier of the object within the context of the root identifier. Returns the part to the right of the first '::' separator if any, or else any empty String.",
+                    "documentation": "Optional local identifier of the object within the context of the root identifier. Returns the part to the right of the first '::' separator if any, or else any empty String.",
                     "result": {
                         "type": "String"
                     }
                 },
                 "has_extension": {
                     "name": "has_extension",
-                    "description": "True if `_extension_ \/= Void`.",
+                    "documentation": "True if `_extension_ \/= Void`.",
                     "result": {
                         "type": "Boolean"
                     }
@@ -1858,56 +1858,56 @@
             "functions": {
                 "hour": {
                     "name": "hour",
-                    "description": "Hour part of timezone - in the range 00 - 13.",
+                    "documentation": "Hour part of timezone - in the range 00 - 13.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "minute": {
                     "name": "minute",
-                    "description": "Minute part of timezone. Generally 00 or 30.",
+                    "documentation": "Minute part of timezone. Generally 00 or 30.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "sign": {
                     "name": "sign",
-                    "description": "Direction of timezone expresssed as +1 or -1.",
+                    "documentation": "Direction of timezone expresssed as +1 or -1.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "minute_unknown": {
                     "name": "minute_unknown",
-                    "description": "Indicates whether minute part known.",
+                    "documentation": "Indicates whether minute part known.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_partial": {
                     "name": "is_partial",
-                    "description": "True if this time zone is partial, i.e. if minutes is missing.",
+                    "documentation": "True if this time zone is partial, i.e. if minutes is missing.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_extended": {
                     "name": "is_extended",
-                    "description": "True if this time-zone uses \u2018:\u2019 separators.",
+                    "documentation": "True if this time-zone uses \u2018:\u2019 separators.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_gmt": {
                     "name": "is_gmt",
-                    "description": "True if timezone is UTC, i.e. +0000.",
+                    "documentation": "True if timezone is UTC, i.e. +0000.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "as_string": {
                     "name": "as_string",
-                    "description": "Return timezone string.",
+                    "documentation": "Return timezone string.",
                     "result": {
                         "type": "String"
                     }
@@ -2027,7 +2027,7 @@
                 },
                 "valid_day": {
                     "name": "valid_day",
-                    "description": "True if d >= 1 and d <= days_in_month (m, y)",
+                    "documentation": "True if d >= 1 and d <= days_in_month (m, y)",
                     "parameters": {
                         "y": {
                             "name": "y",
@@ -2054,7 +2054,7 @@
                 },
                 "valid_hour": {
                     "name": "valid_hour",
-                    "description": "True if (h >= 0 and h < Hours_in_day) or (h = Hours_in_day and m = 0 and s = 0)",
+                    "documentation": "True if (h >= 0 and h < Hours_in_day) or (h = Hours_in_day and m = 0 and s = 0)",
                     "parameters": {
                         "h": {
                             "name": "h",
@@ -2081,7 +2081,7 @@
                 },
                 "valid_minute": {
                     "name": "valid_minute",
-                    "description": "True if m >= 0 and m < Minutes_in_hour.",
+                    "documentation": "True if m >= 0 and m < Minutes_in_hour.",
                     "parameters": {
                         "m": {
                             "name": "m",
@@ -2098,7 +2098,7 @@
                 },
                 "valid_second": {
                     "name": "valid_second",
-                    "description": "True if s >= 0 and s < Seconds_in_minute .",
+                    "documentation": "True if s >= 0 and s < Seconds_in_minute .",
                     "parameters": {
                         "s": {
                             "name": "s",
@@ -2115,7 +2115,7 @@
                 },
                 "valid_fractional_second": {
                     "name": "valid_fractional_second",
-                    "description": "True if fs >= 0.0 and fs < 1.0 .",
+                    "documentation": "True if fs >= 0.0 and fs < 1.0 .",
                     "parameters": {
                         "fs": {
                             "name": "fs",
@@ -2132,7 +2132,7 @@
                 },
                 "valid_iso8601_date": {
                     "name": "valid_iso8601_date",
-                    "description": "String is a valid ISO 8601 date, i.e. takes the complete form:\n\n* `YYYY-MM-DD` (extended, preferred) or one of the partial forms `YYYY-MM` or `YYYY`\n* `YYYYMMDD` (compact) or a partial variant `YYYYMM`.\n\nWhere:\n\n* `YYYY` is the string form of any positive number in the range `0000` - `9999` (zero-filled to four digits)\n* `MM` is `01` - `12` (zero-filled to two digits)\n* `DD` is `01` - `31` (zero-filled to two digits)\n\nThe combinations of `YYYY`, `MM`, `DD` numbers must be correct with respect to the Gregorian calendar.",
+                    "documentation": "String is a valid ISO 8601 date, i.e. takes the complete form:\n\n* `YYYY-MM-DD` (extended, preferred) or one of the partial forms `YYYY-MM` or `YYYY`\n* `YYYYMMDD` (compact) or a partial variant `YYYYMM`.\n\nWhere:\n\n* `YYYY` is the string form of any positive number in the range `0000` - `9999` (zero-filled to four digits)\n* `MM` is `01` - `12` (zero-filled to two digits)\n* `DD` is `01` - `31` (zero-filled to two digits)\n\nThe combinations of `YYYY`, `MM`, `DD` numbers must be correct with respect to the Gregorian calendar.",
                     "parameters": {
                         "s": {
                             "name": "s",
@@ -2146,7 +2146,7 @@
                 },
                 "valid_iso8601_time": {
                     "name": "valid_iso8601_time",
-                    "description": "String is a valid ISO 8601 date, i.e. takes the form:\n\n* `hh:mm:ss[(,|.)s+][Z|\u00b1hh[:mm]]` (extended)\n* `hhmmss[(,|.)s+][Z|\u00b1hh[mm]]` (compact)\n* or one of the partial forms:\n** `hh:mm` (extended)\n** `hhmm` or `hh` (compact)\n\nwith an additional optional timezone indicator of:\n\n* `Z` or`\u00b1hh[:mm]` (extended)  `\u00b1hh[mm]` (compact)\n\nWhere:\n\n* `hh` is \"00\" - \"23\" (0-filled to two digits)\n* `mm` is \"00\" - \"59\" (0-filled to two digits)\n* `ss` is \"00\" - \"60\" (0-filled to two digits)\n* `[(,|.)s+]` is an optional string consisting of a comma or decimal point followed by numeric string of 1 or more digits, representing a fractional second\n* `Z` is a literal meaning UTC (modern replacement for GMT), i.e. timezone `+0000`\n",
+                    "documentation": "String is a valid ISO 8601 date, i.e. takes the form:\n\n* `hh:mm:ss[(,|.)s+][Z|\u00b1hh[:mm]]` (extended)\n* `hhmmss[(,|.)s+][Z|\u00b1hh[mm]]` (compact)\n* or one of the partial forms:\n** `hh:mm` (extended)\n** `hhmm` or `hh` (compact)\n\nwith an additional optional timezone indicator of:\n\n* `Z` or`\u00b1hh[:mm]` (extended)  `\u00b1hh[mm]` (compact)\n\nWhere:\n\n* `hh` is \"00\" - \"23\" (0-filled to two digits)\n* `mm` is \"00\" - \"59\" (0-filled to two digits)\n* `ss` is \"00\" - \"60\" (0-filled to two digits)\n* `[(,|.)s+]` is an optional string consisting of a comma or decimal point followed by numeric string of 1 or more digits, representing a fractional second\n* `Z` is a literal meaning UTC (modern replacement for GMT), i.e. timezone `+0000`\n",
                     "parameters": {
                         "s": {
                             "name": "s",
@@ -2160,7 +2160,7 @@
                 },
                 "valid_iso8601_date_time": {
                     "name": "valid_iso8601_date_time",
-                    "description": "String is a valid ISO 8601 date-time, i.e. takes the form:\n\n* `YYYY-MM-DDThh:mm:ss[(,|.)s+][Z|\u00b1hh[:mm]]` (extended)\n* `YYYYMMDDThhmmss[(,|.)s+][Z|\u00b1hh[mm]]` (compact)\n* or one of the partial forms:\n** `YYYY-MM-DDThh:mm` or `YYYY-MM-DDThh` (extended)\n** `YYYYMMDDThhmm` or `YYYYMMDDThh` (compact)",
+                    "documentation": "String is a valid ISO 8601 date-time, i.e. takes the form:\n\n* `YYYY-MM-DDThh:mm:ss[(,|.)s+][Z|\u00b1hh[:mm]]` (extended)\n* `YYYYMMDDThhmmss[(,|.)s+][Z|\u00b1hh[mm]]` (compact)\n* or one of the partial forms:\n** `YYYY-MM-DDThh:mm` or `YYYY-MM-DDThh` (extended)\n** `YYYYMMDDThhmm` or `YYYYMMDDThh` (compact)",
                     "parameters": {
                         "s": {
                             "name": "s",
@@ -2174,7 +2174,7 @@
                 },
                 "valid_iso8601_duration": {
                     "name": "valid_iso8601_duration",
-                    "description": "String is a valid ISO 8601 duration, i.e. takes the form:\n\n* `P[nnY][nnM][nnW][nnD][T[nnH][nnM][nnS]]`\n\nWhere each nn represents a number of years, months, etc. nnW represents a number of 7-day weeks.\n\nNote: allowing the `W` designator in the same expression as other designators is an exception to the published standard, but necessary in clinical information (typically for representing pregnancy duration).",
+                    "documentation": "String is a valid ISO 8601 duration, i.e. takes the form:\n\n* `P[nnY][nnM][nnW][nnD][T[nnH][nnM][nnS]]`\n\nWhere each nn represents a number of years, months, etc. nnW represents a number of 7-day weeks.\n\nNote: allowing the `W` designator in the same expression as other designators is an exception to the published standard, but necessary in clinical information (typically for representing pregnancy duration).",
                     "parameters": {
                         "s": {
                             "name": "s",
@@ -2293,7 +2293,7 @@
             "functions": {
                 "current_revision": {
                     "name": "current_revision",
-                    "description": "Most recent revision in revision_history if is_controlled else  (uncontrolled) . ",
+                    "documentation": "Most recent revision in revision_history if is_controlled else  (uncontrolled) . ",
                     "post_conditions": {
                         "Post": "Result = revision_history.most_recent_version"
                     },
@@ -2303,7 +2303,7 @@
                 },
                 "languages_available": {
                     "name": "languages_available",
-                    "description": "Total list of languages available in this resource, derived from original_language and translations. ",
+                    "documentation": "Total list of languages available in this resource, derived from original_language and translations. ",
                     "result": {
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",

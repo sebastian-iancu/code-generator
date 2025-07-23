@@ -207,7 +207,7 @@
             "functions": {
                 "concept_code": {
                     "name": "concept_code",
-                    "description": "The concept code of the root object of the archetype, also standing for the concept of the archetype as a whole.",
+                    "documentation": "The concept code of the root object of the archetype, also standing for the concept of the archetype as a whole.",
                     "post_conditions": {
                         "post-condition": "Result.is_equal (definition.node_id)"
                     },
@@ -217,7 +217,7 @@
                 },
                 "physical_paths": {
                     "name": "physical_paths",
-                    "description": "Set of language-independent paths extracted from archetype. Paths obey Xpath-like syntax and are formed from alternations of `C_OBJECT._node_id_` and `C_ATTRIBUTE._rm_attribute_name_` values. ",
+                    "documentation": "Set of language-independent paths extracted from archetype. Paths obey Xpath-like syntax and are formed from alternations of `C_OBJECT._node_id_` and `C_ATTRIBUTE._rm_attribute_name_` values. ",
                     "result": {
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
@@ -226,7 +226,7 @@
                 },
                 "logical_paths": {
                     "name": "logical_paths",
-                    "description": "Set of language-dependent paths extracted from archetype. Paths obey the same syntax as physical_paths, but with node_ids replaced by their meanings from the terminology. ",
+                    "documentation": "Set of language-dependent paths extracted from archetype. Paths obey the same syntax as physical_paths, but with node_ids replaced by their meanings from the terminology. ",
                     "parameters": {
                         "lang": {
                             "name": "lang",
@@ -242,7 +242,7 @@
                 },
                 "specialisation_depth": {
                     "name": "specialisation_depth",
-                    "description": "Specialisation depth of this archetype; larger than 0 if this archetype has a parent. Derived from terminology.specialisation_depth.",
+                    "documentation": "Specialisation depth of this archetype; larger than 0 if this archetype has a parent. Derived from terminology.specialisation_depth.",
                     "post_conditions": {
                         "post-condition": "Result = terminology.specialisation_depth"
                     },
@@ -252,7 +252,7 @@
                 },
                 "is_specialised": {
                     "name": "is_specialised",
-                    "description": "True if this archetype is a specialisation of another. ",
+                    "documentation": "True if this archetype is a specialisation of another. ",
                     "post_conditions": {
                         "post-condition": "Result implies parent_archetype_hrid \/= Void"
                     },
@@ -460,42 +460,42 @@
             "functions": {
                 "semantic_id": {
                     "name": "semantic_id",
-                    "description": "The 'interface' form of the HRID, i.e. down to the major version.",
+                    "documentation": "The 'interface' form of the HRID, i.e. down to the major version.",
                     "result": {
                         "type": "String"
                     }
                 },
                 "physical_id": {
                     "name": "physical_id",
-                    "description": "The 'physical' form of the HRID, i.e. with complete version information specified by `_version_id()_`.",
+                    "documentation": "The 'physical' form of the HRID, i.e. with complete version information specified by `_version_id()_`.",
                     "result": {
                         "type": "String"
                     }
                 },
                 "version_id": {
                     "name": "version_id",
-                    "description": "Full version identifier string, based on `_release_version_`, `_version_status_`, and `_build_count_` e.g. `\"1.8.2-rc.4\"`.",
+                    "documentation": "Full version identifier string, based on `_release_version_`, `_version_status_`, and `_build_count_` e.g. `\"1.8.2-rc.4\"`.",
                     "result": {
                         "type": "String"
                     }
                 },
                 "major_version": {
                     "name": "major_version",
-                    "description": "Major version of this archetype, extracted from `_release_version_`.",
+                    "documentation": "Major version of this archetype, extracted from `_release_version_`.",
                     "result": {
                         "type": "String"
                     }
                 },
                 "minor_version": {
                     "name": "minor_version",
-                    "description": "Minor version of this archetype, extracted from `_release_version_`.",
+                    "documentation": "Minor version of this archetype, extracted from `_release_version_`.",
                     "result": {
                         "type": "String"
                     }
                 },
                 "patch_version": {
                     "name": "patch_version",
-                    "description": "Patch version of this archetype, extracted from `_release_version_`. Equivalent to patch version in patch version in `semver.org` sytem.",
+                    "documentation": "Patch version of this archetype, extracted from `_release_version_`. Equivalent to patch version in patch version in `semver.org` sytem.",
                     "result": {
                         "type": "String"
                     }
@@ -530,14 +530,14 @@
             "functions": {
                 "is_prohibited": {
                     "name": "is_prohibited",
-                    "description": "True if this node is prohibited. Implemented in subtypes.",
+                    "documentation": "True if this node is prohibited. Implemented in subtypes.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "has_path": {
                     "name": "has_path",
-                    "description": "True if the relative path a_path exists at this node.",
+                    "documentation": "True if the relative path a_path exists at this node.",
                     "parameters": {
                         "a_path": {
                             "name": "a_path",
@@ -551,14 +551,14 @@
                 },
                 "path": {
                     "name": "path",
-                    "description": "Path of this node relative to root of archetype.",
+                    "documentation": "Path of this node relative to root of archetype.",
                     "result": {
                         "type": "String"
                     }
                 },
                 "c_conforms_to": {
                     "name": "c_conforms_to",
-                    "description": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. \nTypically used during validation of special-ised archetype nodes.",
+                    "documentation": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. \nTypically used during validation of special-ised archetype nodes.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -580,7 +580,7 @@
                 },
                 "c_congruent_to": {
                     "name": "c_congruent_to",
-                    "description": "True if constraints represented by this node contain no further redefinitions with respect to the node other, with the exception of node_id redefnition in `C_OBJECT` nodes. \n\nTypically used to test if an inherited node locally contains any constraints.",
+                    "documentation": "True if constraints represented by this node contain no further redefinitions with respect to the node other, with the exception of node_id redefnition in `C_OBJECT` nodes. \n\nTypically used to test if an inherited node locally contains any constraints.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -594,7 +594,7 @@
                 },
                 "is_second_order_constrained": {
                     "name": "is_second_order_constrained",
-                    "description": "True if there is a second order constraint such as a tuple constraint on this node.",
+                    "documentation": "True if there is a second order constraint such as a tuple constraint on this node.",
                     "post_conditions": {
                         "Post": "soc_parent \/= Void or else (parent \/= Void and then parent.is_second_order_constrained)"
                     },
@@ -604,14 +604,14 @@
                 },
                 "is_root": {
                     "name": "is_root",
-                    "description": "True if this node is the root of the tree.",
+                    "documentation": "True if this node is the root of the tree.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "is_leaf": {
                     "name": "is_leaf",
-                    "description": "True if this node is a terminal node in the tree structure, i.e. having no child nodes.",
+                    "documentation": "True if this node is a terminal node in the tree structure, i.e. having no child nodes.",
                     "result": {
                         "type": "Boolean"
                     }
@@ -660,7 +660,7 @@
             "functions": {
                 "specialisation_depth": {
                     "name": "specialisation_depth",
-                    "description": "Level of specialisation of this archetype node, based on its node_id. The value 0 corresponds to non-specialised, 1 to first-level specialisation and so on. The level is the same as the number of \u2018.\u2019 characters in the node_id code. If node_id is not set, the return value is -1, signifying that the specialisation level should be determined from the nearest parent `C_OBJECT` node having a node_id.",
+                    "documentation": "Level of specialisation of this archetype node, based on its node_id. The value 0 corresponds to non-specialised, 1 to first-level specialisation and so on. The level is the same as the number of \u2018.\u2019 characters in the node_id code. If node_id is not set, the return value is -1, signifying that the specialisation level should be determined from the nearest parent `C_OBJECT` node having a node_id.",
                     "result": {
                         "type": "Integer"
                     }
@@ -673,7 +673,7 @@
                 },
                 "c_conforms_to": {
                     "name": "c_conforms_to",
-                    "description": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. \nTypically used during validation of special-ised archetype nodes.",
+                    "documentation": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. \nTypically used during validation of special-ised archetype nodes.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -695,7 +695,7 @@
                 },
                 "c_congruent_to": {
                     "name": "c_congruent_to",
-                    "description": "True if constraints represented by this node contain no further redefinitions with respect to the node `_other_`, with the exception of node_id redefnition in `C_OBJECT` nodes. \n\nTypically used to test if an inherited node locally contains any constraints.",
+                    "documentation": "True if constraints represented by this node contain no further redefinitions with respect to the node `_other_`, with the exception of node_id redefnition in `C_OBJECT` nodes. \n\nTypically used to test if an inherited node locally contains any constraints.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -709,7 +709,7 @@
                 },
                 "occurrences_conforms_to": {
                     "name": "occurrences_conforms_to",
-                    "description": "True if this node `_occurrences_` conforms to `_other.occurrences_`; `other' is assumed to be in a flat archetype.",
+                    "documentation": "True if this node `_occurrences_` conforms to `_other.occurrences_`; `other' is assumed to be in a flat archetype.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -723,7 +723,7 @@
                 },
                 "node_id_conforms_to": {
                     "name": "node_id_conforms_to",
-                    "description": "True if this node id conforms to other.node_id, which includes the ids being identical; other is assumed to be in a flat archetype.",
+                    "documentation": "True if this node id conforms to other.node_id, which includes the ids being identical; other is assumed to be in a flat archetype.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -740,7 +740,7 @@
                 },
                 "is_prohibited": {
                     "name": "is_prohibited",
-                    "description": "True if this `C_OBJECT` node is prohibited, i.e. if its occurrences is 0..0.",
+                    "documentation": "True if this `C_OBJECT` node is prohibited, i.e. if its occurrences is 0..0.",
                     "post_conditions": {
                         "Post": "Result = occurrences \/= Void and then occurrences.is_prohibited"
                     },
@@ -801,7 +801,7 @@
             "functions": {
                 "any_allowed": {
                     "name": "any_allowed",
-                    "description": "True if there is no effective constraint on the children of the RM attribute to which this `C_ATTRIBUTE` refers.",
+                    "documentation": "True if there is no effective constraint on the children of the RM attribute to which this `C_ATTRIBUTE` refers.",
                     "post_conditions": {
                         "Post": "Result := children.is_empty and not is_prohibited"
                     },
@@ -811,7 +811,7 @@
                 },
                 "is_mandatory": {
                     "name": "is_mandatory",
-                    "description": "True if this `C_ATTRIBUTE` has an existence constraint of 1..1, i..e. mandation.",
+                    "documentation": "True if this `C_ATTRIBUTE` has an existence constraint of 1..1, i..e. mandation.",
                     "post_conditions": {
                         "Post": "Result = existence \/= Void and then existence.is_mandatory"
                     },
@@ -821,21 +821,21 @@
                 },
                 "rm_attribute_path": {
                     "name": "rm_attribute_path",
-                    "description": "Path of this attribute with respect to owning `C_OBJECT`, including differential path where applicable.",
+                    "documentation": "Path of this attribute with respect to owning `C_OBJECT`, including differential path where applicable.",
                     "result": {
                         "type": "String"
                     }
                 },
                 "is_single": {
                     "name": "is_single",
-                    "description": "True if this node logically represents a single-valued attribute. Evaluated as not is_multiple.",
+                    "documentation": "True if this node logically represents a single-valued attribute. Evaluated as not is_multiple.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "c_congruent_to": {
                     "name": "c_congruent_to",
-                    "description": "True if constraints represented by this node contain no further redefinitions with respect to the node other, with the exception of node_id redefnition in `C_OBJECT` nodes. \n\nTypically used to test if an inherited node locally contains any constraints.",
+                    "documentation": "True if constraints represented by this node contain no further redefinitions with respect to the node other, with the exception of node_id redefnition in `C_OBJECT` nodes. \n\nTypically used to test if an inherited node locally contains any constraints.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -852,7 +852,7 @@
                 },
                 "c_conforms_to": {
                     "name": "c_conforms_to",
-                    "description": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. \nTypically used during validation of special-ised archetype nodes.",
+                    "documentation": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. \nTypically used during validation of special-ised archetype nodes.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -877,7 +877,7 @@
                 },
                 "is_prohibited": {
                     "name": "is_prohibited",
-                    "description": "True if this `C_ATTRIBUTE` has an existence constraint of 0..0, i.e. prohibition.",
+                    "documentation": "True if this `C_ATTRIBUTE` has an existence constraint of 0..0, i.e. prohibition.",
                     "post_conditions": {
                         "Post": "Result = existence \/= Void and then existence.is_prohibited"
                     },
@@ -904,14 +904,14 @@
             "functions": {
                 "any_allowed": {
                     "name": "any_allowed",
-                    "description": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
+                    "documentation": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "valid_value": {
                     "name": "valid_value",
-                    "description": "True if `_a_value_` is valid with respect to constraint expressed in concrete instance of this type.",
+                    "documentation": "True if `_a_value_` is valid with respect to constraint expressed in concrete instance of this type.",
                     "parameters": {
                         "a_value": {
                             "name": "a_value",
@@ -925,14 +925,14 @@
                 },
                 "prototype_value": {
                     "name": "prototype_value",
-                    "description": "Generate a prototype value from this constraint object.",
+                    "documentation": "Generate a prototype value from this constraint object.",
                     "result": {
                         "type": "Any"
                     }
                 },
                 "has_default_value": {
                     "name": "has_default_value",
-                    "description": "True if there is an assumed value.\n",
+                    "documentation": "True if there is an assumed value.\n",
                     "result": {
                         "type": "Boolean"
                     }
@@ -956,7 +956,7 @@
             "functions": {
                 "use_target_occurrences": {
                     "name": "use_target_occurrences",
-                    "description": "True if target occurrences are to be used as the value of occurrences in this object; by the time of runtime use, the target occurrences value has to be set into this object.",
+                    "documentation": "True if target occurrences are to be used as the value of occurrences in this object; by the time of runtime use, the target occurrences value has to be set into this object.",
                     "post_conditions": {
                         "Post": "Result = (occurrences = Void)"
                     },
@@ -966,7 +966,7 @@
                 },
                 "occurrences_conforms_to": {
                     "name": "occurrences_conforms_to",
-                    "description": "True if this node occurrences conforms to `_other.occurrences_`; `_other_` is assumed to be in a flat archetype.\n\nIf `_other_` is a `C_COMPLEX_OBJECT`, then always `True`, since if occurrences defined on proxy node, it is an override of  the occurrences on the target, and it doesn't have to conform to anything except the containing attribute's cardinality. However, if `_other_` is also a `C_COMPLEX_OBJECT` then the override is of another use_node, and normal occurrences apply\n",
+                    "documentation": "True if this node occurrences conforms to `_other.occurrences_`; `_other_` is assumed to be in a flat archetype.\n\nIf `_other_` is a `C_COMPLEX_OBJECT`, then always `True`, since if occurrences defined on proxy node, it is an override of  the occurrences on the target, and it doesn't have to conform to anything except the containing attribute's cardinality. However, if `_other_` is also a `C_COMPLEX_OBJECT` then the override is of another use_node, and normal occurrences apply\n",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1023,7 +1023,7 @@
             "functions": {
                 "any_allowed": {
                     "name": "any_allowed",
-                    "description": "True if no constraints stated, and slot is not closed.",
+                    "documentation": "True if no constraints stated, and slot is not closed.",
                     "result": {
                         "type": "Boolean"
                     }
@@ -1058,21 +1058,21 @@
             "functions": {
                 "has_assumed_value": {
                     "name": "has_assumed_value",
-                    "description": "True if there is an assumed value.\n",
+                    "documentation": "True if there is an assumed value.\n",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "constrained_typename": {
                     "name": "constrained_typename",
-                    "description": "Generate name of native type that is constrained by this `C_XXX` type. For most types, it is the `C_XXX` typename without the `C_`, i.e. `XXX`. E.g. `C_INTEGER` -> `Integer`. For the date\/time types the mapping is different.",
+                    "documentation": "Generate name of native type that is constrained by this `C_XXX` type. For most types, it is the `C_XXX` typename without the `C_`, i.e. `XXX`. E.g. `C_INTEGER` -> `Integer`. For the date\/time types the mapping is different.",
                     "result": {
                         "type": "String"
                     }
                 },
                 "c_conforms_to": {
                     "name": "c_conforms_to",
-                    "description": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. \nTypically used during validation of special-ised archetype nodes.",
+                    "documentation": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. \nTypically used during validation of special-ised archetype nodes.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1094,7 +1094,7 @@
                 },
                 "c_value_conforms_to": {
                     "name": "c_value_conforms_to",
-                    "description": "True if this node expresses a value constraint that conforms to that of `other`. Effected in descendants.",
+                    "documentation": "True if this node expresses a value constraint that conforms to that of `other`. Effected in descendants.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1108,7 +1108,7 @@
                 },
                 "c_congruent_to": {
                     "name": "c_congruent_to",
-                    "description": "True if constraints represented by this node contain no further redefinitions with respect to the node `_other_`, with the exception of node_id redefnition in `C_OBJECT` nodes. \n\nTypically used to test if an inherited node locally contains any constraints.",
+                    "documentation": "True if constraints represented by this node contain no further redefinitions with respect to the node `_other_`, with the exception of node_id redefnition in `C_OBJECT` nodes. \n\nTypically used to test if an inherited node locally contains any constraints.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1122,7 +1122,7 @@
                 },
                 "c_value_congruent_to": {
                     "name": "c_value_congruent_to",
-                    "description": "True if this node expresses the same value constraint as `other`. Effected in descendants.",
+                    "documentation": "True if this node expresses the same value constraint as `other`. Effected in descendants.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1156,7 +1156,7 @@
             "functions": {
                 "is_after": {
                     "name": "is_after",
-                    "description": "True if the order relationship is `_after_`, computed as the negation of `_is_before_`.",
+                    "documentation": "True if the order relationship is `_after_`, computed as the negation of `_is_before_`.",
                     "result": {
                         "type": "Boolean"
                     }
@@ -1200,7 +1200,7 @@
             "functions": {
                 "c_conforms_to": {
                     "name": "c_conforms_to",
-                    "description": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. Typically used during validation of specialised archetype nodes.",
+                    "documentation": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. Typically used during validation of specialised archetype nodes.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1214,7 +1214,7 @@
                 },
                 "c_congruent_to": {
                     "name": "c_congruent_to",
-                    "description": "True if constraints represented by this node contain no further redefinitions with respect to the node other. Typically used to test if an inherited node locally contains any constraints.",
+                    "documentation": "True if constraints represented by this node contain no further redefinitions with respect to the node other. Typically used to test if an inherited node locally contains any constraints.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1253,7 +1253,7 @@
             "functions": {
                 "c_conforms_to": {
                     "name": "c_conforms_to",
-                    "description": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. Typically used during validation of specialised archetype nodes.",
+                    "documentation": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. Typically used during validation of specialised archetype nodes.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1267,7 +1267,7 @@
                 },
                 "c_congruent_to": {
                     "name": "c_congruent_to",
-                    "description": "True if constraints represented by this node contain no further redefinitions with respect to the node other. Typically used to test if an inherited node locally contains any constraints.",
+                    "documentation": "True if constraints represented by this node contain no further redefinitions with respect to the node other. Typically used to test if an inherited node locally contains any constraints.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1303,7 +1303,7 @@
             "functions": {
                 "c_conforms_to": {
                     "name": "c_conforms_to",
-                    "description": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. Typically used during validation of specialised archetype nodes.",
+                    "documentation": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. Typically used during validation of specialised archetype nodes.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1325,7 +1325,7 @@
                 },
                 "c_congruent_to": {
                     "name": "c_congruent_to",
-                    "description": "True if constraints represented by this node contain no further redefinitions with respect to the node other. Typically used to test if an inherited node locally contains any constraints.",
+                    "documentation": "True if constraints represented by this node contain no further redefinitions with respect to the node other. Typically used to test if an inherited node locally contains any constraints.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1391,7 +1391,7 @@
             "functions": {
                 "any_allowed": {
                     "name": "any_allowed",
-                    "description": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
+                    "documentation": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
                     "post_conditions": {
                         "Post": "Result = attributes.is_empty and not is_prohibited"
                     },
@@ -1579,14 +1579,14 @@
             "functions": {
                 "specialisation_depth": {
                     "name": "specialisation_depth",
-                    "description": "Specialisation depth of this artefact. Unspecialised artefacts have depth 0, with each additional level of specialisation adding 1 to the specialisation_depth.",
+                    "documentation": "Specialisation depth of this artefact. Unspecialised artefacts have depth 0, with each additional level of specialisation adding 1 to the specialisation_depth.",
                     "result": {
                         "type": "Integer"
                     }
                 },
                 "id_codes": {
                     "name": "id_codes",
-                    "description": "List of all id codes in the terminology., i.e. the 'id' codes in an ADL archetype, which are the `_node_id_` values on `C_OBJECT` descendants.",
+                    "documentation": "List of all id codes in the terminology., i.e. the 'id' codes in an ADL archetype, which are the `_node_id_` values on `C_OBJECT` descendants.",
                     "result": {
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
@@ -1595,7 +1595,7 @@
                 },
                 "value_codes": {
                     "name": "value_codes",
-                    "description": "List of all value term codes in the terminology, i.e. the 'at' codes in an ADL archetype, which are used as possible values on terminological constrainer nodes.",
+                    "documentation": "List of all value term codes in the terminology, i.e. the 'at' codes in an ADL archetype, which are used as possible values on terminological constrainer nodes.",
                     "result": {
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
@@ -1604,7 +1604,7 @@
                 },
                 "value_set_codes": {
                     "name": "value_set_codes",
-                    "description": "List of all value set codes in the terminology defining value sets. These correspond to the 'ac' codes in an ADL archetype.",
+                    "documentation": "List of all value set codes in the terminology defining value sets. These correspond to the 'ac' codes in an ADL archetype.",
                     "result": {
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
@@ -1613,7 +1613,7 @@
                 },
                 "has_language": {
                     "name": "has_language",
-                    "description": "True if language `_a_lang_` is present in archetype terminology. ",
+                    "documentation": "True if language `_a_lang_` is present in archetype terminology. ",
                     "parameters": {
                         "a_lang": {
                             "name": "a_lang",
@@ -1627,7 +1627,7 @@
                 },
                 "has_terminology": {
                     "name": "has_terminology",
-                    "description": "True if there are bindings to terminology `_a_terminology_id_` present.",
+                    "documentation": "True if there are bindings to terminology `_a_terminology_id_` present.",
                     "parameters": {
                         "a_terminology_id": {
                             "name": "a_terminology_id",
@@ -1641,7 +1641,7 @@
                 },
                 "has_term_code": {
                     "name": "has_term_code",
-                    "description": "True if code `_a_code_` defined in this terminology.",
+                    "documentation": "True if code `_a_code_` defined in this terminology.",
                     "parameters": {
                         "a_code": {
                             "name": "a_code",
@@ -1655,7 +1655,7 @@
                 },
                 "term_definition": {
                     "name": "term_definition",
-                    "description": "Term definition for a code, in a specified language. ",
+                    "documentation": "Term definition for a code, in a specified language. ",
                     "parameters": {
                         "a_lang": {
                             "name": "a_lang",
@@ -1677,7 +1677,7 @@
                 },
                 "term_binding": {
                     "name": "term_binding",
-                    "description": "Binding of constraint corresponding to `_a_code_` in target external terminology `_a_terminology_id_`, as a string, which is usually a formal query expression.",
+                    "documentation": "Binding of constraint corresponding to `_a_code_` in target external terminology `_a_terminology_id_`, as a string, which is usually a formal query expression.",
                     "parameters": {
                         "a_terminology": {
                             "name": "a_terminology",
@@ -1699,7 +1699,7 @@
                 },
                 "terminologies_available": {
                     "name": "terminologies_available",
-                    "description": "List of terminologies to which term or constraint bindings exist in this terminology, computed from bindings.",
+                    "documentation": "List of terminologies to which term or constraint bindings exist in this terminology, computed from bindings.",
                     "result": {
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
@@ -1708,7 +1708,7 @@
                 },
                 "terminology_extract_term": {
                     "name": "terminology_extract_term",
-                    "description": "Return an `ARCHETYPE_TERM` from specified terminology extract, for specified term code.",
+                    "documentation": "Return an `ARCHETYPE_TERM` from specified terminology extract, for specified term code.",
                     "parameters": {
                         "a_terminology_id": {
                             "name": "a_terminology_id",
@@ -1730,7 +1730,7 @@
                 },
                 "has_terminology_extract": {
                     "name": "has_terminology_extract",
-                    "description": "True if there is a provided terminology extract present.",
+                    "documentation": "True if there is a provided terminology extract present.",
                     "parameters": {
                         "a_terminology_id": {
                             "name": "a_terminology_id",
@@ -1744,7 +1744,7 @@
                 },
                 "languages_available": {
                     "name": "languages_available",
-                    "description": "List of languages in which terms in this terminology are available.",
+                    "documentation": "List of languages in which terms in this terminology are available.",
                     "result": {
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
@@ -1794,14 +1794,14 @@
             "functions": {
                 "prototype_value": {
                     "name": "prototype_value",
-                    "description": "Prototype Boolean value.",
+                    "documentation": "Prototype Boolean value.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "any_allowed": {
                     "name": "any_allowed",
-                    "description": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
+                    "documentation": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
                     "post_conditions": {
                         "Post": "Result = constraint.is_empty"
                     },
@@ -1811,7 +1811,7 @@
                 },
                 "c_value_conforms_to": {
                     "name": "c_value_conforms_to",
-                    "description": "True if `_other.any_allowed_` or else every constraint in the `_constraint_` list exists in the `_other.constraint_`.",
+                    "documentation": "True if `_other.any_allowed_` or else every constraint in the `_constraint_` list exists in the `_other.constraint_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1825,7 +1825,7 @@
                 },
                 "c_value_congruent_to": {
                     "name": "c_value_congruent_to",
-                    "description": "True if the items in `_constraint_` are equal in number and identical pair-wise with those in `_other.constraint_`.",
+                    "documentation": "True if the items in `_constraint_` are equal in number and identical pair-wise with those in `_other.constraint_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1880,7 +1880,7 @@
                 },
                 "valid_value": {
                     "name": "valid_value",
-                    "description": "True if a_value is valid with respect to constraint expressed in concrete instance of this type. ",
+                    "documentation": "True if a_value is valid with respect to constraint expressed in concrete instance of this type. ",
                     "parameters": {
                         "a_value": {
                             "name": "a_value",
@@ -1894,7 +1894,7 @@
                 },
                 "any_allowed": {
                     "name": "any_allowed",
-                    "description": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
+                    "documentation": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
                     "post_conditions": {
                         "Post": "Result = constraint.is_empty or else constraint.count = 1 and constraint.first.is_equal (Regex_any_string)"
                     },
@@ -1904,7 +1904,7 @@
                 },
                 "c_value_conforms_to": {
                     "name": "c_value_conforms_to",
-                    "description": "True if `_other.any_allowed_` or else every constraint in the `_constraint_` list exists in the `_other.constraint_`.",
+                    "documentation": "True if `_other.any_allowed_` or else every constraint in the `_constraint_` list exists in the `_other.constraint_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1918,7 +1918,7 @@
                 },
                 "c_value_congruent_to": {
                     "name": "c_value_congruent_to",
-                    "description": "True if the items in `_constraint_` are equal in number and identical pair-wise with those in `_other.constraint_`.",
+                    "documentation": "True if the items in `_constraint_` are equal in number and identical pair-wise with those in `_other.constraint_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -2019,7 +2019,7 @@
             "functions": {
                 "any_allowed": {
                     "name": "any_allowed",
-                    "description": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
+                    "documentation": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
                     "post_conditions": {
                         "Post": "Result = constraint.is_empty"
                     },
@@ -2029,7 +2029,7 @@
                 },
                 "c_value_conforms_to": {
                     "name": "c_value_conforms_to",
-                    "description": "True if `_other.any_allowed_` or else for every constraint in the `_constraint_` list there is a constraint in `_other.constraint_` that contains it.",
+                    "documentation": "True if `_other.any_allowed_` or else for every constraint in the `_constraint_` list there is a constraint in `_other.constraint_` that contains it.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -2043,7 +2043,7 @@
                 },
                 "c_value_congruent_to": {
                     "name": "c_value_congruent_to",
-                    "description": "True if the items in `_constraint_` are equal in number and identical pair-wise with those in `_other.constraint_`.",
+                    "documentation": "True if the items in `_constraint_` are equal in number and identical pair-wise with those in `_other.constraint_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -2084,7 +2084,7 @@
             "functions": {
                 "value_set_expanded": {
                     "name": "value_set_expanded",
-                    "description": "Effective set of at-code values corresponding to an ac-code for a locally defined value set. Not defined for ac-codes that have no local value set.",
+                    "documentation": "Effective set of at-code values corresponding to an ac-code for a locally defined value set. Not defined for ac-codes that have no local value set.",
                     "result": {
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
@@ -2093,7 +2093,7 @@
                 },
                 "value_set_substituted": {
                     "name": "value_set_substituted",
-                    "description": "For locally defined value sets within individual code bindings: return the term URI(s) substituted from bindings for local at-codes in `_value_set_expanded_`.",
+                    "documentation": "For locally defined value sets within individual code bindings: return the term URI(s) substituted from bindings for local at-codes in `_value_set_expanded_`.",
                     "result": {
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
@@ -2102,7 +2102,7 @@
                 },
                 "value_set_resolved": {
                     "name": "value_set_resolved",
-                    "description": "For locally defined value sets within individual code bindings: final set of external codes to which value set is resolved.",
+                    "documentation": "For locally defined value sets within individual code bindings: final set of external codes to which value set is resolved.",
                     "result": {
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
@@ -2111,7 +2111,7 @@
                 },
                 "valid_value": {
                     "name": "valid_value",
-                    "description": "True if a `_value_` is valid with respect to constraint expressed in concrete instance of this type. ",
+                    "documentation": "True if a `_value_` is valid with respect to constraint expressed in concrete instance of this type. ",
                     "parameters": {
                         "a_value": {
                             "name": "a_value",
@@ -2125,14 +2125,14 @@
                 },
                 "prototype_value": {
                     "name": "prototype_value",
-                    "description": "A generated prototype value from this constraint object.",
+                    "documentation": "A generated prototype value from this constraint object.",
                     "result": {
                         "type": "Terminology_code"
                     }
                 },
                 "any_allowed": {
                     "name": "any_allowed",
-                    "description": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
+                    "documentation": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
                     "post_conditions": {
                         "Post": "Result := constraint.is_empty"
                     },
@@ -2142,7 +2142,7 @@
                 },
                 "c_value_conforms_to": {
                     "name": "c_value_conforms_to",
-                    "description": "True if `_other.any_allowed_` or else every constraint in the `_constraint_` list exists in the `_other.constraint_`.",
+                    "documentation": "True if `_other.any_allowed_` or else every constraint in the `_constraint_` list exists in the `_other.constraint_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -2156,7 +2156,7 @@
                 },
                 "c_value_congruent_to": {
                     "name": "c_value_congruent_to",
-                    "description": "True if `_constraint_` and `_other.constraint_` are both value-set ids, and expand to identical value sets, or else are identical value codes.",
+                    "documentation": "True if `_constraint_` and `_other.constraint_` are both value-set ids, and expand to identical value sets, or else are identical value codes.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -2192,7 +2192,7 @@
             "functions": {
                 "valid_pattern_constraint": {
                     "name": "valid_pattern_constraint",
-                    "description": "True if `_a_pattern_` is a valid constraint. Define in concrete descendants.",
+                    "documentation": "True if `_a_pattern_` is a valid constraint. Define in concrete descendants.",
                     "parameters": {
                         "a_pattern": {
                             "name": "a_pattern",
@@ -2206,7 +2206,7 @@
                 },
                 "valid_pattern_constraint_replacement": {
                     "name": "valid_pattern_constraint_replacement",
-                    "description": "Return True if `_a_pattern_` can be replaced by `_an_other_pattern_` in a specialised constraint. Define in concrete subtypes.",
+                    "documentation": "Return True if `_a_pattern_` can be replaced by `_an_other_pattern_` in a specialised constraint. Define in concrete subtypes.",
                     "parameters": {
                         "a_pattern": {
                             "name": "a_pattern",
@@ -2225,7 +2225,7 @@
                 },
                 "any_allowed": {
                     "name": "any_allowed",
-                    "description": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
+                    "documentation": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
                     "post_conditions": {
                         "Post": "Result = precursor and pattern_constraint.is_empty"
                     },
@@ -2235,7 +2235,7 @@
                 },
                 "c_value_conforms_to": {
                     "name": "c_value_conforms_to",
-                    "description": "True if precursor() or else `_other.pattern_constraint_` is empty, or else `_pattern_constraint_` is a valid (narrower) replacement for `_other.pattern_constraint_`.",
+                    "documentation": "True if precursor() or else `_other.pattern_constraint_` is empty, or else `_pattern_constraint_` is a valid (narrower) replacement for `_other.pattern_constraint_`.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -2249,7 +2249,7 @@
                 },
                 "c_value_congruent_to": {
                     "name": "c_value_congruent_to",
-                    "description": "True if `precursor (other)` and `_pattern_constraint_ ~ _other.pattern_constraint_`, i.e. either both `Void` or else both non-`Void` and identical.",
+                    "documentation": "True if `precursor (other)` and `_pattern_constraint_ ~ _other.pattern_constraint_`, i.e. either both `Void` or else both non-`Void` and identical.",
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -2293,28 +2293,28 @@
             "functions": {
                 "minute_validity": {
                     "name": "minute_validity",
-                    "description": "Validity of minute in constrained time.",
+                    "documentation": "Validity of minute in constrained time.",
                     "result": {
                         "type": "VALIDITY_KIND"
                     }
                 },
                 "second_validity": {
                     "name": "second_validity",
-                    "description": "Validity of second in constrained time.",
+                    "documentation": "Validity of second in constrained time.",
                     "result": {
                         "type": "VALIDITY_KIND"
                     }
                 },
                 "millisecond_validity": {
                     "name": "millisecond_validity",
-                    "description": "Validity of millisecond in constrained time.",
+                    "documentation": "Validity of millisecond in constrained time.",
                     "result": {
                         "type": "VALIDITY_KIND"
                     }
                 },
                 "timezone_validity": {
                     "name": "timezone_validity",
-                    "description": "Validity of timezone in constrained date.",
+                    "documentation": "Validity of timezone in constrained date.",
                     "result": {
                         "type": "VALIDITY_KIND"
                     }
@@ -2354,21 +2354,21 @@
             "functions": {
                 "month_validity": {
                     "name": "month_validity",
-                    "description": "Validity of month in constrained date.",
+                    "documentation": "Validity of month in constrained date.",
                     "result": {
                         "type": "VALIDITY_KIND"
                     }
                 },
                 "day_validity": {
                     "name": "day_validity",
-                    "description": "Validity of day in constrained date.",
+                    "documentation": "Validity of day in constrained date.",
                     "result": {
                         "type": "VALIDITY_KIND"
                     }
                 },
                 "timezone_validity": {
                     "name": "timezone_validity",
-                    "description": "Validity of timezone in constrained date.",
+                    "documentation": "Validity of timezone in constrained date.",
                     "post_conditions": {
                         "": ""
                     },
@@ -2411,21 +2411,21 @@
             "functions": {
                 "month_validity": {
                     "name": "month_validity",
-                    "description": "Validity of month in constrained date.",
+                    "documentation": "Validity of month in constrained date.",
                     "result": {
                         "type": "VALIDITY_KIND"
                     }
                 },
                 "day_validity": {
                     "name": "day_validity",
-                    "description": "Validity of day in constrained date.",
+                    "documentation": "Validity of day in constrained date.",
                     "result": {
                         "type": "VALIDITY_KIND"
                     }
                 },
                 "timezone_validity": {
                     "name": "timezone_validity",
-                    "description": "Validity of timezone in constrained date.",
+                    "documentation": "Validity of timezone in constrained date.",
                     "post_conditions": {
                         "": ""
                     },
@@ -2435,21 +2435,21 @@
                 },
                 "minute_validity": {
                     "name": "minute_validity",
-                    "description": "Validity of minute in constrained time.",
+                    "documentation": "Validity of minute in constrained time.",
                     "result": {
                         "type": "VALIDITY_KIND"
                     }
                 },
                 "second_validity": {
                     "name": "second_validity",
-                    "description": "Validity of second in constrained time.",
+                    "documentation": "Validity of second in constrained time.",
                     "result": {
                         "type": "VALIDITY_KIND"
                     }
                 },
                 "millisecond_validity": {
                     "name": "millisecond_validity",
-                    "description": "Validity of millisecond in constrained time.",
+                    "documentation": "Validity of millisecond in constrained time.",
                     "result": {
                         "type": "VALIDITY_KIND"
                     }
@@ -2489,49 +2489,49 @@
             "functions": {
                 "years_allowed:": {
                     "name": "years_allowed:",
-                    "description": "True if years are allowed in the constrained Duration.",
+                    "documentation": "True if years are allowed in the constrained Duration.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "months_allowed:": {
                     "name": "months_allowed:",
-                    "description": "True if months are allowed in the constrained Duration.",
+                    "documentation": "True if months are allowed in the constrained Duration.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "weeks_allowed:": {
                     "name": "weeks_allowed:",
-                    "description": "True if weeks are allowed in the constrained Duration.",
+                    "documentation": "True if weeks are allowed in the constrained Duration.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "days_allowed": {
                     "name": "days_allowed",
-                    "description": "True if days are allowed in the constrained Duration.",
+                    "documentation": "True if days are allowed in the constrained Duration.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "hours_allowed": {
                     "name": "hours_allowed",
-                    "description": "True if hours are allowed in the constrained Duration.",
+                    "documentation": "True if hours are allowed in the constrained Duration.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "minutes_allowed": {
                     "name": "minutes_allowed",
-                    "description": "True if minutes are allowed in the constrained Duration.",
+                    "documentation": "True if minutes are allowed in the constrained Duration.",
                     "result": {
                         "type": "Boolean"
                     }
                 },
                 "seconds_allowed": {
                     "name": "seconds_allowed",
-                    "description": "True if seconds are allowed in the constrained Duration.",
+                    "documentation": "True if seconds are allowed in the constrained Duration.",
                     "result": {
                         "type": "Boolean"
                     }
@@ -2588,7 +2588,7 @@
             "functions": {
                 "codes_conformant": {
                     "name": "codes_conformant",
-                    "description": "True if a_child_code conforms to a_parent_code in the sense of specialisation, i.e. is a_child_code the same as or more specialised than a_parent_code.",
+                    "documentation": "True if a_child_code conforms to a_parent_code in the sense of specialisation, i.e. is a_child_code the same as or more specialised than a_parent_code.",
                     "parameters": {
                         "a_child_code": {
                             "name": "a_child_code",
@@ -2607,7 +2607,7 @@
                 },
                 "is_adl_code": {
                     "name": "is_adl_code",
-                    "description": "True if a_code is any kind of ADL archetype local code.",
+                    "documentation": "True if a_code is any kind of ADL archetype local code.",
                     "parameters": {
                         "a_code": {
                             "name": "a_code",
@@ -2624,7 +2624,7 @@
                 },
                 "is_id_code": {
                     "name": "is_id_code",
-                    "description": "True if a_code is an 'id' code.",
+                    "documentation": "True if a_code is an 'id' code.",
                     "parameters": {
                         "a_code": {
                             "name": "a_code",
@@ -2641,7 +2641,7 @@
                 },
                 "is_value_code": {
                     "name": "is_value_code",
-                    "description": "True if a_code is an 'at' code, i.e. a code representing a single terminology item.",
+                    "documentation": "True if a_code is an 'at' code, i.e. a code representing a single terminology item.",
                     "parameters": {
                         "a_code": {
                             "name": "a_code",
@@ -2658,7 +2658,7 @@
                 },
                 "is_value_set_code": {
                     "name": "is_value_set_code",
-                    "description": "True if a_code is an 'ac' code, i.e. a code referring to a terminologyvalue set.",
+                    "documentation": "True if a_code is an 'ac' code, i.e. a code referring to a terminologyvalue set.",
                     "parameters": {
                         "a_code": {
                             "name": "a_code",
@@ -2675,7 +2675,7 @@
                 },
                 "is_redefined_code": {
                     "name": "is_redefined_code",
-                    "description": "A code has been specialised if there is a non-zero code index anywhere above the last index e.g. \n\n* at0.0.1 -> False\n* at1.0.1 -> True",
+                    "documentation": "A code has been specialised if there is a non-zero code index anywhere above the last index e.g. \n\n* at0.0.1 -> False\n* at1.0.1 -> True",
                     "parameters": {
                         "a_code": {
                             "name": "a_code",
@@ -2689,7 +2689,7 @@
                 },
                 "code_exists_at_level": {
                     "name": "code_exists_at_level",
-                    "description": "Is `a_code' valid at level `a_level' or less, i.e. if we remove its trailing specialised part corresponding to specialisation below `a_level', and then any trailing '.0' pieces, do we end up with a valid code? If so it means that the code corresponds to a real node from `a_level' or higher.",
+                    "documentation": "Is `a_code' valid at level `a_level' or less, i.e. if we remove its trailing specialised part corresponding to specialisation below `a_level', and then any trailing '.0' pieces, do we end up with a valid code? If so it means that the code corresponds to a real node from `a_level' or higher.",
                     "parameters": {
                         "a-code": {
                             "name": "a-code",

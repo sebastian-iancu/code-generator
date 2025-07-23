@@ -245,7 +245,7 @@ class UmlToBmmWriter extends AbstractWriter
     {
         $bmmFunction = [
             'name' => $umlOperation->name,
-            'description' => $umlOperation->description,
+            'documentation' => $umlOperation->description,
         ];
         /** @var UmlParameter $umlParameter */
         foreach ($umlOperation->umlParameters as $umlParameter) {
