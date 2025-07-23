@@ -3,6 +3,8 @@
 namespace OpenEHR\Tools\CodeGen\Writer;
 
 use JsonException;
+use OpenEHR\Tools\CodeGen\Model\Bmm\BmmSchema;
+use OpenEHR\Tools\CodeGen\Model\Bmm\BmmSchemaInclude;
 use OpenEHR\Tools\CodeGen\Model\Collection;
 use OpenEHR\Tools\CodeGen\Model\Uml\UmlClass;
 use OpenEHR\Tools\CodeGen\Model\Uml\UmlConstraint;
@@ -19,8 +21,8 @@ class UmlToBmmWriter extends AbstractWriter
 
     public const string DIR = __WRITER_DIR__ . DIRECTORY_SEPARATOR . 'BMM' . DIRECTORY_SEPARATOR;
 
-    public const string REVISION = '1';
-    public const string AUTHOR = 'code-generator';
+    public const string REVISION = '2';
+    public const string AUTHOR = 'Thomas Beale <thomas.beale@openehr.org>';
 
     public const array SKIP_PACKAGES = ['functional', 'builtins'];
 
@@ -101,6 +103,18 @@ class UmlToBmmWriter extends AbstractWriter
                 } else {
                     $schema['class_definitions'][$umlClass->name] = self::asBmmClass($umlClass, $collectedUmlClasses);
                 }
+            }
+            $schema = BmmSchema::fromArray($schema);
+            switch ($schema->getSchemaId()) {
+                case 'openehr_rm_development':
+                case 'openehr_am_development':
+                    $schema->includes->append(new BmmSchemaInclude(id: 'openehr_base_development'));
+                    break;
+                case 'openehr_rm_1.1.0':
+                case 'openehr_am_2.2.0':
+                case 'openehr_am_2.3.0':
+                    $schema->includes->append(new BmmSchemaInclude(id: 'openehr_base_1.1.0'));
+                    break;
             }
             // saving as a file
             $filename = self::DIR . str_replace('.xmi', '', $umlFile->id) . '.bmm.json';

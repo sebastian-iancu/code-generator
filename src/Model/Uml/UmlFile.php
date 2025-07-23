@@ -36,6 +36,7 @@ class UmlFile implements CollectableInterface
     {
         return str_replace([
             $this->name . '-v',
+            '-dev',
             '.xmi'
         ], '', $this->id);
     }
