@@ -178,7 +178,7 @@ class UmlToBmmWriter extends AbstractWriter
             }
             /** @var UmlProperty $umlProperty */
             foreach ($umlClass->umlProperties as $umlProperty) {
-                if ($umlProperty->isReadOnly && $umlProperty->isStatic) {
+                if ($umlProperty->isStatic) {
                     $bmmClass['constants'][$umlProperty->name] = self::asBmmConstant($umlProperty, $umlClass, $collectedUmlClasses);
                 } else {
                     $bmmClass['properties'][$umlProperty->name] = self::asBmmProperty($umlProperty, $umlClass, $collectedUmlClasses);
