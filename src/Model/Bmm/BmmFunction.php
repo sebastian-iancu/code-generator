@@ -16,6 +16,7 @@ readonly class BmmFunction implements JsonSerializable, CollectableInterface
     /**
      * @param string $name
      * @param string|null $documentation
+     * @param bool|null $isAbstract
      * @param Collection<string, AbstractBmmFunctionParameter>|null $parameters
      * @param array|null $preConditions
      * @param array|null $postConditions
@@ -25,6 +26,7 @@ readonly class BmmFunction implements JsonSerializable, CollectableInterface
     public function __construct(
         public string $name,
         public ?string $documentation = null,
+        public ?bool $isAbstract = false,
         public ?Collection $parameters = new Collection(),
         public ?array $preConditions = [],
         public ?array $postConditions = [],
@@ -42,6 +44,7 @@ readonly class BmmFunction implements JsonSerializable, CollectableInterface
         return array_filter([
             'name' => $this->name,
             'documentation' => $this->documentation,
+            'is_abstract' => $this->isAbstract,
             'parameters' => $this->parameters->getArrayCopy(),
             'pre_conditions' => $this->preConditions,
             'post_conditions' => $this->postConditions,
@@ -62,6 +65,7 @@ readonly class BmmFunction implements JsonSerializable, CollectableInterface
         $instance = new self(
             name: $data['name'],
             documentation: $data['documentation'] ?? null,
+            isAbstract: $data['is_abstract'] ?? false,
             parameters: new Collection(),
             preConditions: $data['pre_conditions'] ?? [],
             postConditions: $data['post_conditions'] ?? [],

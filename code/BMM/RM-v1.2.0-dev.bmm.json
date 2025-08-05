@@ -1028,6 +1028,7 @@
                 "uid": {
                     "name": "uid",
                     "documentation": "Unique identifier of this `VERSION`, in the form of an `{object_id, a version_tree_id, creating_system_id}` triple, where the `_object_id_` has the same value as the containing `VERSIONED_OBJECT _uid_`.",
+                    "is_abstract": true,
                     "result": {
                         "type": "OBJECT_VERSION_ID"
                     }
@@ -1035,6 +1036,7 @@
                 "preceding_version_uid": {
                     "name": "preceding_version_uid",
                     "documentation": "Unique identifier of the version of which this version is a modification; Void if this is the first version.",
+                    "is_abstract": true,
                     "result": {
                         "type": "OBJECT_VERSION_ID"
                     }
@@ -1042,6 +1044,7 @@
                 "data": {
                     "name": "data",
                     "documentation": "The data of this Version.",
+                    "is_abstract": true,
                     "result": {
                         "type": "T"
                     }
@@ -1049,6 +1052,7 @@
                 "lifecycle_state": {
                     "name": "lifecycle_state",
                     "documentation": "Lifecycle state of this version; coded by openEHR vocabulary `version lifecycle state`.",
+                    "is_abstract": true,
                     "result": {
                         "type": "DV_CODED_TEXT"
                     }
@@ -2945,6 +2949,7 @@
                 "is_strictly_comparable_to": {
                     "name": "is_strictly_comparable_to",
                     "documentation": "Test if two instances are strictly comparable. Effected in descendants.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -2979,6 +2984,7 @@
                 "less_than": {
                     "name": "less_than",
                     "documentation": "True if this Ordered object is less than `_other_`. Redefined in descendants.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3088,6 +3094,7 @@
                 },
                 "magnitude": {
                     "name": "magnitude",
+                    "is_abstract": true,
                     "result": {
                         "type": "Ordered_Numeric"
                     }
@@ -3102,6 +3109,7 @@
                 "is_equal": {
                     "name": "is_equal",
                     "documentation": "Return True if this `DV_QUANTIFIED` is considered equal to `_other_`.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3402,6 +3410,7 @@
                 "is_equal": {
                     "name": "is_equal",
                     "documentation": "Return True if this `DV_AMOUNT` is considered equal to `_other_`.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -3737,6 +3746,7 @@
                 "add": {
                     "name": "add",
                     "documentation": "Addition of a differential amount to this quantity. \n\nThe value of accuracy in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.",
+                    "is_abstract": true,
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
@@ -3750,6 +3760,7 @@
                 "subtract": {
                     "name": "subtract",
                     "documentation": "Result of subtracting a differential amount from this quantity.\n\nThe value of `_accuracy_` in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.",
+                    "is_abstract": true,
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
@@ -3763,6 +3774,7 @@
                 "diff": {
                     "name": "diff",
                     "documentation": "Difference of two quantities.\n\nThe value of accuracy in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -4001,6 +4013,7 @@
                 "add": {
                     "name": "add",
                     "documentation": "Addition of a Duration to this temporal entity.",
+                    "is_abstract": true,
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
@@ -4014,6 +4027,7 @@
                 "subtract": {
                     "name": "subtract",
                     "documentation": "Subtract a Duration from this temporal entity.",
+                    "is_abstract": true,
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
@@ -4027,6 +4041,7 @@
                 "diff": {
                     "name": "diff",
                     "documentation": "Difference between this temporal entity and `_other_`.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -4368,6 +4383,7 @@
                 "calendar_alignment": {
                     "name": "calendar_alignment",
                     "documentation": "Indicates what prototypical point in the calendar the specification is aligned to, e.g.  5th of the month . Empty if not aligned. Extracted from the  value' attribute.",
+                    "is_abstract": true,
                     "result": {
                         "type": "String"
                     }
@@ -4375,6 +4391,7 @@
                 "event_alignment": {
                     "name": "event_alignment",
                     "documentation": "Indicates what real-world event the specification is aligned to if any. Extracted from the  value' attribute. ",
+                    "is_abstract": true,
                     "result": {
                         "type": "String"
                     }
@@ -4382,6 +4399,7 @@
                 "institution_specified": {
                     "name": "institution_specified",
                     "documentation": "Indicates if the specification is aligned with institution schedules, e.g. a hospital nursing changeover or meal serving times. Extracted from the  value' attribute.",
+                    "is_abstract": true,
                     "result": {
                         "type": "Boolean"
                     }

@@ -130,6 +130,7 @@
                 "is_equal": {
                     "name": "is_equal",
                     "documentation": "Value equality.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -244,6 +245,7 @@
                 "has": {
                     "name": "has",
                     "documentation": "Test for membership of a value.",
+                    "is_abstract": true,
                     "parameters": {
                         "v": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN",
@@ -258,6 +260,7 @@
                 "count": {
                     "name": "count",
                     "documentation": "Number of items in container.",
+                    "is_abstract": true,
                     "result": {
                         "type": "Integer"
                     }
@@ -265,6 +268,7 @@
                 "is_empty": {
                     "name": "is_empty",
                     "documentation": "True if container is empty.",
+                    "is_abstract": true,
                     "result": {
                         "type": "Boolean"
                     }
@@ -369,6 +373,7 @@
                 "infix *": {
                     "name": "infix *",
                     "documentation": "Product by `other'. Actual type of result depends on arithmetic balancing rules.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -382,6 +387,7 @@
                 "infix +": {
                     "name": "infix +",
                     "documentation": "Sum with `other' (commutative). Actual type of result depends on arithmetic balancing rules.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -395,6 +401,7 @@
                 "infix -": {
                     "name": "infix -",
                     "documentation": "Result of subtracting `other'. Actual type of result depends on arithmetic balancing rules.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -609,6 +616,7 @@
                 "infix <": {
                     "name": "infix <",
                     "documentation": "Arithmetic comparison. In conjunction with \u2018=\u2019, enables the definition of the operators \u2018>\u2019, \u2018>=\u2019, \u2018<=\u2019, \u2018<>\u2019. In real type systems, this operator might be defined on another class for comparability.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1011,6 +1019,7 @@
                 "is_partial": {
                     "name": "is_partial",
                     "documentation": "True if this date time is partial, i.e. if trailing end (right hand) value(s) is\/are missing.",
+                    "is_abstract": true,
                     "result": {
                         "type": "Boolean"
                     }
@@ -1018,6 +1027,7 @@
                 "is_extended": {
                     "name": "is_extended",
                     "documentation": "True if this ISO8601 string is in the 'extended' form, i.e. uses \u2018-\u2019 and \/ or \u2018:\u2019 separators. This is the preferred format.",
+                    "is_abstract": true,
                     "result": {
                         "type": "Boolean"
                     }

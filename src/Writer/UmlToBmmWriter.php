@@ -260,6 +260,7 @@ class UmlToBmmWriter extends AbstractWriter
         $bmmFunction = [
             'name' => $umlOperation->name,
             'documentation' => $umlOperation->description,
+            'is_abstract' => $umlOperation->isAbstract,
             'is_nullable' => $umlOperation->minOccurs === 0,
         ];
         /** @var UmlParameter $umlParameter */

@@ -113,6 +113,7 @@
                                                                         "id": "_18_5_1_83e026d_1503073094524_906105_7687",
                                                                         "name": "qualified_rm_entity",
                                                                         "description": "Globally qualified reference model entity, e.g.  `openehr-EHR-OBSERVATION`.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -129,6 +130,7 @@
                                                                         "id": "_18_5_1_83e026d_1503073094525_923064_7688",
                                                                         "name": "domain_concept",
                                                                         "description": "Name of the concept represented by this archetype, including specialisation, e.g. `Biochemistry_result-cholesterol`. ",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -145,6 +147,7 @@
                                                                         "id": "_18_5_1_83e026d_1503073094525_298542_7689",
                                                                         "name": "rm_originator",
                                                                         "description": "Organisation originating the reference model on which this archetype is based, e.g. openehr,  cen,  hl7 . ",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -161,6 +164,7 @@
                                                                         "id": "_18_5_1_83e026d_1503073094526_290438_7690",
                                                                         "name": "rm_name",
                                                                         "description": "Name of the reference model, e.g. rim,  ehr_rm,  en13606 . ",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -177,6 +181,7 @@
                                                                         "id": "_18_5_1_83e026d_1503073094526_568693_7691",
                                                                         "name": "rm_entity",
                                                                         "description": "Name of the ontological level within the reference model to which this archetype is targeted, e.g. for openEHR,  folder ,  composition ,  section ,  entry .",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -193,6 +198,7 @@
                                                                         "id": "_18_5_1_83e026d_1503073094526_899294_7692",
                                                                         "name": "specialisation",
                                                                         "description": "Name of specialisation of concept, if this archetype is a specialisation of another archetype, e.g.  cholesterol .",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -209,6 +215,7 @@
                                                                         "id": "_18_5_1_83e026d_1503073094527_398848_7693",
                                                                         "name": "version_id",
                                                                         "description": "Version of this archetype. \n",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -373,6 +380,7 @@
                                                                         "id": "_18_5_1_83e026d_1503073094530_8057_7701",
                                                                         "name": "as_uri",
                                                                         "description": "A URI form of the reference, created by concatenating the following: \n\n* scheme, e.g. `ehr:`, derived from `_namespace_`\n* `_id.value_`\n* `\/` + `_path_`, where `_path_` is non-empty\n",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -529,6 +537,7 @@
                                                                         "id": "_18_5_1_83e026d_1503073094535_907235_7715",
                                                                         "name": "object_id",
                                                                         "description": "Unique identifier for logical object of which this identifier identifies one version; normally the `_object_id_` will be the unique identifier of the version container containing the version referred to by this `OBJECT_VERSION_ID` instance. ",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -545,6 +554,7 @@
                                                                         "id": "_18_5_1_83e026d_1503073094535_320965_7716",
                                                                         "name": "version_tree_id",
                                                                         "description": "Tree identifier of this version with respect to other versions in the same version tree, as either 1 or 3 part dot-separated numbers, e.g.  1 ,  2.1.4 . ",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -561,6 +571,7 @@
                                                                         "id": "_18_5_1_83e026d_1503073094535_509720_7717",
                                                                         "name": "creating_system_id",
                                                                         "description": "Identifier of the system that created the Version corresponding to this Object version id.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -577,6 +588,7 @@
                                                                         "id": "_18_5_1_83e026d_1503073094536_735432_7718",
                                                                         "name": "is_branch",
                                                                         "description": "True if this version identifier represents a branch.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -661,6 +673,7 @@
                                                                         "id": "_18_5_1_83e026d_1503073094536_343255_7723",
                                                                         "name": "name",
                                                                         "description": "Return the terminology id (which includes the  version  in some cases). Distinct names correspond to distinct (i.e. non-compatible) terminologies. Thus the names  ICD10AM  and  ICD10  refer to distinct terminologies. ",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -677,6 +690,7 @@
                                                                         "id": "_18_5_1_83e026d_1503073094536_669895_7724",
                                                                         "name": "version_id",
                                                                         "description": "Version of this terminology, if versioning supported, else the empty string. ",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -734,6 +748,7 @@
                                                                         "id": "_18_5_1_83e026d_1503073094538_184266_7733",
                                                                         "name": "trunk_version",
                                                                         "description": "Trunk version number; numbering starts at 1. ",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -750,6 +765,7 @@
                                                                         "id": "_18_5_1_83e026d_1503073094539_829773_7734",
                                                                         "name": "is_branch",
                                                                         "description": "True if this version identifier represents a branch, i.e. has branch_number and branch_version parts.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -766,6 +782,7 @@
                                                                         "id": "_18_5_1_83e026d_1503073094539_595290_7735",
                                                                         "name": "branch_number",
                                                                         "description": "Number of branch from the trunk point; numbering starts at 1. ",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -782,6 +799,7 @@
                                                                         "id": "_18_5_1_83e026d_1503073094539_217857_7736",
                                                                         "name": "branch_version",
                                                                         "description": "Version of the branch; numbering starts at 1. ",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -876,6 +894,7 @@
                                                                         "id": "_18_5_1_83e026d_1503073638543_488093_8170",
                                                                         "name": "root",
                                                                         "description": "The identifier of the conceptual namespace in which the object exists, within the identification scheme. Returns the part to the left of the first '::' separator, if any, or else the whole string. ",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -892,6 +911,7 @@
                                                                         "id": "_18_5_1_83e026d_1503073638544_279361_8171",
                                                                         "name": "extension",
                                                                         "description": "Optional local identifier of the object within the context of the root identifier. Returns the part to the right of the first '::' separator if any, or else any empty String.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -908,6 +928,7 @@
                                                                         "id": "_18_5_1_83e026d_1503073638544_564544_8172",
                                                                         "name": "has_extension",
                                                                         "description": "True if `_extension_ \/= Void`.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -1440,6 +1461,7 @@
                                                                         "id": "_18_1_83e026d_1422968609316_568885_25501",
                                                                         "name": "has_key",
                                                                         "description": "Test for membership of a key.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_1_83e026d_1422968609394_301885_26036": "a_key"
@@ -1474,6 +1496,7 @@
                                                                         "id": "_18_1_83e026d_1422968609316_855879_25502",
                                                                         "name": "item",
                                                                         "description": "Return item for key  a_key'.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_1_83e026d_1422968609409_654355_26039": "a_key"
@@ -1732,6 +1755,7 @@
                                                                         "id": "_18_1_83e026d_1437046518553_383309_5192",
                                                                         "name": "has",
                                                                         "description": "Test for membership of a value.",
+                                                                        "isAbstract": true,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_1_83e026d_1437046557049_998290_5196": "v"
@@ -1766,6 +1790,7 @@
                                                                         "id": "_18_1_83e026d_1437046623929_379410_5199",
                                                                         "name": "count",
                                                                         "description": "Number of items in container.",
+                                                                        "isAbstract": true,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -1782,6 +1807,7 @@
                                                                         "id": "_18_1_83e026d_1437046661561_965807_5203",
                                                                         "name": "is_empty",
                                                                         "description": "True if container is empty.",
+                                                                        "isAbstract": true,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -1847,6 +1873,7 @@
                                                                         "id": "_18_1_83e026d_1437046778055_715886_5215",
                                                                         "name": "first",
                                                                         "description": "Return first element.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -1863,6 +1890,7 @@
                                                                         "id": "_18_1_83e026d_1437046824823_678496_5218",
                                                                         "name": "last",
                                                                         "description": "Return last element.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -2332,6 +2360,7 @@
                                                                         "id": "_18_1_83e026d_1437043544566_839018_4785",
                                                                         "name": "infix *",
                                                                         "description": "Product by `other'. Actual type of result depends on arithmetic balancing rules.",
+                                                                        "isAbstract": true,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_1_83e026d_1437043586797_714496_4788": "other"
@@ -2366,6 +2395,7 @@
                                                                         "id": "_18_1_83e026d_1437043628789_13466_4791",
                                                                         "name": "infix +",
                                                                         "description": "Sum with `other' (commutative). Actual type of result depends on arithmetic balancing rules.",
+                                                                        "isAbstract": true,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_1_83e026d_1437043653349_709859_4794": "other"
@@ -2400,6 +2430,7 @@
                                                                         "id": "_18_1_83e026d_1437043707212_65007_4799",
                                                                         "name": "infix -",
                                                                         "description": "Result of subtracting `other'. Actual type of result depends on arithmetic balancing rules.",
+                                                                        "isAbstract": true,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_1_83e026d_1437043744316_609524_4803": "other"
@@ -2524,6 +2555,7 @@
                                                                         "id": "_18_1_83e026d_1437044560761_256448_4925",
                                                                         "name": "infix and",
                                                                         "description": "Logical conjunction",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_1_83e026d_1437044600266_194868_4929": "other"
@@ -2573,6 +2605,7 @@
                                                                         "id": "_18_1_83e026d_1437044627681_118015_4932",
                                                                         "name": "infix and_then",
                                                                         "description": "Boolean semi-strict conjunction with other",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_1_83e026d_1437044670753_207674_4936": "other"
@@ -2616,6 +2649,7 @@
                                                                         "id": "_18_1_83e026d_1437044839000_640539_4945",
                                                                         "name": "infix or",
                                                                         "description": "Boolean disjunction with other.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_1_83e026d_1437044866536_404676_4949": "other"
@@ -2671,6 +2705,7 @@
                                                                         "id": "_18_1_83e026d_1437044994799_511058_4958",
                                                                         "name": "infix or_else",
                                                                         "description": "Boolean semi-strict disjunction with `other'.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_1_83e026d_1437045031943_729952_4962": "other"
@@ -2714,6 +2749,7 @@
                                                                         "id": "_18_1_83e026d_1437045092991_147048_4967",
                                                                         "name": "infix xor",
                                                                         "description": "Boolean exclusive or with `other'.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_1_83e026d_1437045124911_611805_4970": "other"
@@ -2757,6 +2793,7 @@
                                                                         "id": "_18_1_83e026d_1437045191503_316654_4976",
                                                                         "name": "infix implies",
                                                                         "description": "Boolean implication of `other' (semi-strict)",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_1_83e026d_1437045222470_534019_4980": "other"
@@ -2855,6 +2892,7 @@
                                                                         "id": "_18_1_83e026d_1437045875187_149672_5169",
                                                                         "name": "infix +",
                                                                         "description": "Concatenation operator - causes \u2018other\u2019 to be appended to this string.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_1_83e026d_1437045909716_263928_5173": "other"
@@ -2889,6 +2927,7 @@
                                                                         "id": "_18_1_83e026d_1437045947756_979716_5177",
                                                                         "name": "is_empty",
                                                                         "description": "True if string is empty, i.e. equal to \"\".",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -2905,6 +2944,7 @@
                                                                         "id": "_18_1_83e026d_1437045987612_588096_5181",
                                                                         "name": "is_integer",
                                                                         "description": "True if string can be parsed as an integer.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -2921,6 +2961,7 @@
                                                                         "id": "_18_1_83e026d_1437046012724_607104_5185",
                                                                         "name": "as_integer",
                                                                         "description": "Return the integer corresponding to the integer value represented in this string.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -2968,6 +3009,7 @@
                                                                         "id": "_18_1_83e026d_1437045418445_651044_4991",
                                                                         "name": "floor",
                                                                         "description": "Return the greatest integer no greater than the value of this object.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3042,6 +3084,7 @@
                                                                         "id": "_18_1_83e026d_1425474754045_321939_4624",
                                                                         "name": "infix <",
                                                                         "description": "Arithmetic comparison. In conjunction with \u2018=\u2019, enables the definition of the operators \u2018>\u2019, \u2018>=\u2019, \u2018<=\u2019, \u2018<>\u2019. In real type systems, this operator might be defined on another class for comparability.",
+                                                                        "isAbstract": true,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_1_83e026d_1425474826084_698985_4625": "other"
@@ -3408,6 +3451,7 @@
                                                                         "id": "_18_2_83e026d_1456057620969_852184_4794",
                                                                         "name": "year",
                                                                         "description": "Year.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3424,6 +3468,7 @@
                                                                         "id": "_18_2_83e026d_1456057620970_334440_4795",
                                                                         "name": "month",
                                                                         "description": "Month in year.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": {
                                                                             "__aliases": {
@@ -3449,6 +3494,7 @@
                                                                         "id": "_18_2_83e026d_1456057620970_248286_4796",
                                                                         "name": "day",
                                                                         "description": "Day in month.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": {
                                                                             "__aliases": {
@@ -3474,6 +3520,7 @@
                                                                         "id": "_18_2_83e026d_1456057620971_495623_4799",
                                                                         "name": "hour",
                                                                         "description": "Hour in day.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": {
                                                                             "__aliases": {
@@ -3499,6 +3546,7 @@
                                                                         "id": "_18_2_83e026d_1456057620972_114479_4800",
                                                                         "name": "minute",
                                                                         "description": "Minute in hour.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": {
                                                                             "__aliases": {
@@ -3524,6 +3572,7 @@
                                                                         "id": "_18_2_83e026d_1456057620973_295113_4801",
                                                                         "name": "second",
                                                                         "description": "Second in minute.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": {
                                                                             "__aliases": {
@@ -3549,6 +3598,7 @@
                                                                         "id": "_18_2_83e026d_1456057620973_953424_4802",
                                                                         "name": "fractional_second",
                                                                         "description": "Fractional seconds.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3565,6 +3615,7 @@
                                                                         "id": "_18_2_83e026d_1456057620976_833962_4807",
                                                                         "name": "timezone",
                                                                         "description": "Timezone; may be Void.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3581,6 +3632,7 @@
                                                                         "id": "_18_2_83e026d_1461851902588_136694_5010",
                                                                         "name": "month_unknown",
                                                                         "description": "Indicates whether month in year is unknown.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3597,6 +3649,7 @@
                                                                         "id": "_18_2_83e026d_1461851902589_63642_5011",
                                                                         "name": "day_unknown",
                                                                         "description": "Indicates whether day in month is unknown.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3613,6 +3666,7 @@
                                                                         "id": "_18_2_83e026d_1461851902590_444906_5017",
                                                                         "name": "minute_unknown",
                                                                         "description": "Indicates whether minute in hour is known.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3629,6 +3683,7 @@
                                                                         "id": "_18_2_83e026d_1461851902590_936074_5018",
                                                                         "name": "second_unknown",
                                                                         "description": "Indicates whether minute in hour is known.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3645,6 +3700,7 @@
                                                                         "id": "_18_2_83e026d_1461851902591_103017_5019",
                                                                         "name": "is_decimal_sign_comma",
                                                                         "description": "True if this time has a decimal part indicated by \u2018,\u2019 (comma) rather than \u2018.\u2019 (period).",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3661,6 +3717,7 @@
                                                                         "id": "_18_2_83e026d_1461851902591_225308_5023",
                                                                         "name": "is_partial",
                                                                         "description": "True if this date time is partial, i.e. if seconds or more is missing.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3677,6 +3734,7 @@
                                                                         "id": "_18_2_83e026d_1461851902592_283249_5024",
                                                                         "name": "is_extended",
                                                                         "description": "True if this date\/time uses \u2018-\u2019, \u2018:\u2019 separators.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3693,6 +3751,7 @@
                                                                         "id": "_18_2_83e026d_1456057620974_3470_4803",
                                                                         "name": "has_fractional_second",
                                                                         "description": "True if the fractional_second part is signficant (i.e. even if = 0.0).",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3709,6 +3768,7 @@
                                                                         "id": "_18_2_83e026d_1456057620976_8319_4808",
                                                                         "name": "as_string",
                                                                         "description": "Return the string value in extended format.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3843,6 +3903,7 @@
                                                                         "id": "_18_2_83e026d_1456057639980_569216_4889",
                                                                         "name": "seconds",
                                                                         "description": "Number of seconds.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3859,6 +3920,7 @@
                                                                         "id": "_18_2_83e026d_1456057639980_777924_4890",
                                                                         "name": "fractional_seconds",
                                                                         "description": "Fractional seconds.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3875,6 +3937,7 @@
                                                                         "id": "_18_2_83e026d_1461851902597_137803_5042",
                                                                         "name": "is_decimal_sign_comma",
                                                                         "description": "True if this time has a decimal part indicated by ',' (comma) rather than '.' (period).",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3891,6 +3954,7 @@
                                                                         "id": "_18_2_83e026d_1461851902599_600903_5047",
                                                                         "name": "is_partial",
                                                                         "description": "Returns False.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3907,6 +3971,7 @@
                                                                         "id": "_18_2_83e026d_1461851902599_596176_5048",
                                                                         "name": "is_extended",
                                                                         "description": "Returns True.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3923,6 +3988,7 @@
                                                                         "id": "_18_2_83e026d_1456057639979_269366_4885",
                                                                         "name": "months",
                                                                         "description": "Number of months.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3939,6 +4005,7 @@
                                                                         "id": "_18_2_83e026d_1456057639978_334396_4884",
                                                                         "name": "years",
                                                                         "description": "Number of years of nominal 365-day length.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3955,6 +4022,7 @@
                                                                         "id": "_18_2_83e026d_1456057639980_583212_4892",
                                                                         "name": "weeks",
                                                                         "description": "Number of 7 day weeks.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3971,6 +4039,7 @@
                                                                         "id": "_18_2_83e026d_1456057639982_728969_4895",
                                                                         "name": "to_seconds",
                                                                         "description": "Total number of seconds equivalent (including fractional) of entire duration.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -3987,6 +4056,7 @@
                                                                         "id": "_18_2_83e026d_1456057639980_978594_4888",
                                                                         "name": "minutes",
                                                                         "description": "Number of 60 second minutes.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4003,6 +4073,7 @@
                                                                         "id": "_18_2_83e026d_1456057639979_344708_4887",
                                                                         "name": "hours",
                                                                         "description": "Number of 60 minute hours.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4019,6 +4090,7 @@
                                                                         "id": "_18_2_83e026d_1456057639979_726318_4886",
                                                                         "name": "days",
                                                                         "description": "Number of 24 hour days.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4035,6 +4107,7 @@
                                                                         "id": "_18_2_83e026d_1456057639981_579014_4893",
                                                                         "name": "as_string",
                                                                         "description": "Return the duration string value.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4144,6 +4217,7 @@
                                                                         "id": "_18_2_83e026d_1456057666135_824691_4965",
                                                                         "name": "hour",
                                                                         "description": "Hour in day, in 24-hour time.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4160,6 +4234,7 @@
                                                                         "id": "_18_2_83e026d_1456057666135_16054_4966",
                                                                         "name": "minute",
                                                                         "description": "Minute in hour.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4176,6 +4251,7 @@
                                                                         "id": "_18_2_83e026d_1456057666136_28408_4967",
                                                                         "name": "second",
                                                                         "description": "Second in minute.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4192,6 +4268,7 @@
                                                                         "id": "_18_2_83e026d_1456057666136_18148_4968",
                                                                         "name": "fractional_second",
                                                                         "description": "Fractional seconds.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": {
                                                                             "__aliases": {
@@ -4217,6 +4294,7 @@
                                                                         "id": "_18_2_83e026d_1456057666138_307802_4973",
                                                                         "name": "timezone",
                                                                         "description": "Timezone; may be Void.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4233,6 +4311,7 @@
                                                                         "id": "_18_2_83e026d_1461851902601_425785_5061",
                                                                         "name": "minute_unknown",
                                                                         "description": "Indicates whether minute is unknown. If so, the time is of the form \u201chh\u201d.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4249,6 +4328,7 @@
                                                                         "id": "_18_2_83e026d_1461851902602_319917_5062",
                                                                         "name": "second_unknown",
                                                                         "description": "Indicates whether second is unknown. If so and month is known, the time is of the form `\"hh:mm\"` or `\"hhmm\"`.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4265,6 +4345,7 @@
                                                                         "id": "_18_2_83e026d_1461851902602_490276_5063",
                                                                         "name": "is_decimal_sign_comma",
                                                                         "description": "True if this time has a decimal part indicated by \u2018,\u2019 (comma) rather than \u2018.\u2019 (period).",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4281,6 +4362,7 @@
                                                                         "id": "_18_2_83e026d_1461851902603_539365_5067",
                                                                         "name": "is_partial",
                                                                         "description": "True if this time is partial, i.e. if seconds or more is missing.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4297,6 +4379,7 @@
                                                                         "id": "_18_2_83e026d_1461851902603_351178_5068",
                                                                         "name": "is_extended",
                                                                         "description": "True if this time uses \u2018-\u2019, \u2018:\u2019 separators.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4313,6 +4396,7 @@
                                                                         "id": "_18_2_83e026d_1456057666137_273711_4969",
                                                                         "name": "has_fractional_second",
                                                                         "description": "True if the fractional_second part is signficant (i.e. even if = 0.0).",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4329,6 +4413,7 @@
                                                                         "id": "_18_2_83e026d_1456057666138_175795_4974",
                                                                         "name": "as_string",
                                                                         "description": "Return string value in extended format.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4416,6 +4501,7 @@
                                                                         "id": "_18_2_83e026d_1456057654197_744870_4935",
                                                                         "name": "hour",
                                                                         "description": "Hour part of timezone - in the range 00 - 13.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4432,6 +4518,7 @@
                                                                         "id": "_18_2_83e026d_1456057654198_435155_4936",
                                                                         "name": "minute",
                                                                         "description": "Minute part of timezone. Generally 00 or 30.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4448,6 +4535,7 @@
                                                                         "id": "_18_2_83e026d_1456057654198_343013_4938",
                                                                         "name": "sign",
                                                                         "description": "Direction of timezone expresssed as +1 or -1.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4464,6 +4552,7 @@
                                                                         "id": "_18_2_83e026d_1461851902606_335489_5079",
                                                                         "name": "minute_unknown",
                                                                         "description": "Indicates whether minute part known.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4480,6 +4569,7 @@
                                                                         "id": "_18_2_83e026d_1461851902607_91318_5081",
                                                                         "name": "is_partial",
                                                                         "description": "True if this time zone is partial, i.e. if minutes is missing.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4496,6 +4586,7 @@
                                                                         "id": "_18_2_83e026d_1461851902607_940902_5082",
                                                                         "name": "is_extended",
                                                                         "description": "True if this time-zone uses \u2018:\u2019 separators.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4512,6 +4603,7 @@
                                                                         "id": "_18_2_83e026d_1456057654198_989180_4937",
                                                                         "name": "is_gmt",
                                                                         "description": "True if timezone is UTC, i.e. +0000.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4528,6 +4620,7 @@
                                                                         "id": "_18_2_83e026d_1456057654199_11411_4940",
                                                                         "name": "as_string",
                                                                         "description": "Return timezone string.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4637,6 +4730,7 @@
                                                                         "id": "_18_2_83e026d_1461851902608_977503_5086",
                                                                         "name": "is_partial",
                                                                         "description": "True if this date time is partial, i.e. if trailing end (right hand) value(s) is\/are missing.",
+                                                                        "isAbstract": true,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4653,6 +4747,7 @@
                                                                         "id": "_18_2_83e026d_1461851902608_553123_5087",
                                                                         "name": "is_extended",
                                                                         "description": "True if this ISO8601 string is in the 'extended' form, i.e. uses \u2018-\u2019 and \/ or \u2018:\u2019 separators. This is the preferred format.",
+                                                                        "isAbstract": true,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4708,6 +4803,7 @@
                                                                         "id": "_18_2_83e026d_1461763996691_665976_4890",
                                                                         "name": "year",
                                                                         "description": "Year.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4724,6 +4820,7 @@
                                                                         "id": "_18_2_83e026d_1461764007996_867471_4894",
                                                                         "name": "month",
                                                                         "description": "Month in year.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": {
                                                                             "__aliases": {
@@ -4749,6 +4846,7 @@
                                                                         "id": "_18_2_83e026d_1461764013458_758613_4900",
                                                                         "name": "day",
                                                                         "description": "Day in month.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": {
                                                                             "__aliases": {
@@ -4774,6 +4872,7 @@
                                                                         "id": "_18_2_83e026d_1461764037914_317287_4906",
                                                                         "name": "timezone",
                                                                         "description": "Timezone; may be Void.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4790,6 +4889,7 @@
                                                                         "id": "_18_2_83e026d_1461851902580_629915_4987",
                                                                         "name": "month_unknown",
                                                                         "description": "Indicates whether month in year is unknown. If so, the date is of the form `\"YYYY\"`.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4806,6 +4906,7 @@
                                                                         "id": "_18_2_83e026d_1461851902580_538668_4988",
                                                                         "name": "day_unknown",
                                                                         "description": "Indicates whether day in month is unknown. If so, and month is known, the date is of the form `\"YYYY-MM\"` or `\"YYYYMM\"`.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4822,6 +4923,7 @@
                                                                         "id": "_18_2_83e026d_1461851902581_226185_4991",
                                                                         "name": "is_partial",
                                                                         "description": "True if this date is partial, i.e. if days or more is missing.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4838,6 +4940,7 @@
                                                                         "id": "_18_2_83e026d_1461851902581_582470_4992",
                                                                         "name": "is_extended",
                                                                         "description": "True if this date uses `'-'` separators.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -4854,6 +4957,7 @@
                                                                         "id": "_18_2_83e026d_1461851902581_814781_4989",
                                                                         "name": "as_string",
                                                                         "description": "Return string value in extended format.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -5359,6 +5463,7 @@
                                                                         "id": "_18_2_83e026d_1463653930977_30244_5812",
                                                                         "name": "valid_year",
                                                                         "description": "",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_2_83e026d_1463653930996_861599_5834": "y"
@@ -5402,6 +5507,7 @@
                                                                         "id": "_18_2_83e026d_1463653930978_756449_5813",
                                                                         "name": "valid_month",
                                                                         "description": "",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_2_83e026d_1463653930999_685512_5837": "m"
@@ -5445,6 +5551,7 @@
                                                                         "id": "_18_2_83e026d_1463653930979_522003_5814",
                                                                         "name": "valid_day",
                                                                         "description": "True if d >= 1 and d <= days_in_month (m, y)",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_2_83e026d_1463653931000_35317_5840": "y",
@@ -5518,6 +5625,7 @@
                                                                         "id": "_18_2_83e026d_1463653930979_641991_5815",
                                                                         "name": "valid_hour",
                                                                         "description": "True if (h >= 0 and h < Hours_in_day) or (h = Hours_in_day and m = 0 and s = 0)",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_2_83e026d_1463653931002_751587_5846": "h",
@@ -5591,6 +5699,7 @@
                                                                         "id": "_18_2_83e026d_1463653930980_74376_5816",
                                                                         "name": "valid_minute",
                                                                         "description": "True if m >= 0 and m < Minutes_in_hour.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_2_83e026d_1463653931004_22568_5852": "m"
@@ -5634,6 +5743,7 @@
                                                                         "id": "_18_2_83e026d_1463653930981_103997_5817",
                                                                         "name": "valid_second",
                                                                         "description": "True if s >= 0 and s < Seconds_in_minute .",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_2_83e026d_1463653931004_635317_5856": "s"
@@ -5677,6 +5787,7 @@
                                                                         "id": "_18_2_83e026d_1463653930982_891747_5818",
                                                                         "name": "valid_fractional_second",
                                                                         "description": "True if fs >= 0.0 and fs < 1.0 .",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_2_83e026d_1463653931005_870912_5860": "fs"
@@ -5720,6 +5831,7 @@
                                                                         "id": "_18_2_83e026d_1461851902581_560196_4990",
                                                                         "name": "valid_iso8601_date",
                                                                         "description": "String is a valid ISO 8601 date, i.e. takes the complete form:\n\n* `YYYY-MM-DD` (extended, preferred) or one of the partial forms `YYYY-MM` or `YYYY`\n* `YYYYMMDD` (compact) or a partial variant `YYYYMM`.\n\nWhere:\n\n* `YYYY` is the string form of any positive number in the range `0000` - `9999` (zero-filled to four digits)\n* `MM` is `01` - `12` (zero-filled to two digits)\n* `DD` is `01` - `31` (zero-filled to two digits)\n\nThe combinations of `YYYY`, `MM`, `DD` numbers must be correct with respect to the Gregorian calendar.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_19_0_83e026d_1541936301354_571908_5044": "s"
@@ -5754,6 +5866,7 @@
                                                                         "id": "_18_2_83e026d_1461851902603_878230_5066",
                                                                         "name": "valid_iso8601_time",
                                                                         "description": "String is a valid ISO 8601 date, i.e. takes the form:\n\n* `hh:mm:ss[(,|.)s+][Z|\u00b1hh[:mm]]` (extended)\n* `hhmmss[(,|.)s+][Z|\u00b1hh[mm]]` (compact)\n* or one of the partial forms:\n** `hh:mm` (extended)\n** `hhmm` or `hh` (compact)\n\nwith an additional optional timezone indicator of:\n\n* `Z` or`\u00b1hh[:mm]` (extended)  `\u00b1hh[mm]` (compact)\n\nWhere:\n\n* `hh` is \"00\" - \"23\" (0-filled to two digits)\n* `mm` is \"00\" - \"59\" (0-filled to two digits)\n* `ss` is \"00\" - \"60\" (0-filled to two digits)\n* `[(,|.)s+]` is an optional string consisting of a comma or decimal point followed by numeric string of 1 or more digits, representing a fractional second\n* `Z` is a literal meaning UTC (modern replacement for GMT), i.e. timezone `+0000`\n",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_19_0_83e026d_1541936263241_757257_5039": "s"
@@ -5788,6 +5901,7 @@
                                                                         "id": "_18_2_83e026d_1461851902591_725895_5022",
                                                                         "name": "valid_iso8601_date_time",
                                                                         "description": "String is a valid ISO 8601 date-time, i.e. takes the form:\n\n* `YYYY-MM-DDThh:mm:ss[(,|.)s+][Z|\u00b1hh[:mm]]` (extended)\n* `YYYYMMDDThhmmss[(,|.)s+][Z|\u00b1hh[mm]]` (compact)\n* or one of the partial forms:\n** `YYYY-MM-DDThh:mm` or `YYYY-MM-DDThh` (extended)\n** `YYYYMMDDThhmm` or `YYYYMMDDThh` (compact)",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_2_83e026d_1461851902614_939263_5160": "s"
@@ -5822,6 +5936,7 @@
                                                                         "id": "_18_2_83e026d_1461851902597_466797_5045",
                                                                         "name": "valid_iso8601_duration",
                                                                         "description": "String is a valid ISO 8601 duration, i.e. takes the form:\n\n* `P[nnY][nnM][nnW][nnD][T[nnH][nnM][nnS]]`\n\nWhere each nn represents a number of years, months, etc. nnW represents a number of 7-day weeks.\n\nNote: allowing the `W` designator in the same expression as other designators is an exception to the published standard, but necessary in clinical information (typically for representing pregnancy duration).",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_2_83e026d_1461851902618_85262_5194": "s"
@@ -5994,6 +6109,7 @@
                                                                         "id": "_18_2_83e026d_1463743752342_757691_6289",
                                                                         "name": "is_open",
                                                                         "description": "True if this interval imposes no constraints, i.e. is set to `0..*`.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -6010,6 +6126,7 @@
                                                                         "id": "_18_2_83e026d_1463743789303_776115_6293",
                                                                         "name": "is_optional",
                                                                         "description": "True if this interval expresses optionality, i.e. `0..1`.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -6026,6 +6143,7 @@
                                                                         "id": "_18_2_83e026d_1463743814590_836018_6297",
                                                                         "name": "is_mandatory",
                                                                         "description": "True if this interval expresses mandation, i.e. `1..1`.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -6042,6 +6160,7 @@
                                                                         "id": "_18_2_83e026d_1463743849213_41583_6301",
                                                                         "name": "is_prohibited",
                                                                         "description": "True if this interval is set to `0..0`.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -6279,6 +6398,7 @@
                                                                         "id": "_18_1_83e026d_1422968609316_155269_25489",
                                                                         "name": "has",
                                                                         "description": "True if `(lower_unbounded or lower_included and v >= lower) or v > lower and (upper_unbounded or upper_included and v <= upper or v < upper)`.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_1_83e026d_1422968609394_109340_26009": "e"
@@ -6313,6 +6433,7 @@
                                                                         "id": "_18_2_83e026d_1463743104570_868488_6259",
                                                                         "name": "intersects",
                                                                         "description": "True if there is any overlap between intervals represented by Current and `other'. True if at least one limit of other is strictly inside the limits of this interval.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_2_83e026d_1463743129282_746102_6262": "other"
@@ -6347,6 +6468,7 @@
                                                                         "id": "_18_2_83e026d_1463743174193_399473_6265",
                                                                         "name": "contains",
                                                                         "description": "True if current interval properly contains `other`? True if all points of `other` are inside the current interval.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_2_83e026d_1463743189521_649060_6268": "other"
@@ -6381,6 +6503,7 @@
                                                                         "id": "_18_2_83e026d_1463743402383_131829_6271",
                                                                         "name": "is_equal",
                                                                         "description": "True if current object's interval is semantically same as `other`.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": {
                                                                             "__aliases": {
                                                                                 "_18_2_83e026d_1463743402387_466872_6273": "other"
@@ -6652,6 +6775,7 @@
                                                                         "id": "_18_1_83e026d_1422968609519_25729_27204",
                                                                         "name": "is_bag",
                                                                         "description": "True if the semantics of this cardinality represent a bag, i.e. unordered, non-unique membership.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -6668,6 +6792,7 @@
                                                                         "id": "_18_1_83e026d_1422968609519_792187_27205",
                                                                         "name": "is_list",
                                                                         "description": "True if the semantics of this cardinality represent a list, i.e. ordered, non-unique membership.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -6684,6 +6809,7 @@
                                                                         "id": "_18_1_83e026d_1422968609519_891747_27206",
                                                                         "name": "is_set",
                                                                         "description": "True if the semantics of this cardinality represent a set, i.e. unordered, unique membership.",
+                                                                        "isAbstract": false,
                                                                         "umlParameters": [],
                                                                         "umlConstraints": [],
                                                                         "return": {
@@ -7004,6 +7130,7 @@
                                                                 "id": "_18_1_83e026d_1422968609316_983208_25505",
                                                                 "name": "is_equal",
                                                                 "description": "Value equality.",
+                                                                "isAbstract": true,
                                                                 "umlParameters": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1437044160579_963303_4830": "other"
@@ -7038,6 +7165,7 @@
                                                                 "id": "_18_1_83e026d_1437043893276_184509_4810",
                                                                 "name": "infix =",
                                                                 "description": "Reference equality.",
+                                                                "isAbstract": false,
                                                                 "umlParameters": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1437043917492_661271_4813": "other"
@@ -7072,6 +7200,7 @@
                                                                 "id": "_18_1_83e026d_1437043953260_302178_4815",
                                                                 "name": "instance_of",
                                                                 "description": "Create new instance of a type.",
+                                                                "isAbstract": false,
                                                                 "umlParameters": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1437043978996_288732_4818": "a_type"
@@ -7106,6 +7235,7 @@
                                                                 "id": "_18_1_83e026d_1437044078491_538900_4822",
                                                                 "name": "type_of",
                                                                 "description": "Type name of an object as a string. May include generic parameters, as in \"Interval<Time>\".",
+                                                                "isAbstract": false,
                                                                 "umlParameters": {
                                                                     "__aliases": {
                                                                         "_18_1_83e026d_1437044097371_261016_4825": "an_object"
@@ -7291,6 +7421,7 @@
                                                                 "id": "_18_1_83e026d_1422968609425_325922_26197",
                                                                 "name": "current_revision",
                                                                 "description": "Most recent revision in revision_history if is_controlled else  (uncontrolled) . ",
+                                                                "isAbstract": false,
                                                                 "umlParameters": [],
                                                                 "umlConstraints": {
                                                                     "__aliases": {
@@ -7316,6 +7447,7 @@
                                                                 "id": "_18_1_83e026d_1422968609425_138820_26198",
                                                                 "name": "languages_available",
                                                                 "description": "Total list of languages available in this resource, derived from original_language and translations. ",
+                                                                "isAbstract": false,
                                                                 "umlParameters": [],
                                                                 "umlConstraints": [],
                                                                 "return": {

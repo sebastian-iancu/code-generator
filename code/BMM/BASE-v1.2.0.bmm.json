@@ -130,6 +130,7 @@
                 "is_equal": {
                     "name": "is_equal",
                     "documentation": "Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -257,6 +258,7 @@
                 "has": {
                     "name": "has",
                     "documentation": "Test for membership of a value.",
+                    "is_abstract": true,
                     "parameters": {
                         "v": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN",
@@ -271,6 +273,7 @@
                 "count": {
                     "name": "count",
                     "documentation": "Number of items in container.",
+                    "is_abstract": true,
                     "result": {
                         "type": "Integer"
                     }
@@ -278,6 +281,7 @@
                 "is_empty": {
                     "name": "is_empty",
                     "documentation": "True if container is empty.",
+                    "is_abstract": true,
                     "result": {
                         "type": "Boolean"
                     }
@@ -701,6 +705,7 @@
                 "add": {
                     "name": "add",
                     "documentation": "Sum with `_other_` (commutative). Actual type of result depends on arithmetic balancing rules.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -714,6 +719,7 @@
                 "subtract": {
                     "name": "subtract",
                     "documentation": "Result of subtracting `_other_`. Actual type of result depends on arithmetic balancing rules.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -727,6 +733,7 @@
                 "multiply": {
                     "name": "multiply",
                     "documentation": "Product by `_other_`. Actual type of result depends on arithmetic balancing rules.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -740,6 +747,7 @@
                 "divide": {
                     "name": "divide",
                     "documentation": "Divide by`_other_`. Actual type of result depends on arithmetic balancing rules.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -753,6 +761,7 @@
                 "exponent": {
                     "name": "exponent",
                     "documentation": "Expontiation of this by `_other_`.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -766,6 +775,7 @@
                 "negative": {
                     "name": "negative",
                     "documentation": "Generate negative of current value.",
+                    "is_abstract": true,
                     "result": {
                         "type": "Numeric"
                     }
@@ -1246,6 +1256,7 @@
                 "less_than": {
                     "name": "less_than",
                     "documentation": "Arithmetic value comparison. Returns True if current object is less than `_other_`. This operator is effected and\/or redefined in descendants to provide the appropriate ordering semantics for concrete types.\n\nIn conjunction with `=`, enables the definition of the related functions `_greater_than_()` etc.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1859,6 +1870,7 @@
                 "is_partial": {
                     "name": "is_partial",
                     "documentation": "True if this date time is partial, i.e. if trailing end (right hand) value(s) is\/are missing.",
+                    "is_abstract": true,
                     "result": {
                         "type": "Boolean"
                     }
@@ -1866,6 +1878,7 @@
                 "is_extended": {
                     "name": "is_extended",
                     "documentation": "True if this ISO8601 string is in the 'extended' form, i.e. uses `'-'` and \/ or `':'` separators. This is the preferred format.",
+                    "is_abstract": true,
                     "result": {
                         "type": "Boolean"
                     }
@@ -2135,6 +2148,7 @@
                 "has": {
                     "name": "has",
                     "documentation": "True if the value `e` is properly contained in this Interval.",
+                    "is_abstract": true,
                     "parameters": {
                         "e": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN",
@@ -2152,6 +2166,7 @@
                 "intersects": {
                     "name": "intersects",
                     "documentation": "True if there is any overlap between intervals represented by Current and `_other_`. True if at least one limit of other is strictly inside the limits of this interval.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -2165,6 +2180,7 @@
                 "contains": {
                     "name": "contains",
                     "documentation": "True if current interval properly contains `_other_`? True if all points of `_other_` are inside the current interval.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -2178,6 +2194,7 @@
                 "is_equal": {
                     "name": "is_equal",
                     "documentation": "True if current object's interval is semantically same as `_other_`.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",

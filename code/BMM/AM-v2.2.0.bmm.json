@@ -534,6 +534,7 @@
                 "is_prohibited": {
                     "name": "is_prohibited",
                     "documentation": "True if this node is prohibited. Implemented in subtypes.",
+                    "is_abstract": true,
                     "result": {
                         "type": "Boolean"
                     }
@@ -561,6 +562,7 @@
                 "c_conforms_to": {
                     "name": "c_conforms_to",
                     "documentation": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. \nTypically used during validation of special-ised archetype nodes.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -581,6 +583,7 @@
                 "c_congruent_to": {
                     "name": "c_congruent_to",
                     "documentation": "True if constraints represented by this node contain no further redefinitions with respect to the node other, with the exception of node_id redefnition in `C_OBJECT` nodes. \n\nTypically used to test if an inherited node locally contains any constraints.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -896,6 +899,7 @@
                 "any_allowed": {
                     "name": "any_allowed",
                     "documentation": "True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.",
+                    "is_abstract": true,
                     "result": {
                         "type": "Boolean"
                     }
@@ -903,6 +907,7 @@
                 "valid_value": {
                     "name": "valid_value",
                     "documentation": "True if `_a_value_` is valid with respect to constraint expressed in concrete instance of this type.",
+                    "is_abstract": true,
                     "parameters": {
                         "a_value": {
                             "name": "a_value",
@@ -916,6 +921,7 @@
                 "prototype_value": {
                     "name": "prototype_value",
                     "documentation": "Generate a prototype value from this constraint object.",
+                    "is_abstract": true,
                     "result": {
                         "type": "Any"
                     }
@@ -1082,6 +1088,7 @@
                 "c_value_conforms_to": {
                     "name": "c_value_conforms_to",
                     "documentation": "True if this node expresses a value constraint that conforms to that of `other`. Effected in descendants.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1108,6 +1115,7 @@
                 "c_value_congruent_to": {
                     "name": "c_value_congruent_to",
                     "documentation": "True if this node expresses the same value constraint as `other`. Effected in descendants.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1284,6 +1292,7 @@
                 "c_conforms_to": {
                     "name": "c_conforms_to",
                     "documentation": "True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. Typically used during validation of specialised archetype nodes.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -1304,6 +1313,7 @@
                 "c_congruent_to": {
                     "name": "c_congruent_to",
                     "documentation": "True if constraints represented by this node contain no further redefinitions with respect to the node other. Typically used to test if an inherited node locally contains any constraints.",
+                    "is_abstract": true,
                     "parameters": {
                         "other": {
                             "name": "other",
@@ -2155,6 +2165,7 @@
                 "valid_pattern_constraint": {
                     "name": "valid_pattern_constraint",
                     "documentation": "True if `_a_pattern_` is a valid constraint. Define in concrete descendants.",
+                    "is_abstract": true,
                     "parameters": {
                         "a_pattern": {
                             "name": "a_pattern",
@@ -2168,6 +2179,7 @@
                 "valid_pattern_constraint_replacement": {
                     "name": "valid_pattern_constraint_replacement",
                     "documentation": "Return True if `_a_pattern_` can be replaced by `_an_other_pattern_` in a specialised constraint. Define in concrete subtypes.",
+                    "is_abstract": true,
                     "parameters": {
                         "a_pattern": {
                             "name": "a_pattern",

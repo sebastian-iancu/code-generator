@@ -16,6 +16,7 @@ class UmlOperation implements CollectableInterface
     public readonly string $id;
     public readonly string $name;
     public readonly string $description;
+    public readonly bool $isAbstract;
     public readonly Collection $umlParameters;
     public readonly Collection $umlConstraints;
     public readonly UmlTypeReference $return;
@@ -27,6 +28,7 @@ class UmlOperation implements CollectableInterface
         $this->id = (string)$xmlNode->attributes('xmi', true)?->id;
         $this->name = (string)$xmlNode['name'];
         $this->description = (string)$xmlNode->ownedComment['body'];
+        $this->isAbstract = (string)$xmlNode['isAbstract'] === 'true';
         // collect parameters
         $this->umlParameters = new Collection();
         foreach ($xmlNode->xpath("ownedParameter[@xmi:type='uml:Parameter' and (not(@direction) or not(@direction='return'))]") as $umlParameterNode) {
