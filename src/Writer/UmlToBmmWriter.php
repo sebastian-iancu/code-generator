@@ -288,7 +288,7 @@ class UmlToBmmWriter extends AbstractWriter
         $bmmParameter = [
             '_type' => null,
             'name' => $umlParameter->name,
-            'description' => $umlParameter->description ?? null,
+            'documentation' => $umlParameter->description ?? null,
             'is_nullable' => $umlParameter->minOccurs === 0,
         ];
         if ($umlParameter->templateParameterId) {
