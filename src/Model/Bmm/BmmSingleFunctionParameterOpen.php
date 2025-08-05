@@ -14,13 +14,13 @@ readonly class BmmSingleFunctionParameterOpen extends AbstractBmmFunctionParamet
      * @param string $name
      * @param string $type
      * @param string|null $documentation
-     * @param bool|null $isMandatory
+     * @param bool|null $isNullable
      */
     public function __construct(
         public string $name,
         public string $type,
         public ?string $documentation = null,
-        public ?bool $isMandatory = false,
+        public ?bool $isNullable = false,
     )
     {
     }
@@ -34,7 +34,7 @@ readonly class BmmSingleFunctionParameterOpen extends AbstractBmmFunctionParamet
             '_type' => 'P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN',
             'name' => $this->name,
             'documentation' => $this->documentation,
-            'is_mandatory' => $this->isMandatory,
+            'is_nullable' => $this->isNullable,
             'type' => $this->type,
         ]);
     }
@@ -51,7 +51,7 @@ readonly class BmmSingleFunctionParameterOpen extends AbstractBmmFunctionParamet
             name: $data['name'],
             type: $data['type'],
             documentation: $data['documentation'] ?? null,
-            isMandatory: $data['is_mandatory'] ?? false,
+            isNullable: $data['is_nullable'] ?? false,
         );
     }
 }

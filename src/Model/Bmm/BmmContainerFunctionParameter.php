@@ -14,14 +14,14 @@ readonly class BmmContainerFunctionParameter extends AbstractBmmFunctionParamete
      * @param string $name
      * @param BmmContainerType $typeDef
      * @param string|null $documentation
-     * @param bool|null $isMandatory
+     * @param bool|null $isNullable
      * @param Interval|null $cardinality
      */
     public function __construct(
         public string $name,
         public BmmContainerType $typeDef,
         public ?string $documentation = null,
-        public ?bool $isMandatory = false,
+        public ?bool $isNullable = false,
         public ?Interval $cardinality = new Interval(),
     )
     {
@@ -37,7 +37,7 @@ readonly class BmmContainerFunctionParameter extends AbstractBmmFunctionParamete
         return array_filter([
             '_type' => 'P_BMM_CONTAINER_FUNCTION_PARAMETER',
             'name' => $this->name,
-            'is_mandatory' => $this->isMandatory,
+            'is_nullable' => $this->isNullable,
             'documentation' => $this->documentation,
             'type_def' => $typeDef,
             'cardinality' => $this->cardinality,
@@ -56,7 +56,7 @@ readonly class BmmContainerFunctionParameter extends AbstractBmmFunctionParamete
             name: $data['name'],
             typeDef: BmmContainerType::fromArray($data['type_def']),
             documentation: $data['documentation'] ?? null,
-            isMandatory: $data['is_mandatory'] ?? false,
+            isNullable: $data['is_nullable'] ?? false,
             cardinality: isset($data['cardinality']) ? Interval::fromArray($data['cardinality']) : new Interval(),
         );
     }

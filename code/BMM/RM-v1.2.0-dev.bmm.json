@@ -365,7 +365,6 @@
                     "parameters": {
                         "a_path": {
                             "name": "a_path",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -382,7 +381,6 @@
                     "parameters": {
                         "a_path": {
                             "name": "a_path",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -398,7 +396,6 @@
                     "parameters": {
                         "a_path": {
                             "name": "a_path",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -415,7 +412,6 @@
                     "parameters": {
                         "a_path": {
                             "name": "a_path",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -432,7 +428,6 @@
                     "parameters": {
                         "a_loc": {
                             "name": "a_loc",
-                            "is_mandatory": true,
                             "type": "PATHABLE"
                         }
                     },
@@ -723,7 +718,6 @@
                     "parameters": {
                         "a_time": {
                             "name": "a_time",
-                            "is_mandatory": true,
                             "type": "DV_DATE_TIME"
                         }
                     },
@@ -737,7 +731,6 @@
                     "parameters": {
                         "a_version_uid": {
                             "name": "a_version_uid",
-                            "is_mandatory": true,
                             "type": "OBJECT_VERSION_ID"
                         }
                     },
@@ -751,7 +744,6 @@
                     "parameters": {
                         "a_version_uid": {
                             "name": "a_version_uid",
-                            "is_mandatory": true,
                             "type": "OBJECT_VERSION_ID"
                         }
                     },
@@ -768,7 +760,6 @@
                     "parameters": {
                         "a_version_uid": {
                             "name": "a_version_uid",
-                            "is_mandatory": true,
                             "type": "OBJECT_VERSION_ID"
                         }
                     },
@@ -785,7 +776,6 @@
                     "parameters": {
                         "a_time": {
                             "name": "a_time",
-                            "is_mandatory": true,
                             "type": "DV_DATE_TIME"
                         }
                     },
@@ -833,37 +823,30 @@
                     "parameters": {
                         "a_contribution": {
                             "name": "a_contribution",
-                            "is_mandatory": true,
                             "type": "OBJECT_REF"
                         },
                         "a_new_version_uid": {
                             "name": "a_new_version_uid",
-                            "is_mandatory": true,
                             "type": "OBJECT_VERSION_ID"
                         },
                         "a_preceding_version_id": {
                             "name": "a_preceding_version_id",
-                            "is_mandatory": true,
                             "type": "OBJECT_VERSION_ID"
                         },
                         "an_audit": {
                             "name": "an_audit",
-                            "is_mandatory": true,
                             "type": "AUDIT_DETAILS"
                         },
                         "a_lifecycle_state": {
                             "name": "a_lifecycle_state",
-                            "is_mandatory": true,
                             "type": "DV_CODED_TEXT"
                         },
                         "a_data": {
                             "name": "a_data",
-                            "is_mandatory": true,
                             "type": "T"
                         },
                         "signing_key": {
                             "name": "signing_key",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -880,38 +863,31 @@
                     "parameters": {
                         "a_contribution": {
                             "name": "a_contribution",
-                            "is_mandatory": true,
                             "type": "OBJECT_REF"
                         },
                         "a_new_version_uid": {
                             "name": "a_new_version_uid",
-                            "is_mandatory": true,
                             "type": "OBJECT_VERSION_ID"
                         },
                         "a_preceding_version_id": {
                             "name": "a_preceding_version_id",
-                            "is_mandatory": true,
                             "type": "OBJECT_VERSION_ID"
                         },
                         "an_audit": {
                             "name": "an_audit",
-                            "is_mandatory": true,
                             "type": "AUDIT_DETAILS"
                         },
                         "a_lifecycle_state": {
                             "name": "a_lifecycle_state",
-                            "is_mandatory": true,
                             "type": "DV_CODED_TEXT"
                         },
                         "a_data": {
                             "name": "a_data",
-                            "is_mandatory": true,
                             "type": "T"
                         },
                         "an_other_input_uids": {
                             "_type": "P_BMM_CONTAINER_FUNCTION_PARAMETER",
                             "name": "an_other_input_uids",
-                            "is_mandatory": true,
                             "type_def": {
                                 "container_type": "List",
                                 "type": "OBJECT_VERSION_ID"
@@ -923,7 +899,6 @@
                         },
                         "signing_key": {
                             "name": "signing_key",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -940,17 +915,14 @@
                     "parameters": {
                         "a_contribution": {
                             "name": "a_contribution",
-                            "is_mandatory": true,
                             "type": "OBJECT_REF"
                         },
                         "an_audit": {
                             "name": "an_audit",
-                            "is_mandatory": true,
                             "type": "AUDIT_DETAILS"
                         },
                         "a_version": {
                             "name": "a_version",
-                            "is_mandatory": true,
                             "type": "ORIGINAL_VERSION"
                         }
                     },
@@ -964,17 +936,14 @@
                     "parameters": {
                         "an_attestation": {
                             "name": "an_attestation",
-                            "is_mandatory": true,
                             "type": "ATTESTATION"
                         },
                         "a_ver_id": {
                             "name": "a_ver_id",
-                            "is_mandatory": true,
                             "type": "OBJECT_VERSION_ID"
                         },
                         "signing_key": {
                             "name": "signing_key",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -1924,7 +1893,6 @@
                     "parameters": {
                         "a_path": {
                             "name": "a_path",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -1938,7 +1906,6 @@
                     "parameters": {
                         "a_path": {
                             "name": "a_path",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -2038,7 +2005,6 @@
                     "parameters": {
                         "i": {
                             "name": "i",
-                            "is_mandatory": true,
                             "type": "Integer"
                         }
                     },
@@ -2052,7 +2018,6 @@
                     "parameters": {
                         "a_key": {
                             "name": "a_key",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -2066,7 +2031,6 @@
                     "parameters": {
                         "a_key": {
                             "name": "a_key",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -2080,7 +2044,6 @@
                     "parameters": {
                         "a_key": {
                             "name": "a_key",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -2095,6 +2058,7 @@
                         "keys": {
                             "_type": "P_BMM_CONTAINER_FUNCTION_PARAMETER",
                             "name": "keys",
+                            "is_nullable": true,
                             "type_def": {
                                 "container_type": "List",
                                 "type": "String"
@@ -2116,6 +2080,7 @@
                         "keys": {
                             "_type": "P_BMM_CONTAINER_FUNCTION_PARAMETER",
                             "name": "keys",
+                            "is_nullable": true,
                             "type_def": {
                                 "container_type": "List",
                                 "type": "String"
@@ -2136,12 +2101,10 @@
                     "parameters": {
                         "i": {
                             "name": "i",
-                            "is_mandatory": true,
                             "type": "Integer"
                         },
                         "j": {
                             "name": "j",
-                            "is_mandatory": true,
                             "type": "Integer"
                         }
                     },
@@ -2205,7 +2168,6 @@
                     "parameters": {
                         "a_name": {
                             "name": "a_name",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -2219,7 +2181,6 @@
                     "parameters": {
                         "i": {
                             "name": "i",
-                            "is_mandatory": true,
                             "type": "Integer"
                         }
                     },
@@ -2895,7 +2856,6 @@
                     "parameters": {
                         "c": {
                             "name": "c",
-                            "is_mandatory": true,
                             "type": "Character"
                         }
                     },
@@ -2984,7 +2944,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_ORDERED"
                         }
                     },
@@ -3019,7 +2978,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_ORDERED"
                         }
                     },
@@ -3082,7 +3040,6 @@
                     "parameters": {
                         "v": {
                             "name": "v",
-                            "is_mandatory": true,
                             "type": "DV_ORDERED"
                         }
                     },
@@ -3144,7 +3101,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_QUANTIFIED"
                         }
                     },
@@ -3158,7 +3114,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_QUANTIFIED"
                         }
                     },
@@ -3260,7 +3215,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_PROPORTION"
                         }
                     },
@@ -3274,7 +3228,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_PROPORTION"
                         }
                     },
@@ -3288,7 +3241,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_PROPORTION"
                         }
                     },
@@ -3302,7 +3254,6 @@
                     "parameters": {
                         "factor": {
                             "name": "factor",
-                            "is_mandatory": true,
                             "type": "Real"
                         }
                     },
@@ -3316,7 +3267,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_PROPORTION"
                         }
                     },
@@ -3336,7 +3286,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_ORDERED"
                         }
                     },
@@ -3410,7 +3359,6 @@
                     "parameters": {
                         "number": {
                             "name": "number",
-                            "is_mandatory": true,
                             "type": "Ordered_Numeric"
                         }
                     },
@@ -3424,7 +3372,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_AMOUNT"
                         }
                     },
@@ -3441,7 +3388,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_AMOUNT"
                         }
                     },
@@ -3455,7 +3401,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_AMOUNT"
                         }
                     },
@@ -3469,7 +3414,6 @@
                     "parameters": {
                         "factor": {
                             "name": "factor",
-                            "is_mandatory": true,
                             "type": "Real"
                         }
                     },
@@ -3490,7 +3434,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_AMOUNT"
                         }
                     },
@@ -3582,7 +3525,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_QUANTITY"
                         }
                     },
@@ -3596,7 +3538,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_QUANTITY"
                         }
                     },
@@ -3610,7 +3551,6 @@
                     "parameters": {
                         "factor": {
                             "name": "factor",
-                            "is_mandatory": true,
                             "type": "Real"
                         }
                     },
@@ -3624,7 +3564,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_QUANTITY"
                         }
                     },
@@ -3651,7 +3590,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_ORDERED"
                         }
                     },
@@ -3711,7 +3649,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_COUNT"
                         }
                     },
@@ -3725,7 +3662,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_COUNT"
                         }
                     },
@@ -3739,7 +3675,6 @@
                     "parameters": {
                         "factor": {
                             "name": "factor",
-                            "is_mandatory": true,
                             "type": "Real"
                         }
                     },
@@ -3753,7 +3688,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_COUNT"
                         }
                     },
@@ -3773,7 +3707,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_ORDERED"
                         }
                     },
@@ -3803,7 +3736,6 @@
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
-                            "is_mandatory": true,
                             "type": "DV_AMOUNT"
                         }
                     },
@@ -3817,7 +3749,6 @@
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
-                            "is_mandatory": true,
                             "type": "DV_AMOUNT"
                         }
                     },
@@ -3831,7 +3762,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_ABSOLUTE_QUANTITY"
                         }
                     },
@@ -3868,7 +3798,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_ORDINAL"
                         }
                     },
@@ -3882,7 +3811,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_ORDINAL"
                         }
                     },
@@ -3923,7 +3851,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_SCALE"
                         }
                     },
@@ -3937,7 +3864,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_SCALE"
                         }
                     },
@@ -3969,7 +3895,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_DURATION"
                         }
                     },
@@ -3983,7 +3908,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_DURATION"
                         }
                     },
@@ -3997,7 +3921,6 @@
                     "parameters": {
                         "factor": {
                             "name": "factor",
-                            "is_mandatory": true,
                             "type": "Real"
                         }
                     },
@@ -4011,7 +3934,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_DURATION"
                         }
                     },
@@ -4031,7 +3953,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_DURATION"
                         }
                     },
@@ -4079,7 +4000,6 @@
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
-                            "is_mandatory": true,
                             "type": "DV_DURATION"
                         }
                     },
@@ -4093,7 +4013,6 @@
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
-                            "is_mandatory": true,
                             "type": "DV_DURATION"
                         }
                     },
@@ -4107,7 +4026,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_TEMPORAL"
                         }
                     },
@@ -4146,7 +4064,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_QUANTIFIED"
                         }
                     },
@@ -4160,7 +4077,6 @@
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
-                            "is_mandatory": true,
                             "type": "DV_DURATION"
                         }
                     },
@@ -4174,7 +4090,6 @@
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
-                            "is_mandatory": true,
                             "type": "DV_DURATION"
                         }
                     },
@@ -4188,7 +4103,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_DATE"
                         }
                     },
@@ -4202,7 +4116,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_DATE"
                         }
                     },
@@ -4222,7 +4135,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_DATE"
                         }
                     },
@@ -4264,7 +4176,6 @@
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
-                            "is_mandatory": true,
                             "type": "DV_DURATION"
                         }
                     },
@@ -4278,7 +4189,6 @@
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
-                            "is_mandatory": true,
                             "type": "DV_DURATION"
                         }
                     },
@@ -4292,7 +4202,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_TIME"
                         }
                     },
@@ -4306,7 +4215,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_TIME"
                         }
                     },
@@ -4326,7 +4234,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_TIME"
                         }
                     },
@@ -4368,7 +4275,6 @@
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
-                            "is_mandatory": true,
                             "type": "DV_DURATION"
                         }
                     },
@@ -4382,7 +4288,6 @@
                     "parameters": {
                         "a_diff": {
                             "name": "a_diff",
-                            "is_mandatory": true,
                             "type": "DV_DURATION"
                         }
                     },
@@ -4396,7 +4301,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_DATE_TIME"
                         }
                     },
@@ -4410,7 +4314,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_DATE_TIME"
                         }
                     },
@@ -4430,7 +4333,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "DV_DATE_TIME"
                         }
                     },
@@ -4629,7 +4531,6 @@
                     "parameters": {
                         "units": {
                             "name": "units",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -4643,12 +4544,10 @@
                     "parameters": {
                         "units1": {
                             "name": "units1",
-                            "is_mandatory": true,
                             "type": "String"
                         },
                         "units2": {
                             "name": "units2",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -4746,7 +4645,6 @@
                     "parameters": {
                         "an_id": {
                             "name": "an_id",
-                            "is_mandatory": true,
                             "type": "Boolean"
                         }
                     },
@@ -4803,7 +4701,6 @@
                     "parameters": {
                         "an_id": {
                             "name": "an_id",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -4827,7 +4724,6 @@
                     "parameters": {
                         "name": {
                             "name": "name",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -4841,7 +4737,6 @@
                     "parameters": {
                         "name": {
                             "name": "name",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -4858,7 +4753,6 @@
                     "parameters": {
                         "id": {
                             "name": "id",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -4875,7 +4769,6 @@
                     "parameters": {
                         "name": {
                             "name": "name",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -4889,7 +4782,6 @@
                     "parameters": {
                         "name": {
                             "name": "name",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -4955,7 +4847,6 @@
                     "parameters": {
                         "a_lang": {
                             "name": "a_lang",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -4969,7 +4860,6 @@
                     "parameters": {
                         "a_code": {
                             "name": "a_code",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -5003,7 +4893,6 @@
                     "parameters": {
                         "a_group_id": {
                             "name": "a_group_id",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -5019,12 +4908,10 @@
                     "parameters": {
                         "a_lang": {
                             "name": "a_lang",
-                            "is_mandatory": true,
                             "type": "String"
                         },
                         "a_name": {
                             "name": "a_name",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -5047,7 +4934,6 @@
                     "parameters": {
                         "a_code": {
                             "name": "a_code",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },

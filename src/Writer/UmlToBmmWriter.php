@@ -288,7 +288,7 @@ class UmlToBmmWriter extends AbstractWriter
             '_type' => null,
             'name' => $umlParameter->name,
             'description' => $umlParameter->description ?? null,
-            'is_mandatory' => (bool)$umlParameter->minOccurs,
+            'is_nullable' => $umlParameter->minOccurs === 0,
         ];
         if ($umlParameter->templateParameterId) {
             $bmmParameter['_type'] = 'P_BMM_SINGLE_PROPERTY_OPEN';

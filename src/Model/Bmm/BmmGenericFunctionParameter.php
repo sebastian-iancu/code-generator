@@ -14,13 +14,13 @@ readonly class BmmGenericFunctionParameter extends AbstractBmmFunctionParameter 
      * @param string $name
      * @param BmmGenericType $typeDef
      * @param string|null $documentation
-     * @param bool|null $isMandatory
+     * @param bool|null $isNullable
      */
     public function __construct(
         public string $name,
         public BmmGenericType $typeDef,
         public ?string $documentation = null,
-        public ?bool $isMandatory = false,
+        public ?bool $isNullable = false,
     )
     {
     }
@@ -36,7 +36,7 @@ readonly class BmmGenericFunctionParameter extends AbstractBmmFunctionParameter 
             '_type' => 'P_BMM_GENERIC_FUNCTION_PARAMETER',
             'name' => $this->name,
             'documentation' => $this->documentation,
-            'is_mandatory' => $this->isMandatory,
+            'is_nullable' => $this->isNullable,
             'type_def' => $typeDef,
         ]);
     }
@@ -53,7 +53,7 @@ readonly class BmmGenericFunctionParameter extends AbstractBmmFunctionParameter 
             name: $data['name'],
             typeDef: BmmGenericType::fromArray($data['type_def']),
             documentation: $data['documentation'] ?? null,
-            isMandatory: $data['is_mandatory'] ?? false,
+            isNullable: $data['is_nullable'] ?? false,
         );
     }
 }

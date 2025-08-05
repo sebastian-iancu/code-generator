@@ -235,7 +235,6 @@
                     "parameters": {
                         "lang": {
                             "name": "lang",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -384,7 +383,6 @@
                     "parameters": {
                         "an_id": {
                             "name": "an_id",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -546,7 +544,6 @@
                     "parameters": {
                         "a_path": {
                             "name": "a_path",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -567,13 +564,11 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "ARCHETYPE_CONSTRAINT"
                         },
                         "rmcc": {
                             "_type": "P_BMM_GENERIC_FUNCTION_PARAMETER",
                             "name": "rmcc",
-                            "is_mandatory": true,
                             "type_def": {
                                 "root_type": "FUNCTION"
                             }
@@ -589,7 +584,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "ARCHETYPE_CONSTRAINT"
                         }
                     },
@@ -682,13 +676,11 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "ARCHETYPE_CONSTRAINT"
                         },
                         "rmcc": {
                             "_type": "P_BMM_GENERIC_FUNCTION_PARAMETER",
                             "name": "rmcc",
-                            "is_mandatory": true,
                             "type_def": {
                                 "root_type": "FUNCTION"
                             }
@@ -704,7 +696,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "ARCHETYPE_CONSTRAINT"
                         }
                     },
@@ -718,7 +709,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_OBJECT"
                         }
                     },
@@ -732,7 +722,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_OBJECT"
                         }
                     },
@@ -844,7 +833,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "ARCHETYPE_CONSTRAINT"
                         }
                     },
@@ -861,13 +849,11 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "ARCHETYPE_CONSTRAINT"
                         },
                         "rmcc": {
                             "_type": "P_BMM_GENERIC_FUNCTION_PARAMETER",
                             "name": "rmcc",
-                            "is_mandatory": true,
                             "type_def": {
                                 "root_type": "FUNCTION"
                             }
@@ -920,7 +906,6 @@
                     "parameters": {
                         "a_value": {
                             "name": "a_value",
-                            "is_mandatory": true,
                             "type": "Any"
                         }
                     },
@@ -975,7 +960,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_OBJECT"
                         }
                     },
@@ -1081,13 +1065,11 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_PRIMITIVE_OBJECT"
                         },
                         "rmcc": {
                             "_type": "P_BMM_GENERIC_FUNCTION_PARAMETER",
                             "name": "rmcc",
-                            "is_mandatory": true,
                             "type_def": {
                                 "root_type": "FUNCTION"
                             }
@@ -1103,7 +1085,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_PRIMITIVE_OBJECT"
                         }
                     },
@@ -1117,7 +1098,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_PRIMITIVE_OBJECT"
                         }
                     },
@@ -1131,7 +1111,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_PRIMITIVE_OBJECT"
                         }
                     },
@@ -1209,7 +1188,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_SECOND_ORDER"
                         }
                     },
@@ -1223,7 +1201,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_SECOND_ORDER"
                         }
                     },
@@ -1262,7 +1239,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_SECOND_ORDER"
                         }
                     },
@@ -1276,7 +1252,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_SECOND_ORDER"
                         }
                     },
@@ -1312,13 +1287,11 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_SECOND_ORDER"
                         },
                         "rmcc": {
                             "_type": "P_BMM_GENERIC_FUNCTION_PARAMETER",
                             "name": "rmcc",
-                            "is_mandatory": true,
                             "type_def": {
                                 "root_type": "FUNCTION"
                             }
@@ -1334,7 +1307,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_SECOND_ORDER"
                         }
                     },
@@ -1622,7 +1594,6 @@
                     "parameters": {
                         "a_lang": {
                             "name": "a_lang",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -1636,7 +1607,6 @@
                     "parameters": {
                         "a_terminology_id": {
                             "name": "a_terminology_id",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -1650,7 +1620,6 @@
                     "parameters": {
                         "a_code": {
                             "name": "a_code",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -1664,12 +1633,10 @@
                     "parameters": {
                         "a_lang": {
                             "name": "a_lang",
-                            "is_mandatory": true,
                             "type": "String"
                         },
                         "a_code": {
                             "name": "a_code",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -1686,12 +1653,10 @@
                     "parameters": {
                         "a_terminology": {
                             "name": "a_terminology",
-                            "is_mandatory": true,
                             "type": "String"
                         },
                         "a_code": {
                             "name": "a_code",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -1717,12 +1682,10 @@
                     "parameters": {
                         "a_terminology_id": {
                             "name": "a_terminology_id",
-                            "is_mandatory": true,
                             "type": "String"
                         },
                         "a_code": {
                             "name": "a_code",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -1739,7 +1702,6 @@
                     "parameters": {
                         "a_terminology_id": {
                             "name": "a_terminology_id",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -1820,7 +1782,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_BOOLEAN"
                         }
                     },
@@ -1834,7 +1795,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_BOOLEAN"
                         }
                     },
@@ -1889,7 +1849,6 @@
                     "parameters": {
                         "a_value": {
                             "name": "a_value",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -1913,7 +1872,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_STRING"
                         }
                     },
@@ -1927,7 +1885,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_STRING"
                         }
                     },
@@ -2038,7 +1995,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_ORDERED"
                         }
                     },
@@ -2052,7 +2008,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_ORDERED"
                         }
                     },
@@ -2120,7 +2075,6 @@
                     "parameters": {
                         "a_value": {
                             "name": "a_value",
-                            "is_mandatory": true,
                             "type": "Terminology_code"
                         }
                     },
@@ -2151,7 +2105,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_TERMINOLOGY_CODE"
                         }
                     },
@@ -2165,7 +2118,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_TERMINOLOGY_CODE"
                         }
                     },
@@ -2201,7 +2153,6 @@
                     "parameters": {
                         "a_pattern": {
                             "name": "a_pattern",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -2215,12 +2166,10 @@
                     "parameters": {
                         "a_pattern": {
                             "name": "a_pattern",
-                            "is_mandatory": true,
                             "type": "String"
                         },
                         "an_other_pattern": {
                             "name": "an_other_pattern",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -2244,7 +2193,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_ORDERED"
                         }
                     },
@@ -2258,7 +2206,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "C_ORDERED"
                         }
                     },
@@ -2597,12 +2544,10 @@
                     "parameters": {
                         "a_child_code": {
                             "name": "a_child_code",
-                            "is_mandatory": true,
                             "type": "String"
                         },
                         "a_parent_code": {
                             "name": "a_parent_code",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -2616,7 +2561,6 @@
                     "parameters": {
                         "a_code": {
                             "name": "a_code",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -2633,7 +2577,6 @@
                     "parameters": {
                         "a_code": {
                             "name": "a_code",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -2650,7 +2593,6 @@
                     "parameters": {
                         "a_code": {
                             "name": "a_code",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -2667,7 +2609,6 @@
                     "parameters": {
                         "a_code": {
                             "name": "a_code",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -2684,7 +2625,6 @@
                     "parameters": {
                         "a_code": {
                             "name": "a_code",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -2698,12 +2638,10 @@
                     "parameters": {
                         "a-code": {
                             "name": "a-code",
-                            "is_mandatory": true,
                             "type": "String"
                         },
                         "a_level": {
                             "name": "a_level",
-                            "is_mandatory": true,
                             "type": "Integer"
                         }
                     },

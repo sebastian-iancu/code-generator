@@ -133,7 +133,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "Any"
                         }
                     },
@@ -147,7 +146,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "Any"
                         }
                     },
@@ -161,7 +159,6 @@
                     "parameters": {
                         "a_type": {
                             "name": "a_type",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -175,7 +172,6 @@
                     "parameters": {
                         "an_object": {
                             "name": "an_object",
-                            "is_mandatory": true,
                             "type": "Any"
                         }
                     },
@@ -208,7 +204,6 @@
                         "a_key": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN",
                             "name": "a_key",
-                            "is_mandatory": true,
                             "type": "K"
                         }
                     },
@@ -223,7 +218,6 @@
                         "a_key": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN",
                             "name": "a_key",
-                            "is_mandatory": true,
                             "type": "K"
                         }
                     },
@@ -254,7 +248,6 @@
                         "v": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN",
                             "name": "v",
-                            "is_mandatory": true,
                             "type": "T"
                         }
                     },
@@ -379,7 +372,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "Numeric"
                         }
                     },
@@ -393,7 +385,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "Numeric"
                         }
                     },
@@ -407,7 +398,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "Numeric"
                         }
                     },
@@ -442,7 +432,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "Boolean"
                         }
                     },
@@ -460,7 +449,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "Boolean"
                         }
                     },
@@ -477,7 +465,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "Boolean"
                         }
                     },
@@ -496,7 +483,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "Boolean"
                         }
                     },
@@ -513,7 +499,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "Boolean"
                         }
                     },
@@ -530,7 +515,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "Boolean"
                         }
                     },
@@ -561,7 +545,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -629,7 +612,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "Ordered"
                         }
                     },
@@ -1243,7 +1225,6 @@
                         "e": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN",
                             "name": "e",
-                            "is_mandatory": true,
                             "type": "T"
                         }
                     },
@@ -1257,7 +1238,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "Interval"
                         }
                     },
@@ -1271,7 +1251,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "Interval"
                         }
                     },
@@ -1285,7 +1264,6 @@
                     "parameters": {
                         "other": {
                             "name": "other",
-                            "is_mandatory": true,
                             "type": "Any"
                         }
                     },
@@ -1998,7 +1976,6 @@
                     "parameters": {
                         "y": {
                             "name": "y",
-                            "is_mandatory": true,
                             "type": "Integer"
                         }
                     },
@@ -2014,7 +1991,6 @@
                     "parameters": {
                         "m": {
                             "name": "m",
-                            "is_mandatory": true,
                             "type": "Integer"
                         }
                     },
@@ -2031,17 +2007,14 @@
                     "parameters": {
                         "y": {
                             "name": "y",
-                            "is_mandatory": true,
                             "type": "Integer"
                         },
                         "m": {
                             "name": "m",
-                            "is_mandatory": true,
                             "type": "Integer"
                         },
                         "d": {
                             "name": "d",
-                            "is_mandatory": true,
                             "type": "Integer"
                         }
                     },
@@ -2058,17 +2031,14 @@
                     "parameters": {
                         "h": {
                             "name": "h",
-                            "is_mandatory": true,
                             "type": "Integer"
                         },
                         "m": {
                             "name": "m",
-                            "is_mandatory": true,
                             "type": "Integer"
                         },
                         "s": {
                             "name": "s",
-                            "is_mandatory": true,
                             "type": "Integer"
                         }
                     },
@@ -2085,7 +2055,6 @@
                     "parameters": {
                         "m": {
                             "name": "m",
-                            "is_mandatory": true,
                             "type": "Integer"
                         }
                     },
@@ -2102,7 +2071,6 @@
                     "parameters": {
                         "s": {
                             "name": "s",
-                            "is_mandatory": true,
                             "type": "Integer"
                         }
                     },
@@ -2119,7 +2087,6 @@
                     "parameters": {
                         "fs": {
                             "name": "fs",
-                            "is_mandatory": true,
                             "type": "Double"
                         }
                     },
@@ -2136,7 +2103,6 @@
                     "parameters": {
                         "s": {
                             "name": "s",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -2150,7 +2116,6 @@
                     "parameters": {
                         "s": {
                             "name": "s",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -2164,7 +2129,6 @@
                     "parameters": {
                         "s": {
                             "name": "s",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
@@ -2178,7 +2142,6 @@
                     "parameters": {
                         "s": {
                             "name": "s",
-                            "is_mandatory": true,
                             "type": "String"
                         }
                     },
