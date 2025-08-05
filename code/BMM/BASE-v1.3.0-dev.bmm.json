@@ -323,7 +323,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "T"
-                    }
+                    },
+                    "is_nullable": true
                 },
                 "select": {
                     "name": "select",
@@ -336,7 +337,8 @@
                     },
                     "result": {
                         "type": "T"
-                    }
+                    },
+                    "is_nullable": true
                 }
             }
         },

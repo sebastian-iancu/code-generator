@@ -1577,7 +1577,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "String"
-                    }
+                    },
+                    "is_nullable": true
                 },
                 "value_set_codes": {
                     "name": "value_set_codes",
@@ -1586,7 +1587,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "String"
-                    }
+                    },
+                    "is_nullable": true
                 },
                 "has_language": {
                     "name": "has_language",
@@ -2049,7 +2051,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "String"
-                    }
+                    },
+                    "is_nullable": true
                 },
                 "value_set_substituted": {
                     "name": "value_set_substituted",
@@ -2058,7 +2061,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "Uri"
-                    }
+                    },
+                    "is_nullable": true
                 },
                 "value_set_resolved": {
                     "name": "value_set_resolved",
@@ -2067,7 +2071,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "Terminology_code"
-                    }
+                    },
+                    "is_nullable": true
                 },
                 "valid_value": {
                     "name": "valid_value",

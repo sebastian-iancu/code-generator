@@ -20,6 +20,7 @@ readonly class BmmFunction implements JsonSerializable, CollectableInterface
      * @param array|null $preConditions
      * @param array|null $postConditions
      * @param AbstractBmmType|null $result
+     * @param bool|null $isNullable
      */
     public function __construct(
         public string $name,
@@ -28,6 +29,7 @@ readonly class BmmFunction implements JsonSerializable, CollectableInterface
         public ?array $preConditions = [],
         public ?array $postConditions = [],
         public ?AbstractBmmType $result = null,
+        public ?bool $isNullable = false,
     )
     {
     }
@@ -44,6 +46,7 @@ readonly class BmmFunction implements JsonSerializable, CollectableInterface
             'pre_conditions' => $this->preConditions,
             'post_conditions' => $this->postConditions,
             'result' => $this->result,
+            'is_nullable' => $this->isNullable,
         ]);
 
     }
@@ -63,6 +66,7 @@ readonly class BmmFunction implements JsonSerializable, CollectableInterface
             preConditions: $data['pre_conditions'] ?? [],
             postConditions: $data['post_conditions'] ?? [],
             result: isset($data['result']) ? AbstractBmmType::fromArray($data['result']) : null,
+            isNullable: $data['is_nullable'] ?? false,
         );
 
         if (!empty($data['parameters']) && is_iterable($data['parameters'])) {

@@ -388,7 +388,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "Any"
-                    }
+                    },
+                    "is_nullable": true
                 },
                 "path_exists": {
                     "name": "path_exists",
@@ -1988,7 +1989,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "DV_TEXT"
-                    }
+                    },
+                    "is_nullable": true
                 },
                 "column_names": {
                     "name": "column_names",
@@ -1997,7 +1999,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "DV_TEXT"
-                    }
+                    },
+                    "is_nullable": true
                 },
                 "ith_row": {
                     "name": "ith_row",
@@ -2160,7 +2163,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "DV_TEXT"
-                    }
+                    },
+                    "is_nullable": true
                 },
                 "named_item": {
                     "name": "named_item",
@@ -4796,7 +4800,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "String"
-                    }
+                    },
+                    "is_nullable": true
                 },
                 "openehr_code_sets": {
                     "name": "openehr_code_sets",
@@ -4817,7 +4822,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "String"
-                    }
+                    },
+                    "is_nullable": true
                 }
             }
         },
@@ -4839,7 +4845,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "CODE_PHRASE"
-                    }
+                    },
+                    "is_nullable": true
                 },
                 "has_lang": {
                     "name": "has_lang",
@@ -4900,7 +4907,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "CODE_PHRASE"
-                    }
+                    },
+                    "is_nullable": true
                 },
                 "codes_for_group_name": {
                     "name": "codes_for_group_name",
@@ -4919,7 +4927,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "CODE_PHRASE"
-                    }
+                    },
+                    "is_nullable": true
                 },
                 "has_code_for_group_id": {
                     "name": "has_code_for_group_id",

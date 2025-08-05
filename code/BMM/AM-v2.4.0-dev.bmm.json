@@ -376,7 +376,8 @@
                     "documentation": "Version of predecessor archetype of this archetype, if any.",
                     "result": {
                         "type": "String"
-                    }
+                    },
+                    "is_nullable": true
                 },
                 "internal_references_valid": {
                     "name": "internal_references_valid",
@@ -847,7 +848,8 @@
                     "documentation": "Generate a default value from this constraint object.",
                     "result": {
                         "type": "Any"
-                    }
+                    },
+                    "is_nullable": true
                 },
                 "any_allowed": {
                     "name": "any_allowed",
@@ -1532,7 +1534,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "String"
-                    }
+                    },
+                    "is_nullable": true
                 },
                 "value_set_substituted": {
                     "name": "value_set_substituted",
@@ -1541,7 +1544,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "Uri"
-                    }
+                    },
+                    "is_nullable": true
                 },
                 "value_set_resolved": {
                     "name": "value_set_resolved",
@@ -1550,7 +1554,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "Terminology_code"
-                    }
+                    },
+                    "is_nullable": true
                 },
                 "valid_value": {
                     "name": "valid_value",
@@ -2190,7 +2195,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "String"
-                    }
+                    },
+                    "is_nullable": true
                 }
             },
             "invariants": {
@@ -2361,7 +2367,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "String"
-                    }
+                    },
+                    "is_nullable": true
                 },
                 "value_set_codes": {
                     "name": "value_set_codes",
@@ -2370,7 +2377,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "String"
-                    }
+                    },
+                    "is_nullable": true
                 },
                 "has_language": {
                     "name": "has_language",
@@ -4048,7 +4056,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "C_OBJECT"
-                    }
+                    },
+                    "is_nullable": true
                 }
             },
             "invariants": {
@@ -4095,7 +4104,8 @@
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
                         "type": "C_OBJECT"
-                    }
+                    },
+                    "is_nullable": true
                 }
             }
         },
