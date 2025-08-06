@@ -23,8 +23,8 @@ readonly class BmmSchema implements JsonSerializable
      * @param string $schemaDescription
      * @param string $schemaAuthor
      * @param Collection<string, BmmPackage> $packages
-     * @param Collection<string, BmmClass>|null $primitiveTypes
-     * @param Collection<string, BmmClass>|null $classDefinitions
+     * @param Collection<string, BmmEnumerationString|BmmEnumerationInteger|BmmClass>|null $primitiveTypes
+     * @param Collection<string, BmmEnumerationString|BmmEnumerationInteger|BmmClass>|null $classDefinitions
      * @param Collection<string, BmmSchemaInclude>|null $includes
      * @param string|null $bmmVersion
      */

@@ -3,12 +3,15 @@
 namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 
 use JsonSerializable;
+use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
 
 /**
  * Class representing a BMM generic property
  */
-readonly class BmmGenericProperty extends AbstractBmmProperty implements JsonSerializable
+readonly class BmmGenericProperty implements JsonSerializable, CollectableInterface
 {
+
+    use CollectableTrait;
 
     /**
      * @param string $name

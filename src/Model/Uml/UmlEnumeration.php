@@ -15,7 +15,7 @@ class UmlEnumeration implements CollectableInterface
     public readonly string $id;
     public readonly string $name;
     public readonly string $description;
-    /** @var array<string, array<string, mixed>> */
+    /** @var array<array<string, mixed>> */
     public readonly array $enumerations;
 
     public function __construct(SimpleXMLElement $xmlNode)

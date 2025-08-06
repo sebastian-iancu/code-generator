@@ -9,7 +9,7 @@ use OpenEHR\Tools\CodeGen\Model\Collection;
 /**
  * Class representing a BMM class definition
  */
-readonly class BmmClass extends AbstractBmmClass implements JsonSerializable, CollectableInterface
+readonly class BmmClass implements JsonSerializable, CollectableInterface
 {
 
     use CollectableTrait;
@@ -21,9 +21,9 @@ readonly class BmmClass extends AbstractBmmClass implements JsonSerializable, Co
      * @param string|null $documentation
      * @param Collection<string, BmmGenericParameter>|null $genericParameterDefs
      * @param Collection<string, BmmConstant>|null $constants
-     * @param Collection<string, AbstractBmmProperty>|null $properties
+     * @param Collection<string, BmmContainerProperty|BmmGenericProperty|BmmSingleProperty|BmmSinglePropertyOpen>|null $properties
      * @param Collection<string, BmmFunction>|null $functions
-     * @param array|null $invariants
+     * @param array<string,string>|null $invariants
      */
     public function __construct(
         public string $name,

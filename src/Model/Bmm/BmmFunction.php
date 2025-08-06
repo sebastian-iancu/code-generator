@@ -17,10 +17,10 @@ readonly class BmmFunction implements JsonSerializable, CollectableInterface
      * @param string $name
      * @param string|null $documentation
      * @param bool|null $isAbstract
-     * @param Collection<string, AbstractBmmFunctionParameter>|null $parameters
-     * @param array|null $preConditions
-     * @param array|null $postConditions
-     * @param AbstractBmmType|null $result
+     * @param Collection<string, BmmContainerFunctionParameter|BmmGenericFunctionParameter|BmmSingleFunctionParameter|BmmSingleFunctionParameterOpen>|null $parameters
+     * @param array<string, string>|null $preConditions
+     * @param array<string, string>|null $postConditions
+     * @param BmmContainerType|BmmGenericType|BmmSimpleType|null $result
      * @param bool|null $isNullable
      */
     public function __construct(
@@ -30,7 +30,7 @@ readonly class BmmFunction implements JsonSerializable, CollectableInterface
         public ?Collection $parameters = new Collection(),
         public ?array $preConditions = [],
         public ?array $postConditions = [],
-        public ?AbstractBmmType $result = null,
+        public BmmContainerType|BmmGenericType|BmmSimpleType|null $result = null,
         public ?bool $isNullable = false,
     )
     {

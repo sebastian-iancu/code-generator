@@ -2,18 +2,15 @@
 
 namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 
-use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
-
 /**
  * Class representing an abstract BMM property
  */
-abstract readonly class AbstractBmmFunctionParameter implements CollectableInterface
+abstract class AbstractBmmFunctionParameter
 {
 
-    use CollectableTrait;
-
-    public string $name;
-
+    /**
+     * @param array<string, mixed> $data
+     */
     public static function fromArray(array $data): BmmContainerFunctionParameter|BmmGenericFunctionParameter|BmmSingleFunctionParameter|BmmSingleFunctionParameterOpen
     {
         $type = $data['_type'] ?? 'P_BMM_SINGLE_FUNCTION_PARAMETER';

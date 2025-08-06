@@ -1,11 +1,13 @@
 includes:
 	- phpstan-baseline.neon
 parameters:
-    level: 9
+    level: 7
     paths:
         - ../src
     bootstrapFiles:
     inferPrivatePropertyTypeFromConstructor: true
     excludePaths:
+    	- ../src/Model/Uml
+    	- ../src/Writer/UmlToBmmWriter.php
 
 

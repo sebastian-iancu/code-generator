@@ -23,7 +23,7 @@ class InternalModel extends AbstractWriter
     public function write(): void
     {
         $filename = $this->filename ?: implode('_and_', array_map(function (CollectableInterface $UMLFile) {
-            return $UMLFile->name;
+            return $UMLFile->getName();
         }, $this->reader->files->getArrayCopy()));
         $filename = self::DIR . $filename . '.internal.json';
         self::log('Writing to [%s] filename.', $filename);

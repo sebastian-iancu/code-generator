@@ -8,6 +8,9 @@ namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 abstract readonly class AbstractBmmType
 {
 
+    /**
+     * @param array<string, mixed> $data
+     */
     public static function fromArray(array $data): BmmContainerType|BmmGenericType|BmmSimpleType
     {
         $type = $data['_type'] ?? 'P_BMM_SIMPLE_TYPE';
