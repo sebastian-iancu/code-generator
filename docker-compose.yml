@@ -1,7 +1,6 @@
 services:
   php:
     build:
-      dockerfile: php.Dockerfile
       context: .
     volumes:
       - .:/opt/project
@@ -9,4 +8,3 @@ services:
     environment:
       READER_DIR: /opt/project/code
       WRITER_DIR: /opt/project/code
-    user: 1000:1000
