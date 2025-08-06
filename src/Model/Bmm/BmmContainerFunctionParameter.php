@@ -40,8 +40,8 @@ readonly class BmmContainerFunctionParameter implements JsonSerializable, Collec
         return array_filter([
             '_type' => 'P_BMM_CONTAINER_FUNCTION_PARAMETER',
             'name' => $this->name,
-            'is_nullable' => $this->isNullable,
             'documentation' => $this->documentation,
+            'is_nullable' => $this->isNullable,
             'type_def' => $typeDef,
             'cardinality' => $this->cardinality,
         ]);

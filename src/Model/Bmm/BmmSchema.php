@@ -9,7 +9,7 @@ use OpenEHR\Tools\CodeGen\Model\Collection;
 /**
  * Class representing the top-level BMM schema structure
  */
-readonly class BmmSchema implements JsonSerializable
+readonly class BmmSchema implements JsonSerializable, \OpenEHR\Tools\CodeGen\Model\CollectableInterface
 {
 
     public const string BMM_VERSION = '2.4';
@@ -22,10 +22,10 @@ readonly class BmmSchema implements JsonSerializable
      * @param string $schemaLifecycleState
      * @param string $schemaDescription
      * @param string $schemaAuthor
-     * @param Collection<string, BmmPackage> $packages
-     * @param Collection<string, BmmEnumerationString|BmmEnumerationInteger|BmmClass>|null $primitiveTypes
-     * @param Collection<string, BmmEnumerationString|BmmEnumerationInteger|BmmClass>|null $classDefinitions
-     * @param Collection<string, BmmSchemaInclude>|null $includes
+     * @param Collection<string, BmmPackage>|Collection $packages
+     * @param Collection<string, BmmEnumerationString|BmmEnumerationInteger|BmmClass>|Collection|null $primitiveTypes
+     * @param Collection<string, BmmEnumerationString|BmmEnumerationInteger|BmmClass>|Collection|null $classDefinitions
+     * @param Collection<string, BmmSchemaInclude>|Collection|null $includes
      * @param string|null $bmmVersion
      */
     public function __construct(
@@ -49,6 +49,15 @@ readonly class BmmSchema implements JsonSerializable
         return $this->rmPublisher . '_' . $this->schemaName . '_' . $this->rmRelease;
     }
 
+    public function getName(): string
+    {
+        return $this->getSchemaId();
+    }
+
+    public function getAlias(): ?string
+    {
+        return $this->schemaName;
+    }
 
     /**
      * @return array<string, mixed>

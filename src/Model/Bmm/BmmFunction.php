@@ -17,7 +17,7 @@ readonly class BmmFunction implements JsonSerializable, CollectableInterface
      * @param string $name
      * @param string|null $documentation
      * @param bool|null $isAbstract
-     * @param Collection<string, BmmContainerFunctionParameter|BmmGenericFunctionParameter|BmmSingleFunctionParameter|BmmSingleFunctionParameterOpen>|null $parameters
+     * @param Collection<string, BmmContainerFunctionParameter|BmmGenericFunctionParameter|BmmSingleFunctionParameter|BmmSingleFunctionParameterOpen>|Collection|null $parameters
      * @param array<string, string>|null $preConditions
      * @param array<string, string>|null $postConditions
      * @param BmmContainerType|BmmGenericType|BmmSimpleType|null $result

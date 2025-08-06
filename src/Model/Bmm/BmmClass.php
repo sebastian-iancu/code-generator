@@ -19,10 +19,10 @@ readonly class BmmClass implements JsonSerializable, CollectableInterface
      * @param bool|null $isAbstract
      * @param array<string>|null $ancestors
      * @param string|null $documentation
-     * @param Collection<string, BmmGenericParameter>|null $genericParameterDefs
-     * @param Collection<string, BmmConstant>|null $constants
-     * @param Collection<string, BmmContainerProperty|BmmGenericProperty|BmmSingleProperty|BmmSinglePropertyOpen>|null $properties
-     * @param Collection<string, BmmFunction>|null $functions
+     * @param Collection<string, BmmGenericParameter>|Collection|null $genericParameterDefs
+     * @param Collection<string, BmmConstant>|Collection|null $constants
+     * @param Collection<string, BmmContainerProperty|BmmGenericProperty|BmmSingleProperty|BmmSinglePropertyOpen>|Collection|null $properties
+     * @param Collection<string, BmmFunction>|Collection|null $functions
      * @param array<string,string>|null $invariants
      */
     public function __construct(

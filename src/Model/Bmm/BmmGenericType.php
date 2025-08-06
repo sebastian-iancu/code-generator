@@ -16,7 +16,7 @@ readonly class BmmGenericType implements JsonSerializable, CollectableInterface
 
     /**
      * @param string $rootType
-     * @param Collection<string, BmmContainerType|BmmGenericType|BmmSimpleType>|null $genericParameterDefs
+     * @param Collection<string, BmmContainerType|BmmGenericType|BmmSimpleType>|Collection|null $genericParameterDefs
      * @param array<string> $genericParameters
      */
     public function __construct(

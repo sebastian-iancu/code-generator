@@ -16,7 +16,7 @@ readonly class BmmPackage implements JsonSerializable, CollectableInterface
 
     /**
      * @param string $name
-     * @param Collection<string, BmmPackage>|null $packages
+     * @param Collection<string, BmmPackage>|Collection|null $packages
      * @param array<string>|null $classes
      */
     public function __construct(
