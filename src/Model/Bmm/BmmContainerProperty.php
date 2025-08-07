@@ -4,12 +4,13 @@ namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 
 use JsonSerializable;
 use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
+use OpenEHR\Tools\CodeGen\Model\YamlSerializable;
 use Symfony\Component\Yaml\Tag\TaggedValue;
 
 /**
  * Class representing a BMM container property
  */
-readonly class BmmContainerProperty implements JsonSerializable, CollectableInterface
+readonly class BmmContainerProperty extends AbstractBmmProperty implements JsonSerializable, YamlSerializable, CollectableInterface
 {
 
     use CollectableTrait;

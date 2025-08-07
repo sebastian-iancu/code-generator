@@ -4,12 +4,13 @@ namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 
 use JsonSerializable;
 use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
+use OpenEHR\Tools\CodeGen\Model\YamlSerializable;
 use Symfony\Component\Yaml\Tag\TaggedValue;
 
 /**
  * Class representing a BMM string Enumeration
  */
-readonly class BmmEnumerationString implements JsonSerializable, CollectableInterface
+readonly class BmmEnumerationString extends AbstractBmmClass implements JsonSerializable, YamlSerializable, CollectableInterface
 {
 
     use CollectableTrait;

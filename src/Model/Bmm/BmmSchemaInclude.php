@@ -4,11 +4,12 @@ namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 
 use JsonSerializable;
 use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
+use OpenEHR\Tools\CodeGen\Model\YamlSerializable;
 
 /**
  * Class representing the top-level BMM schema structure
  */
-readonly class BmmSchemaInclude implements JsonSerializable, CollectableInterface
+readonly class BmmSchemaInclude implements JsonSerializable, YamlSerializable, CollectableInterface
 {
 
     /**

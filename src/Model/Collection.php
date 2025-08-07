@@ -8,7 +8,7 @@ use JsonSerializable;
 /**
  * @template-extends ArrayObject<string, CollectableInterface>
  */
-class Collection extends ArrayObject implements JsonSerializable
+class Collection extends ArrayObject implements JsonSerializable, YamlSerializable
 {
 
     /** @var array<string, string> */
@@ -53,6 +53,14 @@ class Collection extends ArrayObject implements JsonSerializable
      */
     public function yamlSerialize(): array
     {
-        return array_map(fn($item) => $item->yamlSerialize(), $this->getArrayCopy());
+        return array_map(function ($item) {
+            if ($item instanceof YamlSerializable) {
+                return $item->yamlSerialize();
+            }
+            if ($item instanceof JsonSerializable) {
+                return $item->jsonSerialize();
+            }
+            return $item;
+        }, $this->getArrayCopy());
     }
 }

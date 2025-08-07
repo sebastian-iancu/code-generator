@@ -2,6 +2,7 @@
 
 namespace OpenEHR\Tools\CodeGen\Writer;
 
+use OpenEHR\Tools\CodeGen\Model\Bmm\BmmSchema;
 use RuntimeException;
 use Symfony\Component\Yaml\Yaml;
 
@@ -21,7 +22,10 @@ class BmmYamlWriter extends AbstractWriter
      */
     public function write(): void
     {
-
+        /**
+         * @var string $schemaId
+         * @var BmmSchema $bmmSchema
+         */
         foreach ($this->reader->files as $schemaId => $bmmSchema) {
             $filename = self::DIR . $schemaId . '.bmm.yaml';
             self::log('Writing to [%s] filename.', $filename);

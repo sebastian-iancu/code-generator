@@ -5,7 +5,7 @@ namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 /**
  * Class representing an abstract BMM class
  */
-abstract class AbstractBmmClass
+abstract readonly class AbstractBmmClass
 {
 
     /**

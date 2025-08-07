@@ -5,11 +5,12 @@ namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 use JsonSerializable;
 use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
 use OpenEHR\Tools\CodeGen\Model\Collection;
+use OpenEHR\Tools\CodeGen\Model\YamlSerializable;
 
 /**
  * Class representing a BMM package
  */
-readonly class BmmPackage implements JsonSerializable, CollectableInterface
+readonly class BmmPackage implements JsonSerializable, YamlSerializable, CollectableInterface
 {
 
     use CollectableTrait;

@@ -3,8 +3,9 @@
 namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 
 use JsonSerializable;
+use OpenEHR\Tools\CodeGen\Model\YamlSerializable;
 
-readonly class Interval implements JsonSerializable
+readonly class Interval implements JsonSerializable, YamlSerializable
 {
 
     /**

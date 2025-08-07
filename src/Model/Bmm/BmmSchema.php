@@ -4,12 +4,14 @@ namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 
 use InvalidArgumentException;
 use JsonSerializable;
+use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
 use OpenEHR\Tools\CodeGen\Model\Collection;
+use OpenEHR\Tools\CodeGen\Model\YamlSerializable;
 
 /**
  * Class representing the top-level BMM schema structure
  */
-readonly class BmmSchema implements JsonSerializable, \OpenEHR\Tools\CodeGen\Model\CollectableInterface
+readonly class BmmSchema implements JsonSerializable, YamlSerializable, CollectableInterface
 {
 
     public const string BMM_VERSION = '2.4';
