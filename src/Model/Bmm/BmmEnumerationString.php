@@ -4,6 +4,7 @@ namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 
 use JsonSerializable;
 use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
+use Symfony\Component\Yaml\Tag\TaggedValue;
 
 /**
  * Class representing a BMM string Enumeration
@@ -46,6 +47,21 @@ readonly class BmmEnumerationString implements JsonSerializable, CollectableInte
             'item_values' => $this->itemValues,
             'item_documentations' => $this->itemDocumentations,
         ]);
+    }
+
+    /**
+     * @return TaggedValue
+     */
+    public function yamlSerialize(): TaggedValue
+    {
+        return new TaggedValue('P_BMM_ENUMERATION_STRING', array_filter([
+            'name' => $this->name,
+            'documentation' => $this->documentation,
+            'ancestors' => $this->ancestors,
+            'item_names' => $this->itemNames,
+            'item_values' => $this->itemValues,
+            'item_documentations' => $this->itemDocumentations,
+        ]));
     }
 
     /**

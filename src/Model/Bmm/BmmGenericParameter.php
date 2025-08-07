@@ -35,6 +35,17 @@ readonly class BmmGenericParameter implements JsonSerializable, CollectableInter
             'conforms_to_type' => $this->conformsToType,
         ]);
     }
+    
+    /**
+     * @return array<string, mixed>
+     */
+    public function yamlSerialize(): array
+    {
+        return array_filter([
+            'name' => $this->name,
+            'conforms_to_type' => $this->conformsToType,
+        ]);
+    }
 
     /**
      * Create a BMMGenericParameter from a JSON array

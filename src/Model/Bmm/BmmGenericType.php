@@ -5,6 +5,7 @@ namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 use JsonSerializable;
 use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
 use OpenEHR\Tools\CodeGen\Model\Collection;
+use Symfony\Component\Yaml\Tag\TaggedValue;
 
 
 readonly class BmmGenericType implements JsonSerializable, CollectableInterface
@@ -39,6 +40,18 @@ readonly class BmmGenericType implements JsonSerializable, CollectableInterface
             'generic_parameter_defs' => $this->genericParameterDefs->getArrayCopy(),
             'generic_parameters' => $this->genericParameters,
         ]);
+    }
+    
+    /**
+     * @return TaggedValue
+     */
+    public function yamlSerialize(): TaggedValue
+    {
+        return new TaggedValue('P_BMM_GENERIC_TYPE', array_filter([
+            'root_type' => $this->rootType,
+            'generic_parameter_defs' => $this->genericParameterDefs->yamlSerialize(),
+            'generic_parameters' => $this->genericParameters,
+        ]));
     }
 
     /**

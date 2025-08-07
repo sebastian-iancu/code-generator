@@ -10,6 +10,7 @@ ini_set('display_startup_errors', '1');
 require __DIR__ . '/../vendor/autoload.php';
 
 use Console\Command\AllXmi;
+use Console\Command\BmmJsonToYaml;
 use Console\Command\XmiToBmm;
 use Console\Command\XmiToInternalModel;
 use Symfony\Component\Console\Application;
@@ -19,6 +20,7 @@ try {
     $console->add(new XmiToBmm());
     $console->add(new XmiToInternalModel());
     $console->add(new AllXmi());
+    $console->add(new BmmJsonToYaml());
     exit($console->run());
 } catch (\Throwable $exception) {
     error_log((string)$exception);

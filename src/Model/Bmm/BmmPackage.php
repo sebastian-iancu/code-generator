@@ -40,6 +40,18 @@ readonly class BmmPackage implements JsonSerializable, CollectableInterface
     }
 
     /**
+     * @return array<string, mixed>
+     */
+    public function yamlSerialize(): array
+    {
+        return array_filter([
+            'name' => $this->name,
+            'packages' => $this->packages->yamlSerialize(),
+            'classes' => $this->classes,
+        ]);
+    }
+
+    /**
      * Create a BMMPackage from a JSON array
      *
      * @param array<string, mixed> $data

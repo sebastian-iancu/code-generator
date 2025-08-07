@@ -4,6 +4,7 @@ namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 
 use JsonSerializable;
 use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
+use Symfony\Component\Yaml\Tag\TaggedValue;
 
 
 readonly class BmmContainerType implements JsonSerializable, CollectableInterface
@@ -38,6 +39,18 @@ readonly class BmmContainerType implements JsonSerializable, CollectableInterfac
             'type' => $this->type,
             'type_def' => $this->typeDef,
         ]);
+    }
+    
+    /**
+     * @return TaggedValue
+     */
+    public function yamlSerialize(): TaggedValue
+    {
+        return new TaggedValue('P_BMM_CONTAINER_TYPE', array_filter([
+            'container_type' => $this->containerType,
+            'type' => $this->type,
+            'type_def' => $this->typeDef?->yamlSerialize(),
+        ]));
     }
 
     /**

@@ -4,6 +4,7 @@ namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 
 use JsonSerializable;
 use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
+use Symfony\Component\Yaml\Tag\TaggedValue;
 
 /**
  * Class representing a BMM single function parameter
@@ -40,6 +41,19 @@ readonly class BmmSingleFunctionParameterOpen implements JsonSerializable, Colle
             'is_nullable' => $this->isNullable,
             'type' => $this->type,
         ]);
+    }
+
+    /**
+     * @return TaggedValue
+     */
+    public function yamlSerialize(): TaggedValue
+    {
+        return new TaggedValue('P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN', array_filter([
+            'name' => $this->name,
+            'documentation' => $this->documentation,
+            'is_nullable' => $this->isNullable,
+            'type' => $this->type,
+        ]));
     }
 
     /**

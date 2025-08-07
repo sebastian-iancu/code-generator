@@ -10,7 +10,8 @@
         "ext-simplexml": "*",
         "nette/php-generator": "^4.1",
         "nikic/php-parser": "^5.5",
-        "symfony/console": "^7.1"
+        "symfony/console": "^7.1",
+        "symfony/yaml": "^7.3"
     },
     "require-dev": {
         "ext-xdebug": "*",

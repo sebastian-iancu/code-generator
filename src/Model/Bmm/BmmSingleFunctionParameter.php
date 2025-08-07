@@ -43,6 +43,20 @@ readonly class BmmSingleFunctionParameter implements JsonSerializable, Collectab
     }
 
     /**
+     * @return array<string, mixed>
+     */
+    public function yamlSerialize(): array
+    {
+
+        return array_filter([
+            'name' => $this->name,
+            'documentation' => $this->documentation,
+            'is_nullable' => $this->isNullable,
+            'type' => $this->type,
+        ]);
+    }
+
+    /**
      * Create a BMMSingleFunctionParameter from a JSON array
      *
      * @param array<string, mixed> $data

@@ -4,6 +4,7 @@ namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 
 use JsonSerializable;
 use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
+use Symfony\Component\Yaml\Tag\TaggedValue;
 
 /**
  * Class representing a BMM generic function parameter
@@ -42,6 +43,19 @@ readonly class BmmGenericFunctionParameter implements JsonSerializable, Collecta
             'is_nullable' => $this->isNullable,
             'type_def' => $typeDef,
         ]);
+    }
+
+    /**
+     * @return TaggedValue
+     */
+    public function yamlSerialize(): TaggedValue
+    {
+        return new TaggedValue('P_BMM_GENERIC_FUNCTION_PARAMETER', array_filter([
+            'name' => $this->name,
+            'documentation' => $this->documentation,
+            'is_nullable' => $this->isNullable,
+            'type_def' => $this->typeDef->yamlSerialize(),
+        ]));
     }
 
     /**

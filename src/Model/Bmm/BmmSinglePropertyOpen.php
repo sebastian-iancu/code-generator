@@ -4,6 +4,7 @@ namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 
 use JsonSerializable;
 use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
+use Symfony\Component\Yaml\Tag\TaggedValue;
 
 /**
  * Class representing a BMM single property
@@ -40,6 +41,19 @@ readonly class BmmSinglePropertyOpen implements JsonSerializable, CollectableInt
             'is_mandatory' => $this->isMandatory,
             'type' => $this->type,
         ]);
+    }
+
+    /**
+     * @return TaggedValue
+     */
+    public function yamlSerialize(): TaggedValue
+    {
+        return new TaggedValue('P_BMM_SINGLE_PROPERTY_OPEN', array_filter([
+            'name' => $this->name,
+            'documentation' => $this->documentation,
+            'is_mandatory' => $this->isMandatory,
+            'type' => $this->type,
+        ]));
     }
 
     /**

@@ -53,6 +53,23 @@ readonly class BmmFunction implements JsonSerializable, CollectableInterface
         ]);
 
     }
+    
+    /**
+     * @return array<string, mixed>
+     */
+    public function yamlSerialize(): array
+    {
+        return array_filter([
+            'name' => $this->name,
+            'documentation' => $this->documentation,
+            'is_abstract' => $this->isAbstract,
+            'parameters' => $this->parameters->yamlSerialize(),
+            'pre_conditions' => $this->preConditions,
+            'post_conditions' => $this->postConditions,
+            'result' => $this->result?->yamlSerialize(),
+            'is_nullable' => $this->isNullable,
+        ]);
+    }
 
     /**
      * Create a BMMFunction from a JSON array

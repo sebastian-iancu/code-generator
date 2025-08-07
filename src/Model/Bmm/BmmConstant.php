@@ -42,6 +42,19 @@ readonly class BmmConstant implements JsonSerializable, CollectableInterface
     }
 
     /**
+     * @return array<string, mixed>
+     */
+    public function yamlSerialize(): array
+    {
+        return array_filter([
+            'name' => $this->name,
+            'documentation' => $this->documentation,
+            'type' => $this->type,
+            'value' => $this->value,
+        ]);
+    }
+
+    /**
      * Create a BMMConstant from a JSON array
      *
      * @param array<string, mixed> $data

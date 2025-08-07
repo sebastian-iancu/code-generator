@@ -47,4 +47,12 @@ class Collection extends ArrayObject implements JsonSerializable
             '__aliases' => $this->aliases,
         ], $this->getArrayCopy()) : $this->getArrayCopy();
     }
+
+    /**
+     * @return array<string, mixed>
+     */
+    public function yamlSerialize(): array
+    {
+        return array_map(fn($item) => $item->yamlSerialize(), $this->getArrayCopy());
+    }
 }

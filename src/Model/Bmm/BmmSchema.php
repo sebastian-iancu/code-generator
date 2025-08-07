@@ -81,6 +81,27 @@ readonly class BmmSchema implements JsonSerializable, \OpenEHR\Tools\CodeGen\Mod
     }
 
     /**
+     * @return array<string, mixed>
+     */
+    public function yamlSerialize(): array
+    {
+        return array_filter([
+            'bmm_version' => $this->bmmVersion,
+            'rm_publisher' => $this->rmPublisher,
+            'schema_name' => $this->schemaName,
+            'rm_release' => $this->rmRelease,
+            'schema_revision' => $this->schemaRevision,
+            'schema_lifecycle_state' => $this->schemaLifecycleState,
+            'schema_description' => $this->schemaDescription,
+            'schema_author' => $this->schemaAuthor,
+            'includes' => $this->includes->yamlSerialize(),
+            'packages' => $this->packages->yamlSerialize(),
+            'primitive_types' => $this->primitiveTypes->yamlSerialize(),
+            'class_definitions' => $this->classDefinitions->yamlSerialize(),
+        ]);
+    }
+
+    /**
      * Create a BMMSchema from a JSON array
      *
      * @param array<string, mixed> $data

@@ -34,6 +34,16 @@ readonly class BmmSimpleType implements JsonSerializable, CollectableInterface
     }
 
     /**
+     * @return array<string, mixed>
+     */
+    public function yamlSerialize(): array
+    {
+        return [
+            'type' => $this->type,
+        ];
+    }
+
+    /**
      * Create a BMMSimpleType from a JSON array
      *
      * @param array<string, mixed> $data

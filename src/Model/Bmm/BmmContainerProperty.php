@@ -4,6 +4,7 @@ namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 
 use JsonSerializable;
 use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
+use Symfony\Component\Yaml\Tag\TaggedValue;
 
 /**
  * Class representing a BMM container property
@@ -45,6 +46,20 @@ readonly class BmmContainerProperty implements JsonSerializable, CollectableInte
             'type_def' => $typeDef,
             'cardinality' => $this->cardinality,
         ]);
+    }
+    
+    /**
+     * @return TaggedValue
+     */
+    public function yamlSerialize(): TaggedValue
+    {
+        return new TaggedValue('P_BMM_CONTAINER_PROPERTY', array_filter([
+            'name' => $this->name,
+            'documentation' => $this->documentation,
+            'is_mandatory' => $this->isMandatory,
+            'type_def' => $this->typeDef->yamlSerialize()->getValue(),
+            'cardinality' => $this->cardinality->yamlSerialize(),
+        ]));
     }
 
     /**

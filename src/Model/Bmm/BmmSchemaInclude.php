@@ -32,6 +32,16 @@ readonly class BmmSchemaInclude implements JsonSerializable, CollectableInterfac
     }
 
     /**
+     * @return array<string, mixed>
+     */
+    public function yamlSerialize(): array
+    {
+        return array_filter([
+            'id' => $this->id,
+        ]);
+    }
+
+    /**
      * Create a BMMSchemaInclude from a JSON array
      *
      * @param array<string, mixed> $data

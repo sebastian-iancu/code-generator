@@ -42,6 +42,19 @@ readonly class BmmSingleProperty implements JsonSerializable, CollectableInterfa
     }
 
     /**
+     * @return array<string, mixed>
+     */
+    public function yamlSerialize(): array
+    {
+        return array_filter([
+            'name' => $this->name,
+            'documentation' => $this->documentation,
+            'is_mandatory' => $this->isMandatory,
+            'type' => $this->type,
+        ]);
+    }
+
+    /**
      * Create a BMMSingleProperty from a JSON array
      *
      * @param array<string, mixed> $data

@@ -36,6 +36,21 @@ readonly class Interval implements JsonSerializable
             return !is_null($value) && $value !== false;
         });
     }
+    
+    /**
+     * @return array<string, mixed>
+     */
+    public function yamlSerialize(): array
+    {
+        return array_filter([
+            'lower' => $this->lower,
+            'upper' => $this->upper,
+            'lower_unbounded' => $this->lowerUnbounded,
+            'upper_unbounded' => $this->upperUnbounded,
+        ], function (mixed $value): bool { // to force export default |0..*|
+            return !is_null($value) && $value !== false;
+        });
+    }
 
     /**
      * @param array<string, mixed> $data
