@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.support.measurement-MEASUREMENT_SERVICE
-' Generated on 2025-08-08 14:17:14
-
 title MEASUREMENT_SERVICE class
 
 class MEASUREMENT_SERVICE {

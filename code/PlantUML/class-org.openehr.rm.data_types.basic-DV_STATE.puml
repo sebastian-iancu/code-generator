@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.data_types.basic-DV_STATE
-' Generated on 2025-08-08 14:17:14
-
 title DV_STATE class
 
 class DV_STATE {

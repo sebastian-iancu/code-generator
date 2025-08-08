@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.composition.view-CITATION
-' Generated on 2025-08-08 14:17:14
-
 title CITATION class
 
 class CITATION <<L>> {

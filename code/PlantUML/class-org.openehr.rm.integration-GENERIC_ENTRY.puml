@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.integration-GENERIC_ENTRY
-' Generated on 2025-08-08 14:17:14
-
 title GENERIC_ENTRY class
 
 class GENERIC_ENTRY {

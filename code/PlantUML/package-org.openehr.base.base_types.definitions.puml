@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.base.base_types.definitions
-' Generated on 2025-08-08 14:17:14
-
 title org.openehr.base.base_types.definitions package
 
 class OPENEHR_DEFINITIONS {
@@ -25,7 +23,5 @@ enum VERSION_STATUS {
 }
 
 BASIC_DEFINITIONS <|-- OPENEHR_DEFINITIONS
-String <|-- VALIDITY_KIND
-String <|-- VERSION_STATUS
 
 @enduml

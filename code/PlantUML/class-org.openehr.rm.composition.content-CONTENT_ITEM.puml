@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.composition.content-CONTENT_ITEM
-' Generated on 2025-08-08 14:17:14
-
 title CONTENT_ITEM class
 
 abstract class CONTENT_ITEM {

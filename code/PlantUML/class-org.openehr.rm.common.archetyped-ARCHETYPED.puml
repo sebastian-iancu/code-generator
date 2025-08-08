@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.common.archetyped-ARCHETYPED
-' Generated on 2025-08-08 14:17:14
-
 title ARCHETYPED class
 
 class ARCHETYPED {

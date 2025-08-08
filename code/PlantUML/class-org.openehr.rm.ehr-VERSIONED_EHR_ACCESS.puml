@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.ehr-VERSIONED_EHR_ACCESS
-' Generated on 2025-08-08 14:17:14
-
 title VERSIONED_EHR_ACCESS class
 
 class VERSIONED_EHR_ACCESS {

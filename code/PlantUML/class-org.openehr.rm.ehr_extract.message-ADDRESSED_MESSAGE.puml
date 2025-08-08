@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.ehr_extract.message-ADDRESSED_MESSAGE
-' Generated on 2025-08-08 14:17:14
-
 title ADDRESSED_MESSAGE class
 
 class ADDRESSED_MESSAGE {

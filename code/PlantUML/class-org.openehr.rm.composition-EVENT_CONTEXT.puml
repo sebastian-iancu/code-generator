@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.composition-EVENT_CONTEXT
-' Generated on 2025-08-08 14:17:14
-
 title EVENT_CONTEXT class
 
 class EVENT_CONTEXT {

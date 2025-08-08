@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.support.terminology-TERMINOLOGY_SERVICE
-' Generated on 2025-08-08 14:17:14
-
 title TERMINOLOGY_SERVICE class
 
 class TERMINOLOGY_SERVICE {

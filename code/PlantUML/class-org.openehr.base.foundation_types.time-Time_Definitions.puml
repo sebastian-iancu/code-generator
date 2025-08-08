@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.base.foundation_types.time-Time_Definitions
-' Generated on 2025-08-08 14:17:14
-
 title Time_Definitions class
 
 class Time_Definitions {

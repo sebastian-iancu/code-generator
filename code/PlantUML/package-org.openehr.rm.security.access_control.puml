@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.security.access_control
-' Generated on 2025-08-08 14:17:14
-
 title org.openehr.rm.security.access_control package
 
 abstract class ACCESS_CONTROL_SETTINGS {

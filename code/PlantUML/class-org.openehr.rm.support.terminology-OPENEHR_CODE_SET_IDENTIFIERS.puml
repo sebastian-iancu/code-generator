@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.support.terminology-OPENEHR_CODE_SET_IDENTIFIERS
-' Generated on 2025-08-08 14:17:14
-
 title OPENEHR_CODE_SET_IDENTIFIERS class
 
 class OPENEHR_CODE_SET_IDENTIFIERS {

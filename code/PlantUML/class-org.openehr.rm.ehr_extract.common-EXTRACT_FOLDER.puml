@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.ehr_extract.common-EXTRACT_FOLDER
-' Generated on 2025-08-08 14:17:14
-
 title EXTRACT_FOLDER class
 
 class EXTRACT_FOLDER {

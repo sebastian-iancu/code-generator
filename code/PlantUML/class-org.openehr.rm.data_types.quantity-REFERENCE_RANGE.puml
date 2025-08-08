@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.data_types.quantity-REFERENCE_RANGE
-' Generated on 2025-08-08 14:17:14
-
 title REFERENCE_RANGE class
 
 class REFERENCE_RANGE <<T>> {

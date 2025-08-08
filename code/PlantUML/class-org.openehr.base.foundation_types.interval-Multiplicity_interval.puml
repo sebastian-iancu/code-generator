@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.base.foundation_types.interval-Multiplicity_interval
-' Generated on 2025-08-08 14:17:14
-
 title Multiplicity_interval class
 
 class Multiplicity_interval {

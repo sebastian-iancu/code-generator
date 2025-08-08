@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.data_types.text-DV_CODED_TEXT
-' Generated on 2025-08-08 14:17:14
-
 title DV_CODED_TEXT class
 
 class DV_CODED_TEXT {

@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.data_types.quantity
-' Generated on 2025-08-08 14:17:14
-
 title org.openehr.rm.data_types.quantity package
 
 abstract class DV_ORDERED {
@@ -125,7 +123,6 @@ Interval <|-- DV_INTERVAL
 DV_ORDERED <|-- DV_QUANTIFIED
 PROPORTION_KIND <|-- DV_PROPORTION
 DV_AMOUNT <|-- DV_PROPORTION
-Integer <|-- PROPORTION_KIND
 DV_QUANTIFIED <|-- DV_AMOUNT
 DV_AMOUNT <|-- DV_QUANTITY
 DV_AMOUNT <|-- DV_COUNT

@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.data_structures.history-POINT_EVENT
-' Generated on 2025-08-08 14:17:14
-
 title POINT_EVENT class
 
 class POINT_EVENT <<T>> {

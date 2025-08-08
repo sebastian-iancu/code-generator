@@ -60,7 +60,6 @@ class BmmPlantUmlWriter extends AbstractWriter
     {
         return "@startuml\n"
             . "' PlantUML diagram for " . $diagramFor . "\n"
-            . "' Generated on " . date('Y-m-d H:i:s') . "\n\n"
             . "title " . $title . "\n\n"
             . $diagramContent . "\n"
             . "@enduml\n";

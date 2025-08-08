@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.data_types.quantity-PROPORTION_KIND
-' Generated on 2025-08-08 14:17:14
-
 title PROPORTION_KIND class
 
 enum PROPORTION_KIND {

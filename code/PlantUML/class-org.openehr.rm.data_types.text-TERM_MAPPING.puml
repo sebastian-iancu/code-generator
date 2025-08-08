@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.data_types.text-TERM_MAPPING
-' Generated on 2025-08-08 14:17:14
-
 title TERM_MAPPING class
 
 class TERM_MAPPING {

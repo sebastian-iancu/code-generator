@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.data_types.quantity-DV_COUNT
-' Generated on 2025-08-08 14:17:14
-
 title DV_COUNT class
 
 class DV_COUNT {

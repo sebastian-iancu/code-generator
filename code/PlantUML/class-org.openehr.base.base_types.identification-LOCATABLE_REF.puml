@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.base.base_types.identification-LOCATABLE_REF
-' Generated on 2025-08-08 14:17:14
-
 title LOCATABLE_REF class
 
 class LOCATABLE_REF {

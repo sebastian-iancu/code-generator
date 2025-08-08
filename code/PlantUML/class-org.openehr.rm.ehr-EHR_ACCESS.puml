@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.ehr-EHR_ACCESS
-' Generated on 2025-08-08 14:17:14
-
 title EHR_ACCESS class
 
 class EHR_ACCESS {

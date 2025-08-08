@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.ehr_extract.generic_extract
-' Generated on 2025-08-08 14:17:14
-
 title org.openehr.rm.ehr_extract.generic_extract package
 
 class GENERIC_CONTENT_ITEM {

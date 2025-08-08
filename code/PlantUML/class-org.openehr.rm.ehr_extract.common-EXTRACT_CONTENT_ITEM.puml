@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.ehr_extract.common-EXTRACT_CONTENT_ITEM
-' Generated on 2025-08-08 14:17:14
-
 title EXTRACT_CONTENT_ITEM class
 
 abstract class EXTRACT_CONTENT_ITEM {

@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.ehr-EHR
-' Generated on 2025-08-08 14:17:14
-
 title EHR class
 
 class EHR {

@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.support.terminology-CODE_SET_ACCESS
-' Generated on 2025-08-08 14:17:14
-
 title CODE_SET_ACCESS class
 
 class CODE_SET_ACCESS {

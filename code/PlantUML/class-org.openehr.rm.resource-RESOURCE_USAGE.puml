@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.resource-RESOURCE_USAGE
-' Generated on 2025-08-08 14:17:14
-
 title RESOURCE_USAGE class
 
 class RESOURCE_USAGE {

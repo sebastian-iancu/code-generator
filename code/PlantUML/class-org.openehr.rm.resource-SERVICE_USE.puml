@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.resource-SERVICE_USE
-' Generated on 2025-08-08 14:17:14
-
 title SERVICE_USE class
 
 class SERVICE_USE {

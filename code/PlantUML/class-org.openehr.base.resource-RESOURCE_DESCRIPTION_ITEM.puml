@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.base.resource-RESOURCE_DESCRIPTION_ITEM
-' Generated on 2025-08-08 14:17:14
-
 title RESOURCE_DESCRIPTION_ITEM class
 
 class RESOURCE_DESCRIPTION_ITEM {

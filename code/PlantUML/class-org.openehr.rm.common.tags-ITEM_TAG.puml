@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.common.tags-ITEM_TAG
-' Generated on 2025-08-08 14:17:14
-
 title ITEM_TAG class
 
 class ITEM_TAG {

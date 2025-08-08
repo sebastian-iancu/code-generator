@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.base.base_types.definitions-VERSION_STATUS
-' Generated on 2025-08-08 14:17:14
-
 title VERSION_STATUS class
 
 enum VERSION_STATUS {

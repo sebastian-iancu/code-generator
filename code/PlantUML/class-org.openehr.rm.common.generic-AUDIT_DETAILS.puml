@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.common.generic-AUDIT_DETAILS
-' Generated on 2025-08-08 14:17:14
-
 title AUDIT_DETAILS class
 
 class AUDIT_DETAILS {

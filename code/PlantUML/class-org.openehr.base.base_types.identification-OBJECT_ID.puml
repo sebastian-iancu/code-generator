@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.base.base_types.identification-OBJECT_ID
-' Generated on 2025-08-08 14:17:14
-
 title OBJECT_ID class
 
 abstract class OBJECT_ID {

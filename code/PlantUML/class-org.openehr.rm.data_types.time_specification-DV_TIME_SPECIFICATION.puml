@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.data_types.time_specification-DV_TIME_SPECIFICATION
-' Generated on 2025-08-08 14:17:14
-
 title DV_TIME_SPECIFICATION class
 
 abstract class DV_TIME_SPECIFICATION {

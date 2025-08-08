@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.common.generic
-' Generated on 2025-08-08 14:17:14
-
 title org.openehr.rm.common.generic package
 
 class REVISION_HISTORY_ITEM {

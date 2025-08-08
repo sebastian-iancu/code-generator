@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.demographic-PARTY_IDENTITY
-' Generated on 2025-08-08 14:17:14
-
 title PARTY_IDENTITY class
 
 class PARTY_IDENTITY {

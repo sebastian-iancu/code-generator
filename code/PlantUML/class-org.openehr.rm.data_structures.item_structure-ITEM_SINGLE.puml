@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.data_structures.item_structure-ITEM_SINGLE
-' Generated on 2025-08-08 14:17:14
-
 title ITEM_SINGLE class
 
 class ITEM_SINGLE {

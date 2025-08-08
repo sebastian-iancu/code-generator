@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.ehr_extract.common-EXTRACT_ENTITY_MANIFEST
-' Generated on 2025-08-08 14:17:14
-
 title EXTRACT_ENTITY_MANIFEST class
 
 class EXTRACT_ENTITY_MANIFEST {

@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.composition.view
-' Generated on 2025-08-08 14:17:14
-
 title org.openehr.rm.composition.view package
 
 abstract class VIEW_ENTRY {
@@ -31,6 +29,5 @@ VIEW_ITEM <|-- VIEW_ENTRY
 VIEW_ITEM <|-- VIEW_SECTION
 VIEW_ENTRY <|-- CITATION
 CONTENT_ITEM <|-- VIEW_ITEM
-String <|-- VIEW_STATUS
 
 @enduml

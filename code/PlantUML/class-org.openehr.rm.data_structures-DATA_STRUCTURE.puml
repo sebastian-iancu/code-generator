@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.data_structures-DATA_STRUCTURE
-' Generated on 2025-08-08 14:17:14
-
 title DATA_STRUCTURE class
 
 abstract class DATA_STRUCTURE {

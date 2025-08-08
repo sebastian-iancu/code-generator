@@ -1,7 +1,5 @@
 @startuml
 ' PlantUML diagram for org.openehr.rm.data_types.basic-DV_IDENTIFIER
-' Generated on 2025-08-08 14:17:14
-
 title DV_IDENTIFIER class
 
 class DV_IDENTIFIER {
