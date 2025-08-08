@@ -56,6 +56,14 @@ class BmmPlantUmlWriter extends AbstractWriter
         }
     }
 
+    /**
+     * Wraps the diagram content with PlantUML start/end tags and adds title
+     *
+     * @param string $diagramContent The main PlantUML diagram content
+     * @param string $diagramFor Identifier for what the diagram represents
+     * @param string $title The title to display in the diagram
+     * @return string The complete PlantUML diagram with wrapping tags
+     */
     private function wrapDiagram(string $diagramContent, string $diagramFor, string $title): string
     {
         return "@startuml\n"
@@ -65,6 +73,14 @@ class BmmPlantUmlWriter extends AbstractWriter
             . "@enduml\n";
     }
 
+    /**
+     * Creates a PlantUML package diagram file for the given package
+     *
+     * @param BmmPackage $package The BMM package to create diagram for
+     * @param BmmSchema $schema The parent BMM schema containing class definitions
+     * @param string $namePrefix Optional prefix for the package name (default: '')
+     * @return void
+     */
     private function createPackageDiagram(BmmPackage $package, BmmSchema $schema, string $namePrefix = ''): void
     {
         $name = $namePrefix . $package->name;
@@ -79,6 +95,16 @@ class BmmPlantUmlWriter extends AbstractWriter
         self::log('  Wrote %s bytes to %s file.', $bytes, $filename);
     }
 
+    /**
+     * Creates a PlantUML class diagram file for the given class
+     *
+     * @param string $classOutput The PlantUML class definition content
+     * @param AbstractBmmClass $class The BMM class to create diagram for
+     * @param BmmPackage $package The package containing the class
+     * @param BmmSchema $schema The parent BMM schema containing class definitions
+     * @param string $namePrefix Optional prefix for the package name (default: '')
+     * @return void
+     */
     private function createClassDiagram(string $classOutput, AbstractBmmClass $class, BmmPackage $package, BmmSchema $schema, string $namePrefix = ''): void
     {
         if ($class instanceof BmmClass) {
@@ -96,6 +122,14 @@ class BmmPlantUmlWriter extends AbstractWriter
         self::log('        Wrote %s bytes to %s file.', $bytes, $filename);
     }
 
+    /**
+     * Converts a BMM package to PlantUML format, processing all classes and generating relationships
+     *
+     * @param BmmPackage $package The BMM package to convert
+     * @param BmmSchema $schema The parent BMM schema containing class definitions
+     * @param string $namePrefix Optional prefix for the package name (default: '')
+     * @return string The PlantUML representation of the package
+     */
     private function fromBmmPackage(BmmPackage $package, BmmSchema $schema, string $namePrefix = ''): string
     {
         $name = $namePrefix . $package->name;
@@ -179,7 +213,7 @@ class BmmPlantUmlWriter extends AbstractWriter
     }
 
     /**
-     * Format a property for PlantUML
+     * Format a BMM class property for PlantUML
      *
      * @param AbstractBmmProperty $property The property to format
      * @return string The formatted property
@@ -201,6 +235,12 @@ class BmmPlantUmlWriter extends AbstractWriter
         return "+ " . $property->name . " : " . $type . " [" . $minOccurs . ".." . $maxOccurs . "]";
     }
 
+    /**
+     * Formats a BMM function for PlantUML representation
+     *
+     * @param BmmFunction $function The BMM function to format
+     * @return string The formatted function signature in PlantUML syntax
+     */
     private function formatFunction(BmmFunction $function): string
     {
         $abstract = $function->isAbstract ? '{abstract} ' : '';
@@ -229,6 +269,12 @@ class BmmPlantUmlWriter extends AbstractWriter
         return "+ " . $abstract . $function->name . "(" . $arguments . ") : " . $type . " [" . $minOccurs . ".." . $maxOccurs . "]";
     }
 
+    /**
+     * Formats a BMM container type for PlantUML representation
+     *
+     * @param BmmContainerType $type The BMM container type to format
+     * @return string The formatted container type with generic parameters
+     */
     private function formatContainerParameterType(BmmContainerType $type): string
     {
         if ($type->typeDef instanceof BmmGenericType) {
@@ -239,6 +285,12 @@ class BmmPlantUmlWriter extends AbstractWriter
         return $type->containerType . '<' . $type->type . '>';
     }
 
+    /**
+     * Formats a BMM generic type for PlantUML representation
+     *
+     * @param BmmGenericType $type The BMM generic type to format
+     * @return string The formatted generic type with parameters
+     */
     private function formatGenericParameterType(BmmGenericType $type): string
     {
         if (!empty($type->genericParameters)) {
@@ -258,11 +310,24 @@ class BmmPlantUmlWriter extends AbstractWriter
         return $type->rootType . '<' . $genericParameters . '>';
     }
 
+    /**
+     * Determines if a class name should be hidden from the diagram
+     *
+     * @param string $className The class name to check
+     * @return bool True if the class should be hidden, false otherwise
+     */
     private function isHidden(string $className): bool
     {
         return in_array(strtolower($className), ['openehr_definitions', 'any']);
     }
 
+    /**
+     * Generates PlantUML representation for all ancestor classes and their inheritance relationships
+     *
+     * @param BmmClass $class The BMM class to generate ancestors for
+     * @param BmmSchema $schema The parent BMM schema containing class definitions
+     * @return string The PlantUML representation of ancestors and inheritance relationships
+     */
     private function generateAncestors(BmmClass $class, BmmSchema $schema): string
     {
         $output = '';

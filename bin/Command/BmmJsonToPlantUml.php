@@ -11,13 +11,19 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
- * Command to convert BMM JSON files to PlantUML format
+ * Command class responsible for converting BMM JSON files to PlantUML format.
+ *
+ * This class defines a CLI command that reads BMM JSON files and generates corresponding
+ * PlantUML diagram representations.
+ * It handles individual file inputs or processes all `.bmm.json` files in a specified directory.
+ *
  */
 class BmmJsonToPlantUml extends Command
 {
     protected function configure(): void
     {
         $this->setName('bmm:plantuml');
+        $this->setAliases(['bmm:uml', 'bmm:puml']);
         $this->setDescription('Convert BMM JSON files to PlantUML format.');
         $this->addArgument(
             'filename',
