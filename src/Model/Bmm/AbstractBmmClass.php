@@ -2,11 +2,21 @@
 
 namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 
+use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
+
 /**
  * Class representing an abstract BMM class
  */
-abstract readonly class AbstractBmmClass
+abstract readonly class AbstractBmmClass implements CollectableInterface
 {
+
+    use CollectableTrait;
+
+    public function __construct(
+        public string $name,
+    )
+    {
+    }
 
     /**
      * @param array<string, mixed> $data

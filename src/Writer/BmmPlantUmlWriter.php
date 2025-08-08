@@ -3,7 +3,6 @@
 namespace OpenEHR\Tools\CodeGen\Writer;
 
 use OpenEHR\Tools\CodeGen\Model\Bmm\AbstractBmmClass;
-use OpenEHR\Tools\CodeGen\Model\Bmm\AbstractBmmFunctionParameter;
 use OpenEHR\Tools\CodeGen\Model\Bmm\AbstractBmmProperty;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmClass;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmContainerFunctionParameter;
@@ -105,7 +104,6 @@ class BmmPlantUmlWriter extends AbstractWriter
         $classesOutput = [];
         $relationshipOutput = [];
         foreach ($package->classes as $className) {
-            /** @var AbstractBmmClass $class */
             $class = $schema->classDefinitions->get($className) ?? $schema->primitiveTypes->get($className);
             self::log('      class %s', $className);
             if ($class instanceof BmmEnumerationString || $class instanceof BmmEnumerationInteger) {
@@ -119,7 +117,9 @@ class BmmPlantUmlWriter extends AbstractWriter
 
             // collecting output for package diagram
             $classesOutput[] = $classOutput;
-            $relationshipOutput[] = $this->generateRelationships($class);
+            if ($class instanceof BmmClass) {
+                $relationshipOutput[] = $this->generateRelationships($class);
+            }
 
             // create also class diagram
             $this->createClassDiagram($classOutput, $class, $package, $schema, $namePrefix);
@@ -142,14 +142,17 @@ class BmmPlantUmlWriter extends AbstractWriter
         }
         $output .= "class " . $class->name . " ";
         if ($class->genericParameterDefs->count() > 0) {
-            $genericParameterDefs = array_map(fn($item) => $item->name, $class->genericParameterDefs->getArrayCopy());
+            $genericParameterDefs = array_map(fn($item) => $item->getName(), $class->genericParameterDefs->getArrayCopy());
             $output .= '<<' . implode(', ', $genericParameterDefs) . '>> ';
         }
         $output .= "{\n";
 
+        /** @var AbstractBmmProperty $property */
         foreach ($class->properties as $property) {
             $output .= "  " . $this->formatProperty($property) . "\n";
         }
+
+        /** @var BmmFunction $function */
         foreach ($class->functions as $function) {
             $output .= "  " . $this->formatFunction($function) . "\n";
         }
@@ -213,7 +216,7 @@ class BmmPlantUmlWriter extends AbstractWriter
         } elseif ($function->result instanceof BmmSimpleType) {
             $type = $function->result->type;
         }
-        $arguments = implode(', ', array_map(function (AbstractBmmFunctionParameter $parameter) {
+        $arguments = implode(', ', array_map(function ($parameter) {
             if ($parameter instanceof BmmContainerFunctionParameter) {
                 return $this->formatContainerParameterType($parameter->typeDef) . ' ' . $parameter->name;
             } elseif ($parameter instanceof BmmGenericFunctionParameter) {
@@ -221,7 +224,7 @@ class BmmPlantUmlWriter extends AbstractWriter
             } elseif ($parameter instanceof BmmSingleFunctionParameter || $parameter instanceof BmmSingleFunctionParameterOpen) {
                 return $parameter->type . ' ' . $parameter->name;
             }
-            return $parameter->name;
+            return '';
         }, $function->parameters->getArrayCopy()));
 
         return "+ " . $abstract . $function->name . "(" . $arguments . ") : " . $type . " [" . $minOccurs . ".." . $maxOccurs . "]";
@@ -243,7 +246,12 @@ class BmmPlantUmlWriter extends AbstractWriter
             $genericParameters = implode(',', $type->genericParameters);
         } elseif (!empty($type->genericParameterDefs)) {
             $genericParameters = implode(',', array_map(function ($t) {
-                return $t instanceof BmmGenericType ? $this->formatGenericParameterType($t) : $t->type;
+                if ($t instanceof BmmGenericType) {
+                    return $this->formatGenericParameterType($t);
+                } elseif ($t instanceof BmmSimpleType) {
+                    return $t->type;
+                }
+                return '';
             }, $type->genericParameterDefs->getArrayCopy()));
         } else {
             $genericParameters = '';
@@ -279,7 +287,7 @@ class BmmPlantUmlWriter extends AbstractWriter
      * @param BmmClass $class The BMM class to generate relationships for
      * @return string The PlantUML relationships
      */
-    private function generateRelationships(AbstractBmmClass $class): string
+    private function generateRelationships(BmmClass $class): string
     {
         $output = '';
 
@@ -293,23 +301,16 @@ class BmmPlantUmlWriter extends AbstractWriter
             }
         }
 
-        // Associations (properties that reference other classes)
-        if ($class instanceof BmmClass && $class->properties) {
-            foreach ($class->properties as $propertyName => $property) {
-                $typeName = $property->type->typeName ?? "";
-
-                // Only create associations for non-primitive types
-                if ($typeName && !in_array(strtolower($typeName), ['string', 'integer', 'boolean', 'real', 'any'])) {
-                    if ($property->isContainer) {
-                        // For container types (like arrays, lists)
-                        $output .= $class->name . " o-- \"*\" " . $typeName . " : " . $property->name . "\n";
-                    } else {
-                        // For single references
-                        $output .= $class->name . " --> " . $typeName . " : " . $property->name . "\n";
-                    }
-                }
-            }
-        }
+//        // Associations (properties that reference other classes)
+//        foreach ($class->properties as $property) {
+//            if ($property instanceof BmmContainerProperty) {
+//                $output .= $class->name . " o-- \"*\" " . $property->typeDef->type . " : " . $property->name . "\n";
+//            } elseif ($property instanceof BmmGenericProperty) {
+//                $output .= $class->name . " --> " . $property->typeDef->rootType . " : " . $property->name . "\n";
+//            } elseif ($property instanceof BmmSingleProperty || $property instanceof BmmSinglePropertyOpen) {
+//                $output .= $class->name . " --> " . $property->type . " : " . $property->name . "\n";
+//            }
+//        }
 
         return $output;
     }

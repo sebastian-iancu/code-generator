@@ -1,19 +1,16 @@
-<?php
+<?php /** @noinspection PhpMissingParentConstructorInspection */
 
 namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 
 use JsonSerializable;
-use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
 use OpenEHR\Tools\CodeGen\Model\YamlSerializable;
 use Symfony\Component\Yaml\Tag\TaggedValue;
 
 /**
  * Class representing a BMM container property
  */
-readonly class BmmContainerProperty extends AbstractBmmProperty implements JsonSerializable, YamlSerializable, CollectableInterface
+readonly class BmmContainerProperty extends AbstractBmmProperty implements JsonSerializable, YamlSerializable
 {
-
-    use CollectableTrait;
 
     /**
      * @param string $name
@@ -48,7 +45,7 @@ readonly class BmmContainerProperty extends AbstractBmmProperty implements JsonS
             'cardinality' => $this->cardinality,
         ]);
     }
-    
+
     /**
      * @return TaggedValue
      */

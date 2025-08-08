@@ -3,16 +3,11 @@
 namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 
 use JsonSerializable;
-use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
 use OpenEHR\Tools\CodeGen\Model\YamlSerializable;
 
 
-readonly class BmmSimpleType extends AbstractBmmType implements JsonSerializable, YamlSerializable, CollectableInterface
+readonly class BmmSimpleType extends AbstractBmmType implements JsonSerializable, YamlSerializable
 {
-
-    private string $name;
-
-    use CollectableTrait;
 
     /**
      * @param string $type
@@ -21,7 +16,7 @@ readonly class BmmSimpleType extends AbstractBmmType implements JsonSerializable
         public string $type,
     )
     {
-        $this->name = '';
+        parent::__construct();;
     }
 
     /**

@@ -1,19 +1,16 @@
-<?php
+<?php /** @noinspection PhpMissingParentConstructorInspection */
 
 namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 
 use JsonSerializable;
-use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
 use OpenEHR\Tools\CodeGen\Model\Collection;
 use OpenEHR\Tools\CodeGen\Model\YamlSerializable;
 
 /**
  * Class representing a BMM class definition
  */
-readonly class BmmClass extends AbstractBmmClass implements JsonSerializable, YamlSerializable, CollectableInterface
+readonly class BmmClass extends AbstractBmmClass implements JsonSerializable, YamlSerializable
 {
-
-    use CollectableTrait;
 
     /**
      * @param string $name
@@ -22,7 +19,7 @@ readonly class BmmClass extends AbstractBmmClass implements JsonSerializable, Ya
      * @param string|null $documentation
      * @param Collection<string, BmmGenericParameter>|Collection|null $genericParameterDefs
      * @param Collection<string, BmmConstant>|Collection|null $constants
-     * @param Collection<string, BmmContainerProperty|BmmGenericProperty|BmmSingleProperty|BmmSinglePropertyOpen>|Collection|null $properties
+     * @param Collection<string, AbstractBmmProperty>|Collection|null $properties
      * @param Collection<string, BmmFunction>|Collection|null $functions
      * @param array<string,string>|null $invariants
      */
@@ -58,7 +55,7 @@ readonly class BmmClass extends AbstractBmmClass implements JsonSerializable, Ya
         ]);
 
     }
-    
+
     /**
      * @return array<string, mixed>
      */

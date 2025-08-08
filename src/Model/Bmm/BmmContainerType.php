@@ -3,17 +3,12 @@
 namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 
 use JsonSerializable;
-use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
 use OpenEHR\Tools\CodeGen\Model\YamlSerializable;
 use Symfony\Component\Yaml\Tag\TaggedValue;
 
 
-readonly class BmmContainerType extends AbstractBmmType implements JsonSerializable, YamlSerializable, CollectableInterface
+readonly class BmmContainerType extends AbstractBmmType implements JsonSerializable, YamlSerializable
 {
-
-    private string $name;
-
-    use CollectableTrait;
 
     /**
      * @param string $containerType
@@ -26,7 +21,7 @@ readonly class BmmContainerType extends AbstractBmmType implements JsonSerializa
         public BmmContainerType|BmmGenericType|BmmSimpleType|null $typeDef = null,
     )
     {
-        $this->name = '';
+        parent::__construct();
     }
 
     /**
@@ -41,7 +36,7 @@ readonly class BmmContainerType extends AbstractBmmType implements JsonSerializa
             'type_def' => $this->typeDef,
         ]);
     }
-    
+
     /**
      * @return TaggedValue
      */

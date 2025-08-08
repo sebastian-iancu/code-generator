@@ -1,18 +1,15 @@
-<?php
+<?php /** @noinspection PhpMissingParentConstructorInspection */
 
 namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 
 use JsonSerializable;
-use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
 use OpenEHR\Tools\CodeGen\Model\YamlSerializable;
 
 /**
  * Class representing a BMM single property
  */
-readonly class BmmSingleProperty extends AbstractBmmProperty implements JsonSerializable, YamlSerializable, CollectableInterface
+readonly class BmmSingleProperty extends AbstractBmmProperty implements JsonSerializable, YamlSerializable
 {
-
-    use CollectableTrait;
 
     /**
      * @param string $name
