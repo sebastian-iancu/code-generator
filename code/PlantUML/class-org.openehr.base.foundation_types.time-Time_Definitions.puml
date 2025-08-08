@@ -1,0 +1,22 @@
+@startuml
+' PlantUML diagram for org.openehr.base.foundation_types.time-Time_Definitions
+' Generated on 2025-08-08 14:17:14
+
+title Time_Definitions class
+
+class Time_Definitions {
+  + valid_year(Integer y) : Boolean [0..1]
+  + valid_month(Integer m) : Boolean [0..1]
+  + valid_day(Integer y, Integer m, Integer d) : Boolean [0..1]
+  + valid_hour(Integer h, Integer m, Integer s) : Boolean [0..1]
+  + valid_minute(Integer m) : Boolean [0..1]
+  + valid_second(Integer s) : Boolean [0..1]
+  + valid_fractional_second(Double fs) : Boolean [0..1]
+  + valid_iso8601_date(String s) : Boolean [0..1]
+  + valid_iso8601_time(String s) : Boolean [0..1]
+  + valid_iso8601_date_time(String s) : Boolean [0..1]
+  + valid_iso8601_duration(String s) : Boolean [0..1]
+}
+
+
+@enduml

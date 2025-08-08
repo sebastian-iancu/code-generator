@@ -1,0 +1,15 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.ehr_extract.sync_extract-SYNC_EXTRACT_SPEC
+' Generated on 2025-08-08 14:17:14
+
+title SYNC_EXTRACT_SPEC class
+
+class SYNC_EXTRACT_SPEC {
+  + includes_versions : Boolean [1..1]
+  + contribution_list : List<HIER_OBJECT_ID> [0..*]
+  + contributions_since : DV_DATE_TIME [0..1]
+  + all_contributions : Boolean [0..1]
+}
+
+
+@enduml

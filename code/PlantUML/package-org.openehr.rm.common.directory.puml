@@ -1,0 +1,19 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.common.directory
+' Generated on 2025-08-08 14:17:14
+
+title org.openehr.rm.common.directory package
+
+class VERSIONED_FOLDER {
+}
+
+class FOLDER {
+  + items : List<OBJECT_REF> [0..*]
+  + folders : List<FOLDER> [0..*]
+  + details : ITEM_STRUCTURE [0..1]
+}
+
+VERSIONED_OBJECT <|-- VERSIONED_FOLDER
+LOCATABLE <|-- FOLDER
+
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.data_types.basic-DATA_VALUE
+' Generated on 2025-08-08 14:17:14
+
+title DATA_VALUE class
+
+abstract class DATA_VALUE {
+}
+
+
+@enduml

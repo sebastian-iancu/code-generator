@@ -1,0 +1,13 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.ehr_extract.common-EXTRACT_ERROR
+' Generated on 2025-08-08 14:17:14
+
+title EXTRACT_ERROR class
+
+class EXTRACT_ERROR {
+  + request_id : OBJECT_REF [0..1]
+  + reason : DV_TEXT [1..1]
+}
+
+
+@enduml

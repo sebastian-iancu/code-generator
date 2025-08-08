@@ -1,0 +1,18 @@
+@startuml
+' PlantUML diagram for org.openehr.base.base_types.identification-GENERIC_ID
+' Generated on 2025-08-08 14:17:14
+
+title GENERIC_ID class
+
+class GENERIC_ID {
+  + scheme : String [1..1]
+}
+
+abstract class OBJECT_ID {
+  + value : String [1..1]
+}
+
+OBJECT_ID <|-- GENERIC_ID
+
+
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.data_types.basic-DV_IDENTIFIER
+' Generated on 2025-08-08 14:17:14
+
+title DV_IDENTIFIER class
+
+class DV_IDENTIFIER {
+  + issuer : String [0..1]
+  + assigner : String [0..1]
+  + id : String [1..1]
+  + type : String [0..1]
+}
+
+abstract class DATA_VALUE {
+}
+
+DATA_VALUE <|-- DV_IDENTIFIER
+
+
+@enduml

@@ -1,0 +1,26 @@
+@startuml
+' PlantUML diagram for org.openehr.base.foundation_types.primitive_types-String
+' Generated on 2025-08-08 14:17:14
+
+title String class
+
+class String {
+  + is_empty() : Boolean [0..1]
+  + is_integer() : Boolean [0..1]
+  + as_integer() : Integer [0..1]
+  + append(String other) : String [0..1]
+  + less_than(String other) : Boolean [0..1]
+  + contains(String other) : Boolean [0..1]
+}
+
+abstract class Ordered {
+  + {abstract} less_than(Ordered other) : Boolean [0..1]
+  + less_than_or_equal(Ordered other) : Boolean [0..1]
+  + greater_than(Ordered other) : Boolean [0..1]
+  + greater_than_or_equal(Ordered other) : Boolean [0..1]
+}
+
+Ordered <|-- String
+
+
+@enduml

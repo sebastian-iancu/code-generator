@@ -1,0 +1,41 @@
+@startuml
+' PlantUML diagram for org.openehr.base.foundation_types.time
+' Generated on 2025-08-08 11:19:48
+
+title org.openehr.base.foundation_types.time package
+
+class Iso8601_date_time {
+}
+
+class Iso8601_duration {
+}
+
+class Iso8601_time {
+}
+
+class Iso8601_timezone {
+}
+
+abstract class Iso8601_type {
+  + value : String
+}
+
+class Iso8601_date {
+}
+
+class Time_Definitions {
+}
+
+abstract class Temporal {
+}
+
+Iso8601_type <|-- Iso8601_date_time
+Iso8601_type <|-- Iso8601_duration
+Iso8601_type <|-- Iso8601_time
+Iso8601_type <|-- Iso8601_timezone
+Temporal <|-- Iso8601_type
+Time_Definitions <|-- Iso8601_type
+Iso8601_type <|-- Iso8601_date
+Ordered <|-- Temporal
+
+@enduml

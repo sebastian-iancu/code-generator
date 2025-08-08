@@ -1,0 +1,14 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.common.change_control-CONTRIBUTION
+' Generated on 2025-08-08 14:17:14
+
+title CONTRIBUTION class
+
+class CONTRIBUTION {
+  + uid : HIER_OBJECT_ID [1..1]
+  + versions : List<OBJECT_REF> [1..*]
+  + audit : AUDIT_DETAILS [1..1]
+}
+
+
+@enduml

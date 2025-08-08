@@ -1,0 +1,24 @@
+@startuml
+' PlantUML diagram for org.openehr.base.base_types.identification-ARCHETYPE_ID
+' Generated on 2025-08-08 14:17:14
+
+title ARCHETYPE_ID class
+
+class ARCHETYPE_ID {
+  + qualified_rm_entity() : String [0..1]
+  + domain_concept() : String [0..1]
+  + rm_originator() : String [0..1]
+  + rm_name() : String [0..1]
+  + rm_entity() : String [0..1]
+  + specialisation() : String [0..1]
+  + version_id() : String [0..1]
+}
+
+abstract class OBJECT_ID {
+  + value : String [1..1]
+}
+
+OBJECT_ID <|-- ARCHETYPE_ID
+
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.resource-CONSUMABLE_USE
+' Generated on 2025-08-08 14:17:14
+
+title CONSUMABLE_USE class
+
+class CONSUMABLE_USE {
+  + amount : DATA_VALUE [0..1]
+}
+
+abstract class RESOURCE_USE {
+  + cost_data : ITEM_STRUCTURE [0..1]
+}
+
+RESOURCE_USE <|-- CONSUMABLE_USE
+
+
+@enduml

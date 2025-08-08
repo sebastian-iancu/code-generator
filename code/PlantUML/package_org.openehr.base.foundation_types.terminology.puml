@@ -1,0 +1,20 @@
+@startuml
+' PlantUML diagram for org.openehr.base.foundation_types.terminology
+' Generated on 2025-08-08 11:19:48
+
+title org.openehr.base.foundation_types.terminology package
+
+class Terminology_code {
+  + terminology_id : String
+  + terminology_version : String
+  + code_string : String
+  + uri : Uri
+}
+
+class Terminology_term {
+  + concept : Terminology_code
+  + text : String
+}
+
+
+@enduml

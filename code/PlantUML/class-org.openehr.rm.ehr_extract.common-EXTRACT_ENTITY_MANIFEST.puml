@@ -1,0 +1,16 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.ehr_extract.common-EXTRACT_ENTITY_MANIFEST
+' Generated on 2025-08-08 14:17:14
+
+title EXTRACT_ENTITY_MANIFEST class
+
+class EXTRACT_ENTITY_MANIFEST {
+  + extract_id_key : String [1..1]
+  + ehr_id : String [0..1]
+  + subject_id : String [0..1]
+  + other_ids : List<String> [0..*]
+  + item_list : List<OBJECT_REF> [0..*]
+}
+
+
+@enduml

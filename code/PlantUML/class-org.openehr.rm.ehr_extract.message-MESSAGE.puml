@@ -1,0 +1,15 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.ehr_extract.message-MESSAGE
+' Generated on 2025-08-08 14:17:14
+
+title MESSAGE class
+
+class MESSAGE {
+  + audit : AUDIT_DETAILS [1..1]
+  + author : PARTY_PROXY [1..1]
+  + content : MESSAGE_CONTENT [1..1]
+  + signature : String [0..1]
+}
+
+
+@enduml

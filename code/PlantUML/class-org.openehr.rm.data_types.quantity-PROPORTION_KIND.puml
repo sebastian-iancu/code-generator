@@ -1,0 +1,16 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.data_types.quantity-PROPORTION_KIND
+' Generated on 2025-08-08 14:17:14
+
+title PROPORTION_KIND class
+
+enum PROPORTION_KIND {
+  pk_ratio = 0 
+  pk_unitary = 1 
+  pk_percent = 2 
+  pk_fraction = 3 
+  pk_integer_fraction = 4 
+}
+
+
+@enduml

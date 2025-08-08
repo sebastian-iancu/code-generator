@@ -1,0 +1,15 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.ehr_extract.common-EXTRACT_UPDATE_SPEC
+' Generated on 2025-08-08 14:17:14
+
+title EXTRACT_UPDATE_SPEC class
+
+class EXTRACT_UPDATE_SPEC {
+  + persist_in_server : Boolean [1..1]
+  + repeat_period : DV_DURATION [0..1]
+  + trigger_events : List<DV_CODED_TEXT> [0..*]
+  + update_method : CODE_PHRASE [1..1]
+}
+
+
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.data_types.text-DV_TEXT
+' Generated on 2025-08-08 14:17:14
+
+title DV_TEXT class
+
+class DV_TEXT {
+  + value : String [1..1]
+  + hyperlink : DV_URI [0..1]
+  + formatting : String [0..1]
+  + mappings : List<TERM_MAPPING> [0..*]
+  + language : CODE_PHRASE [0..1]
+  + encoding : CODE_PHRASE [0..1]
+}
+
+abstract class DATA_VALUE {
+}
+
+DATA_VALUE <|-- DV_TEXT
+
+
+@enduml

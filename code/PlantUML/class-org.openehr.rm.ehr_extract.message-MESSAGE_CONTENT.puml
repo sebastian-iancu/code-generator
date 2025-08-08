@@ -1,0 +1,11 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.ehr_extract.message-MESSAGE_CONTENT
+' Generated on 2025-08-08 14:17:14
+
+title MESSAGE_CONTENT class
+
+abstract class MESSAGE_CONTENT {
+}
+
+
+@enduml

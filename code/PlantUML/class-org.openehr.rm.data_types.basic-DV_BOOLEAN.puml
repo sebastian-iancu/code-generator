@@ -1,0 +1,17 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.data_types.basic-DV_BOOLEAN
+' Generated on 2025-08-08 14:17:14
+
+title DV_BOOLEAN class
+
+class DV_BOOLEAN {
+  + value : Boolean [1..1]
+}
+
+abstract class DATA_VALUE {
+}
+
+DATA_VALUE <|-- DV_BOOLEAN
+
+
+@enduml

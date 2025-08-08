@@ -1,0 +1,34 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.data_types.quantity-DV_ORDINAL
+' Generated on 2025-08-08 14:17:14
+
+title DV_ORDINAL class
+
+class DV_ORDINAL {
+  + symbol : DV_CODED_TEXT [1..1]
+  + value : Integer [1..1]
+  + less_than(DV_ORDINAL other) : Boolean [0..1]
+  + is_strictly_comparable_to(DV_ORDINAL other) : Boolean [0..1]
+}
+
+abstract class DV_ORDERED {
+  + normal_status : CODE_PHRASE [0..1]
+  + normal_range : DV_INTERVAL [0..1]
+  + other_reference_ranges : List<REFERENCE_RANGE<DV_ORDERED>> [0..*]
+  + {abstract} is_strictly_comparable_to(DV_ORDERED other) : Boolean [0..1]
+  + is_simple() : Boolean [0..1]
+  + is_normal() : Boolean [0..1]
+  + {abstract} less_than(DV_ORDERED other) : Boolean [0..1]
+}
+
+abstract class DATA_VALUE {
+}
+
+DATA_VALUE <|-- DV_ORDERED
+
+Ordered <|-- DV_ORDERED
+
+DV_ORDERED <|-- DV_ORDINAL
+
+
+@enduml

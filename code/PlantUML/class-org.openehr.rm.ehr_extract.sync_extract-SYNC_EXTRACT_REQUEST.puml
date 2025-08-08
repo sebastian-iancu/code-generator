@@ -1,0 +1,17 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.ehr_extract.sync_extract-SYNC_EXTRACT_REQUEST
+' Generated on 2025-08-08 14:17:14
+
+title SYNC_EXTRACT_REQUEST class
+
+class SYNC_EXTRACT_REQUEST {
+  + specification : SYNC_EXTRACT_SPEC [1..1]
+}
+
+abstract class MESSAGE_CONTENT {
+}
+
+MESSAGE_CONTENT <|-- SYNC_EXTRACT_REQUEST
+
+
+@enduml

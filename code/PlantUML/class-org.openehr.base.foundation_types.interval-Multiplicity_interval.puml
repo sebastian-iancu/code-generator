@@ -1,0 +1,35 @@
+@startuml
+' PlantUML diagram for org.openehr.base.foundation_types.interval-Multiplicity_interval
+' Generated on 2025-08-08 14:17:14
+
+title Multiplicity_interval class
+
+class Multiplicity_interval {
+  + is_open() : Boolean [0..1]
+  + is_optional() : Boolean [0..1]
+  + is_mandatory() : Boolean [0..1]
+  + is_prohibited() : Boolean [0..1]
+}
+
+class Proper_interval <<T>> {
+}
+
+abstract class Interval <<T>> {
+  + lower : T [0..1]
+  + upper : T [0..1]
+  + lower_unbounded : Boolean [1..1]
+  + upper_unbounded : Boolean [1..1]
+  + lower_included : Boolean [1..1]
+  + upper_included : Boolean [1..1]
+  + {abstract} has(T e) : Boolean [0..1]
+  + {abstract} intersects(Interval other) : Boolean [0..1]
+  + {abstract} contains(Interval other) : Boolean [0..1]
+  + {abstract} is_equal(Any other) : Boolean [0..1]
+}
+
+Interval <|-- Proper_interval
+
+Proper_interval <|-- Multiplicity_interval
+
+
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+' PlantUML diagram for org.openehr.base.foundation_types.interval-Cardinality
+' Generated on 2025-08-08 14:17:14
+
+title Cardinality class
+
+class Cardinality {
+  + interval : Multiplicity_interval [1..1]
+  + is_ordered : Boolean [1..1]
+  + is_unique : Boolean [1..1]
+  + is_bag() : Boolean [0..1]
+  + is_list() : Boolean [0..1]
+  + is_set() : Boolean [0..1]
+}
+
+
+@enduml

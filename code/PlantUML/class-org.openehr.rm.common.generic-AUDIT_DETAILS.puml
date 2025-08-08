@@ -1,0 +1,16 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.common.generic-AUDIT_DETAILS
+' Generated on 2025-08-08 14:17:14
+
+title AUDIT_DETAILS class
+
+class AUDIT_DETAILS {
+  + system_id : String [1..1]
+  + time_committed : DV_DATE_TIME [1..1]
+  + change_type : DV_CODED_TEXT [1..1]
+  + description : DV_TEXT [0..1]
+  + committer : PARTY_PROXY [1..1]
+}
+
+
+@enduml

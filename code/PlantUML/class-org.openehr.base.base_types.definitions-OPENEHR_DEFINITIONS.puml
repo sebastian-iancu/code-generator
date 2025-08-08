@@ -1,0 +1,16 @@
+@startuml
+' PlantUML diagram for org.openehr.base.base_types.definitions-OPENEHR_DEFINITIONS
+' Generated on 2025-08-08 14:17:14
+
+title OPENEHR_DEFINITIONS class
+
+class OPENEHR_DEFINITIONS {
+}
+
+class BASIC_DEFINITIONS {
+}
+
+BASIC_DEFINITIONS <|-- OPENEHR_DEFINITIONS
+
+
+@enduml

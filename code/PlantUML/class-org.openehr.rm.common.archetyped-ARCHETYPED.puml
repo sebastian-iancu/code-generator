@@ -1,0 +1,14 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.common.archetyped-ARCHETYPED
+' Generated on 2025-08-08 14:17:14
+
+title ARCHETYPED class
+
+class ARCHETYPED {
+  + archetype_id : ARCHETYPE_ID [1..1]
+  + template_id : TEMPLATE_ID [0..1]
+  + rm_version : String [1..1]
+}
+
+
+@enduml

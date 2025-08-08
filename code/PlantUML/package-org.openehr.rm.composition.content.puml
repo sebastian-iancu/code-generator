@@ -1,0 +1,12 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.composition.content
+' Generated on 2025-08-08 14:17:14
+
+title org.openehr.rm.composition.content package
+
+abstract class CONTENT_ITEM {
+}
+
+LOCATABLE <|-- CONTENT_ITEM
+
+@enduml

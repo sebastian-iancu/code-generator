@@ -1,0 +1,23 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.ehr_extract.openehr_extract-X_VERSIONED_EHR_STATUS
+' Generated on 2025-08-08 14:17:14
+
+title X_VERSIONED_EHR_STATUS class
+
+class X_VERSIONED_EHR_STATUS {
+}
+
+class X_VERSIONED_OBJECT <<T>> {
+  + uid : HIER_OBJECT_ID [1..1]
+  + owner_id : OBJECT_REF [1..1]
+  + time_created : DV_DATE_TIME [1..1]
+  + total_version_count : Integer [1..1]
+  + extract_version_count : Integer [1..1]
+  + revision_history : REVISION_HISTORY [0..1]
+  + versions : List<ORIGINAL_VERSION<T>> [0..*]
+}
+
+X_VERSIONED_OBJECT <|-- X_VERSIONED_EHR_STATUS
+
+
+@enduml

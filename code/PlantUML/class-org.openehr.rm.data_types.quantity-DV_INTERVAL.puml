@@ -1,0 +1,18 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.data_types.quantity-DV_INTERVAL
+' Generated on 2025-08-08 14:17:14
+
+title DV_INTERVAL class
+
+class DV_INTERVAL <<T>> {
+}
+
+abstract class DATA_VALUE {
+}
+
+DATA_VALUE <|-- DV_INTERVAL
+
+Interval <|-- DV_INTERVAL
+
+
+@enduml

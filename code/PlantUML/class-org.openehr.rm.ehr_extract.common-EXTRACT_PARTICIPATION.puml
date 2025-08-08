@@ -1,0 +1,15 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.ehr_extract.common-EXTRACT_PARTICIPATION
+' Generated on 2025-08-08 14:17:14
+
+title EXTRACT_PARTICIPATION class
+
+class EXTRACT_PARTICIPATION {
+  + time : DV_INTERVAL<DV_DATE_TIME> [0..1]
+  + function : DV_TEXT [1..1]
+  + mode : DV_CODED_TEXT [0..1]
+  + performer : String [1..1]
+}
+
+
+@enduml

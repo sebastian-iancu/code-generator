@@ -1,0 +1,22 @@
+@startuml
+' PlantUML diagram for org.openehr.base.base_types.identification-LOCATABLE_REF
+' Generated on 2025-08-08 14:17:14
+
+title LOCATABLE_REF class
+
+class LOCATABLE_REF {
+  + path : String [0..1]
+  + id : UID_BASED_ID [1..1]
+  + as_uri() : String [0..1]
+}
+
+class OBJECT_REF {
+  + namespace : String [1..1]
+  + type : String [1..1]
+  + id : OBJECT_ID [1..1]
+}
+
+OBJECT_REF <|-- LOCATABLE_REF
+
+
+@enduml

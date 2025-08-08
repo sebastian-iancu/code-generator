@@ -1,0 +1,48 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.data_structures.history-INTERVAL_EVENT
+' Generated on 2025-08-08 14:17:14
+
+title INTERVAL_EVENT class
+
+class INTERVAL_EVENT <<T>> {
+  + width : DV_DURATION [1..1]
+  + sample_count : Integer [0..1]
+  + math_function : DV_CODED_TEXT [1..1]
+  + interval_start_time() : DV_DATE_TIME [0..1]
+}
+
+abstract class EVENT <<T>> {
+  + time : DV_DATE_TIME [1..1]
+  + state : ITEM_STRUCTURE [0..1]
+  + data : T [1..1]
+  + offset() : DV_DURATION [0..1]
+}
+
+abstract class LOCATABLE {
+  + name : DV_TEXT [1..1]
+  + archetype_node_id : String [1..1]
+  + uid : UID_BASED_ID [0..1]
+  + links : List<LINK> [0..*]
+  + archetype_details : ARCHETYPED [0..1]
+  + feeder_audit : FEEDER_AUDIT [0..1]
+  + concept() : DV_TEXT [0..1]
+  + is_archetype_root() : Boolean [0..1]
+}
+
+abstract class PATHABLE {
+  + parent() : PATHABLE [0..1]
+  + item_at_path(String a_path) : Any [0..1]
+  + items_at_path(String a_path) : List<Any> [1..*]
+  + path_exists(String a_path) : Boolean [0..1]
+  + path_unique(String a_path) : Boolean [0..1]
+  + path_of_item(PATHABLE a_loc) : String [0..1]
+}
+
+PATHABLE <|-- LOCATABLE
+
+LOCATABLE <|-- EVENT
+
+EVENT <|-- INTERVAL_EVENT
+
+
+@enduml

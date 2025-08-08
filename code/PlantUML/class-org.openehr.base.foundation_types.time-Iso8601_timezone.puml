@@ -1,0 +1,57 @@
+@startuml
+' PlantUML diagram for org.openehr.base.foundation_types.time-Iso8601_timezone
+' Generated on 2025-08-08 14:17:14
+
+title Iso8601_timezone class
+
+class Iso8601_timezone {
+  + hour() : Integer [0..1]
+  + minute() : Integer [0..1]
+  + sign() : Integer [0..1]
+  + minute_unknown() : Boolean [0..1]
+  + is_partial() : Boolean [0..1]
+  + is_extended() : Boolean [0..1]
+  + is_gmt() : Boolean [0..1]
+  + as_string() : String [0..1]
+}
+
+abstract class Iso8601_type {
+  + value : String [1..1]
+  + {abstract} is_partial() : Boolean [0..1]
+  + {abstract} is_extended() : Boolean [0..1]
+}
+
+abstract class Temporal {
+}
+
+abstract class Ordered {
+  + {abstract} less_than(Ordered other) : Boolean [0..1]
+  + less_than_or_equal(Ordered other) : Boolean [0..1]
+  + greater_than(Ordered other) : Boolean [0..1]
+  + greater_than_or_equal(Ordered other) : Boolean [0..1]
+}
+
+Ordered <|-- Temporal
+
+Temporal <|-- Iso8601_type
+
+class Time_Definitions {
+  + valid_year(Integer y) : Boolean [0..1]
+  + valid_month(Integer m) : Boolean [0..1]
+  + valid_day(Integer y, Integer m, Integer d) : Boolean [0..1]
+  + valid_hour(Integer h, Integer m, Integer s) : Boolean [0..1]
+  + valid_minute(Integer m) : Boolean [0..1]
+  + valid_second(Integer s) : Boolean [0..1]
+  + valid_fractional_second(Double fs) : Boolean [0..1]
+  + valid_iso8601_date(String s) : Boolean [0..1]
+  + valid_iso8601_time(String s) : Boolean [0..1]
+  + valid_iso8601_date_time(String s) : Boolean [0..1]
+  + valid_iso8601_duration(String s) : Boolean [0..1]
+}
+
+Time_Definitions <|-- Iso8601_type
+
+Iso8601_type <|-- Iso8601_timezone
+
+
+@enduml

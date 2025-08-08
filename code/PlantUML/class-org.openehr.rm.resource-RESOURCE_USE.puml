@@ -1,0 +1,12 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.resource-RESOURCE_USE
+' Generated on 2025-08-08 14:17:14
+
+title RESOURCE_USE class
+
+abstract class RESOURCE_USE {
+  + cost_data : ITEM_STRUCTURE [0..1]
+}
+
+
+@enduml

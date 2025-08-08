@@ -1,0 +1,59 @@
+@startuml
+' PlantUML diagram for org.openehr.base.resource
+' Generated on 2025-08-08 11:19:48
+
+title org.openehr.base.resource package
+
+abstract class AUTHORED_RESOURCE {
+  + uid : UUID
+  + original_language : Terminology_code
+  + description : RESOURCE_DESCRIPTION
+  + is_controlled : Boolean
+  + annotations : RESOURCE_ANNOTATIONS
+  + translations : any
+}
+
+class RESOURCE_DESCRIPTION {
+  + original_author : any
+  + original_namespace : String
+  + original_publisher : String
+  + other_contributors : any
+  + lifecycle_state : Terminology_code
+  + parent_resource : AUTHORED_RESOURCE
+  + custodian_namespace : String
+  + custodian_organisation : String
+  + copyright : String
+  + licence : String
+  + ip_acknowledgements : any
+  + references : any
+  + resource_package_uri : String
+  + conversion_details : any
+  + other_details : any
+  + details : any
+}
+
+class TRANSLATION_DETAILS {
+  + language : Terminology_code
+  + author : any
+  + accreditation : String
+  + other_details : any
+  + version_last_translated : String
+  + other_contributors : any
+}
+
+class RESOURCE_DESCRIPTION_ITEM {
+  + language : Terminology_code
+  + purpose : String
+  + keywords : any
+  + use : String
+  + misuse : String
+  + original_resource_uri : any
+  + other_details : any
+}
+
+class RESOURCE_ANNOTATIONS {
+  + documentation : any
+}
+
+
+@enduml

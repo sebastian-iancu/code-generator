@@ -1,0 +1,17 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.common.generic-PARTY_SELF
+' Generated on 2025-08-08 14:17:14
+
+title PARTY_SELF class
+
+class PARTY_SELF {
+}
+
+abstract class PARTY_PROXY {
+  + external_ref : PARTY_REF [0..1]
+}
+
+PARTY_PROXY <|-- PARTY_SELF
+
+
+@enduml

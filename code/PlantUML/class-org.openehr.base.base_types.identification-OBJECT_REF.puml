@@ -1,0 +1,14 @@
+@startuml
+' PlantUML diagram for org.openehr.base.base_types.identification-OBJECT_REF
+' Generated on 2025-08-08 14:17:14
+
+title OBJECT_REF class
+
+class OBJECT_REF {
+  + namespace : String [1..1]
+  + type : String [1..1]
+  + id : OBJECT_ID [1..1]
+}
+
+
+@enduml

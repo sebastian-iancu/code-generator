@@ -1,0 +1,45 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.support.terminology
+' Generated on 2025-08-08 14:17:14
+
+title org.openehr.rm.support.terminology package
+
+class OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS {
+  + valid_terminology_group_id(Boolean an_id) : Boolean [0..1]
+}
+
+class OPENEHR_CODE_SET_IDENTIFIERS {
+  + valid_code_set_id(String an_id) : Boolean [0..1]
+}
+
+class TERMINOLOGY_SERVICE {
+  + terminology(String name) : TERMINOLOGY_ACCESS [0..1]
+  + code_set(String name) : CODE_SET_ACCESS [0..1]
+  + code_set_for_id(String id) : CODE_SET_ACCESS [0..1]
+  + has_terminology(String name) : Boolean [0..1]
+  + has_code_set(String name) : Boolean [0..1]
+  + terminology_identifiers() : List<String> [1..*]
+  + openehr_code_sets() : Hash<String,String> [0..1]
+  + code_set_identifiers() : List<String> [1..*]
+}
+
+class CODE_SET_ACCESS {
+  + id() : String [0..1]
+  + all_codes() : List<CODE_PHRASE> [1..*]
+  + has_lang(String a_lang) : Boolean [0..1]
+  + has_code(String a_code) : Boolean [0..1]
+}
+
+class TERMINOLOGY_ACCESS {
+  + id() : String [0..1]
+  + all_codes() : CODE_PHRASE [0..1]
+  + codes_for_group_id(String a_group_id) : List<CODE_PHRASE> [1..*]
+  + codes_for_group_name(String a_lang, String a_name) : List<CODE_PHRASE> [1..*]
+  + has_code_for_group_id() : Boolean [0..1]
+  + rubric_for_code(String a_code) : String [0..1]
+}
+
+OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS <|-- TERMINOLOGY_SERVICE
+OPENEHR_CODE_SET_IDENTIFIERS <|-- TERMINOLOGY_SERVICE
+
+@enduml

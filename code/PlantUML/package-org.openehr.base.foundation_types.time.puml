@@ -1,0 +1,131 @@
+@startuml
+' PlantUML diagram for org.openehr.base.foundation_types.time
+' Generated on 2025-08-08 14:17:14
+
+title org.openehr.base.foundation_types.time package
+
+class Iso8601_date_time {
+  + year() : Integer [0..1]
+  + month() : Integer [0..1]
+  + day() : Integer [0..1]
+  + hour() : Integer [0..1]
+  + minute() : Integer [0..1]
+  + second() : Integer [0..1]
+  + fractional_second() : Real [0..1]
+  + timezone() : Iso8601_timezone [0..1]
+  + month_unknown() : Boolean [0..1]
+  + day_unknown() : Boolean [0..1]
+  + minute_unknown() : Boolean [0..1]
+  + second_unknown() : Boolean [0..1]
+  + is_decimal_sign_comma() : Boolean [0..1]
+  + is_partial() : Boolean [0..1]
+  + is_extended() : Boolean [0..1]
+  + has_fractional_second() : Boolean [0..1]
+  + as_string() : String [0..1]
+  + add(Iso8601_duration a_diff) : Iso8601_date_time [0..1]
+  + subtract(Iso8601_duration a_diff) : Iso8601_date_time [0..1]
+  + diff(Iso8601_date_time a_date_time) : Iso8601_duration [0..1]
+  + add_nominal(Iso8601_duration a_diff) : Iso8601_date [0..1]
+  + subtract_nominal(Iso8601_duration a_diff) : Iso8601_date [0..1]
+}
+
+class Iso8601_duration {
+  + is_extended() : Boolean [0..1]
+  + is_partial() : Boolean [0..1]
+  + years() : Integer [0..1]
+  + months() : Integer [0..1]
+  + days() : Integer [0..1]
+  + hours() : Integer [0..1]
+  + minutes() : Integer [0..1]
+  + seconds() : Integer [0..1]
+  + fractional_seconds() : Real [0..1]
+  + weeks() : Integer [0..1]
+  + is_decimal_sign_comma() : Boolean [0..1]
+  + to_seconds() : Real [0..1]
+  + as_string() : String [0..1]
+  + add(Iso8601_duration a_val) : Iso8601_duration [0..1]
+  + subtract(Iso8601_duration a_val) : Iso8601_duration [0..1]
+  + multiply(Real a_val) : Iso8601_duration [0..1]
+  + divide(Real a_val) : Iso8601_duration [0..1]
+  + negative() : Iso8601_duration [0..1]
+}
+
+class Iso8601_time {
+  + hour() : Integer [0..1]
+  + minute() : Integer [0..1]
+  + second() : Integer [0..1]
+  + fractional_second() : Real [0..1]
+  + timezone() : Iso8601_timezone [0..1]
+  + minute_unknown() : Boolean [0..1]
+  + second_unknown() : Boolean [0..1]
+  + is_decimal_sign_comma() : Boolean [0..1]
+  + is_partial() : Boolean [0..1]
+  + is_extended() : Boolean [0..1]
+  + has_fractional_second() : Boolean [0..1]
+  + as_string() : String [0..1]
+  + add(Iso8601_duration a_diff) : Iso8601_time [0..1]
+  + subtract(Iso8601_duration a_diff) : Iso8601_time [0..1]
+  + diff(Iso8601_time a_time) : Iso8601_duration [0..1]
+}
+
+class Iso8601_timezone {
+  + hour() : Integer [0..1]
+  + minute() : Integer [0..1]
+  + sign() : Integer [0..1]
+  + minute_unknown() : Boolean [0..1]
+  + is_partial() : Boolean [0..1]
+  + is_extended() : Boolean [0..1]
+  + is_gmt() : Boolean [0..1]
+  + as_string() : String [0..1]
+}
+
+abstract class Iso8601_type {
+  + value : String [1..1]
+  + {abstract} is_partial() : Boolean [0..1]
+  + {abstract} is_extended() : Boolean [0..1]
+}
+
+class Iso8601_date {
+  + year() : Integer [0..1]
+  + month() : Integer [0..1]
+  + day() : Integer [0..1]
+  + timezone() : Iso8601_timezone [0..1]
+  + month_unknown() : Boolean [0..1]
+  + day_unknown() : Boolean [0..1]
+  + is_partial() : Boolean [0..1]
+  + is_extended() : Boolean [0..1]
+  + as_string() : String [0..1]
+  + add(Iso8601_duration a_diff) : Iso8601_date [0..1]
+  + subtract(Iso8601_duration a_diff) : Iso8601_date [0..1]
+  + diff(Iso8601_date a_date) : Iso8601_duration [0..1]
+  + add_nominal(Iso8601_duration a_diff) : Iso8601_date [0..1]
+  + subtract_nominal(Iso8601_duration a_diff) : Iso8601_date [0..1]
+}
+
+class Time_Definitions {
+  + valid_year(Integer y) : Boolean [0..1]
+  + valid_month(Integer m) : Boolean [0..1]
+  + valid_day(Integer y, Integer m, Integer d) : Boolean [0..1]
+  + valid_hour(Integer h, Integer m, Integer s) : Boolean [0..1]
+  + valid_minute(Integer m) : Boolean [0..1]
+  + valid_second(Integer s) : Boolean [0..1]
+  + valid_fractional_second(Double fs) : Boolean [0..1]
+  + valid_iso8601_date(String s) : Boolean [0..1]
+  + valid_iso8601_time(String s) : Boolean [0..1]
+  + valid_iso8601_date_time(String s) : Boolean [0..1]
+  + valid_iso8601_duration(String s) : Boolean [0..1]
+}
+
+abstract class Temporal {
+}
+
+Iso8601_type <|-- Iso8601_date_time
+Iso8601_type <|-- Iso8601_duration
+Iso8601_type <|-- Iso8601_time
+Iso8601_type <|-- Iso8601_timezone
+Temporal <|-- Iso8601_type
+Time_Definitions <|-- Iso8601_type
+Iso8601_type <|-- Iso8601_date
+Ordered <|-- Temporal
+
+@enduml

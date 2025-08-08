@@ -1,0 +1,21 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.data_types.uri-DV_URI
+' Generated on 2025-08-08 14:17:14
+
+title DV_URI class
+
+class DV_URI {
+  + value : String [1..1]
+  + scheme() : String [0..1]
+  + path() : String [0..1]
+  + fragment_id() : String [0..1]
+  + query() : String [0..1]
+}
+
+abstract class DATA_VALUE {
+}
+
+DATA_VALUE <|-- DV_URI
+
+
+@enduml

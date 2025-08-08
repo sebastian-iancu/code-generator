@@ -1,0 +1,16 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.resource-RESOURCE_USAGE
+' Generated on 2025-08-08 14:17:14
+
+title RESOURCE_USAGE class
+
+class RESOURCE_USAGE {
+  + prospective : RESOURCE_USE [1..1]
+  + actual : RESOURCE_USE [1..1]
+  + type : DV_TEXT [1..1]
+  + description : String [0..1]
+  + reference : Any [0..1]
+}
+
+
+@enduml
