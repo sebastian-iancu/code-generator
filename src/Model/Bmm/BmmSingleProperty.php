@@ -4,6 +4,7 @@ namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 
 use JsonSerializable;
 use OpenEHR\Tools\CodeGen\Model\YamlSerializable;
+use Symfony\Component\Yaml\Tag\TaggedValue;
 
 /**
  * Class representing a BMM single property
@@ -32,6 +33,7 @@ readonly class BmmSingleProperty extends AbstractBmmProperty implements JsonSeri
     public function jsonSerialize(): array
     {
         return array_filter([
+            '_type' => 'P_BMM_SINGLE_PROPERTY',
             'name' => $this->name,
             'documentation' => $this->documentation,
             'is_mandatory' => $this->isMandatory,
@@ -40,16 +42,16 @@ readonly class BmmSingleProperty extends AbstractBmmProperty implements JsonSeri
     }
 
     /**
-     * @return array<string, mixed>
+     * @return TaggedValue
      */
-    public function yamlSerialize(): array
+    public function yamlSerialize(): TaggedValue
     {
-        return array_filter([
+        return new TaggedValue('P_BMM_SINGLE_PROPERTY', array_filter([
             'name' => $this->name,
             'documentation' => $this->documentation,
             'is_mandatory' => $this->isMandatory,
             'type' => $this->type,
-        ]);
+        ]));
     }
 
     /**

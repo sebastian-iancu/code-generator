@@ -135,11 +135,13 @@
                     "is_abstract": true,
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Any"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -148,11 +150,13 @@
                     "documentation": "Reference equality for reference types, value equality for value types.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Any"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -161,11 +165,13 @@
                     "documentation": "Create new instance of a type.",
                     "parameters": {
                         "a_type": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "a_type",
                             "type": "String"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Any"
                     }
                 },
@@ -174,11 +180,13 @@
                     "documentation": "Type name of an object as a string. May include generic parameters, as in `\"Interval<Time>\"`.",
                     "parameters": {
                         "an_object": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "an_object",
                             "type": "Any"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 },
@@ -187,11 +195,13 @@
                     "documentation": "True if current object not equal to `_other_`. Returns not `_equal_()`.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Ordered"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 }
@@ -224,6 +234,7 @@
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -238,6 +249,7 @@
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "V"
                     }
                 }
@@ -269,6 +281,7 @@
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -277,6 +290,7 @@
                     "documentation": "Number of items in container.",
                     "is_abstract": true,
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -285,6 +299,7 @@
                     "documentation": "True if container is empty.",
                     "is_abstract": true,
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -293,11 +308,13 @@
                     "documentation": "Existential quantifier applied to container, taking one agent argument `_test_` whose signature is `(v:T): Boolean`.",
                     "parameters": {
                         "test": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "test",
                             "type": "Operation"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -306,11 +323,13 @@
                     "documentation": "Universal quantifier applied to container, taking one agent argument `_test_` whose signature is `(v:T): Boolean`.",
                     "parameters": {
                         "test": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "test",
                             "type": "Operation"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -319,6 +338,7 @@
                     "documentation": "Return a List all items matching the predicate function `_test_` which has signature `(v:T): Boolean`. If no matches, an empty List is returned.",
                     "parameters": {
                         "test": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "test",
                             "type": "Operation"
                         }
@@ -335,11 +355,13 @@
                     "documentation": "Return first item matching the predicate function `_test_` which has signature `(v:T): Boolean`, or Void if no match.",
                     "parameters": {
                         "test": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "test",
                             "type": "Operation"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "T"
                     },
                     "is_nullable": true
@@ -363,6 +385,7 @@
                     "name": "first",
                     "documentation": "Return first element.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "T"
                     }
                 },
@@ -370,6 +393,7 @@
                     "name": "last",
                     "documentation": "Return last element.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "T"
                     }
                 }
@@ -410,11 +434,13 @@
                     "documentation": "Return item for key  `_a_key_`.",
                     "parameters": {
                         "a_key": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "a_key",
                             "type": "Integer"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "T"
                     }
                 }
@@ -448,11 +474,13 @@
                     "documentation": "Integer addition.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Integer"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -461,11 +489,13 @@
                     "documentation": "Integer subtraction.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Integer"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -474,11 +504,13 @@
                     "documentation": "Integer multiplication.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Integer"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -487,11 +519,13 @@
                     "documentation": "Integer division.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Integer"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Double"
                     }
                 },
@@ -500,11 +534,13 @@
                     "documentation": "Integer exponentiation.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Double"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Double"
                     }
                 },
@@ -513,11 +549,13 @@
                     "documentation": "Return self modulo other.",
                     "parameters": {
                         "mod": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "mod",
                             "type": "Integer"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -526,11 +564,13 @@
                     "documentation": "Returns True if current Integer is less than `_other_`.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Integer"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -538,6 +578,7 @@
                     "name": "negative",
                     "documentation": "Generate negative of current Integer value.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -546,11 +587,13 @@
                     "documentation": "Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Integer"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -559,11 +602,13 @@
                     "documentation": "Reference equality for reference types, value equality for value types.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Integer"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 }
@@ -580,6 +625,7 @@
                     "name": "floor",
                     "documentation": "Return the greatest integer no greater than the value of this object.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -588,11 +634,13 @@
                     "documentation": "Double-precision real number addition.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Double"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Double"
                     }
                 },
@@ -601,11 +649,13 @@
                     "documentation": "Double-precision real number subtraction.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Double"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Double"
                     }
                 },
@@ -614,11 +664,13 @@
                     "documentation": "Double-precision real number multiplication.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Double"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Double"
                     }
                 },
@@ -627,11 +679,13 @@
                     "documentation": "Double-precision real number division.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Double"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Double"
                     }
                 },
@@ -640,11 +694,13 @@
                     "documentation": "Double-precision real number exponentiation.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Double"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Double"
                     }
                 },
@@ -653,11 +709,13 @@
                     "documentation": "Returns True if current Double is less than `_other_`.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Double"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -665,6 +723,7 @@
                     "name": "negative",
                     "documentation": "Generate negative of current Double value.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Double"
                     }
                 },
@@ -673,11 +732,13 @@
                     "documentation": "Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Double"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -686,11 +747,13 @@
                     "documentation": "Reference equality for reference types, value equality for value types.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Double"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 }
@@ -710,11 +773,13 @@
                     "is_abstract": true,
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Numeric"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Numeric"
                     }
                 },
@@ -724,11 +789,13 @@
                     "is_abstract": true,
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Numeric"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Numeric"
                     }
                 },
@@ -738,11 +805,13 @@
                     "is_abstract": true,
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Numeric"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Numeric"
                     }
                 },
@@ -752,11 +821,13 @@
                     "is_abstract": true,
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Numeric"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Numeric"
                     }
                 },
@@ -766,11 +837,13 @@
                     "is_abstract": true,
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Numeric"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Numeric"
                     }
                 },
@@ -779,6 +852,7 @@
                     "documentation": "Generate negative of current value.",
                     "is_abstract": true,
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Numeric"
                     }
                 }
@@ -810,6 +884,7 @@
                     "documentation": "Logical conjunction of this with `_other_`.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Boolean"
                         }
@@ -819,6 +894,7 @@
                         "Post_commutative": "Result = (other and self)"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -827,6 +903,7 @@
                     "documentation": "Boolean semi-strict conjunction with `_other_`.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Boolean"
                         }
@@ -835,6 +912,7 @@
                         "Post_de_Morgan": "Result = not (not self or else not other)"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -843,6 +921,7 @@
                     "documentation": "Boolean disjunction with `_other_`.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Boolean"
                         }
@@ -853,6 +932,7 @@
                         "Post_consistent_with_semi_strict": "Result implies (self or else other)"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -861,6 +941,7 @@
                     "documentation": "Boolean semi-strict disjunction with `_other_`.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Boolean"
                         }
@@ -869,6 +950,7 @@
                         "Post_de_Morgan": "Result = not (not self and then not other)"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -877,6 +959,7 @@
                     "documentation": "Boolean exclusive or with `_other_`.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Boolean"
                         }
@@ -885,6 +968,7 @@
                         "Post_definition": "Result = ((self or other) and not (self and other))"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -893,6 +977,7 @@
                     "documentation": "Boolean implication of `_other_` (semi-strict)",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Boolean"
                         }
@@ -901,6 +986,7 @@
                         "Post_definition": "Result = (not self or else other)"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -908,6 +994,7 @@
                     "name": "negation",
                     "documentation": "Boolean negation of the current value.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 }
@@ -929,6 +1016,7 @@
                     "name": "is_empty",
                     "documentation": "True if string is empty, i.e. equal to \"\".",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -936,6 +1024,7 @@
                     "name": "is_integer",
                     "documentation": "True if string can be parsed as an integer.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -943,6 +1032,7 @@
                     "name": "as_integer",
                     "documentation": "Return the integer corresponding to the integer value represented in this string.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -951,11 +1041,13 @@
                     "documentation": "Concatenation operator - causes `_other_` to be appended to this string.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "String"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 },
@@ -964,11 +1056,13 @@
                     "documentation": "Lexical comparison of string content based on ordering in relevant character set.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "String"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -977,11 +1071,13 @@
                     "documentation": "Return True if this String contains `_other_` (case-sensitive).",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "String"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 }
@@ -998,6 +1094,7 @@
                     "name": "floor",
                     "documentation": "Return the greatest integer no greater than the value of this object.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -1006,11 +1103,13 @@
                     "documentation": "Real number addition.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Real"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Real"
                     }
                 },
@@ -1019,11 +1118,13 @@
                     "documentation": "Real number subtraction.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Real"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Real"
                     }
                 },
@@ -1032,11 +1133,13 @@
                     "documentation": "Real number multiplication.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Real"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Real"
                     }
                 },
@@ -1045,11 +1148,13 @@
                     "documentation": "Real number division.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Real"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Double"
                     }
                 },
@@ -1058,11 +1163,13 @@
                     "documentation": "Real number exponentiation.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Double"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Double"
                     }
                 },
@@ -1071,11 +1178,13 @@
                     "documentation": "Returns True if current Real is less than `_other_`.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Real"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1083,6 +1192,7 @@
                     "name": "negative",
                     "documentation": "Generate negative of current Real value.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Real"
                     }
                 },
@@ -1091,11 +1201,13 @@
                     "documentation": "Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Real"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1104,11 +1216,13 @@
                     "documentation": "Reference equality for reference types, value equality for value types.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Real"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 }
@@ -1126,11 +1240,13 @@
                     "documentation": "Large integer addition.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Integer"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer64"
                     }
                 },
@@ -1139,11 +1255,13 @@
                     "documentation": "Large integer subtraction.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Integer"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer64"
                     }
                 },
@@ -1152,11 +1270,13 @@
                     "documentation": "Large integer multiplication.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Integer"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer64"
                     }
                 },
@@ -1165,11 +1285,13 @@
                     "documentation": "Large integer division.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Integer"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Double"
                     }
                 },
@@ -1178,11 +1300,13 @@
                     "documentation": "Large integer exponentiation.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Double"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Double"
                     }
                 },
@@ -1191,11 +1315,13 @@
                     "documentation": "Large integer modulus.",
                     "parameters": {
                         "mod": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "mod",
                             "type": "Integer"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer64"
                     }
                 },
@@ -1204,11 +1330,13 @@
                     "documentation": "Returns True if current Integer is less than `_other_`.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Integer64"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1216,6 +1344,7 @@
                     "name": "negative",
                     "documentation": "Generate negative of current Integer value.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer64"
                     }
                 },
@@ -1224,11 +1353,13 @@
                     "documentation": "Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Integer64"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1237,11 +1368,13 @@
                     "documentation": "Reference equality for reference types, value equality for value types.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Integer64"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 }
@@ -1261,11 +1394,13 @@
                     "is_abstract": true,
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Ordered"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1274,6 +1409,7 @@
                     "documentation": "True if current object less than or equal to `_other_`.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Ordered"
                         }
@@ -1282,6 +1418,7 @@
                         "Post_result": "not (other < self)"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1290,6 +1427,7 @@
                     "documentation": "True if current object greater than `_other_`.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Ordered"
                         }
@@ -1298,6 +1436,7 @@
                         "Post_result": "Result = (other < self)"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1306,6 +1445,7 @@
                     "documentation": "True if current object greater than or equal to `_other_`.",
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Ordered"
                         }
@@ -1314,6 +1454,7 @@
                         "Post_result": "Result = (other <= self)"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 }
@@ -1336,6 +1477,7 @@
                     "name": "year",
                     "documentation": "Extract the year part of the date as an Integer.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -1346,6 +1488,7 @@
                         "Pre": "not month_unknown"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -1356,6 +1499,7 @@
                         "Pre": "not day_unknown"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -1366,6 +1510,7 @@
                         "Pre": "not hour_unknown"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -1376,6 +1521,7 @@
                         "Pre": "not minute_unknown"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -1386,6 +1532,7 @@
                         "Pre": "not second_unknown"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -1393,6 +1540,7 @@
                     "name": "fractional_second",
                     "documentation": "Extract the fractional seconds part of the date\/time (i.e. following to any decimal sign) as a Real, or return 0.0 if not present.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Real"
                     }
                 },
@@ -1400,6 +1548,7 @@
                     "name": "timezone",
                     "documentation": "Timezone; may be Void.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Iso8601_timezone"
                     }
                 },
@@ -1407,6 +1556,7 @@
                     "name": "month_unknown",
                     "documentation": "Indicates whether month in year is unknown.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1414,6 +1564,7 @@
                     "name": "day_unknown",
                     "documentation": "Indicates whether day in month is unknown.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1421,6 +1572,7 @@
                     "name": "minute_unknown",
                     "documentation": "Indicates whether minute in hour is known.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1428,6 +1580,7 @@
                     "name": "second_unknown",
                     "documentation": "Indicates whether minute in hour is known.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1435,6 +1588,7 @@
                     "name": "is_decimal_sign_comma",
                     "documentation": "True if this time has a decimal part indicated by `','` (comma) rather than `'.'` (period).",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1442,6 +1596,7 @@
                     "name": "is_partial",
                     "documentation": "True if this date time is partial, i.e. if seconds or more is missing.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1449,6 +1604,7 @@
                     "name": "is_extended",
                     "documentation": "True if this date\/time uses `'-'`, `':'` separators.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1456,6 +1612,7 @@
                     "name": "has_fractional_second",
                     "documentation": "True if the `_fractional_second_` part is significant (i.e. even if = 0.0).",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1463,6 +1620,7 @@
                     "name": "as_string",
                     "documentation": "Return the string value in extended format.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 },
@@ -1471,11 +1629,13 @@
                     "documentation": "Arithmetic addition of a duration to a date\/time.",
                     "parameters": {
                         "a_diff": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "a_diff",
                             "type": "Iso8601_duration"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Iso8601_date_time"
                     }
                 },
@@ -1484,11 +1644,13 @@
                     "documentation": "Arithmetic subtraction of a duration from a date\/time.",
                     "parameters": {
                         "a_diff": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "a_diff",
                             "type": "Iso8601_duration"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Iso8601_date_time"
                     }
                 },
@@ -1497,11 +1659,13 @@
                     "documentation": "Difference of two date\/times.",
                     "parameters": {
                         "a_date_time": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "a_date_time",
                             "type": "Iso8601_date_time"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Iso8601_duration"
                     }
                 },
@@ -1510,11 +1674,13 @@
                     "documentation": "Addition of nominal duration represented by `_a_diff_`. See `Iso8601_date._add_nominal_()` for semantics.",
                     "parameters": {
                         "a_diff": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "a_diff",
                             "type": "Iso8601_duration"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Iso8601_date"
                     }
                 },
@@ -1523,11 +1689,13 @@
                     "documentation": "Subtraction of nominal duration represented by `_a_diff_`. See `_add_nominal_()` for semantics.",
                     "parameters": {
                         "a_diff": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "a_diff",
                             "type": "Iso8601_duration"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Iso8601_date"
                     }
                 }
@@ -1558,6 +1726,7 @@
                     "name": "is_extended",
                     "documentation": "Returns True.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1565,6 +1734,7 @@
                     "name": "is_partial",
                     "documentation": "Returns False.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1572,6 +1742,7 @@
                     "name": "years",
                     "documentation": "Number of years in the `_value_`, i.e. the number preceding the `'Y'` in the `'YMD'` part, if one exists.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -1579,6 +1750,7 @@
                     "name": "months",
                     "documentation": "Number of months in the `_value_`, i.e. the value preceding the `'M'` in the `'YMD'` part, if one exists.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -1586,6 +1758,7 @@
                     "name": "days",
                     "documentation": "Number of days in the `_value_`, i.e. the number preceding the `'D'` in the `'YMD'` part, if one exists.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -1593,6 +1766,7 @@
                     "name": "hours",
                     "documentation": "Number of hours in the `_value_`, i.e. the number preceding the `'H'` in the `'HMS'` part, if one exists.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -1600,6 +1774,7 @@
                     "name": "minutes",
                     "documentation": "Number of minutes in the `_value_`, i.e. the number preceding the `'M'` in the `'HMS'` part, if one exists.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -1607,6 +1782,7 @@
                     "name": "seconds",
                     "documentation": "Number of seconds in the `_value_`, i.e. the integer number preceding the `'S'` in the `'HMS'` part, if one exists.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -1614,6 +1790,7 @@
                     "name": "fractional_seconds",
                     "documentation": "Fractional seconds in the `_value_`, i.e. the decimal part of the number preceding the `'S'` in the `'HMS'` part, if one exists.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Real"
                     }
                 },
@@ -1621,6 +1798,7 @@
                     "name": "weeks",
                     "documentation": "Number of weeks in the `_value_`, i.e. the value preceding the `W`, if one exists.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -1628,6 +1806,7 @@
                     "name": "is_decimal_sign_comma",
                     "documentation": "True if this time has a decimal part indicated by ',' (comma) rather than '.' (period).",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1635,6 +1814,7 @@
                     "name": "to_seconds",
                     "documentation": "Total number of seconds equivalent (including fractional) of entire duration. Where non-definite elements such as year and month (i.e. 'Y' and 'M') are included, the corresponding 'average' durations from `Time_definitions` are used to compute the result.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Real"
                     }
                 },
@@ -1642,6 +1822,7 @@
                     "name": "as_string",
                     "documentation": "Return the duration string value.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 },
@@ -1650,11 +1831,13 @@
                     "documentation": "Arithmetic addition of a duration to a duration, via conversion to seconds, using `Time_definitions._Average_days_in_year_` and `Time_definitions._Average_days_in_month_`",
                     "parameters": {
                         "a_val": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "a_val",
                             "type": "Iso8601_duration"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Iso8601_duration"
                     }
                 },
@@ -1663,11 +1846,13 @@
                     "documentation": "Arithmetic subtraction of a duration from a duration, via conversion to seconds, using `Time_definitions._Average_days_in_year_` and `Time_definitions._Average_days_in_month_`",
                     "parameters": {
                         "a_val": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "a_val",
                             "type": "Iso8601_duration"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Iso8601_duration"
                     }
                 },
@@ -1676,11 +1861,13 @@
                     "documentation": "Arithmetic multiplication a duration by a number.",
                     "parameters": {
                         "a_val": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "a_val",
                             "type": "Real"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Iso8601_duration"
                     }
                 },
@@ -1689,11 +1876,13 @@
                     "documentation": "Arithmetic division of a duration by a number.",
                     "parameters": {
                         "a_val": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "a_val",
                             "type": "Real"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Iso8601_duration"
                     }
                 },
@@ -1701,6 +1890,7 @@
                     "name": "negative",
                     "documentation": "Generate negative of current duration value.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Iso8601_duration"
                     }
                 }
@@ -1727,6 +1917,7 @@
                     "name": "hour",
                     "documentation": "Extract the hour part of the date\/time as an Integer.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -1734,6 +1925,7 @@
                     "name": "minute",
                     "documentation": "Extract the minute part of the time as an Integer, or return 0 if not present.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -1741,6 +1933,7 @@
                     "name": "second",
                     "documentation": "Extract the integral seconds part of the time (i.e. prior to any decimal sign) as an Integer, or return 0 if not present.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -1751,6 +1944,7 @@
                         "Pre": "not second_unknown"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Real"
                     }
                 },
@@ -1758,6 +1952,7 @@
                     "name": "timezone",
                     "documentation": "Timezone; may be Void.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Iso8601_timezone"
                     }
                 },
@@ -1765,6 +1960,7 @@
                     "name": "minute_unknown",
                     "documentation": "Indicates whether minute is unknown. If so, the time is of the form \u201chh\u201d.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1772,6 +1968,7 @@
                     "name": "second_unknown",
                     "documentation": "Indicates whether second is unknown. If so and month is known, the time is of the form `\"hh:mm\"` or `\"hhmm\"`.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1779,6 +1976,7 @@
                     "name": "is_decimal_sign_comma",
                     "documentation": "True if this time has a decimal part indicated by `','` (comma) rather than `'.'` (period).",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1786,6 +1984,7 @@
                     "name": "is_partial",
                     "documentation": "True if this time is partial, i.e. if seconds or more is missing.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1793,6 +1992,7 @@
                     "name": "is_extended",
                     "documentation": "True if this time uses `'-'`, `':'` separators.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1800,6 +2000,7 @@
                     "name": "has_fractional_second",
                     "documentation": "True if the `_fractional_second_` part is significant (i.e. even if = 0.0).",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1807,6 +2008,7 @@
                     "name": "as_string",
                     "documentation": "Return string value in extended format.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 },
@@ -1815,11 +2017,13 @@
                     "documentation": "Arithmetic addition of a duration to a time.",
                     "parameters": {
                         "a_diff": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "a_diff",
                             "type": "Iso8601_duration"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Iso8601_time"
                     }
                 },
@@ -1828,11 +2032,13 @@
                     "documentation": "Arithmetic subtraction of a duration from a time.",
                     "parameters": {
                         "a_diff": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "a_diff",
                             "type": "Iso8601_duration"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Iso8601_time"
                     }
                 },
@@ -1841,11 +2047,13 @@
                     "documentation": "Difference of two times.",
                     "parameters": {
                         "a_time": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "a_time",
                             "type": "Iso8601_time"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Iso8601_duration"
                     }
                 }
@@ -1868,6 +2076,7 @@
             ],
             "properties": {
                 "value": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "value",
                     "documentation": "Representation of all descendants is a single String.",
                     "is_mandatory": true,
@@ -1880,6 +2089,7 @@
                     "documentation": "True if this date time is partial, i.e. if trailing end (right hand) value(s) is\/are missing.",
                     "is_abstract": true,
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1888,6 +2098,7 @@
                     "documentation": "True if this ISO8601 string is in the 'extended' form, i.e. uses `'-'` and \/ or `':'` separators. This is the preferred format.",
                     "is_abstract": true,
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 }
@@ -1904,6 +2115,7 @@
                     "name": "year",
                     "documentation": "Extract the year part of the date as an Integer.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -1914,6 +2126,7 @@
                         "Pre": "not month_unknown"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -1924,6 +2137,7 @@
                         "Pre": "not day_unknown"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -1931,6 +2145,7 @@
                     "name": "timezone",
                     "documentation": "Timezone; may be Void.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Iso8601_timezone"
                     }
                 },
@@ -1938,6 +2153,7 @@
                     "name": "month_unknown",
                     "documentation": "Indicates whether month in year is unknown. If so, the date is of the form `\"YYYY\"`.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1945,6 +2161,7 @@
                     "name": "day_unknown",
                     "documentation": "Indicates whether day in month is unknown. If so, and month is known, the date is of the form `\"YYYY-MM\"` or `\"YYYYMM\"`.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1952,6 +2169,7 @@
                     "name": "is_partial",
                     "documentation": "True if this date is partial, i.e. if days or more is missing.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1959,6 +2177,7 @@
                     "name": "is_extended",
                     "documentation": "True if this date uses `'-'` separators.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -1966,6 +2185,7 @@
                     "name": "as_string",
                     "documentation": "Return string value in extended format.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 },
@@ -1974,11 +2194,13 @@
                     "documentation": "Arithmetic addition of a duration to a date.",
                     "parameters": {
                         "a_diff": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "a_diff",
                             "type": "Iso8601_duration"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Iso8601_date"
                     }
                 },
@@ -1987,11 +2209,13 @@
                     "documentation": "Arithmetic subtraction of a duration from a date.",
                     "parameters": {
                         "a_diff": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "a_diff",
                             "type": "Iso8601_duration"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Iso8601_date"
                     }
                 },
@@ -2000,11 +2224,13 @@
                     "documentation": "Difference of two dates.",
                     "parameters": {
                         "a_date": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "a_date",
                             "type": "Iso8601_date"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Iso8601_duration"
                     }
                 },
@@ -2013,11 +2239,13 @@
                     "documentation": "Addition of nominal duration represented by `_a_diff_`. For example, a duration of `'P1Y'` means advance to the same date next year, with the exception of the date 29 February in a leap year, to which the addition of a nominal year will result in 28 February of the following year. Similarly, `'P1M'` is understood here as a nominal month, the addition of which will result in one of:\n\n* the same day in the following month, if it exists, or;\n* one or two days less where the following month is shorter, or;\n* in the case of adding a month to the date 31 Jan, the result will be 28 Feb in a non-leap year (i.e. three less) and 29 Feb in a leap year (i.e. two less).",
                     "parameters": {
                         "a_diff": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "a_diff",
                             "type": "Iso8601_duration"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Iso8601_date"
                     }
                 },
@@ -2026,11 +2254,13 @@
                     "documentation": "Subtraction of nominal duration represented by `_a_diff_`. See `_add_nominal_()` for semantics.",
                     "parameters": {
                         "a_diff": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "a_diff",
                             "type": "Iso8601_duration"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Iso8601_date"
                     }
                 }
@@ -2075,6 +2305,7 @@
                     "name": "is_open",
                     "documentation": "True if this interval imposes no constraints, i.e. is set to `0..*`.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -2082,6 +2313,7 @@
                     "name": "is_optional",
                     "documentation": "True if this interval expresses optionality, i.e. `0..1`.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -2089,6 +2321,7 @@
                     "name": "is_mandatory",
                     "documentation": "True if this interval expresses mandation, i.e. `1..1`.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -2096,6 +2329,7 @@
                     "name": "is_prohibited",
                     "documentation": "True if this interval is set to `0..0`.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 }
@@ -2128,24 +2362,28 @@
                     "type": "T"
                 },
                 "lower_unbounded": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "lower_unbounded",
                     "documentation": "True if `_lower_` boundary open (i.e. = `-infinity`).",
                     "is_mandatory": true,
                     "type": "Boolean"
                 },
                 "upper_unbounded": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "upper_unbounded",
                     "documentation": "True if `_upper_` boundary open (i.e. = `+infinity`).",
                     "is_mandatory": true,
                     "type": "Boolean"
                 },
                 "lower_included": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "lower_included",
                     "documentation": "True if `_lower_` boundary value included in range, if `not _lower_unbounded_`.",
                     "is_mandatory": true,
                     "type": "Boolean"
                 },
                 "upper_included": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "upper_included",
                     "documentation": "True if `_upper_` boundary value included in range if `not _upper_unbounded_`.",
                     "is_mandatory": true,
@@ -2168,6 +2406,7 @@
                         "Post_result": "Result = (lower_unbounded or lower_included and v >= lower) or v > lower and (upper_unbounded or upper_included and v <= upper or v < upper)"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -2177,11 +2416,13 @@
                     "is_abstract": true,
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Interval"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -2191,11 +2432,13 @@
                     "is_abstract": true,
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Interval"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -2205,11 +2448,13 @@
                     "is_abstract": true,
                     "parameters": {
                         "other": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
                             "type": "Any"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 }
@@ -2226,18 +2471,21 @@
             "documentation": "Express constraints on the cardinality of container objects which are the values of multiply-valued attributes, including uniqueness and ordering, providing the means to state that a container acts like a logical list, set or bag.",
             "properties": {
                 "interval": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "interval",
                     "documentation": "The interval of this cardinality. ",
                     "is_mandatory": true,
                     "type": "Multiplicity_interval"
                 },
                 "is_ordered": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "is_ordered",
                     "documentation": "True if the members of the container attribute to which this cardinality refers are ordered. ",
                     "is_mandatory": true,
                     "type": "Boolean"
                 },
                 "is_unique": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "is_unique",
                     "documentation": "True if the members of the container attribute to which this cardinality refers are unique.",
                     "is_mandatory": true,
@@ -2249,6 +2497,7 @@
                     "name": "is_bag",
                     "documentation": "True if the semantics of this cardinality represent a bag, i.e. unordered, non-unique membership.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -2256,6 +2505,7 @@
                     "name": "is_list",
                     "documentation": "True if the semantics of this cardinality represent a list, i.e. ordered, non-unique membership.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -2263,6 +2513,7 @@
                     "name": "is_set",
                     "documentation": "True if the semantics of this cardinality represent a set, i.e. unordered, unique membership.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 }
@@ -2276,23 +2527,27 @@
             ],
             "properties": {
                 "terminology_id": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "terminology_id",
                     "documentation": "The archetype environment namespace identifier used to identify a terminology. Typically a value like `\"snomed_ct\"` that is mapped elsewhere to the full URI identifying the terminology.",
                     "is_mandatory": true,
                     "type": "String"
                 },
                 "terminology_version": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "terminology_version",
                     "documentation": "Optional string value representing terminology version, typically a date or dotted numeric.",
                     "type": "String"
                 },
                 "code_string": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "code_string",
                     "documentation": "A terminology code or post-coordinated code expression, if supported by the terminology. The code may refer to a single term, a value set consisting of multiple terms, or some other entity representable within the terminology.",
                     "is_mandatory": true,
                     "type": "String"
                 },
                 "uri": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "uri",
                     "documentation": "The URI reference that may be used as a concrete key into a notional terminology service for queries that can obtain the term text, definition, and other associated elements.",
                     "type": "Uri"
@@ -2307,12 +2562,14 @@
             ],
             "properties": {
                 "concept": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "concept",
                     "documentation": "Reference to the terminology concept formally representing this term.",
                     "is_mandatory": true,
                     "type": "Terminology_code"
                 },
                 "text": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "text",
                     "documentation": "Text of term.",
                     "is_mandatory": true,
@@ -2333,6 +2590,7 @@
                     "name": "qualified_rm_entity",
                     "documentation": "Globally qualified reference model entity, e.g.  `\"openehr-EHR-OBSERVATION\"`.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 },
@@ -2340,6 +2598,7 @@
                     "name": "domain_concept",
                     "documentation": "Name of the concept represented by this archetype, including specialisation, e.g. `\"Biochemistry_result-cholesterol\"`. ",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 },
@@ -2347,6 +2606,7 @@
                     "name": "rm_originator",
                     "documentation": "Organisation originating the reference model on which this archetype is based, e.g. `\"openEHR\"`, `\"CEN\"`, `\"HL7\"`. ",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 },
@@ -2354,6 +2614,7 @@
                     "name": "rm_name",
                     "documentation": "Name of the reference model, e.g. `\"RIM\"`,  `\"EHR\"`,  `\"EN13606\"`. ",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 },
@@ -2361,6 +2622,7 @@
                     "name": "rm_entity",
                     "documentation": "Name of the ontological level within the reference model to which this archetype is targeted, e.g. for openEHR:  `\"FOLDER\"`, `\"COMPOSITION\"`, `\"SECTION\"`, `\"OBSERVATION\"`.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 },
@@ -2368,6 +2630,7 @@
                     "name": "specialisation",
                     "documentation": "Name of specialisation of concept, if this archetype is a specialisation of another archetype, e.g. `\"cholesterol\"`.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 },
@@ -2375,6 +2638,7 @@
                     "name": "version_id",
                     "documentation": "Version of this archetype. \n",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 }
@@ -2388,6 +2652,7 @@
             ],
             "properties": {
                 "scheme": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "scheme",
                     "documentation": "Name of the scheme to which this identifier conforms. Ideally this name will be recognisable globally but realistically it may be a local ad hoc scheme whose name is not controlled or standardised in any way. ",
                     "is_mandatory": true,
@@ -2410,11 +2675,13 @@
             ],
             "properties": {
                 "path": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "path",
                     "documentation": "The path to an instance, as an absolute path with respect to the object found at `VERSION._data_`. An empty path means that the object referred to by `_id_` is being specified. ",
                     "type": "String"
                 },
                 "id": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "id",
                     "documentation": "Globally unique id of an object, regardless of where it is stored.",
                     "is_mandatory": true,
@@ -2426,6 +2693,7 @@
                     "name": "as_uri",
                     "documentation": "A URI form of the reference, created by concatenating the following: \n\n* scheme, e.g. `ehr:`, derived from `_namespace_`\n* `_id.value_`\n* `\/` + `_path_`, where `_path_` is non-empty\n",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 }
@@ -2437,6 +2705,7 @@
             "is_abstract": true,
             "properties": {
                 "value": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "value",
                     "documentation": "The value of the id in the form defined below. ",
                     "is_mandatory": true,
@@ -2449,18 +2718,21 @@
             "documentation": "Class describing a reference to another object, which may exist locally or be maintained outside the current namespace, e.g. in another service. Services are usually external, e.g. available in a LAN (including on the same host) or the internet via Corba, SOAP, or some other distributed protocol. However, in small systems they may be part of the same executable as the data containing the Id. ",
             "properties": {
                 "namespace": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "namespace",
                     "documentation": "Namespace to which this identifier belongs in the local system context (and possibly in any other openEHR compliant environment) e.g.  terminology ,  demographic . These names are not yet standardised. Legal values for `_namespace_` are:\n\n* `\"local\"`\n* `\"unknown\"`\n* a string matching the standard regex `[a-zA-Z][a-zA-Z0-9_.:\\\/&?=+-]*`.\n\nNote that the first two are just special values of the regex, and will be matched by it.",
                     "is_mandatory": true,
                     "type": "String"
                 },
                 "type": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "type",
                     "documentation": "Name of the  class (concrete or abstract) of object to which this identifier type refers, e.g. `PARTY`, `PERSON`,  `GUIDELINE`  etc. These class names are from the relevant reference model. The type name `ANY` can be used to indicate that any type is accepted (e.g. if the type is unknown). ",
                     "is_mandatory": true,
                     "type": "String"
                 },
                 "id": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "id",
                     "documentation": "Globally unique id of an object, regardless of where it is stored.",
                     "is_mandatory": true,
@@ -2479,6 +2751,7 @@
                     "name": "object_id",
                     "documentation": "Unique identifier for logical object of which this identifier identifies one version; normally the `_object_id_` will be the unique identifier of the version container containing the version referred to by this `OBJECT_VERSION_ID` instance. ",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "UID"
                     }
                 },
@@ -2486,6 +2759,7 @@
                     "name": "creating_system_id",
                     "documentation": "Identifier of the system that created the Version corresponding to this Object version id.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "UID"
                     }
                 },
@@ -2493,6 +2767,7 @@
                     "name": "version_tree_id",
                     "documentation": "Tree identifier of this version with respect to other versions in the same version tree, as either 1 or 3 part dot-separated numbers, e.g.  1 ,  2.1.4 . ",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "VERSION_TREE_ID"
                     }
                 },
@@ -2500,6 +2775,7 @@
                     "name": "is_branch",
                     "documentation": "True if this version identifier represents a branch.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 }
@@ -2526,6 +2802,7 @@
                     "name": "name",
                     "documentation": "Return the terminology id (which includes the  version  in some cases). Distinct names correspond to distinct (i.e. non-compatible) terminologies. Thus the names  `\"ICD10AM\"` and `\"ICD10\"` refer to distinct terminologies. ",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 },
@@ -2533,6 +2810,7 @@
                     "name": "version_id",
                     "documentation": "Version of this terminology, if versioning supported, else the empty string. ",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 }
@@ -2543,6 +2821,7 @@
             "documentation": "Version tree identifier for one version. Lexical form: \n\n`trunk_version [  '.' branch_number  '.' branch_version ]`",
             "properties": {
                 "value": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "value",
                     "documentation": "String form of this identifier.",
                     "is_mandatory": true,
@@ -2554,6 +2833,7 @@
                     "name": "trunk_version",
                     "documentation": "Trunk version number; numbering starts at 1. ",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 },
@@ -2561,6 +2841,7 @@
                     "name": "is_branch",
                     "documentation": "True if this version identifier represents a branch, i.e. has `_branch_number()_` and `_branch_version()_` parts.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -2568,6 +2849,7 @@
                     "name": "branch_number",
                     "documentation": "Number of branch from the trunk point; numbering starts at 1. ",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 },
@@ -2575,6 +2857,7 @@
                     "name": "branch_version",
                     "documentation": "Version of the branch; numbering starts at 1. ",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 }
@@ -2601,6 +2884,7 @@
                     "name": "root",
                     "documentation": "The identifier of the conceptual namespace in which the object exists, within the identification scheme. Returns the part to the left of the first '::' separator, if any, or else the whole string. ",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "UID"
                     }
                 },
@@ -2608,6 +2892,7 @@
                     "name": "extension",
                     "documentation": "Optional local identifier of the object within the context of the root identifier. Returns the part to the right of the first '::' separator if any, or else any empty String.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 },
@@ -2615,6 +2900,7 @@
                     "name": "has_extension",
                     "documentation": "True if not `_extension_.is_empty()`.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 }
@@ -2643,6 +2929,7 @@
             "is_abstract": true,
             "properties": {
                 "value": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "value",
                     "documentation": "The value of the id.",
                     "is_mandatory": true,
@@ -2785,6 +3072,7 @@
                     "name": "hour",
                     "documentation": "Extract the hour part of timezone, as an Integer in the range `00 - 14`.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -2792,6 +3080,7 @@
                     "name": "minute",
                     "documentation": "Extract the hour part of timezone, as an Integer, usually either 0 or 30.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -2799,6 +3088,7 @@
                     "name": "sign",
                     "documentation": "Direction of timezone expresssed as +1 or -1.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Integer"
                     }
                 },
@@ -2806,6 +3096,7 @@
                     "name": "minute_unknown",
                     "documentation": "Indicates whether minute part known.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -2813,6 +3104,7 @@
                     "name": "is_partial",
                     "documentation": "True if this time zone is partial, i.e. if minutes is missing.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -2820,6 +3112,7 @@
                     "name": "is_extended",
                     "documentation": "True if this time-zone uses \u2018:\u2019 separators.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -2827,6 +3120,7 @@
                     "name": "is_gmt",
                     "documentation": "True if timezone is UTC, i.e. `+0000`.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -2834,6 +3128,7 @@
                     "name": "as_string",
                     "documentation": "Return timezone string in extended format.",
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 }
@@ -2945,6 +3240,7 @@
                     "documentation": "True if `y >= 0`.",
                     "parameters": {
                         "y": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "y",
                             "type": "Integer"
                         }
@@ -2953,6 +3249,7 @@
                         "Post": "Result = y >= 0"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -2961,6 +3258,7 @@
                     "documentation": "True if `m >= 1 and m <= months_in_year`.",
                     "parameters": {
                         "m": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "m",
                             "type": "Integer"
                         }
@@ -2969,6 +3267,7 @@
                         "Post": "Result = m >= 1 and m <= Months_in_year"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -2977,14 +3276,17 @@
                     "documentation": "True if `d >= 1 and d <= days_in_month (m, y)`.",
                     "parameters": {
                         "y": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "y",
                             "type": "Integer"
                         },
                         "m": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "m",
                             "type": "Integer"
                         },
                         "d": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "d",
                             "type": "Integer"
                         }
@@ -2993,6 +3295,7 @@
                         "Post": "Result = d >= 1 and d <= days_in_month (m, y)"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -3001,14 +3304,17 @@
                     "documentation": "True if `(h >= 0 and h < Hours_in_day) or (h = Hours_in_day and m = 0 and s = 0)` .",
                     "parameters": {
                         "h": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "h",
                             "type": "Integer"
                         },
                         "m": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "m",
                             "type": "Integer"
                         },
                         "s": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "s",
                             "type": "Integer"
                         }
@@ -3017,6 +3323,7 @@
                         "Post": "Result = (h >= 0 and h < Hours_in_day) or (h = Hours_in_day and m = 0 and s = 0)"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -3025,6 +3332,7 @@
                     "documentation": "True if `m >= 0 and m < Minutes_in_hour`.",
                     "parameters": {
                         "m": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "m",
                             "type": "Integer"
                         }
@@ -3033,6 +3341,7 @@
                         "Post": "Result = m >= 0 and m < Minutes_in_hour"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -3041,6 +3350,7 @@
                     "documentation": "True if `s >= 0 and s < Seconds_in_minute` .",
                     "parameters": {
                         "s": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "s",
                             "type": "Integer"
                         }
@@ -3049,6 +3359,7 @@
                         "Post": "Result = s >= 0 and s < Seconds_in_minute"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -3057,6 +3368,7 @@
                     "documentation": "True if `fs >= 0.0` and `fs < 1.0` .",
                     "parameters": {
                         "fs": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "fs",
                             "type": "Double"
                         }
@@ -3065,6 +3377,7 @@
                         "Post": "Result = fs >= 0.0 and fs < 1.0"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -3073,11 +3386,13 @@
                     "documentation": "String is a valid ISO 8601 date, i.e. takes the complete form:\n\n* `YYYY-MM-DD` (extended, preferred) or one of the partial forms `YYYY-MM` or `YYYY`\n* `YYYYMMDD` (compact) or a partial variant `YYYYMM`.\n\nWhere:\n\n* `YYYY` is the string form of any positive number in the range `0000` - `9999` (zero-filled to four digits)\n* `MM` is `01` - `12` (zero-filled to two digits)\n* `DD` is `01` - `31` (zero-filled to two digits)\n\nThe combinations of `YYYY`, `MM`, `DD` numbers must be correct with respect to the Gregorian calendar.",
                     "parameters": {
                         "s": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "s",
                             "type": "String"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -3086,11 +3401,13 @@
                     "documentation": "String is a valid ISO 8601 date, i.e. takes the form:\n\n* `hh:mm:ss[(,|.)s+][Z|\u00b1hh[:mm]]` (extended)\n* `hhmmss[(,|.)s+][Z|\u00b1hh[mm]]` (compact)\n* or one of the partial forms:\n** `hh:mm` (extended)\n** `hhmm` or `hh` (compact)\n\nwith an additional optional timezone indicator of:\n\n* `Z` or `\u00b1hh[:mm]` (extended)  `\u00b1hh[mm]` (compact)\n\nWhere:\n\n* `hh` is \"00\" - \"23\" (0-filled to two digits)\n* `mm` is \"00\" - \"59\" (0-filled to two digits)\n* `ss` is \"00\" - \"60\" (0-filled to two digits)\n* `[(,|.)s+]` is an optional string consisting of a comma or decimal point followed by numeric string of 1 or more digits, representing a fractional second\n* `Z` is a literal meaning UTC (modern replacement for GMT), i.e. timezone `+0000`\n",
                     "parameters": {
                         "s": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "s",
                             "type": "String"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -3099,11 +3416,13 @@
                     "documentation": "String is a valid ISO 8601 date-time, i.e. takes the form:\n\n* `YYYY-MM-DDThh:mm:ss[(,|.)s+][Z|\u00b1hh[:mm]]` (extended)\n* `YYYYMMDDThhmmss[(,|.)s+][Z|\u00b1hh[mm]]` (compact)\n* or one of the partial forms:\n** `YYYY-MM-DDThh:mm` or `YYYY-MM-DDThh` (extended)\n** `YYYYMMDDThhmm` or `YYYYMMDDThh` (compact)",
                     "parameters": {
                         "s": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "s",
                             "type": "String"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
@@ -3112,11 +3431,13 @@
                     "documentation": "String is a valid ISO 8601 duration, i.e. takes the form:\n\n* `P[nnY][nnM][nnW][nnD][T[nnH][nnM][nnS]]`\n\nWhere each nn represents a number of years, months, etc. `nnW` represents a number of 7-day weeks.\n\nNote: allowing the `W` designator in the same expression as other designators is an exception to the published standard, but necessary in clinical information (typically for representing pregnancy duration).",
                     "parameters": {
                         "s": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "s",
                             "type": "String"
                         }
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 }
@@ -3152,24 +3473,28 @@
             },
             "properties": {
                 "lower_unbounded": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "lower_unbounded",
                     "documentation": "Lower boundary open (i.e. = -infinity).",
                     "is_mandatory": true,
                     "type": "Boolean"
                 },
                 "upper_unbounded": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "upper_unbounded",
                     "documentation": "Upper boundary open (i.e. = +infinity).",
                     "is_mandatory": true,
                     "type": "Boolean"
                 },
                 "lower_included": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "lower_included",
                     "documentation": "Lower boundary value included in range if not `_lower_unbounded_`.",
                     "is_mandatory": true,
                     "type": "Boolean"
                 },
                 "upper_included": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "upper_included",
                     "documentation": "Upper boundary value included in range if not `_upper_unbounded_`.",
                     "is_mandatory": true,
@@ -3185,18 +3510,21 @@
             "documentation": "A fully coordinated (i.e. all coordination has been performed) term from a terminology service (as distinct from a particular terminology).\n\nRetain for LEGACY only, while ADL1.4 requires CODE_PHRASE.",
             "properties": {
                 "terminology_id": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "terminology_id",
                     "documentation": "Identifier of the distinct terminology from which the code_string (or its elements) was extracted.",
                     "is_mandatory": true,
                     "type": "TERMINOLOGY_ID"
                 },
                 "code_string": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "code_string",
                     "documentation": "The key used by the terminology service to identify a concept or coordination of concepts. This string is most likely parsable inside the terminology service, but nothing can be assumed about its syntax outside that context. ",
                     "is_mandatory": true,
                     "type": "String"
                 },
                 "preferred_term": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "preferred_term",
                     "documentation": "Optional attribute to carry preferred term corresponding to the code or expression in `_code_string_`. Typical use in integration situations which create mappings, and representing data for which both a (non-preferred) actual term and a preferred term are both required.",
                     "type": "String"
@@ -3212,27 +3540,32 @@
             "is_abstract": true,
             "properties": {
                 "uid": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "uid",
                     "documentation": "Unique identifier of the family of archetypes having the same interface identifier (same major version).",
                     "type": "UUID"
                 },
                 "original_language": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "original_language",
                     "documentation": "Language in which this resource was initially authored. Although there is no language primacy of resources overall, the language of original authoring is required to ensure natural language translations can preserve quality. Language is relevant in both the description and ontology sections. ",
                     "is_mandatory": true,
                     "type": "Terminology_code"
                 },
                 "description": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "description",
                     "documentation": "Description and lifecycle information of the resource.",
                     "type": "RESOURCE_DESCRIPTION"
                 },
                 "is_controlled": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "is_controlled",
                     "documentation": "True if this resource is under any kind of change control (even file copying), in which case revision history is created. ",
                     "type": "Boolean"
                 },
                 "annotations": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "annotations",
                     "documentation": "Annotations on individual items within the resource, keyed by path. The inner table takes the form of a Hash table of String values keyed by String tags.",
                     "type": "RESOURCE_ANNOTATIONS"
@@ -3258,6 +3591,7 @@
                         "Post": "Result = revision_history.most_recent_version"
                     },
                     "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
                     }
                 },
@@ -3298,11 +3632,13 @@
                     }
                 },
                 "original_namespace": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "original_namespace",
                     "documentation": "Namespace of original author's organisation, in reverse internet form, if applicable.",
                     "type": "String"
                 },
                 "original_publisher": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "original_publisher",
                     "documentation": "Plain text name of organisation that originally published this artefact, if any.",
                     "type": "String"
@@ -3321,33 +3657,39 @@
                     }
                 },
                 "lifecycle_state": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "lifecycle_state",
                     "documentation": "Lifecycle state of the resource, typically including states such as: initial, in_development, in_review, published, superseded, obsolete. ",
                     "is_mandatory": true,
                     "type": "Terminology_code"
                 },
                 "parent_resource": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "parent_resource",
                     "documentation": "Reference to owning resource. ",
                     "is_mandatory": true,
                     "type": "AUTHORED_RESOURCE"
                 },
                 "custodian_namespace": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "custodian_namespace",
                     "documentation": "Namespace in reverse internet id form, of current custodian organisation.",
                     "type": "String"
                 },
                 "custodian_organisation": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "custodian_organisation",
                     "documentation": "Plain text name of current custodian organisation.",
                     "type": "String"
                 },
                 "copyright": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "copyright",
                     "documentation": "Optional copyright statement for the resource as a knowledge resource. \n",
                     "type": "String"
                 },
                 "licence": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "licence",
                     "documentation": "Licence of current artefact, in format \"short licence name <URL of licence>\", e.g. \"Apache 2.0 License <http:\/\/www.apache.org\/licenses\/LICENSE-2.0.html>\"",
                     "type": "String"
@@ -3377,6 +3719,7 @@
                     }
                 },
                 "resource_package_uri": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "resource_package_uri",
                     "documentation": "URI of package to which this resource belongs.",
                     "type": "String"
@@ -3424,6 +3767,7 @@
             "documentation": "Class providing details of a natural language translation.",
             "properties": {
                 "language": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "language",
                     "documentation": "Language of the translation, coded using ISO 639-1 (2 character) language codes.",
                     "is_mandatory": true,
@@ -3443,6 +3787,7 @@
                     }
                 },
                 "accreditation": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "accreditation",
                     "documentation": "Accreditation of primary translator or group, usually a national translator's registration or association membership id.",
                     "type": "String"
@@ -3460,6 +3805,7 @@
                     }
                 },
                 "version_last_translated": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "version_last_translated",
                     "documentation": "Version of this resource last time it was translated into the language represented by this `TRANSLATION_DETAILS` object.",
                     "type": "String"
@@ -3484,12 +3830,14 @@
             "documentation": "Language-specific detail of resource description. When a resource is translated for use in another language environment, each `RESOURCE_DESCRIPTION_ITEM` needs to be copied and translated into the new language.",
             "properties": {
                 "language": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "language",
                     "documentation": "The localised language in which the items in this description item are written. Coded using ISO 639-1 (2 character) language codes.",
                     "is_mandatory": true,
                     "type": "Terminology_code"
                 },
                 "purpose": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "purpose",
                     "documentation": "Purpose of the resource.",
                     "is_mandatory": true,
@@ -3509,11 +3857,13 @@
                     }
                 },
                 "use": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "use",
                     "documentation": "Description of the uses of the resource, i.e. contexts in which it could be used. \n",
                     "type": "String"
                 },
                 "misuse": {
+                    "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "misuse",
                     "documentation": "Description of any misuses of the resource, i.e. contexts in which it should not be used.",
                     "type": "String"
@@ -3557,6 +3907,7 @@
                         "root_type": "Hash",
                         "generic_parameter_defs": {
                             "K": {
+                                "_type": "P_BMM_SIMPLE_TYPE",
                                 "type": "String"
                             },
                             "V": {
@@ -3564,6 +3915,7 @@
                                 "root_type": "Hash",
                                 "generic_parameter_defs": {
                                     "K": {
+                                        "_type": "P_BMM_SIMPLE_TYPE",
                                         "type": "String"
                                     },
                                     "V": {

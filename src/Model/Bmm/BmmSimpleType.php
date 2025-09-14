@@ -4,6 +4,7 @@ namespace OpenEHR\Tools\CodeGen\Model\Bmm;
 
 use JsonSerializable;
 use OpenEHR\Tools\CodeGen\Model\YamlSerializable;
+use Symfony\Component\Yaml\Tag\TaggedValue;
 
 
 readonly class BmmSimpleType extends AbstractBmmType implements JsonSerializable, YamlSerializable
@@ -25,18 +26,19 @@ readonly class BmmSimpleType extends AbstractBmmType implements JsonSerializable
     public function jsonSerialize(): array
     {
         return [
+            '_type' => 'P_BMM_SIMPLE_TYPE',
             'type' => $this->type,
         ];
     }
 
     /**
-     * @return array<string, mixed>
+     * @return TaggedValue
      */
-    public function yamlSerialize(): array
+    public function yamlSerialize(): TaggedValue
     {
-        return [
+        return new TaggedValue('P_BMM_SIMPLE_TYPE', array_filter([
             'type' => $this->type,
-        ];
+        ]));
     }
 
     /**
