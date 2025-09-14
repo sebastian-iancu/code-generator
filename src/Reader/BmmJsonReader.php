@@ -8,7 +8,7 @@ use RuntimeException;
 class BmmJsonReader extends AbstractReader
 {
 
-    const string DIR = __READER_DIR__ . DIRECTORY_SEPARATOR . 'BMM' . DIRECTORY_SEPARATOR;
+    const string DIR = __READER_DIR__ . DIRECTORY_SEPARATOR . 'BMM-JSON' . DIRECTORY_SEPARATOR;
 
     public function read(string $filename): void
     {

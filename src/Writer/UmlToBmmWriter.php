@@ -19,7 +19,7 @@ use OpenEHR\Tools\CodeGen\Model\Uml\UmlTemplateParameter;
 class UmlToBmmWriter extends AbstractWriter
 {
 
-    public const string DIR = __WRITER_DIR__ . DIRECTORY_SEPARATOR . 'BMM' . DIRECTORY_SEPARATOR;
+    public const string DIR = __WRITER_DIR__ . DIRECTORY_SEPARATOR . 'BMM-JSON' . DIRECTORY_SEPARATOR;
 
     public const string REVISION = '2';
     public const string AUTHOR = 'Thomas Beale <thomas.beale@openehr.org>, code-generator';
