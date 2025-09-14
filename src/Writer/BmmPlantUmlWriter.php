@@ -51,6 +51,12 @@ class BmmPlantUmlWriter extends AbstractWriter
                     if (count($subPackage->classes)) {
                         $this->createPackageDiagram($subPackage, $schema, $package->name . '.');
                     }
+                    /** @var BmmPackage $subSubPackage */
+                    foreach ($subPackage->packages as $subSubPackage) {
+                        if (count($subSubPackage->classes)) {
+                            $this->createPackageDiagram($subSubPackage, $schema, $package->name . '.' . $subPackage->name . '.');
+                        }
+                    }
                 }
             }
         }
@@ -111,7 +117,7 @@ class BmmPlantUmlWriter extends AbstractWriter
             $classOutput .= $this->generateAncestors($class, $schema);
         }
         $name = $namePrefix . $package->name;
-        $filename = self::DIR . 'class-' . $name . '-' . $class->name . '.puml';
+        $filename = self::DIR .  $name . '.' . strtolower($class->name) . '.puml';
         self::log('      Writing to [%s] filename.', $filename);
         $plantUml = $this->wrapDiagram(
             diagramContent: $classOutput,
