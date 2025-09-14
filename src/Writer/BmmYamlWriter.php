@@ -12,7 +12,7 @@ use Symfony\Component\Yaml\Yaml;
 class BmmYamlWriter extends AbstractWriter
 {
 
-    public const string DIR = __WRITER_DIR__ . DIRECTORY_SEPARATOR . 'BMM' . DIRECTORY_SEPARATOR;
+    public const string DIR = __WRITER_DIR__ . DIRECTORY_SEPARATOR . 'BMM-YAML' . DIRECTORY_SEPARATOR;
 
     /**
      * Write the BMM schema to a YAML file

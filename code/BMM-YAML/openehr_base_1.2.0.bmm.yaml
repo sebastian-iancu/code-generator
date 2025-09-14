@@ -109,46 +109,46 @@ primitive_types:
         documentation: 'Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.'
         is_abstract: true
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Any
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       equal:
         name: equal
         documentation: 'Reference equality for reference types, value equality for value types.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Any
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       instance_of:
         name: instance_of
         documentation: 'Create new instance of a type.'
         parameters:
-          a_type:
+          a_type: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: a_type
             type: String
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Any
       type_of:
         name: type_of
         documentation: 'Type name of an object as a string. May include generic parameters, as in `"Interval<Time>"`.'
         parameters:
-          an_object:
+          an_object: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: an_object
             type: Any
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
       not_equal:
         name: not_equal
         documentation: 'True if current object not equal to `_other_`. Returns not `_equal_()`.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Ordered
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
   Hash:
     name: Hash
@@ -169,7 +169,7 @@ primitive_types:
           a_key: !P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN
             name: a_key
             type: K
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       item:
         name: item
@@ -178,7 +178,7 @@ primitive_types:
           a_key: !P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN
             name: a_key
             type: K
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: V
   Container:
     name: Container
@@ -199,43 +199,43 @@ primitive_types:
           v: !P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN
             name: v
             type: T
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       count:
         name: count
         documentation: 'Number of items in container.'
         is_abstract: true
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       is_empty:
         name: is_empty
         documentation: 'True if container is empty.'
         is_abstract: true
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       there_exists:
         name: there_exists
         documentation: 'Existential quantifier applied to container, taking one agent argument `_test_` whose signature is `(v:T): Boolean`.'
         parameters:
-          test:
+          test: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: test
             type: Operation
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       for_all:
         name: for_all
         documentation: 'Universal quantifier applied to container, taking one agent argument `_test_` whose signature is `(v:T): Boolean`.'
         parameters:
-          test:
+          test: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: test
             type: Operation
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       matching:
         name: matching
         documentation: 'Return a List all items matching the predicate function `_test_` which has signature `(v:T): Boolean`. If no matches, an empty List is returned.'
         parameters:
-          test:
+          test: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: test
             type: Operation
         result: !P_BMM_CONTAINER_TYPE
@@ -246,10 +246,10 @@ primitive_types:
         name: select
         documentation: 'Return first item matching the predicate function `_test_` which has signature `(v:T): Boolean`, or Void if no match.'
         parameters:
-          test:
+          test: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: test
             type: Operation
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: T
         is_nullable: true
   List:
@@ -265,12 +265,12 @@ primitive_types:
       first:
         name: first
         documentation: 'Return first element.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: T
       last:
         name: last
         documentation: 'Return last element.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: T
     invariants:
       First_validity: 'not is_empty implies first /= Void'
@@ -298,10 +298,10 @@ primitive_types:
         name: item
         documentation: 'Return item for key  `_a_key_`.'
         parameters:
-          a_key:
+          a_key: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: a_key
             type: Integer
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: T
   Uri:
     name: Uri
@@ -325,87 +325,87 @@ primitive_types:
         name: add
         documentation: 'Integer addition.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Integer
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       subtract:
         name: subtract
         documentation: 'Integer subtraction.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Integer
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       multiply:
         name: multiply
         documentation: 'Integer multiplication.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Integer
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       divide:
         name: divide
         documentation: 'Integer division.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Integer
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Double
       exponent:
         name: exponent
         documentation: 'Integer exponentiation.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Double
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Double
       modulo:
         name: modulo
         documentation: 'Return self modulo other.'
         parameters:
-          mod:
+          mod: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: mod
             type: Integer
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       less_than:
         name: less_than
         documentation: 'Returns True if current Integer is less than `_other_`.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Integer
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       negative:
         name: negative
         documentation: 'Generate negative of current Integer value.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       is_equal:
         name: is_equal
         documentation: 'Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Integer
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       equal:
         name: equal
         documentation: 'Reference equality for reference types, value equality for value types.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Integer
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
   Double:
     name: Double
@@ -416,84 +416,84 @@ primitive_types:
       floor:
         name: floor
         documentation: 'Return the greatest integer no greater than the value of this object.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       add:
         name: add
         documentation: 'Double-precision real number addition.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Double
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Double
       subtract:
         name: subtract
         documentation: 'Double-precision real number subtraction.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Double
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Double
       multiply:
         name: multiply
         documentation: 'Double-precision real number multiplication.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Double
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Double
       divide:
         name: divide
         documentation: 'Double-precision real number division.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Double
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Double
       exponent:
         name: exponent
         documentation: 'Double-precision real number exponentiation.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Double
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Double
       less_than:
         name: less_than
         documentation: 'Returns True if current Double is less than `_other_`.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Double
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       negative:
         name: negative
         documentation: 'Generate negative of current Double value.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Double
       is_equal:
         name: is_equal
         documentation: 'Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Double
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       equal:
         name: equal
         documentation: 'Reference equality for reference types, value equality for value types.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Double
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
   Numeric:
     name: Numeric
@@ -507,56 +507,56 @@ primitive_types:
         documentation: 'Sum with `_other_` (commutative). Actual type of result depends on arithmetic balancing rules.'
         is_abstract: true
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Numeric
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Numeric
       subtract:
         name: subtract
         documentation: 'Result of subtracting `_other_`. Actual type of result depends on arithmetic balancing rules.'
         is_abstract: true
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Numeric
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Numeric
       multiply:
         name: multiply
         documentation: 'Product by `_other_`. Actual type of result depends on arithmetic balancing rules.'
         is_abstract: true
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Numeric
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Numeric
       divide:
         name: divide
         documentation: 'Divide by`_other_`. Actual type of result depends on arithmetic balancing rules.'
         is_abstract: true
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Numeric
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Numeric
       exponent:
         name: exponent
         documentation: 'Expontiation of this by `_other_`.'
         is_abstract: true
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Numeric
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Numeric
       negative:
         name: negative
         documentation: 'Generate negative of current value.'
         is_abstract: true
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Numeric
   Octet:
     name: Octet
@@ -578,75 +578,75 @@ primitive_types:
         name: conjunction
         documentation: 'Logical conjunction of this with `_other_`.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Boolean
         post_conditions:
           Post_de_Morgan: 'Result = not (not self or not other)'
           Post_commutative: 'Result = (other and self)'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       semistrict_conjunction:
         name: semistrict_conjunction
         documentation: 'Boolean semi-strict conjunction with `_other_`.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Boolean
         post_conditions:
           Post_de_Morgan: 'Result = not (not self or else not other)'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       disjunction:
         name: disjunction
         documentation: 'Boolean disjunction with `_other_`.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Boolean
         post_conditions:
           Post_de_Morgan: 'Result = not (not self and not other)'
           Post_commutative: 'Result = (other or Current)'
           Post_consistent_with_semi_strict: 'Result implies (self or else other)'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       semistrict_disjunction:
         name: semistrict_disjunction
         documentation: 'Boolean semi-strict disjunction with `_other_`.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Boolean
         post_conditions:
           Post_de_Morgan: 'Result = not (not self and then not other)'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       exclusive_disjunction:
         name: exclusive_disjunction
         documentation: 'Boolean exclusive or with `_other_`.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Boolean
         post_conditions:
           Post_definition: 'Result = ((self or other) and not (self and other))'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       implication:
         name: implication
         documentation: 'Boolean implication of `_other_` (semi-strict)'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Boolean
         post_conditions:
           Post_definition: 'Result = (not self or else other)'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       negation:
         name: negation
         documentation: 'Boolean negation of the current value.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
     invariants:
       Involutive_negation: 'is_equal (not (not self))'
@@ -661,44 +661,44 @@ primitive_types:
       is_empty:
         name: is_empty
         documentation: 'True if string is empty, i.e. equal to "".'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       is_integer:
         name: is_integer
         documentation: 'True if string can be parsed as an integer.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       as_integer:
         name: as_integer
         documentation: 'Return the integer corresponding to the integer value represented in this string.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       append:
         name: append
         documentation: 'Concatenation operator - causes `_other_` to be appended to this string.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: String
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
       less_than:
         name: less_than
         documentation: 'Lexical comparison of string content based on ordering in relevant character set.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: String
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       contains:
         name: contains
         documentation: 'Return True if this String contains `_other_` (case-sensitive).'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: String
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
   Real:
     name: Real
@@ -709,84 +709,84 @@ primitive_types:
       floor:
         name: floor
         documentation: 'Return the greatest integer no greater than the value of this object.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       add:
         name: add
         documentation: 'Real number addition.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Real
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Real
       subtract:
         name: subtract
         documentation: 'Real number subtraction.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Real
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Real
       multiply:
         name: multiply
         documentation: 'Real number multiplication.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Real
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Real
       divide:
         name: divide
         documentation: 'Real number division.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Real
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Double
       exponent:
         name: exponent
         documentation: 'Real number exponentiation.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Double
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Double
       less_than:
         name: less_than
         documentation: 'Returns True if current Real is less than `_other_`.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Real
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       negative:
         name: negative
         documentation: 'Generate negative of current Real value.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Real
       is_equal:
         name: is_equal
         documentation: 'Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Real
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       equal:
         name: equal
         documentation: 'Reference equality for reference types, value equality for value types.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Real
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
   Integer64:
     name: Integer64
@@ -798,87 +798,87 @@ primitive_types:
         name: add
         documentation: 'Large integer addition.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Integer
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer64
       subtract:
         name: subtract
         documentation: 'Large integer subtraction.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Integer
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer64
       multiply:
         name: multiply
         documentation: 'Large integer multiplication.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Integer
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer64
       divide:
         name: divide
         documentation: 'Large integer division.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Integer
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Double
       exponent:
         name: exponent
         documentation: 'Large integer exponentiation.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Double
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Double
       modulo:
         name: modulo
         documentation: 'Large integer modulus.'
         parameters:
-          mod:
+          mod: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: mod
             type: Integer
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer64
       less_than:
         name: less_than
         documentation: 'Returns True if current Integer is less than `_other_`.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Integer64
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       negative:
         name: negative
         documentation: 'Generate negative of current Integer value.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer64
       is_equal:
         name: is_equal
         documentation: 'Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Integer64
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       equal:
         name: equal
         documentation: 'Reference equality for reference types, value equality for value types.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Integer64
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
   Ordered:
     name: Ordered
@@ -895,43 +895,43 @@ primitive_types:
           In conjunction with `=`, enables the definition of the related functions `_greater_than_()` etc.
         is_abstract: true
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Ordered
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       less_than_or_equal:
         name: less_than_or_equal
         documentation: 'True if current object less than or equal to `_other_`.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Ordered
         post_conditions:
           Post_result: 'not (other < self)'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       greater_than:
         name: greater_than
         documentation: 'True if current object greater than `_other_`.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Ordered
         post_conditions:
           Post_result: 'Result = (other < self)'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       greater_than_or_equal:
         name: greater_than_or_equal
         documentation: 'True if current object greater than or equal to `_other_`.'
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Ordered
         post_conditions:
           Post_result: 'Result = (other <= self)'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
   Iso8601_date_time:
     name: Iso8601_date_time
@@ -954,142 +954,142 @@ primitive_types:
       year:
         name: year
         documentation: 'Extract the year part of the date as an Integer.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       month:
         name: month
         documentation: 'Extract the month part of the date/time as an Integer, or return 0 if not present.'
         pre_conditions:
           Pre: 'not month_unknown'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       day:
         name: day
         documentation: 'Extract the day part of the date/time as an Integer, or return 0 if not present.'
         pre_conditions:
           Pre: 'not day_unknown'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       hour:
         name: hour
         documentation: 'Extract the hour part of the date/time as an Integer, or return 0 if not present.'
         pre_conditions:
           Pre: 'not hour_unknown'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       minute:
         name: minute
         documentation: 'Extract the minute part of the date/time as an Integer, or return 0 if not present.'
         pre_conditions:
           Pre: 'not minute_unknown'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       second:
         name: second
         documentation: 'Extract the integral seconds part of the date/time (i.e. prior to any decimal sign) as an Integer, or return 0 if not present.'
         pre_conditions:
           Pre: 'not second_unknown'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       fractional_second:
         name: fractional_second
         documentation: 'Extract the fractional seconds part of the date/time (i.e. following to any decimal sign) as a Real, or return 0.0 if not present.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Real
       timezone:
         name: timezone
         documentation: 'Timezone; may be Void.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_timezone
       month_unknown:
         name: month_unknown
         documentation: 'Indicates whether month in year is unknown.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       day_unknown:
         name: day_unknown
         documentation: 'Indicates whether day in month is unknown.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       minute_unknown:
         name: minute_unknown
         documentation: 'Indicates whether minute in hour is known.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       second_unknown:
         name: second_unknown
         documentation: 'Indicates whether minute in hour is known.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       is_decimal_sign_comma:
         name: is_decimal_sign_comma
         documentation: "True if this time has a decimal part indicated by `','` (comma) rather than `'.'` (period)."
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       is_partial:
         name: is_partial
         documentation: 'True if this date time is partial, i.e. if seconds or more is missing.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       is_extended:
         name: is_extended
         documentation: "True if this date/time uses `'-'`, `':'` separators."
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       has_fractional_second:
         name: has_fractional_second
         documentation: 'True if the `_fractional_second_` part is significant (i.e. even if = 0.0).'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       as_string:
         name: as_string
         documentation: 'Return the string value in extended format.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
       add:
         name: add
         documentation: 'Arithmetic addition of a duration to a date/time.'
         parameters:
-          a_diff:
+          a_diff: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: a_diff
             type: Iso8601_duration
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_date_time
       subtract:
         name: subtract
         documentation: 'Arithmetic subtraction of a duration from a date/time.'
         parameters:
-          a_diff:
+          a_diff: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: a_diff
             type: Iso8601_duration
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_date_time
       diff:
         name: diff
         documentation: 'Difference of two date/times.'
         parameters:
-          a_date_time:
+          a_date_time: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: a_date_time
             type: Iso8601_date_time
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_duration
       add_nominal:
         name: add_nominal
         documentation: 'Addition of nominal duration represented by `_a_diff_`. See `Iso8601_date._add_nominal_()` for semantics.'
         parameters:
-          a_diff:
+          a_diff: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: a_diff
             type: Iso8601_duration
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_date
       subtract_nominal:
         name: subtract_nominal
         documentation: 'Subtraction of nominal duration represented by `_a_diff_`. See `_add_nominal_()` for semantics.'
         parameters:
-          a_diff:
+          a_diff: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: a_diff
             type: Iso8601_duration
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_date
     invariants:
       Year_valid: 'valid_year (year)'
@@ -1118,108 +1118,108 @@ primitive_types:
       is_extended:
         name: is_extended
         documentation: 'Returns True.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       is_partial:
         name: is_partial
         documentation: 'Returns False.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       years:
         name: years
         documentation: "Number of years in the `_value_`, i.e. the number preceding the `'Y'` in the `'YMD'` part, if one exists."
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       months:
         name: months
         documentation: "Number of months in the `_value_`, i.e. the value preceding the `'M'` in the `'YMD'` part, if one exists."
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       days:
         name: days
         documentation: "Number of days in the `_value_`, i.e. the number preceding the `'D'` in the `'YMD'` part, if one exists."
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       hours:
         name: hours
         documentation: "Number of hours in the `_value_`, i.e. the number preceding the `'H'` in the `'HMS'` part, if one exists."
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       minutes:
         name: minutes
         documentation: "Number of minutes in the `_value_`, i.e. the number preceding the `'M'` in the `'HMS'` part, if one exists."
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       seconds:
         name: seconds
         documentation: "Number of seconds in the `_value_`, i.e. the integer number preceding the `'S'` in the `'HMS'` part, if one exists."
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       fractional_seconds:
         name: fractional_seconds
         documentation: "Fractional seconds in the `_value_`, i.e. the decimal part of the number preceding the `'S'` in the `'HMS'` part, if one exists."
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Real
       weeks:
         name: weeks
         documentation: 'Number of weeks in the `_value_`, i.e. the value preceding the `W`, if one exists.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       is_decimal_sign_comma:
         name: is_decimal_sign_comma
         documentation: "True if this time has a decimal part indicated by ',' (comma) rather than '.' (period)."
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       to_seconds:
         name: to_seconds
         documentation: "Total number of seconds equivalent (including fractional) of entire duration. Where non-definite elements such as year and month (i.e. 'Y' and 'M') are included, the corresponding 'average' durations from `Time_definitions` are used to compute the result."
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Real
       as_string:
         name: as_string
         documentation: 'Return the duration string value.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
       add:
         name: add
         documentation: 'Arithmetic addition of a duration to a duration, via conversion to seconds, using `Time_definitions._Average_days_in_year_` and `Time_definitions._Average_days_in_month_`'
         parameters:
-          a_val:
+          a_val: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: a_val
             type: Iso8601_duration
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_duration
       subtract:
         name: subtract
         documentation: 'Arithmetic subtraction of a duration from a duration, via conversion to seconds, using `Time_definitions._Average_days_in_year_` and `Time_definitions._Average_days_in_month_`'
         parameters:
-          a_val:
+          a_val: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: a_val
             type: Iso8601_duration
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_duration
       multiply:
         name: multiply
         documentation: 'Arithmetic multiplication a duration by a number.'
         parameters:
-          a_val:
+          a_val: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: a_val
             type: Real
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_duration
       divide:
         name: divide
         documentation: 'Arithmetic division of a duration by a number.'
         parameters:
-          a_val:
+          a_val: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: a_val
             type: Real
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_duration
       negative:
         name: negative
         documentation: 'Generate negative of current duration value.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_duration
     invariants:
       Years_valid: 'years >= 0'
@@ -1248,91 +1248,91 @@ primitive_types:
       hour:
         name: hour
         documentation: 'Extract the hour part of the date/time as an Integer.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       minute:
         name: minute
         documentation: 'Extract the minute part of the time as an Integer, or return 0 if not present.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       second:
         name: second
         documentation: 'Extract the integral seconds part of the time (i.e. prior to any decimal sign) as an Integer, or return 0 if not present.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       fractional_second:
         name: fractional_second
         documentation: 'Extract the fractional seconds part of the time (i.e. following to any decimal sign) as a Real, or return 0.0 if not present.'
         pre_conditions:
           Pre: 'not second_unknown'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Real
       timezone:
         name: timezone
         documentation: 'Timezone; may be Void.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_timezone
       minute_unknown:
         name: minute_unknown
         documentation: 'Indicates whether minute is unknown. If so, the time is of the form “hh”.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       second_unknown:
         name: second_unknown
         documentation: 'Indicates whether second is unknown. If so and month is known, the time is of the form `"hh:mm"` or `"hhmm"`.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       is_decimal_sign_comma:
         name: is_decimal_sign_comma
         documentation: "True if this time has a decimal part indicated by `','` (comma) rather than `'.'` (period)."
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       is_partial:
         name: is_partial
         documentation: 'True if this time is partial, i.e. if seconds or more is missing.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       is_extended:
         name: is_extended
         documentation: "True if this time uses `'-'`, `':'` separators."
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       has_fractional_second:
         name: has_fractional_second
         documentation: 'True if the `_fractional_second_` part is significant (i.e. even if = 0.0).'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       as_string:
         name: as_string
         documentation: 'Return string value in extended format.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
       add:
         name: add
         documentation: 'Arithmetic addition of a duration to a time.'
         parameters:
-          a_diff:
+          a_diff: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: a_diff
             type: Iso8601_duration
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_time
       subtract:
         name: subtract
         documentation: 'Arithmetic subtraction of a duration from a time.'
         parameters:
-          a_diff:
+          a_diff: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: a_diff
             type: Iso8601_duration
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_time
       diff:
         name: diff
         documentation: 'Difference of two times.'
         parameters:
-          a_time:
+          a_time: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: a_time
             type: Iso8601_time
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_duration
     invariants:
       Hour_valid: 'valid_hour(hour, minute, second)'
@@ -1348,7 +1348,7 @@ primitive_types:
       - Temporal
       - Time_Definitions
     properties:
-      value:
+      value: !P_BMM_SINGLE_PROPERTY
         name: value
         documentation: 'Representation of all descendants is a single String.'
         is_mandatory: true
@@ -1358,13 +1358,13 @@ primitive_types:
         name: is_partial
         documentation: 'True if this date time is partial, i.e. if trailing end (right hand) value(s) is/are missing.'
         is_abstract: true
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       is_extended:
         name: is_extended
         documentation: "True if this ISO8601 string is in the 'extended' form, i.e. uses `'-'` and / or `':'` separators. This is the preferred format."
         is_abstract: true
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
   Iso8601_date:
     name: Iso8601_date
@@ -1382,78 +1382,78 @@ primitive_types:
       year:
         name: year
         documentation: 'Extract the year part of the date as an Integer.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       month:
         name: month
         documentation: 'Extract the month part of the date as an Integer, or return 0 if not present.'
         pre_conditions:
           Pre: 'not month_unknown'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       day:
         name: day
         documentation: 'Extract the day part of the date as an Integer, or return 0 if not present.'
         pre_conditions:
           Pre: 'not day_unknown'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       timezone:
         name: timezone
         documentation: 'Timezone; may be Void.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_timezone
       month_unknown:
         name: month_unknown
         documentation: 'Indicates whether month in year is unknown. If so, the date is of the form `"YYYY"`.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       day_unknown:
         name: day_unknown
         documentation: 'Indicates whether day in month is unknown. If so, and month is known, the date is of the form `"YYYY-MM"` or `"YYYYMM"`.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       is_partial:
         name: is_partial
         documentation: 'True if this date is partial, i.e. if days or more is missing.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       is_extended:
         name: is_extended
         documentation: "True if this date uses `'-'` separators."
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       as_string:
         name: as_string
         documentation: 'Return string value in extended format.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
       add:
         name: add
         documentation: 'Arithmetic addition of a duration to a date.'
         parameters:
-          a_diff:
+          a_diff: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: a_diff
             type: Iso8601_duration
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_date
       subtract:
         name: subtract
         documentation: 'Arithmetic subtraction of a duration from a date.'
         parameters:
-          a_diff:
+          a_diff: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: a_diff
             type: Iso8601_duration
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_date
       diff:
         name: diff
         documentation: 'Difference of two dates.'
         parameters:
-          a_date:
+          a_date: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: a_date
             type: Iso8601_date
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_duration
       add_nominal:
         name: add_nominal
@@ -1464,19 +1464,19 @@ primitive_types:
           * one or two days less where the following month is shorter, or;
           * in the case of adding a month to the date 31 Jan, the result will be 28 Feb in a non-leap year (i.e. three less) and 29 Feb in a leap year (i.e. two less).
         parameters:
-          a_diff:
+          a_diff: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: a_diff
             type: Iso8601_duration
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_date
       subtract_nominal:
         name: subtract_nominal
         documentation: 'Subtraction of nominal duration represented by `_a_diff_`. See `_add_nominal_()` for semantics.'
         parameters:
-          a_diff:
+          a_diff: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: a_diff
             type: Iso8601_duration
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_date
     invariants:
       Year_valid: 'valid_year (year)'
@@ -1509,22 +1509,22 @@ primitive_types:
       is_open:
         name: is_open
         documentation: 'True if this interval imposes no constraints, i.e. is set to `0..*`.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       is_optional:
         name: is_optional
         documentation: 'True if this interval expresses optionality, i.e. `0..1`.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       is_mandatory:
         name: is_mandatory
         documentation: 'True if this interval expresses mandation, i.e. `1..1`.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       is_prohibited:
         name: is_prohibited
         documentation: 'True if this interval is set to `0..0`.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
   Interval:
     name: Interval
@@ -1545,22 +1545,22 @@ primitive_types:
         name: upper
         documentation: 'Upper bound.'
         type: T
-      lower_unbounded:
+      lower_unbounded: !P_BMM_SINGLE_PROPERTY
         name: lower_unbounded
         documentation: '`lower` boundary open (i.e. = -infinity).'
         is_mandatory: true
         type: Boolean
-      upper_unbounded:
+      upper_unbounded: !P_BMM_SINGLE_PROPERTY
         name: upper_unbounded
         documentation: '`upper` boundary open (i.e. = +infinity).'
         is_mandatory: true
         type: Boolean
-      lower_included:
+      lower_included: !P_BMM_SINGLE_PROPERTY
         name: lower_included
         documentation: '`lower` boundary value included in range if not `lower_unbounded`.'
         is_mandatory: true
         type: Boolean
-      upper_included:
+      upper_included: !P_BMM_SINGLE_PROPERTY
         name: upper_included
         documentation: '`upper` boundary value included in range if not `upper_unbounded`.'
         is_mandatory: true
@@ -1576,37 +1576,37 @@ primitive_types:
             type: T
         post_conditions:
           Post_result: 'Result = (lower_unbounded or lower_included and v >= lower) or v > lower and (upper_unbounded or upper_included and v <= upper or v < upper)'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       intersects:
         name: intersects
         documentation: 'True if there is any overlap between intervals represented by Current and `_other_`. True if at least one limit of other is strictly inside the limits of this interval.'
         is_abstract: true
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Interval
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       contains:
         name: contains
         documentation: 'True if current interval properly contains `_other_`? True if all points of `_other_` are inside the current interval.'
         is_abstract: true
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Interval
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       is_equal:
         name: is_equal
         documentation: "True if current object's interval is semantically same as `_other_`."
         is_abstract: true
         parameters:
-          other:
+          other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
             type: Any
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
     invariants:
       Lower_included_valid: 'lower_unbounded implies not lower_included'
@@ -1617,17 +1617,17 @@ primitive_types:
     name: Cardinality
     documentation: 'Express constraints on the cardinality of container objects which are the values of multiply-valued attributes, including uniqueness and ordering, providing the means to state that a container acts like a logical list, set or bag.'
     properties:
-      interval:
+      interval: !P_BMM_SINGLE_PROPERTY
         name: interval
         documentation: 'The interval of this cardinality. '
         is_mandatory: true
         type: Multiplicity_interval
-      is_ordered:
+      is_ordered: !P_BMM_SINGLE_PROPERTY
         name: is_ordered
         documentation: 'True if the members of the container attribute to which this cardinality refers are ordered. '
         is_mandatory: true
         type: Boolean
-      is_unique:
+      is_unique: !P_BMM_SINGLE_PROPERTY
         name: is_unique
         documentation: 'True if the members of the container attribute to which this cardinality refers are unique.'
         is_mandatory: true
@@ -1636,17 +1636,17 @@ primitive_types:
       is_bag:
         name: is_bag
         documentation: 'True if the semantics of this cardinality represent a bag, i.e. unordered, non-unique membership.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       is_list:
         name: is_list
         documentation: 'True if the semantics of this cardinality represent a list, i.e. ordered, non-unique membership.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       is_set:
         name: is_set
         documentation: 'True if the semantics of this cardinality represent a set, i.e. unordered, unique membership.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
   Terminology_code:
     name: Terminology_code
@@ -1654,21 +1654,21 @@ primitive_types:
     ancestors:
       - Any
     properties:
-      terminology_id:
+      terminology_id: !P_BMM_SINGLE_PROPERTY
         name: terminology_id
         documentation: 'The archetype environment namespace identifier used to identify a terminology. Typically a value like `"snomed_ct"` that is mapped elsewhere to the full URI identifying the terminology.'
         is_mandatory: true
         type: String
-      terminology_version:
+      terminology_version: !P_BMM_SINGLE_PROPERTY
         name: terminology_version
         documentation: 'Optional string value representing terminology version, typically a date or dotted numeric.'
         type: String
-      code_string:
+      code_string: !P_BMM_SINGLE_PROPERTY
         name: code_string
         documentation: 'A terminology code or post-coordinated code expression, if supported by the terminology. The code may refer to a single term, a value set consisting of multiple terms, or some other entity representable within the terminology.'
         is_mandatory: true
         type: String
-      uri:
+      uri: !P_BMM_SINGLE_PROPERTY
         name: uri
         documentation: 'The URI reference that may be used as a concrete key into a notional terminology service for queries that can obtain the term text, definition, and other associated elements.'
         type: Uri
@@ -1678,12 +1678,12 @@ primitive_types:
     ancestors:
       - Any
     properties:
-      concept:
+      concept: !P_BMM_SINGLE_PROPERTY
         name: concept
         documentation: 'Reference to the terminology concept formally representing this term.'
         is_mandatory: true
         type: Terminology_code
-      text:
+      text: !P_BMM_SINGLE_PROPERTY
         name: text
         documentation: 'Text of term.'
         is_mandatory: true
@@ -1701,38 +1701,38 @@ class_definitions:
       qualified_rm_entity:
         name: qualified_rm_entity
         documentation: 'Globally qualified reference model entity, e.g.  `openehr-EHR-OBSERVATION`.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
       domain_concept:
         name: domain_concept
         documentation: 'Name of the concept represented by this archetype, including specialisation, e.g. `Biochemistry_result-cholesterol`. '
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
       rm_originator:
         name: rm_originator
         documentation: 'Organisation originating the reference model on which this archetype is based, e.g. openehr,  cen,  hl7 . '
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
       rm_name:
         name: rm_name
         documentation: 'Name of the reference model, e.g. rim,  ehr_rm,  en13606 . '
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
       rm_entity:
         name: rm_entity
         documentation: 'Name of the ontological level within the reference model to which this archetype is targeted, e.g. for openEHR,  folder ,  composition ,  section ,  entry .'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
       specialisation:
         name: specialisation
         documentation: 'Name of specialisation of concept, if this archetype is a specialisation of another archetype, e.g.  cholesterol .'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
       version_id:
         name: version_id
         documentation: |
           Version of this archetype. 
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
   GENERIC_ID:
     name: GENERIC_ID
@@ -1740,7 +1740,7 @@ class_definitions:
     ancestors:
       - OBJECT_ID
     properties:
-      scheme:
+      scheme: !P_BMM_SINGLE_PROPERTY
         name: scheme
         documentation: 'Name of the scheme to which this identifier conforms. Ideally this name will be recognisable globally but realistically it may be a local ad hoc scheme whose name is not controlled or standardised in any way. '
         is_mandatory: true
@@ -1756,11 +1756,11 @@ class_definitions:
     ancestors:
       - OBJECT_REF
     properties:
-      path:
+      path: !P_BMM_SINGLE_PROPERTY
         name: path
         documentation: 'The path to an instance in question, as an absolute path with respect to the object found at `VERSION._data_`. An empty path means that the object referred to by id being specified. '
         type: String
-      id:
+      id: !P_BMM_SINGLE_PROPERTY
         name: id
         documentation: 'Globally unique id of an object, regardless of where it is stored.'
         is_mandatory: true
@@ -1774,7 +1774,7 @@ class_definitions:
           * scheme, e.g. `ehr:`, derived from `_namespace_`
           * `_id.value_`
           * `/` + `_path_`, where `_path_` is non-empty
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
   OBJECT_ID:
     name: OBJECT_ID
@@ -1784,7 +1784,7 @@ class_definitions:
       Object ids are used inside an object to identify that object. To identify another object in another service, use an `OBJECT_REF`, or else use a UID for local objects identified by UID. If none of the subtypes is suitable, direct instances of this class may be used. 
     is_abstract: true
     properties:
-      value:
+      value: !P_BMM_SINGLE_PROPERTY
         name: value
         documentation: 'The value of the id in the form defined below. '
         is_mandatory: true
@@ -1793,7 +1793,7 @@ class_definitions:
     name: OBJECT_REF
     documentation: 'Class describing a reference to another object, which may exist locally or be maintained outside the current namespace, e.g. in another service. Services are usually external, e.g. available in a LAN (including on the same host) or the internet via Corba, SOAP, or some other distributed protocol. However, in small systems they may be part of the same executable as the data containing the Id. '
     properties:
-      namespace:
+      namespace: !P_BMM_SINGLE_PROPERTY
         name: namespace
         documentation: |-
           Namespace to which this identifier belongs in the local system context (and possibly in any other openEHR compliant environment) e.g.  terminology ,  demographic . These names are not yet standardised. Legal values for `_namespace_` are:
@@ -1805,12 +1805,12 @@ class_definitions:
           Note that the first two are just special values of the regex, and will be matched by it.
         is_mandatory: true
         type: String
-      type:
+      type: !P_BMM_SINGLE_PROPERTY
         name: type
         documentation: 'Name of the  class (concrete or abstract) of object to which this identifier type refers, e.g. `PARTY`, `PERSON`,  `GUIDELINE`  etc. These class names are from the relevant reference model. The type name `ANY` can be used to indicate that any type is accepted (e.g. if the type is unknown). '
         is_mandatory: true
         type: String
-      id:
+      id: !P_BMM_SINGLE_PROPERTY
         name: id
         documentation: 'Globally unique id of an object, regardless of where it is stored.'
         is_mandatory: true
@@ -1824,22 +1824,22 @@ class_definitions:
       object_id:
         name: object_id
         documentation: 'Unique identifier for logical object of which this identifier identifies one version; normally the `_object_id_` will be the unique identifier of the version container containing the version referred to by this `OBJECT_VERSION_ID` instance. '
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: UID
       creating_system_id:
         name: creating_system_id
         documentation: 'Identifier of the system that created the Version corresponding to this Object version id.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: UID
       version_tree_id:
         name: version_tree_id
         documentation: 'Tree identifier of this version with respect to other versions in the same version tree, as either 1 or 3 part dot-separated numbers, e.g.  1 ,  2.1.4 . '
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: VERSION_TREE_ID
       is_branch:
         name: is_branch
         documentation: 'True if this version identifier represents a branch.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
   PARTY_REF:
     name: PARTY_REF
@@ -1862,12 +1862,12 @@ class_definitions:
       name:
         name: name
         documentation: 'Return the terminology id (which includes the  version  in some cases). Distinct names correspond to distinct (i.e. non-compatible) terminologies. Thus the names  ICD10AM  and  ICD10  refer to distinct terminologies. '
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
       version_id:
         name: version_id
         documentation: 'Version of this terminology, if versioning supported, else the empty string. '
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
   VERSION_TREE_ID:
     name: VERSION_TREE_ID
@@ -1876,7 +1876,7 @@ class_definitions:
 
       `trunk_version [  '.' branch_number  '.' branch_version ]`
     properties:
-      value:
+      value: !P_BMM_SINGLE_PROPERTY
         name: value
         documentation: 'String form of this identifier.'
         is_mandatory: true
@@ -1885,22 +1885,22 @@ class_definitions:
       trunk_version:
         name: trunk_version
         documentation: 'Trunk version number; numbering starts at 1. '
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
       is_branch:
         name: is_branch
         documentation: 'True if this version identifier represents a branch, i.e. has branch_number and branch_version parts.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       branch_number:
         name: branch_number
         documentation: 'Number of branch from the trunk point; numbering starts at 1. '
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
       branch_version:
         name: branch_version
         documentation: 'Version of the branch; numbering starts at 1. '
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
     invariants:
       Value_valid: 'not value.is_empty'
@@ -1920,17 +1920,17 @@ class_definitions:
       root:
         name: root
         documentation: "The identifier of the conceptual namespace in which the object exists, within the identification scheme. Returns the part to the left of the first '::' separator, if any, or else the whole string. "
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: UID
       extension:
         name: extension
         documentation: "Optional local identifier of the object within the context of the root identifier. Returns the part to the right of the first '::' separator if any, or else any empty String."
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
       has_extension:
         name: has_extension
         documentation: 'True if not `_extension_.is_empty()`.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
     invariants:
       Has_extension_valid: 'extension.is_empty xor has_extension'
@@ -1949,7 +1949,7 @@ class_definitions:
     documentation: 'Abstract parent of classes representing unique identifiers which identify information entities in a durable way. UIDs only ever identify one IE in time or space and are never re-used.'
     is_abstract: true
     properties:
-      value:
+      value: !P_BMM_SINGLE_PROPERTY
         name: value
         documentation: 'The value of the id.'
         is_mandatory: true
@@ -2069,42 +2069,42 @@ class_definitions:
       hour:
         name: hour
         documentation: 'Extract the hour part of timezone, as an Integer in the range `00 - 14`.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       minute:
         name: minute
         documentation: 'Extract the hour part of timezone, as an Integer, usually either 0 or 30.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       sign:
         name: sign
         documentation: 'Direction of timezone expresssed as +1 or -1.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Integer
       minute_unknown:
         name: minute_unknown
         documentation: 'Indicates whether minute part known.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       is_partial:
         name: is_partial
         documentation: 'True if this time zone is partial, i.e. if minutes is missing.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       is_extended:
         name: is_extended
         documentation: 'True if this time-zone uses ‘:’ separators.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       is_gmt:
         name: is_gmt
         documentation: 'True if timezone is UTC, i.e. `+0000`.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       as_string:
         name: as_string
         documentation: 'Return timezone string in extended format.'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
     invariants:
       Min_hour_valid: 'sign = -1 implies hour > 0 and hour <= Min_timezone_hour'
@@ -2194,90 +2194,90 @@ class_definitions:
         name: valid_year
         documentation: 'True if `y >= 0`.'
         parameters:
-          'y':
+          'y': !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: 'y'
             type: Integer
         post_conditions:
           Post: 'Result = y >= 0'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       valid_month:
         name: valid_month
         documentation: 'True if `m >= 1 and m <= months_in_year`.'
         parameters:
-          m:
+          m: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: m
             type: Integer
         post_conditions:
           Post: 'Result = m >= 1 and m <= Months_in_year'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       valid_day:
         name: valid_day
         documentation: 'True if `d >= 1 and d <= days_in_month (m, y)`.'
         parameters:
-          'y':
+          'y': !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: 'y'
             type: Integer
-          m:
+          m: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: m
             type: Integer
-          d:
+          d: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: d
             type: Integer
         post_conditions:
           Post: 'Result = d >= 1 and d <= days_in_month (m, y)'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       valid_hour:
         name: valid_hour
         documentation: 'True if `(h >= 0 and h < Hours_in_day) or (h = Hours_in_day and m = 0 and s = 0)` .'
         parameters:
-          h:
+          h: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: h
             type: Integer
-          m:
+          m: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: m
             type: Integer
-          s:
+          s: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: s
             type: Integer
         post_conditions:
           Post: 'Result = (h >= 0 and h < Hours_in_day) or (h = Hours_in_day and m = 0 and s = 0)'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       valid_minute:
         name: valid_minute
         documentation: 'True if `m >= 0 and m < Minutes_in_hour`.'
         parameters:
-          m:
+          m: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: m
             type: Integer
         post_conditions:
           Post: 'Result = m >= 0 and m < Minutes_in_hour'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       valid_second:
         name: valid_second
         documentation: 'True if `s >= 0 and s < Seconds_in_minute` .'
         parameters:
-          s:
+          s: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: s
             type: Integer
         post_conditions:
           Post: 'Result = s >= 0 and s < Seconds_in_minute'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       valid_fractional_second:
         name: valid_fractional_second
         documentation: 'True if `fs >= 0.0` and `fs < 1.0` .'
         parameters:
-          fs:
+          fs: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: fs
             type: Double
         post_conditions:
           Post: 'Result = fs >= 0.0 and fs < 1.0'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       valid_iso8601_date:
         name: valid_iso8601_date
@@ -2295,10 +2295,10 @@ class_definitions:
 
           The combinations of `YYYY`, `MM`, `DD` numbers must be correct with respect to the Gregorian calendar.
         parameters:
-          s:
+          s: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: s
             type: String
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       valid_iso8601_time:
         name: valid_iso8601_time
@@ -2323,10 +2323,10 @@ class_definitions:
           * `[(,|.)s+]` is an optional string consisting of a comma or decimal point followed by numeric string of 1 or more digits, representing a fractional second
           * `Z` is a literal meaning UTC (modern replacement for GMT), i.e. timezone `+0000`
         parameters:
-          s:
+          s: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: s
             type: String
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       valid_iso8601_date_time:
         name: valid_iso8601_date_time
@@ -2339,10 +2339,10 @@ class_definitions:
           ** `YYYY-MM-DDThh:mm` or `YYYY-MM-DDThh` (extended)
           ** `YYYYMMDDThhmm` or `YYYYMMDDThh` (compact)
         parameters:
-          s:
+          s: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: s
             type: String
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
       valid_iso8601_duration:
         name: valid_iso8601_duration
@@ -2355,10 +2355,10 @@ class_definitions:
 
           Note: allowing the `W` designator in the same expression as other designators is an exception to the published standard, but necessary in clinical information (typically for representing pregnancy duration).
         parameters:
-          s:
+          s: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: s
             type: String
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: Boolean
   Proper_interval:
     name: Proper_interval
@@ -2381,22 +2381,22 @@ class_definitions:
         name: T
         conforms_to_type: Ordered
     properties:
-      lower_unbounded:
+      lower_unbounded: !P_BMM_SINGLE_PROPERTY
         name: lower_unbounded
         documentation: 'Lower boundary open (i.e. = -infinity).'
         is_mandatory: true
         type: Boolean
-      upper_unbounded:
+      upper_unbounded: !P_BMM_SINGLE_PROPERTY
         name: upper_unbounded
         documentation: 'Upper boundary open (i.e. = +infinity).'
         is_mandatory: true
         type: Boolean
-      lower_included:
+      lower_included: !P_BMM_SINGLE_PROPERTY
         name: lower_included
         documentation: 'Lower boundary value included in range if not `_lower_unbounded_`.'
         is_mandatory: true
         type: Boolean
-      upper_included:
+      upper_included: !P_BMM_SINGLE_PROPERTY
         name: upper_included
         documentation: 'Upper boundary value included in range if not `_upper_unbounded_`.'
         is_mandatory: true
@@ -2409,24 +2409,24 @@ class_definitions:
       Abstract idea of an online resource created by a human author. 
     is_abstract: true
     properties:
-      uid:
+      uid: !P_BMM_SINGLE_PROPERTY
         name: uid
         documentation: 'Unique identifier of the family of archetypes having the same interface identifier (same major version).'
         type: UUID
-      original_language:
+      original_language: !P_BMM_SINGLE_PROPERTY
         name: original_language
         documentation: 'Language in which this resource was initially authored. Although there is no language primacy of resources overall, the language of original authoring is required to ensure natural language translations can preserve quality. Language is relevant in both the description and ontology sections. '
         is_mandatory: true
         type: Terminology_code
-      description:
+      description: !P_BMM_SINGLE_PROPERTY
         name: description
         documentation: 'Description and lifecycle information of the resource.'
         type: RESOURCE_DESCRIPTION
-      is_controlled:
+      is_controlled: !P_BMM_SINGLE_PROPERTY
         name: is_controlled
         documentation: 'True if this resource is under any kind of change control (even file copying), in which case revision history is created. '
         type: Boolean
-      annotations:
+      annotations: !P_BMM_SINGLE_PROPERTY
         name: annotations
         documentation: 'Annotations on individual items within the resource, keyed by path. The inner table takes the form of a Hash table of String values keyed by String tags.'
         type: RESOURCE_ANNOTATIONS
@@ -2444,7 +2444,7 @@ class_definitions:
         documentation: 'Most recent revision in revision_history if is_controlled else  (uncontrolled) . '
         post_conditions:
           Post: 'Result = revision_history.most_recent_version'
-        result:
+        result: !P_BMM_SIMPLE_TYPE
           type: String
       languages_available:
         name: languages_available
@@ -2474,11 +2474,11 @@ class_definitions:
           generic_parameters:
             - String
             - String
-      original_namespace:
+      original_namespace: !P_BMM_SINGLE_PROPERTY
         name: original_namespace
         documentation: "Namespace of original author's organisation, in reverse internet form, if applicable."
         type: String
-      original_publisher:
+      original_publisher: !P_BMM_SINGLE_PROPERTY
         name: original_publisher
         documentation: 'Plain text name of organisation that originally published this artefact, if any.'
         type: String
@@ -2491,30 +2491,30 @@ class_definitions:
         cardinality:
           lower: 0
           upper_unbounded: true
-      lifecycle_state:
+      lifecycle_state: !P_BMM_SINGLE_PROPERTY
         name: lifecycle_state
         documentation: 'Lifecycle state of the resource, typically including states such as: initial, in_development, in_review, published, superseded, obsolete. '
         is_mandatory: true
         type: Terminology_code
-      parent_resource:
+      parent_resource: !P_BMM_SINGLE_PROPERTY
         name: parent_resource
         documentation: 'Reference to owning resource. '
         is_mandatory: true
         type: AUTHORED_RESOURCE
-      custodian_namespace:
+      custodian_namespace: !P_BMM_SINGLE_PROPERTY
         name: custodian_namespace
         documentation: 'Namespace in reverse internet id form, of current custodian organisation.'
         type: String
-      custodian_organisation:
+      custodian_organisation: !P_BMM_SINGLE_PROPERTY
         name: custodian_organisation
         documentation: 'Plain text name of current custodian organisation.'
         type: String
-      copyright:
+      copyright: !P_BMM_SINGLE_PROPERTY
         name: copyright
         documentation: |
           Optional copyright statement for the resource as a knowledge resource. 
         type: String
-      licence:
+      licence: !P_BMM_SINGLE_PROPERTY
         name: licence
         documentation: 'Licence of current artefact, in format "short licence name <URL of licence>", e.g. "Apache 2.0 License <http://www.apache.org/licenses/LICENSE-2.0.html>"'
         type: String
@@ -2542,7 +2542,7 @@ class_definitions:
           generic_parameters:
             - String
             - String
-      resource_package_uri:
+      resource_package_uri: !P_BMM_SINGLE_PROPERTY
         name: resource_package_uri
         documentation: 'URI of package to which this resource belongs.'
         type: String
@@ -2583,7 +2583,7 @@ class_definitions:
     name: TRANSLATION_DETAILS
     documentation: 'Class providing details of a natural language translation.'
     properties:
-      language:
+      language: !P_BMM_SINGLE_PROPERTY
         name: language
         documentation: 'Language of the translation, coded using ISO 639-1 (2 character) language codes.'
         is_mandatory: true
@@ -2597,7 +2597,7 @@ class_definitions:
           generic_parameters:
             - String
             - String
-      accreditation:
+      accreditation: !P_BMM_SINGLE_PROPERTY
         name: accreditation
         documentation: "Accreditation of primary translator or group, usually a national translator's registration or association membership id."
         type: String
@@ -2609,7 +2609,7 @@ class_definitions:
           generic_parameters:
             - String
             - String
-      version_last_translated:
+      version_last_translated: !P_BMM_SINGLE_PROPERTY
         name: version_last_translated
         documentation: 'Version of this resource last time it was translated into the language represented by this `TRANSLATION_DETAILS` object.'
         type: String
@@ -2626,12 +2626,12 @@ class_definitions:
     name: RESOURCE_DESCRIPTION_ITEM
     documentation: 'Language-specific detail of resource description. When a resource is translated for use in another language environment, each `RESOURCE_DESCRIPTION_ITEM` needs to be copied and translated into the new language.'
     properties:
-      language:
+      language: !P_BMM_SINGLE_PROPERTY
         name: language
         documentation: 'The localised language in which the items in this description item are written. Coded using ISO 639-1 (2 character) language codes.'
         is_mandatory: true
         type: Terminology_code
-      purpose:
+      purpose: !P_BMM_SINGLE_PROPERTY
         name: purpose
         documentation: 'Purpose of the resource.'
         is_mandatory: true
@@ -2646,12 +2646,12 @@ class_definitions:
         cardinality:
           lower: 0
           upper_unbounded: true
-      use:
+      use: !P_BMM_SINGLE_PROPERTY
         name: use
         documentation: |
           Description of the uses of the resource, i.e. contexts in which it could be used. 
         type: String
-      misuse:
+      misuse: !P_BMM_SINGLE_PROPERTY
         name: misuse
         documentation: 'Description of any misuses of the resource, i.e. contexts in which it should not be used.'
         type: String
@@ -2700,12 +2700,12 @@ class_definitions:
         type_def:
           root_type: Hash
           generic_parameter_defs:
-            K:
+            K: !P_BMM_SIMPLE_TYPE
               type: String
             V: !P_BMM_GENERIC_TYPE
               root_type: Hash
               generic_parameter_defs:
-                K:
+                K: !P_BMM_SIMPLE_TYPE
                   type: String
                 V: !P_BMM_GENERIC_TYPE
                   root_type: Hash
