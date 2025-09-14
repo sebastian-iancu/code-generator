@@ -54,7 +54,7 @@
     ],
     "scripts": {
         "generate": "bin/generate",
-        "phpunit": "phpunit --configuration tests/phpunit.xml",
+        "phpunit": "XDEBUG_MODE=coverage phpunit --configuration tests/phpunit.xml",
         "phplint": "parallel-lint . --exclude vendor",
         "phpstan": "phpstan analyse --configuration tests/phpstan.neon --memory-limit 2G",
         "generate-phpstan-baseline": "@phpstan --generate-baseline tests/phpstan-baseline.neon"
