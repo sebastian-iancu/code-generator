@@ -8,7 +8,7 @@ It can generate the following types of files:
  - XMI Internal Model files
  - PlantUML class and package diagrams
 
-For detailed development guidelines, please refer to the [guidelines.md](guidelines.md) file.
+For detailed development guidelines, see [.junie/guidelines.md](.junie/guidelines.md) (Docker-first, contributor-focused).
 
 ## Structure
 The main source code is located in the `/src` directory.
@@ -18,34 +18,35 @@ The code-generator is a Symfony Console application defined in `/bin/generate`.
 Installed dependencies are located in the `/vendor` directory.
 
 ## Requirements
-- PHP 8.0+
-- Docker
+- Docker Engine 24+ and Docker Compose v2
+- Container: PHP 8.3 with ext-json, ext-libxml, ext-simplexml; Composer 2.x available inside the container
+- All PHP/Composer commands must be run via docker compose (service: app)
 
 ## Installation
 1. Clone the repository
 2. Run `docker compose build` to build the Docker image
-3. Run `docker compose run --rm php composer install` to install dependencies
+3. Run `docker compose run --rm app composer install` to install dependencies
 
 ## Usage
 The generator application can be run either via `composer`:
 ```bash
-docker compose run --rm php composer run generate <...>
+docker compose run --rm app composer run generate <...>
 ```
 or directly:
 ```bash
-docker compose run --rm php ./bin/generate <...>
+docker compose run --rm app ./bin/generate <...>
 ```
 
 List the available commands for the generator tool (see list of available commands prefixed with `generate:`):
 ```bash
-docker compose run --rm php ./bin/generate list
+docker compose run --rm app ./bin/generate list
 ```
 
 
 
 Generate all files as predefined in the application:
 ```bash
-docker compose run --rm php ./bin/generate all
+docker compose run --rm app ./bin/generate all
 ```
 
 ### XmiToBmm Command
@@ -54,15 +55,15 @@ The `xmi:bmm` command (with aliases `xmi` and `uml`) generates BMM (Basic Meta-M
 
 #### Usage
 ```bash
-docker compose run --rm php ./bin/generate xmi:bmm <schema1> [schema2] [...]
+docker compose run --rm app ./bin/generate xmi:bmm <schema1> [schema2] [...]
 ````
 #### Examples
 ```bash
 # Single schema
-docker compose run --rm php ./bin/generate xmi:bmm BASE-v1.2.0
+docker compose run --rm app ./bin/generate xmi:bmm BASE-v1.2.0
 
 # Multiple schemas (dependencies first)
-docker compose run --rm php ./bin/generate xmi:bmm BASE-v1.2.0 RM-v1.1.0
+docker compose run --rm app ./bin/generate xmi:bmm BASE-v1.2.0 RM-v1.1.0
 ```
 
 ### Command to extract All XMI to JSON BMM 
@@ -71,30 +72,51 @@ The `all` command generates all predefined files in the application, including J
 
 #### Usage
 ```bash
-docker compose run --rm php ./bin/generate all
+docker compose run --rm app ./bin/generate all
 ```
 
 ### BMM Export Commands
 
 Convert BMM JSON files to YAML format:
 ```bash
-docker compose run --rm php ./bin/generate bmm:yaml <filename>
+docker compose run --rm app ./bin/generate bmm:yaml <filename>
 ```
 Usage
 ```bash
-docker compose run --rm php ./bin/generate bmm:yaml BASE-v1.2.0 RM-v1.1.0
+docker compose run --rm app ./bin/generate bmm:yaml BASE-v1.2.0 RM-v1.1.0
 # Or convert all: 
-docker compose run --rm php ./bin/generate bmm:yaml all
+docker compose run --rm app ./bin/generate bmm:yaml all
 ```
 
 Convert BMM JSON files to PlantUML diagrams:
 ```bash
-docker compose run --rm php ./bin/generate bmm:plantuml <filename>
+docker compose run --rm app ./bin/generate bmm:plantuml <filename>
 ```
 Usage
 ```bash
-docker compose run --rm php ./bin/generate bmm:plantuml BASE-v1.2.0 RM-v1.1.0
+docker compose run --rm app ./bin/generate bmm:plantuml BASE-v1.2.0 RM-v1.1.0
 # Or convert all: 
-docker compose run --rm php ./bin/generate bmm:plantuml all
+docker compose run --rm app ./bin/generate bmm:plantuml all
 ```
 
+
+## Testing
+
+Run lint, static analysis, and unit tests inside the container:
+```bash
+# Lint
+docker compose run --rm app composer run phplint
+
+# Static analysis
+docker compose run --rm app composer run phpstan
+
+# Unit tests
+docker compose run --rm app composer run phpunit
+
+# Coverage
+docker compose run --rm -e XDEBUG_MODE=coverage app composer run phpunit
+```
+
+Troubleshooting:
+- Ensure /tmp/phpunit exists and is writable inside the container; mount a tmp volume if you need host access.
+- On Windows, prefer WSL2-backed Docker for stable paths.

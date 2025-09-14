@@ -1,5 +1,5 @@
 services:
-  php:
+  app:
     build:
       context: .
     volumes:
