@@ -95,7 +95,7 @@ docker compose run --rm app composer run phplint
 
 - Architecture overview
   - `bin/generate` registers Symfony Console commands:
-    - Console\Command\XmiToBmm, XmiToInternalModel, AllXmi, BmmJsonToYaml, BmmJsonToPlantUml, BmmJsonToAsciiDoc, BmmJsonToFiles.
+    - Console\Command\XmiToBmm, XmiToInternalModel, AllXmi, BmmJsonToYaml, BmmJsonToPlantUml, BmmJsonToAsciiDoc, BmmJsonToClassJson.
   - `src/` contains:
     - Reader: parsing BMM/XMI/YAML/etc.
     - Model: internal representations (Bmm, Uml, etc.).
@@ -111,13 +111,25 @@ docker compose run --rm app composer run generate -- list
   - Typical flows:
 ```
 # BMM JSON -> YAML
-docker compose run --rm app composer run generate -- bmm:json-to-yaml <input.json> <output.yaml>
+docker compose run --rm app composer run generate -- bmm:yaml <package...|all>
 
 # BMM JSON -> PlantUML
-docker compose run --rm app composer run generate -- bmm:json-to-plantuml <input.json> <output.puml>
+docker compose run --rm app composer run generate -- bmm:plantuml <package...|all>
+
+# BMM JSON -> AsciiDoc tables
+docker compose run --rm app composer run generate -- bmm:adoc <package...|all>
+
+# BMM JSON -> split into per-class JSON files
+docker compose run --rm app composer run generate -- bmm:split <package...|all>
 
 # XMI -> BMM
-docker compose run --rm app composer run generate -- xmi:to-bmm <xmi-file> <output-dir>
+docker compose run --rm app composer run generate -- xmi:bmm <xmi-schema...>
+
+# XMI -> dump internal model (debugging)
+docker compose run --rm app composer run generate -- xmi:internal-model <name> <xmi-schema...>
+
+# Generate a predefined set of XMI -> BMM transformations
+docker compose run --rm app composer run generate -- xmi:all [internal]
 ```
 
   - Note: exact command names per Console\Command classes; inspect bin/Command directory for options.

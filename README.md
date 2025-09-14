@@ -7,6 +7,7 @@ It can generate the following types of files:
  - BMM YAML files
  - XMI Internal Model files
  - PlantUML class and package diagrams
+ - Split per-class BMM JSON files
 
 For detailed development guidelines, see [.junie/guidelines.md](.junie/guidelines.md) (Docker-first, contributor-focused).
 
@@ -66,13 +67,16 @@ docker compose run --rm app ./bin/generate xmi:bmm BASE-v1.2.0
 docker compose run --rm app ./bin/generate xmi:bmm BASE-v1.2.0 RM-v1.1.0
 ```
 
-### Command to extract All XMI to JSON BMM 
+### Generate a predefined set from XMI
 
-The `all` command generates all predefined files in the application, including JSON BMM files and other supported formats.
+The `xmi:all` command (alias: `all`) runs a curated set of XMI -> BMM transformations. Optionally, you can dump the intermediate internal model for debugging.
 
 #### Usage
 ```bash
+# Generate BMM from a predefined set of XMI schemas
 docker compose run --rm app ./bin/generate all
+# Dump internal model variants instead
+docker compose run --rm app ./bin/generate xmi:all internal
 ```
 
 ### BMM Export Commands
@@ -81,10 +85,11 @@ Convert BMM JSON files to YAML format:
 ```bash
 docker compose run --rm app ./bin/generate bmm:yaml <filename>
 ```
-Usage
+Examples
 ```bash
-docker compose run --rm app ./bin/generate bmm:yaml openehr_base_1.2.0 openehr_rm_1.1.0
-# Or convert all: 
+# Specific files
+docker compose run --rm app ./bin/generate bmm:yaml openehr_base_1.3.0 openehr_rm_1.2.0
+# Or convert all
 docker compose run --rm app ./bin/generate bmm:yaml all
 ```
 
@@ -92,11 +97,36 @@ Convert BMM JSON files to PlantUML diagrams:
 ```bash
 docker compose run --rm app ./bin/generate bmm:plantuml <filename>
 ```
-Usage
+Examples
 ```bash
-docker compose run --rm app ./bin/generate bmm:plantuml openehr_base_1.2.0 openehr_rm_1.1.0
-# Or convert all: 
+# Specific files
+docker compose run --rm app ./bin/generate bmm:plantuml openehr_base_1.3.0 openehr_rm_1.2.0
+# Or convert all
 docker compose run --rm app ./bin/generate bmm:plantuml all
+```
+
+Convert BMM JSON files to AsciiDoc tables:
+```bash
+docker compose run --rm app ./bin/generate bmm:adoc <filename>
+```
+Examples
+```bash
+# Specific files
+docker compose run --rm app ./bin/generate bmm:adoc openehr_rm_1.2.0
+# Or convert all
+docker compose run --rm app ./bin/generate bmm:adoc all
+```
+
+Split package BMM JSON into per-class JSON files:
+```bash
+docker compose run --rm app ./bin/generate bmm:split <filename>|all
+```
+Examples
+```bash
+# Specific files
+docker compose run --rm app ./bin/generate bmm:split openehr_base_1.3.0
+# Or split all packages
+docker compose run --rm app ./bin/generate bmm:split all
 ```
 
 

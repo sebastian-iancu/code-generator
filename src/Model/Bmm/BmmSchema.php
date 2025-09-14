@@ -73,7 +73,7 @@ readonly class BmmSchema implements JsonSerializable, YamlSerializable, Collecta
             'rm_release' => $this->rmRelease,
             'schema_revision' => $this->schemaRevision,
             'schema_lifecycle_state' => $this->schemaLifecycleState,
-            'schema_description' => $this->schemaDescription,
+            'schema_description' => $this->schemaDescription ?: $this->schemaName,
             'schema_author' => $this->schemaAuthor,
             'includes' => $this->includes->getArrayCopy(),
             'packages' => $this->packages->getArrayCopy(),
