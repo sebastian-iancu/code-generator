@@ -106,14 +106,20 @@ class UmlToBmmWriter extends AbstractWriter
             }
             $schema = BmmSchema::fromArray($schema);
             switch ($schema->getSchemaId()) {
-                case 'openehr_rm_development':
-                case 'openehr_am_development':
-                    $schema->includes->append(new BmmSchemaInclude(id: 'openehr_base_development'));
+                case 'openehr_rm_1.0.3':
+                    $schema->includes->add(new BmmSchemaInclude(id: 'openehr_base_1.0.3'));
+                    break;
+                case 'openehr_rm_1.0.4':
+                case 'openehr_am_2.2.0':
+                    $schema->includes->add(new BmmSchemaInclude(id: 'openehr_base_1.1.0'));
                     break;
                 case 'openehr_rm_1.1.0':
-                case 'openehr_am_2.2.0':
                 case 'openehr_am_2.3.0':
-                    $schema->includes->append(new BmmSchemaInclude(id: 'openehr_base_1.1.0'));
+                    $schema->includes->add(new BmmSchemaInclude(id: 'openehr_base_1.2.0'));
+                    break;
+                case 'openehr_rm_1.2.0':
+                case 'openehr_am_2.4.0':
+                    $schema->includes->add(new BmmSchemaInclude(id: 'openehr_base_1.3.0'));
                     break;
             }
             // saving as a file

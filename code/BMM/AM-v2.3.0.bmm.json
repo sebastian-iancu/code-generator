@@ -7,11 +7,11 @@
     "schema_lifecycle_state": "stable",
     "schema_description": "openEHR Archetype Model",
     "schema_author": "Thomas Beale <thomas.beale@openehr.org>, code-generator",
-    "includes": [
-        {
-            "id": "openehr_base_1.1.0"
+    "includes": {
+        "openehr_base_1.2.0": {
+            "id": "openehr_base_1.2.0"
         }
-    ],
+    },
     "packages": {
         "org.openehr.am.aom2": {
             "name": "org.openehr.am.aom2",
