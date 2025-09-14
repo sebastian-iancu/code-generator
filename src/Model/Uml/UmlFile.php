@@ -20,7 +20,7 @@ class UmlFile implements CollectableInterface
     public function __construct(SimpleXMLElement $xmlNode, string $id)
     {
         $this->id = $id;
-        $nodes = $xmlNode->xpath('//uml:Package[@xmi:type="uml:Package"]');
+        $nodes = $xmlNode->xpath('//uml:Package[@xmi:type="uml:Package"]|//uml:Model[@xmi:type="uml:Model"]/packagedElement[@xmi:type="uml:Package"]');
         if (!$nodes) {
             throw new RuntimeException("XMI errors in $this->id: main package not found.");
         }

@@ -47,7 +47,6 @@ readonly class BmmSingleFunctionParameter extends AbstractBmmFunctionParameter i
      */
     public function yamlSerialize(): TaggedValue
     {
-
         return new TaggedValue('P_BMM_SINGLE_FUNCTION_PARAMETER', array_filter([
             'name' => $this->name,
             'documentation' => $this->documentation,
@@ -66,7 +65,7 @@ readonly class BmmSingleFunctionParameter extends AbstractBmmFunctionParameter i
     {
         return new self(
             name: $data['name'],
-            type: $data['type'],
+            type: $data['type'] ?? 'Any',
             documentation: $data['documentation'] ?? null,
             isNullable: $data['is_nullable'] ?? false,
         );

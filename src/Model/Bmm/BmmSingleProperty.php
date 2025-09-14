@@ -64,7 +64,7 @@ readonly class BmmSingleProperty extends AbstractBmmProperty implements JsonSeri
     {
         return new self(
             name: $data['name'],
-            type: $data['type'],
+            type: $data['type'] ?? 'Any',
             documentation: $data['documentation'] ?? null,
             isMandatory: $data['is_mandatory'] ?? false,
         );

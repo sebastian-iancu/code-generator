@@ -363,7 +363,7 @@ class UmlToBmmWriter extends AbstractWriter
         return array_filter($bmmProperty);
     }
 
-    public static function asType(string $typeName, int $maxOccurs, UmlClass $umlClass, Collection $collectedUmlClasses): array
+    public static function asType(string $typeName, int|null $maxOccurs, UmlClass $umlClass, Collection $collectedUmlClasses): array
     {
         $bmmPropertyType = [];
         if (str_contains($typeName, '<')) {
