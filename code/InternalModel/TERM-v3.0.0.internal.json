@@ -1,0 +1,584 @@
+{
+    "files": {
+        "__aliases": {
+            "TERM-v3.0.0.xmi": "TERM",
+            "_18_5_2_83e026d_1510164009867_274129_5192": "TERM"
+        },
+        "TERM": {
+            "id": "TERM-v3.0.0.xmi",
+            "name": "TERM",
+            "umlPackage": {
+                "id": "_18_5_2_83e026d_1510164009867_274129_5192",
+                "name": "TERM",
+                "description": "",
+                "umlPackages": {
+                    "__aliases": {
+                        "_18_5_2_83e026d_1510164020460_817914_5193": "org"
+                    },
+                    "org": {
+                        "id": "_18_5_2_83e026d_1510164020460_817914_5193",
+                        "name": "org",
+                        "description": "",
+                        "umlPackages": {
+                            "__aliases": {
+                                "_18_5_2_83e026d_1510164028458_307392_5194": "openehr"
+                            },
+                            "openehr": {
+                                "id": "_18_5_2_83e026d_1510164028458_307392_5194",
+                                "name": "openehr",
+                                "description": "",
+                                "umlPackages": {
+                                    "__aliases": {
+                                        "_19_0_3_8fe028d_1676201714967_554106_5170": "term"
+                                    },
+                                    "term": {
+                                        "id": "_19_0_3_8fe028d_1676201714967_554106_5170",
+                                        "name": "term",
+                                        "description": "",
+                                        "umlPackages": {
+                                            "__aliases": {
+                                                "_18_5_2_83e026d_1510167269870_162331_5281": "terminology"
+                                            },
+                                            "terminology": {
+                                                "id": "_18_5_2_83e026d_1510167269870_162331_5281",
+                                                "name": "terminology",
+                                                "description": "",
+                                                "umlPackages": [],
+                                                "umlClasses": {
+                                                    "__aliases": {
+                                                        "_18_5_2_83e026d_1510167281075_276933_5282": "CODE_SET",
+                                                        "_18_5_2_83e026d_1510167290293_389864_5283": "TERMINOLOGY_GROUP",
+                                                        "_18_5_2_83e026d_1510167847155_63569_5750": "CODE",
+                                                        "_18_5_2_83e026d_1510168075558_312296_5801": "TERMINOLOGY_CONCEPT",
+                                                        "_18_5_2_83e026d_1510168213268_247576_5900": "TERMINOLOGY",
+                                                        "_19_0_3_8fe028d_1676301317832_820525_5192": "TERMINOLOGY_STATUS"
+                                                    },
+                                                    "CODE_SET": {
+                                                        "id": "_18_5_2_83e026d_1510167281075_276933_5282",
+                                                        "name": "CODE_SET",
+                                                        "description": "A code set.",
+                                                        "isAbstract": false,
+                                                        "umlGeneralizations": [],
+                                                        "umlTemplateParameters": [],
+                                                        "templateBinding": null,
+                                                        "umlProperties": {
+                                                            "__aliases": {
+                                                                "_19_0_3_8fe028d_1676199594610_318714_5144": "name",
+                                                                "_18_5_2_83e026d_1510167981922_926441_5788": "openehr_id",
+                                                                "_18_5_2_83e026d_1510167968968_647182_5784": "issuer",
+                                                                "_18_5_2_83e026d_1510168144284_549656_5838": "codes",
+                                                                "_18_5_2_83e026d_1510168001105_498378_5792": "external_id",
+                                                                "_19_0_3_8fe028d_1676199626523_713835_5148": "status"
+                                                            },
+                                                            "name": {
+                                                                "id": "_19_0_3_8fe028d_1676199594610_318714_5144",
+                                                                "name": "name",
+                                                                "type": {
+                                                                    "id": "openEHR_UML-BASE.mdzip#_18_1_83e026d_1437045555791_888328_4996",
+                                                                    "name": "String",
+                                                                    "referenceMethod": "href",
+                                                                    "referentPath": "BASE::org::openehr::base::foundation_types::primitive_types::String",
+                                                                    "referentType": "Class"
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 1,
+                                                                "maxOccurs": 1,
+                                                                "description": "Name of this code set.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": null
+                                                            },
+                                                            "openehr_id": {
+                                                                "id": "_18_5_2_83e026d_1510167981922_926441_5788",
+                                                                "name": "openehr_id",
+                                                                "type": {
+                                                                    "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
+                                                                    "name": "String",
+                                                                    "referenceMethod": "href",
+                                                                    "referentPath": "UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String",
+                                                                    "referentType": "PrimitiveType"
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 1,
+                                                                "maxOccurs": 1,
+                                                                "description": "Identifier used for code set in the openEHR Reference Model. The value is inferred from the `_name_` attribute.\n\nValid values take the form of an xs:NCName value, i.e. cannot contain:\n\n* symbol characters `:, @, $, %, &, \/, +, ,, ;`;\n* whitespace characters or different parentheses. \n\nAn NCName cannot begin with a number, dot or minus character although these can appear later in the value.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": null
+                                                            },
+                                                            "issuer": {
+                                                                "id": "_18_5_2_83e026d_1510167968968_647182_5784",
+                                                                "name": "issuer",
+                                                                "type": {
+                                                                    "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
+                                                                    "name": "String",
+                                                                    "referenceMethod": "href",
+                                                                    "referentPath": "UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String",
+                                                                    "referentType": "PrimitiveType"
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 1,
+                                                                "maxOccurs": 1,
+                                                                "description": "Name of the issuing organisation.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": null
+                                                            },
+                                                            "codes": {
+                                                                "id": "_18_5_2_83e026d_1510168144284_549656_5838",
+                                                                "name": "codes",
+                                                                "type": {
+                                                                    "id": "_18_5_2_83e026d_1510167847155_63569_5750",
+                                                                    "name": "CODE",
+                                                                    "referenceMethod": "lookup",
+                                                                    "referentPath": null,
+                                                                    "referentType": null
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 0,
+                                                                "maxOccurs": -1,
+                                                                "description": "Codes in this code set.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": null
+                                                            },
+                                                            "external_id": {
+                                                                "id": "_18_5_2_83e026d_1510168001105_498378_5792",
+                                                                "name": "external_id",
+                                                                "type": {
+                                                                    "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
+                                                                    "name": "String",
+                                                                    "referenceMethod": "href",
+                                                                    "referentPath": "UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String",
+                                                                    "referentType": "PrimitiveType"
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 0,
+                                                                "maxOccurs": 1,
+                                                                "description": "An optional identifier assumed by openEHR to be the identifier of this code set, based on its published name, with spaces replaced by underscores.\n\nValid values take the form of an xs:NCName value, i.e. cannot contain:\n\n* symbol characters `:, @, $, %, &, \/, +, ,, ;`;\n* whitespace characters or different parentheses. \n\nAn NCName cannot begin with a number, dot or minus character although these can appear later in the value.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": null
+                                                            },
+                                                            "status": {
+                                                                "id": "_19_0_3_8fe028d_1676199626523_713835_5148",
+                                                                "name": "status",
+                                                                "type": {
+                                                                    "id": "_19_0_3_8fe028d_1676301317832_820525_5192",
+                                                                    "name": "TERMINOLOGY_STATUS",
+                                                                    "referenceMethod": "lookup",
+                                                                    "referentPath": null,
+                                                                    "referentType": null
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 0,
+                                                                "maxOccurs": 1,
+                                                                "description": "Status of this code set.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": ""
+                                                            }
+                                                        },
+                                                        "umlOperations": [],
+                                                        "umlConstraints": []
+                                                    },
+                                                    "TERMINOLOGY_GROUP": {
+                                                        "id": "_18_5_2_83e026d_1510167290293_389864_5283",
+                                                        "name": "TERMINOLOGY_GROUP",
+                                                        "description": "A single vocabulary, in a particular language, within a Terminology.",
+                                                        "isAbstract": false,
+                                                        "umlGeneralizations": [],
+                                                        "umlTemplateParameters": [],
+                                                        "templateBinding": null,
+                                                        "umlProperties": {
+                                                            "__aliases": {
+                                                                "_18_5_2_83e026d_1510168053345_202891_5796": "name",
+                                                                "_18_5_2_83e026d_1510168165690_411162_5871": "concepts",
+                                                                "_19_0_3_8fe028d_1676200580173_752988_5160": "openehr_id",
+                                                                "_19_0_3_8fe028d_1676301529610_813562_5233": "status"
+                                                            },
+                                                            "name": {
+                                                                "id": "_18_5_2_83e026d_1510168053345_202891_5796",
+                                                                "name": "name",
+                                                                "type": {
+                                                                    "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
+                                                                    "name": "String",
+                                                                    "referenceMethod": "href",
+                                                                    "referentPath": "UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String",
+                                                                    "referentType": "PrimitiveType"
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 1,
+                                                                "maxOccurs": 1,
+                                                                "description": "Name of this vocabulary.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": null
+                                                            },
+                                                            "concepts": {
+                                                                "id": "_18_5_2_83e026d_1510168165690_411162_5871",
+                                                                "name": "concepts",
+                                                                "type": {
+                                                                    "id": "_18_5_2_83e026d_1510168075558_312296_5801",
+                                                                    "name": "TERMINOLOGY_CONCEPT",
+                                                                    "referenceMethod": "lookup",
+                                                                    "referentPath": null,
+                                                                    "referentType": null
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 0,
+                                                                "maxOccurs": -1,
+                                                                "description": "List of concepts (i.e. coded terms) in this vocabulary.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": null
+                                                            },
+                                                            "openehr_id": {
+                                                                "id": "_19_0_3_8fe028d_1676200580173_752988_5160",
+                                                                "name": "openehr_id",
+                                                                "type": {
+                                                                    "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
+                                                                    "name": "String",
+                                                                    "referenceMethod": "href",
+                                                                    "referentPath": "UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String",
+                                                                    "referentType": "PrimitiveType"
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 1,
+                                                                "maxOccurs": 1,
+                                                                "description": "Identifier used for terminology group in the openEHR Reference Model. The value is inferred from the `_name_` attribute.\n\nValid values take the form of an xs:NCName value, i.e. cannot contain:\n\n* symbol characters `:, @, $, %, &, \/, +, ,, ;`;\n* whitespace characters or different parentheses. \n\nAn NCName cannot begin with a number, dot or minus character although these can appear later in the value.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": null
+                                                            },
+                                                            "status": {
+                                                                "id": "_19_0_3_8fe028d_1676301529610_813562_5233",
+                                                                "name": "status",
+                                                                "type": {
+                                                                    "id": "_19_0_3_8fe028d_1676301317832_820525_5192",
+                                                                    "name": "TERMINOLOGY_STATUS",
+                                                                    "referenceMethod": "lookup",
+                                                                    "referentPath": null,
+                                                                    "referentType": null
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 0,
+                                                                "maxOccurs": 1,
+                                                                "description": "Status of this vocabulary.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": ""
+                                                            }
+                                                        },
+                                                        "umlOperations": [],
+                                                        "umlConstraints": []
+                                                    },
+                                                    "CODE": {
+                                                        "id": "_18_5_2_83e026d_1510167847155_63569_5750",
+                                                        "name": "CODE",
+                                                        "description": "A single code entity in a code set.",
+                                                        "isAbstract": false,
+                                                        "umlGeneralizations": [],
+                                                        "umlTemplateParameters": [],
+                                                        "templateBinding": null,
+                                                        "umlProperties": {
+                                                            "__aliases": {
+                                                                "_18_5_2_83e026d_1510167869306_284171_5774": "value",
+                                                                "_19_0_3_8fe028d_1676301004047_513371_5175": "description",
+                                                                "_19_0_3_8fe028d_1676301522502_795476_5221": "status"
+                                                            },
+                                                            "value": {
+                                                                "id": "_18_5_2_83e026d_1510167869306_284171_5774",
+                                                                "name": "value",
+                                                                "type": {
+                                                                    "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
+                                                                    "name": "String",
+                                                                    "referenceMethod": "href",
+                                                                    "referentPath": "UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String",
+                                                                    "referentType": "PrimitiveType"
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 1,
+                                                                "maxOccurs": 1,
+                                                                "description": "The code string for this code entity, e.g. `\"AF\"`.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": null
+                                                            },
+                                                            "description": {
+                                                                "id": "_19_0_3_8fe028d_1676301004047_513371_5175",
+                                                                "name": "description",
+                                                                "type": {
+                                                                    "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
+                                                                    "name": "String",
+                                                                    "referenceMethod": "href",
+                                                                    "referentPath": "UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String",
+                                                                    "referentType": "PrimitiveType"
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 0,
+                                                                "maxOccurs": 1,
+                                                                "description": "Optional description of this code, e.g. `\"AFGHANISTAN\"`.\n\nThis field may be used to hold translations of the description in a language-specific copy of the English language original code set.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": null
+                                                            },
+                                                            "status": {
+                                                                "id": "_19_0_3_8fe028d_1676301522502_795476_5221",
+                                                                "name": "status",
+                                                                "type": {
+                                                                    "id": "_19_0_3_8fe028d_1676301317832_820525_5192",
+                                                                    "name": "TERMINOLOGY_STATUS",
+                                                                    "referenceMethod": "lookup",
+                                                                    "referentPath": null,
+                                                                    "referentType": null
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 0,
+                                                                "maxOccurs": 1,
+                                                                "description": "Status of this code within the code set.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": ""
+                                                            }
+                                                        },
+                                                        "umlOperations": [],
+                                                        "umlConstraints": []
+                                                    },
+                                                    "TERMINOLOGY_CONCEPT": {
+                                                        "id": "_18_5_2_83e026d_1510168075558_312296_5801",
+                                                        "name": "TERMINOLOGY_CONCEPT",
+                                                        "description": "A single terminology concept in a vocabulary.",
+                                                        "isAbstract": false,
+                                                        "umlGeneralizations": [],
+                                                        "umlTemplateParameters": [],
+                                                        "templateBinding": null,
+                                                        "umlProperties": {
+                                                            "__aliases": {
+                                                                "_18_5_2_83e026d_1510168098728_752902_5825": "id",
+                                                                "_18_5_2_83e026d_1510168111431_116181_5829": "rubric",
+                                                                "_19_0_3_8fe028d_1676301526368_830018_5227": "status"
+                                                            },
+                                                            "id": {
+                                                                "id": "_18_5_2_83e026d_1510168098728_752902_5825",
+                                                                "name": "id",
+                                                                "type": {
+                                                                    "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
+                                                                    "name": "String",
+                                                                    "referenceMethod": "href",
+                                                                    "referentPath": "UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String",
+                                                                    "referentType": "PrimitiveType"
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 1,
+                                                                "maxOccurs": 1,
+                                                                "description": "The code of this concept.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": null
+                                                            },
+                                                            "rubric": {
+                                                                "id": "_18_5_2_83e026d_1510168111431_116181_5829",
+                                                                "name": "rubric",
+                                                                "type": {
+                                                                    "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
+                                                                    "name": "String",
+                                                                    "referenceMethod": "href",
+                                                                    "referentPath": "UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String",
+                                                                    "referentType": "PrimitiveType"
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 1,
+                                                                "maxOccurs": 1,
+                                                                "description": "The rubric, i.e. linguistic expression, of this concept, in the language of this terminology instance.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": null
+                                                            },
+                                                            "status": {
+                                                                "id": "_19_0_3_8fe028d_1676301526368_830018_5227",
+                                                                "name": "status",
+                                                                "type": {
+                                                                    "id": "_19_0_3_8fe028d_1676301317832_820525_5192",
+                                                                    "name": "TERMINOLOGY_STATUS",
+                                                                    "referenceMethod": "lookup",
+                                                                    "referentPath": null,
+                                                                    "referentType": null
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 0,
+                                                                "maxOccurs": 1,
+                                                                "description": "Status of this concept within the vocabulary.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": ""
+                                                            }
+                                                        },
+                                                        "umlOperations": [],
+                                                        "umlConstraints": []
+                                                    },
+                                                    "TERMINOLOGY": {
+                                                        "id": "_18_5_2_83e026d_1510168213268_247576_5900",
+                                                        "name": "TERMINOLOGY",
+                                                        "description": "Container for code sets and\/or vocabularies that belong to a given logical terminology.",
+                                                        "isAbstract": false,
+                                                        "umlGeneralizations": [],
+                                                        "umlTemplateParameters": [],
+                                                        "templateBinding": null,
+                                                        "umlProperties": {
+                                                            "__aliases": {
+                                                                "_18_5_2_83e026d_1510168276260_350110_5928": "name",
+                                                                "_18_5_2_83e026d_1510168235428_319211_5924": "language",
+                                                                "_18_5_2_83e026d_1510169176161_591436_5941": "code_sets",
+                                                                "_18_5_2_83e026d_1510169218556_281833_5974": "vocabularies",
+                                                                "_19_0_3_8fe028d_1676301665171_471118_5239": "version",
+                                                                "_19_0_3_8fe028d_1676301703418_492818_5243": "date"
+                                                            },
+                                                            "name": {
+                                                                "id": "_18_5_2_83e026d_1510168276260_350110_5928",
+                                                                "name": "name",
+                                                                "type": {
+                                                                    "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
+                                                                    "name": "String",
+                                                                    "referenceMethod": "href",
+                                                                    "referentPath": "UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String",
+                                                                    "referentType": "PrimitiveType"
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 1,
+                                                                "maxOccurs": 1,
+                                                                "description": "Name of this terminology.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": null
+                                                            },
+                                                            "language": {
+                                                                "id": "_18_5_2_83e026d_1510168235428_319211_5924",
+                                                                "name": "language",
+                                                                "type": {
+                                                                    "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
+                                                                    "name": "String",
+                                                                    "referenceMethod": "href",
+                                                                    "referentPath": "UML Standard Profile::UML2 Metamodel::PrimitiveTypes::String",
+                                                                    "referentType": "PrimitiveType"
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 1,
+                                                                "maxOccurs": 1,
+                                                                "description": "Language of this terminology, as an ISO:639 2-letter code.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": null
+                                                            },
+                                                            "code_sets": {
+                                                                "id": "_18_5_2_83e026d_1510169176161_591436_5941",
+                                                                "name": "code_sets",
+                                                                "type": {
+                                                                    "id": "_18_5_2_83e026d_1510167281075_276933_5282",
+                                                                    "name": "CODE_SET",
+                                                                    "referenceMethod": "lookup",
+                                                                    "referentPath": null,
+                                                                    "referentType": null
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 0,
+                                                                "maxOccurs": -1,
+                                                                "description": "Code sets in this Terminology.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": null
+                                                            },
+                                                            "vocabularies": {
+                                                                "id": "_18_5_2_83e026d_1510169218556_281833_5974",
+                                                                "name": "vocabularies",
+                                                                "type": {
+                                                                    "id": "_18_5_2_83e026d_1510167290293_389864_5283",
+                                                                    "name": "TERMINOLOGY_GROUP",
+                                                                    "referenceMethod": "lookup",
+                                                                    "referentPath": null,
+                                                                    "referentType": null
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 0,
+                                                                "maxOccurs": -1,
+                                                                "description": "Vocabularies of coded terms in this terminology.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": null
+                                                            },
+                                                            "version": {
+                                                                "id": "_19_0_3_8fe028d_1676301665171_471118_5239",
+                                                                "name": "version",
+                                                                "type": {
+                                                                    "id": "openEHR_UML-BASE.mdzip#_18_1_83e026d_1437045555791_888328_4996",
+                                                                    "name": "String",
+                                                                    "referenceMethod": "href",
+                                                                    "referentPath": "BASE::org::openehr::base::foundation_types::primitive_types::String",
+                                                                    "referentType": "Class"
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 0,
+                                                                "maxOccurs": 1,
+                                                                "description": "Version of this instance of the terminology.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": null
+                                                            },
+                                                            "date": {
+                                                                "id": "_19_0_3_8fe028d_1676301703418_492818_5243",
+                                                                "name": "date",
+                                                                "type": {
+                                                                    "id": "openEHR_UML-BASE.mdzip#_18_2_83e026d_1461851902572_855852_4973",
+                                                                    "name": "Iso8601_date",
+                                                                    "referenceMethod": "href",
+                                                                    "referentPath": "BASE::org::openehr::base::foundation_types::time::Iso8601_date",
+                                                                    "referentType": "Class"
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 0,
+                                                                "maxOccurs": 1,
+                                                                "description": "Date of issue of this version of the terminology.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": null
+                                                            }
+                                                        },
+                                                        "umlOperations": [],
+                                                        "umlConstraints": []
+                                                    },
+                                                    "TERMINOLOGY_STATUS": {
+                                                        "id": "_19_0_3_8fe028d_1676301317832_820525_5192",
+                                                        "name": "TERMINOLOGY_STATUS",
+                                                        "description": "Enumeration of possible lifecycle states of any part of the terminomlogy.",
+                                                        "enumerations": [
+                                                            {
+                                                                "name": "trial",
+                                                                "description": "Terminology element is in Trial state."
+                                                            },
+                                                            {
+                                                                "name": "active",
+                                                                "description": "Terminology element is in Active state, i.e. published and in use."
+                                                            },
+                                                            {
+                                                                "name": "retired",
+                                                                "description": "Terminology element has been Retired, i.e. deprecated."
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "umlClasses": []
+                                    }
+                                },
+                                "umlClasses": []
+                            }
+                        },
+                        "umlClasses": []
+                    }
+                },
+                "umlClasses": []
+            }
+        }
+    }
+}
