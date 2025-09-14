@@ -83,7 +83,7 @@ docker compose run --rm app ./bin/generate bmm:yaml <filename>
 ```
 Usage
 ```bash
-docker compose run --rm app ./bin/generate bmm:yaml BASE-v1.2.0 RM-v1.1.0
+docker compose run --rm app ./bin/generate bmm:yaml openehr_base_1.2.0 openehr_rm_1.1.0
 # Or convert all: 
 docker compose run --rm app ./bin/generate bmm:yaml all
 ```
@@ -94,7 +94,7 @@ docker compose run --rm app ./bin/generate bmm:plantuml <filename>
 ```
 Usage
 ```bash
-docker compose run --rm app ./bin/generate bmm:plantuml BASE-v1.2.0 RM-v1.1.0
+docker compose run --rm app ./bin/generate bmm:plantuml openehr_base_1.2.0 openehr_rm_1.1.0
 # Or convert all: 
 docker compose run --rm app ./bin/generate bmm:plantuml all
 ```

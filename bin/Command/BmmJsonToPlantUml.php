@@ -29,7 +29,7 @@ class BmmJsonToPlantUml extends Command
             'filename',
             InputArgument::IS_ARRAY,
             "File(s) with .bmm.json extension to be converted to PlantUML. \n"
-            . "Example: <info>generate bmm:plantuml BASE-v1.2.0 RM-v1.1.0</info>. \n"
+            . "Example: <info>generate bmm:plantuml openehr_base_1.2.0 openehr_rm_1.1.0</info>. \n"
             . "Alternatively, use 'all' to convert all .bmm.json files in the directory. \n"
             . "Example: <info>generate bmm:plantuml all</info>.",
         );
