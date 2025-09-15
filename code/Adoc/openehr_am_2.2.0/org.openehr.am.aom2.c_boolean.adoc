@@ -1,0 +1,52 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*C_BOOLEAN*
+
+h|*Description*
+2+a|Constraint on instances of `Boolean`. Both attributes cannot be set to False, since this would mean that the Boolean value being constrained cannot be `True` or `False`.
+
+h|*Inherit*
+2+|`link:/classes/C_PRIMITIVE_OBJECT[C_PRIMITIVE_OBJECT]`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*0..**
+|*constraint*: `link:/classes/List[List]<link:/classes/Boolean[Boolean]>`
+a|Boolean constraint - a list of Boolean values.
+
+h|*0..1*
+|*assumed_value*: `link:/classes/Boolean[Boolean]`
+a|Assumed Boolean value.
+
+h|*1..1*
+|*default_value*: `link:/classes/Boolean[Boolean]`
+a|Default Boolean value.
+h|*Functions*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1*
+|*prototype_value* (): `link:/classes/Boolean[Boolean]`
+a|Prototype Boolean value.
+
+h|*1..1*
+|*any_allowed* (): `link:/classes/Boolean[Boolean]` +
+ +
+__Post__: `Result = constraint.is_empty`
+a|True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.
+
+h|*1..1*
+|*c_value_conforms_to* ( +
+other: `link:/classes/C_BOOLEAN[C_BOOLEAN][1]` +
+): `link:/classes/Boolean[Boolean]`
+a|True if `_other.any_allowed_` or else every constraint in the `_constraint_` list exists in the `_other.constraint_`.
+
+h|*1..1*
+|*c_value_congruent_to* ( +
+other: `link:/classes/C_BOOLEAN[C_BOOLEAN][1]` +
+): `link:/classes/Boolean[Boolean]`
+a|True if the items in `_constraint_` are equal in number and identical pair-wise with those in `_other.constraint_`.
+|===

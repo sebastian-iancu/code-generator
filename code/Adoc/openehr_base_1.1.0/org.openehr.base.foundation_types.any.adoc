@@ -1,0 +1,36 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*__Any (abstract)__*
+
+h|*Description*
+2+a|Abstract supertype. Usually maps to a type like Any or Object in an object-oriented technology. Defined here to provide value and reference equality semantics.
+h|*Functions*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1 +
+(abstract)*
+|*is_equal* ( +
+other: `link:/classes/Any[Any][1]` +
+): `link:/classes/Boolean[Boolean]`
+a|Value equality.
+
+h|*1..1*
+|*infix =* ( +
+other: `link:/classes/Any[Any][1]` +
+): `link:/classes/Boolean[Boolean]`
+a|Reference equality.
+
+h|*1..1*
+|*instance_of* ( +
+a_type: `link:/classes/String[String][1]` +
+): `link:/classes/Any[Any]`
+a|Create new instance of a type.
+
+h|*1..1*
+|*type_of* ( +
+an_object: `link:/classes/Any[Any][1]` +
+): `link:/classes/String[String]`
+a|Type name of an object as a string. May include generic parameters, as in "Interval<Time>".
+|===

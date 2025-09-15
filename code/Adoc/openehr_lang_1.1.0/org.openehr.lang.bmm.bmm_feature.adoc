@@ -1,0 +1,31 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*__BMM_FEATURE (abstract)__*
+
+h|*Description*
+2+a|A module-scoped formal element.
+
+h|*Inherit*
+2+|`link:/classes/BMM_FORMAL_ELEMENT[BMM_FORMAL_ELEMENT]`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*0..1*
+|*is_synthesised_generic*: `link:/classes/Boolean[Boolean]`
+a|True if this feature was synthesised due to generic substitution in an inherited type, or further constraining of a formal generic parameter.
+
+h|*0..**
+|*feature_extensions*: `link:/classes/List[List]<link:/classes/BMM_FEATURE_EXTENSION[BMM_FEATURE_EXTENSION]>`
+a|Extensions to feature-level meta-types.
+
+h|*1..1*
+|*group*: `link:/classes/BMM_FEATURE_GROUP[BMM_FEATURE_GROUP]`
+a|Group containing this feature.
+
+h|*1..1*
+|*scope*: `link:/classes/BMM_CLASS[BMM_CLASS]`
+a|Model element within which an element is declared.
+|===

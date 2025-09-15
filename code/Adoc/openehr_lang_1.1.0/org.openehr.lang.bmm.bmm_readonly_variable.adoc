@@ -1,0 +1,11 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*__BMM_READONLY_VARIABLE (abstract)__*
+
+h|*Description*
+2+a|Meta-type for writable variables, including routine parameters and the special variable `Self`.
+
+h|*Inherit*
+2+|`link:/classes/BMM_VARIABLE[BMM_VARIABLE]`
+|===

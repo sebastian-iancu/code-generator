@@ -1,0 +1,11 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*__EL_TERMINAL (abstract)__*
+
+h|*Description*
+2+a|Expression entities that are terminals (i.e. leaves) within operator expressions or tuples.
+
+h|*Inherit*
+2+|`link:/classes/EL_EXPRESSION[EL_EXPRESSION]`
+|===

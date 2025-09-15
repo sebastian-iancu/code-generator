@@ -1,0 +1,27 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*EXTRACT_ACTION_REQUEST*
+
+h|*Description*
+2+a|Generic model of a Request for an Extract, containing an Extract specification.
+
+h|*Inherit*
+2+|`link:/classes/LOCATABLE[LOCATABLE]`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1*
+|*request_id*: `link:/classes/OBJECT_REF[OBJECT_REF]`
+a|Identifier of previous `EXTRACT_REQUEST`.
+
+h|*1..1*
+|*uid*: `link:/classes/HIER_OBJECT_ID[HIER_OBJECT_ID]`
+a|
+
+h|*1..1*
+|*action*: `link:/classes/DV_CODED_TEXT[DV_CODED_TEXT]`
+a|Requested action: `cancel | resend | send new`. Coded by openEHR Terminology group `'extract action type'`.
+|===

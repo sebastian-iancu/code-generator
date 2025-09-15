@@ -1,0 +1,23 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*__EL_DECISION_TABLE (abstract)__*
+
+h|*Description*
+2+a|Complex expression structure representing a logical decision table.
+
+h|*Inherit*
+2+|`link:/classes/EL_EXPRESSION[EL_EXPRESSION]`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1*
+|*else*: `link:/classes/EL_EXPRESSION[EL_EXPRESSION]`
+a|Result expression of the chain if no member of `_items_` succeeds in evaluation.
+
+h|*1..**
+|*items*: `link:/classes/List[List]<link:/classes/EL_DECISION_BRANCH[EL_DECISION_BRANCH]>`
+a|Members of the chain, equivalent to branches in an if/then/else chain and cases in a case statement.
+|===

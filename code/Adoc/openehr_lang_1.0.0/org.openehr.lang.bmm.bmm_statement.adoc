@@ -1,0 +1,11 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*__BMM_STATEMENT (abstract)__*
+
+h|*Description*
+2+a|Abstract parent of 'statement' types that may be defined to implement BMM Routines.
+
+h|*Inherit*
+2+|`link:/classes/BMM_STATEMENT_ITEM[BMM_STATEMENT_ITEM]`
+|===

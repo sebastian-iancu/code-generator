@@ -1,0 +1,26 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*__EL_PREDICATE (abstract)__*
+
+h|*Description*
+2+a|Parent type of predicate of any object reference.
+
+h|*Inherit*
+2+|`link:/classes/EL_TERMINAL[EL_TERMINAL]`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1*
+|*operand*: `link:/classes/EL_INSTANCE_REF[EL_INSTANCE_REF]`
+a|The target instance of this predicate.
+h|*Functions*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1*
+|*eval_type* (): `link:/classes/BMM_SIMPLE_TYPE[BMM_SIMPLE_TYPE]`
+a|Return `{BMM_MODEL}._boolean_type_definition_()`.
+|===

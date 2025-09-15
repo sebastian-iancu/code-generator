@@ -1,0 +1,29 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*__ACTOR (abstract)__*
+
+h|*Description*
+2+a|Ancestor of all real-world types, including people and organisations. An actor is any real-world entity capable of taking on a role.
+
+h|*Inherit*
+2+|`link:/classes/PARTY[PARTY]`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*0..**
+|*languages*: `link:/classes/List[List]<link:/classes/DV_TEXT[DV_TEXT]>`
+a|Languages which can be used to communicate with this actor, in preferred order of use (if known, else order irrelevant).
+
+h|*0..**
+|*roles*: `link:/classes/List[List]<link:/classes/PARTY_REF[PARTY_REF]>`
+a|Identifiers of the Version container for each Role played by this Party.
+
+h|*Invariants*
+2+a|__Roles_valid__: `roles /= Void implies not roles.is_empty`
+
+h|
+2+a|__Legal_identity_exists__: `has_legal_identity`
+|===

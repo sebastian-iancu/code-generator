@@ -1,0 +1,23 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*BMM_EXTERNAL_ROUTINE*
+
+h|*Description*
+2+a|External routine meta-type, containing sufficient meta-data to enable a routine in an external library to be called.
+
+h|*Inherit*
+2+|`link:/classes/BMM_ROUTINE_DEFINITION[BMM_ROUTINE_DEFINITION]`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1*
+|*meta_data*: `link:/classes/Hash[Hash]<String,String>`
+a|External call general meta-data, including target routine name, type mapping etc.
+
+h|*0..1*
+|*argument_mapping*: `link:/classes/Hash[Hash]<String,String>`
+a|Optional argument-mapping meta-data.
+|===

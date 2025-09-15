@@ -1,0 +1,27 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*BMM_DECLARATION*
+
+h|*Description*
+2+a|Declaration of a writable variable, associating a name with a type.
+
+h|*Inherit*
+2+|`link:/classes/BMM_SIMPLE_STATEMENT[BMM_SIMPLE_STATEMENT]`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1*
+|*name*: `link:/classes/String[String]`
+a|
+
+h|*1..1*
+|*result*: `link:/classes/EL_WRITABLE_VARIABLE[EL_WRITABLE_VARIABLE]`
+a|
+
+h|*1..1*
+|*type*: `link:/classes/BMM_TYPE[BMM_TYPE]`
+a|The declared type of the variable.
+|===

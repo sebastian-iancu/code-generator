@@ -1,0 +1,19 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*C_INTEGER*
+
+h|*Description*
+2+a|Constraint on instances of Integer.
+
+h|*Inherit*
+2+|`link:/classes/C_ORDERED[C_ORDERED]`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*0..**
+|*constraint*: `link:/classes/List[List]<link:/classes/Interval[Interval]<Integer>>`
+a|Formal constraint on `Integer`, in the form of `List<Interval<Integer>>`.
+|===

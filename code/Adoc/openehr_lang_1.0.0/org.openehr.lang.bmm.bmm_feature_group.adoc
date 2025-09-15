@@ -1,0 +1,28 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*BMM_FEATURE_GROUP*
+
+h|*Description*
+2+a|A logical group of features, with a name and set of properties that applies to the group.
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1*
+|*name*: `link:/classes/String[String]`
+a|Name of this feature group; defaults to 'feature'.
+
+h|*1..1*
+|*properties*: `link:/classes/Hash[Hash]<String,String>`
+a|Set of properties of this group, represented as name/value pairs. These are understood to apply logically to all of the features contained within the group.
+
+h|*0..**
+|*features*: `link:/classes/List[List]<link:/classes/BMM_CLASS_FEATURE[BMM_CLASS_FEATURE]>`
+a|Set of features in this group.
+
+h|*0..1*
+|*visibility*: `link:/classes/BMM_VISIBILITY[BMM_VISIBILITY]`
+a|Optional visibility to apply to all features in this group.
+|===

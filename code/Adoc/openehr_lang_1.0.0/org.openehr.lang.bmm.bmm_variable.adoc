@@ -1,0 +1,26 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*__BMM_VARIABLE (abstract)__*
+
+h|*Description*
+2+a|A mutable entity whose scope is a routine.
+
+h|*Inherit*
+2+|`link:/classes/BMM_INSTANTIABLE[BMM_INSTANTIABLE], link:/classes/BMM_CLASS_ENTITY[BMM_CLASS_ENTITY]`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1*
+|*scope*: `link:/classes/BMM_ROUTINE[BMM_ROUTINE]`
+a|Routine within which variable is defined.
+h|*Functions*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1*
+|*signature* (): `link:/classes/[]`
+a|Formal signature of this element, in the form `'name [arg1_name: T_arg1, ...][:T_value]'`.
+|===

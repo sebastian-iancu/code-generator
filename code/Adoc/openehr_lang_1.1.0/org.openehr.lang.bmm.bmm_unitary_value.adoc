@@ -1,0 +1,11 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*__BMM_UNITARY_VALUE<T> (abstract)__*
+
+h|*Description*
+2+a|Meta-type for literals whose concrete type is a unitary type in the BMM sense.
+
+h|*Inherit*
+2+|`link:/classes/BMM_LITERAL_VALUE[BMM_LITERAL_VALUE]`
+|===

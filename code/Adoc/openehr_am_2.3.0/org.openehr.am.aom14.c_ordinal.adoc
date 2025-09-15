@@ -1,0 +1,19 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*C_ORDINAL*
+
+h|*Description*
+2+a|Constrainer class for Ordinal data.
+
+h|*Inherit*
+2+|`link:/classes/C_DOMAIN_TYPE[C_DOMAIN_TYPE]`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*0..**
+|*list*: `link:/classes/List[List]<link:/classes/ORDINAL[ORDINAL]>`
+a|Value set of allowed Ordinals in the constraint.
+|===

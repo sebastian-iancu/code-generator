@@ -1,0 +1,11 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*__BMM_SIMPLE_STATEMENT (abstract)__*
+
+h|*Description*
+2+a|Simple statement, i.e. statement with one logical element - a single expression, procedure call etc.
+
+h|*Inherit*
+2+|`link:/classes/BMM_STATEMENT[BMM_STATEMENT]`
+|===

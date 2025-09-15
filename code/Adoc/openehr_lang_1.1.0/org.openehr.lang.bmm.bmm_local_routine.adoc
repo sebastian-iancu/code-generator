@@ -1,0 +1,23 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*BMM_LOCAL_ROUTINE*
+
+h|*Description*
+2+a|Meta-type for locally declared routine body.
+
+h|*Inherit*
+2+|`link:/classes/BMM_ROUTINE_DEFINITION[BMM_ROUTINE_DEFINITION]`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*0..**
+|*locals*: `link:/classes/List[List]<link:/classes/BMM_LOCAL[BMM_LOCAL]>`
+a|Local variables of the routine, if there is a body defined.
+
+h|*1..1*
+|*body*: `link:/classes/BMM_STATEMENT_BLOCK[BMM_STATEMENT_BLOCK]`
+a|Body of routine declaration.
+|===
