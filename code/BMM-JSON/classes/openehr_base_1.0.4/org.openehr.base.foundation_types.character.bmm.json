@@ -1,0 +1,6 @@
+{
+    "name": "Character",
+    "ancestors": [
+        "Ordered"
+    ]
+}

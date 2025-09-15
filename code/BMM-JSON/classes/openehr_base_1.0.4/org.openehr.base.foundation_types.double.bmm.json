@@ -1,0 +1,6 @@
+{
+    "name": "Double",
+    "ancestors": [
+        "Ordered_Numeric"
+    ]
+}

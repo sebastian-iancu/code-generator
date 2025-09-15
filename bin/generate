@@ -12,6 +12,7 @@ require __DIR__ . '/../vendor/autoload.php';
 use Console\Command\AllXmi;
 use Console\Command\BmmJsonToYaml;
 use Console\Command\BmmJsonToPlantUml;
+use Console\Command\BmmJsonToClassJson;
 use Console\Command\XmiToBmm;
 use Console\Command\XmiToInternalModel;
 use Symfony\Component\Console\Application;
@@ -23,6 +24,7 @@ try {
     $console->add(new AllXmi());
     $console->add(new BmmJsonToYaml());
     $console->add(new BmmJsonToPlantUml());
+    $console->add(new BmmJsonToClassJson());
     exit($console->run());
 } catch (\Throwable $exception) {
     error_log((string)$exception);

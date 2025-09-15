@@ -1,0 +1,5 @@
+{
+    "name": "BMM_STATEMENT_ITEM",
+    "documentation": "Abstract parent of statement types representing a locally defined routine body.",
+    "is_abstract": true
+}

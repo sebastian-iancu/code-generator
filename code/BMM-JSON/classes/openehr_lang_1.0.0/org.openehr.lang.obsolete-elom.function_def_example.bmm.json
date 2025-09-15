@@ -1,0 +1,23 @@
+{
+    "name": "FUNCTION_DEF_EXAMPLE",
+    "documentation": "Example of an externally defined function of signature:\n\n    func (v: Numeric): Numeric\n",
+    "ancestors": [
+        "FUNCTION_DEF_EXTERNAL"
+    ],
+    "properties": {
+        "identifier": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "identifier",
+            "is_mandatory": true,
+            "type": "String"
+        },
+        "evaluation_agent": {
+            "_type": "P_BMM_GENERIC_PROPERTY",
+            "name": "evaluation_agent",
+            "is_mandatory": true,
+            "type_def": {
+                "root_type": "FUNCTION"
+            }
+        }
+    }
+}

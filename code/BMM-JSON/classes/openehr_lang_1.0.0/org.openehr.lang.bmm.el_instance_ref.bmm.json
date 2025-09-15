@@ -1,0 +1,8 @@
+{
+    "name": "EL_INSTANCE_REF",
+    "documentation": "A reference to an instance of any kind.",
+    "is_abstract": true,
+    "ancestors": [
+        "EL_TERMINAL"
+    ]
+}

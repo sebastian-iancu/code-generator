@@ -20,19 +20,19 @@ abstract class AbstractWriter
         $this->reader = $reader;
     }
 
-    public function assureOutputDir(): void
+    public function assureOutputDir(string $dir = ''): void
     {
-        if (!is_dir(static::DIR)) {
-            if (is_file(static::DIR) || is_link(static::DIR)) {
-                throw new RuntimeException(sprintf('The "%s" already exists but is not a directory.', static::DIR));
+        $dir = $dir ?: static::DIR;
+        if (!is_dir($dir)) {
+            if (is_file($dir) || is_link($dir)) {
+                throw new RuntimeException(sprintf('The "%s" already exists but is not a directory.', $dir));
             }
-            if (!@mkdir(static::DIR, 0777, true) && !is_dir(static::DIR)) {
-                throw new RuntimeException(sprintf('Directory "%s" does not exist and cannot be created.', static::DIR));
+            if (!@mkdir($dir, 0777, true) && !is_dir($dir)) {
+                throw new RuntimeException(sprintf('Directory "%s" does not exist and cannot be created.', $dir));
             }
         }
-        if (!is_writable(static::DIR)) {
-            throw new RuntimeException(sprintf('Directory "%s" is not writable.', static::DIR));
-
+        if (!is_writable($dir)) {
+            throw new RuntimeException(sprintf('Directory "%s" is not writable.', $dir));
         }
     }
 

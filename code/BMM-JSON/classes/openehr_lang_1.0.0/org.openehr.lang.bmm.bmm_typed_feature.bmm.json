@@ -1,0 +1,16 @@
+{
+    "name": "BMM_TYPED_FEATURE",
+    "documentation": "A typed entity that is a feature within a context, and which may therefore be Void, i.e. 'nullable'.",
+    "is_abstract": true,
+    "ancestors": [
+        "BMM_TYPED"
+    ],
+    "properties": {
+        "is_nullable": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "is_nullable",
+            "documentation": "True if this element can be null (Void) at execution time. May be interpreted as optionality in subtypes..",
+            "type": "Boolean"
+        }
+    }
+}

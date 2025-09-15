@@ -1,0 +1,6 @@
+{
+    "name": "Byte",
+    "ancestors": [
+        "Ordered"
+    ]
+}

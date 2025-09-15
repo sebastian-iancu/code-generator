@@ -1,0 +1,7 @@
+{
+    "name": "Integer",
+    "documentation": "Class representing minimal interface of standard Integer type.",
+    "ancestors": [
+        "Ordered_Numeric"
+    ]
+}

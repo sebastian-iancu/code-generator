@@ -1,0 +1,5 @@
+{
+    "name": "BMM_FEATURE_EXTENSION",
+    "documentation": "Abstract parent of feature extensions.",
+    "is_abstract": true
+}
