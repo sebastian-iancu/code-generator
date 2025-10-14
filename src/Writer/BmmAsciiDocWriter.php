@@ -56,7 +56,7 @@ class BmmAsciiDocWriter extends AbstractWriter
     {
         $prefix = 'org.openehr.' . strtolower($schema->schemaName) . '.';
         $prefix .= explode('.', str_replace($prefix, '', $namePrefix . $package->name))[0] . '.';
-        $packageDir = self::DIR . $schema->getSchemaId() . '/';
+        $packageDir = self::DIR . $schema->getSchemaId() . '/classes/';
         $this->assureOutputDir($packageDir);
         foreach ($package->classes as $className) {
             /** @var AbstractBmmClass $class */
