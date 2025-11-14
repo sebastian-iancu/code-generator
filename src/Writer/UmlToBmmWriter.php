@@ -212,8 +212,7 @@ class UmlToBmmWriter extends AbstractWriter
             foreach ($umlClass->umlConstraints as $umlConstraint) {
                 $bmmClass['invariants'][$umlConstraint->name] = $umlConstraint->rule;
             }
-        }
-        if ($umlClass instanceof UmlEnumeration) {
+        } else {
             if ($umlClass->name === 'CONSTRAINT_STATUS') {
                 $bmmClass['_type'] = 'P_BMM_ENUMERATION_INTEGER';
                 $bmmClass['ancestors'] = ['Integer'];
@@ -224,13 +223,23 @@ class UmlToBmmWriter extends AbstractWriter
             }
             $bmmClass['item_names'] = array_column($umlClass->enumerations, 'name');
             $bmmClass['item_documentations'] = array_column($umlClass->enumerations, 'description');
+            /** @var UmlOperation $umlOperation */
+            foreach ($umlClass->umlOperations as $umlOperation) {
+                $bmmClass['functions'][$umlOperation->name] = self::asBmmFunction($umlOperation, $umlClass, $collectedUmlClasses);
+            }
         }
+        // special case for PROPORTION_KIND as it is not defined as an enumeration
         if ($umlClass->name === 'PROPORTION_KIND') {
-            $itemNames = $itemValues = $itemDocumentations = [];
+            $itemNames = $itemValues = $itemDocumentations = $functions = [];
+            /** @var UmlProperty $umlProperty */
             foreach ($umlClass->umlProperties as $umlProperty) {
                 $itemNames[] = $umlProperty->name;
                 $itemValues[] = (int)$umlProperty->default;
                 $itemDocumentations[] = $umlProperty->description;
+            }
+            /** @var UmlOperation $umlOperation */
+            foreach ($umlClass->umlOperations as $umlOperation) {
+                $functions[$umlOperation->name] = self::asBmmFunction($umlOperation, $umlClass, $collectedUmlClasses);
             }
             $bmmClass = [
                 '_type' => 'P_BMM_ENUMERATION_INTEGER',
@@ -240,6 +249,7 @@ class UmlToBmmWriter extends AbstractWriter
                 'item_names' => $itemNames,
                 'item_values' => $itemValues,
                 'item_documentations' => $itemDocumentations,
+                'functions' => $functions,
             ];
         }
         self::log('  Generated [%s] class.', $bmmClass['name']);

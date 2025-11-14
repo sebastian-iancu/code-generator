@@ -3436,7 +3436,24 @@
                 "Denominator is 100, numerator is understood as a percentage value.",
                 "Numerator and denominator are integral, and the presentation method uses a slash, e.g.  1\/2 . \n",
                 "Numerator and denominator are integral, and the presentation method uses a slash, e.g.  1\/2 ; if the numerator is greater than the denominator, e.g. n=3, d=2, the presentation is  1 1\/2 ."
-            ]
+            ],
+            "functions": {
+                "valid_proportion_kind": {
+                    "name": "valid_proportion_kind",
+                    "documentation": "True if n is one of the defined types. ",
+                    "parameters": {
+                        "nq": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
+                            "name": "nq",
+                            "type": "Integer"
+                        }
+                    },
+                    "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
+                        "type": "Boolean"
+                    }
+                }
+            }
         },
         "DV_AMOUNT": {
             "name": "DV_AMOUNT",
