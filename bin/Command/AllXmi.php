@@ -89,12 +89,6 @@ class AllXmi extends Command
                 $reader->read('LANG-v1.0.0.xmi');
                 $writer->addWriter(new InternalModel('LANG-v1.0.0'));
                 $writer->generate();
-                // LANG-v1.0.0.xmi
-                $reader = new XmiReader();
-                $writer = new CodeGenerator($reader);
-                $reader->read('LANG-v1.0.0.xmi');
-                $writer->addWriter(new InternalModel('LANG-v1.0.0'));
-                $writer->generate();
                 // LANG-v1.1.0-dev.xmi
                 $reader = new XmiReader();
                 $writer = new CodeGenerator($reader);

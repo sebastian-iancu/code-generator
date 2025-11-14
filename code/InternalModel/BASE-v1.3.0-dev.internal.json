@@ -11040,12 +11040,13 @@
                                                         "templateBinding": null,
                                                         "umlProperties": {
                                                             "__aliases": {
+                                                                "_19_0_3_8fe028d_1730816573215_631617_5164": "title",
                                                                 "_18_1_83e026d_1422968609425_637872_26206": "original_author",
                                                                 "_18_1_83e026d_1423132874772_630303_5894": "original_namespace",
                                                                 "_18_1_83e026d_1423132905082_296278_5897": "original_publisher",
                                                                 "_18_1_83e026d_1422968609425_517506_26207": "other_contributors",
-                                                                "_18_1_83e026d_1422968609425_375203_26208": "lifecycle_state",
                                                                 "_18_1_83e026d_1422968609425_952915_26211": "parent_resource",
+                                                                "_18_1_83e026d_1422968609425_375203_26208": "lifecycle_state",
                                                                 "_18_1_83e026d_1423132776965_457368_5885": "custodian_namespace",
                                                                 "_18_1_83e026d_1423132813059_72505_5888": "custodian_organisation",
                                                                 "_18_1_83e026d_1422968609425_790170_26224": "copyright",
@@ -11054,8 +11055,26 @@
                                                                 "_18_1_83e026d_1423218088604_6643_8930": "references",
                                                                 "_18_1_83e026d_1422968609425_636559_26209": "resource_package_uri",
                                                                 "_18_1_83e026d_1430226958282_173516_4439": "conversion_details",
-                                                                "_18_1_83e026d_1422968609425_332098_26210": "other_details",
-                                                                "_18_2_83e026d_1453125717158_602776_4829": "details"
+                                                                "_18_2_83e026d_1453125717158_602776_4829": "details",
+                                                                "_18_1_83e026d_1422968609425_332098_26210": "other_details"
+                                                            },
+                                                            "title": {
+                                                                "id": "_19_0_3_8fe028d_1730816573215_631617_5164",
+                                                                "name": "title",
+                                                                "type": {
+                                                                    "id": "_18_1_83e026d_1437045555791_888328_4996",
+                                                                    "name": "String",
+                                                                    "referenceMethod": "lookup",
+                                                                    "referentPath": null,
+                                                                    "referentType": null
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 0,
+                                                                "maxOccurs": 1,
+                                                                "description": "Long-form descriptive title of the resource, typically needed in templates and occasionally in specialised archetypes where the root archetype\/template name is not descriptive enough to disambiguate from similar archetypes\/templates.\n",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": null
                                                             },
                                                             "original_author": {
                                                                 "id": "_18_1_83e026d_1422968609425_637872_26206",
@@ -11129,24 +11148,6 @@
                                                                 "isReadOnly": false,
                                                                 "default": null
                                                             },
-                                                            "lifecycle_state": {
-                                                                "id": "_18_1_83e026d_1422968609425_375203_26208",
-                                                                "name": "lifecycle_state",
-                                                                "type": {
-                                                                    "id": "_18_1_83e026d_1423133121170_943500_5902",
-                                                                    "name": "Terminology_code",
-                                                                    "referenceMethod": "lookup",
-                                                                    "referentPath": null,
-                                                                    "referentType": null
-                                                                },
-                                                                "templateParameterId": null,
-                                                                "minOccurs": 1,
-                                                                "maxOccurs": 1,
-                                                                "description": "Lifecycle state of the resource, typically including states such as: initial, in_development, in_review, published, superseded, obsolete. ",
-                                                                "isStatic": false,
-                                                                "isReadOnly": false,
-                                                                "default": null
-                                                            },
                                                             "parent_resource": {
                                                                 "id": "_18_1_83e026d_1422968609425_952915_26211",
                                                                 "name": "parent_resource",
@@ -11164,6 +11165,24 @@
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": ""
+                                                            },
+                                                            "lifecycle_state": {
+                                                                "id": "_18_1_83e026d_1422968609425_375203_26208",
+                                                                "name": "lifecycle_state",
+                                                                "type": {
+                                                                    "id": "_18_1_83e026d_1437045555791_888328_4996",
+                                                                    "name": "String",
+                                                                    "referenceMethod": "lookup",
+                                                                    "referentPath": null,
+                                                                    "referentType": null
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 1,
+                                                                "maxOccurs": 1,
+                                                                "description": "Lifecycle state of the resource, typically including states such as: initial, in_development, in_review, published, superseded, obsolete. ",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": null
                                                             },
                                                             "custodian_namespace": {
                                                                 "id": "_18_1_83e026d_1423132776965_457368_5885",
@@ -11309,24 +11328,6 @@
                                                                 "isReadOnly": false,
                                                                 "default": null
                                                             },
-                                                            "other_details": {
-                                                                "id": "_18_1_83e026d_1422968609425_332098_26210",
-                                                                "name": "other_details",
-                                                                "type": {
-                                                                    "id": "_18_1_83e026d_1423239115882_688870_4327",
-                                                                    "name": "Hash<String, String>",
-                                                                    "referenceMethod": "lookup",
-                                                                    "referentPath": null,
-                                                                    "referentType": null
-                                                                },
-                                                                "templateParameterId": null,
-                                                                "minOccurs": 0,
-                                                                "maxOccurs": 1,
-                                                                "description": "Additional non-language-sensitive resource meta-data, as a list of name\/value pairs.",
-                                                                "isStatic": false,
-                                                                "isReadOnly": false,
-                                                                "default": null
-                                                            },
                                                             "details": {
                                                                 "id": "_18_2_83e026d_1453125717158_602776_4829",
                                                                 "name": "details",
@@ -11341,6 +11342,24 @@
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
                                                                 "description": "Details of all parts of resource description that are natural language-dependent, keyed by language code.",
+                                                                "isStatic": false,
+                                                                "isReadOnly": false,
+                                                                "default": null
+                                                            },
+                                                            "other_details": {
+                                                                "id": "_18_1_83e026d_1422968609425_332098_26210",
+                                                                "name": "other_details",
+                                                                "type": {
+                                                                    "id": "_18_1_83e026d_1423239115882_688870_4327",
+                                                                    "name": "Hash<String, String>",
+                                                                    "referenceMethod": "lookup",
+                                                                    "referentPath": null,
+                                                                    "referentType": null
+                                                                },
+                                                                "templateParameterId": null,
+                                                                "minOccurs": 0,
+                                                                "maxOccurs": 1,
+                                                                "description": "Additional non-language-sensitive resource meta-data, as a list of name\/value pairs.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
