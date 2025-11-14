@@ -16,7 +16,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*item* ( +
+|*item* __alias__ "[]" ( +
 a_key: `<<_integer_class,Integer>>[1]` +
 ): `T`
 a|Return item for key  `_a_key_`.

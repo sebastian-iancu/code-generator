@@ -212,7 +212,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": null,
-                                                                        "maxOccurs": null
+                                                                        "maxOccurs": null,
+                                                                        "aliases": []
                                                                     },
                                                                     "initialise_all": {
                                                                         "id": "_18_2_83e026d_1454353971283_751028_5241",
@@ -247,7 +248,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": null,
-                                                                        "maxOccurs": null
+                                                                        "maxOccurs": null,
+                                                                        "aliases": []
                                                                     },
                                                                     "reload_schemas": {
                                                                         "id": "_18_2_83e026d_1454354440703_668245_5288",
@@ -264,7 +266,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": null,
-                                                                        "maxOccurs": null
+                                                                        "maxOccurs": null,
+                                                                        "aliases": []
                                                                     },
                                                                     "bmm_model": {
                                                                         "id": "_18_5_2_83e026d_1523097127578_509864_8078",
@@ -299,7 +302,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     },
                                                                     "has_bmm_model": {
                                                                         "id": "_18_5_2_83e026d_1523097202738_432253_8085",
@@ -334,7 +338,8 @@
                                                                             "referentType": "PrimitiveType"
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     }
                                                                 },
                                                                 "umlConstraints": []
@@ -470,7 +475,8 @@
                                                                             "referentType": "PrimitiveType"
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     },
                                                                     "is_bmm_compatible": {
                                                                         "id": "_18_2_83e026d_1454354699417_552809_5318",
@@ -487,7 +493,8 @@
                                                                             "referentType": "PrimitiveType"
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     },
                                                                     "load": {
                                                                         "id": "_18_2_83e026d_1454354749119_365371_5324",
@@ -504,7 +511,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": null,
-                                                                        "maxOccurs": null
+                                                                        "maxOccurs": null,
+                                                                        "aliases": []
                                                                     },
                                                                     "validate_merged": {
                                                                         "id": "_18_2_83e026d_1454354758919_844348_5327",
@@ -521,7 +529,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": null,
-                                                                        "maxOccurs": null
+                                                                        "maxOccurs": null,
+                                                                        "aliases": []
                                                                     },
                                                                     "validate_includes": {
                                                                         "id": "_18_2_83e026d_1454354764757_585990_5330",
@@ -556,7 +565,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": null,
-                                                                        "maxOccurs": null
+                                                                        "maxOccurs": null,
+                                                                        "aliases": []
                                                                     },
                                                                     "create_model": {
                                                                         "id": "_18_2_83e026d_1454354775251_177931_5333",
@@ -573,7 +583,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": null,
-                                                                        "maxOccurs": null
+                                                                        "maxOccurs": null,
+                                                                        "aliases": []
                                                                     }
                                                                 },
                                                                 "umlConstraints": []
@@ -885,7 +896,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": null,
-                                                                        "maxOccurs": null
+                                                                        "maxOccurs": null,
+                                                                        "aliases": []
                                                                     },
                                                                     "load_finalise": {
                                                                         "id": "_18_5_2_83e026d_1524922035723_266450_6818",
@@ -917,7 +929,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": null,
-                                                                        "maxOccurs": null
+                                                                        "maxOccurs": null,
+                                                                        "aliases": []
                                                                     },
                                                                     "merge": {
                                                                         "id": "_18_5_2_83e026d_1524922035723_855938_6819",
@@ -967,7 +980,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": null,
-                                                                        "maxOccurs": null
+                                                                        "maxOccurs": null,
+                                                                        "aliases": []
                                                                     },
                                                                     "validate": {
                                                                         "id": "_18_5_2_83e026d_1524922035723_247073_6820",
@@ -984,7 +998,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": null,
-                                                                        "maxOccurs": null
+                                                                        "maxOccurs": null,
+                                                                        "aliases": []
                                                                     },
                                                                     "create_bmm_model": {
                                                                         "id": "_18_5_2_83e026d_1524922035724_863829_6821",
@@ -1010,7 +1025,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": null,
-                                                                        "maxOccurs": null
+                                                                        "maxOccurs": null,
+                                                                        "aliases": []
                                                                     },
                                                                     "read_to_validate": {
                                                                         "id": "_18_5_2_83e026d_1524922554463_567566_6974",
@@ -1036,7 +1052,8 @@
                                                                             "referentType": "PrimitiveType"
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     },
                                                                     "schema_id": {
                                                                         "id": "_18_5_2_83e026d_1525529787659_368908_7151",
@@ -1053,7 +1070,8 @@
                                                                             "referentType": "PrimitiveType"
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     }
                                                                 },
                                                                 "umlConstraints": []
@@ -1344,7 +1362,8 @@
                                                                                     "referentType": "PrimitiveType"
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             }
                                                                         },
                                                                         "umlConstraints": []
@@ -1641,7 +1660,8 @@
                                                                                     "referentType": "Class"
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             },
                                                                             "display_name": {
                                                                                 "id": "BOUML_0x1fb82_2",
@@ -1658,7 +1678,8 @@
                                                                                     "referentType": "PrimitiveType"
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             }
                                                                         },
                                                                         "umlConstraints": {
@@ -1794,7 +1815,8 @@
                                                                                     "referentType": "PrimitiveType"
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             }
                                                                         },
                                                                         "umlConstraints": []
@@ -1962,7 +1984,8 @@
                                                                                     "referentType": null
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             }
                                                                         },
                                                                         "umlConstraints": {
@@ -2090,7 +2113,8 @@
                                                                                     "referentType": "PrimitiveType"
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             }
                                                                         },
                                                                         "umlConstraints": []
@@ -3471,7 +3495,8 @@
                                                                                     "referentType": "PrimitiveType"
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             },
                                                                             "class_definition": {
                                                                                 "id": "BOUML_0x1fd02_2",
@@ -3506,7 +3531,8 @@
                                                                                     "referentType": null
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             },
                                                                             "type_definition": {
                                                                                 "id": "_18_5_2_83e026d_1523433588239_110921_5230",
@@ -3523,7 +3549,8 @@
                                                                                     "referentType": null
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             },
                                                                             "has_class_definition": {
                                                                                 "id": "_18_5_2_83e026d_1523433963547_14352_5251",
@@ -3558,7 +3585,8 @@
                                                                                     "referentType": "PrimitiveType"
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             },
                                                                             "has_type_definition": {
                                                                                 "id": "_18_5_2_83e026d_1523433885933_154659_5244",
@@ -3593,7 +3621,8 @@
                                                                                     "referentType": "PrimitiveType"
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             },
                                                                             "enumeration_definition": {
                                                                                 "id": "BOUML_0x1fd82_2",
@@ -3628,7 +3657,8 @@
                                                                                     "referentType": null
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             },
                                                                             "primitive_types": {
                                                                                 "id": "BOUML_0x1fc02_2",
@@ -3645,7 +3675,8 @@
                                                                                     "referentType": "PrimitiveType"
                                                                                 },
                                                                                 "minOccurs": 0,
-                                                                                "maxOccurs": -1
+                                                                                "maxOccurs": -1,
+                                                                                "aliases": []
                                                                             },
                                                                             "enumeration_types": {
                                                                                 "id": "BOUML_0x1fc82_2",
@@ -3662,7 +3693,8 @@
                                                                                     "referentType": "PrimitiveType"
                                                                                 },
                                                                                 "minOccurs": 0,
-                                                                                "maxOccurs": -1
+                                                                                "maxOccurs": -1,
+                                                                                "aliases": []
                                                                             },
                                                                             "property_definition": {
                                                                                 "id": "BOUML_0x1fe02_2",
@@ -3679,7 +3711,8 @@
                                                                                     "referentType": null
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             },
                                                                             "ms_conformant_property_type": {
                                                                                 "id": "BOUML_0x1ff02_2",
@@ -3744,7 +3777,8 @@
                                                                                     "referentType": "PrimitiveType"
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             },
                                                                             "property_definition_at_path": {
                                                                                 "id": "BOUML_0x1ff82_2",
@@ -3761,7 +3795,8 @@
                                                                                     "referentType": null
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             },
                                                                             "class_definition_at_path": {
                                                                                 "id": "_18_5_2_83e026d_1523433795184_22700_5234",
@@ -3811,7 +3846,8 @@
                                                                                     "referentType": null
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             },
                                                                             "all_ancestor_classes": {
                                                                                 "id": "BOUML_0x20002_2",
@@ -3846,7 +3882,8 @@
                                                                                     "referentType": "PrimitiveType"
                                                                                 },
                                                                                 "minOccurs": 0,
-                                                                                "maxOccurs": -1
+                                                                                "maxOccurs": -1,
+                                                                                "aliases": []
                                                                             },
                                                                             "is_descendant_of": {
                                                                                 "id": "_18_5_2_83e026d_1523434101428_448031_5279",
@@ -3896,7 +3933,8 @@
                                                                                     "referentType": "PrimitiveType"
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             },
                                                                             "type_conforms_to": {
                                                                                 "id": "BOUML_0x22102_2",
@@ -3946,7 +3984,8 @@
                                                                                     "referentType": "PrimitiveType"
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             },
                                                                             "subtypes": {
                                                                                 "id": "BOUML_0x1f802_2",
@@ -3981,7 +4020,8 @@
                                                                                     "referentType": "PrimitiveType"
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": -1
+                                                                                "maxOccurs": -1,
+                                                                                "aliases": []
                                                                             },
                                                                             "any_class_definition": {
                                                                                 "id": "_18_5_2_83e026d_1522840445082_484798_7287",
@@ -3998,7 +4038,8 @@
                                                                                     "referentType": null
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             },
                                                                             "any_type_definition": {
                                                                                 "id": "_18_5_2_83e026d_1523433509219_639526_5227",
@@ -4015,7 +4056,8 @@
                                                                                     "referentType": null
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             },
                                                                             "boolean_type_definition": {
                                                                                 "id": "_19_0_3_8fe028d_1582300307913_831551_5236",
@@ -4032,7 +4074,8 @@
                                                                                     "referentType": null
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             }
                                                                         },
                                                                         "umlConstraints": {
@@ -4165,7 +4208,8 @@
                                                                                     "referentType": null
                                                                                 },
                                                                                 "minOccurs": 0,
-                                                                                "maxOccurs": -1
+                                                                                "maxOccurs": -1,
+                                                                                "aliases": []
                                                                             },
                                                                             "path": {
                                                                                 "id": "BOUML_0x20202_2",
@@ -4182,7 +4226,8 @@
                                                                                     "referentType": "PrimitiveType"
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             }
                                                                         },
                                                                         "umlConstraints": []
@@ -4291,7 +4336,8 @@
                                                                                     "referentType": null
                                                                                 },
                                                                                 "minOccurs": 0,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             },
                                                                             "do_recursive_packages": {
                                                                                 "id": "BOUML_0x20102_2",
@@ -4326,7 +4372,8 @@
                                                                                     "referentType": null
                                                                                 },
                                                                                 "minOccurs": null,
-                                                                                "maxOccurs": null
+                                                                                "maxOccurs": null,
+                                                                                "aliases": []
                                                                             },
                                                                             "has_package_path": {
                                                                                 "id": "_18_2_83e026d_1454607345436_163206_4651",
@@ -4361,7 +4408,8 @@
                                                                                     "referentType": "PrimitiveType"
                                                                                 },
                                                                                 "minOccurs": 1,
-                                                                                "maxOccurs": 1
+                                                                                "maxOccurs": 1,
+                                                                                "aliases": []
                                                                             }
                                                                         },
                                                                         "umlConstraints": []
@@ -4490,7 +4538,8 @@
                                                                             "referentType": "PrimitiveType"
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     }
                                                                 },
                                                                 "umlConstraints": []
@@ -4580,7 +4629,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     },
                                                                     "is_boolean": {
                                                                         "id": "_19_0_3_8fe028d_1583244208834_825056_5282",
@@ -4606,7 +4656,8 @@
                                                                             "referentType": "PrimitiveType"
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     }
                                                                 },
                                                                 "umlConstraints": []
@@ -4751,7 +4802,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     },
                                                                     "is_boolean": {
                                                                         "id": "_19_0_83e026d_1577974966968_278512_5124",
@@ -4777,7 +4829,8 @@
                                                                             "referentType": "PrimitiveType"
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     }
                                                                 },
                                                                 "umlConstraints": []
@@ -4847,7 +4900,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     }
                                                                 },
                                                                 "umlConstraints": {
@@ -4965,7 +5019,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     },
                                                                     "equivalent_call": {
                                                                         "id": "_19_0_3_8fe028d_1582237352723_766658_5901",
@@ -4982,7 +5037,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     }
                                                                 },
                                                                 "umlConstraints": {
@@ -5129,7 +5185,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     }
                                                                 },
                                                                 "umlConstraints": []
@@ -5199,7 +5256,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     }
                                                                 },
                                                                 "umlConstraints": []
@@ -5328,7 +5386,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     },
                                                                     "reference": {
                                                                         "id": "_19_0_3_8fe028d_1650656853487_468362_6109",
@@ -5345,7 +5404,8 @@
                                                                             "referentType": "PrimitiveType"
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     }
                                                                 },
                                                                 "umlConstraints": {
@@ -5554,7 +5614,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     },
                                                                     "is_callable": {
                                                                         "id": "_19_0_83e026d_1573497819657_719715_6755",
@@ -5580,7 +5641,8 @@
                                                                             "referentType": "PrimitiveType"
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     },
                                                                     "reference": {
                                                                         "id": "_19_0_3_8fe028d_1650657115413_478992_6122",
@@ -5597,7 +5659,8 @@
                                                                             "referentType": "PrimitiveType"
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     }
                                                                 },
                                                                 "umlConstraints": []
@@ -5729,7 +5792,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     }
                                                                 },
                                                                 "umlConstraints": []
@@ -5818,7 +5882,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     }
                                                                 },
                                                                 "umlConstraints": []
@@ -5897,7 +5962,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     }
                                                                 },
                                                                 "umlConstraints": []
@@ -6013,7 +6079,8 @@
                                                                             "referentType": "PrimitiveType"
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     }
                                                                 },
                                                                 "umlConstraints": []
@@ -6138,7 +6205,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     }
                                                                 },
                                                                 "umlConstraints": {
@@ -6217,7 +6285,8 @@
                                                                             "referentType": "PrimitiveType"
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     }
                                                                 },
                                                                 "umlConstraints": []
@@ -7965,7 +8034,8 @@
                                                                     "referentType": null
                                                                 },
                                                                 "minOccurs": 1,
-                                                                "maxOccurs": 1
+                                                                "maxOccurs": 1,
+                                                                "aliases": []
                                                             },
                                                             "Any_type": {
                                                                 "id": "_19_0_3_8fe028d_1582571916930_988762_5163",
@@ -7982,7 +8052,8 @@
                                                                     "referentType": null
                                                                 },
                                                                 "minOccurs": 1,
-                                                                "maxOccurs": 1
+                                                                "maxOccurs": 1,
+                                                                "aliases": []
                                                             },
                                                             "create_schema_id": {
                                                                 "id": "_19_0_3_8fe028d_1589195970152_529367_5495",
@@ -8047,7 +8118,8 @@
                                                                     "referentType": "PrimitiveType"
                                                                 },
                                                                 "minOccurs": 1,
-                                                                "maxOccurs": 1
+                                                                "maxOccurs": 1,
+                                                                "aliases": []
                                                             }
                                                         },
                                                         "umlConstraints": []
@@ -8336,7 +8408,8 @@
                                                                     "referentType": "PrimitiveType"
                                                                 },
                                                                 "minOccurs": 1,
-                                                                "maxOccurs": 1
+                                                                "maxOccurs": 1,
+                                                                "aliases": []
                                                             },
                                                             "create_bmm_class": {
                                                                 "id": "BOUML_0x20302_2",
@@ -8353,7 +8426,8 @@
                                                                     "referentType": null
                                                                 },
                                                                 "minOccurs": null,
-                                                                "maxOccurs": null
+                                                                "maxOccurs": null,
+                                                                "aliases": []
                                                             },
                                                             "populate_bmm_class": {
                                                                 "id": "BOUML_0x20382_2",
@@ -8388,7 +8462,8 @@
                                                                     "referentType": null
                                                                 },
                                                                 "minOccurs": null,
-                                                                "maxOccurs": null
+                                                                "maxOccurs": null,
+                                                                "aliases": []
                                                             }
                                                         },
                                                         "umlConstraints": []
@@ -8596,7 +8671,8 @@
                                                                     "referentType": null
                                                                 },
                                                                 "minOccurs": null,
-                                                                "maxOccurs": null
+                                                                "maxOccurs": null,
+                                                                "aliases": []
                                                             },
                                                             "load_finalise": {
                                                                 "id": "_18_5_2_83e026d_1524923637340_333581_7062",
@@ -8628,7 +8704,8 @@
                                                                     "referentType": null
                                                                 },
                                                                 "minOccurs": null,
-                                                                "maxOccurs": null
+                                                                "maxOccurs": null,
+                                                                "aliases": []
                                                             },
                                                             "merge": {
                                                                 "id": "_18_5_2_83e026d_1524923640184_395620_7070",
@@ -8678,7 +8755,8 @@
                                                                     "referentType": null
                                                                 },
                                                                 "minOccurs": null,
-                                                                "maxOccurs": null
+                                                                "maxOccurs": null,
+                                                                "aliases": []
                                                             },
                                                             "validate": {
                                                                 "id": "_18_5_2_83e026d_1524923730980_57551_7091",
@@ -8695,7 +8773,8 @@
                                                                     "referentType": null
                                                                 },
                                                                 "minOccurs": null,
-                                                                "maxOccurs": null
+                                                                "maxOccurs": null,
+                                                                "aliases": []
                                                             },
                                                             "create_bmm_model": {
                                                                 "id": "_18_5_2_83e026d_1524923654294_965073_7085",
@@ -8721,7 +8800,8 @@
                                                                     "referentType": null
                                                                 },
                                                                 "minOccurs": null,
-                                                                "maxOccurs": null
+                                                                "maxOccurs": null,
+                                                                "aliases": []
                                                             },
                                                             "canonical_packages": {
                                                                 "id": "_18_2_83e026d_1454260271773_594504_5485",
@@ -8738,7 +8818,8 @@
                                                                     "referentType": null
                                                                 },
                                                                 "minOccurs": 1,
-                                                                "maxOccurs": 1
+                                                                "maxOccurs": 1,
+                                                                "aliases": []
                                                             }
                                                         },
                                                         "umlConstraints": []
@@ -8955,7 +9036,8 @@
                                                                     "referentType": null
                                                                 },
                                                                 "minOccurs": null,
-                                                                "maxOccurs": null
+                                                                "maxOccurs": null,
+                                                                "aliases": []
                                                             }
                                                         },
                                                         "umlConstraints": []
@@ -9081,7 +9163,8 @@
                                                                     "referentType": null
                                                                 },
                                                                 "minOccurs": null,
-                                                                "maxOccurs": null
+                                                                "maxOccurs": null,
+                                                                "aliases": []
                                                             }
                                                         },
                                                         "umlConstraints": {
@@ -9179,7 +9262,8 @@
                                                                     "referentType": null
                                                                 },
                                                                 "minOccurs": null,
-                                                                "maxOccurs": null
+                                                                "maxOccurs": null,
+                                                                "aliases": []
                                                             },
                                                             "as_type_string": {
                                                                 "id": "_18_2_83e026d_1454592101076_809007_4665",
@@ -9196,7 +9280,8 @@
                                                                     "referentType": "PrimitiveType"
                                                                 },
                                                                 "minOccurs": 1,
-                                                                "maxOccurs": 1
+                                                                "maxOccurs": 1,
+                                                                "aliases": []
                                                             }
                                                         },
                                                         "umlConstraints": []
@@ -9323,7 +9408,8 @@
                                                                     "referentType": null
                                                                 },
                                                                 "minOccurs": 1,
-                                                                "maxOccurs": 1
+                                                                "maxOccurs": 1,
+                                                                "aliases": []
                                                             }
                                                         },
                                                         "umlConstraints": []
@@ -9586,7 +9672,8 @@
                                                                     "referentType": null
                                                                 },
                                                                 "minOccurs": 0,
-                                                                "maxOccurs": -1
+                                                                "maxOccurs": -1,
+                                                                "aliases": []
                                                             }
                                                         },
                                                         "umlConstraints": []
@@ -9725,7 +9812,8 @@
                                                                     "referentType": null
                                                                 },
                                                                 "minOccurs": null,
-                                                                "maxOccurs": null
+                                                                "maxOccurs": null,
+                                                                "aliases": []
                                                             },
                                                             "create_bmm_package_definition": {
                                                                 "id": "_18_2_83e026d_1454336818012_888898_4895",
@@ -9742,7 +9830,8 @@
                                                                     "referentType": null
                                                                 },
                                                                 "minOccurs": null,
-                                                                "maxOccurs": null
+                                                                "maxOccurs": null,
+                                                                "aliases": []
                                                             }
                                                         },
                                                         "umlConstraints": []
@@ -9917,7 +10006,8 @@
                                                                     "referentType": null
                                                                 },
                                                                 "minOccurs": null,
-                                                                "maxOccurs": null
+                                                                "maxOccurs": null,
+                                                                "aliases": []
                                                             }
                                                         },
                                                         "umlConstraints": []
@@ -10025,7 +10115,8 @@
                                                                     "referentType": null
                                                                 },
                                                                 "minOccurs": 1,
-                                                                "maxOccurs": 1
+                                                                "maxOccurs": 1,
+                                                                "aliases": []
                                                             }
                                                         },
                                                         "umlConstraints": []
@@ -10133,7 +10224,8 @@
                                                                     "referentType": null
                                                                 },
                                                                 "minOccurs": 1,
-                                                                "maxOccurs": 1
+                                                                "maxOccurs": 1,
+                                                                "aliases": []
                                                             }
                                                         },
                                                         "umlConstraints": []
@@ -11048,7 +11140,8 @@
                                                                             "referentType": null
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     }
                                                                 },
                                                                 "umlConstraints": []
@@ -11460,7 +11553,8 @@
                                                                             "referentType": "Class"
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     }
                                                                 },
                                                                 "umlConstraints": []
@@ -11534,7 +11628,8 @@
                                                                             "referentType": "PrimitiveType"
                                                                         },
                                                                         "minOccurs": 1,
-                                                                        "maxOccurs": 1
+                                                                        "maxOccurs": 1,
+                                                                        "aliases": []
                                                                     }
                                                                 },
                                                                 "umlConstraints": []

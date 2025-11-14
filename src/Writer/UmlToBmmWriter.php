@@ -223,10 +223,6 @@ class UmlToBmmWriter extends AbstractWriter
             }
             $bmmClass['item_names'] = array_column($umlClass->enumerations, 'name');
             $bmmClass['item_documentations'] = array_column($umlClass->enumerations, 'description');
-            /** @var UmlOperation $umlOperation */
-            foreach ($umlClass->umlOperations as $umlOperation) {
-                $bmmClass['functions'][$umlOperation->name] = self::asBmmFunction($umlOperation, $umlClass, $collectedUmlClasses);
-            }
         }
         // special case for PROPORTION_KIND as it is not defined as an enumeration
         if ($umlClass->name === 'PROPORTION_KIND') {
@@ -275,6 +271,7 @@ class UmlToBmmWriter extends AbstractWriter
     {
         $bmmFunction = [
             'name' => $umlOperation->name,
+            'aliases' => $umlOperation->aliases,
             'documentation' => $umlOperation->description,
             'is_abstract' => $umlOperation->isAbstract,
             'is_nullable' => $umlOperation->minOccurs === 0,

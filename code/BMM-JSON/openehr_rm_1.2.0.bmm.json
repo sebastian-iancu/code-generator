@@ -3217,6 +3217,9 @@
                 },
                 "less_than": {
                     "name": "less_than",
+                    "aliases": [
+                        "<"
+                    ],
                     "documentation": "True if this Ordered object is less than `_other_`. Redefined in descendants.",
                     "is_abstract": true,
                     "parameters": {
@@ -3369,6 +3372,9 @@
                 },
                 "less_than": {
                     "name": "less_than",
+                    "aliases": [
+                        "<"
+                    ],
                     "documentation": "True if this Quantified object is less than `_other_`, based on comparison of `_magnitude_`.",
                     "parameters": {
                         "other": {
@@ -3478,6 +3484,9 @@
                 },
                 "add": {
                     "name": "add",
+                    "aliases": [
+                        "+"
+                    ],
                     "documentation": "Sum of two strictly comparable proportions.",
                     "parameters": {
                         "other": {
@@ -3493,6 +3502,9 @@
                 },
                 "subtract": {
                     "name": "subtract",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Difference between two strictly comparable proportions.",
                     "parameters": {
                         "other": {
@@ -3523,6 +3535,9 @@
                 },
                 "multiply": {
                     "name": "multiply",
+                    "aliases": [
+                        "&#42;"
+                    ],
                     "documentation": "Product of this Proportion and `_factor_`.",
                     "parameters": {
                         "factor": {
@@ -3538,6 +3553,9 @@
                 },
                 "less_than": {
                     "name": "less_than",
+                    "aliases": [
+                        "<"
+                    ],
                     "documentation": "True if this Proportion is less than  `_other_`. Only valid if `_is_strictly_comparable_to()_` is True.",
                     "parameters": {
                         "other": {
@@ -3668,6 +3686,9 @@
                 },
                 "add": {
                     "name": "add",
+                    "aliases": [
+                        "+"
+                    ],
                     "documentation": "Sum of this amount and another. The value of accuracy in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* both operand accuracies are unknown_accuracy_value.\n\nIf the accuracy value is a percentage in one operand and not in the other, the form in the result is that of the larger operand.",
                     "parameters": {
                         "other": {
@@ -3686,6 +3707,9 @@
                 },
                 "subtract": {
                     "name": "subtract",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Difference of this amount and another. The value of `_accuracy_` in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.\n\nIf the `_accuracy_` value is a percentage in one operand and not in the other, the form in the result is that of the larger operand.",
                     "parameters": {
                         "other": {
@@ -3717,6 +3741,9 @@
                 },
                 "multiply": {
                     "name": "multiply",
+                    "aliases": [
+                        "&#42;"
+                    ],
                     "documentation": "Product of this Amount and `_factor_`.",
                     "parameters": {
                         "factor": {
@@ -3732,6 +3759,9 @@
                 },
                 "negative": {
                     "name": "negative",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Negated version of current object, such as used for representing a difference, e.g. a weight loss.",
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",
@@ -3740,6 +3770,9 @@
                 },
                 "less_than": {
                     "name": "less_than",
+                    "aliases": [
+                        "<"
+                    ],
                     "documentation": "True if this object is less than `_other_`. Based on comparison of `_magnitude_`.",
                     "parameters": {
                         "other": {
@@ -3838,6 +3871,9 @@
             "functions": {
                 "add": {
                     "name": "add",
+                    "aliases": [
+                        "+"
+                    ],
                     "documentation": "Sum of this `DV_QUANTITY` and `_other_`.",
                     "parameters": {
                         "other": {
@@ -3853,6 +3889,9 @@
                 },
                 "subtract": {
                     "name": "subtract",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Difference of this `DV_QUANTITY` and `_other_`.",
                     "parameters": {
                         "other": {
@@ -3868,6 +3907,9 @@
                 },
                 "multiply": {
                     "name": "multiply",
+                    "aliases": [
+                        "&#42;"
+                    ],
                     "documentation": "Product of this `DV_QUANTITY` and `_factor_`.",
                     "parameters": {
                         "factor": {
@@ -3883,6 +3925,9 @@
                 },
                 "less_than": {
                     "name": "less_than",
+                    "aliases": [
+                        "<"
+                    ],
                     "documentation": "True if this Quantity object is less than `_other_`, based on comparison of `_magnitude_`. Only valid if `_is_strictly_comparable_to()_` is True.",
                     "parameters": {
                         "other": {
@@ -3974,6 +4019,9 @@
             "functions": {
                 "add": {
                     "name": "add",
+                    "aliases": [
+                        "+"
+                    ],
                     "documentation": "Sum of this `DV_COUNT` and `_other_`.",
                     "parameters": {
                         "other": {
@@ -3989,6 +4037,9 @@
                 },
                 "subtract": {
                     "name": "subtract",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Difference of this `DV_COUNT` and `_other_`.",
                     "parameters": {
                         "other": {
@@ -4004,6 +4055,9 @@
                 },
                 "multiply": {
                     "name": "multiply",
+                    "aliases": [
+                        "&#42;"
+                    ],
                     "documentation": "Product of this `DV_COUNT` and `_factor_`.",
                     "parameters": {
                         "factor": {
@@ -4019,6 +4073,9 @@
                 },
                 "less_than": {
                     "name": "less_than",
+                    "aliases": [
+                        "<"
+                    ],
                     "documentation": "True if this Quantified object is less than `_other_`, based on comparison of `_magnitude_`.",
                     "parameters": {
                         "other": {
@@ -4072,6 +4129,9 @@
             "functions": {
                 "add": {
                     "name": "add",
+                    "aliases": [
+                        "+"
+                    ],
                     "documentation": "Addition of a differential amount to this quantity. \n\nThe value of accuracy in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.",
                     "is_abstract": true,
                     "parameters": {
@@ -4088,6 +4148,9 @@
                 },
                 "subtract": {
                     "name": "subtract",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Result of subtracting a differential amount from this quantity.\n\nThe value of `_accuracy_` in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.",
                     "is_abstract": true,
                     "parameters": {
@@ -4104,6 +4167,9 @@
                 },
                 "diff": {
                     "name": "diff",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Difference of two quantities.\n\nThe value of accuracy in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.",
                     "is_abstract": true,
                     "parameters": {
@@ -4145,6 +4211,9 @@
             "functions": {
                 "less_than": {
                     "name": "less_than",
+                    "aliases": [
+                        "<"
+                    ],
                     "documentation": "True if this Ordinal value is less than `_other_`.",
                     "parameters": {
                         "other": {
@@ -4219,6 +4288,9 @@
                 },
                 "less_than": {
                     "name": "less_than",
+                    "aliases": [
+                        "<"
+                    ],
                     "documentation": "True if this Scale value is less than `_other_`.",
                     "parameters": {
                         "other": {
@@ -4253,6 +4325,9 @@
             "functions": {
                 "add": {
                     "name": "add",
+                    "aliases": [
+                        "+"
+                    ],
                     "documentation": "Sum of this Duration and `_other_`.",
                     "parameters": {
                         "other": {
@@ -4268,6 +4343,9 @@
                 },
                 "subtract": {
                     "name": "subtract",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Difference of this Duration and `_other_`.",
                     "parameters": {
                         "other": {
@@ -4283,6 +4361,9 @@
                 },
                 "multiply": {
                     "name": "multiply",
+                    "aliases": [
+                        "&#42;"
+                    ],
                     "documentation": "Product of this Duration and `_factor_`.",
                     "parameters": {
                         "factor": {
@@ -4298,6 +4379,9 @@
                 },
                 "less_than": {
                     "name": "less_than",
+                    "aliases": [
+                        "<"
+                    ],
                     "documentation": "True if this duration object is less than `_other_`, based on comparison of `_magnitude()_`. ",
                     "parameters": {
                         "other": {
@@ -4334,6 +4418,9 @@
                 },
                 "negative": {
                     "name": "negative",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Negated version of current duration.\n\nAssuming the current duration is positive, the negated version represents a time prior to some origin point, or a negative age (e.g. so-called 'adjusted age' of premature infant).",
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",
@@ -4371,6 +4458,9 @@
             "functions": {
                 "add": {
                     "name": "add",
+                    "aliases": [
+                        "+"
+                    ],
                     "documentation": "Addition of a Duration to this temporal entity.",
                     "is_abstract": true,
                     "parameters": {
@@ -4387,6 +4477,9 @@
                 },
                 "subtract": {
                     "name": "subtract",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Subtract a Duration from this temporal entity.",
                     "is_abstract": true,
                     "parameters": {
@@ -4403,6 +4496,9 @@
                 },
                 "diff": {
                     "name": "diff",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Difference between this temporal entity and `_other_`.",
                     "is_abstract": true,
                     "parameters": {
@@ -4461,6 +4557,9 @@
                 },
                 "add": {
                     "name": "add",
+                    "aliases": [
+                        "+"
+                    ],
                     "documentation": "Addition of a Duration to this Date.",
                     "parameters": {
                         "a_diff": {
@@ -4476,6 +4575,9 @@
                 },
                 "subtract": {
                     "name": "subtract",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Subtract a Duration from this Date.",
                     "parameters": {
                         "a_diff": {
@@ -4491,6 +4593,9 @@
                 },
                 "diff": {
                     "name": "diff",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Difference between this Date and `_other_`.",
                     "parameters": {
                         "other": {
@@ -4506,6 +4611,9 @@
                 },
                 "less_than": {
                     "name": "less_than",
+                    "aliases": [
+                        "<"
+                    ],
                     "documentation": "True if this date object is less than `_other_`, based on comparison of `_magnitude()_`. ",
                     "parameters": {
                         "other": {
@@ -4572,6 +4680,9 @@
                 },
                 "add": {
                     "name": "add",
+                    "aliases": [
+                        "+"
+                    ],
                     "documentation": "Addition of a Duration to this Time.",
                     "parameters": {
                         "a_diff": {
@@ -4587,6 +4698,9 @@
                 },
                 "subtract": {
                     "name": "subtract",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Subtract a Duration from this Time.",
                     "parameters": {
                         "a_diff": {
@@ -4602,6 +4716,9 @@
                 },
                 "diff": {
                     "name": "diff",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Difference between this Time and `_other_`.",
                     "parameters": {
                         "other": {
@@ -4617,6 +4734,9 @@
                 },
                 "less_than": {
                     "name": "less_than",
+                    "aliases": [
+                        "<"
+                    ],
                     "documentation": "True if this time object is less than `_other_`, based on comparison of `_magnitude()_`. ",
                     "parameters": {
                         "other": {
@@ -4683,6 +4803,9 @@
                 },
                 "add": {
                     "name": "add",
+                    "aliases": [
+                        "+"
+                    ],
                     "documentation": "Addition of a Duration to this Date\/time.",
                     "parameters": {
                         "a_diff": {
@@ -4698,6 +4821,9 @@
                 },
                 "subtract": {
                     "name": "subtract",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Subtract a Duration from this Date\/time.",
                     "parameters": {
                         "a_diff": {
@@ -4713,6 +4839,9 @@
                 },
                 "diff": {
                     "name": "diff",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Difference between this Date\/time and `_other_`.",
                     "parameters": {
                         "other": {
@@ -4728,6 +4857,9 @@
                 },
                 "less_than": {
                     "name": "less_than",
+                    "aliases": [
+                        "<"
+                    ],
                     "documentation": "True if this date-time object is less than `_other_`, based on comparison of `_magnitude()_`. ",
                     "parameters": {
                         "other": {

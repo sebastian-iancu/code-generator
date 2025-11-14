@@ -85,6 +85,9 @@
         },
         "add": {
             "name": "add",
+            "aliases": [
+                "+"
+            ],
             "documentation": "Sum of two strictly comparable proportions.",
             "parameters": {
                 "other": {
@@ -100,6 +103,9 @@
         },
         "subtract": {
             "name": "subtract",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Difference between two strictly comparable proportions.",
             "parameters": {
                 "other": {
@@ -130,6 +136,9 @@
         },
         "multiply": {
             "name": "multiply",
+            "aliases": [
+                "&#42;"
+            ],
             "documentation": "Product of this Proportion and `_factor_`.",
             "parameters": {
                 "factor": {
@@ -145,6 +154,9 @@
         },
         "less_than": {
             "name": "less_than",
+            "aliases": [
+                "<"
+            ],
             "documentation": "True if this Proportion is less than  `_other_`. Only valid if `_is_strictly_comparable_to()_` is True.",
             "parameters": {
                 "other": {

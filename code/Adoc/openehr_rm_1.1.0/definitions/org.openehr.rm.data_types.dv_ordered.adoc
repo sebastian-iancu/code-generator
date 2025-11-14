@@ -55,7 +55,7 @@ a|Value is in the normal range, determined by comparison of the value to `_norma
 
 h|*1..1 +
 (abstract)*
-|*less_than* ( +
+|*less_than* __alias__ "<" ( +
 other: `<<_dv_ordered_class,DV_ORDERED>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True if this Ordered object is less than `_other_`. Redefined in descendants.

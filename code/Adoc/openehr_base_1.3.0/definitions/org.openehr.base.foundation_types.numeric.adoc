@@ -17,41 +17,41 @@ h|*Functions*
 
 h|*1..1 +
 (abstract)*
-|*add* ( +
+|*add* __alias__ "+" ( +
 other: `<<_numeric_class,Numeric>>[1]` +
 ): `<<_numeric_class,Numeric>>`
 a|Sum with `_other_` (commutative). Actual type of result depends on arithmetic balancing rules.
 
 h|*1..1 +
 (abstract)*
-|*subtract* ( +
+|*subtract* __alias__ "-" ( +
 other: `<<_numeric_class,Numeric>>[1]` +
 ): `<<_numeric_class,Numeric>>`
 a|Result of subtracting `_other_`. Actual type of result depends on arithmetic balancing rules.
 
 h|*1..1 +
 (abstract)*
-|*multiply* ( +
+|*multiply* __alias__ "&#42;" ( +
 other: `<<_numeric_class,Numeric>>[1]` +
 ): `<<_numeric_class,Numeric>>`
 a|Product by `_other_`. Actual type of result depends on arithmetic balancing rules.
 
 h|*1..1 +
 (abstract)*
-|*divide* ( +
+|*divide* __alias__ "/" ( +
 other: `<<_numeric_class,Numeric>>[1]` +
 ): `<<_numeric_class,Numeric>>`
 a|Divide by`_other_`. Actual type of result depends on arithmetic balancing rules.
 
 h|*1..1 +
 (abstract)*
-|*exponent* ( +
+|*exponent* __alias__ "^" ( +
 other: `<<_numeric_class,Numeric>>[1]` +
 ): `<<_numeric_class,Numeric>>`
 a|Expontiation of this by `_other_`.
 
 h|*1..1 +
 (abstract)*
-|*negative* (): `<<_numeric_class,Numeric>>`
+|*negative* __alias__ "-" (): `<<_numeric_class,Numeric>>`
 a|Generate negative of current value.
 |===

@@ -59,7 +59,7 @@ other: `<<_dv_quantified_class,DV_QUANTIFIED>>[1]` +
 a|Return True if this `DV_QUANTIFIED` is considered equal to `_other_`.
 
 h|*1..1*
-|*less_than* ( +
+|*less_than* __alias__ "<" ( +
 other: `<<_dv_quantified_class,DV_QUANTIFIED>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
  +

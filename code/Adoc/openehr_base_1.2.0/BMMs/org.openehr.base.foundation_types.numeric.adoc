@@ -10,6 +10,9 @@
     "functions": {
         "add": {
             "name": "add",
+            "aliases": [
+                "+"
+            ],
             "documentation": "Sum with `_other_` (commutative). Actual type of result depends on arithmetic balancing rules.",
             "is_abstract": true,
             "parameters": {
@@ -26,6 +29,9 @@
         },
         "subtract": {
             "name": "subtract",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Result of subtracting `_other_`. Actual type of result depends on arithmetic balancing rules.",
             "is_abstract": true,
             "parameters": {
@@ -42,6 +48,9 @@
         },
         "multiply": {
             "name": "multiply",
+            "aliases": [
+                "&#42;"
+            ],
             "documentation": "Product by `_other_`. Actual type of result depends on arithmetic balancing rules.",
             "is_abstract": true,
             "parameters": {
@@ -58,6 +67,9 @@
         },
         "divide": {
             "name": "divide",
+            "aliases": [
+                "/"
+            ],
             "documentation": "Divide by`_other_`. Actual type of result depends on arithmetic balancing rules.",
             "is_abstract": true,
             "parameters": {
@@ -74,6 +86,9 @@
         },
         "exponent": {
             "name": "exponent",
+            "aliases": [
+                "^"
+            ],
             "documentation": "Expontiation of this by `_other_`.",
             "is_abstract": true,
             "parameters": {
@@ -90,6 +105,9 @@
         },
         "negative": {
             "name": "negative",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Generate negative of current value.",
             "is_abstract": true,
             "result": {

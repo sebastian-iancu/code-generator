@@ -108,6 +108,9 @@
         },
         "add": {
             "name": "add",
+            "aliases": [
+                "+"
+            ],
             "documentation": "Arithmetic addition of a duration to a time.",
             "parameters": {
                 "a_diff": {
@@ -123,6 +126,9 @@
         },
         "subtract": {
             "name": "subtract",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Arithmetic subtraction of a duration from a time.",
             "parameters": {
                 "a_diff": {
@@ -138,6 +144,9 @@
         },
         "diff": {
             "name": "diff",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Difference of two times.",
             "parameters": {
                 "a_time": {

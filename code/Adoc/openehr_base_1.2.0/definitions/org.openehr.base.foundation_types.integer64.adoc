@@ -16,49 +16,49 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*add* ( +
+|*add* __alias__ "+" ( +
 other: `<<_integer_class,Integer>>[1]` +
 ): `<<_integer64_class,Integer64>>`
 a|Large integer addition.
 
 h|*1..1*
-|*subtract* ( +
+|*subtract* __alias__ "-" ( +
 other: `<<_integer_class,Integer>>[1]` +
 ): `<<_integer64_class,Integer64>>`
 a|Large integer subtraction.
 
 h|*1..1*
-|*multiply* ( +
+|*multiply* __alias__ "&#42;" ( +
 other: `<<_integer_class,Integer>>[1]` +
 ): `<<_integer64_class,Integer64>>`
 a|Large integer multiplication.
 
 h|*1..1*
-|*divide* ( +
+|*divide* __alias__ "/" ( +
 other: `<<_integer_class,Integer>>[1]` +
 ): `<<_double_class,Double>>`
 a|Large integer division.
 
 h|*1..1*
-|*exponent* ( +
+|*exponent* __alias__ "^" ( +
 other: `<<_double_class,Double>>[1]` +
 ): `<<_double_class,Double>>`
 a|Large integer exponentiation.
 
 h|*1..1*
-|*modulo* ( +
+|*modulo* __alias__ "mod", "\\" ( +
 mod: `<<_integer_class,Integer>>[1]` +
 ): `<<_integer64_class,Integer64>>`
 a|Large integer modulus.
 
 h|*1..1*
-|*less_than* ( +
+|*less_than* __alias__ "<" ( +
 other: `<<_integer64_class,Integer64>>[1]` +
 ): `<<_boolean_class,Boolean>>`
 a|Returns True if current Integer is less than `_other_`.
 
 h|*1..1*
-|*negative* (): `<<_integer64_class,Integer64>>`
+|*negative* __alias__ "-" (): `<<_integer64_class,Integer64>>`
 a|Generate negative of current Integer value.
 
 h|*1..1*
@@ -68,7 +68,7 @@ other: `<<_integer64_class,Integer64>>[1]` +
 a|Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.
 
 h|*1..1*
-|*equal* ( +
+|*equal* __alias__ "=", "==" ( +
 other: `<<_integer64_class,Integer64>>[1]` +
 ): `<<_boolean_class,Boolean>>`
 a|Reference equality for reference types, value equality for value types.

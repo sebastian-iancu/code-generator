@@ -42,7 +42,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*less_than* ( +
+|*less_than* __alias__ "<" ( +
 other: `<<_dv_ordinal_class,DV_ORDINAL>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True if this Ordinal value is less than `_other_`.

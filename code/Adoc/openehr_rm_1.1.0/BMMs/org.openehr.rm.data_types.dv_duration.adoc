@@ -19,6 +19,9 @@
     "functions": {
         "add": {
             "name": "add",
+            "aliases": [
+                "+"
+            ],
             "documentation": "Sum of this Duration and `_other_`.",
             "parameters": {
                 "other": {
@@ -34,6 +37,9 @@
         },
         "subtract": {
             "name": "subtract",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Difference of this Duration and `_other_`.",
             "parameters": {
                 "other": {
@@ -49,6 +55,9 @@
         },
         "multiply": {
             "name": "multiply",
+            "aliases": [
+                "&#42;"
+            ],
             "documentation": "Product of this Duration and `_factor_`.",
             "parameters": {
                 "factor": {
@@ -64,6 +73,9 @@
         },
         "less_than": {
             "name": "less_than",
+            "aliases": [
+                "<"
+            ],
             "documentation": "True if `_other_` is less than this Quantified object. Based on comparison of `_magnitude_`.",
             "parameters": {
                 "other": {
@@ -100,6 +112,9 @@
         },
         "negative": {
             "name": "negative",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Negated version of current duration.\n\nAssuming the current duration is positive, the negated version represents a time prior to some origin point, or a negative age (e.g. so-called 'adjusted age' of premature infant).",
             "result": {
                 "_type": "P_BMM_SIMPLE_TYPE",

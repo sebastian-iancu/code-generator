@@ -379,7 +379,11 @@ class BmmAsciiDocWriter extends AbstractWriter
         if ($args) {
             $args = " +\n" . $args . " +\n";
         }
-        $signature = '*' . $function->name . '* (' . $args . '): `' . $type . '`';
+        $aliases = '';
+        if ($function->aliases) {
+            $aliases = '__alias__ "' . implode('", "', $function->aliases) . '" ';
+        }
+        $signature = '*' . $function->name . '* '.$aliases.'(' . $args . '): `' . $type . '`';
         if ($function->preConditions) {
             $signature .= " +\n +\n" . implode(" +\n", array_map(function ($key, $value) {
                     return '__' . $key . '__: `' . $value . '`';

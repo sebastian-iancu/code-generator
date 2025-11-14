@@ -9,6 +9,9 @@
     "functions": {
         "add": {
             "name": "add",
+            "aliases": [
+                "+"
+            ],
             "documentation": "Large integer addition.",
             "parameters": {
                 "other": {
@@ -24,6 +27,9 @@
         },
         "subtract": {
             "name": "subtract",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Large integer subtraction.",
             "parameters": {
                 "other": {
@@ -39,6 +45,9 @@
         },
         "multiply": {
             "name": "multiply",
+            "aliases": [
+                "&#42;"
+            ],
             "documentation": "Large integer multiplication.",
             "parameters": {
                 "other": {
@@ -54,6 +63,9 @@
         },
         "divide": {
             "name": "divide",
+            "aliases": [
+                "/"
+            ],
             "documentation": "Large integer division.",
             "parameters": {
                 "other": {
@@ -69,6 +81,9 @@
         },
         "exponent": {
             "name": "exponent",
+            "aliases": [
+                "^"
+            ],
             "documentation": "Large integer exponentiation.",
             "parameters": {
                 "other": {
@@ -84,6 +99,10 @@
         },
         "modulo": {
             "name": "modulo",
+            "aliases": [
+                "mod",
+                "\\\\"
+            ],
             "documentation": "Large integer modulus.",
             "parameters": {
                 "mod": {
@@ -99,6 +118,9 @@
         },
         "less_than": {
             "name": "less_than",
+            "aliases": [
+                "<"
+            ],
             "documentation": "Returns True if current Integer is less than `_other_`.",
             "parameters": {
                 "other": {
@@ -114,6 +136,9 @@
         },
         "negative": {
             "name": "negative",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Generate negative of current Integer value.",
             "result": {
                 "_type": "P_BMM_SIMPLE_TYPE",
@@ -137,6 +162,10 @@
         },
         "equal": {
             "name": "equal",
+            "aliases": [
+                "=",
+                "=="
+            ],
             "documentation": "Reference equality for reference types, value equality for value types.",
             "parameters": {
                 "other": {

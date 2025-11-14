@@ -25,7 +25,7 @@ h|*Functions*
 
 h|*1..1 +
 (abstract)*
-|*add* ( +
+|*add* __alias__ "+" ( +
 a_diff: `<<_dv_amount_class,DV_AMOUNT>>[1]` +
 ): `<<_dv_absolute_quantity_class,DV_ABSOLUTE_QUANTITY>>`
 a|Addition of a differential amount to this quantity. 
@@ -37,7 +37,7 @@ The value of accuracy in the result is either:
 
 h|*1..1 +
 (abstract)*
-|*subtract* ( +
+|*subtract* __alias__ "-" ( +
 a_diff: `<<_dv_amount_class,DV_AMOUNT>>[1]` +
 ): `<<_dv_absolute_quantity_class,DV_ABSOLUTE_QUANTITY>>`
 a|Result of subtracting a differential amount from this quantity.
@@ -49,7 +49,7 @@ The value of `_accuracy_` in the result is either:
 
 h|*1..1 +
 (abstract)*
-|*diff* ( +
+|*diff* __alias__ "-" ( +
 other: `<<_dv_absolute_quantity_class,DV_ABSOLUTE_QUANTITY>>[1]` +
 ): `<<_dv_amount_class,DV_AMOUNT>>`
 a|Difference of two quantities.

@@ -33,6 +33,9 @@
         },
         "item": {
             "name": "item",
+            "aliases": [
+                "[]"
+            ],
             "documentation": "Return item for key `_a_key_`.",
             "parameters": {
                 "a_key": {

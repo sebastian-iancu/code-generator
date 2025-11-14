@@ -145,6 +145,10 @@
                 },
                 "equal": {
                     "name": "equal",
+                    "aliases": [
+                        "=",
+                        "=="
+                    ],
                     "documentation": "Reference equality for reference types, value equality for value types.",
                     "parameters": {
                         "other": {
@@ -190,6 +194,10 @@
                 },
                 "not_equal": {
                     "name": "not_equal",
+                    "aliases": [
+                        "!=",
+                        "\u2260"
+                    ],
                     "documentation": "True if current object not equal to `_other_`. Returns not `_equal_()`.",
                     "parameters": {
                         "other": {
@@ -238,6 +246,9 @@
                 },
                 "item": {
                     "name": "item",
+                    "aliases": [
+                        "[]"
+                    ],
                     "documentation": "Return item for key `_a_key_`.",
                     "parameters": {
                         "a_key": {
@@ -303,6 +314,10 @@
                 },
                 "there_exists": {
                     "name": "there_exists",
+                    "aliases": [
+                        "there exists",
+                        "\u2203"
+                    ],
                     "documentation": "Existential quantifier applied to container, taking one agent argument `_test_` whose signature is `(v:T): Boolean`.",
                     "parameters": {
                         "test": {
@@ -318,6 +333,10 @@
                 },
                 "for_all": {
                     "name": "for_all",
+                    "aliases": [
+                        "for all",
+                        "\u2200"
+                    ],
                     "documentation": "Universal quantifier applied to container, taking one agent argument `_test_` whose signature is `(v:T): Boolean`.",
                     "parameters": {
                         "test": {
@@ -429,6 +448,9 @@
             "functions": {
                 "item": {
                     "name": "item",
+                    "aliases": [
+                        "[]"
+                    ],
                     "documentation": "Return item for key  `_a_key_`.",
                     "parameters": {
                         "a_key": {
@@ -469,6 +491,9 @@
             "functions": {
                 "add": {
                     "name": "add",
+                    "aliases": [
+                        "+"
+                    ],
                     "documentation": "Integer addition.",
                     "parameters": {
                         "other": {
@@ -484,6 +509,9 @@
                 },
                 "subtract": {
                     "name": "subtract",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Integer subtraction.",
                     "parameters": {
                         "other": {
@@ -499,6 +527,9 @@
                 },
                 "multiply": {
                     "name": "multiply",
+                    "aliases": [
+                        "&#42;"
+                    ],
                     "documentation": "Integer multiplication.",
                     "parameters": {
                         "other": {
@@ -514,6 +545,9 @@
                 },
                 "divide": {
                     "name": "divide",
+                    "aliases": [
+                        "\/"
+                    ],
                     "documentation": "Integer division.",
                     "parameters": {
                         "other": {
@@ -529,6 +563,9 @@
                 },
                 "exponent": {
                     "name": "exponent",
+                    "aliases": [
+                        "^"
+                    ],
                     "documentation": "Integer exponentiation.",
                     "parameters": {
                         "other": {
@@ -544,6 +581,10 @@
                 },
                 "modulo": {
                     "name": "modulo",
+                    "aliases": [
+                        "mod",
+                        "\\\\"
+                    ],
                     "documentation": "Return self modulo other.",
                     "parameters": {
                         "mod": {
@@ -559,6 +600,9 @@
                 },
                 "less_than": {
                     "name": "less_than",
+                    "aliases": [
+                        "<"
+                    ],
                     "documentation": "Returns True if current Integer is less than `_other_`.",
                     "parameters": {
                         "other": {
@@ -574,6 +618,9 @@
                 },
                 "negative": {
                     "name": "negative",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Generate negative of current Integer value.",
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",
@@ -597,6 +644,10 @@
                 },
                 "equal": {
                     "name": "equal",
+                    "aliases": [
+                        "=",
+                        "=="
+                    ],
                     "documentation": "Reference equality for reference types, value equality for value types.",
                     "parameters": {
                         "other": {
@@ -629,6 +680,9 @@
                 },
                 "add": {
                     "name": "add",
+                    "aliases": [
+                        "+"
+                    ],
                     "documentation": "Double-precision real number addition.",
                     "parameters": {
                         "other": {
@@ -644,6 +698,9 @@
                 },
                 "subtract": {
                     "name": "subtract",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Double-precision real number subtraction.",
                     "parameters": {
                         "other": {
@@ -659,6 +716,9 @@
                 },
                 "multiply": {
                     "name": "multiply",
+                    "aliases": [
+                        "&#42;"
+                    ],
                     "documentation": "Double-precision real number multiplication.",
                     "parameters": {
                         "other": {
@@ -674,6 +734,9 @@
                 },
                 "divide": {
                     "name": "divide",
+                    "aliases": [
+                        "\/"
+                    ],
                     "documentation": "Double-precision real number division.",
                     "parameters": {
                         "other": {
@@ -689,6 +752,9 @@
                 },
                 "exponent": {
                     "name": "exponent",
+                    "aliases": [
+                        "^"
+                    ],
                     "documentation": "Double-precision real number exponentiation.",
                     "parameters": {
                         "other": {
@@ -704,6 +770,9 @@
                 },
                 "less_than": {
                     "name": "less_than",
+                    "aliases": [
+                        "<"
+                    ],
                     "documentation": "Returns True if current Double is less than `_other_`.",
                     "parameters": {
                         "other": {
@@ -719,6 +788,9 @@
                 },
                 "negative": {
                     "name": "negative",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Generate negative of current Double value.",
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",
@@ -742,6 +814,10 @@
                 },
                 "equal": {
                     "name": "equal",
+                    "aliases": [
+                        "=",
+                        "=="
+                    ],
                     "documentation": "Reference equality for reference types, value equality for value types.",
                     "parameters": {
                         "other": {
@@ -767,6 +843,9 @@
             "functions": {
                 "add": {
                     "name": "add",
+                    "aliases": [
+                        "+"
+                    ],
                     "documentation": "Sum with `_other_` (commutative). Actual type of result depends on arithmetic balancing rules.",
                     "is_abstract": true,
                     "parameters": {
@@ -783,6 +862,9 @@
                 },
                 "subtract": {
                     "name": "subtract",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Result of subtracting `_other_`. Actual type of result depends on arithmetic balancing rules.",
                     "is_abstract": true,
                     "parameters": {
@@ -799,6 +881,9 @@
                 },
                 "multiply": {
                     "name": "multiply",
+                    "aliases": [
+                        "&#42;"
+                    ],
                     "documentation": "Product by `_other_`. Actual type of result depends on arithmetic balancing rules.",
                     "is_abstract": true,
                     "parameters": {
@@ -815,6 +900,9 @@
                 },
                 "divide": {
                     "name": "divide",
+                    "aliases": [
+                        "\/"
+                    ],
                     "documentation": "Divide by`_other_`. Actual type of result depends on arithmetic balancing rules.",
                     "is_abstract": true,
                     "parameters": {
@@ -831,6 +919,9 @@
                 },
                 "exponent": {
                     "name": "exponent",
+                    "aliases": [
+                        "^"
+                    ],
                     "documentation": "Expontiation of this by `_other_`.",
                     "is_abstract": true,
                     "parameters": {
@@ -847,6 +938,9 @@
                 },
                 "negative": {
                     "name": "negative",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Generate negative of current value.",
                     "is_abstract": true,
                     "result": {
@@ -879,6 +973,11 @@
             "functions": {
                 "conjunction": {
                     "name": "conjunction",
+                    "aliases": [
+                        "and",
+                        "\u2227",
+                        "&"
+                    ],
                     "documentation": "Logical conjunction of this with `_other_`.",
                     "parameters": {
                         "other": {
@@ -898,6 +997,10 @@
                 },
                 "semistrict_conjunction": {
                     "name": "semistrict_conjunction",
+                    "aliases": [
+                        "and then",
+                        "&&"
+                    ],
                     "documentation": "Boolean semi-strict conjunction with `_other_`.",
                     "parameters": {
                         "other": {
@@ -916,6 +1019,11 @@
                 },
                 "disjunction": {
                     "name": "disjunction",
+                    "aliases": [
+                        "or",
+                        "\u2228",
+                        "&#124;"
+                    ],
                     "documentation": "Boolean disjunction with `_other_`.",
                     "parameters": {
                         "other": {
@@ -936,6 +1044,10 @@
                 },
                 "semistrict_disjunction": {
                     "name": "semistrict_disjunction",
+                    "aliases": [
+                        "or else",
+                        "&#124;&#124;"
+                    ],
                     "documentation": "Boolean semi-strict disjunction with `_other_`.",
                     "parameters": {
                         "other": {
@@ -954,6 +1066,10 @@
                 },
                 "exclusive_disjunction": {
                     "name": "exclusive_disjunction",
+                    "aliases": [
+                        "xor",
+                        "\u22bb"
+                    ],
                     "documentation": "Boolean exclusive or with `_other_`.",
                     "parameters": {
                         "other": {
@@ -972,6 +1088,10 @@
                 },
                 "implication": {
                     "name": "implication",
+                    "aliases": [
+                        "implies",
+                        "\u21d2"
+                    ],
                     "documentation": "Boolean implication of `_other_` (semi-strict)",
                     "parameters": {
                         "other": {
@@ -990,6 +1110,11 @@
                 },
                 "negation": {
                     "name": "negation",
+                    "aliases": [
+                        "not",
+                        "\u00ac",
+                        "!"
+                    ],
                     "documentation": "Boolean negation of the current value.",
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",
@@ -1036,6 +1161,9 @@
                 },
                 "append": {
                     "name": "append",
+                    "aliases": [
+                        "+"
+                    ],
                     "documentation": "Concatenation operator - causes `_other_` to be appended to this string.",
                     "parameters": {
                         "other": {
@@ -1098,6 +1226,9 @@
                 },
                 "add": {
                     "name": "add",
+                    "aliases": [
+                        "+"
+                    ],
                     "documentation": "Real number addition.",
                     "parameters": {
                         "other": {
@@ -1113,6 +1244,9 @@
                 },
                 "subtract": {
                     "name": "subtract",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Real number subtraction.",
                     "parameters": {
                         "other": {
@@ -1128,6 +1262,9 @@
                 },
                 "multiply": {
                     "name": "multiply",
+                    "aliases": [
+                        "&#42;"
+                    ],
                     "documentation": "Real number multiplication.",
                     "parameters": {
                         "other": {
@@ -1143,6 +1280,9 @@
                 },
                 "divide": {
                     "name": "divide",
+                    "aliases": [
+                        "\/"
+                    ],
                     "documentation": "Real number division.",
                     "parameters": {
                         "other": {
@@ -1158,6 +1298,9 @@
                 },
                 "exponent": {
                     "name": "exponent",
+                    "aliases": [
+                        "^"
+                    ],
                     "documentation": "Real number exponentiation.",
                     "parameters": {
                         "other": {
@@ -1173,6 +1316,9 @@
                 },
                 "less_than": {
                     "name": "less_than",
+                    "aliases": [
+                        "<"
+                    ],
                     "documentation": "Returns True if current Real is less than `_other_`.",
                     "parameters": {
                         "other": {
@@ -1188,6 +1334,9 @@
                 },
                 "negative": {
                     "name": "negative",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Generate negative of current Real value.",
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",
@@ -1211,6 +1360,10 @@
                 },
                 "equal": {
                     "name": "equal",
+                    "aliases": [
+                        "=",
+                        "=="
+                    ],
                     "documentation": "Reference equality for reference types, value equality for value types.",
                     "parameters": {
                         "other": {
@@ -1235,6 +1388,9 @@
             "functions": {
                 "add": {
                     "name": "add",
+                    "aliases": [
+                        "+"
+                    ],
                     "documentation": "Large integer addition.",
                     "parameters": {
                         "other": {
@@ -1250,6 +1406,9 @@
                 },
                 "subtract": {
                     "name": "subtract",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Large integer subtraction.",
                     "parameters": {
                         "other": {
@@ -1265,6 +1424,9 @@
                 },
                 "multiply": {
                     "name": "multiply",
+                    "aliases": [
+                        "&#42;"
+                    ],
                     "documentation": "Large integer multiplication.",
                     "parameters": {
                         "other": {
@@ -1280,6 +1442,9 @@
                 },
                 "divide": {
                     "name": "divide",
+                    "aliases": [
+                        "\/"
+                    ],
                     "documentation": "Large integer division.",
                     "parameters": {
                         "other": {
@@ -1295,6 +1460,9 @@
                 },
                 "exponent": {
                     "name": "exponent",
+                    "aliases": [
+                        "^"
+                    ],
                     "documentation": "Large integer exponentiation.",
                     "parameters": {
                         "other": {
@@ -1310,6 +1478,10 @@
                 },
                 "modulo": {
                     "name": "modulo",
+                    "aliases": [
+                        "mod",
+                        "\\\\"
+                    ],
                     "documentation": "Large integer modulus.",
                     "parameters": {
                         "mod": {
@@ -1325,6 +1497,9 @@
                 },
                 "less_than": {
                     "name": "less_than",
+                    "aliases": [
+                        "<"
+                    ],
                     "documentation": "Returns True if current Integer is less than `_other_`.",
                     "parameters": {
                         "other": {
@@ -1340,6 +1515,9 @@
                 },
                 "negative": {
                     "name": "negative",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Generate negative of current Integer value.",
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",
@@ -1363,6 +1541,10 @@
                 },
                 "equal": {
                     "name": "equal",
+                    "aliases": [
+                        "=",
+                        "=="
+                    ],
                     "documentation": "Reference equality for reference types, value equality for value types.",
                     "parameters": {
                         "other": {
@@ -1388,6 +1570,9 @@
             "functions": {
                 "less_than": {
                     "name": "less_than",
+                    "aliases": [
+                        "<"
+                    ],
                     "documentation": "Arithmetic value comparison. Returns True if current object is less than `_other_`. This operator is effected and\/or redefined in descendants to provide the appropriate ordering semantics for concrete types.\n\nIn conjunction with `=`, enables the definition of the related functions `_greater_than_()` etc.",
                     "is_abstract": true,
                     "parameters": {
@@ -1404,6 +1589,10 @@
                 },
                 "less_than_or_equal": {
                     "name": "less_than_or_equal",
+                    "aliases": [
+                        "<=",
+                        "\u2264"
+                    ],
                     "documentation": "True if current object less than or equal to `_other_`.",
                     "parameters": {
                         "other": {
@@ -1422,6 +1611,9 @@
                 },
                 "greater_than": {
                     "name": "greater_than",
+                    "aliases": [
+                        ">"
+                    ],
                     "documentation": "True if current object greater than `_other_`.",
                     "parameters": {
                         "other": {
@@ -1440,6 +1632,10 @@
                 },
                 "greater_than_or_equal": {
                     "name": "greater_than_or_equal",
+                    "aliases": [
+                        ">=",
+                        "\u2265"
+                    ],
                     "documentation": "True if current object greater than or equal to `_other_`.",
                     "parameters": {
                         "other": {
@@ -1618,6 +1814,9 @@
                 },
                 "add": {
                     "name": "add",
+                    "aliases": [
+                        "+"
+                    ],
                     "documentation": "Arithmetic addition of a duration to a date\/time.",
                     "parameters": {
                         "a_diff": {
@@ -1633,6 +1832,9 @@
                 },
                 "subtract": {
                     "name": "subtract",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Arithmetic subtraction of a duration from a date\/time.",
                     "parameters": {
                         "a_diff": {
@@ -1648,6 +1850,9 @@
                 },
                 "diff": {
                     "name": "diff",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Difference of two date\/times.",
                     "parameters": {
                         "a_date_time": {
@@ -1663,6 +1868,9 @@
                 },
                 "add_nominal": {
                     "name": "add_nominal",
+                    "aliases": [
+                        "++"
+                    ],
                     "documentation": "Addition of nominal duration represented by `_a_diff_`. See `Iso8601_date._add_nominal_()` for semantics.",
                     "parameters": {
                         "a_diff": {
@@ -1678,6 +1886,9 @@
                 },
                 "subtract_nominal": {
                     "name": "subtract_nominal",
+                    "aliases": [
+                        "--"
+                    ],
                     "documentation": "Subtraction of nominal duration represented by `_a_diff_`. See `_add_nominal_()` for semantics.",
                     "parameters": {
                         "a_diff": {
@@ -1820,6 +2031,9 @@
                 },
                 "add": {
                     "name": "add",
+                    "aliases": [
+                        "+"
+                    ],
                     "documentation": "Arithmetic addition of a duration to a duration, via conversion to seconds, using `Time_definitions._Average_days_in_year_` and `Time_definitions._Average_days_in_month_`",
                     "parameters": {
                         "a_val": {
@@ -1835,6 +2049,9 @@
                 },
                 "subtract": {
                     "name": "subtract",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Arithmetic subtraction of a duration from a duration, via conversion to seconds, using `Time_definitions._Average_days_in_year_` and `Time_definitions._Average_days_in_month_`",
                     "parameters": {
                         "a_val": {
@@ -1850,6 +2067,9 @@
                 },
                 "multiply": {
                     "name": "multiply",
+                    "aliases": [
+                        "&#42;"
+                    ],
                     "documentation": "Arithmetic multiplication a duration by a number.",
                     "parameters": {
                         "a_val": {
@@ -1865,6 +2085,9 @@
                 },
                 "divide": {
                     "name": "divide",
+                    "aliases": [
+                        "\/"
+                    ],
                     "documentation": "Arithmetic division of a duration by a number.",
                     "parameters": {
                         "a_val": {
@@ -1880,6 +2103,9 @@
                 },
                 "negative": {
                     "name": "negative",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Generate negative of current duration value.",
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",
@@ -2006,6 +2232,9 @@
                 },
                 "add": {
                     "name": "add",
+                    "aliases": [
+                        "+"
+                    ],
                     "documentation": "Arithmetic addition of a duration to a time.",
                     "parameters": {
                         "a_diff": {
@@ -2021,6 +2250,9 @@
                 },
                 "subtract": {
                     "name": "subtract",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Arithmetic subtraction of a duration from a time.",
                     "parameters": {
                         "a_diff": {
@@ -2036,6 +2268,9 @@
                 },
                 "diff": {
                     "name": "diff",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Difference of two times.",
                     "parameters": {
                         "a_time": {
@@ -2183,6 +2418,9 @@
                 },
                 "add": {
                     "name": "add",
+                    "aliases": [
+                        "+"
+                    ],
                     "documentation": "Arithmetic addition of a duration to a date.",
                     "parameters": {
                         "a_diff": {
@@ -2198,6 +2436,9 @@
                 },
                 "subtract": {
                     "name": "subtract",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Arithmetic subtraction of a duration from a date.",
                     "parameters": {
                         "a_diff": {
@@ -2213,6 +2454,9 @@
                 },
                 "diff": {
                     "name": "diff",
+                    "aliases": [
+                        "-"
+                    ],
                     "documentation": "Difference of two dates.",
                     "parameters": {
                         "a_date": {
@@ -2228,6 +2472,9 @@
                 },
                 "add_nominal": {
                     "name": "add_nominal",
+                    "aliases": [
+                        "++"
+                    ],
                     "documentation": "Addition of nominal duration represented by `_a_diff_`. For example, a duration of `'P1Y'` means advance to the same date next year, with the exception of the date 29 February in a leap year, to which the addition of a nominal year will result in 28 February of the following year. Similarly, `'P1M'` is understood here as a nominal month, the addition of which will result in one of:\n\n* the same day in the following month, if it exists, or;\n* one or two days less where the following month is shorter, or;\n* in the case of adding a month to the date 31 Jan, the result will be 28 Feb in a non-leap year (i.e. three less) and 29 Feb in a leap year (i.e. two less).",
                     "parameters": {
                         "a_diff": {
@@ -2243,6 +2490,9 @@
                 },
                 "subtract_nominal": {
                     "name": "subtract_nominal",
+                    "aliases": [
+                        "--"
+                    ],
                     "documentation": "Subtraction of nominal duration represented by `_a_diff_`. See `_add_nominal_()` for semantics.",
                     "parameters": {
                         "a_diff": {

@@ -27,6 +27,9 @@
         },
         "add": {
             "name": "add",
+            "aliases": [
+                "+"
+            ],
             "documentation": "Addition of a Duration to this Time.",
             "parameters": {
                 "a_diff": {
@@ -42,6 +45,9 @@
         },
         "subtract": {
             "name": "subtract",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Subtract a Duration from this Time.",
             "parameters": {
                 "a_diff": {
@@ -57,6 +63,9 @@
         },
         "diff": {
             "name": "diff",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Difference between this Time and `_other_`.",
             "parameters": {
                 "other": {
@@ -72,6 +81,9 @@
         },
         "less_than": {
             "name": "less_than",
+            "aliases": [
+                "<"
+            ],
             "documentation": "True if `_other_` is less than this Quantified object. Based on comparison of `_magnitude_`.",
             "parameters": {
                 "other": {

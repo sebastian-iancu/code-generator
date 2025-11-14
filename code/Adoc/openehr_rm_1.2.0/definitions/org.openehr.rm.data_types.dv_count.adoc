@@ -34,25 +34,25 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*add* ( +
+|*add* __alias__ "+" ( +
 other: `<<_dv_count_class,DV_COUNT>>[1]` +
 ): `<<_dv_count_class,DV_COUNT>>`
 a|Sum of this `DV_COUNT` and `_other_`.
 
 h|*1..1*
-|*subtract* ( +
+|*subtract* __alias__ "-" ( +
 other: `<<_dv_count_class,DV_COUNT>>[1]` +
 ): `<<_dv_count_class,DV_COUNT>>`
 a|Difference of this `DV_COUNT` and `_other_`.
 
 h|*1..1*
-|*multiply* ( +
+|*multiply* __alias__ "&#42;" ( +
 factor: `link:/releases/BASE/{base_release}/foundation_types.html#_real_class[Real^][1]` +
 ): `<<_dv_count_class,DV_COUNT>>`
 a|Product of this `DV_COUNT` and `_factor_`.
 
 h|*1..1*
-|*less_than* ( +
+|*less_than* __alias__ "<" ( +
 other: `<<_dv_count_class,DV_COUNT>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
  +

@@ -105,31 +105,31 @@ h|*1..1*
 a|Return the string value in extended format.
 
 h|*1..1*
-|*add* ( +
+|*add* __alias__ "+" ( +
 a_diff: `<<_iso8601_duration_class,Iso8601_duration>>[1]` +
 ): `<<_iso8601_date_time_class,Iso8601_date_time>>`
 a|Arithmetic addition of a duration to a date/time.
 
 h|*1..1*
-|*subtract* ( +
+|*subtract* __alias__ "-" ( +
 a_diff: `<<_iso8601_duration_class,Iso8601_duration>>[1]` +
 ): `<<_iso8601_date_time_class,Iso8601_date_time>>`
 a|Arithmetic subtraction of a duration from a date/time.
 
 h|*1..1*
-|*diff* ( +
+|*diff* __alias__ "-" ( +
 a_date_time: `<<_iso8601_date_time_class,Iso8601_date_time>>[1]` +
 ): `<<_iso8601_duration_class,Iso8601_duration>>`
 a|Difference of two date/times.
 
 h|*1..1*
-|*add_nominal* ( +
+|*add_nominal* __alias__ "++" ( +
 a_diff: `<<_iso8601_duration_class,Iso8601_duration>>[1]` +
 ): `<<_iso8601_date_class,Iso8601_date>>`
 a|Addition of nominal duration represented by `_a_diff_`. See `Iso8601_date._add_nominal_()` for semantics.
 
 h|*1..1*
-|*subtract_nominal* ( +
+|*subtract_nominal* __alias__ "--" ( +
 a_diff: `<<_iso8601_duration_class,Iso8601_duration>>[1]` +
 ): `<<_iso8601_date_class,Iso8601_date>>`
 a|Subtraction of nominal duration represented by `_a_diff_`. See `_add_nominal_()` for semantics.

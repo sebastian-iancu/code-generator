@@ -160,6 +160,9 @@
         },
         "add": {
             "name": "add",
+            "aliases": [
+                "+"
+            ],
             "documentation": "Arithmetic addition of a duration to a date/time.",
             "parameters": {
                 "a_diff": {
@@ -175,6 +178,9 @@
         },
         "subtract": {
             "name": "subtract",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Arithmetic subtraction of a duration from a date/time.",
             "parameters": {
                 "a_diff": {
@@ -190,6 +196,9 @@
         },
         "diff": {
             "name": "diff",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Difference of two date/times.",
             "parameters": {
                 "a_date_time": {
@@ -205,6 +214,9 @@
         },
         "add_nominal": {
             "name": "add_nominal",
+            "aliases": [
+                "++"
+            ],
             "documentation": "Addition of nominal duration represented by `_a_diff_`. See `Iso8601_date._add_nominal_()` for semantics.",
             "parameters": {
                 "a_diff": {
@@ -220,6 +232,9 @@
         },
         "subtract_nominal": {
             "name": "subtract_nominal",
+            "aliases": [
+                "--"
+            ],
             "documentation": "Subtraction of nominal duration represented by `_a_diff_`. See `_add_nominal_()` for semantics.",
             "parameters": {
                 "a_diff": {

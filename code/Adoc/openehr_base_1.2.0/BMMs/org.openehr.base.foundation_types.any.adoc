@@ -23,6 +23,10 @@
         },
         "equal": {
             "name": "equal",
+            "aliases": [
+                "=",
+                "=="
+            ],
             "documentation": "Reference equality for reference types, value equality for value types.",
             "parameters": {
                 "other": {
@@ -68,6 +72,10 @@
         },
         "not_equal": {
             "name": "not_equal",
+            "aliases": [
+                "!=",
+                "≠"
+            ],
             "documentation": "True if current object not equal to `_other_`. Returns not `_equal_()`.",
             "parameters": {
                 "other": {

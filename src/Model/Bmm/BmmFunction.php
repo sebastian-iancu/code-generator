@@ -16,6 +16,7 @@ readonly class BmmFunction implements JsonSerializable, YamlSerializable, Collec
 
     /**
      * @param string $name
+     * @param array<string, string>|null $aliases
      * @param string|null $documentation
      * @param bool|null $isAbstract
      * @param Collection<string, BmmContainerFunctionParameter|BmmGenericFunctionParameter|BmmSingleFunctionParameter|BmmSingleFunctionParameterOpen>|Collection|null $parameters
@@ -26,6 +27,7 @@ readonly class BmmFunction implements JsonSerializable, YamlSerializable, Collec
      */
     public function __construct(
         public string $name,
+        public ?array $aliases = [],
         public ?string $documentation = null,
         public ?bool $isAbstract = false,
         public ?Collection $parameters = new Collection(),
@@ -44,6 +46,7 @@ readonly class BmmFunction implements JsonSerializable, YamlSerializable, Collec
     {
         return array_filter([
             'name' => $this->name,
+            'aliases' => $this->aliases,
             'documentation' => $this->documentation,
             'is_abstract' => $this->isAbstract,
             'parameters' => $this->parameters->getArrayCopy(),
@@ -62,6 +65,7 @@ readonly class BmmFunction implements JsonSerializable, YamlSerializable, Collec
     {
         return array_filter([
             'name' => $this->name,
+            'aliases' => $this->aliases,
             'documentation' => $this->documentation,
             'is_abstract' => $this->isAbstract,
             'parameters' => $this->parameters->yamlSerialize(),
@@ -82,6 +86,7 @@ readonly class BmmFunction implements JsonSerializable, YamlSerializable, Collec
     {
         $instance = new self(
             name: $data['name'],
+            aliases: $data['aliases'] ?? [],
             documentation: $data['documentation'] ?? null,
             isAbstract: $data['is_abstract'] ?? false,
             parameters: new Collection(),

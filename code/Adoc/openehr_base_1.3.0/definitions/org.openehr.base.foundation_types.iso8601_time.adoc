@@ -74,19 +74,19 @@ h|*1..1*
 a|Return string value in extended format.
 
 h|*1..1*
-|*add* ( +
+|*add* __alias__ "+" ( +
 a_diff: `<<_iso8601_duration_class,Iso8601_duration>>[1]` +
 ): `<<_iso8601_time_class,Iso8601_time>>`
 a|Arithmetic addition of a duration to a time.
 
 h|*1..1*
-|*subtract* ( +
+|*subtract* __alias__ "-" ( +
 a_diff: `<<_iso8601_duration_class,Iso8601_duration>>[1]` +
 ): `<<_iso8601_time_class,Iso8601_time>>`
 a|Arithmetic subtraction of a duration from a time.
 
 h|*1..1*
-|*diff* ( +
+|*diff* __alias__ "-" ( +
 a_time: `<<_iso8601_time_class,Iso8601_time>>[1]` +
 ): `<<_iso8601_duration_class,Iso8601_duration>>`
 a|Difference of two times.

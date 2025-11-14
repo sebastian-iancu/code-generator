@@ -67,6 +67,9 @@
         },
         "less_than": {
             "name": "less_than",
+            "aliases": [
+                "<"
+            ],
             "documentation": "True if `_other_` is less than this Quantified object. Based on comparison of `_magnitude_`.",
             "parameters": {
                 "other": {

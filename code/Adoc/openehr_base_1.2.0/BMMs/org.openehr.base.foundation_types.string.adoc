@@ -33,6 +33,9 @@
         },
         "append": {
             "name": "append",
+            "aliases": [
+                "+"
+            ],
             "documentation": "Concatenation operator - causes `_other_` to be appended to this string.",
             "parameters": {
                 "other": {

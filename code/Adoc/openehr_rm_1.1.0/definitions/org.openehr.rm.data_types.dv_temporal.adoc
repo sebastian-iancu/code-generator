@@ -25,21 +25,21 @@ h|*Functions*
 
 h|*1..1 +
 (abstract)*
-|*add* ( +
+|*add* __alias__ "+" ( +
 a_diff: `<<_dv_duration_class,DV_DURATION>>[1]` +
 ): `<<_dv_temporal_class,DV_TEMPORAL>>`
 a|Addition of a Duration to this temporal entity.
 
 h|*1..1 +
 (abstract)*
-|*subtract* ( +
+|*subtract* __alias__ "-" ( +
 a_diff: `<<_dv_duration_class,DV_DURATION>>[1]` +
 ): `<<_dv_temporal_class,DV_TEMPORAL>>`
 a|Subtract a Duration from this temporal entity.
 
 h|*1..1 +
 (abstract)*
-|*diff* ( +
+|*diff* __alias__ "-" ( +
 other: `<<_dv_temporal_class,DV_TEMPORAL>>[1]` +
 ): `<<_dv_duration_class,DV_DURATION>>`
 a|Difference between this temporal entity and `_other_`.

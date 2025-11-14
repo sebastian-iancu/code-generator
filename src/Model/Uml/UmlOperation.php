@@ -22,6 +22,7 @@ class UmlOperation implements CollectableInterface
     public readonly UmlTypeReference $return;
     public readonly ?int $minOccurs;
     public readonly ?int $maxOccurs;
+    public readonly ?array $aliases;
 
     public function __construct(SimpleXMLElement $xmlNode)
     {
@@ -54,6 +55,22 @@ class UmlOperation implements CollectableInterface
             $this->minOccurs = null;
             $this->maxOccurs = null;
         }
+        // detect aliases, these are usually under the openEHR_UML_profile namespace
+        $aliases = [];
+        if (array_key_exists('openEHR_UML_profile', $xmlNode->getDocNamespaces() ?: [])) {
+            $nodes = array_merge(
+                $xmlNode->xpath("//openEHR_UML_profile:Operator[@base_Operation='{$this->id}' and ops]") ?: [],
+                $xmlNode->xpath("//openEHR_UML_profile:Symbolic_operator[@base_Operation='{$this->id}' and sym_ops]") ?: [],
+            );
+            foreach ($nodes as $node) {
+                $ops = implode(', ', array_filter([(string)$node->ops, (string)$node->sym_ops]));
+                $ops = str_replace(['|', '*'], ['&#124;', '&#42;'], $ops);
+                if (preg_match_all('/\"([^"]+)\"(?:,\s*)?/', $ops, $m)) {
+                    $aliases = array_merge($aliases, $m[1]);
+                }
+            }
+        }
+        $this->aliases = $aliases;
 
         self::log('  Operation [%s], with [%s] parameters was read.', $this->name, count($this->umlParameters));
     }

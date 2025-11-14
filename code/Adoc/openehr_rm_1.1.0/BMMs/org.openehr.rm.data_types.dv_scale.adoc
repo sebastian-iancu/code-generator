@@ -40,6 +40,9 @@
         },
         "less_than": {
             "name": "less_than",
+            "aliases": [
+                "<"
+            ],
             "documentation": "True if this Scale value is less than `_other_`.",
             "parameters": {
                 "other": {

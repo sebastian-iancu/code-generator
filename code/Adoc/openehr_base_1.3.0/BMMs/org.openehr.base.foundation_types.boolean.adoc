@@ -9,6 +9,11 @@
     "functions": {
         "conjunction": {
             "name": "conjunction",
+            "aliases": [
+                "and",
+                "∧",
+                "&"
+            ],
             "documentation": "Logical conjunction of this with `_other_`.",
             "parameters": {
                 "other": {
@@ -28,6 +33,10 @@
         },
         "semistrict_conjunction": {
             "name": "semistrict_conjunction",
+            "aliases": [
+                "and then",
+                "&&"
+            ],
             "documentation": "Boolean semi-strict conjunction with `_other_`.",
             "parameters": {
                 "other": {
@@ -46,6 +55,11 @@
         },
         "disjunction": {
             "name": "disjunction",
+            "aliases": [
+                "or",
+                "∨",
+                "&#124;"
+            ],
             "documentation": "Boolean disjunction with `_other_`.",
             "parameters": {
                 "other": {
@@ -66,6 +80,10 @@
         },
         "semistrict_disjunction": {
             "name": "semistrict_disjunction",
+            "aliases": [
+                "or else",
+                "&#124;&#124;"
+            ],
             "documentation": "Boolean semi-strict disjunction with `_other_`.",
             "parameters": {
                 "other": {
@@ -84,6 +102,10 @@
         },
         "exclusive_disjunction": {
             "name": "exclusive_disjunction",
+            "aliases": [
+                "xor",
+                "⊻"
+            ],
             "documentation": "Boolean exclusive or with `_other_`.",
             "parameters": {
                 "other": {
@@ -102,6 +124,10 @@
         },
         "implication": {
             "name": "implication",
+            "aliases": [
+                "implies",
+                "⇒"
+            ],
             "documentation": "Boolean implication of `_other_` (semi-strict)",
             "parameters": {
                 "other": {
@@ -120,6 +146,11 @@
         },
         "negation": {
             "name": "negation",
+            "aliases": [
+                "not",
+                "¬",
+                "!"
+            ],
             "documentation": "Boolean negation of the current value.",
             "result": {
                 "_type": "P_BMM_SIMPLE_TYPE",

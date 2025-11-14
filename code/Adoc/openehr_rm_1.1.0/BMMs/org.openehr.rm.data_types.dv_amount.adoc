@@ -39,6 +39,9 @@
         },
         "add": {
             "name": "add",
+            "aliases": [
+                "+"
+            ],
             "documentation": "Sum of this amount and another. The value of accuracy in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* both operand accuracies are unknown_accuracy_value.\n\nIf the accuracy value is a percentage in one operand and not in the other, the form in the result is that of the larger operand.",
             "parameters": {
                 "other": {
@@ -57,6 +60,9 @@
         },
         "subtract": {
             "name": "subtract",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Difference of this amount and another. The value of `_accuracy_` in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.\n\nIf the `_accuracy_` value is a percentage in one operand and not in the other, the form in the result is that of the larger operand.",
             "parameters": {
                 "other": {
@@ -88,6 +94,9 @@
         },
         "multiply": {
             "name": "multiply",
+            "aliases": [
+                "&#42;"
+            ],
             "documentation": "Product of this Amount and `_factor_`.",
             "parameters": {
                 "factor": {
@@ -103,6 +112,9 @@
         },
         "negative": {
             "name": "negative",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Negated version of current object, such as used for representing a difference, e.g. a weight loss.",
             "result": {
                 "_type": "P_BMM_SIMPLE_TYPE",
@@ -111,6 +123,9 @@
         },
         "less_than": {
             "name": "less_than",
+            "aliases": [
+                "<"
+            ],
             "documentation": "True if this object is less than `_other_`. Based on comparison of `_magnitude_`.",
             "parameters": {
                 "other": {

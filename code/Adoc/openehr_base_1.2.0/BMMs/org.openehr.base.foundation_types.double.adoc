@@ -17,6 +17,9 @@
         },
         "add": {
             "name": "add",
+            "aliases": [
+                "+"
+            ],
             "documentation": "Double-precision real number addition.",
             "parameters": {
                 "other": {
@@ -32,6 +35,9 @@
         },
         "subtract": {
             "name": "subtract",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Double-precision real number subtraction.",
             "parameters": {
                 "other": {
@@ -47,6 +53,9 @@
         },
         "multiply": {
             "name": "multiply",
+            "aliases": [
+                "&#42;"
+            ],
             "documentation": "Double-precision real number multiplication.",
             "parameters": {
                 "other": {
@@ -62,6 +71,9 @@
         },
         "divide": {
             "name": "divide",
+            "aliases": [
+                "/"
+            ],
             "documentation": "Double-precision real number division.",
             "parameters": {
                 "other": {
@@ -77,6 +89,9 @@
         },
         "exponent": {
             "name": "exponent",
+            "aliases": [
+                "^"
+            ],
             "documentation": "Double-precision real number exponentiation.",
             "parameters": {
                 "other": {
@@ -92,6 +107,9 @@
         },
         "less_than": {
             "name": "less_than",
+            "aliases": [
+                "<"
+            ],
             "documentation": "Returns True if current Double is less than `_other_`.",
             "parameters": {
                 "other": {
@@ -107,6 +125,9 @@
         },
         "negative": {
             "name": "negative",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Generate negative of current Double value.",
             "result": {
                 "_type": "P_BMM_SIMPLE_TYPE",
@@ -130,6 +151,10 @@
         },
         "equal": {
             "name": "equal",
+            "aliases": [
+                "=",
+                "=="
+            ],
             "documentation": "Reference equality for reference types, value equality for value types.",
             "parameters": {
                 "other": {

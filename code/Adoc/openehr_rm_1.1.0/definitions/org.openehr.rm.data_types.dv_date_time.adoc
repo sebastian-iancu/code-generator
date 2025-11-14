@@ -30,25 +30,25 @@ h|*1..1*
 a|Numeric value of the date/time as seconds since the calendar origin date/time `0001-01-01T00:00:00Z`.
 
 h|*1..1*
-|*add* ( +
+|*add* __alias__ "+" ( +
 a_diff: `<<_dv_duration_class,DV_DURATION>>[1]` +
 ): `<<_dv_date_time_class,DV_DATE_TIME>>`
 a|Addition of a Duration to this Date/time.
 
 h|*1..1*
-|*subtract* ( +
+|*subtract* __alias__ "-" ( +
 a_diff: `<<_dv_duration_class,DV_DURATION>>[1]` +
 ): `<<_dv_date_time_class,DV_DATE_TIME>>`
 a|Subtract a Duration from this Date/time.
 
 h|*1..1*
-|*diff* ( +
+|*diff* __alias__ "-" ( +
 other: `<<_dv_date_time_class,DV_DATE_TIME>>[1]` +
 ): `<<_dv_duration_class,DV_DURATION>>`
 a|Difference between this Date/time and `_other_`.
 
 h|*1..1*
-|*less_than* ( +
+|*less_than* __alias__ "<" ( +
 other: `<<_dv_date_time_class,DV_DATE_TIME>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
  +

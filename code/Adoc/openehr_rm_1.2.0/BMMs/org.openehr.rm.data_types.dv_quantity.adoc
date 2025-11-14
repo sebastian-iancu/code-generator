@@ -73,6 +73,9 @@
     "functions": {
         "add": {
             "name": "add",
+            "aliases": [
+                "+"
+            ],
             "documentation": "Sum of this `DV_QUANTITY` and `_other_`.",
             "parameters": {
                 "other": {
@@ -88,6 +91,9 @@
         },
         "subtract": {
             "name": "subtract",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Difference of this `DV_QUANTITY` and `_other_`.",
             "parameters": {
                 "other": {
@@ -103,6 +109,9 @@
         },
         "multiply": {
             "name": "multiply",
+            "aliases": [
+                "&#42;"
+            ],
             "documentation": "Product of this `DV_QUANTITY` and `_factor_`.",
             "parameters": {
                 "factor": {
@@ -118,6 +127,9 @@
         },
         "less_than": {
             "name": "less_than",
+            "aliases": [
+                "<"
+            ],
             "documentation": "True if this Quantity object is less than `_other_`, based on comparison of `_magnitude_`. Only valid if `_is_strictly_comparable_to()_` is True.",
             "parameters": {
                 "other": {

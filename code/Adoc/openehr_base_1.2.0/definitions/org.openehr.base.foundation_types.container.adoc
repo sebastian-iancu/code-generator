@@ -33,13 +33,13 @@ h|*1..1 +
 a|True if container is empty.
 
 h|*1..1*
-|*there_exists* ( +
+|*there_exists* __alias__ "there exists", "∃" ( +
 test: `Operation[1]` +
 ): `<<_boolean_class,Boolean>>`
 a|Existential quantifier applied to container, taking one agent argument `_test_` whose signature is `(v:T): Boolean`.
 
 h|*1..1*
-|*for_all* ( +
+|*for_all* __alias__ "for all", "∀" ( +
 test: `Operation[1]` +
 ): `<<_boolean_class,Boolean>>`
 a|Universal quantifier applied to container, taking one agent argument `_test_` whose signature is `(v:T): Boolean`.

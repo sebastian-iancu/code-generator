@@ -113,6 +113,9 @@
         },
         "add": {
             "name": "add",
+            "aliases": [
+                "+"
+            ],
             "documentation": "Arithmetic addition of a duration to a duration, via conversion to seconds, using `Time_definitions._Average_days_in_year_` and `Time_definitions._Average_days_in_month_`",
             "parameters": {
                 "a_val": {
@@ -128,6 +131,9 @@
         },
         "subtract": {
             "name": "subtract",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Arithmetic subtraction of a duration from a duration, via conversion to seconds, using `Time_definitions._Average_days_in_year_` and `Time_definitions._Average_days_in_month_`",
             "parameters": {
                 "a_val": {
@@ -143,6 +149,9 @@
         },
         "multiply": {
             "name": "multiply",
+            "aliases": [
+                "&#42;"
+            ],
             "documentation": "Arithmetic multiplication a duration by a number.",
             "parameters": {
                 "a_val": {
@@ -158,6 +167,9 @@
         },
         "divide": {
             "name": "divide",
+            "aliases": [
+                "/"
+            ],
             "documentation": "Arithmetic division of a duration by a number.",
             "parameters": {
                 "a_val": {
@@ -173,6 +185,9 @@
         },
         "negative": {
             "name": "negative",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Generate negative of current duration value.",
             "result": {
                 "_type": "P_BMM_SIMPLE_TYPE",

@@ -50,6 +50,10 @@
         },
         "there_exists": {
             "name": "there_exists",
+            "aliases": [
+                "there exists",
+                "∃"
+            ],
             "documentation": "Existential quantifier applied to container, taking one agent argument `_test_` whose signature is `(v:T): Boolean`.",
             "parameters": {
                 "test": {
@@ -65,6 +69,10 @@
         },
         "for_all": {
             "name": "for_all",
+            "aliases": [
+                "for all",
+                "∀"
+            ],
             "documentation": "Universal quantifier applied to container, taking one agent argument `_test_` whose signature is `(v:T): Boolean`.",
             "parameters": {
                 "test": {

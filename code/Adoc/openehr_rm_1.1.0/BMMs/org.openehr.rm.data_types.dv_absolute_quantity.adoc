@@ -17,6 +17,9 @@
     "functions": {
         "add": {
             "name": "add",
+            "aliases": [
+                "+"
+            ],
             "documentation": "Addition of a differential amount to this quantity. \n\nThe value of accuracy in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.",
             "is_abstract": true,
             "parameters": {
@@ -33,6 +36,9 @@
         },
         "subtract": {
             "name": "subtract",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Result of subtracting a differential amount from this quantity.\n\nThe value of `_accuracy_` in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.",
             "is_abstract": true,
             "parameters": {
@@ -49,6 +55,9 @@
         },
         "diff": {
             "name": "diff",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Difference of two quantities.\n\nThe value of accuracy in the result is either:\n\n* the sum of the accuracies of the operands, if both present, or;\n* unknown, if either or both operand accuracies are unknown.",
             "is_abstract": true,
             "parameters": {

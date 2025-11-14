@@ -30,25 +30,25 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*add* ( +
+|*add* __alias__ "+" ( +
 other: `<<_dv_duration_class,DV_DURATION>>[1]` +
 ): `<<_dv_duration_class,DV_DURATION>>`
 a|Sum of this Duration and `_other_`.
 
 h|*1..1*
-|*subtract* ( +
+|*subtract* __alias__ "-" ( +
 other: `<<_dv_duration_class,DV_DURATION>>[1]` +
 ): `<<_dv_duration_class,DV_DURATION>>`
 a|Difference of this Duration and `_other_`.
 
 h|*1..1*
-|*multiply* ( +
+|*multiply* __alias__ "&#42;" ( +
 factor: `link:/releases/BASE/{base_release}/foundation_types.html#_real_class[Real^][1]` +
 ): `<<_dv_duration_class,DV_DURATION>>`
 a|Product of this Duration and `_factor_`.
 
 h|*1..1*
-|*less_than* ( +
+|*less_than* __alias__ "<" ( +
 other: `<<_dv_duration_class,DV_DURATION>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
  +
@@ -64,7 +64,7 @@ other: `<<_dv_duration_class,DV_DURATION>>[1]` +
 a|True, for any two Durations.
 
 h|*1..1*
-|*negative* (): `<<_dv_duration_class,DV_DURATION>>`
+|*negative* __alias__ "-" (): `<<_dv_duration_class,DV_DURATION>>`
 a|Negated version of current duration.
 
 Assuming the current duration is positive, the negated version represents a time prior to some origin point, or a negative age (e.g. so-called 'adjusted age' of premature infant).

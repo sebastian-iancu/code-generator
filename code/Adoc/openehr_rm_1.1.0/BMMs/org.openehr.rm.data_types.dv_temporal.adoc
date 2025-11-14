@@ -18,6 +18,9 @@
     "functions": {
         "add": {
             "name": "add",
+            "aliases": [
+                "+"
+            ],
             "documentation": "Addition of a Duration to this temporal entity.",
             "is_abstract": true,
             "parameters": {
@@ -34,6 +37,9 @@
         },
         "subtract": {
             "name": "subtract",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Subtract a Duration from this temporal entity.",
             "is_abstract": true,
             "parameters": {
@@ -50,6 +56,9 @@
         },
         "diff": {
             "name": "diff",
+            "aliases": [
+                "-"
+            ],
             "documentation": "Difference between this temporal entity and `_other_`.",
             "is_abstract": true,
             "parameters": {
