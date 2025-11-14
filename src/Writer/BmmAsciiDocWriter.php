@@ -1,10 +1,11 @@
-<?php
+<?php /** @noinspection DuplicatedCode */
 
 namespace OpenEHR\Tools\CodeGen\Writer;
 
 use OpenEHR\Tools\CodeGen\Model\Bmm\AbstractBmmClass;
 use OpenEHR\Tools\CodeGen\Model\Bmm\AbstractBmmProperty;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmClass;
+use OpenEHR\Tools\CodeGen\Model\Bmm\BmmConstant;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmContainerFunctionParameter;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmContainerProperty;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmContainerType;
@@ -142,15 +143,62 @@ class BmmAsciiDocWriter extends AbstractWriter
     private function formatEnumAsDefinition(BmmEnumerationString|BmmEnumerationInteger $enum, string $prefix): string
     {
         $rows = [];
+
+        // todo remove this once all classes are converted to BmmClass
+        $rows[] = '=== '. $enum->name.' Enumeration';
+        $rows[] = '';
+        // end-remove
+
         $rows[] = '[cols="^1,3,5"]';
         $rows[] = '|===';
         $rows[] = 'h|*Enumeration*';
         $rows[] = '2+^h|*' . strtoupper($enum->name) . '*';
-        $rows[] = 'h|*Items*';
-        $rows[] = '2+a|' . implode(", ", array_map(function ($i, $name) use ($enum) {
-                $val = isset($enum->itemValues[$i]) ? ' = ' . $enum->itemValues[$i] : '';
-                return '`' . $name . $val . '`';
-            }, array_keys($enum->itemNames), $enum->itemNames));
+
+        // Description
+        if (!empty($enum->documentation)) {
+            $rows[] = '';
+            $rows[] = 'h|*Description*';
+            $rows[] = '2+a|' . trim($enum->documentation);
+        }
+
+        // Constants
+        if ($enum->itemNames) {
+            $rows[] = '';
+            $rows[] = 'h|*Constants*';
+            $rows[] = '^h|*Signature*';
+            $rows[] = '^h|*Meaning*';
+
+            /** @var string $name */
+            foreach ($enum->itemNames as $i => $name) {
+                $rows[] = '';
+                $rows[] = 'h|';
+                if (in_array('Integer', $enum->ancestors)) {
+                    $signature = '*' . $name . '*: `' . $this->formatType('Integer', $prefix) . '{nbsp}={nbsp}'.($enum->itemValues[$i]??'').'`';
+                } else {
+                    $signature = $name;
+                }
+                $rows[] = '|' . $signature;
+                $rows[] = 'a|' . $enum->itemDocumentations[$i] ?? '';
+            }
+        }
+
+        // Functions
+        if ($enum->functions->count() > 0) {
+            $rows[] = '';
+            $rows[] = 'h|*Functions*';
+            $rows[] = '^h|*Signature*';
+            $rows[] = '^h|*Meaning*';
+
+            /** @var BmmFunction $function */
+            foreach ($enum->functions as $function) {
+                $rows[] = '';
+                [$card, $signature] = $this->formatFunctionSignature($function, $prefix);
+                $rows[] = 'h|*' . $card . '*';
+                $rows[] = '|' . $signature;
+                $rows[] = 'a|' . rtrim($function->documentation ?? '');
+            }
+        }
+
         $rows[] = '|===';
         return implode("\n", $rows) . "\n";
     }
@@ -191,7 +239,25 @@ class BmmAsciiDocWriter extends AbstractWriter
             $rows[] = '2+|`' . implode(', ', $parts) . '`';
         }
 
-        // Attributes header
+        // Constants
+        if ($class->constants->count() > 0) {
+            $rows[] = '';
+            $rows[] = 'h|*Constants*';
+            $rows[] = '^h|*Signature*';
+            $rows[] = '^h|*Meaning*';
+
+            /** @var BmmConstant $constant */
+            foreach ($class->constants as $constant) {
+                [$card, $signature] = $this->formatConstantSignature($constant, $prefix);
+                $rows[] = '';
+                $rows[] = 'h|*' . $card . '*';
+                $rows[] = '|' . $signature;
+                $doc = property_exists($constant, 'documentation') ? rtrim($constant->documentation ?? '') : '';
+                $rows[] = 'a|' . $doc;
+            }
+        }
+
+        // Attributes
         if ($class->properties->count() > 0) {
             $rows[] = '';
             $rows[] = 'h|*Attributes*';
@@ -209,7 +275,7 @@ class BmmAsciiDocWriter extends AbstractWriter
             }
         }
 
-        // Functions header
+        // Functions
         if ($class->functions->count() > 0) {
             $rows[] = '';
             $rows[] = 'h|*Functions*';
@@ -227,7 +293,7 @@ class BmmAsciiDocWriter extends AbstractWriter
         }
 
         // extra line if no attributes or functions are missing
-        if (!$class->properties->count() && !$class->functions->count()) {
+        if (!$class->constants->count() && !$class->properties->count() && !$class->functions->count()) {
             $rows[] = '';
         }
 
@@ -248,6 +314,19 @@ class BmmAsciiDocWriter extends AbstractWriter
 
         $rows[] = '|===';
         return implode("\n", $rows) . "\n";
+    }
+
+    /**
+     * @return array{0:string,1:string} [cardinality, signature]
+     */
+    private function formatConstantSignature(BmmConstant $constant, string $prefix): array
+    {
+        $minOccurs = 1;
+        $maxOccurs = 1;
+        $type = $this->formatType($constant->type, $prefix);
+        $card = $minOccurs . '..' . $maxOccurs;
+        $signature = '*' . $constant->name . '*: `' . $type . '{nbsp}={nbsp}' . $constant->value . '`';
+        return [$card, $signature];
     }
 
     /**

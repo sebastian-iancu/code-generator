@@ -8,6 +8,62 @@ h|*Class*
 h|*Description*
 2+a|Definitions for date/time classes. Note that the timezone limits are set by where the international dateline is. Thus, time in New Zealand is quoted using `+12:00`, not `-12:00`.
 
+h|*Constants*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1*
+|*Seconds_in_minute*: `<<_integer_class,Integer>>{nbsp}={nbsp}60`
+a|
+
+h|*1..1*
+|*Minutes_in_hour*: `<<_integer_class,Integer>>{nbsp}={nbsp}60`
+a|
+
+h|*1..1*
+|*Hours_in_day*: `<<_integer_class,Integer>>{nbsp}={nbsp}24`
+a|
+
+h|*1..1*
+|*Nominal_days_in_month*: `<<_real_class,Real>>{nbsp}={nbsp}30.42`
+a|Used for conversions of durations containing months to days and / or seconds.
+
+h|*1..1*
+|*Max_days_in_month*: `<<_integer_class,Integer>>{nbsp}={nbsp}31`
+a|
+
+h|*1..1*
+|*Days_in_year*: `<<_integer_class,Integer>>{nbsp}={nbsp}365`
+a|
+
+h|*1..1*
+|*Days_in_leap_year*: `<<_integer_class,Integer>>{nbsp}={nbsp}366`
+a|
+
+h|*1..1*
+|*Max_days_in_year*: `<<_integer_class,Integer>>{nbsp}={nbsp}`
+a|
+
+h|*1..1*
+|*Nominal_days_in_year*: `<<_real_class,Real>>{nbsp}={nbsp}365.24`
+a|Used for conversions of durations containing years to days and / or seconds.
+
+h|*1..1*
+|*Days_in_week*: `<<_integer_class,Integer>>{nbsp}={nbsp}7`
+a|
+
+h|*1..1*
+|*Months_in_year*: `<<_integer_class,Integer>>{nbsp}={nbsp}12`
+a|
+
+h|*1..1*
+|*Min_timezone_hour*: `<<_integer_class,Integer>>{nbsp}={nbsp}12`
+a|Minimum hour value of a timezone (note that the -ve sign is supplied in the ISO8601_TIMEZONE class).
+
+h|*1..1*
+|*Max_timezone_hour*: `<<_integer_class,Integer>>{nbsp}={nbsp}13`
+a|
+
 h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*

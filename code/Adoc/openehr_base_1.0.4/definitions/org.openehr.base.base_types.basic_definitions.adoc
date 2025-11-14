@@ -8,4 +8,27 @@ h|*Class*
 h|*Description*
 2+a|Defines globally used constant values.
 
+h|*Constants*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1*
+|*CR*: `link:/releases/BASE/{base_release}/foundation_types.html#_character_class[Character^]{nbsp}={nbsp}'\015'`
+a|Carriage return character.
+
+h|*1..1*
+|*LF*: `link:/releases/BASE/{base_release}/foundation_types.html#_character_class[Character^]{nbsp}={nbsp}'\012'`
+a|Line feed character.
+
+h|*1..1*
+|*Any_type*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]{nbsp}={nbsp}"Any"`
+a|
+
+h|*1..1*
+|*Regex_any_pattern*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]{nbsp}={nbsp}".*"`
+a|
+
+h|*1..1*
+|*Default_encoding*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]{nbsp}={nbsp}"UTF-8"`
+a|
 |===

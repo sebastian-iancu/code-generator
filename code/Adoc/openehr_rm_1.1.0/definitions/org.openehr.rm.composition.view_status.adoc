@@ -1,7 +1,19 @@
+=== VIEW_STATUS Enumeration
+
 [cols="^1,3,5"]
 |===
 h|*Enumeration*
 2+^h|*VIEW_STATUS*
-h|*Items*
-2+a|`active`, `inactive`
+
+h|*Constants*
+^h|*Signature*
+^h|*Meaning*
+
+h|
+|active
+a|
+
+h|
+|inactive
+a|
 |===

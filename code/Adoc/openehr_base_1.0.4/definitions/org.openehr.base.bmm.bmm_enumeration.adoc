@@ -11,6 +11,14 @@ h|*Description*
 h|*Inherit*
 2+|`<<_bmm_simple_class_class,BMM_SIMPLE_CLASS>>`
 
+h|*Constants*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1*
+|*underlying_type_name*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]{nbsp}={nbsp}`
+a|Name of type any concrete `BMM_ENUMERATION_*` sub-type is based on, i.e. the name of type bound to 'T' in a declared use of this type.
+
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*

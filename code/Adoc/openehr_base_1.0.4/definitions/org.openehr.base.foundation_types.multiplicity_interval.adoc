@@ -11,6 +11,18 @@ h|*Description*
 h|*Inherit*
 2+|`<<_proper_interval_class,Proper_interval>>`
 
+h|*Constants*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1*
+|*Multiplicity_range_marker*: `<<_string_class,String>>{nbsp}={nbsp}".."`
+a|Marker to use in string form of interval between limits.
+
+h|*1..1*
+|*Multiplicity_unbounded_marker*: `<<_character_class,Character>>{nbsp}={nbsp}'*'`
+a|Symbol to use to indicate upper limit unbounded.
+
 h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*

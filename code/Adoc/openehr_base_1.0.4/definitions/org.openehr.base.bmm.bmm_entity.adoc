@@ -11,6 +11,38 @@ h|*Description*
 h|*Inherit*
 2+|`<<_bmm_definitions_class,BMM_DEFINITIONS>>`
 
+h|*Constants*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1*
+|*Entity_metatype_simple*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]{nbsp}={nbsp}"simple_entity"`
+a|Category of a simple entity, other than enumerated types.
+
+h|*1..1*
+|*Entity_metatype_enumeration*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]{nbsp}={nbsp}"enumeration_entity"`
+a|Category of any enumeration entity.
+
+h|*1..1*
+|*Entity_metatype_generic*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]{nbsp}={nbsp}"generic_entity"`
+a|Category of any generic entity that is not a container entity.
+
+h|*1..1*
+|*Entity_metatype_parameter*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]{nbsp}={nbsp}"generic_parameter_entity"`
+a|Category of a formal generic parameter entity.
+
+h|*1..1*
+|*Entity_metatype_container*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]{nbsp}={nbsp}"container_entity"`
+a|Category of any container entity.
+
+h|*1..1*
+|*Entity_category_modifier_abstract*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]{nbsp}={nbsp}"abstract"`
+a|Category modifier indicating an entity is formally defined as abstract, i.e. not-directly instantiable within a BMM model.
+
+h|*1..1*
+|*Entity_category_modifier_primitive*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]{nbsp}={nbsp}"primitive"`
+a|Category modifier indicating that an entity is considered to be primitive within the type system of a given BMM model. Has no semantic consequences within the BMM.
+
 h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
