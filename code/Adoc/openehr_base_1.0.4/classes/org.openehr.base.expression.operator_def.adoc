@@ -1,20 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*OPERATOR_DEF*
+=== OPERATOR_DEF Class
 
-h|*Description*
-2+a|Abstract definition of an operator for use in the Rules evaluator.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.expression.operator_def.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.base.expression.operator_def.adoc[]
 
-h|*1..1*
-|*identifier*: `link:/classes/String[String]`
-a|Unique identifier of this operator within the rules system.
+UML::
++
+include::../plantUML/classes/org.openehr.base.expression.operator_def.adoc[]
 
-h|*0..**
-|*symbols*: `link:/classes/List[List]<link:/classes/String[String]>`
-a|
-|===
+====

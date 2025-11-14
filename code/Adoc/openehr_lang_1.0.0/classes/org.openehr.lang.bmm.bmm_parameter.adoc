@@ -1,19 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_PARAMETER*
+=== BMM_PARAMETER Class
 
-h|*Description*
-2+a|A routine parameter variable.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_parameter.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_VARIABLE[BMM_VARIABLE]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_parameter.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_parameter.adoc[]
 
-h|*0..1*
-|*direction*: `link:/classes/BMM_PARAMETER_DIRECTION[BMM_PARAMETER_DIRECTION]`
-a|Optional read/write direction of the parameter. If none-supplied, the parameter is treated as `in`, i.e. readable.
-|===
+====

@@ -1,94 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*ITEM_TABLE*
+=== ITEM_TABLE Class
 
-h|*Description*
-2+a|Logical relational database style table data structure, in which columns are named and ordered with respect to each other. Implemented using Cluster-per-row encoding. Each row Cluster must have an identical number of Elements, each of which in turn must have identical names and value types in the corresponding positions in each row. 
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.data_structures.item_table.adoc[]
 
-Some columns may be designated  key' columns, containing key data for each row, in the manner of relational tables. This allows row-naming, where each row represents a body site, a blood antigen etc. All values in a column have the same data type. 
+BMM::
++
+include::../BMMs/org.openehr.rm.data_structures.item_table.adoc[]
 
-Used for representing any data which is logically a table of values, such as blood pressure, most protocols, many blood tests etc. 
+UML::
++
+include::../plantUML/classes/org.openehr.rm.data_structures.item_table.adoc[]
 
-Misuse: Not to be used for time-based data, which should be represented with the temporal class `HISTORY`. The table may be empty.
-
-h|*Inherit*
-2+|`link:/classes/ITEM_STRUCTURE[ITEM_STRUCTURE]`
-
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
-
-h|*0..**
-|*rows*: `link:/classes/List[List]<link:/classes/CLUSTER[CLUSTER]>`
-a|Physical representation of the table as a list of `CLUSTERs`, each containing the data of one row of the table.
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
-
-h|*1..1*
-|*row_count* (): `link:/classes/Integer[Integer]`
-a|Number of rows in the table.
-
-h|*1..1*
-|*column_count* (): `link:/classes/Integer[Integer]`
-a|Return number of columns in the table.
-
-h|*1..**
-|*row_names* (): `link:/classes/List[List]<link:/classes/DV_TEXT[DV_TEXT]>`
-a|Return set of row names.
-
-h|*1..**
-|*column_names* (): `link:/classes/List[List]<link:/classes/DV_TEXT[DV_TEXT]>`
-a|Return set of column names.
-
-h|*1..1*
-|*ith_row* ( +
-i: `link:/classes/Integer[Integer][1]` +
-): `link:/classes/CLUSTER[CLUSTER]`
-a|Return i-th row.
-
-h|*1..1*
-|*has_row_with_name* ( +
-a_key: `link:/classes/String[String][1]` +
-): `link:/classes/Boolean[Boolean]`
-a|Return `True` if there is a column with name = `_a_key_`.
-
-h|*1..1*
-|*has_column_with_name* ( +
-a_key: `link:/classes/String[String][1]` +
-): `link:/classes/Boolean[Boolean]`
-a|Return `True` if there is a column with name = `_a_key_`.
-
-h|*1..1*
-|*named_row* ( +
-a_key: `link:/classes/String[String][1]` +
-): `link:/classes/CLUSTER[CLUSTER]`
-a|Return row with name = `_a_key_`.
-
-h|*1..1*
-|*has_row_with_key* ( +
-keys: `link:/classes/List[List]<link:/classes/String[String]>` +
-): `link:/classes/Boolean[Boolean]`
-a|Return `True` if there is a row with key `_keys_`.
-
-h|*1..1*
-|*row_with_key* ( +
-keys: `link:/classes/List[List]<link:/classes/String[String]>` +
-): `link:/classes/CLUSTER[CLUSTER]`
-a|Return rows with particular keys.
-
-h|*1..1*
-|*element_at_cell_ij* ( +
-i: `link:/classes/Any[Any][1]`, +
-j: `link:/classes/Integer[Integer][1]` +
-): `link:/classes/ELEMENT[ELEMENT]`
-a|Return cell at a particular location.
-
-h|*1..1*
-|*as_hierarchy* (): `link:/classes/CLUSTER[CLUSTER]`
-a|Generate a CEN EN13606-compatible hierarchy consisting of a single `CLUSTER` containing the `CLUSTERs` representing the columns of this table.
-
-h|*Invariants*
-2+a|__Valid_structure__: `rows.for_all (items.for_all (instance_of ("ELEMENT")))`
-|===
+====

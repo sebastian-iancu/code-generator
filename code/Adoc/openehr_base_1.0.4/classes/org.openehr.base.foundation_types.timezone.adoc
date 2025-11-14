@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*Timezone*
+=== Timezone Class
 
-h|*Description*
-2+a|Assumed built-in primitive type representing a timezone.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.foundation_types.timezone.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/ITimezone[ITimezone]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.base.foundation_types.timezone.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.foundation_types.timezone.adoc[]
+
+====

@@ -1,20 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*AOM_PROPERTY_MAPPING*
+=== AOM_PROPERTY_MAPPING Class
 
-h|*Description*
-2+a|Data object expressing a mapping between two class properties.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.am.aom2.aom_property_mapping.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.am.aom2.aom_property_mapping.adoc[]
 
-h|*1..1*
-|*source_property_name*: `link:/classes/String[String]`
-a|Name of property in source class.
+UML::
++
+include::../plantUML/classes/org.openehr.am.aom2.aom_property_mapping.adoc[]
 
-h|*1..1*
-|*target_property_name*: `link:/classes/String[String]`
-a|Name of property in target class.
-|===
+====

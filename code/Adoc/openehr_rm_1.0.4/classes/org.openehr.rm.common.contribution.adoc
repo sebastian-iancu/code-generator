@@ -1,24 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*CONTRIBUTION*
+=== CONTRIBUTION Class
 
-h|*Description*
-2+a|Documents a Contribution (change set) of one or more versions added to a change-controlled repository.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.common.contribution.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.rm.common.contribution.adoc[]
 
-h|*1..1*
-|*uid*: `link:/classes/HIER_OBJECT_ID[HIER_OBJECT_ID]`
-a|Unique identifier for this Contribution.
+UML::
++
+include::../plantUML/classes/org.openehr.rm.common.contribution.adoc[]
 
-h|*1..**
-|*versions*: `link:/classes/List[List]<link:/classes/OBJECT_REF[OBJECT_REF]>`
-a|Set of references to Versions causing changes to this EHR. Each contribution contains a list of versions, which may include paths pointing to any number of versionable items, i.e. items of types such as `COMPOSITION` and `FOLDER`.
-
-h|*1..1*
-|*audit*: `link:/classes/AUDIT_DETAILS[AUDIT_DETAILS]`
-a|Audit trail corresponding to the committal of this Contribution.
-|===
+====

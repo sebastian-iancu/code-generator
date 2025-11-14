@@ -1,19 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_INTEGER_VALUE*
+=== BMM_INTEGER_VALUE Class
 
-h|*Description*
-2+a|Meta-type for a literal Integer value, for which `_type_` is fixed to the `BMM_TYPE` representing `Integer` and `_value_` is of type `Integer`.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_integer_value.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_PRIMITIVE_VALUE[BMM_PRIMITIVE_VALUE]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_integer_value.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_integer_value.adoc[]
 
-h|*1..1*
-|*value*: `link:/classes/Integer[Integer]`
-a|Native Integer value.
-|===
+====

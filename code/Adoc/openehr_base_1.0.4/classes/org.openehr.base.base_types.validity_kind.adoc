@@ -1,7 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Enumeration*
-2+^h|*VALIDITY_KIND*
-h|*Items*
-2+a|`mandatory`, `optional`, `prohibited`
-|===
+=== VALIDITY_KIND Class
+
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.base_types.validity_kind.adoc[]
+
+BMM::
++
+include::../BMMs/org.openehr.base.base_types.validity_kind.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.base_types.validity_kind.adoc[]
+
+====

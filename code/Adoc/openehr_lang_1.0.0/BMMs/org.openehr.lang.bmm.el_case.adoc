@@ -1,0 +1,17 @@
+[source,json]
+--------
+{
+    "name": "EL_CASE",
+    "ancestors": [
+        "EL_DECISION_BRANCH"
+    ],
+    "properties": {
+        "value_constraint": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "value_constraint",
+            "is_mandatory": true,
+            "type": "C_OBJECT"
+        }
+    }
+}
+--------

@@ -1,14 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*Proper_interval<T>*
+=== Proper_interval Class
 
-h|*Description*
-2+a|Type representing a 'proper' Interval, i.e. any two-sided or one-sided interval.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.foundation_types.proper_interval.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/Interval[Interval]`
+BMM::
++
+include::../BMMs/org.openehr.base.foundation_types.proper_interval.adoc[]
 
-h|*Invariants*
-2+a|__Inv_not_point__: `lower /= upper`
-|===
+UML::
++
+include::../plantUML/classes/org.openehr.base.foundation_types.proper_interval.adoc[]
+
+====

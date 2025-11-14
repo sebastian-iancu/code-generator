@@ -1,17 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*OPENEHR_CODE_SET_IDENTIFIERS*
+=== OPENEHR_CODE_SET_IDENTIFIERS Class
 
-h|*Description*
-2+a|List of identifiers for code sets in the openEHR terminology.
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.support.openehr_code_set_identifiers.adoc[]
 
-h|*1..1*
-|*valid_code_set_id* ( +
-an_id: `link:/classes/String[String][1]` +
-): `link:/classes/Boolean[Boolean]`
-a|Validity function to test if an identifier is in the set defined by this class.
-|===
+BMM::
++
+include::../BMMs/org.openehr.rm.support.openehr_code_set_identifiers.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.rm.support.openehr_code_set_identifiers.adoc[]
+
+====

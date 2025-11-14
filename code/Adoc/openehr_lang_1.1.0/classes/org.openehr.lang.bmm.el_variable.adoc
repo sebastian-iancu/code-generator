@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__EL_VARIABLE (abstract)__*
+=== EL_VARIABLE Class
 
-h|*Description*
-2+a|Abstract meta-type of any kind of symbolic variable.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.el_variable.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/EL_VALUE_GENERATOR[EL_VALUE_GENERATOR]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.el_variable.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.el_variable.adoc[]
+
+====

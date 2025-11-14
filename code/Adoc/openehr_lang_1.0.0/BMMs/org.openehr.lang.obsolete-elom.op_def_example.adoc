@@ -1,0 +1,38 @@
+[source,json]
+--------
+{
+    "name": "OP_DEF_EXAMPLE",
+    "documentation": "Example custom operator definition as a class, for an operator whose identifier is 'xxx' and for which the symbols \"xxx\" and \"%\" can be used, and with a two-argument numeric signature.",
+    "ancestors": [
+        "OPERATOR_DEF_EXTERNAL"
+    ],
+    "properties": {
+        "identifier": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "identifier",
+            "is_mandatory": true,
+            "type": "String"
+        },
+        "symbols": {
+            "_type": "P_BMM_CONTAINER_PROPERTY",
+            "name": "symbols",
+            "type_def": {
+                "container_type": "List",
+                "type": "String"
+            },
+            "cardinality": {
+                "lower": 0,
+                "upper_unbounded": true
+            }
+        },
+        "evaluation_agent": {
+            "_type": "P_BMM_GENERIC_PROPERTY",
+            "name": "evaluation_agent",
+            "is_mandatory": true,
+            "type_def": {
+                "root_type": "FUNCTION"
+            }
+        }
+    }
+}
+--------

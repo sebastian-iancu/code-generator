@@ -1,27 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*C_INTEGER*
+=== C_INTEGER Class
 
-h|*Description*
-2+a|Constraint on instances of Integer.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.am.aom14.c_integer.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/C_PRIMITIVE[C_PRIMITIVE]`
+BMM::
++
+include::../BMMs/org.openehr.am.aom14.c_integer.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.am.aom14.c_integer.adoc[]
 
-h|*0..**
-|*list*: `link:/classes/List[List]<link:/classes/Integer[Integer]>`
-a|Set of Integers specifying constraint.
-
-h|*0..1*
-|*range*: `link:/classes/Interval[Interval]<Integer>`
-a|Range of Integers specifying constraint.
-
-h|*0..1*
-|*assumed_value*: `link:/classes/Integer[Integer]`
-a|The value to assume if this item is not included in data, due to being part of an optional structure.
-|===
+====

@@ -1,62 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*C_DURATION*
+=== C_DURATION Class
 
-h|*Description*
-2+a|ISO 8601-compatible constraint on instances of Duration. In ISO 8601 terms, constraints might are of the form “PWD” (weeks and/or days), “PDTHMS” (days, hours, minutes, seconds) and so on.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.am.aom14.c_duration.adoc[]
 
-Both range and the constraint pattern can be set at the same time, corresponding to the ADL constraint `"PWD/|P0W..P50W|"`.
+BMM::
++
+include::../BMMs/org.openehr.am.aom14.c_duration.adoc[]
 
-As for all of openEHR, two ISO 8601 exceptions are allowed: 
+UML::
++
+include::../plantUML/classes/org.openehr.am.aom14.c_duration.adoc[]
 
-* the ‘W’ (week) designator can be mixed in - the allowed patterns are: `P[Y|y][M|m][D|d][T[H|h][M|m][S|s]]` and `P[W|w]`;
-* the values used in an interval constraint may be negated, i.e. a leading minus (`'-'`) sign may be used.
-
-h|*Inherit*
-2+|`link:/classes/C_PRIMITIVE[C_PRIMITIVE]`
-
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
-
-h|*0..1*
-|*years_allowed*: `link:/classes/Boolean[Boolean]`
-a|
-
-h|*0..1*
-|*months_allowed*: `link:/classes/Boolean[Boolean]`
-a|True if months are allowed in the constrained Duration.
-
-h|*0..1*
-|*weeks_allowed*: `link:/classes/Boolean[Boolean]`
-a|
-
-h|*0..1*
-|*days_allowed*: `link:/classes/Boolean[Boolean]`
-a|True if days are allowed in the constrained Duration.
-
-h|*0..1*
-|*hours_allowed*: `link:/classes/Boolean[Boolean]`
-a|True if hours are allowed in the constrained Duration.
-
-h|*0..1*
-|*minutes_allowed*: `link:/classes/Boolean[Boolean]`
-a|True if minutes are allowed in the constrained Duration.
-
-h|*0..1*
-|*seconds_allowed*: `link:/classes/Boolean[Boolean]`
-a|
-
-h|*0..1*
-|*fractional_seconds_allowed*: `link:/classes/Boolean[Boolean]`
-a|True if fractional seconds are allowed in the constrained Duration.
-
-h|*0..1*
-|*range*: `link:/classes/Interval[Interval]<Iso8601_duration>`
-a|Range of Durations specifying constraint.
-
-h|*0..1*
-|*assumed_value*: `link:/classes/Iso8601_duration[Iso8601_duration]`
-a|The value to assume if this item is not included in data, due to being part of an optional structure.
-|===
+====

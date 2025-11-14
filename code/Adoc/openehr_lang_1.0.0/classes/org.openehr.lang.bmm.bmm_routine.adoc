@@ -1,48 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__BMM_ROUTINE (abstract)__*
+=== BMM_ROUTINE Class
 
-h|*Description*
-2+a|A feature defining a routine, scoped to a class.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_routine.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_CLASS_FEATURE[BMM_CLASS_FEATURE]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_routine.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_routine.adoc[]
 
-h|*0..**
-|*parameters*: `link:/classes/List[List]<link:/classes/BMM_PARAMETER[BMM_PARAMETER]>`
-a|Formal parameters of the routine.
-
-h|*0..**
-|*locals*: `link:/classes/List[List]<link:/classes/BMM_LOCAL[BMM_LOCAL]>`
-a|Local variables of the routine.
-
-h|*0..**
-|*pre_conditions*: `link:/classes/List[List]<link:/classes/BMM_ASSERTION[BMM_ASSERTION]>`
-a|
-
-h|*0..**
-|*post_conditions*: `link:/classes/List[List]<link:/classes/BMM_ASSERTION[BMM_ASSERTION]>`
-a|
-
-h|*0..1*
-|*body*: `link:/classes/BMM_ROUTINE_BODY[BMM_ROUTINE_BODY]`
-a|Body of a routine, i.e. executable program.
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
-
-h|*1..1*
-|*arity* (): `link:/classes/Integer[Integer]`
-a|Return number of arguments of this routine.
-
-h|*1..1*
-|*signature* (): `link:/classes/[]`
-a|Formal signature of this element, in the form
-
-`'[arg1_name: T_arg1, ...]:T_value'`.
-|===
+====

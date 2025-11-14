@@ -1,20 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_MODEL_METADATA*
+=== BMM_MODEL_METADATA Class
 
-h|*Description*
-2+a|Core properties of `BMM_MODEL`, may be used in a serial representation as well, such as `P_BMM_SCHEMA`.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.bmm.bmm_model_metadata.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.base.bmm.bmm_model_metadata.adoc[]
 
-h|*1..1*
-|*rm_publisher*: `link:/classes/String[String]`
-a|Publisher of model expressed in the schema.
+UML::
++
+include::../plantUML/classes/org.openehr.base.bmm.bmm_model_metadata.adoc[]
 
-h|*1..1*
-|*rm_release*: `link:/classes/String[String]`
-a|Release of model expressed in the schema as a 3-part numeric, e.g. "3.1.0" .
-|===
+====

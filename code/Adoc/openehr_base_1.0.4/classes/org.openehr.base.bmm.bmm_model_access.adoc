@@ -1,63 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_MODEL_ACCESS*
+=== BMM_MODEL_ACCESS Class
 
-h|*Description*
-2+a|Access to BMM models that have been loaded and validated from one or more schema sets.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.bmm.bmm_model_access.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_DEFINITIONS[BMM_DEFINITIONS]`
+BMM::
++
+include::../BMMs/org.openehr.base.bmm.bmm_model_access.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.base.bmm.bmm_model_access.adoc[]
 
-h|*0..**
-|*schema_directories*: `link:/classes/List[List]<link:/classes/String[String]>`
-a|List of directories where all the schemas loaded here are found.
-
-h|*0..**
-|*all_schemas*: `link:/classes/List[List]<link:/classes/String[String]>`
-a|All schemas found and loaded from `_schema_directory_`. Keyed by `_schema_id_`.
-
-h|*0..1*
-|*bmm_models*: `link:/classes/Hash[Hash]<String,BMM_MODEL>`
-a|Top-level (root) schemas in use. Table is keyed by `_model_id_`.
-
-h|*0..**
-|*matching_bmm_models*: `link:/classes/List[List]<link:/classes/String[String]>`
-a|`BMM_MODELs` keyed by `_model_id()_` and any shorter form used in calls to
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
-
-h|*1..1*
-|*initialise_with_load_list* ( +
-a_schema_dirs: `link:/classes/List[List]<link:/classes/String[String]>[1]`, +
-a_schema_load_list: `link:/classes/List[List]<link:/classes/String[String]>` +
-): `link:/classes/void[void]`
-a|Initialise with a specific schema load list, usually a sub-set of schemas that will be found in a specified directories `_a_schema_dirs_`.
-
-h|*1..1*
-|*initialise_all* ( +
-a_schema_dirs: `link:/classes/List[List]<link:/classes/String[String]>[1]` +
-): `link:/classes/void[void]`
-a|Load all schemas found in a specified directories `_a_schema_dirs_`.
-
-h|*1..1*
-|*reload_schemas* (): `link:/classes/void[void]`
-a|Reload BMM schemas.
-
-h|*1..1*
-|*bmm_model* ( +
-a_model_key: `link:/classes/String[String][1]` +
-): `link:/classes/BMM_MODEL[BMM_MODEL]`
-a|Return ref model containing the model key which is a `_model_id_` or any shorter form e.g. model id minus the version. If a shorter key is used, the `BMM_MODEL` with the highest version will be selected.
-
-h|*1..1*
-|*has_bmm_model* ( +
-a_model_key: `link:/classes/String[String][1]` +
-): `link:/classes/Boolean[Boolean]`
-a|True if a model for a `_model_key_` is available. A model key is a `_model_id_` or any shorter form e.g. model id minus the version. If a shorter key is used, the Result s True if a `BMM_MODEL` with any version exists.
-|===
+====

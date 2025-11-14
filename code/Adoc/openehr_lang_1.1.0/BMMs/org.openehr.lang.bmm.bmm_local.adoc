@@ -1,0 +1,10 @@
+[source,json]
+--------
+{
+    "name": "BMM_LOCAL",
+    "documentation": "A routine local variable (writable).",
+    "ancestors": [
+        "BMM_WRITABLE_VARIABLE"
+    ]
+}
+--------

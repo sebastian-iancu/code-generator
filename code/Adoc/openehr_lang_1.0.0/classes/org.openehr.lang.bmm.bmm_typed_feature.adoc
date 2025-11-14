@@ -1,19 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__BMM_TYPED_FEATURE (abstract)__*
+=== BMM_TYPED_FEATURE Class
 
-h|*Description*
-2+a|A typed entity that is a feature within a context, and which may therefore be Void, i.e. 'nullable'.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_typed_feature.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_TYPED[BMM_TYPED]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_typed_feature.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_typed_feature.adoc[]
 
-h|*0..1*
-|*is_nullable*: `link:/classes/Boolean[Boolean]`
-a|True if this element can be null (Void) at execution time. May be interpreted as optionality in subtypes..
-|===
+====

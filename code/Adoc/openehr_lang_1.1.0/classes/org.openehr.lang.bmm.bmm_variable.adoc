@@ -1,19 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__BMM_VARIABLE (abstract)__*
+=== BMM_VARIABLE Class
 
-h|*Description*
-2+a|A routine-scoped formal element.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_variable.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_FORMAL_ELEMENT[BMM_FORMAL_ELEMENT]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_variable.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_variable.adoc[]
 
-h|*1..1*
-|*scope*: `link:/classes/BMM_ROUTINE[BMM_ROUTINE]`
-a|Routine within which variable is defined.
-|===
+====

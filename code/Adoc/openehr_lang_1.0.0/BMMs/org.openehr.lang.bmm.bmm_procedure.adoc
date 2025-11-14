@@ -1,0 +1,13 @@
+[source,json]
+--------
+{
+    "name": "BMM_PROCEDURE",
+    "documentation": "A formal element with signature of the form: `name ({arg:TArg}*)`. A procedure is a computed (rather than data) element, generally assumed to be state-changing.",
+    "ancestors": [
+        "BMM_ROUTINE"
+    ],
+    "invariants": {
+        "Inv_signature_no_result": "signature.result = Void"
+    }
+}
+--------

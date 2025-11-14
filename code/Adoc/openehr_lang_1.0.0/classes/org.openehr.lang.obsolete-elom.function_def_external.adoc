@@ -1,16 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__FUNCTION_DEF_EXTERNAL (abstract)__*
+=== FUNCTION_DEF_EXTERNAL Class
 
-h|*Description*
-2+a|Ancestor class of externally defined function types.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.obsolete-elom.function_def_external.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.lang.obsolete-elom.function_def_external.adoc[]
 
-h|*1..1*
-|*evaluation_agent*: `link:/classes/FUNCTION[FUNCTION]<TUPLE,Any>`
-a|
-|===
+UML::
++
+include::../plantUML/classes/org.openehr.lang.obsolete-elom.function_def_external.adoc[]
+
+====

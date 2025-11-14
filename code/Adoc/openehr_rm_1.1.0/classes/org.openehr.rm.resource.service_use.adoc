@@ -1,24 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*SERVICE_USE*
+=== SERVICE_USE Class
 
-h|*Inherit*
-2+|`link:/classes/RESOURCE_USE[RESOURCE_USE]`
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.resource.service_use.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.rm.resource.service_use.adoc[]
 
-h|*0..1*
-|*identifier*: `link:/classes/GENERIC_ID[GENERIC_ID]`
-a|
+UML::
++
+include::../plantUML/classes/org.openehr.rm.resource.service_use.adoc[]
 
-h|*0..1*
-|*start_time*: `link:/classes/Iso8601_date_time[Iso8601_date_time]`
-a|
-
-h|*0..1*
-|*duration*: `link:/classes/Iso8601_duration[Iso8601_duration]`
-a|
-|===
+====

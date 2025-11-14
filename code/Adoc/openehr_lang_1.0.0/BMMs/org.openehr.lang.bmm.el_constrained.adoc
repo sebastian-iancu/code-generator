@@ -1,0 +1,20 @@
+[source,json]
+--------
+{
+    "name": "EL_CONSTRAINED",
+    "documentation": "Abstract parent for second-order or constrained forms of first-order expression meta-types.",
+    "is_abstract": true,
+    "ancestors": [
+        "EL_EXPRESSION"
+    ],
+    "properties": {
+        "base_expression": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "base_expression",
+            "documentation": "The base expression of this constrained form.",
+            "is_mandatory": true,
+            "type": "EL_EXPRESSION"
+        }
+    }
+}
+--------

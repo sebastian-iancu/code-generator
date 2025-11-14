@@ -1,38 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*ITEM_TREE*
+=== ITEM_TREE Class
 
-h|*Description*
-2+a|Logical tree data structure. The tree may be empty. Used for representing data which are logically a tree such as audiology results, microbiology results, biochemistry results.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.data_structures.item_tree.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/ITEM_STRUCTURE[ITEM_STRUCTURE]`
+BMM::
++
+include::../BMMs/org.openehr.rm.data_structures.item_tree.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.rm.data_structures.item_tree.adoc[]
 
-h|*0..**
-|*items*: `link:/classes/List[List]<link:/classes/ITEM[ITEM]>`
-a|The items comprising the `ITEM_TREE`. Can include 0 or more `CLUSTERs` and/or 0 or more individual `ELEMENTs`.
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
-
-h|*1..1*
-|*has_element_path* ( +
-a_path: `link:/classes/String[String][1]` +
-): `link:/classes/Boolean[Boolean]`
-a|True if path  a_path' is a valid leaf path.
-
-h|*1..1*
-|*element_at_path* ( +
-a_path: `link:/classes/String[String][1]` +
-): `link:/classes/ELEMENT[ELEMENT]`
-a|Return the leaf element at the path  a_path'.
-
-h|*1..1*
-|*as_hierarchy* (): `link:/classes/CLUSTER[CLUSTER]`
-a|Generate a CEN EN13606-compatible hierarchy, which is the same as the tree's physical representation.
-|===
+====

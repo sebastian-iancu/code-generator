@@ -1,31 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*TRANSLATION_DETAILS*
+=== TRANSLATION_DETAILS Class
 
-h|*Description*
-2+a|Class providing details of a natural language translation.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.common.translation_details.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.rm.common.translation_details.adoc[]
 
-h|*1..1*
-|*language*: `link:/classes/CODE_PHRASE[CODE_PHRASE]`
-a|Language of the translation.
+UML::
++
+include::../plantUML/classes/org.openehr.rm.common.translation_details.adoc[]
 
-h|*1..1*
-|*author*: `link:/classes/Hash[Hash]<String,String>`
-a|Translator name and other demographic details.
-
-h|*0..1*
-|*accreditaton*: `link:/classes/String[String]`
-a|Accreditation of translator, usually a national translator's registration or association membership id.
-
-h|*0..1*
-|*other_details*: `link:/classes/Hash[Hash]<String,String>`
-a|Any other meta-data.
-
-h|*Invariants*
-2+a|__Language_valid__: `code_set (Code_set_id_languages).has_code (language)`
-|===
+====

@@ -1,19 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*EL_UNARY_OPERATOR*
+=== EL_UNARY_OPERATOR Class
 
-h|*Description*
-2+a|Unary operator expression node.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.el_unary_operator.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/EL_OPERATOR[EL_OPERATOR]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.el_unary_operator.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.el_unary_operator.adoc[]
 
-h|*1..1*
-|*operand*: `link:/classes/EL_SIMPLE[EL_SIMPLE]`
-a|Operand node.
-|===
+====

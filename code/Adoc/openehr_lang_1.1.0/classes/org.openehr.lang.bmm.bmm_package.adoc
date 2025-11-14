@@ -1,32 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_PACKAGE*
+=== BMM_PACKAGE Class
 
-h|*Description*
-2+a|Abstraction of a package as a tree structure whose nodes can contain other packages and classes.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_package.adoc[]
 
-The `_name_` may be qualified if it is a top-level package.
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_package.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_PACKAGE_CONTAINER[BMM_PACKAGE_CONTAINER]`
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_package.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
-
-h|*0..**
-|*members*: `link:/classes/List[List]<link:/classes/BMM_MODULE[BMM_MODULE]>`
-a|Member modules in this package.
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
-
-h|*1..**
-|*root_classes* (): `link:/classes/List[List]<link:/classes/BMM_CLASS[BMM_CLASS]>`
-a|Obtain the set of top-level classes in this package, either from this package itself or by recursing into the structure until classes are obtained from child packages. Recurse into each child only far enough to find the first level of classes.
-
-h|*1..1*
-|*path* (): `link:/classes/String[String]`
-a|Full path of this package back to root package.
-|===
+====

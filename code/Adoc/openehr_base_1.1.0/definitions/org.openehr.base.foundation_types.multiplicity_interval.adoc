@@ -1,0 +1,33 @@
+=== Multiplicity_interval Class
+
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*Multiplicity_interval*
+
+h|*Description*
+2+a|An Interval of Integer, used to represent multiplicity, cardinality and optionality in models.
+
+h|*Inherit*
+2+|`<<_proper_interval_class,Proper_interval>>`
+
+h|*Functions*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1*
+|*is_open* (): `<<_boolean_class,Boolean>>`
+a|True if this interval imposes no constraints, i.e. is set to `0..*`.
+
+h|*1..1*
+|*is_optional* (): `<<_boolean_class,Boolean>>`
+a|True if this interval expresses optionality, i.e. `0..1`.
+
+h|*1..1*
+|*is_mandatory* (): `<<_boolean_class,Boolean>>`
+a|True if this interval expresses mandation, i.e. `1..1`.
+
+h|*1..1*
+|*is_prohibited* (): `<<_boolean_class,Boolean>>`
+a|True if this interval is set to `0..0`.
+|===

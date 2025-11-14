@@ -1,7 +1,0 @@
-{
-    "name": "BMM_LOCAL",
-    "documentation": "A routine local variable.",
-    "ancestors": [
-        "BMM_VARIABLE"
-    ]
-}

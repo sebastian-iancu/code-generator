@@ -1,72 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*Integer64*
+=== Integer64 Class
 
-h|*Description*
-2+a|Type representing minimal interface of built-in Integer64 type.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.foundation_types.integer64.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/Ordered_Numeric[Ordered_Numeric]`
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.base.foundation_types.integer64.adoc[]
 
-h|*1..1*
-|*add* ( +
-other: `link:/classes/Integer[Integer][1]` +
-): `link:/classes/Integer64[Integer64]`
-a|Large integer addition.
+UML::
++
+include::../plantUML/classes/org.openehr.base.foundation_types.integer64.adoc[]
 
-h|*1..1*
-|*subtract* ( +
-other: `link:/classes/Integer[Integer][1]` +
-): `link:/classes/Integer64[Integer64]`
-a|Large integer subtraction.
-
-h|*1..1*
-|*multiply* ( +
-other: `link:/classes/Integer[Integer][1]` +
-): `link:/classes/Integer64[Integer64]`
-a|Large integer multiplication.
-
-h|*1..1*
-|*divide* ( +
-other: `link:/classes/Integer[Integer][1]` +
-): `link:/classes/Double[Double]`
-a|Large integer division.
-
-h|*1..1*
-|*exponent* ( +
-other: `link:/classes/Double[Double][1]` +
-): `link:/classes/Double[Double]`
-a|Large integer exponentiation.
-
-h|*1..1*
-|*modulo* ( +
-mod: `link:/classes/Integer[Integer][1]` +
-): `link:/classes/Integer64[Integer64]`
-a|Large integer modulus.
-
-h|*1..1*
-|*less_than* ( +
-other: `link:/classes/Integer64[Integer64][1]` +
-): `link:/classes/Boolean[Boolean]`
-a|Returns True if current Integer is less than `_other_`.
-
-h|*1..1*
-|*negative* (): `link:/classes/Integer64[Integer64]`
-a|Generate negative of current Integer value.
-
-h|*1..1*
-|*is_equal* ( +
-other: `link:/classes/Integer64[Integer64][1]` +
-): `link:/classes/Boolean[Boolean]`
-a|Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.
-
-h|*1..1*
-|*equal* ( +
-other: `link:/classes/Integer64[Integer64][1]` +
-): `link:/classes/Boolean[Boolean]`
-a|Reference equality for reference types, value equality for value types.
-|===
+====

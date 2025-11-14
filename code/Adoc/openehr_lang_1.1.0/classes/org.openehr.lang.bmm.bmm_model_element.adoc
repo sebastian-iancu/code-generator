@@ -1,47 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__BMM_MODEL_ELEMENT (abstract)__*
+=== BMM_MODEL_ELEMENT Class
 
-h|*Description*
-2+a|Abstract meta-type of BMM declared model elements. A _declaration_ is a an element of a model within a context, which defines the _scope_ of the element. Thus, a class definition and its property and routine definitions are model elements, but Types are not, since they are derived from model elements.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_model_element.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_model_element.adoc[]
 
-h|*1..1*
-|*name*: `link:/classes/String[String]`
-a|Name of this model element.
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_model_element.adoc[]
 
-h|*0..1*
-|*documentation*: `link:/classes/Hash[Hash]<String,Any>`
-a|Optional documentation of this element, as a keyed list.
-
-It is strongly recommended to use the following key /type combinations for the relevant purposes:
-
-* `"purpose": String`
-* `"keywords": List<String>`
-* `"use": String`
-* `"misuse": String`
-* `"references": String`
-
-Other keys and value types may be freely added.
-
-h|*1..1*
-|*scope*: `link:/classes/BMM_MODEL_ELEMENT[BMM_MODEL_ELEMENT]`
-a|Model element within which an element is declared.
-
-h|*0..1*
-|*extensions*: `link:/classes/Hash[Hash]<String,Any>`
-a|Optional meta-data of this element, as a keyed list. May be used to extend the meta-model.
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
-
-h|*1..1*
-|*is_root_scope* (): `link:/classes/Boolean[Boolean]` +
- +
-__Post_result__: `Result = (scope = self)`
-a|True if this model element is the root of a model structure hierarchy.
-|===
+====

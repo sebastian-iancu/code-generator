@@ -1,19 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__EXPRESSION (abstract)__*
+=== EXPRESSION Class
 
-h|*Description*
-2+a|Abstract parent of all expression meta-types.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.beom.expression.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/EXPR_VALUE[EXPR_VALUE]`
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.lang.beom.expression.adoc[]
 
-h|*1..1 +
-(abstract)*
-|*type* (): `link:/classes/EXPR_TYPE_DEF[EXPR_TYPE_DEF]`
-a|The primitive type of this node, which must be determined by redefinitions in concrete classes.
-|===
+UML::
++
+include::../plantUML/classes/org.openehr.lang.beom.expression.adoc[]
+
+====

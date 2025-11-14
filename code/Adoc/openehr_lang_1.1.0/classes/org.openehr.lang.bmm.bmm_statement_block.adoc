@@ -1,19 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_STATEMENT_BLOCK*
+=== BMM_STATEMENT_BLOCK Class
 
-h|*Description*
-2+a|A statement 'block' corresponding to the programming language concept of the same name. May be used to establish scope in specific languages.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_statement_block.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_STATEMENT_ITEM[BMM_STATEMENT_ITEM]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_statement_block.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_statement_block.adoc[]
 
-h|*0..**
-|*items*: `link:/classes/List[List]<link:/classes/BMM_STATEMENT_ITEM[BMM_STATEMENT_ITEM]>`
-a|Child blocks of the current block.
-|===
+====

@@ -1,28 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*EL_FUNCTION_AGENT*
+=== EL_FUNCTION_AGENT Class
 
-h|*Description*
-2+a|An agent whose signature is of a function, i.e. has a result type.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.el_function_agent.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/EL_AGENT[EL_AGENT]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.el_function_agent.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.el_function_agent.adoc[]
 
-h|*0..1*
-|*definition*: `link:/classes/BMM_FUNCTION[BMM_FUNCTION]`
-a|Reference to definition of a routine for which this is a direct call instance, if one exists.
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
-
-h|*1..1*
-|*eval_type* (): `link:/classes/BMM_FUNCTION_TYPE[BMM_FUNCTION_TYPE]` +
- +
-__Post_result__: `Result = definition.signature`
-a|Eval type is the signature corresponding to the (remaining) open arguments and return type, if any.
-|===
+====

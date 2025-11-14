@@ -1,8 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_ACTION_DECISION_TABLE*
+=== BMM_ACTION_DECISION_TABLE Class
 
-h|*Description*
-2+a|Specialised form of Decision Table that allows only procedure call agents (lambdas) as the result of branches.
-|===
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_action_decision_table.adoc[]
+
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_action_decision_table.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_action_decision_table.adoc[]
+
+====

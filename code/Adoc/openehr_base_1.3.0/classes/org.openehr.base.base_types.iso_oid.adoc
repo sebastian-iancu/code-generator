@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*ISO_OID*
+=== ISO_OID Class
 
-h|*Description*
-2+a|Model of ISO's Object Identifier (oid) as defined by the standard ISO/IEC 8824. Oids are formed from integers separated by dots. Each non-leaf node in an Oid starting from the left corresponds to an assigning authority, and identifies that authority's namespace, inside which the remaining part of the identifier is locally unique.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.base_types.iso_oid.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/UID[UID]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.base.base_types.iso_oid.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.base_types.iso_oid.adoc[]
+
+====

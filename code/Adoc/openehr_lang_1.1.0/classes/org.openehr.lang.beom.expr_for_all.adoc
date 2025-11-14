@@ -1,23 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*EXPR_FOR_ALL*
+=== EXPR_FOR_ALL Class
 
-h|*Description*
-2+a|Universal quantification operator, usually known as `for_all`, whose operand is a collection of items referenced by an `EXPR_VALUE_REF`. The `_condition_` attribute represents an assertion that is applied to every member of the collection at runtime to determine the result.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.beom.expr_for_all.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/EXPR_OPERATOR[EXPR_OPERATOR]`
+BMM::
++
+include::../BMMs/org.openehr.lang.beom.expr_for_all.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.beom.expr_for_all.adoc[]
 
-h|*1..1*
-|*condition*: `link:/classes/ASSERTION[ASSERTION]`
-a|Boolean condition that returns True or False when applied to a member of the operand of a `for_all` operator.
-
-h|*1..1*
-|*operand*: `link:/classes/EXPR_VALUE_REF[EXPR_VALUE_REF]`
-a|Reference to collection / container object to which the `for_all` operator is to be applied.
-|===
+====

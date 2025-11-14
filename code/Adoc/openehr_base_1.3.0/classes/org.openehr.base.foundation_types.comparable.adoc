@@ -1,5 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__Comparable (abstract)__*
-|===
+=== Comparable Class
+
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.foundation_types.comparable.adoc[]
+
+BMM::
++
+include::../BMMs/org.openehr.base.foundation_types.comparable.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.foundation_types.comparable.adoc[]
+
+====

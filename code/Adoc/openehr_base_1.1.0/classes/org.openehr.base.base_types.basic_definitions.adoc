@@ -1,8 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BASIC_DEFINITIONS*
+=== BASIC_DEFINITIONS Class
 
-h|*Description*
-2+a|Defines globally used constant values.
-|===
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.base_types.basic_definitions.adoc[]
+
+BMM::
++
+include::../BMMs/org.openehr.base.base_types.basic_definitions.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.base_types.basic_definitions.adoc[]
+
+====

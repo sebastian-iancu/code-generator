@@ -1,19 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_PRIMITIVE_VALUE*
+=== BMM_PRIMITIVE_VALUE Class
 
-h|*Description*
-2+a|Meta-type for literals whose concrete type is a primitive type.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_primitive_value.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_UNITARY_VALUE[BMM_UNITARY_VALUE]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_primitive_value.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_primitive_value.adoc[]
 
-h|*1..1*
-|*type*: `link:/classes/BMM_SIMPLE_TYPE[BMM_SIMPLE_TYPE]`
-a|Concrete type of this literal.
-|===
+====

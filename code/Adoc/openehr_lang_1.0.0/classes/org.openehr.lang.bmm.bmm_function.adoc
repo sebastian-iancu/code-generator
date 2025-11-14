@@ -1,32 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_FUNCTION*
+=== BMM_FUNCTION Class
 
-h|*Description*
-2+a|A formal element with signature of the form: `name ({arg:TArg}*):TResult`. A function is a computed (rather than data) element, generally assumed to be non-state-changing.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_function.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_TYPED_FEATURE[BMM_TYPED_FEATURE], link:/classes/BMM_ROUTINE[BMM_ROUTINE]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_function.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_function.adoc[]
 
-h|*0..1*
-|*operator_definition*: `link:/classes/BMM_OPERATOR[BMM_OPERATOR]`
-a|Optional details enabling a function to be represented as an operator in a syntactic representation.
-
-h|*1..1*
-|*result*: `link:/classes/BMM_RESULT[BMM_RESULT]`
-a|Automatically created Result variable, usable in body and post-condition.
-
-h|*Invariants*
-2+a|__Operator_validity__: `operator_def /= Void implies arity in |1..2|`
-
-h|
-2+a|__Inv_signature_has_result__: `signature.result /= Void`
-
-h|
-2+a|__Inv_result_type__: `type = Result.type`
-|===
+====

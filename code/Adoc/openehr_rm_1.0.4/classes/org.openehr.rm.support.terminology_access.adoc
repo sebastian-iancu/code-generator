@@ -1,42 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*TERMINOLOGY_ACCESS*
+=== TERMINOLOGY_ACCESS Class
 
-h|*Description*
-2+a|Defines an object providing proxy access to a terminology.
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.support.terminology_access.adoc[]
 
-h|*1..1*
-|*id* (): `link:/classes/String[String]`
-a|Identification of this Terminology.
+BMM::
++
+include::../BMMs/org.openehr.rm.support.terminology_access.adoc[]
 
-h|*1..1*
-|*all_codes* (): `link:/classes/CODE_PHRASE[CODE_PHRASE]`
-a|Return all codes known in this terminology.
+UML::
++
+include::../plantUML/classes/org.openehr.rm.support.terminology_access.adoc[]
 
-h|*1..**
-|*codes_for_group_id* ( +
-a_group_id: `link:/classes/String[String][1]` +
-): `link:/classes/List[List]<link:/classes/CODE_PHRASE[CODE_PHRASE]>`
-a|Return all codes under grouper 'a_group_id' from this terminology.
-
-h|*1..**
-|*codes_for_group_name* ( +
-a_lang: `link:/classes/String[String][1]`, +
-a_name: `link:/classes/String[String][1]` +
-): `link:/classes/List[List]<link:/classes/CODE_PHRASE[CODE_PHRASE]>`
-a|Return all codes under grouper whose name in 'a_lang' is 'a_name' from this terminology.
-
-h|*1..1*
-|*has_code_for_group_id* (): `link:/classes/Boolean[Boolean]`
-a|True if  a_code' is known in group  group_id' in the openEHR terminology.
-
-h|*1..1*
-|*rubric_for_code* ( +
-a_code: `link:/classes/String[String][1]` +
-): `link:/classes/String[String]`
-a|Return all rubric of code  code' in language  lang'.
-|===
+====

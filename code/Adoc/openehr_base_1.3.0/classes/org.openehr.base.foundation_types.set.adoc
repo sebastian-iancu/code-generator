@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*Set<T>*
+=== Set Class
 
-h|*Description*
-2+a|Unordered container that may not contain duplicates.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.foundation_types.set.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/Container[Container]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.base.foundation_types.set.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.foundation_types.set.adoc[]
+
+====

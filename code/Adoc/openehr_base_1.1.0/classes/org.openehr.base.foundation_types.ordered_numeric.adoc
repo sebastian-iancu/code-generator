@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__Ordered_Numeric (abstract)__*
+=== Ordered_Numeric Class
 
-h|*Description*
-2+a|Abstract notional parent class of ordered, numeric types, which are types with ‘<‘ and arithmetic operators defined.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.foundation_types.ordered_numeric.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/Ordered[Ordered], link:/classes/Numeric[Numeric]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.base.foundation_types.ordered_numeric.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.foundation_types.ordered_numeric.adoc[]
+
+====

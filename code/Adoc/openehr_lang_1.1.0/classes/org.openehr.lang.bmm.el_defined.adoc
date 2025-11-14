@@ -1,13 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*EL_DEFINED*
+=== EL_DEFINED Class
 
-h|*Description*
-2+a|A predicate taking one external variable reference argument, that returns true if the reference is resolvable, i.e. the external value is obtainable.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.el_defined.adoc[]
 
-NOTE: probably to be removed.
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.el_defined.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/EL_PREDICATE[EL_PREDICATE]`
-|===
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.el_defined.adoc[]
+
+====

@@ -1,8 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__BMM_STATEMENT_ITEM (abstract)__*
+=== BMM_STATEMENT_ITEM Class
 
-h|*Description*
-2+a|Abstract parent of statement types representing a locally defined routine body.
-|===
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_statement_item.adoc[]
+
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_statement_item.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_statement_item.adoc[]
+
+====

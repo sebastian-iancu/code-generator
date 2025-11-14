@@ -1,8 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__BMM_ROUTINE_BODY (abstract)__*
+=== BMM_ROUTINE_BODY Class
 
-h|*Description*
-2+a|Abstract ancestor of routine body meta-types.
-|===
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_routine_body.adoc[]
+
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_routine_body.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_routine_body.adoc[]
+
+====

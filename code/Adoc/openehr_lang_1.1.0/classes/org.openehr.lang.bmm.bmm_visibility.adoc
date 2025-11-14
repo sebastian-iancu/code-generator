@@ -1,10 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__BMM_VISIBILITY (abstract)__*
+=== BMM_VISIBILITY Class
 
-h|*Description*
-2+a|Abstract parent of visibility representation.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_visibility.adoc[]
 
-TODO: define schemes; probably need to support C++/Java scheme as well as better type-based schemes.
-|===
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_visibility.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_visibility.adoc[]
+
+====

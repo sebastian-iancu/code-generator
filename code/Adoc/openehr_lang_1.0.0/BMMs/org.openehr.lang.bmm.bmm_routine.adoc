@@ -1,0 +1,87 @@
+[source,json]
+--------
+{
+    "name": "BMM_ROUTINE",
+    "documentation": "A feature defining a routine, scoped to a class.",
+    "is_abstract": true,
+    "ancestors": [
+        "BMM_CLASS_FEATURE"
+    ],
+    "properties": {
+        "parameters": {
+            "_type": "P_BMM_CONTAINER_PROPERTY",
+            "name": "parameters",
+            "documentation": "Formal parameters of the routine.",
+            "type_def": {
+                "container_type": "List",
+                "type": "BMM_PARAMETER"
+            },
+            "cardinality": {
+                "lower": 0,
+                "upper_unbounded": true
+            }
+        },
+        "locals": {
+            "_type": "P_BMM_CONTAINER_PROPERTY",
+            "name": "locals",
+            "documentation": "Local variables of the routine.",
+            "type_def": {
+                "container_type": "List",
+                "type": "BMM_LOCAL"
+            },
+            "cardinality": {
+                "lower": 0,
+                "upper_unbounded": true
+            }
+        },
+        "pre_conditions": {
+            "_type": "P_BMM_CONTAINER_PROPERTY",
+            "name": "pre_conditions",
+            "type_def": {
+                "container_type": "List",
+                "type": "BMM_ASSERTION"
+            },
+            "cardinality": {
+                "lower": 0,
+                "upper_unbounded": true
+            }
+        },
+        "post_conditions": {
+            "_type": "P_BMM_CONTAINER_PROPERTY",
+            "name": "post_conditions",
+            "type_def": {
+                "container_type": "List",
+                "type": "BMM_ASSERTION"
+            },
+            "cardinality": {
+                "lower": 0,
+                "upper_unbounded": true
+            }
+        },
+        "body": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "body",
+            "documentation": "Body of a routine, i.e. executable program.",
+            "type": "BMM_ROUTINE_BODY"
+        }
+    },
+    "functions": {
+        "arity": {
+            "name": "arity",
+            "documentation": "Return number of arguments of this routine.",
+            "result": {
+                "_type": "P_BMM_SIMPLE_TYPE",
+                "type": "Integer"
+            }
+        },
+        "signature": {
+            "name": "signature",
+            "documentation": "Formal signature of this element, in the form\n\n`'[arg1_name: T_arg1, ...]:T_value'`.",
+            "result": {
+                "_type": "P_BMM_SIMPLE_TYPE",
+                "type": ""
+            }
+        }
+    }
+}
+--------

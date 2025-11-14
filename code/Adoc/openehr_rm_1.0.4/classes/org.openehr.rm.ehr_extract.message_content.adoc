@@ -1,8 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__MESSAGE_CONTENT (abstract)__*
+=== MESSAGE_CONTENT Class
 
-h|*Description*
-2+a|Abstract parent of message payload types.
-|===
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.ehr_extract.message_content.adoc[]
+
+BMM::
++
+include::../BMMs/org.openehr.rm.ehr_extract.message_content.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.rm.ehr_extract.message_content.adoc[]
+
+====

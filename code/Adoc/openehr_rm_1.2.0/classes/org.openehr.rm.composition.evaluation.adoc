@@ -1,21 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*EVALUATION*
+=== EVALUATION Class
 
-h|*Description*
-2+a|Entry type for evaluation statements. Used for all kinds of statements which evaluate other information, such as interpretations of observations, diagnoses, differential diagnoses, hypotheses, risk assessments, goals and plans. 
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.composition.evaluation.adoc[]
 
-Should not be used for actionable statements such as medication orders - these are represented using the `INSTRUCTION` type.
+BMM::
++
+include::../BMMs/org.openehr.rm.composition.evaluation.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/CARE_ENTRY[CARE_ENTRY]`
+UML::
++
+include::../plantUML/classes/org.openehr.rm.composition.evaluation.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
-
-h|*1..1*
-|*data*: `link:/classes/ITEM_STRUCTURE[ITEM_STRUCTURE]`
-a|The data of this evaluation, in the form of a spatial data structure.
-|===
+====

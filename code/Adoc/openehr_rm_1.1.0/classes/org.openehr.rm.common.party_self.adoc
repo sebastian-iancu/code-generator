@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*PARTY_SELF*
+=== PARTY_SELF Class
 
-h|*Description*
-2+a|Party proxy representing the subject of the record. Used to indicate that the party is the owner of the record. May or may not have `_external_ref_` set.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.common.party_self.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/PARTY_PROXY[PARTY_PROXY]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.rm.common.party_self.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.rm.common.party_self.adoc[]
+
+====

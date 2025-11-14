@@ -1,41 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__BMM_FORMAL_ELEMENT (abstract)__*
+=== BMM_FORMAL_ELEMENT Class
 
-h|*Description*
-2+a|A formal element having a name, type and a type-based signature.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_formal_element.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_MODEL_ELEMENT[BMM_MODEL_ELEMENT]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_formal_element.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_formal_element.adoc[]
 
-h|*1..1*
-|*type*: `link:/classes/BMM_TYPE[BMM_TYPE]`
-a|Declared or inferred static type of the entity.
-
-h|*0..1*
-|*is_nullable*: `link:/classes/Boolean[Boolean]`
-a|True if this element can be null (Void) at execution time. May be interpreted as optionality in subtypes..
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
-
-h|*1..1 +
-(abstract)*
-|*signature* (): `link:/classes/BMM_SIGNATURE[BMM_SIGNATURE]`
-a|Formal signature of this element, in the form:
-
-`name [arg1_name: T_arg1, ...][:T_value]`
-
-Specific implementations in descendants.
-
-h|*1..1*
-|*is_boolean* (): `link:/classes/Boolean[Boolean]` +
- +
-__Post_result__: `Result = type().equal( {BMM_MODEL}.boolean_type_definition())`
-a|True if `_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `'Boolean'`).
-|===
+====

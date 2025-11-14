@@ -1,19 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_PROCEDURE_CALL*
+=== BMM_PROCEDURE_CALL Class
 
-h|*Description*
-2+a|A call made on a closed procedure agent. The method in BMM via which external actions are achieved from within a program.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_procedure_call.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/EL_AGENT_CALL[EL_AGENT_CALL], link:/classes/BMM_SIMPLE_STATEMENT[BMM_SIMPLE_STATEMENT]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_procedure_call.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_procedure_call.adoc[]
 
-h|*1..1*
-|*agent*: `link:/classes/EL_PROCEDURE_AGENT[EL_PROCEDURE_AGENT]`
-a|The procedure agent being called.
-|===
+====

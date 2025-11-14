@@ -1,19 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*OPENEHR_CONTENT_ITEM*
+=== OPENEHR_CONTENT_ITEM Class
 
-h|*Description*
-2+a|Form of `EHR EXTRACT_ITEM` containing openEHR serialised `VERSIONED_OBJECTs`.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.ehr_extract.openehr_content_item.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/EXTRACT_CONTENT_ITEM[EXTRACT_CONTENT_ITEM]`
+BMM::
++
+include::../BMMs/org.openehr.rm.ehr_extract.openehr_content_item.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.rm.ehr_extract.openehr_content_item.adoc[]
 
-h|*0..1*
-|*item*: `link:/classes/X_VERSIONED_OBJECT[X_VERSIONED_OBJECT]`
-a|Content object.
-|===
+====

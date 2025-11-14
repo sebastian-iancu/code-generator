@@ -1,0 +1,22 @@
+[source,json]
+--------
+{
+    "name": "EL_CONDITIONAL_EXPRESSION",
+    "documentation": "Conditional structure used in condition chain expressions. Evaluated by evaluating its `_condition_`, which is a Boolean-returning expression, and if this returns True, the result is the evaluation result of `_expression_`.",
+    "ancestors": [
+        "EL_DECISION_BRANCH"
+    ],
+    "properties": {
+        "condition": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "condition",
+            "documentation": "Gate expression that acts as the condition under which the target `_expression_` is returned.",
+            "is_mandatory": true,
+            "type": "EL_SIMPLE"
+        }
+    },
+    "invariants": {
+        "Inv_condition_boolean": "condition.is_boolean()"
+    }
+}
+--------

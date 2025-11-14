@@ -1,26 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__EL_PREDICATE (abstract)__*
+=== EL_PREDICATE Class
 
-h|*Description*
-2+a|Parent type of predicate of any object reference.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.el_predicate.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/EL_SIMPLE[EL_SIMPLE]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.el_predicate.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.el_predicate.adoc[]
 
-h|*1..1*
-|*operand*: `link:/classes/EL_VALUE_GENERATOR[EL_VALUE_GENERATOR]`
-a|The target instance of this predicate.
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
-
-h|*1..1*
-|*eval_type* (): `link:/classes/BMM_SIMPLE_TYPE[BMM_SIMPLE_TYPE]`
-a|Return `{BMM_MODEL}._boolean_type_definition_()`.
-|===
+====

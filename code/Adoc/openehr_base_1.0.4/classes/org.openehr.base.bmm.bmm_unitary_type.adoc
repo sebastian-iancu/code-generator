@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__BMM_UNITARY_TYPE (abstract)__*
+=== BMM_UNITARY_TYPE Class
 
-h|*Description*
-2+a|Parent of meta-types that may be used as the type of any instantiated object that is not a container object.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.bmm.bmm_unitary_type.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_TYPE[BMM_TYPE]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.base.bmm.bmm_unitary_type.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.bmm.bmm_unitary_type.adoc[]
+
+====

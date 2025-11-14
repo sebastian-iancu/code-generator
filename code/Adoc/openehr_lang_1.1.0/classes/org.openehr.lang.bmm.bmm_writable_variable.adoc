@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__BMM_WRITABLE_VARIABLE (abstract)__*
+=== BMM_WRITABLE_VARIABLE Class
 
-h|*Description*
-2+a|Meta-type for writable variables, including the special variable `Result`.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_writable_variable.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_VARIABLE[BMM_VARIABLE]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_writable_variable.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_writable_variable.adoc[]
+
+====

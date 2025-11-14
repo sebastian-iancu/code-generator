@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*EL_ATTACHED*
+=== EL_ATTACHED Class
 
-h|*Description*
-2+a|A predicate on any object reference (including function call) that returns True if the reference is attached, i.e. non-Void.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.el_attached.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/EL_PREDICATE[EL_PREDICATE]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.el_attached.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.el_attached.adoc[]
+
+====

@@ -1,0 +1,8 @@
+[source,json]
+--------
+{
+    "name": "BMM_ROUTINE_BODY",
+    "documentation": "Abstract ancestor of routine body meta-types.",
+    "is_abstract": true
+}
+--------

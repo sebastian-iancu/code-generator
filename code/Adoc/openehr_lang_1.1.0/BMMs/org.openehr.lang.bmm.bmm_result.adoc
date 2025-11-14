@@ -1,0 +1,19 @@
+[source,json]
+--------
+{
+    "name": "BMM_RESULT",
+    "documentation": "Automatically declared variable representing result of a Function call (writable).",
+    "ancestors": [
+        "BMM_WRITABLE_VARIABLE"
+    ],
+    "properties": {
+        "name": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "name",
+            "documentation": "Name of this model element.",
+            "is_mandatory": true,
+            "type": "String"
+        }
+    }
+}
+--------

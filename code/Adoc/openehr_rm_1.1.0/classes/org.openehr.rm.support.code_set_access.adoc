@@ -1,31 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*CODE_SET_ACCESS*
+=== CODE_SET_ACCESS Class
 
-h|*Description*
-2+a|Defines an object providing proxy access to a code_set.
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.support.code_set_access.adoc[]
 
-h|*1..1*
-|*id* (): `link:/classes/String[String]`
-a|External identifier of this code set.
+BMM::
++
+include::../BMMs/org.openehr.rm.support.code_set_access.adoc[]
 
-h|*1..**
-|*all_codes* (): `link:/classes/List[List]<link:/classes/CODE_PHRASE[CODE_PHRASE]>`
-a|Return all codes known in this code set.
+UML::
++
+include::../plantUML/classes/org.openehr.rm.support.code_set_access.adoc[]
 
-h|*1..1*
-|*has_lang* ( +
-a_lang: `link:/classes/String[String][1]` +
-): `link:/classes/Boolean[Boolean]`
-a|True if code set knows about 'a_lang' .
-
-h|*1..1*
-|*has_code* ( +
-a_code: `link:/classes/String[String][1]` +
-): `link:/classes/Boolean[Boolean]`
-a|True if code set knows about  'a_code'.
-|===
+====

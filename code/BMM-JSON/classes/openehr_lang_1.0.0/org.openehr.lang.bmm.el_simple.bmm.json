@@ -1,8 +1,0 @@
-{
-    "name": "EL_SIMPLE",
-    "documentation": "Simple expression type that may be used in other simple expressions.",
-    "is_abstract": true,
-    "ancestors": [
-        "EL_EXPRESSION"
-    ]
-}

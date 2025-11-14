@@ -1,20 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__TERMINOLOGY_RELATION (abstract)__*
+=== TERMINOLOGY_RELATION Class
 
-h|*Description*
-2+a|Class whose instances represent any kind of 1:N relationship between a source term and 1-N target terms.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.am.aom2.terminology_relation.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.am.aom2.terminology_relation.adoc[]
 
-h|*1..1*
-|*id*: `link:/classes/String[String]`
-a|Code of source term of this relation.
+UML::
++
+include::../plantUML/classes/org.openehr.am.aom2.terminology_relation.adoc[]
 
-h|*1..**
-|*members*: `link:/classes/List[List]<link:/classes/String[String]>`
-a|List of target terms in this relation.
-|===
+====

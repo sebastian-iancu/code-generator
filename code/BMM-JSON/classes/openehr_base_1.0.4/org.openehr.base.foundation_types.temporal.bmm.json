@@ -1,9 +1,0 @@
-{
-    "name": "Temporal",
-    "documentation": "Abstract ancestor type of Date/Time types.",
-    "is_abstract": true,
-    "ancestors": [
-        "Ordered",
-        "Time_Definitions"
-    ]
-}

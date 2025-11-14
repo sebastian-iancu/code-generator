@@ -1,23 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*TYPE_DEF_STRING*
+=== TYPE_DEF_STRING Class
 
-h|*Description*
-2+a|Rules meta-type representing the primitive type String.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.expression.type_def_string.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/EXPR_TYPE_DEF[EXPR_TYPE_DEF]`
+BMM::
++
+include::../BMMs/org.openehr.base.expression.type_def_string.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.base.expression.type_def_string.adoc[]
 
-h|*1..1*
-|*type_name*: `link:/classes/String[String]`
-a|
-
-h|*1..1*
-|*type_anchor*: `link:/classes/String[String]`
-a|
-|===
+====

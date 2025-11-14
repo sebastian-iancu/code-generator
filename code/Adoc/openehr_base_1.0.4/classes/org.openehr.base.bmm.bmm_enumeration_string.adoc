@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_ENUMERATION_STRING*
+=== BMM_ENUMERATION_STRING Class
 
-h|*Description*
-2+a|String-based enumeration type.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.bmm.bmm_enumeration_string.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_ENUMERATION[BMM_ENUMERATION]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.base.bmm.bmm_enumeration_string.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.bmm.bmm_enumeration_string.adoc[]
+
+====

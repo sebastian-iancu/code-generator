@@ -1,0 +1,19 @@
+[source,json]
+--------
+{
+    "name": "BMM_UNITARY_PROPERTY",
+    "documentation": "Meta-type of for properties of unitary type.",
+    "ancestors": [
+        "BMM_PROPERTY"
+    ],
+    "properties": {
+        "type": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "type",
+            "documentation": "Declared or inferred static type of the entity.",
+            "is_mandatory": true,
+            "type": "BMM_UNITARY_TYPE"
+        }
+    }
+}
+--------

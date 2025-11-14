@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_INDEXED_CONTAINER_VALUE*
+=== BMM_INDEXED_CONTAINER_VALUE Class
 
-h|*Description*
-2+a|Meta-type for literals whose concrete type is an indexed container, i.e. Hash table, Map etc.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_indexed_container_value.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_LITERAL_VALUE[BMM_LITERAL_VALUE]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_indexed_container_value.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_indexed_container_value.adoc[]
+
+====

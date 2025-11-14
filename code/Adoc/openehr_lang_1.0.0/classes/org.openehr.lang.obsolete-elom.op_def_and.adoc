@@ -1,27 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*OP_DEF_AND*
+=== OP_DEF_AND Class
 
-h|*Description*
-2+a|Illustrative class showing what the normally built-in logical 'and' operator looks like as an external definition.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.obsolete-elom.op_def_and.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/OPERATOR_DEF_EXTERNAL[OPERATOR_DEF_EXTERNAL]`
+BMM::
++
+include::../BMMs/org.openehr.lang.obsolete-elom.op_def_and.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.obsolete-elom.op_def_and.adoc[]
 
-h|*1..1*
-|*identifier*: `link:/classes/String[String]`
-a|
-
-h|*0..**
-|*symbols*: `link:/classes/List[List]<link:/classes/String[String]>`
-a|
-
-h|*1..1*
-|*evaluation_agent*: `link:/classes/FUNCTION[FUNCTION]<>`
-a|
-|===
+====

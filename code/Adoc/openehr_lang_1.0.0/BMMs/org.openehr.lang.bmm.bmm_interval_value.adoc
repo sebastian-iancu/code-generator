@@ -1,0 +1,10 @@
+[source,json]
+--------
+{
+    "name": "BMM_INTERVAL_VALUE",
+    "documentation": "Meta-type for literal intervals of type `Interval<Ordered>`.",
+    "ancestors": [
+        "BMM_LITERAL_VALUE"
+    ]
+}
+--------

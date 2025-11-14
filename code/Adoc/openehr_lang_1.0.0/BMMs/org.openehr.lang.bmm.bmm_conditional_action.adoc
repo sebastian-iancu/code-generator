@@ -1,0 +1,23 @@
+[source,json]
+--------
+{
+    "name": "BMM_CONDITIONAL_ACTION",
+    "documentation": "Conditional, or 'gated' statement, consisting of a Boolean-returning `_condition_` and the target `_statement_`.",
+    "properties": {
+        "condition": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "condition",
+            "documentation": "The gate condition for the target statement.",
+            "is_mandatory": true,
+            "type": "EL_BOOLEAN_EXPRESSION"
+        },
+        "statement": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "statement",
+            "documentation": "Target statement.",
+            "is_mandatory": true,
+            "type": "BMM_STATEMENT_ITEM"
+        }
+    }
+}
+--------

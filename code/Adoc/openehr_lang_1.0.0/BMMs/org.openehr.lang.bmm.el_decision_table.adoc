@@ -1,0 +1,34 @@
+[source,json]
+--------
+{
+    "name": "EL_DECISION_TABLE",
+    "documentation": "Complex expression structure representing a logical decision table.",
+    "is_abstract": true,
+    "ancestors": [
+        "EL_EXPRESSION"
+    ],
+    "properties": {
+        "else": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "else",
+            "documentation": "Result expression of the chain if no member of `_items_` succeeds in evaluation.",
+            "is_mandatory": true,
+            "type": "EL_EXPRESSION"
+        },
+        "items": {
+            "_type": "P_BMM_CONTAINER_PROPERTY",
+            "name": "items",
+            "documentation": "Members of the chain, equivalent to branches in an if/then/else chain and cases in a case statement.",
+            "is_mandatory": true,
+            "type_def": {
+                "container_type": "List",
+                "type": "EL_DECISION_BRANCH"
+            },
+            "cardinality": {
+                "lower": 1,
+                "upper_unbounded": true
+            }
+        }
+    }
+}
+--------

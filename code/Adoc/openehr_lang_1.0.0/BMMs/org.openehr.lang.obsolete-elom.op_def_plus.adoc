@@ -1,0 +1,26 @@
+[source,json]
+--------
+{
+    "name": "OP_DEF_PLUS",
+    "properties": {
+        "name": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "name",
+            "is_mandatory": true,
+            "type": "String"
+        },
+        "symbols": {
+            "_type": "P_BMM_CONTAINER_PROPERTY",
+            "name": "symbols",
+            "type_def": {
+                "container_type": "List",
+                "type": "String"
+            },
+            "cardinality": {
+                "lower": 0,
+                "upper_unbounded": true
+            }
+        }
+    }
+}
+--------

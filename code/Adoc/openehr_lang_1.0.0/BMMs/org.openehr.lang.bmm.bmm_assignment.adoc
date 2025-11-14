@@ -1,0 +1,26 @@
+[source,json]
+--------
+{
+    "name": "BMM_ASSIGNMENT",
+    "documentation": "Statement type representing an assignment from a value-generating source to a writable entity, i.e. a variable reference or property.",
+    "ancestors": [
+        "BMM_SIMPLE_STATEMENT"
+    ],
+    "properties": {
+        "target": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "target",
+            "documentation": "The target variable on the notional left-hand side of this assignment.",
+            "is_mandatory": true,
+            "type": "EL_INSTANTIABLE_REF"
+        },
+        "source": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "source",
+            "documentation": "Source right hand side) of the assignment.",
+            "is_mandatory": true,
+            "type": "EL_EXPRESSION"
+        }
+    }
+}
+--------

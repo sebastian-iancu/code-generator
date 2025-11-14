@@ -1,0 +1,11 @@
+[source,json]
+--------
+{
+    "name": "EL_SIMPLE",
+    "documentation": "Simple terminal i.e. logically atomic expression element.",
+    "is_abstract": true,
+    "ancestors": [
+        "EL_TERMINAL"
+    ]
+}
+--------

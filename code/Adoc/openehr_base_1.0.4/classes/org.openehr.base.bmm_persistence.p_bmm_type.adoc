@@ -1,32 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__P_BMM_TYPE (abstract)__*
+=== P_BMM_TYPE Class
 
-h|*Description*
-2+a|Persistent form of `BMM_TYPE`.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.bmm_persistence.p_bmm_type.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.base.bmm_persistence.p_bmm_type.adoc[]
 
-h|*0..1*
-|*bmm_type*: `link:/classes/BMM_TYPE[BMM_TYPE]`
-a|Result of `_create_bmm_type()_` call.
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.base.bmm_persistence.p_bmm_type.adoc[]
 
-h|*1..1 +
-(abstract)*
-|*create_bmm_type* ( +
-a_schema: `link:/classes/BMM_MODEL[BMM_MODEL][1]`, +
-a_class_def: `link:/classes/BMM_CLASS[BMM_CLASS][1]` +
-): `link:/classes/void[void]`
-a|Create appropriate `BMM_XXX` object; effected in descendants.
-
-h|*1..1 +
-(abstract)*
-|*as_type_string* (): `link:/classes/String[String]`
-a|Formal name of the type for display.
-|===
+====

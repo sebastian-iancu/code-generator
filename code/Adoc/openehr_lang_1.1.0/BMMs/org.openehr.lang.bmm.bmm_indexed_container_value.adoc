@@ -1,0 +1,10 @@
+[source,json]
+--------
+{
+    "name": "BMM_INDEXED_CONTAINER_VALUE",
+    "documentation": "Meta-type for literals whose concrete type is an indexed container, i.e. Hash table, Map etc.",
+    "ancestors": [
+        "BMM_LITERAL_VALUE"
+    ]
+}
+--------

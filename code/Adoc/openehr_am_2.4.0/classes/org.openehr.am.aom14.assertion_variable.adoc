@@ -1,20 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*ASSERTION_VARIABLE*
+=== ASSERTION_VARIABLE Class
 
-h|*Description*
-2+a|Definition of a named variable used in an assertion expression.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.am.aom14.assertion_variable.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.am.aom14.assertion_variable.adoc[]
 
-h|*1..1*
-|*name*: `link:/classes/String[String]`
-a|Name of variable.
+UML::
++
+include::../plantUML/classes/org.openehr.am.aom14.assertion_variable.adoc[]
 
-h|*1..1*
-|*definition*: `link:/classes/String[String]`
-a|Formal definition of the variable.
-|===
+====

@@ -1,27 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__BMM_LITERAL_VALUE (abstract)__*
+=== BMM_LITERAL_VALUE Class
 
-h|*Description*
-2+a|Meta-type for literal instance values declared in a model. Instance values may be inline values of primitive types in the usual fashion or complex objects in syntax form, e.g. JSON.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_literal_value.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_TYPED[BMM_TYPED]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_literal_value.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_literal_value.adoc[]
 
-h|*1..1*
-|*value_literal*: `link:/classes/String[String]`
-a|A serial representation of the value.
-
-h|*0..1*
-|*value*: `link:/classes/Any[Any]`
-a|A native representation of the value, possibly derived by deserialising `_value_literal_`.
-
-h|*0..1*
-|*syntax*: `link:/classes/String[String]`
-a|Optional specification of formalism of the `_value_literal_` attribute for complex values. Value may be any of `json | yawl | xml | odin | rdf` or another value agreed by the user community. If not set, `json` is assumed.
-|===
+====

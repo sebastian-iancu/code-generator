@@ -1,7 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Enumeration*
-2+^h|*TERMINOLOGY_STATUS*
-h|*Items*
-2+a|`trial`, `active`, `retired`
-|===
+=== TERMINOLOGY_STATUS Class
+
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.term.terminology.terminology_status.adoc[]
+
+BMM::
++
+include::../BMMs/org.openehr.term.terminology.terminology_status.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.term.terminology.terminology_status.adoc[]
+
+====

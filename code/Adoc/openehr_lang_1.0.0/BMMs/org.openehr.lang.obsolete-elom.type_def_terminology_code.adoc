@@ -1,0 +1,24 @@
+[source,json]
+--------
+{
+    "name": "TYPE_DEF_TERMINOLOGY_CODE",
+    "documentation": "Rules meta-type representing the primitive type Terminology_code.",
+    "ancestors": [
+        "EL_TYPE_DEF"
+    ],
+    "properties": {
+        "type_name": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "type_name",
+            "is_mandatory": true,
+            "type": "String"
+        },
+        "type_anchor": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "type_anchor",
+            "is_mandatory": true,
+            "type": "Terminology_code"
+        }
+    }
+}
+--------

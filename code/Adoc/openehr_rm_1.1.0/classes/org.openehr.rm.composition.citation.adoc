@@ -1,28 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*CITATION<L>*
+=== CITATION Class
 
-h|*Inherit*
-2+|`link:/classes/VIEW_ENTRY[VIEW_ENTRY]`
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.composition.citation.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.rm.composition.citation.adoc[]
 
-h|*0..1*
-|*source_type*: `link:/classes/String[String]`
-a|
+UML::
++
+include::../plantUML/classes/org.openehr.rm.composition.citation.adoc[]
 
-h|*1..1*
-|*source_ref*: `link:/classes/LOCATABLE_REF[LOCATABLE_REF]`
-a|Reference to original object.
-
-h|*1..1*
-|*source_parent_ref*: `link:/classes/LOCATABLE_REF[LOCATABLE_REF]`
-a|Reference to target's owning object.
-
-h|*1..1*
-|*resolved*: `L`
-a|Resolved form.
-|===
+====

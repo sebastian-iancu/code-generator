@@ -1,19 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_RESULT*
+=== BMM_RESULT Class
 
-h|*Description*
-2+a|Automatically declared variable representing result instance of a Function call.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_result.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_VARIABLE[BMM_VARIABLE]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_result.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_result.adoc[]
 
-h|*1..1*
-|*name*: `link:/classes/String[String]`
-a|Name of this model element.
-|===
+====

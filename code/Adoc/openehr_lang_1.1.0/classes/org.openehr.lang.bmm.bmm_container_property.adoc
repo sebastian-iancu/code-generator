@@ -1,30 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_CONTAINER_PROPERTY*
+=== BMM_CONTAINER_PROPERTY Class
 
-h|*Description*
-2+a|Meta-type of for properties of linear container type, such as List<T> etc.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_container_property.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_PROPERTY[BMM_PROPERTY]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_container_property.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_container_property.adoc[]
 
-h|*0..1*
-|*cardinality*: `link:/classes/Multiplicity_interval[Multiplicity_interval]`
-a|Cardinality of this container.
-
-h|*1..1*
-|*type*: `link:/classes/BMM_CONTAINER_TYPE[BMM_CONTAINER_TYPE]`
-a|Declared or inferred static type of the entity.
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
-
-h|*1..1*
-|*display_name* (): `link:/classes/String[String]`
-a|Name of this property in form `name: ContainerTypeName<>`.
-|===
+====

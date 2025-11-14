@@ -1,0 +1,20 @@
+[source,json]
+--------
+{
+    "name": "BMM_UNITARY_VALUE",
+    "documentation": "Meta-type for literals whose concrete type is a unitary type in the BMM sense.",
+    "is_abstract": true,
+    "ancestors": [
+        "BMM_LITERAL_VALUE"
+    ],
+    "properties": {
+        "type": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "type",
+            "documentation": "Declared or inferred static type of the entity.",
+            "is_mandatory": true,
+            "type": "BMM_UNITARY_TYPE"
+        }
+    }
+}
+--------

@@ -1,28 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_FEATURE_GROUP*
+=== BMM_FEATURE_GROUP Class
 
-h|*Description*
-2+a|A logical group of features, with a name and set of properties that applies to the group.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_feature_group.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_feature_group.adoc[]
 
-h|*1..1*
-|*name*: `link:/classes/String[String]`
-a|Name of this feature group; defaults to 'feature'.
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_feature_group.adoc[]
 
-h|*1..1*
-|*properties*: `link:/classes/Hash[Hash]<String,String>`
-a|Set of properties of this group, represented as name/value pairs. These are understood to apply logically to all of the features contained within the group.
-
-h|*0..**
-|*features*: `link:/classes/List[List]<link:/classes/BMM_FEATURE[BMM_FEATURE]>`
-a|Set of features in this group.
-
-h|*0..1*
-|*visibility*: `link:/classes/BMM_VISIBILITY[BMM_VISIBILITY]`
-a|Optional visibility to apply to all features in this group.
-|===
+====

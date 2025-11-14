@@ -1,0 +1,18 @@
+[source,json]
+--------
+{
+    "name": "EL_PROCEDURE_AGENT",
+    "documentation": "An agent whose signature is of a procedure, i.e. has no result type.",
+    "ancestors": [
+        "EL_AGENT"
+    ],
+    "properties": {
+        "definition": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "definition",
+            "documentation": "Reference to definition of routine for which this is a call instance.",
+            "type": "BMM_PROCEDURE"
+        }
+    }
+}
+--------

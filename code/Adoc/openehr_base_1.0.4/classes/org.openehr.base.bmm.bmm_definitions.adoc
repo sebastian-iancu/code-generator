@@ -1,8 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_DEFINITIONS*
+=== BMM_DEFINITIONS Class
 
-h|*Description*
-2+a|Definitions used by all BMM packages.
-|===
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.bmm.bmm_definitions.adoc[]
+
+BMM::
++
+include::../BMMs/org.openehr.base.bmm.bmm_definitions.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.bmm.bmm_definitions.adoc[]
+
+====

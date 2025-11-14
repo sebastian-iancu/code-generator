@@ -1,25 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__BMM_TYPED (abstract)__*
+=== BMM_TYPED Class
 
-h|*Description*
-2+a|Any entity that has a declared or inferred static type, and that can therefore be generate a value.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_typed.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_typed.adoc[]
 
-h|*1..1*
-|*type*: `link:/classes/BMM_TYPE[BMM_TYPE]`
-a|Declared or inferred static type of the entity.
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_typed.adoc[]
 
-h|*1..1*
-|*is_boolean* (): `link:/classes/Boolean[Boolean]` +
- +
-__Post_result__: `Result = type().equal( {BMM_MODEL}.boolean_type_definition())`
-a|True if `_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `'Boolean'`).
-|===
+====

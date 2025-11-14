@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__BMM_INSTANTIABLE (abstract)__*
+=== BMM_INSTANTIABLE Class
 
-h|*Description*
-2+a|Meta-type representing instantiable features, i.e. features that are created as value objects.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_instantiable.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_TYPED_FEATURE[BMM_TYPED_FEATURE]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_instantiable.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_instantiable.adoc[]
+
+====

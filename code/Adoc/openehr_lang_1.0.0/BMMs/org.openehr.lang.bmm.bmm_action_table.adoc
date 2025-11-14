@@ -1,0 +1,26 @@
+[source,json]
+--------
+{
+    "name": "BMM_ACTION_TABLE",
+    "documentation": "Multi-branch conditional statement structure",
+    "ancestors": [
+        "BMM_STATEMENT"
+    ],
+    "properties": {
+        "items": {
+            "_type": "P_BMM_CONTAINER_PROPERTY",
+            "name": "items",
+            "documentation": "Decision branches.",
+            "is_mandatory": true,
+            "type_def": {
+                "container_type": "List",
+                "type": "BMM_CONDITIONAL_ACTION"
+            },
+            "cardinality": {
+                "lower": 1,
+                "upper_unbounded": true
+            }
+        }
+    }
+}
+--------

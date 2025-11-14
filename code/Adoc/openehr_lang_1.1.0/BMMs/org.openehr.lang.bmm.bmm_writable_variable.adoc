@@ -1,0 +1,11 @@
+[source,json]
+--------
+{
+    "name": "BMM_WRITABLE_VARIABLE",
+    "documentation": "Meta-type for writable variables, including the special variable `Result`.",
+    "is_abstract": true,
+    "ancestors": [
+        "BMM_VARIABLE"
+    ]
+}
+--------

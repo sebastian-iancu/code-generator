@@ -1,23 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*P_C_COMPLEX_OBJECT*
+=== P_C_COMPLEX_OBJECT Class
 
-h|*Description*
-2+a|Constraint on complex objects, i.e. any object that consists of other object constraints.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.am.p_aom2.p_c_complex_object.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/P_C_DEFINED_OBJECT[P_C_DEFINED_OBJECT]`
+BMM::
++
+include::../BMMs/org.openehr.am.p_aom2.p_c_complex_object.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.am.p_aom2.p_c_complex_object.adoc[]
 
-h|*0..**
-|*attributes*: `link:/classes/List[List]<link:/classes/P_C_ATTRIBUTE[P_C_ATTRIBUTE]>`
-a|List of constraints on attributes of the reference model type represented by this object.
-
-h|*0..**
-|*attribute_tuples*: `link:/classes/List[List]<link:/classes/P_C_ATTRIBUTE_TUPLE[P_C_ATTRIBUTE_TUPLE]>`
-a|List of attribute tuple constraints under this object constraint, if any.
-|===
+====

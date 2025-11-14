@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__BMM_UNITARY_VALUE<T> (abstract)__*
+=== BMM_UNITARY_VALUE Class
 
-h|*Description*
-2+a|Meta-type for literals whose concrete type is a unitary type in the BMM sense.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_unitary_value.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_LITERAL_VALUE[BMM_LITERAL_VALUE]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_unitary_value.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_unitary_value.adoc[]
+
+====

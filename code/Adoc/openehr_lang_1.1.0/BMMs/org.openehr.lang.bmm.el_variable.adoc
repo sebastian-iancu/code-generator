@@ -1,0 +1,11 @@
+[source,json]
+--------
+{
+    "name": "EL_VARIABLE",
+    "documentation": "Abstract meta-type of any kind of symbolic variable.",
+    "is_abstract": true,
+    "ancestors": [
+        "EL_VALUE_GENERATOR"
+    ]
+}
+--------

@@ -1,0 +1,19 @@
+[source,json]
+--------
+{
+    "name": "EL_SCOPED_REF",
+    "documentation": "A reference that is scoped by a containing entity and requires a context qualifier if it is not the currently scoping entity.",
+    "is_abstract": true,
+    "ancestors": [
+        "EL_INSTANCE_REF"
+    ],
+    "properties": {
+        "scope": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "scope",
+            "documentation": "Reference to an owning object for this terminal element, if it is not the current scope.",
+            "type": "EL_INSTANCE_REF"
+        }
+    }
+}
+--------

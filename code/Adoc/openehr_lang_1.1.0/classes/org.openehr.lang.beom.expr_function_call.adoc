@@ -1,19 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*EXPR_FUNCTION_CALL*
+=== EXPR_FUNCTION_CALL Class
 
-h|*Description*
-2+a|Node representing a function call with 0 or more arguments.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.beom.expr_function_call.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/EXPR_LEAF[EXPR_LEAF]`
+BMM::
++
+include::../BMMs/org.openehr.lang.beom.expr_function_call.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.beom.expr_function_call.adoc[]
 
-h|*0..**
-|*arguments*: `link:/classes/List[List]<link:/classes/EXPRESSION[EXPRESSION]>`
-a|Arguments of this function, which can be from 0 to any number. Functions with no arguments are typically used to represent real world varying values like 'current time' and so on.
-|===
+====

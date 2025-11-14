@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*X_VERSIONED_FOLDER*
+=== X_VERSIONED_FOLDER Class
 
-h|*Description*
-2+a|Form of `X_VERSIONED_OBJECT` for `FOLDER` EHR object.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.ehr_extract.x_versioned_folder.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/X_VERSIONED_OBJECT[X_VERSIONED_OBJECT]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.rm.ehr_extract.x_versioned_folder.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.rm.ehr_extract.x_versioned_folder.adoc[]
+
+====

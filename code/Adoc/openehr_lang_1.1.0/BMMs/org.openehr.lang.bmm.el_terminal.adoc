@@ -1,0 +1,11 @@
+[source,json]
+--------
+{
+    "name": "EL_TERMINAL",
+    "documentation": "Expression entities that are terminals (i.e. leaves) within operator expressions or tuples.",
+    "is_abstract": true,
+    "ancestors": [
+        "EL_EXPRESSION"
+    ]
+}
+--------

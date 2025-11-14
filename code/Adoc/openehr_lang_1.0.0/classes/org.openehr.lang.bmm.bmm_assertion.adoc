@@ -1,25 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_ASSERTION*
+=== BMM_ASSERTION Class
 
-h|*Description*
-2+a|A statement that asserts the truth of its expression. If not, generates an exception (depending on run-time settings).
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_assertion.adoc[]
 
-May be rendered in syntax as `assert condition` or similar.
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_assertion.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_SIMPLE_STATEMENT[BMM_SIMPLE_STATEMENT]`
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_assertion.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
-
-h|*1..1*
-|*expression*: `link:/classes/EL_BOOLEAN_EXPRESSION[EL_BOOLEAN_EXPRESSION]`
-a|
-
-h|*0..1*
-|*tag*: `link:/classes/String[String]`
-a|Optional tag, typically used to designate design intention of the assertion, e.g. `"Inv_all_members_valid"`.
-|===
+====

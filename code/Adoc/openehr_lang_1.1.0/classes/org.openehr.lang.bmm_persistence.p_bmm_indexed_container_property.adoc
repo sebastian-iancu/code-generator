@@ -1,20 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*P_BMM_INDEXED_CONTAINER_PROPERTY*
+=== P_BMM_INDEXED_CONTAINER_PROPERTY Class
 
-h|*Inherit*
-2+|`link:/classes/P_BMM_CONTAINER_PROPERTY[P_BMM_CONTAINER_PROPERTY]`
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm_persistence.p_bmm_indexed_container_property.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm_persistence.p_bmm_indexed_container_property.adoc[]
 
-h|*0..1*
-|*type_def*: `link:/classes/P_BMM_INDEXED_CONTAINER_TYPE[P_BMM_INDEXED_CONTAINER_TYPE]`
-a|Type definition of this property, if not a simple String type reference. Persistent attribute.
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm_persistence.p_bmm_indexed_container_property.adoc[]
 
-h|*0..1*
-|*bmm_property*: `link:/classes/BMM_INDEXED_CONTAINER_PROPERTY[BMM_INDEXED_CONTAINER_PROPERTY]`
-a|`BMM_PROPERTY` created by `_create_bmm_property_`.
-|===
+====

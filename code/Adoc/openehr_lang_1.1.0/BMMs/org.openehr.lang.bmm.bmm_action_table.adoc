@@ -1,0 +1,19 @@
+[source,json]
+--------
+{
+    "name": "BMM_ACTION_TABLE",
+    "documentation": "Multi-branch conditional statement structure",
+    "ancestors": [
+        "BMM_STATEMENT"
+    ],
+    "properties": {
+        "decision_table": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "decision_table",
+            "documentation": "A specialised decision table whose outputs can only be procedure agents. In execution, the matched agent will be invoked.",
+            "is_mandatory": true,
+            "type": "BMM_ACTION_DECISION_TABLE"
+        }
+    }
+}
+--------

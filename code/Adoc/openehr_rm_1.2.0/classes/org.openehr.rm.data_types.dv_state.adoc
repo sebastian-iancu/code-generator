@@ -1,25 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*DV_STATE*
+=== DV_STATE Class
 
-h|*Description*
-2+a|For representing state values which obey a defined state machine, such as a variable  representing the states of an instruction or care process. 
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.data_types.dv_state.adoc[]
 
-DV_STATE is expressed as a String but its values are driven by archetype-defined  state machines. This provides a powerful way of capturing stateful complex processes  in simple data.
+BMM::
++
+include::../BMMs/org.openehr.rm.data_types.dv_state.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/DATA_VALUE[DATA_VALUE]`
+UML::
++
+include::../plantUML/classes/org.openehr.rm.data_types.dv_state.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
-
-h|*1..1*
-|*value*: `link:/classes/DV_CODED_TEXT[DV_CODED_TEXT]`
-a|The state name. State names are determined by a state/event table defined in archetypes, and coded using openEHR Terminology or local archetype terms, as specified by the archetype.
-
-h|*1..1*
-|*is_terminal*: `link:/classes/Boolean[Boolean]`
-a|Indicates whether this state is a terminal state, such as  "aborted",  "completed" etc. from which no further transitions are possible.
-|===
+====

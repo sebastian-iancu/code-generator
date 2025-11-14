@@ -1,23 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*C_QUANTITY*
+=== C_QUANTITY Class
 
-h|*Description*
-2+a|Constrainer class for Quantity data.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.am.aom14.c_quantity.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/C_DOMAIN_TYPE[C_DOMAIN_TYPE]`
+BMM::
++
+include::../BMMs/org.openehr.am.aom14.c_quantity.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.am.aom14.c_quantity.adoc[]
 
-h|*1..1*
-|*property*: `link:/classes/String[String]`
-a|Name of physical property for Quantities being constrained.
-
-h|*0..**
-|*list*: `link:/classes/List[List]<link:/classes/C_QUANTITY_ITEM[C_QUANTITY_ITEM]>`
-a|Value set of allowed individual Quantity item constraints in this Quantity constraint.
-|===
+====

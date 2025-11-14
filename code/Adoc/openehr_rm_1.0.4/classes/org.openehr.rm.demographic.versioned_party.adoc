@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*VERSIONED_PARTY*
+=== VERSIONED_PARTY Class
 
-h|*Description*
-2+a|Static type formed by binding generic parameter of `VERSIONED_OBJECT<T>` to `PARTY`.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.demographic.versioned_party.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/VERSIONED_OBJECT[VERSIONED_OBJECT]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.rm.demographic.versioned_party.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.rm.demographic.versioned_party.adoc[]
+
+====

@@ -1,19 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_SINGLETON*
+=== BMM_SINGLETON Class
 
-h|*Description*
-2+a|Meta-type for static value properties computed once by a function invocation.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_singleton.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_STATIC[BMM_STATIC]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_singleton.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_singleton.adoc[]
 
-h|*1..1*
-|*generator*: `link:/classes/BMM_ROUTINE_DEFINITION[BMM_ROUTINE_DEFINITION]`
-a|Generator of the value of this static property.
-|===
+====

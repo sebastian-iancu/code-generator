@@ -1,30 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__EL_VALUE_GENERATOR (abstract)__*
+=== EL_VALUE_GENERATOR Class
 
-h|*Description*
-2+a|Meta-type representing a value-generating simple expression.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.el_value_generator.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/EL_SIMPLE[EL_SIMPLE]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.el_value_generator.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.el_value_generator.adoc[]
 
-h|*1..1*
-|*is_writable*: `link:/classes/Boolean[Boolean]`
-a|
-
-h|*1..1*
-|*name*: `link:/classes/String[String]`
-a|Name used to represent the reference or other entity.
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
-
-h|*1..1*
-|*reference* (): `link:/classes/String[String]`
-a|Generated full reference name, based on constituent parts of the entity. Default version outputs `_name_` field.
-|===
+====

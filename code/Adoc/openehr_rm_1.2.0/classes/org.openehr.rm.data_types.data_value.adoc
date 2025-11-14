@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__DATA_VALUE (abstract)__*
+=== DATA_VALUE Class
 
-h|*Description*
-2+a|Abstract parent of all `DV_` data value types.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.data_types.data_value.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/OPENEHR_DEFINITIONS[OPENEHR_DEFINITIONS]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.rm.data_types.data_value.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.rm.data_types.data_value.adoc[]
+
+====

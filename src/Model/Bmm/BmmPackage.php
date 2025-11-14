@@ -74,4 +74,30 @@ readonly class BmmPackage implements JsonSerializable, YamlSerializable, Collect
         return $instance;
     }
 
+    public function getAllClassNames(): array
+    {
+        $classes = $this->classes;
+        /** @var BmmPackage $package */
+        foreach ($this->packages as $package) {
+            $classes = array_merge($classes, $package->getAllClassNames());
+        }
+        return $classes;
+    }
+
+
+    public function getClassPackageQName(string $className): ?string
+    {
+        if (in_array($className, $this->classes)) {
+            return $this->getName();
+        }
+        /** @var BmmPackage $package */
+        foreach ($this->packages as $package) {
+            $qname = $package->getClassPackageQName($className);
+            if (!empty($qname)) {
+                return $this->getName() . '.' . $qname;
+            }
+        }
+        return null;
+    }
+
 }

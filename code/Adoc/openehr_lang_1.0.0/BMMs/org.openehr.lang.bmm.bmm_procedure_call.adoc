@@ -1,0 +1,20 @@
+[source,json]
+--------
+{
+    "name": "BMM_PROCEDURE_CALL",
+    "documentation": "A call made on a closed procedure agent.",
+    "ancestors": [
+        "EL_AGENT_CALL",
+        "BMM_SIMPLE_STATEMENT"
+    ],
+    "properties": {
+        "agent": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "agent",
+            "documentation": "The procedure agent being called.",
+            "is_mandatory": true,
+            "type": "EL_PROCEDURE_AGENT"
+        }
+    }
+}
+--------

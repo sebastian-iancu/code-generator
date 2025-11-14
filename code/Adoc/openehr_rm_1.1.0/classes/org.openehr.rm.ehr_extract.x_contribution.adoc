@@ -1,24 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*X_CONTRIBUTION*
+=== X_CONTRIBUTION Class
 
-h|*Description*
-2+a|Serialised form of Contribution for an Extract.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.ehr_extract.x_contribution.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.rm.ehr_extract.x_contribution.adoc[]
 
-h|*1..1*
-|*uid*: `link:/classes/HIER_OBJECT_ID[HIER_OBJECT_ID]`
-a|Uid of Contribution in source system.
+UML::
++
+include::../plantUML/classes/org.openehr.rm.ehr_extract.x_contribution.adoc[]
 
-h|*1..1*
-|*audit*: `link:/classes/AUDIT_DETAILS[AUDIT_DETAILS]`
-a|Audit of Contribution in source system.
-
-h|*0..**
-|*versions*: `link:/classes/List[List]<link:/classes/VERSION[VERSION]<X_CONTRIBUTION>>`
-a|Serialised Versions from Contribution in source system.
-|===
+====

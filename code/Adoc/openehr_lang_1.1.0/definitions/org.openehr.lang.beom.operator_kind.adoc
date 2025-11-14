@@ -1,0 +1,7 @@
+[cols="^1,3,5"]
+|===
+h|*Enumeration*
+2+^h|*OPERATOR_KIND*
+h|*Items*
+2+a|`eq`, `ne`, `lt`, `le`, `gt`, `ge`, `matches`, `not`, `and`, `or`, `xor`, `implies`, `for_all`, `exists`, `plus`, `minus`, `multiply`, `divide`, `modulo`, `exponent`
+|===

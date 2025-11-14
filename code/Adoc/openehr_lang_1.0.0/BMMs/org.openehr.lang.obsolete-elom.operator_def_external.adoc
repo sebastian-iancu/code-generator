@@ -1,0 +1,21 @@
+[source,json]
+--------
+{
+    "name": "OPERATOR_DEF_EXTERNAL",
+    "documentation": "Ancestor of concrete operator definition types. Adds an optional execution agent, typically implemented by closures / lambdas/ agents in languages supporting functional programming.",
+    "is_abstract": true,
+    "properties": {
+        "evaluation_agent": {
+            "_type": "P_BMM_GENERIC_PROPERTY",
+            "name": "evaluation_agent",
+            "is_mandatory": true,
+            "type_def": {
+                "root_type": "FUNCTION",
+                "generic_parameters": [
+                    "TUPLE,Any"
+                ]
+            }
+        }
+    }
+}
+--------

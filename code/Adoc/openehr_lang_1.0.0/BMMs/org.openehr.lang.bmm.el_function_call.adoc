@@ -1,0 +1,33 @@
+[source,json]
+--------
+{
+    "name": "EL_FUNCTION_CALL",
+    "documentation": "A call made on a closed function agent, returning a result. Equivalent to an 'application' of a function in Lambda calculus.",
+    "ancestors": [
+        "EL_SCOPED_REF",
+        "EL_AGENT_CALL"
+    ],
+    "properties": {
+        "agent": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "agent",
+            "documentation": "The function agent being called.",
+            "is_mandatory": true,
+            "type": "EL_FUNCTION_AGENT"
+        }
+    },
+    "functions": {
+        "eval_type": {
+            "name": "eval_type",
+            "documentation": "Return `_agent.definition.type_`.",
+            "result": {
+                "_type": "P_BMM_SIMPLE_TYPE",
+                "type": "BMM_TYPE"
+            }
+        }
+    },
+    "invariants": {
+        "Inv_valid_agent": "agent.is_callable()"
+    }
+}
+--------

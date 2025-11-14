@@ -1,14 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*ACCESS_GROUP_REF*
+=== ACCESS_GROUP_REF Class
 
-h|*Description*
-2+a|Reference to access group in an access control service.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.base_types.access_group_ref.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/OBJECT_REF[OBJECT_REF]`
+BMM::
++
+include::../BMMs/org.openehr.base.base_types.access_group_ref.adoc[]
 
-h|*Invariants*
-2+a|__Type_validity__: `type.is_equal (“ACCESS_GROUP”)`
-|===
+UML::
++
+include::../plantUML/classes/org.openehr.base.base_types.access_group_ref.adoc[]
+
+====

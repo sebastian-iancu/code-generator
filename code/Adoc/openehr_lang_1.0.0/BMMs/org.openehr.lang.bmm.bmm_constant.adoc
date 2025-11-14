@@ -1,0 +1,23 @@
+[source,json]
+--------
+{
+    "name": "BMM_CONSTANT",
+    "documentation": "An immutable, static value-returning element scoped to a class. The `_value_` is the result of the evaluation of the `_generator_`, which may be as simple as a literal value, or may be any expression, including a function call.",
+    "ancestors": [
+        "BMM_INSTANTIABLE",
+        "BMM_CLASS_FEATURE"
+    ],
+    "properties": {
+        "generator": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "generator",
+            "documentation": "Generator expression for the constant value. In the  degenerate case, this is just a literal value, but may also be any other expression valid in the context.",
+            "is_mandatory": true,
+            "type": "EL_INSTANCE_REF"
+        }
+    },
+    "invariants": {
+        "Inv_not_nullable": "is_nullable = False"
+    }
+}
+--------

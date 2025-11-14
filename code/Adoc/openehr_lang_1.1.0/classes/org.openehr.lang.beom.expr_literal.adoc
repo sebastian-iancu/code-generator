@@ -1,19 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*EXPR_LITERAL*
+=== EXPR_LITERAL Class
 
-h|*Description*
-2+a|Literal value expression tree leaf item. This can represent a literal value of any primitive type included in the `PRIMITIVE_TYPE` enumeration.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.beom.expr_literal.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/EXPR_LEAF[EXPR_LEAF]`
+BMM::
++
+include::../BMMs/org.openehr.lang.beom.expr_literal.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.beom.expr_literal.adoc[]
 
-h|*1..1*
-|*item*: `link:/classes/Any[Any]`
-a|A statically set constant value of a primitive type.
-|===
+====

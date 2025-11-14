@@ -1,0 +1,73 @@
+=== Double Class
+
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*Double*
+
+h|*Description*
+2+a|Type used to represent double-precision decimal numbers. Corresponds to a double-precision floating point value in most languages.
+
+h|*Inherit*
+2+|`<<_ordered_numeric_class,Ordered_Numeric>>`
+
+h|*Functions*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1*
+|*floor* (): `<<_integer_class,Integer>>`
+a|Return the greatest integer no greater than the value of this object.
+
+h|*1..1*
+|*add* ( +
+other: `<<_double_class,Double>>[1]` +
+): `<<_double_class,Double>>`
+a|Double-precision real number addition.
+
+h|*1..1*
+|*subtract* ( +
+other: `<<_double_class,Double>>[1]` +
+): `<<_double_class,Double>>`
+a|Double-precision real number subtraction.
+
+h|*1..1*
+|*multiply* ( +
+other: `<<_double_class,Double>>[1]` +
+): `<<_double_class,Double>>`
+a|Double-precision real number multiplication.
+
+h|*1..1*
+|*divide* ( +
+other: `<<_double_class,Double>>[1]` +
+): `<<_double_class,Double>>`
+a|Double-precision real number division.
+
+h|*1..1*
+|*exponent* ( +
+other: `<<_double_class,Double>>[1]` +
+): `<<_double_class,Double>>`
+a|Double-precision real number exponentiation.
+
+h|*1..1*
+|*less_than* ( +
+other: `<<_double_class,Double>>[1]` +
+): `<<_boolean_class,Boolean>>`
+a|Returns True if current Double is less than `_other_`.
+
+h|*1..1*
+|*negative* (): `<<_double_class,Double>>`
+a|Generate negative of current Double value.
+
+h|*1..1*
+|*is_equal* ( +
+other: `<<_double_class,Double>>[1]` +
+): `<<_boolean_class,Boolean>>`
+a|Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.
+
+h|*1..1*
+|*equal* ( +
+other: `<<_double_class,Double>>[1]` +
+): `<<_boolean_class,Boolean>>`
+a|Reference equality for reference types, value equality for value types.
+|===

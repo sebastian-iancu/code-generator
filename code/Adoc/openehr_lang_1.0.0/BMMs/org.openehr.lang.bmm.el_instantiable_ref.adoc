@@ -1,0 +1,34 @@
+[source,json]
+--------
+{
+    "name": "EL_INSTANTIABLE_REF",
+    "documentation": "Terminal item corresponding to a reference to a directly instantiable entity, i.e. a variable, constant, or property.",
+    "ancestors": [
+        "EL_SCOPED_REF"
+    ],
+    "generic_parameter_defs": {
+        "T": {
+            "name": "T",
+            "conforms_to_type": "BMM_INSTANTIABLE"
+        }
+    },
+    "properties": {
+        "definition": {
+            "_type": "P_BMM_SINGLE_PROPERTY_OPEN",
+            "name": "definition",
+            "documentation": "Definition of the constant, property or variable, inferred by inspection of the current scoping instance.",
+            "type": "T"
+        }
+    },
+    "functions": {
+        "eval_type": {
+            "name": "eval_type",
+            "documentation": "Type definition (i.e. BMM meta-type definition object) of the constant, property or variable, inferred by inspection of the current scoping instance. Return `_definition.type_`.",
+            "result": {
+                "_type": "P_BMM_SIMPLE_TYPE",
+                "type": "BMM_TYPE"
+            }
+        }
+    }
+}
+--------

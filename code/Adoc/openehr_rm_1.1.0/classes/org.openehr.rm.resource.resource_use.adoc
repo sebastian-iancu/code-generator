@@ -1,13 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__RESOURCE_USE (abstract)__*
+=== RESOURCE_USE Class
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.resource.resource_use.adoc[]
 
-h|*0..1*
-|*cost_data*: `link:/classes/ITEM_STRUCTURE[ITEM_STRUCTURE]`
-a|
-|===
+BMM::
++
+include::../BMMs/org.openehr.rm.resource.resource_use.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.rm.resource.resource_use.adoc[]
+
+====

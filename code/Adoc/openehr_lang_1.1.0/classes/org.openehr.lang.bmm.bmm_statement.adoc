@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__BMM_STATEMENT (abstract)__*
+=== BMM_STATEMENT Class
 
-h|*Description*
-2+a|Abstract parent of 'statement' types that may be defined to implement BMM Routines.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_statement.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_STATEMENT_ITEM[BMM_STATEMENT_ITEM]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_statement.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_statement.adoc[]
+
+====

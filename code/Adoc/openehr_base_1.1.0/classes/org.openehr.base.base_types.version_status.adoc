@@ -1,7 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Enumeration*
-2+^h|*VERSION_STATUS*
-h|*Items*
-2+a|`alpha`, `beta`, `release_candidate`, `released`, `build`
-|===
+=== VERSION_STATUS Class
+
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.base_types.version_status.adoc[]
+
+BMM::
++
+include::../BMMs/org.openehr.base.base_types.version_status.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.base_types.version_status.adoc[]
+
+====

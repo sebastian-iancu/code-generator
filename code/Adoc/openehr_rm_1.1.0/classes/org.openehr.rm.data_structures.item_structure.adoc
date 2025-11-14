@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__ITEM_STRUCTURE (abstract)__*
+=== ITEM_STRUCTURE Class
 
-h|*Description*
-2+a|Abstract parent class of all spatial data types.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.data_structures.item_structure.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/DATA_STRUCTURE[DATA_STRUCTURE]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.rm.data_structures.item_structure.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.rm.data_structures.item_structure.adoc[]
+
+====

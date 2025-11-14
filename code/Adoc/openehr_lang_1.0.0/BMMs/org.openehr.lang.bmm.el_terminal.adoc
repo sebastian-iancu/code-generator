@@ -1,0 +1,11 @@
+[source,json]
+--------
+{
+    "name": "EL_TERMINAL",
+    "documentation": "Expression terminal entity, representing one of:\n\n* a reference to a literal value of any type;\n* a reference to an instance of any instantiable type, i.e. variable, property or constant;\n* an agent, i.e. a delayed function call;\n* a function call.",
+    "is_abstract": true,
+    "ancestors": [
+        "EL_SIMPLE"
+    ]
+}
+--------

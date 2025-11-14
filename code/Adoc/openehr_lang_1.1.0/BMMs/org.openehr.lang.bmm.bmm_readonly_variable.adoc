@@ -1,0 +1,11 @@
+[source,json]
+--------
+{
+    "name": "BMM_READONLY_VARIABLE",
+    "documentation": "Meta-type for writable variables, including routine parameters and the special variable `Self`.",
+    "is_abstract": true,
+    "ancestors": [
+        "BMM_VARIABLE"
+    ]
+}
+--------

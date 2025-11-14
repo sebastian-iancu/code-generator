@@ -1,28 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*List<T>*
+=== List Class
 
-h|*Description*
-2+a|Ordered container that may contain duplicates.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.foundation_types.list.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/Container[Container]`
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.base.foundation_types.list.adoc[]
 
-h|*1..1*
-|*first* (): `T`
-a|Return first element.
+UML::
++
+include::../plantUML/classes/org.openehr.base.foundation_types.list.adoc[]
 
-h|*1..1*
-|*last* (): `T`
-a|Return last element.
-
-h|*Invariants*
-2+a|__First_validity__: `not is_empty implies first /= Void`
-
-h|
-2+a|__Last_validity__: `not is_empty implies last /= Void`
-|===
+====

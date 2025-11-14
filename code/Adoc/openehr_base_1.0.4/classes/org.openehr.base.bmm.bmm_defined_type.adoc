@@ -1,16 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__BMM_DEFINED_TYPE (abstract)__*
+=== BMM_DEFINED_TYPE Class
 
-h|*Inherit*
-2+|`link:/classes/BMM_UNITARY_TYPE[BMM_UNITARY_TYPE]`
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.bmm.bmm_defined_type.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.base.bmm.bmm_defined_type.adoc[]
 
-h|*1..1*
-|*base_class*: `link:/classes/BMM_CLASS[BMM_CLASS]`
-a|The target type; this converts to the first parameter in `_generic_parameters_` in `BMM_GENERIC_TYPE`.
-|===
+UML::
++
+include::../plantUML/classes/org.openehr.base.bmm.bmm_defined_type.adoc[]
+
+====

@@ -1,0 +1,30 @@
+[source,json]
+--------
+{
+    "name": "BMM_TYPED",
+    "documentation": "Any entity that has a declared or inferred static type, and that can therefore be generate a value.",
+    "is_abstract": true,
+    "properties": {
+        "type": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "type",
+            "documentation": "Declared or inferred static type of the entity.",
+            "is_mandatory": true,
+            "type": "BMM_TYPE"
+        }
+    },
+    "functions": {
+        "is_boolean": {
+            "name": "is_boolean",
+            "documentation": "True if `_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `'Boolean'`).",
+            "post_conditions": {
+                "Post_result": "Result = type().equal( {BMM_MODEL}.boolean_type_definition())"
+            },
+            "result": {
+                "_type": "P_BMM_SIMPLE_TYPE",
+                "type": "Boolean"
+            }
+        }
+    }
+}
+--------

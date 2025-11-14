@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*GROUP*
+=== GROUP Class
 
-h|*Description*
-2+a|A group is a real world group of parties which is created by another party, usually an organisation, for some specific purpose. A typical clinical example is that of the specialist care team, e.g.  cardiology team . The members of the group usually work together.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.demographic.group.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/ACTOR[ACTOR]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.rm.demographic.group.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.rm.demographic.group.adoc[]
+
+====

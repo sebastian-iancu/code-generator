@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__Temporal (abstract)__*
+=== Temporal Class
 
-h|*Description*
-2+a|Abstract ancestor of time-related classes.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.foundation_types.temporal.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/Ordered[Ordered]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.base.foundation_types.temporal.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.foundation_types.temporal.adoc[]
+
+====

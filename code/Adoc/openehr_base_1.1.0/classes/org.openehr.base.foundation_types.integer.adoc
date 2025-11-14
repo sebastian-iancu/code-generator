@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*Integer*
+=== Integer Class
 
-h|*Description*
-2+a|Class representing minimal interface of standard Integer type.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.foundation_types.integer.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/Ordered_Numeric[Ordered_Numeric]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.base.foundation_types.integer.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.foundation_types.integer.adoc[]
+
+====

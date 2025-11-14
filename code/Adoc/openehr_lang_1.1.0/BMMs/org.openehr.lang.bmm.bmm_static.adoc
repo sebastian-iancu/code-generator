@@ -1,0 +1,11 @@
+[source,json]
+--------
+{
+    "name": "BMM_STATIC",
+    "documentation": "Meta-type for static (i.e. read-only) properties.",
+    "is_abstract": true,
+    "ancestors": [
+        "BMM_INSTANTIABLE_FEATURE"
+    ]
+}
+--------

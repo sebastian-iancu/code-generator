@@ -1,52 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__BMM_ENTITY (abstract)__*
+=== BMM_ENTITY Class
 
-h|*Description*
-2+a|Abstract parent of type and class meta-types.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.bmm.bmm_entity.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_DEFINITIONS[BMM_DEFINITIONS]`
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.base.bmm.bmm_entity.adoc[]
 
-h|*1..1 +
-(abstract)*
-|*entity_category* (): `link:/classes/String[String]`
-a|Generate a category code-string to use in visualisation, that indicates:
+UML::
++
+include::../plantUML/classes/org.openehr.base.bmm.bmm_entity.adoc[]
 
-* _entity meta-type_: simple | enumerated | generic | generic_effective | parameter
-* _abstract modifier_ - abstract status
-* _primitive modifier_ primitive status
-
-The code is structured as:
-
-----
-entity_metatype [ '-' abstract_modifier ] [ '-' primitive_modifier ]
-----
-
-h|*1..1 +
-(abstract)*
-|*entity_metatype* (): `link:/classes/String[String]`
-a|Meta-type of entity, which classifies it according to the kind of formal entity it represents from the following:
-
-* simple (non-generic)
-* generic
-* enumeration
-* type parameter
-* container type
-
-These meta-types don't exactly match the `BMM_*` types defined in the model, but are useful for displaying models visually.
-
-h|*1..1 +
-(abstract)*
-|*is_abstract* (): `link:/classes/Boolean[Boolean]`
-a|If true, indicates an abstract class in a BMM model, or a type based on an abstract class, i.e. a type that cannot be directly instantiated.
-
-h|*1..1 +
-(abstract)*
-|*is_primitive* (): `link:/classes/Boolean[Boolean]`
-a|If True, indicates that the entity in a BMM model is considered to relate to a primitive type set, i.e. be a primitive type, or be a definer of one.
-|===
+====

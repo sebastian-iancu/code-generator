@@ -1,31 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__BMM_CLASS_FEATURE (abstract)__*
+=== BMM_CLASS_FEATURE Class
 
-h|*Description*
-2+a|A class entity having a signature and a class as its scope.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_class_feature.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_CLASS_ENTITY[BMM_CLASS_ENTITY]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_class_feature.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_class_feature.adoc[]
 
-h|*1..1*
-|*scope*: `link:/classes/BMM_CLASS[BMM_CLASS]`
-a|Class within which a referenceable element is known.
-
-h|*0..1*
-|*visibility*: `link:/classes/BMM_VISIBILITY[BMM_VISIBILITY]`
-a|Visibility of this item to client entities.
-
-h|*0..**
-|*feature_extensions*: `link:/classes/List[List]<link:/classes/BMM_FEATURE_EXTENSION[BMM_FEATURE_EXTENSION]>`
-a|Extensions to feature-level meta-types.
-
-h|*1..1*
-|*group*: `link:/classes/BMM_FEATURE_GROUP[BMM_FEATURE_GROUP]`
-a|Group containing this feature.
-|===
+====

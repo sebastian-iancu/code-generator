@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__BMM_STATIC (abstract)__*
+=== BMM_STATIC Class
 
-h|*Description*
-2+a|Meta-type for static (i.e. read-only) properties.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_static.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_INSTANTIABLE_FEATURE[BMM_INSTANTIABLE_FEATURE]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_static.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_static.adoc[]
+
+====

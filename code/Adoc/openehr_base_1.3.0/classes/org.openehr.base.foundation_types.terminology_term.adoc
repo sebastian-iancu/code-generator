@@ -1,23 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*Terminology_term*
+=== Terminology_term Class
 
-h|*Description*
-2+a|Leaf type representing a standalone term from a terminology, which consists of the term text and the code, i.e. a concept reference.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.foundation_types.terminology_term.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/Any[Any]`
+BMM::
++
+include::../BMMs/org.openehr.base.foundation_types.terminology_term.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.base.foundation_types.terminology_term.adoc[]
 
-h|*1..1*
-|*concept*: `link:/classes/Terminology_code[Terminology_code]`
-a|Reference to the terminology concept formally representing this term.
-
-h|*1..1*
-|*text*: `link:/classes/String[String]`
-a|Text of term.
-|===
+====

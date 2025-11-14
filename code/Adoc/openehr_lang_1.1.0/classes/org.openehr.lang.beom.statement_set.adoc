@@ -1,27 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*STATEMENT_SET*
+=== STATEMENT_SET Class
 
-h|*Description*
-2+a|A container for a specific set of statements intended to be used together.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.beom.statement_set.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.lang.beom.statement_set.adoc[]
 
-h|*0..**
-|*statement*: `link:/classes/List[List]<link:/classes/STATEMENT[STATEMENT]>`
-a|The member statements of this statement set.
+UML::
++
+include::../plantUML/classes/org.openehr.lang.beom.statement_set.adoc[]
 
-h|*0..1*
-|*name*: `link:/classes/String[String]`
-a|Optional name of this rule set.
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
-
-h|*1..1*
-|*execution_result* (): `link:/classes/Boolean[Boolean]`
-a|Execution result of the whole rule set. Determined by the and-ing of result values of Assertions in the rule set.
-|===
+====

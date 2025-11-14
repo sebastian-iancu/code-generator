@@ -1,0 +1,10 @@
+[source,json]
+--------
+{
+    "name": "BMM_CONTAINER_VALUE",
+    "documentation": "Meta-type for literals whose concrete type is a linear container type, i.e. array, list or set.",
+    "ancestors": [
+        "BMM_LITERAL_VALUE"
+    ]
+}
+--------

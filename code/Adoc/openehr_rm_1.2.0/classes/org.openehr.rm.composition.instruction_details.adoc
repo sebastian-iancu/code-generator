@@ -1,36 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*INSTRUCTION_DETAILS*
+=== INSTRUCTION_DETAILS Class
 
-h|*Description*
-2+a|Used to record details of the Instruction causing an Action.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.composition.instruction_details.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/PATHABLE[PATHABLE]`
+BMM::
++
+include::../BMMs/org.openehr.rm.composition.instruction_details.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.rm.composition.instruction_details.adoc[]
 
-h|*1..1*
-|*instruction_id*: `link:/classes/LOCATABLE_REF[LOCATABLE_REF]`
-a|Reference to causing Instruction.
-
-h|*1..1*
-|*activity_id*: `link:/classes/String[String]`
-a|Identifier of Activity within Instruction, in the form of its archetype path.
-
-h|*0..1*
-|*wf_details*: `link:/classes/ITEM_STRUCTURE[ITEM_STRUCTURE]`
-a|Various workflow engine state details, potentially including such things as:
-
-* condition that fired to cause this Action to be done (with actual variables substituted); 
-* list of notifications which actually occurred (with all variables substituted); 
-* other workflow engine state. 
-
-This specification does not currently define the actual structure or semantics of this field.
-
-h|*Invariants*
-2+a|__Activity_path_valid__: `not activity_id.is_empty`
-|===
+====

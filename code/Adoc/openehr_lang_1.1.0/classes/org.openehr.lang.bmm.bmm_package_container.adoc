@@ -1,44 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__BMM_PACKAGE_CONTAINER (abstract)__*
+=== BMM_PACKAGE_CONTAINER Class
 
-h|*Description*
-2+a|A BMM model component that contains packages and classes.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_package_container.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_MODEL_ELEMENT[BMM_MODEL_ELEMENT]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_package_container.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_package_container.adoc[]
 
-h|*0..1*
-|*packages*: `link:/classes/Hash[Hash]<String,BMM_PACKAGE>`
-a|Child packages; keys all in upper case for guaranteed matching.
-
-h|*1..1*
-|*scope*: `link:/classes/BMM_PACKAGE_CONTAINER[BMM_PACKAGE_CONTAINER]`
-a|Model element within which a referenceable element is known.
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
-
-h|*1..1*
-|*package_at_path* ( +
-a_path: `link:/classes/String[String][1]` +
-): `link:/classes/BMM_PACKAGE[BMM_PACKAGE]`
-a|Package at the path `_a_path_`.
-
-h|*1..1*
-|*do_recursive_packages* ( +
-action: `link:/classes/EL_PROCEDURE_AGENT[EL_PROCEDURE_AGENT][1]` +
-): `link:/classes/void[void]`
-a|Recursively execute `_action_`, which is a procedure taking a `BMM_PACKAGE` argument, on all members of packages.
-
-h|*1..1*
-|*has_package_path* ( +
-a_path: `link:/classes/String[String][1]` +
-): `link:/classes/Boolean[Boolean]`
-a|True if there is a package at the path `_a_path_`; paths are delimited with delimiter `{BMM_DEFINITIONS} _Package_name_delimiter_`.
-|===
+====

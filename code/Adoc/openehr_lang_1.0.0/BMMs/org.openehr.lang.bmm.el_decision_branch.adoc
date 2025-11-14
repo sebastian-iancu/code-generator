@@ -1,0 +1,16 @@
+[source,json]
+--------
+{
+    "name": "EL_DECISION_BRANCH",
+    "is_abstract": true,
+    "properties": {
+        "result": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "result",
+            "documentation": "Result expression of conditional, if its `_condition_` evaluates to True.",
+            "is_mandatory": true,
+            "type": "EL_EXPRESSION"
+        }
+    }
+}
+--------

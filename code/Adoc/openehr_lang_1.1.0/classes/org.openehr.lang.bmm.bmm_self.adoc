@@ -1,19 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_SELF*
+=== BMM_SELF Class
 
-h|*Description*
-2+a|Meta-type for an automatically created variable referencing the current instance. Typically called 'self' or 'this' in programming languages. Read-only.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_self.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_READONLY_VARIABLE[BMM_READONLY_VARIABLE]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_self.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_self.adoc[]
 
-h|*1..1*
-|*name*: `link:/classes/String[String]`
-a|Name of this model element.
-|===
+====

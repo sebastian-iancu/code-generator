@@ -1,23 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_ROUTINE_EXTERNAL*
+=== BMM_ROUTINE_EXTERNAL Class
 
-h|*Description*
-2+a|External routine placeholder, containing sufficient meta-data to enable a routine in an external library to be called.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_routine_external.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_ROUTINE_BODY[BMM_ROUTINE_BODY]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_routine_external.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_routine_external.adoc[]
 
-h|*1..1*
-|*meta_data*: `link:/classes/Hash[Hash]<String,String>`
-a|External call general meta-data, including target routine name, type mapping etc.
-
-h|*0..1*
-|*argument_mapping*: `link:/classes/Hash[Hash]<String,String>`
-a|Optional argument-mapping meta-data.
-|===
+====

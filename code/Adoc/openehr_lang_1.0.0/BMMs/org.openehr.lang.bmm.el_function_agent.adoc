@@ -1,0 +1,18 @@
+[source,json]
+--------
+{
+    "name": "EL_FUNCTION_AGENT",
+    "documentation": "An agent whose signature is of a function, i.e. has a result type.",
+    "ancestors": [
+        "EL_AGENT"
+    ],
+    "properties": {
+        "definition": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "definition",
+            "documentation": "Reference to definition of a routine for which this is a direct call instance, if one exists. ",
+            "type": "BMM_FUNCTION"
+        }
+    }
+}
+--------

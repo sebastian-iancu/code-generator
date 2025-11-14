@@ -1,19 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_UNITARY_PROPERTY*
+=== BMM_UNITARY_PROPERTY Class
 
-h|*Description*
-2+a|Meta-type of for properties of unitary type.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_unitary_property.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_PROPERTY[BMM_PROPERTY]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_unitary_property.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_unitary_property.adoc[]
 
-h|*1..1*
-|*type*: `link:/classes/BMM_UNITARY_TYPE[BMM_UNITARY_TYPE]`
-a|Declared or inferred static type of the entity.
-|===
+====

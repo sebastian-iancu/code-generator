@@ -1,70 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*Double*
+=== Double Class
 
-h|*Description*
-2+a|Type used to represent double-precision decimal numbers. Corresponds to a double-precision floating point value in most languages.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.foundation_types.double.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/Ordered_Numeric[Ordered_Numeric]`
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.base.foundation_types.double.adoc[]
 
-h|*1..1*
-|*floor* (): `link:/classes/Integer[Integer]`
-a|Return the greatest integer no greater than the value of this object.
+UML::
++
+include::../plantUML/classes/org.openehr.base.foundation_types.double.adoc[]
 
-h|*1..1*
-|*add* ( +
-other: `link:/classes/Double[Double][1]` +
-): `link:/classes/Double[Double]`
-a|Double-precision real number addition.
-
-h|*1..1*
-|*subtract* ( +
-other: `link:/classes/Double[Double][1]` +
-): `link:/classes/Double[Double]`
-a|Double-precision real number subtraction.
-
-h|*1..1*
-|*multiply* ( +
-other: `link:/classes/Double[Double][1]` +
-): `link:/classes/Double[Double]`
-a|Double-precision real number multiplication.
-
-h|*1..1*
-|*divide* ( +
-other: `link:/classes/Double[Double][1]` +
-): `link:/classes/Double[Double]`
-a|Double-precision real number division.
-
-h|*1..1*
-|*exponent* ( +
-other: `link:/classes/Double[Double][1]` +
-): `link:/classes/Double[Double]`
-a|Double-precision real number exponentiation.
-
-h|*1..1*
-|*less_than* ( +
-other: `link:/classes/Double[Double][1]` +
-): `link:/classes/Boolean[Boolean]`
-a|Returns True if current Double is less than `_other_`.
-
-h|*1..1*
-|*negative* (): `link:/classes/Double[Double]`
-a|Generate negative of current Double value.
-
-h|*1..1*
-|*is_equal* ( +
-other: `link:/classes/Double[Double][1]` +
-): `link:/classes/Boolean[Boolean]`
-a|Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.
-
-h|*1..1*
-|*equal* ( +
-other: `link:/classes/Double[Double][1]` +
-): `link:/classes/Boolean[Boolean]`
-a|Reference equality for reference types, value equality for value types.
-|===
+====

@@ -1,28 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_ASSIGNMENT*
+=== BMM_ASSIGNMENT Class
 
-h|*Description*
-2+a|Statement type representing an assignment from a value-generating source to a writable entity, i.e. a variable reference or property.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.bmm_assignment.adoc[]
 
-At the meta-model level, may be understood as an initialisation of an existing meta-model instance.
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.bmm_assignment.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/BMM_SIMPLE_STATEMENT[BMM_SIMPLE_STATEMENT]`
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.bmm_assignment.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
-
-h|*1..1*
-|*target*: `link:/classes/EL_VALUE_GENERATOR[EL_VALUE_GENERATOR]`
-a|The target variable on the notional left-hand side of this assignment.
-
-h|*1..1*
-|*source*: `link:/classes/EL_EXPRESSION[EL_EXPRESSION]`
-a|Source right hand side) of the assignment.
-
-h|*Invariants*
-2+a|__Inv_target_writable__: `target.is_writable`
-|===
+====

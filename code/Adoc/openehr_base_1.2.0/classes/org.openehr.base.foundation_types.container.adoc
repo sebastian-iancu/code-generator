@@ -1,55 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__Container<T> (abstract)__*
+=== Container Class
 
-h|*Description*
-2+a|Abstract ancestor of container types whose items are addressable in some way.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.foundation_types.container.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/Any[Any]`
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.base.foundation_types.container.adoc[]
 
-h|*1..1 +
-(abstract)*
-|*has* ( +
-v: `T[1]` +
-): `link:/classes/Boolean[Boolean]`
-a|Test for membership of a value.
+UML::
++
+include::../plantUML/classes/org.openehr.base.foundation_types.container.adoc[]
 
-h|*1..1 +
-(abstract)*
-|*count* (): `link:/classes/Integer[Integer]`
-a|Number of items in container.
-
-h|*1..1 +
-(abstract)*
-|*is_empty* (): `link:/classes/Boolean[Boolean]`
-a|True if container is empty.
-
-h|*1..1*
-|*there_exists* ( +
-test: `Operation[1]` +
-): `link:/classes/Boolean[Boolean]`
-a|Existential quantifier applied to container, taking one agent argument `_test_` whose signature is `(v:T): Boolean`.
-
-h|*1..1*
-|*for_all* ( +
-test: `Operation[1]` +
-): `link:/classes/Boolean[Boolean]`
-a|Universal quantifier applied to container, taking one agent argument `_test_` whose signature is `(v:T): Boolean`.
-
-h|*1..**
-|*matching* ( +
-test: `Operation[1]` +
-): `link:/classes/List[List]<T>`
-a|Return a List all items matching the predicate function `_test_` which has signature `(v:T): Boolean`. If no matches, an empty List is returned.
-
-h|*1..1*
-|*select* ( +
-test: `Operation[1]` +
-): `T`
-a|Return first item matching the predicate function `_test_` which has signature `(v:T): Boolean`, or Void if no match.
-|===
+====

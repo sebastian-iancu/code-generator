@@ -1,0 +1,19 @@
+[source,json]
+--------
+{
+    "name": "BMM_PRIMITIVE_VALUE",
+    "documentation": "Meta-type for literals whose concrete type is a primitive type.",
+    "ancestors": [
+        "BMM_UNITARY_VALUE"
+    ],
+    "properties": {
+        "type": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "type",
+            "documentation": "Concrete type of this literal.",
+            "is_mandatory": true,
+            "type": "BMM_SIMPLE_TYPE"
+        }
+    }
+}
+--------

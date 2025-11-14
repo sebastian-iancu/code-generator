@@ -1,8 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*Character*
+=== Character Class
 
-h|*Inherit*
-2+|`link:/classes/Ordered[Ordered]`
-|===
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.foundation_types.character.adoc[]
+
+BMM::
++
+include::../BMMs/org.openehr.base.foundation_types.character.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.foundation_types.character.adoc[]
+
+====

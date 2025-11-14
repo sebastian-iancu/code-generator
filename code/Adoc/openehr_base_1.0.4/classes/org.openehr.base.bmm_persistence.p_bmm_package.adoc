@@ -1,40 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*P_BMM_PACKAGE*
+=== P_BMM_PACKAGE Class
 
-h|*Description*
-2+a|Persisted form of a package as a tree structure whose nodes can contain more packages and/or classes.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.bmm_persistence.p_bmm_package.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/P_BMM_PACKAGE_CONTAINER[P_BMM_PACKAGE_CONTAINER], link:/classes/P_BMM_MODEL_ELEMENT[P_BMM_MODEL_ELEMENT]`
+BMM::
++
+include::../BMMs/org.openehr.base.bmm_persistence.p_bmm_package.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.base.bmm_persistence.p_bmm_package.adoc[]
 
-h|*1..1*
-|*name*: `link:/classes/String[String]`
-a|Name of the package from schema; this name may be qualified if it is a top-level package within the schema, or unqualified. Persistent attribute.
-
-h|*0..**
-|*classes*: `link:/classes/List[List]<link:/classes/String[String]>`
-a|List of classes in this package. Persistent attribute.
-
-h|*0..1*
-|*bmm_package_definition*: `link:/classes/BMM_PACKAGE[BMM_PACKAGE]`
-a|`BMM_PACKAGE` created by `_create_bmm_package_definition_`.
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
-
-h|*1..1*
-|*merge* ( +
-other: `link:/classes/P_BMM_PACKAGE[P_BMM_PACKAGE][1]` +
-): `link:/classes/void[void]`
-a|Merge packages and classes from other (from an included `P_BMM_SCHEMA`) into this package.
-
-h|*1..1*
-|*create_bmm_package_definition* (): `link:/classes/void[void]`
-a|Generate a `BMM_PACKAGE_DEFINITION` object and write it to `_bmm_package_definition_`.
-|===
+====

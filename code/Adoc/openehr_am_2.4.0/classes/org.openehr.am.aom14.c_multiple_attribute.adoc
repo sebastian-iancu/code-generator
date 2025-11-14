@@ -1,26 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*C_MULTIPLE_ATTRIBUTE*
+=== C_MULTIPLE_ATTRIBUTE Class
 
-h|*Description*
-2+a|Concrete model of constraint on multiply-valued (ie. container) attribute node.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.am.aom14.c_multiple_attribute.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/C_ATTRIBUTE[C_ATTRIBUTE]`
+BMM::
++
+include::../BMMs/org.openehr.am.aom14.c_multiple_attribute.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.am.aom14.c_multiple_attribute.adoc[]
 
-h|*1..1*
-|*cardinality*: `link:/classes/CARDINALITY[CARDINALITY]`
-a|Cardinality of this attribute constraint, if it constraints a container attribute.
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
-
-h|*1..**
-|*members* (): `link:/classes/List[List]<link:/classes/C_OBJECT[C_OBJECT]>`
-a|List of constraints representing members of the container value of this attribute within the data. Semantics of the uniqueness and ordering of items in the container are given by the cardinality.
-|===
+====

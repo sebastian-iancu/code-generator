@@ -1,11 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*Uri*
+=== Uri Class
 
-h|*Description*
-2+a|A kind of String constrained to obey the syntax of RFC 3986.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.foundation_types.uri.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/String[String]`
-|===
+BMM::
++
+include::../BMMs/org.openehr.base.foundation_types.uri.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.foundation_types.uri.adoc[]
+
+====

@@ -1,0 +1,10 @@
+[source,json]
+--------
+{
+    "name": "EL_DEFINED",
+    "documentation": "A predicate taking one external variable reference argument, that returns true if the reference is resolvable, i.e. the external value is obtainable.\n\nNOTE: probably to be removed.",
+    "ancestors": [
+        "EL_PREDICATE"
+    ]
+}
+--------

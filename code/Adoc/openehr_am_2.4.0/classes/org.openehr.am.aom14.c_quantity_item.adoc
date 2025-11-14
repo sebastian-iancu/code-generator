@@ -1,20 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*C_QUANTITY_ITEM*
+=== C_QUANTITY_ITEM Class
 
-h|*Description*
-2+a|Constrainer class for a single Quantity.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.am.aom14.c_quantity_item.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.am.aom14.c_quantity_item.adoc[]
 
-h|*1..1*
-|*magnitude*: `link:/classes/Interval[Interval]<Real>`
-a|Quantity magnitude constraint.
+UML::
++
+include::../plantUML/classes/org.openehr.am.aom14.c_quantity_item.adoc[]
 
-h|*0..1*
-|*units*: `link:/classes/String[String]`
-a|Optional units constraint.
-|===
+====

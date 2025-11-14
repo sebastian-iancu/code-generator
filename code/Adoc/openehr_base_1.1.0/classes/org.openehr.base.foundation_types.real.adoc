@@ -1,18 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*Real*
+=== Real Class
 
-h|*Description*
-2+a|Type used to represent decimal numbers. Corresponds to a single-precision floating point value in most languages.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.foundation_types.real.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/Ordered_Numeric[Ordered_Numeric]`
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.base.foundation_types.real.adoc[]
 
-h|*1..1*
-|*floor* (): `link:/classes/Integer[Integer]`
-a|Return the greatest integer no greater than the value of this object.
-|===
+UML::
++
+include::../plantUML/classes/org.openehr.base.foundation_types.real.adoc[]
+
+====

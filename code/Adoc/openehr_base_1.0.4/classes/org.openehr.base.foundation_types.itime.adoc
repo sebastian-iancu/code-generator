@@ -1,39 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__ITime (abstract)__*
+=== ITime Class
 
-h|*Description*
-2+a|Defines the interface of an absolute point in time from an origin usually interpreted as meaning the start of the current day, specified to fractional seconds.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.foundation_types.itime.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/Temporal[Temporal]`
-h|*Functions*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.base.foundation_types.itime.adoc[]
 
-h|*1..1*
-|*hour* (): `link:/classes/Integer[Integer]`
-a|Hour in day, in 24-hour time.
+UML::
++
+include::../plantUML/classes/org.openehr.base.foundation_types.itime.adoc[]
 
-h|*1..1*
-|*minute* (): `link:/classes/Integer[Integer]`
-a|Minute in hour.
-
-h|*1..1*
-|*second* (): `link:/classes/Integer[Integer]`
-a|Second in minute.
-
-h|*1..1*
-|*fractional_second* (): `link:/classes/Real[Real]` +
- +
-__Pre__: `not second_unknown`
-a|Fractional seconds.
-
-h|*1..1*
-|*timezone* (): `link:/classes/ITimezone[ITimezone]`
-a|Timezone; may be Void.
-
-h|*Invariants*
-2+a|__Hour_valid__: `valid_hour(hour, minute, second)`
-|===
+====

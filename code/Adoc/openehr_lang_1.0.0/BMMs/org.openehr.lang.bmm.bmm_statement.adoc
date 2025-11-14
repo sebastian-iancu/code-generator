@@ -1,0 +1,11 @@
+[source,json]
+--------
+{
+    "name": "BMM_STATEMENT",
+    "documentation": "Abstract parent of 'statement' types that may be defined to implement BMM Routines.",
+    "is_abstract": true,
+    "ancestors": [
+        "BMM_STATEMENT_ITEM"
+    ]
+}
+--------

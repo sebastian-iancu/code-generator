@@ -1,30 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*FOLDER*
+=== FOLDER Class
 
-h|*Description*
-2+a|The concept of a named folder.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.common.folder.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/LOCATABLE[LOCATABLE]`
+BMM::
++
+include::../BMMs/org.openehr.rm.common.folder.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.rm.common.folder.adoc[]
 
-h|*0..**
-|*items*: `link:/classes/List[List]<link:/classes/OBJECT_REF[OBJECT_REF]>`
-a|The list of references to other (usually) versioned objects logically in this folder.
-
-h|*0..**
-|*folders*: `link:/classes/List[List]<link:/classes/FOLDER[FOLDER]>`
-a|Sub-folders of this FOLDER.
-
-h|*0..1*
-|*details*: `link:/classes/ITEM_STRUCTURE[ITEM_STRUCTURE]`
-a|Archetypable extra meta-data for `FOLDER`.
-
-h|*Invariants*
-2+a|__Folders_valid__: `not folders.is_empty`
-|===
+====

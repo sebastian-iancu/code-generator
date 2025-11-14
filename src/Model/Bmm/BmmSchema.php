@@ -45,6 +45,7 @@ readonly class BmmSchema implements JsonSerializable, YamlSerializable, Collecta
         public ?string $bmmVersion = self::BMM_VERSION,
     )
     {
+        Globals::addSchema($this);
     }
 
     public function getSchemaId(): string{
@@ -151,5 +152,18 @@ readonly class BmmSchema implements JsonSerializable, YamlSerializable, Collecta
         }
 
         return $instance;
+    }
+
+
+    public function getClassPackageQName(string $className): ?string
+    {
+        /** @var BmmPackage $package */
+        foreach ($this->packages as $package) {
+            $qname = $package->getClassPackageQName($className);
+            if (!empty($qname)) {
+                return $this->getName() . '.' . $qname;
+            }
+        }
+        return null;
     }
 }

@@ -1,19 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*EL_CASE<T>*
+=== EL_CASE Class
 
-h|*Description*
-2+a|One branch of a Case table, consisting of a value constraint (the match criterion) and a result, of the generic parameter type T.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm.el_case.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/EL_DECISION_BRANCH[EL_DECISION_BRANCH]`
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm.el_case.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm.el_case.adoc[]
 
-h|*1..1*
-|*value_constraint*: `link:/classes/C_OBJECT[C_OBJECT]`
-a|Constraint on
-|===
+====

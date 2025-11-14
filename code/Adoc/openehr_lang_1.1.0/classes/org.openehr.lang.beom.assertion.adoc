@@ -1,27 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*ASSERTION*
+=== ASSERTION Class
 
-h|*Description*
-2+a|Meta-type for a first order predicate logic expression with a Boolean result.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.beom.assertion.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/STATEMENT[STATEMENT]`
+BMM::
++
+include::../BMMs/org.openehr.lang.beom.assertion.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.lang.beom.assertion.adoc[]
 
-h|*0..1*
-|*tag*: `link:/classes/String[String]`
-a|Expression tag, used for differentiating multiple assertions.
-
-h|*0..1*
-|*string_expression*: `link:/classes/String[String]`
-a|String form of expression, in case an expression evaluator taking String expressions is used for evaluation.
-
-h|*1..1*
-|*expression*: `link:/classes/EXPRESSION[EXPRESSION]`
-a|Root of expression tree.
-|===
+====

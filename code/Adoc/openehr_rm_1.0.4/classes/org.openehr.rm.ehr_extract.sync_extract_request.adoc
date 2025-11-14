@@ -1,19 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*SYNC_EXTRACT_REQUEST*
+=== SYNC_EXTRACT_REQUEST Class
 
-h|*Description*
-2+a|Type of request designed for synchronisation of Contributions between openEHR servers.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.ehr_extract.sync_extract_request.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/MESSAGE_CONTENT[MESSAGE_CONTENT]`
+BMM::
++
+include::../BMMs/org.openehr.rm.ehr_extract.sync_extract_request.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.rm.ehr_extract.sync_extract_request.adoc[]
 
-h|*1..1*
-|*specification*: `link:/classes/SYNC_EXTRACT_SPEC[SYNC_EXTRACT_SPEC]`
-a|Details of specification of synchronisation request.
-|===
+====

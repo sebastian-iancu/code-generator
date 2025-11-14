@@ -1,8 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__VIEW_ENTRY (abstract)__*
+=== VIEW_ENTRY Class
 
-h|*Inherit*
-2+|`link:/classes/VIEW_ITEM[VIEW_ITEM]`
-|===
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.rm.composition.view_entry.adoc[]
+
+BMM::
++
+include::../BMMs/org.openehr.rm.composition.view_entry.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.rm.composition.view_entry.adoc[]
+
+====

@@ -1,19 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__P_C_TEMPORAL<T> (abstract)__*
+=== P_C_TEMPORAL Class
 
-h|*Description*
-2+a|Purpose Abstract parent of C_ORDERED types whose base type is an ISO date/time type.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.am.p_aom2.p_c_temporal.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/P_C_ORDERED[P_C_ORDERED]`
+BMM::
++
+include::../BMMs/org.openehr.am.p_aom2.p_c_temporal.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.am.p_aom2.p_c_temporal.adoc[]
 
-h|*1..1*
-|*pattern_constraint*: `link:/classes/String[String]`
-a|Optional alternative constraint in the form of a pattern based on ISO8601. See descendants for details.
-|===
+====

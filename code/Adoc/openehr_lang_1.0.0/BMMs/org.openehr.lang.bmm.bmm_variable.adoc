@@ -1,0 +1,31 @@
+[source,json]
+--------
+{
+    "name": "BMM_VARIABLE",
+    "documentation": "A mutable entity whose scope is a routine.",
+    "is_abstract": true,
+    "ancestors": [
+        "BMM_INSTANTIABLE",
+        "BMM_CLASS_ENTITY"
+    ],
+    "properties": {
+        "scope": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "scope",
+            "documentation": "Routine within which variable is defined.",
+            "is_mandatory": true,
+            "type": "BMM_ROUTINE"
+        }
+    },
+    "functions": {
+        "signature": {
+            "name": "signature",
+            "documentation": "Formal signature of this element, in the form `'name [arg1_name: T_arg1, ...][:T_value]'`.",
+            "result": {
+                "_type": "P_BMM_SIMPLE_TYPE",
+                "type": ""
+            }
+        }
+    }
+}
+--------

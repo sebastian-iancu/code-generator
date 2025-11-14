@@ -1,16 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*BMM_INCLUDE_SPEC*
+=== BMM_INCLUDE_SPEC Class
 
-h|*Description*
-2+a|Schema inclusion structure.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.bmm_persistence.bmm_include_spec.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+BMM::
++
+include::../BMMs/org.openehr.lang.bmm_persistence.bmm_include_spec.adoc[]
 
-h|*1..1*
-|*id*: `link:/classes/String[String]`
-a|Full identifier of the included schema, e.g. `"openehr_primitive_types_1.0.2"`.
-|===
+UML::
++
+include::../plantUML/classes/org.openehr.lang.bmm_persistence.bmm_include_spec.adoc[]
+
+====

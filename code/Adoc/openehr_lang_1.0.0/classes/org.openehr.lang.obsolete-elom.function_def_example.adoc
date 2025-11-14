@@ -1,25 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*FUNCTION_DEF_EXAMPLE*
+=== FUNCTION_DEF_EXAMPLE Class
 
-h|*Description*
-2+a|Example of an externally defined function of signature:
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.lang.obsolete-elom.function_def_example.adoc[]
 
-    func (v: Numeric): Numeric
+BMM::
++
+include::../BMMs/org.openehr.lang.obsolete-elom.function_def_example.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/FUNCTION_DEF_EXTERNAL[FUNCTION_DEF_EXTERNAL]`
+UML::
++
+include::../plantUML/classes/org.openehr.lang.obsolete-elom.function_def_example.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
-
-h|*1..1*
-|*identifier*: `link:/classes/String[String]`
-a|
-
-h|*1..1*
-|*evaluation_agent*: `link:/classes/FUNCTION[FUNCTION]<>`
-a|
-|===
+====

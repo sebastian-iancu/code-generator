@@ -1,23 +1,17 @@
-[cols="^1,3,5"]
-|===
-h|*Class*
-2+^h|*__EXPR_OPERATOR (abstract)__*
+=== EXPR_OPERATOR Class
 
-h|*Description*
-2+a|Abstract parent of operator types.
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.am.aom14.expr_operator.adoc[]
 
-h|*Inherit*
-2+|`link:/classes/EXPR_ITEM[EXPR_ITEM]`
+BMM::
++
+include::../BMMs/org.openehr.am.aom14.expr_operator.adoc[]
 
-h|*Attributes*
-^h|*Signature*
-^h|*Meaning*
+UML::
++
+include::../plantUML/classes/org.openehr.am.aom14.expr_operator.adoc[]
 
-h|*0..1*
-|*precedence_overridden*: `link:/classes/Boolean[Boolean]`
-a|True if the natural precedence of operators is overridden in the expression represented by this node of the expression tree. If True, parentheses should be introduced around the totality of the syntax expression corresponding to this operator node and its operands.
-
-h|*1..1*
-|*operator*: `link:/classes/OPERATOR_KIND[OPERATOR_KIND]`
-a|Code of operator.
-|===
+====
