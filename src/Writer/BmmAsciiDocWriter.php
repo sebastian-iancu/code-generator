@@ -15,6 +15,7 @@ use OpenEHR\Tools\CodeGen\Model\Bmm\BmmFunction;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmGenericFunctionParameter;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmGenericProperty;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmGenericType;
+use OpenEHR\Tools\CodeGen\Model\Bmm\BmmInterface;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmPackage;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmSchema;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmSimpleType;
@@ -78,6 +79,8 @@ class BmmAsciiDocWriter extends AbstractWriter
                 $content = $this->formatEnumAsDefinition($class, $prefix);
             } elseif ($class instanceof BmmClass) {
                 $content = $this->formatClassAsDefinition($class, $prefix);
+            } elseif ($class instanceof BmmInterface) {
+                $content = $this->formatInterfaceAsDefinition($class, $prefix);
             } else {
                 $content = $this->formatAsUnsupported($class->name, 'as-definition');
             }
@@ -152,7 +155,7 @@ class BmmAsciiDocWriter extends AbstractWriter
         $rows[] = '[cols="^1,3,5"]';
         $rows[] = '|===';
         $rows[] = 'h|*Enumeration*';
-        $rows[] = '2+^h|*' . strtoupper($enum->name) . '*';
+        $rows[] = '2+^h|*' . $enum->name . '*';
 
         // Description
         if (!empty($enum->documentation)) {
@@ -309,6 +312,48 @@ class BmmAsciiDocWriter extends AbstractWriter
                     $rows[] = '';
                     $rows[] = 'h|';
                 }
+            }
+        }
+
+        $rows[] = '|===';
+        return implode("\n", $rows) . "\n";
+    }
+
+    private function formatInterfaceAsDefinition(BmmInterface $class, string $prefix): string
+    {
+        $rows = [];
+
+        // todo remove this once all classes are converted to BmmClass
+        $rows[] = '=== '. $class->name.' Interface';
+        $rows[] = '';
+        // end-remove
+
+        $rows[] = '[cols="^1,3,5"]';
+        $rows[] = '|===';
+        $rows[] = 'h|*Interface*';
+        $rows[] = '2+^h|*' . $class->name . '*';
+
+        // Description
+        if (!empty($class->documentation)) {
+            $rows[] = '';
+            $rows[] = 'h|*Description*';
+            $rows[] = '2+a|' . trim($class->documentation);
+        }
+
+        // Functions
+        if ($class->functions->count() > 0) {
+            $rows[] = '';
+            $rows[] = 'h|*Functions*';
+            $rows[] = '^h|*Signature*';
+            $rows[] = '^h|*Meaning*';
+
+            /** @var BmmFunction $function */
+            foreach ($class->functions as $function) {
+                $rows[] = '';
+                [$card, $signature] = $this->formatFunctionSignature($function, $prefix);
+                $rows[] = 'h|*' . $card . '*';
+                $rows[] = '|' . $signature;
+                $rows[] = 'a|' . rtrim($function->documentation ?? '');
             }
         }
 

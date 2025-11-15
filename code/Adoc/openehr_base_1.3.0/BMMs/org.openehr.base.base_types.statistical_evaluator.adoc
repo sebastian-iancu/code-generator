@@ -1,6 +1,7 @@
 [source,json]
 --------
 {
+    "_type": "P_BMM_INTERFACE",
     "name": "Statistical_evaluator",
     "documentation": "A basic statistical evaluator class providing common functions on collections of numbers.",
     "functions": {

@@ -3329,6 +3329,7 @@
             ]
         },
         "Env": {
+            "_type": "P_BMM_INTERFACE",
             "name": "Env",
             "documentation": "Class representing the real-world environment, providing basic information like current time, date, etc.",
             "functions": {
@@ -3367,6 +3368,7 @@
             }
         },
         "Statistical_evaluator": {
+            "_type": "P_BMM_INTERFACE",
             "name": "Statistical_evaluator",
             "documentation": "A basic statistical evaluator class providing common functions on collections of numbers.",
             "functions": {
@@ -3553,6 +3555,7 @@
             }
         },
         "Locale": {
+            "_type": "P_BMM_INTERFACE",
             "name": "Locale",
             "documentation": "Class representing current Locale.",
             "functions": {
@@ -3567,6 +3570,7 @@
             }
         },
         "Math": {
+            "_type": "P_BMM_INTERFACE",
             "name": "Math",
             "documentation": "Mathematical computation.",
             "functions": {
@@ -3618,6 +3622,7 @@
             }
         },
         "Quantity_converter": {
+            "_type": "P_BMM_INTERFACE",
             "name": "Quantity_converter",
             "documentation": "Quantity conversion.",
             "functions": {

@@ -1,8 +1,8 @@
-=== Locale Class
+=== Locale Interface
 
 [cols="^1,3,5"]
 |===
-h|*Class*
+h|*Interface*
 2+^h|*Locale*
 
 h|*Description*

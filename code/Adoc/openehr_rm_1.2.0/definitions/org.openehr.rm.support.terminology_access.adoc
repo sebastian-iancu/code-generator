@@ -1,8 +1,8 @@
-=== TERMINOLOGY_ACCESS Class
+=== TERMINOLOGY_ACCESS Interface
 
 [cols="^1,3,5"]
 |===
-h|*Class*
+h|*Interface*
 2+^h|*TERMINOLOGY_ACCESS*
 
 h|*Description*

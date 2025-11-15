@@ -1,8 +1,8 @@
-=== CODE_SET_ACCESS Class
+=== CODE_SET_ACCESS Interface
 
 [cols="^1,3,5"]
 |===
-h|*Class*
+h|*Interface*
 2+^h|*CODE_SET_ACCESS*
 
 h|*Description*

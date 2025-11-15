@@ -21,10 +21,11 @@ abstract readonly class AbstractBmmClass implements CollectableInterface
     /**
      * @param array<string, mixed> $data
      */
-    public static function fromArray(array $data): BmmEnumerationString|BmmEnumerationInteger|BmmClass
+    public static function fromArray(array $data): BmmInterface|BmmEnumerationString|BmmEnumerationInteger|BmmClass
     {
         $type = $data['_type'] ?? 'P_BMM_CLASS';
         return match ($type) {
+            'P_BMM_INTERFACE' => BmmInterface::fromArray($data),
             'P_BMM_ENUMERATION_STRING' => BmmEnumerationString::fromArray($data),
             'P_BMM_ENUMERATION_INTEGER' => BmmEnumerationInteger::fromArray($data),
             default => BmmClass::fromArray($data),

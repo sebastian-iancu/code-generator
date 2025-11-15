@@ -1,6 +1,7 @@
 [source,json]
 --------
 {
+    "_type": "P_BMM_INTERFACE",
     "name": "CODE_SET_ACCESS",
     "documentation": "Defines an object providing proxy access to a code_set.",
     "functions": {

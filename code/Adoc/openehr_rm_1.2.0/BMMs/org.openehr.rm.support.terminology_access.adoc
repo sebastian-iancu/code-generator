@@ -1,6 +1,7 @@
 [source,json]
 --------
 {
+    "_type": "P_BMM_INTERFACE",
     "name": "TERMINOLOGY_ACCESS",
     "documentation": "Defines an object providing proxy access to a terminology. ",
     "functions": {

@@ -10,6 +10,7 @@ use OpenEHR\Tools\CodeGen\Model\Uml\UmlClass;
 use OpenEHR\Tools\CodeGen\Model\Uml\UmlConstraint;
 use OpenEHR\Tools\CodeGen\Model\Uml\UmlEnumeration;
 use OpenEHR\Tools\CodeGen\Model\Uml\UmlFile;
+use OpenEHR\Tools\CodeGen\Model\Uml\UmlInterface;
 use OpenEHR\Tools\CodeGen\Model\Uml\UmlOperation;
 use OpenEHR\Tools\CodeGen\Model\Uml\UmlPackage;
 use OpenEHR\Tools\CodeGen\Model\Uml\UmlParameter;
@@ -185,7 +186,13 @@ class UmlToBmmWriter extends AbstractWriter
             'name' => $umlClass->name,
             'documentation' => $umlClass->description,
         ];
-        if ($umlClass instanceof UmlClass) {
+        if ($umlClass instanceof UmlInterface) {
+            $bmmClass['_type'] = 'P_BMM_INTERFACE';
+            /** @var UmlOperation $umlOperation */
+            foreach ($umlClass->umlOperations as $umlOperation) {
+                $bmmClass['functions'][$umlOperation->name] = self::asBmmFunction($umlOperation, $umlClass, $collectedUmlClasses);
+            }
+        } elseif ($umlClass instanceof UmlClass) {
             if ($umlClass->isAbstract) {
                 $bmmClass['is_abstract'] = true;
             }

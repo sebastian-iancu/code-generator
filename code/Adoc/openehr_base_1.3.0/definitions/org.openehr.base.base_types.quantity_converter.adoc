@@ -1,8 +1,8 @@
-=== Quantity_converter Class
+=== Quantity_converter Interface
 
 [cols="^1,3,5"]
 |===
-h|*Class*
+h|*Interface*
 2+^h|*Quantity_converter*
 
 h|*Description*

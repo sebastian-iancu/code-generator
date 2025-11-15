@@ -1,6 +1,7 @@
 [source,json]
 --------
 {
+    "_type": "P_BMM_INTERFACE",
     "name": "Locale",
     "documentation": "Class representing current Locale.",
     "functions": {

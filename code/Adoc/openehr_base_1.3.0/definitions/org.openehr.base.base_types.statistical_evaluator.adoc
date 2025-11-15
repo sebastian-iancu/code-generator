@@ -1,8 +1,8 @@
-=== Statistical_evaluator Class
+=== Statistical_evaluator Interface
 
 [cols="^1,3,5"]
 |===
-h|*Class*
+h|*Interface*
 2+^h|*Statistical_evaluator*
 
 h|*Description*

@@ -1,6 +1,7 @@
 [source,json]
 --------
 {
+    "_type": "P_BMM_INTERFACE",
     "name": "Math",
     "documentation": "Mathematical computation.",
     "functions": {
