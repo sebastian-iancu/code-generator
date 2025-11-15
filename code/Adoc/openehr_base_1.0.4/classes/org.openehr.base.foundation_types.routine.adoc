@@ -1,0 +1,17 @@
+=== ROUTINE Class
+
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.foundation_types.routine.adoc[]
+
+BMM::
++
+include::../BMMs/org.openehr.base.foundation_types.routine.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.foundation_types.routine.adoc[]
+
+====

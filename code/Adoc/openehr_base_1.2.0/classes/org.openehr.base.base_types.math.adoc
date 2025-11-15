@@ -1,0 +1,17 @@
+=== Math Class
+
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.base_types.math.adoc[]
+
+BMM::
++
+include::../BMMs/org.openehr.base.base_types.math.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.base_types.math.adoc[]
+
+====

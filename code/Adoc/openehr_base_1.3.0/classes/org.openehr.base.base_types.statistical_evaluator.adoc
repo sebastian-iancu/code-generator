@@ -1,0 +1,17 @@
+=== Statistical_evaluator Class
+
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.base_types.statistical_evaluator.adoc[]
+
+BMM::
++
+include::../BMMs/org.openehr.base.base_types.statistical_evaluator.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.base_types.statistical_evaluator.adoc[]
+
+====

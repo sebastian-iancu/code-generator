@@ -1,0 +1,17 @@
+=== FUNCTION Class
+
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.foundation_types.function.adoc[]
+
+BMM::
++
+include::../BMMs/org.openehr.base.foundation_types.function.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.foundation_types.function.adoc[]
+
+====

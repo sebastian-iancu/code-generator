@@ -1,0 +1,17 @@
+=== PROCEDURE Class
+
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.foundation_types.procedure.adoc[]
+
+BMM::
++
+include::../BMMs/org.openehr.base.foundation_types.procedure.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.foundation_types.procedure.adoc[]
+
+====

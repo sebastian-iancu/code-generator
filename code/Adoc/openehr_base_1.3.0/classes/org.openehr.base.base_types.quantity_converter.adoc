@@ -1,0 +1,17 @@
+=== Quantity_converter Class
+
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.base_types.quantity_converter.adoc[]
+
+BMM::
++
+include::../BMMs/org.openehr.base.base_types.quantity_converter.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.base_types.quantity_converter.adoc[]
+
+====

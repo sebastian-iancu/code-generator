@@ -24,7 +24,7 @@ class UmlToBmmWriter extends AbstractWriter
     public const string REVISION = '2';
     public const string AUTHOR = 'Thomas Beale <thomas.beale@openehr.org>, code-generator';
 
-    public const array SKIP_PACKAGES = ['functional', 'builtins'];
+    public const array SKIP_PACKAGES = [];
 
     public const array PRIMITIVES = [
         'Any',

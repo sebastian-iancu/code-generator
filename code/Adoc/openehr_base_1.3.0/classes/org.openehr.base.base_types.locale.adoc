@@ -1,0 +1,17 @@
+=== Locale Class
+
+[tabs]
+====
+Definition::
++
+include::../definitions/org.openehr.base.base_types.locale.adoc[]
+
+BMM::
++
+include::../BMMs/org.openehr.base.base_types.locale.adoc[]
+
+UML::
++
+include::../plantUML/classes/org.openehr.base.base_types.locale.adoc[]
+
+====

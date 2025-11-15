@@ -26,7 +26,7 @@ h|*Functions*
 h|*1..1*
 |*c_conforms_to* ( +
 other: `<<_c_primitive_tuple_class,C_PRIMITIVE_TUPLE>>[1]`, +
-rmcc: `link:/classes/FUNCTION[FUNCTION]<>[1]` +
+rmcc: `link:/releases/BASE/{base_release}/foundation_types.html#_function_class[FUNCTION^]<>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. Typically used during validation of specialised archetype nodes.
 

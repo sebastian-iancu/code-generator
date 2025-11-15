@@ -22,6 +22,6 @@ h|*1..1*
 a|
 
 h|*1..1*
-|*evaluation_agent*: `link:/classes/FUNCTION[FUNCTION]<>`
+|*evaluation_agent*: `link:/releases/BASE/{base_release}/foundation_types.html#_function_class[FUNCTION^]<>`
 a|
 |===
