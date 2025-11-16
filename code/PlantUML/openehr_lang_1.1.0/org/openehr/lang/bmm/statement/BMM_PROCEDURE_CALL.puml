@@ -1,0 +1,36 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.statement.BMM_PROCEDURE_CALL
+title BMM_PROCEDURE_CALL Class
+
+class BMM_PROCEDURE_CALL {
+  + agent : EL_PROCEDURE_AGENT [1..1]
+}
+
+abstract class EL_AGENT_CALL {
+  + agent : EL_AGENT [1..1]
+}
+
+EL_AGENT_CALL <|-- BMM_PROCEDURE_CALL
+
+abstract class BMM_SIMPLE_STATEMENT {
+}
+
+abstract class BMM_STATEMENT {
+}
+
+abstract class BMM_STATEMENT_ITEM {
+}
+
+abstract class BMM_ROUTINE_BODY {
+}
+
+BMM_ROUTINE_BODY <|-- BMM_STATEMENT_ITEM
+
+BMM_STATEMENT_ITEM <|-- BMM_STATEMENT
+
+BMM_STATEMENT <|-- BMM_SIMPLE_STATEMENT
+
+BMM_SIMPLE_STATEMENT <|-- BMM_PROCEDURE_CALL
+
+
+@enduml

@@ -1,0 +1,59 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom2.constraint_model.C_DEFINED_OBJECT
+title C_DEFINED_OBJECT Class
+
+abstract class C_DEFINED_OBJECT {
+  + assumed_value : Any [0..1]
+  + {abstract} valid_value(Any a_value) : Boolean [0..1]
+  + {abstract} prototype_value() : Any [0..1]
+  + has_assumed_value() : Boolean [0..1]
+  + {abstract} default_value() : Any [1..1]
+  + {abstract} any_allowed() : Boolean [0..1]
+}
+
+abstract class C_OBJECT {
+  + rm_type_name : String [1..1]
+  + occurrences : Multiplicity_interval [0..1]
+  + node_id : String [1..1]
+  + is_deprecated : Boolean [0..1]
+  + sibling_order : SIBLING_ORDER [0..1]
+  + specialisation_depth() : Integer [0..1]
+  + effective_occurrences() : Multiplicity_interval [0..1]
+  + c_conforms_to(ARCHETYPE_CONSTRAINT other, FUNCTION<> rmcc) : Boolean [0..1]
+  + c_congruent_to(ARCHETYPE_CONSTRAINT other) : Boolean [0..1]
+  + occurrences_conforms_to(C_OBJECT other) : Boolean [0..1]
+  + node_id_conforms_to(C_OBJECT other) : Boolean [0..1]
+  + is_prohibited() : Boolean [0..1]
+}
+
+abstract class ARCHETYPE_CONSTRAINT {
+  + parent : ARCHETYPE_CONSTRAINT [0..1]
+  + soc_parent : C_SECOND_ORDER [0..1]
+  + {abstract} is_prohibited() : Boolean [0..1]
+  + has_path(String a_path) : Boolean [0..1]
+  + path() : String [0..1]
+  + {abstract} c_conforms_to(ARCHETYPE_CONSTRAINT other, FUNCTION<> rmcc) : Boolean [0..1]
+  + {abstract} c_congruent_to(ARCHETYPE_CONSTRAINT other) : Boolean [0..1]
+  + is_second_order_constrained() : Boolean [0..1]
+  + is_root() : Boolean [0..1]
+  + is_leaf() : Boolean [0..1]
+}
+
+class ADL_CODE_DEFINITIONS {
+  + codes_conformant(String a_child_code, String a_parent_code) : Boolean [0..1]
+  + is_adl_code(String a_code) : Boolean [0..1]
+  + is_id_code(String a_code) : Boolean [0..1]
+  + is_value_code(String a_code) : Boolean [0..1]
+  + is_value_set_code(String a_code) : Boolean [0..1]
+  + is_redefined_code(String a_code) : Boolean [0..1]
+  + code_exists_at_level(String a-code, Integer a_level) : Boolean [0..1]
+}
+
+ADL_CODE_DEFINITIONS <|-- ARCHETYPE_CONSTRAINT
+
+ARCHETYPE_CONSTRAINT <|-- C_OBJECT
+
+C_OBJECT <|-- C_DEFINED_OBJECT
+
+
+@enduml

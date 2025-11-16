@@ -1,0 +1,13 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.model_access.BMM_SCHEMA_STATE
+title BMM_SCHEMA_STATE Enumeration
+
+enum BMM_SCHEMA_STATE {
+  State_created 
+  State_validated_created 
+  State_includes_pending 
+  State_includes_processed 
+}
+
+
+@enduml

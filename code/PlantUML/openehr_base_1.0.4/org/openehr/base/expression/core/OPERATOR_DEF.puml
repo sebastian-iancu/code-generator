@@ -1,0 +1,11 @@
+@startuml
+' PlantUML diagram for org.openehr.base.expression.core.OPERATOR_DEF
+title OPERATOR_DEF Class
+
+class OPERATOR_DEF {
+  + identifier : String [1..1]
+  + symbols : List<String> [0..*]
+}
+
+
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.expression.EL_CONSTRAINED
+title EL_CONSTRAINED Class
+
+abstract class EL_CONSTRAINED {
+  + base_expression : EL_EXPRESSION [1..1]
+}
+
+abstract class EL_EXPRESSION {
+  + {abstract} eval_type() : BMM_TYPE [0..1]
+  + is_boolean() : Boolean [0..1]
+}
+
+EL_EXPRESSION <|-- EL_CONSTRAINED
+
+
+@enduml

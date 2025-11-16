@@ -1,0 +1,10 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm_persistence.BMM_INCLUDE_SPEC
+title BMM_INCLUDE_SPEC Class
+
+class BMM_INCLUDE_SPEC {
+  + id : String [1..1]
+}
+
+
+@enduml

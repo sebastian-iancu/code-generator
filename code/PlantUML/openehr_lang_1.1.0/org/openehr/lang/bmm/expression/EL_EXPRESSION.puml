@@ -1,0 +1,11 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.expression.EL_EXPRESSION
+title EL_EXPRESSION Class
+
+abstract class EL_EXPRESSION {
+  + {abstract} eval_type() : BMM_TYPE [0..1]
+  + is_boolean() : Boolean [0..1]
+}
+
+
+@enduml

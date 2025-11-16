@@ -1,0 +1,31 @@
+@startuml
+' PlantUML diagram for org.openehr.base.foundation_types.time.Iso8601_timezone
+title Iso8601_timezone Class
+
+class Iso8601_timezone {
+  + hour() : Integer [0..1]
+  + minute() : Integer [0..1]
+  + sign() : Integer [0..1]
+  + minute_unknown() : Boolean [0..1]
+  + is_partial() : Boolean [0..1]
+  + is_extended() : Boolean [0..1]
+  + is_gmt() : Boolean [0..1]
+  + as_string() : String [0..1]
+}
+
+abstract class Iso8601_type {
+  + value : String [1..1]
+  + {abstract} is_partial() : Boolean [0..1]
+  + {abstract} is_extended() : Boolean [0..1]
+}
+
+abstract class Ordered {
+  + {abstract} infix <(Ordered other) : Boolean [0..1]
+}
+
+Ordered <|-- Iso8601_type
+
+Iso8601_type <|-- Iso8601_timezone
+
+
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+' PlantUML diagram for org.openehr.am.p_aom2.primitive.P_C_DURATION
+title P_C_DURATION Class
+
+class P_C_DURATION {
+}
+
+
+@enduml

@@ -1,0 +1,25 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.statement.BMM_ACTION_TABLE
+title BMM_ACTION_TABLE Class
+
+class BMM_ACTION_TABLE {
+  + items : List<BMM_CONDITIONAL_ACTION> [1..*]
+}
+
+abstract class BMM_STATEMENT {
+}
+
+abstract class BMM_STATEMENT_ITEM {
+}
+
+abstract class BMM_ROUTINE_BODY {
+}
+
+BMM_ROUTINE_BODY <|-- BMM_STATEMENT_ITEM
+
+BMM_STATEMENT_ITEM <|-- BMM_STATEMENT
+
+BMM_STATEMENT <|-- BMM_ACTION_TABLE
+
+
+@enduml

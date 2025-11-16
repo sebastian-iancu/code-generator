@@ -1,0 +1,56 @@
+@startuml
+' PlantUML diagram for org.openehr.am.p_aom2.archetype
+title archetype Package
+
+abstract class P_ARCHETYPE {
+  + parent_archetype_id : String [0..1]
+  + archetype_id : P_ARCHETYPE_HRID [1..1]
+  + is_differential : Boolean [1..1]
+  + definition : P_C_COMPLEX_OBJECT [1..1]
+  + terminology : P_ARCHETYPE_TERMINOLOGY [1..1]
+  + rules : List<STATEMENT> [0..*]
+}
+
+class P_AUTHORED_ARCHETYPE {
+  + adl_version : String [0..1]
+  + build_uid : UID [1..1]
+  + rm_release : String [1..1]
+  + is_generated : Boolean [1..1]
+  + other_meta_data : Hash<String,String> [1..1]
+}
+
+class P_TEMPLATE {
+}
+
+class P_OPERATIONAL_TEMPLATE {
+  + component_terminologies : Hash<String,P_ARCHETYPE_TERMINOLOGY> [0..1]
+  + terminology_extracts : Hash<String,Hash<String,ARCHETYPE_TERM>> [0..1]
+}
+
+class P_ARCHETYPE_HRID {
+  + namespace : String [0..1]
+  + rm_publisher : String [1..1]
+  + rm_package : String [1..1]
+  + rm_class : String [1..1]
+  + concept_id : String [1..1]
+  + release_version : String [1..1]
+  + version_status : VERSION_STATUS [1..1]
+  + build_count : String [1..1]
+}
+
+abstract class P_AUTHORED_RESOURCE {
+  + original_language : String [1..1]
+  + is_controlled : Boolean [0..1]
+  + translations : List<TRANSLATION_DETAILS> [0..*]
+  + description : RESOURCE_DESCRIPTION [0..1]
+  + uid : String [0..1]
+  + annotations : Hash<String,Hash<String,String>> [0..1]
+}
+
+P_ARCHETYPE <|-- P_AUTHORED_ARCHETYPE
+AUTHORED_RESOURCE <|-- P_AUTHORED_ARCHETYPE
+P_AUTHORED_RESOURCE <|-- P_AUTHORED_ARCHETYPE
+P_AUTHORED_ARCHETYPE <|-- P_TEMPLATE
+P_AUTHORED_ARCHETYPE <|-- P_OPERATIONAL_TEMPLATE
+
+@enduml

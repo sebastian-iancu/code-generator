@@ -1,0 +1,10 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.expression.EL_AGENT_CALL
+title EL_AGENT_CALL Class
+
+abstract class EL_AGENT_CALL {
+  + agent : EL_AGENT [1..1]
+}
+
+
+@enduml

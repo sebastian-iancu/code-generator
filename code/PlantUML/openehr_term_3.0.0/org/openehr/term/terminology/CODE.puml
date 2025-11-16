@@ -1,0 +1,12 @@
+@startuml
+' PlantUML diagram for org.openehr.term.terminology.CODE
+title CODE Class
+
+class CODE {
+  + value : String [1..1]
+  + description : String [0..1]
+  + status : TERMINOLOGY_STATUS [0..1]
+}
+
+
+@enduml

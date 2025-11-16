@@ -1,0 +1,9 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.statement.BMM_ACTION_DECISION_TABLE
+title BMM_ACTION_DECISION_TABLE Class
+
+class BMM_ACTION_DECISION_TABLE {
+}
+
+
+@enduml

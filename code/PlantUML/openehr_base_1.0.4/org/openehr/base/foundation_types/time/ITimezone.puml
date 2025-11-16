@@ -1,0 +1,35 @@
+@startuml
+' PlantUML diagram for org.openehr.base.foundation_types.time.ITimezone
+title ITimezone Class
+
+abstract class ITimezone {
+  + hour() : Integer [0..1]
+  + minute() : Integer [0..1]
+  + sign() : Integer [0..1]
+}
+
+abstract class Temporal {
+}
+
+abstract class Ordered {
+  + {abstract} infix <(Ordered other) : Boolean [0..1]
+}
+
+Ordered <|-- Temporal
+
+class Time_Definitions {
+  + valid_year(Integer y) : Boolean [0..1]
+  + valid_month(Integer m) : Boolean [0..1]
+  + valid_day(Integer y, Integer m, Integer d) : Boolean [0..1]
+  + valid_hour(Integer h, Integer m, Integer s) : Boolean [0..1]
+  + valid_minute(Integer m) : Boolean [0..1]
+  + valid_second(Integer s) : Boolean [0..1]
+  + valid_fractional_second(Double fs) : Boolean [0..1]
+}
+
+Time_Definitions <|-- Temporal
+
+Temporal <|-- ITimezone
+
+
+@enduml

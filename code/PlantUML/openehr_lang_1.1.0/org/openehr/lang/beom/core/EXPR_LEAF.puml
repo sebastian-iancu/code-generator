@@ -1,0 +1,22 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.beom.core.EXPR_LEAF
+title EXPR_LEAF Class
+
+abstract class EXPR_LEAF {
+  + item : Any [0..1]
+}
+
+abstract class EXPRESSION {
+  + {abstract} type() : EXPR_TYPE_DEF [0..1]
+}
+
+abstract class EXPR_VALUE {
+  + {abstract} value() : Any [0..1]
+}
+
+EXPR_VALUE <|-- EXPRESSION
+
+EXPRESSION <|-- EXPR_LEAF
+
+
+@enduml

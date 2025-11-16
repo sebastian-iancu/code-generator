@@ -1,0 +1,22 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.core.feature.BMM_INSTANTIABLE
+title BMM_INSTANTIABLE Class
+
+abstract class BMM_INSTANTIABLE {
+}
+
+abstract class BMM_TYPED_FEATURE {
+  + is_nullable : Boolean [0..1]
+}
+
+abstract class BMM_TYPED {
+  + type : BMM_TYPE [1..1]
+  + is_boolean() : Boolean [0..1]
+}
+
+BMM_TYPED <|-- BMM_TYPED_FEATURE
+
+BMM_TYPED_FEATURE <|-- BMM_INSTANTIABLE
+
+
+@enduml

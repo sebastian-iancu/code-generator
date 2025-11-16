@@ -1,0 +1,9 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.security.access_control.ACCESS_CONTROL_SETTINGS
+title ACCESS_CONTROL_SETTINGS Class
+
+abstract class ACCESS_CONTROL_SETTINGS {
+}
+
+
+@enduml

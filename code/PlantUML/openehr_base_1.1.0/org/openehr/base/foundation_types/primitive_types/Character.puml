@@ -1,0 +1,15 @@
+@startuml
+' PlantUML diagram for org.openehr.base.foundation_types.primitive_types.Character
+title Character Class
+
+class Character {
+}
+
+abstract class Ordered {
+  + {abstract} infix <(Ordered other) : Boolean [0..1]
+}
+
+Ordered <|-- Character
+
+
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom2.constraint_model.primitive.C_DATE
+title C_DATE Class
+
+class C_DATE {
+  + day_validity : VALIDITY_KIND [0..1]
+  + month_validity : VALIDITY_KIND [0..1]
+  + timezone_validity : VALIDITY_KIND [0..1]
+  + range : Interval<Iso8601_date> [0..1]
+  + assumed_value : Iso8601_date [0..1]
+}
+
+abstract class C_PRIMITIVE {
+  + assumed_value : Any [0..1]
+  + {abstract} default_value() : Any [0..1]
+  + {abstract} has_assumed_value() : Boolean [0..1]
+  + {abstract} valid_value(Any a_value) : Boolean [0..1]
+}
+
+C_PRIMITIVE <|-- C_DATE
+
+
+@enduml

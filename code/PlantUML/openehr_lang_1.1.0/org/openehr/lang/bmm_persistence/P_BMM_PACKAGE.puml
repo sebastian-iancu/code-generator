@@ -1,0 +1,26 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm_persistence.P_BMM_PACKAGE
+title P_BMM_PACKAGE Class
+
+class P_BMM_PACKAGE {
+  + name : String [1..1]
+  + classes : List<String> [0..*]
+  + bmm_package_definition : BMM_PACKAGE [0..1]
+  + merge(P_BMM_PACKAGE other) : void [0..1]
+  + create_bmm_package_definition() : void [0..1]
+}
+
+class P_BMM_PACKAGE_CONTAINER {
+  + packages : Hash<String,P_BMM_PACKAGE> [1..1]
+}
+
+P_BMM_PACKAGE_CONTAINER <|-- P_BMM_PACKAGE
+
+abstract class P_BMM_MODEL_ELEMENT {
+  + documentation : String [0..1]
+}
+
+P_BMM_MODEL_ELEMENT <|-- P_BMM_PACKAGE
+
+
+@enduml

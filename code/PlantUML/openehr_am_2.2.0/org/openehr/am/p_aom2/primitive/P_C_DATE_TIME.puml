@@ -1,0 +1,9 @@
+@startuml
+' PlantUML diagram for org.openehr.am.p_aom2.primitive.P_C_DATE_TIME
+title P_C_DATE_TIME Class
+
+class P_C_DATE_TIME {
+}
+
+
+@enduml

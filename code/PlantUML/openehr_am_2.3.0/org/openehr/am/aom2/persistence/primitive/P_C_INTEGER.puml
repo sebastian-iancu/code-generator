@@ -1,0 +1,9 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom2.persistence.primitive.P_C_INTEGER
+title P_C_INTEGER Class
+
+class P_C_INTEGER {
+}
+
+
+@enduml

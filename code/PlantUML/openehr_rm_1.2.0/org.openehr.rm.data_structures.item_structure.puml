@@ -1,0 +1,51 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.data_structures.item_structure
+title item_structure Package
+
+abstract class ITEM_STRUCTURE {
+}
+
+class ITEM_TREE {
+  + items : List<ITEM> [0..*]
+  + has_element_path(String a_path) : Boolean [0..1]
+  + element_at_path(String a_path) : ELEMENT [0..1]
+  + as_hierarchy() : CLUSTER [0..1]
+}
+
+class ITEM_SINGLE {
+  + item : ELEMENT [1..1]
+  + as_hierarchy() : ELEMENT [0..1]
+}
+
+class ITEM_TABLE {
+  + rows : List<CLUSTER> [0..*]
+  + row_count() : Integer [0..1]
+  + column_count() : Integer [0..1]
+  + row_names() : List<DV_TEXT> [1..*]
+  + column_names() : List<DV_TEXT> [1..*]
+  + ith_row(Integer i) : CLUSTER [0..1]
+  + has_row_with_name(String a_key) : Boolean [0..1]
+  + has_column_with_name(String a_key) : Boolean [0..1]
+  + named_row(String a_key) : CLUSTER [0..1]
+  + has_row_with_key(List<String> keys) : Boolean [0..1]
+  + row_with_key(List<String> keys) : CLUSTER [0..1]
+  + element_at_cell_ij(Any i, Integer j) : ELEMENT [0..1]
+  + as_hierarchy() : CLUSTER [0..1]
+}
+
+class ITEM_LIST {
+  + items : List<ELEMENT> [0..*]
+  + item_count() : Integer [0..1]
+  + names() : List<DV_TEXT> [1..*]
+  + named_item(String a_name) : ELEMENT [0..1]
+  + ith_item(Integer i) : ELEMENT [0..1]
+  + as_hierarchy() : CLUSTER [0..1]
+}
+
+DATA_STRUCTURE <|-- ITEM_STRUCTURE
+ITEM_STRUCTURE <|-- ITEM_TREE
+ITEM_STRUCTURE <|-- ITEM_SINGLE
+ITEM_STRUCTURE <|-- ITEM_TABLE
+ITEM_STRUCTURE <|-- ITEM_LIST
+
+@enduml

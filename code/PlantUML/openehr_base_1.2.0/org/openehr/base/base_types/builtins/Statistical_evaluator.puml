@@ -1,0 +1,18 @@
+@startuml
+' PlantUML diagram for org.openehr.base.base_types.builtins.Statistical_evaluator
+title Statistical_evaluator Interface
+
+interface Statistical_evaluator {
+  + sum(Container<Numeric> vals) : Double [0..1]
+  + avg(Container<Numeric> vals) : Double [0..1]
+  + mean(Container<Numeric> vals) : Double [0..1]
+  + median(Container<Numeric> vals) : Numeric [0..1]
+  + mode(Container<Numeric> vals) : Numeric [0..1]
+  + max(Container<Numeric> vals) : Numeric [0..1]
+  + min(Container<Numeric> vals) : Numeric [0..1]
+  + count(Container<Numeric> vals) : Numeric [0..1]
+  + std_dev(Container<Numeric> vals) : Double [0..1]
+}
+
+
+@enduml

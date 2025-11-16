@@ -1,0 +1,23 @@
+@startuml
+' PlantUML diagram for org.openehr.base.expression.core.EXPR_UNARY_OPERATOR
+title EXPR_UNARY_OPERATOR Class
+
+class EXPR_UNARY_OPERATOR {
+  + operand : EXPRESSION [1..1]
+}
+
+abstract class EXPR_OPERATOR {
+  + precedence_overridden : Boolean [0..1]
+  + operator : OPERATOR_KIND [1..1]
+}
+
+abstract class EXPR_ITEM {
+  + type : String [1..1]
+}
+
+EXPR_ITEM <|-- EXPR_OPERATOR
+
+EXPR_OPERATOR <|-- EXPR_UNARY_OPERATOR
+
+
+@enduml

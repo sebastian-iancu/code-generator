@@ -1,0 +1,29 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom2.rules.EXPR_ARCHETYPE_ID_CONSTRAINT
+title EXPR_ARCHETYPE_ID_CONSTRAINT Class
+
+class EXPR_ARCHETYPE_ID_CONSTRAINT {
+  + item : C_STRING [1..1]
+}
+
+class EXPR_CONSTRAINT {
+  + item : C_PRIMITIVE_OBJECT [1..1]
+}
+
+class EXPR_LEAF {
+  + reference_type : String [1..1]
+  + item : Any [1..1]
+}
+
+abstract class EXPR_ITEM {
+  + type : String [1..1]
+}
+
+EXPR_ITEM <|-- EXPR_LEAF
+
+EXPR_LEAF <|-- EXPR_CONSTRAINT
+
+EXPR_CONSTRAINT <|-- EXPR_ARCHETYPE_ID_CONSTRAINT
+
+
+@enduml

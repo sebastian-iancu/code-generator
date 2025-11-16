@@ -1,0 +1,21 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom2.constraint_model.primitive.C_REAL
+title C_REAL Class
+
+class C_REAL {
+  + list : List<Real> [0..*]
+  + range : Interval<Real> [0..1]
+  + assumed_value : Real [0..1]
+}
+
+abstract class C_PRIMITIVE {
+  + assumed_value : Any [0..1]
+  + {abstract} default_value() : Any [0..1]
+  + {abstract} has_assumed_value() : Boolean [0..1]
+  + {abstract} valid_value(Any a_value) : Boolean [0..1]
+}
+
+C_PRIMITIVE <|-- C_REAL
+
+
+@enduml

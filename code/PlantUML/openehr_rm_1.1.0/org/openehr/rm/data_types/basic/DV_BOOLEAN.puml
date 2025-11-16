@@ -1,0 +1,15 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.data_types.basic.DV_BOOLEAN
+title DV_BOOLEAN Class
+
+class DV_BOOLEAN {
+  + value : Boolean [1..1]
+}
+
+abstract class DATA_VALUE {
+}
+
+DATA_VALUE <|-- DV_BOOLEAN
+
+
+@enduml

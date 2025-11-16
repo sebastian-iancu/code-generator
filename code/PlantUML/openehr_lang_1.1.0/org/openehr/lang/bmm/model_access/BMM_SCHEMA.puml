@@ -1,0 +1,34 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.model_access.BMM_SCHEMA
+title BMM_SCHEMA Class
+
+abstract class BMM_SCHEMA {
+  + bmm_version : String [1..1]
+  + includes : Hash<String,BMM_INCLUDE_SPEC> [0..1]
+  + bmm_model : BMM_MODEL [0..1]
+  + state : BMM_SCHEMA_STATE [1..1]
+  + model_name : String [0..1]
+  + schema_name : String [1..1]
+  + schema_revision : String [1..1]
+  + schema_lifecycle_state : String [1..1]
+  + schema_author : String [1..1]
+  + schema_description : String [1..1]
+  + schema_contributors : List<String> [0..*]
+  + {abstract} validate_created() : void [0..1]
+  + {abstract} load_finalise() : void [0..1]
+  + {abstract} merge(BMM_SCHEMA other) : void [0..1]
+  + {abstract} validate() : void [0..1]
+  + {abstract} create_bmm_model() : void [0..1]
+  + read_to_validate() : Boolean [0..1]
+  + schema_id() : String [0..1]
+}
+
+class BMM_MODEL_METADATA {
+  + rm_publisher : String [1..1]
+  + rm_release : String [1..1]
+}
+
+BMM_MODEL_METADATA <|-- BMM_SCHEMA
+
+
+@enduml

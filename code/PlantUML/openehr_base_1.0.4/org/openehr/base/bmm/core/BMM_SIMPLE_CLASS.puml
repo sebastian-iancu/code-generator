@@ -1,0 +1,59 @@
+@startuml
+' PlantUML diagram for org.openehr.base.bmm.core.BMM_SIMPLE_CLASS
+title BMM_SIMPLE_CLASS Class
+
+class BMM_SIMPLE_CLASS {
+  + type() : BMM_SIMPLE_TYPE [0..1]
+  + entity_metatype() : String [0..1]
+}
+
+abstract class BMM_CLASS {
+  + name : String [1..1]
+  + ancestors : List<String> [0..*]
+  + package : BMM_PACKAGE [1..1]
+  + properties : Hash<String,BMM_PROPERTY> [0..1]
+  + source_schema_id : String [1..1]
+  + immediate_descendants : List<BMM_CLASS> [0..*]
+  + is_override : Boolean [1..1]
+  + all_ancestors() : List<String> [1..*]
+  + all_descendants() : List<String> [1..*]
+  + suppliers() : List<String> [1..*]
+  + suppliers_non_primitive() : List<String> [1..*]
+  + supplier_closure() : List<String> [1..*]
+  + package_path() : String [0..1]
+  + class_path() : String [0..1]
+  + flat_properties() : List<Hash<String,BMM_PROPERTY<BMM_TYPE>>> [1..*]
+  + is_primitive() : Boolean [0..1]
+  + is_abstract() : Boolean [0..1]
+  + {abstract} type() : BMM_DEFINED_TYPE [0..1]
+}
+
+abstract class BMM_ENTITY {
+  + {abstract} entity_category() : String [0..1]
+  + {abstract} entity_metatype() : String [0..1]
+  + {abstract} is_abstract() : Boolean [0..1]
+  + {abstract} is_primitive() : Boolean [0..1]
+}
+
+class BMM_DEFINITIONS {
+}
+
+BMM_DEFINITIONS <|-- BMM_ENTITY
+
+BMM_ENTITY <|-- BMM_CLASS
+
+abstract class BMM_MODEL_ELEMENT {
+  + documentation : String [0..1]
+}
+
+class BMM_DEFINITIONS {
+}
+
+BMM_DEFINITIONS <|-- BMM_MODEL_ELEMENT
+
+BMM_MODEL_ELEMENT <|-- BMM_CLASS
+
+BMM_CLASS <|-- BMM_SIMPLE_CLASS
+
+
+@enduml

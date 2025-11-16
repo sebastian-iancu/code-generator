@@ -1,0 +1,10 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom2.constraint_model.ARCHETYPE_ID_CONSTRAINT
+title ARCHETYPE_ID_CONSTRAINT Class
+
+class ARCHETYPE_ID_CONSTRAINT {
+  + constraint : C_STRING [1..1]
+}
+
+
+@enduml

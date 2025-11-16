@@ -1,0 +1,13 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom14.archetype.assertion.ASSERTION
+title ASSERTION Class
+
+class ASSERTION {
+  + tag : String [0..1]
+  + string_expression : String [0..1]
+  + expression : EXPR_ITEM [1..1]
+  + variables : List<ASSERTION_VARIABLE> [0..*]
+}
+
+
+@enduml

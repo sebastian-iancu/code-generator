@@ -1,0 +1,21 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom2.constraint_model.primitive.C_INTEGER
+title C_INTEGER Class
+
+class C_INTEGER {
+  + list : List<Integer> [0..*]
+  + range : Interval<Integer> [0..1]
+  + assumed_value : Integer [0..1]
+}
+
+abstract class C_PRIMITIVE {
+  + assumed_value : Any [0..1]
+  + {abstract} default_value() : Any [0..1]
+  + {abstract} has_assumed_value() : Boolean [0..1]
+  + {abstract} valid_value(Any a_value) : Boolean [0..1]
+}
+
+C_PRIMITIVE <|-- C_INTEGER
+
+
+@enduml

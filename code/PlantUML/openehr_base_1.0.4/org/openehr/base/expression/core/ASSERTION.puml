@@ -1,0 +1,17 @@
+@startuml
+' PlantUML diagram for org.openehr.base.expression.core.ASSERTION
+title ASSERTION Class
+
+class ASSERTION {
+  + tag : String [0..1]
+  + string_expression : String [0..1]
+  + expression : EXPRESSION [1..1]
+}
+
+abstract class STATEMENT {
+}
+
+STATEMENT <|-- ASSERTION
+
+
+@enduml

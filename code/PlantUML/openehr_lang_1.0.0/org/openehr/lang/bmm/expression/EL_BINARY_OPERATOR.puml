@@ -1,0 +1,33 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.expression.EL_BINARY_OPERATOR
+title EL_BINARY_OPERATOR Class
+
+class EL_BINARY_OPERATOR {
+  + left_operand : EL_SIMPLE [1..1]
+  + right_operand : EL_TERMINAL [1..1]
+}
+
+abstract class EL_OPERATOR {
+  + precedence_overridden : Boolean [0..1]
+  + symbol : String [0..1]
+  + definition : BMM_FUNCTION [1..1]
+  + operator_definition() : BMM_OPERATOR [0..1]
+  + equivalent_call() : EL_FUNCTION_CALL [0..1]
+}
+
+abstract class EL_SIMPLE {
+}
+
+abstract class EL_EXPRESSION {
+  + {abstract} eval_type() : BMM_TYPE [0..1]
+  + is_boolean() : Boolean [0..1]
+}
+
+EL_EXPRESSION <|-- EL_SIMPLE
+
+EL_SIMPLE <|-- EL_OPERATOR
+
+EL_OPERATOR <|-- EL_BINARY_OPERATOR
+
+
+@enduml

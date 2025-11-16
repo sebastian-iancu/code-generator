@@ -1,0 +1,38 @@
+@startuml
+' PlantUML diagram for org.openehr.base.foundation_types.primitive_types.Double
+title Double Class
+
+class Double {
+  + floor() : Integer [0..1]
+  + add(Double other) : Double [0..1]
+  + subtract(Double other) : Double [0..1]
+  + multiply(Double other) : Double [0..1]
+  + divide(Double other) : Double [0..1]
+  + exponent(Double other) : Double [0..1]
+  + less_than(Double other) : Boolean [0..1]
+  + negative() : Double [0..1]
+  + is_equal(Double other) : Boolean [0..1]
+  + equal(Double other) : Boolean [0..1]
+}
+
+abstract class Ordered_Numeric {
+}
+
+abstract class Ordered {
+  + {abstract} infix <(Ordered other) : Boolean [0..1]
+}
+
+Ordered <|-- Ordered_Numeric
+
+abstract class Numeric {
+  + {abstract} infix *(Numeric other) : Numeric [0..1]
+  + {abstract} infix +(Numeric other) : Numeric [0..1]
+  + {abstract} infix -(Numeric other) : Numeric [0..1]
+}
+
+Numeric <|-- Ordered_Numeric
+
+Ordered_Numeric <|-- Double
+
+
+@enduml

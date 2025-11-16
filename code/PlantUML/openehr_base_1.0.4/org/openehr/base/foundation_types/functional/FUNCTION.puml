@@ -1,0 +1,14 @@
+@startuml
+' PlantUML diagram for org.openehr.base.foundation_types.functional.FUNCTION
+title FUNCTION Class
+
+class FUNCTION <<ARGS, RESULT>> {
+}
+
+class ROUTINE <<ARGS>> {
+}
+
+ROUTINE <|-- FUNCTION
+
+
+@enduml

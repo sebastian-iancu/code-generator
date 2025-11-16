@@ -1,0 +1,34 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.expression.EL_TUPLE
+title EL_TUPLE Class
+
+class EL_TUPLE {
+  + items : List<EL_TUPLE_ITEM> [0..*]
+  + type : BMM_TUPLE_TYPE [1..1]
+  + eval_type() : BMM_TYPE [0..1]
+}
+
+abstract class EL_INSTANCE_REF {
+}
+
+abstract class EL_TERMINAL {
+}
+
+abstract class EL_SIMPLE {
+}
+
+abstract class EL_EXPRESSION {
+  + {abstract} eval_type() : BMM_TYPE [0..1]
+  + is_boolean() : Boolean [0..1]
+}
+
+EL_EXPRESSION <|-- EL_SIMPLE
+
+EL_SIMPLE <|-- EL_TERMINAL
+
+EL_TERMINAL <|-- EL_INSTANCE_REF
+
+EL_INSTANCE_REF <|-- EL_TUPLE
+
+
+@enduml

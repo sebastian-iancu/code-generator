@@ -1,0 +1,10 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.obsolete-elom.extension.OPERATOR_DEF_EXTERNAL
+title OPERATOR_DEF_EXTERNAL Class
+
+abstract class OPERATOR_DEF_EXTERNAL {
+  + evaluation_agent : FUNCTION<TUPLE,Any> [1..1]
+}
+
+
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.statement.BMM_STATEMENT_ITEM
+title BMM_STATEMENT_ITEM Class
+
+abstract class BMM_STATEMENT_ITEM {
+}
+
+
+@enduml

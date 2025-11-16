@@ -1,0 +1,16 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.beom.core.ASSIGNMENT
+title ASSIGNMENT Class
+
+class ASSIGNMENT {
+  + target : VARIABLE_DECLARATION [1..1]
+  + source : EXPR_VALUE [1..1]
+}
+
+abstract class STATEMENT {
+}
+
+STATEMENT <|-- ASSIGNMENT
+
+
+@enduml

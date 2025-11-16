@@ -1,0 +1,11 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.composition.content.navigation
+title navigation Package
+
+class SECTION {
+  + items : List<CONTENT_ITEM> [0..*]
+}
+
+CONTENT_ITEM <|-- SECTION
+
+@enduml

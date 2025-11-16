@@ -1,0 +1,28 @@
+@startuml
+' PlantUML diagram for org.openehr.base.foundation_types.primitive_types.Integer
+title Integer Class
+
+class Integer {
+}
+
+abstract class Ordered_Numeric {
+}
+
+abstract class Ordered {
+  + {abstract} infix <(Ordered other) : Boolean [0..1]
+}
+
+Ordered <|-- Ordered_Numeric
+
+abstract class Numeric {
+  + {abstract} infix *(Numeric other) : Numeric [0..1]
+  + {abstract} infix +(Numeric other) : Numeric [0..1]
+  + {abstract} infix -(Numeric other) : Numeric [0..1]
+}
+
+Numeric <|-- Ordered_Numeric
+
+Ordered_Numeric <|-- Integer
+
+
+@enduml

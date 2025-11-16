@@ -1,0 +1,24 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.beom.core.EXPR_FOR_ALL
+title EXPR_FOR_ALL Class
+
+class EXPR_FOR_ALL {
+  + condition : ASSERTION [1..1]
+  + operand : EXPR_VALUE_REF [1..1]
+}
+
+abstract class EXPR_OPERATOR {
+  + precedence_overridden : Boolean [0..1]
+  + operator : OPERATOR_KIND [1..1]
+}
+
+abstract class EXPR_ITEM {
+  + type : String [1..1]
+}
+
+EXPR_ITEM <|-- EXPR_OPERATOR
+
+EXPR_OPERATOR <|-- EXPR_FOR_ALL
+
+
+@enduml

@@ -1,0 +1,56 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.data_types.quantity.date_time
+title date_time Package
+
+class DV_DURATION {
+  + value : String [1..1]
+  + is_strictly_comparable_to(DV_ORDERED other) : Boolean [0..1]
+}
+
+abstract class DV_TEMPORAL {
+  + accuracy : DV_DURATION [0..1]
+  + diff(DV_TEMPORAL other) : DV_DURATION [0..1]
+}
+
+class DV_DATE {
+  + value : String [1..1]
+  + magnitude() : Integer [0..1]
+  + is_strictly_comparable_to(DV_ORDERED other) : Boolean [0..1]
+  + infix <(DV_ORDERED other_quantity) : Boolean [0..1]
+  + add(DV_AMOUNT a_diff) : DV_ABSOLUTE_QUANTITY [0..1]
+  + subtract(DV_AMOUNT a_diif) : DV_ABSOLUTE_QUANTITY [0..1]
+  + diff(DV_DATE other) : DV_DURATION [0..1]
+}
+
+class DV_TIME {
+  + value : String [1..1]
+  + magnitude() : Real [0..1]
+  + is_strictly_comparable_to(DV_ORDERED other) : Boolean [0..1]
+  + add(DV_AMOUNT a_diff) : DV_ABSOLUTE_QUANTITY [0..1]
+  + subtract(DV_AMOUNT a_diif) : DV_ABSOLUTE_QUANTITY [0..1]
+  + operator=(DV_TIME source) : DV_TIME [0..1]
+  + diff(DV_TIME other) : DV_DURATION [0..1]
+}
+
+class DV_DATE_TIME {
+  + value : String [1..1]
+  + magnitude() : Double [0..1]
+  + is_strictly_comparable_to(DV_ORDERED other) : Boolean [0..1]
+  + add(DV_AMOUNT a_diff) : DV_ABSOLUTE_QUANTITY [0..1]
+  + subtract(DV_AMOUNT a_diif) : DV_ABSOLUTE_QUANTITY [0..1]
+  + diff(DV_ABSOLUTE_QUANTITY other) : DV_AMOUNT [0..1]
+  + operator=(DV_DATE_TIME source) : DV_DATE_TIME [0..1]
+  + as_string() : String [0..1]
+}
+
+DV_AMOUNT <|-- DV_DURATION
+Iso8601_duration <|-- DV_DURATION
+DV_ABSOLUTE_QUANTITY <|-- DV_TEMPORAL
+DV_TEMPORAL <|-- DV_DATE
+Iso8601_date <|-- DV_DATE
+DV_TEMPORAL <|-- DV_TIME
+Iso8601_time <|-- DV_TIME
+DV_TEMPORAL <|-- DV_DATE_TIME
+Iso8601_date_time <|-- DV_DATE_TIME
+
+@enduml

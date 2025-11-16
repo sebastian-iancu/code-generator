@@ -1,0 +1,13 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom2.constraint_model.primitive.CONSTRAINT_STATUS
+title CONSTRAINT_STATUS Enumeration
+
+enum CONSTRAINT_STATUS {
+  required = 0 
+  extensible = 1 
+  preferred = 2 
+  example = 3 
+}
+
+
+@enduml

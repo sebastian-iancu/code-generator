@@ -1,0 +1,10 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.expression.EL_DECISION_BRANCH
+title EL_DECISION_BRANCH Class
+
+abstract class EL_DECISION_BRANCH <<T>> {
+  + result : T [1..1]
+}
+
+
+@enduml

@@ -1,0 +1,37 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.core.feature.BMM_CONTAINER_PROPERTY
+title BMM_CONTAINER_PROPERTY Class
+
+class BMM_CONTAINER_PROPERTY {
+  + cardinality : Multiplicity_interval [0..1]
+  + type : BMM_CONTAINER_TYPE [1..1]
+  + display_name() : String [0..1]
+}
+
+class BMM_PROPERTY <<T>> {
+  + name : String [1..1]
+  + is_mandatory : Boolean [0..1]
+  + is_computed : Boolean [0..1]
+  + type : T [1..1]
+  + is_im_runtime : Boolean [0..1]
+  + is_im_infrastructure : Boolean [0..1]
+  + is_synthesised_generic : Boolean [0..1]
+  + existence() : Multiplicity_interval [0..1]
+  + display_name() : String [0..1]
+}
+
+abstract class BMM_MODEL_ELEMENT {
+  + documentation : String [0..1]
+}
+
+class BMM_DEFINITIONS {
+}
+
+BMM_DEFINITIONS <|-- BMM_MODEL_ELEMENT
+
+BMM_MODEL_ELEMENT <|-- BMM_PROPERTY
+
+BMM_PROPERTY <|-- BMM_CONTAINER_PROPERTY
+
+
+@enduml

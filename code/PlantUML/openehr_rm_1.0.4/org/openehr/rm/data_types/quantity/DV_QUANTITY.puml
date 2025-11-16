@@ -1,0 +1,60 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.data_types.quantity.DV_QUANTITY
+title DV_QUANTITY Class
+
+class DV_QUANTITY {
+  + magnitude : Real [1..1]
+  + precision : Integer [0..1]
+  + units : String [1..1]
+  + normal_range : DV_INTERVAL<DV_QUANTITY> [0..1]
+  + other_reference_ranges : List<REFERENCE_RANGE<DV_QUANTITY>> [0..*]
+  + is_integral() : Boolean [0..1]
+}
+
+abstract class DV_AMOUNT {
+  + accuracy_is_percent : Boolean [0..1]
+  + accuracy : Real [0..1]
+  + valid_percentage(Ordered_Numeric number) : Boolean [0..1]
+  + infix =(DV_AMOUNT source) : DV_AMOUNT [0..1]
+  + infix +(DV_AMOUNT other) : DV_AMOUNT [0..1]
+  + infix -(DV_AMOUNT other) : DV_AMOUNT [0..1]
+  + prefix -() : DV_AMOUNT [0..1]
+}
+
+abstract class DV_QUANTIFIED {
+  + magnitude_status : String [0..1]
+  + accuracy : Any [0..1]
+  + valid_magnitude_status() : Boolean [0..1]
+  + {abstract} magnitude() : Ordered_Numeric [0..1]
+  + accuracy_unknown() : Boolean [0..1]
+}
+
+abstract class DV_ORDERED {
+  + normal_status : CODE_PHRASE [0..1]
+  + normal_range : DV_INTERVAL [0..1]
+  + other_reference_ranges : List<REFERENCE_RANGE<DV_ORDERED>> [0..*]
+  + {abstract} is_strictly_comparable_to(DV_ORDERED other) : Boolean [0..1]
+  + is_simple() : Boolean [0..1]
+  + is_normal() : Boolean [0..1]
+  + {abstract} infix <(Ordered other) : Boolean [0..1]
+}
+
+abstract class DATA_VALUE {
+}
+
+DATA_VALUE <|-- DV_ORDERED
+
+abstract class Ordered {
+  + {abstract} infix <(Ordered other) : Boolean [0..1]
+}
+
+Ordered <|-- DV_ORDERED
+
+DV_ORDERED <|-- DV_QUANTIFIED
+
+DV_QUANTIFIED <|-- DV_AMOUNT
+
+DV_AMOUNT <|-- DV_QUANTITY
+
+
+@enduml

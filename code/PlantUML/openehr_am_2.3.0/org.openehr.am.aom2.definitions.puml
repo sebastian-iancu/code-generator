@@ -1,0 +1,16 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom2.definitions
+title definitions Package
+
+class ADL_CODE_DEFINITIONS {
+  + codes_conformant(String a_child_code, String a_parent_code) : Boolean [0..1]
+  + is_adl_code(String a_code) : Boolean [0..1]
+  + is_id_code(String a_code) : Boolean [0..1]
+  + is_value_code(String a_code) : Boolean [0..1]
+  + is_value_set_code(String a_code) : Boolean [0..1]
+  + is_redefined_code(String a_code) : Boolean [0..1]
+  + code_exists_at_level(String a-code, Integer a_level) : Boolean [0..1]
+}
+
+
+@enduml

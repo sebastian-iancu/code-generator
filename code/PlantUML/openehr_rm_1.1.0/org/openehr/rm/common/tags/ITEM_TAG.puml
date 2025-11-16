@@ -1,0 +1,14 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.common.tags.ITEM_TAG
+title ITEM_TAG Class
+
+class ITEM_TAG {
+  + target : UID_BASED_ID [1..1]
+  + target_path : String [0..1]
+  + key : String [1..1]
+  + value : String [0..1]
+  + owner_id : OBJECT_REF [1..1]
+}
+
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+' PlantUML diagram for org.openehr.base.expression.types.TYPE_DEF_DATE_TIME
+title TYPE_DEF_DATE_TIME Class
+
+class TYPE_DEF_DATE_TIME {
+  + type_name : String [1..1]
+  + type_anchor : IDate_time [1..1]
+}
+
+abstract class EXPR_TYPE_DEF {
+  + type_name : String [1..1]
+  + type_anchor : Any [1..1]
+}
+
+EXPR_TYPE_DEF <|-- TYPE_DEF_DATE_TIME
+
+
+@enduml

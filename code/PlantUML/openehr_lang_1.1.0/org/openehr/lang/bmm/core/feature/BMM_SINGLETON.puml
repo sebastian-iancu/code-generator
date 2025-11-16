@@ -1,0 +1,49 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.core.feature.BMM_SINGLETON
+title BMM_SINGLETON Class
+
+class BMM_SINGLETON {
+  + generator : BMM_ROUTINE_DEFINITION [1..1]
+}
+
+abstract class BMM_STATIC {
+}
+
+abstract class BMM_INSTANTIABLE_FEATURE {
+}
+
+abstract class BMM_FEATURE {
+  + is_synthesised_generic : Boolean [0..1]
+  + feature_extensions : List<BMM_FEATURE_EXTENSION> [0..*]
+  + group : BMM_FEATURE_GROUP [1..1]
+  + scope : BMM_CLASS [1..1]
+}
+
+abstract class BMM_FORMAL_ELEMENT {
+  + type : BMM_TYPE [1..1]
+  + is_nullable : Boolean [0..1]
+  + {abstract} signature() : BMM_SIGNATURE [0..1]
+  + is_boolean() : Boolean [0..1]
+}
+
+abstract class BMM_MODEL_ELEMENT {
+  + documentation : String [0..1]
+}
+
+class BMM_DEFINITIONS {
+}
+
+BMM_DEFINITIONS <|-- BMM_MODEL_ELEMENT
+
+BMM_MODEL_ELEMENT <|-- BMM_FORMAL_ELEMENT
+
+BMM_FORMAL_ELEMENT <|-- BMM_FEATURE
+
+BMM_FEATURE <|-- BMM_INSTANTIABLE_FEATURE
+
+BMM_INSTANTIABLE_FEATURE <|-- BMM_STATIC
+
+BMM_STATIC <|-- BMM_SINGLETON
+
+
+@enduml

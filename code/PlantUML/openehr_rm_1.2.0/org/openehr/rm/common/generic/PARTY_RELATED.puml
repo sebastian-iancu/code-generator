@@ -1,0 +1,23 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.common.generic.PARTY_RELATED
+title PARTY_RELATED Class
+
+class PARTY_RELATED {
+  + relationship : DV_CODED_TEXT [1..1]
+}
+
+class PARTY_IDENTIFIED {
+  + name : String [0..1]
+  + identifiers : List<DV_IDENTIFIER> [0..*]
+}
+
+abstract class PARTY_PROXY {
+  + external_ref : PARTY_REF [0..1]
+}
+
+PARTY_PROXY <|-- PARTY_IDENTIFIED
+
+PARTY_IDENTIFIED <|-- PARTY_RELATED
+
+
+@enduml

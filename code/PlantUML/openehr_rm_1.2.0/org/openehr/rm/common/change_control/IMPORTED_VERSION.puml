@@ -1,0 +1,29 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.common.change_control.IMPORTED_VERSION
+title IMPORTED_VERSION Class
+
+class IMPORTED_VERSION <<T>> {
+  + item : ORIGINAL_VERSION [1..1]
+  + uid() : OBJECT_VERSION_ID [0..1]
+  + preceding_version_uid() : OBJECT_VERSION_ID [0..1]
+  + lifecycle_state() : DV_CODED_TEXT [0..1]
+  + data() : T [0..1]
+}
+
+abstract class VERSION <<T>> {
+  + contribution : OBJECT_REF [1..1]
+  + signature : String [0..1]
+  + commit_audit : AUDIT_DETAILS [1..1]
+  + {abstract} uid() : OBJECT_VERSION_ID [0..1]
+  + {abstract} preceding_version_uid() : OBJECT_VERSION_ID [0..1]
+  + {abstract} data() : T [0..1]
+  + {abstract} lifecycle_state() : DV_CODED_TEXT [0..1]
+  + canonical_form() : String [0..1]
+  + owner_id() : HIER_OBJECT_ID [0..1]
+  + is_branch() : Boolean [0..1]
+}
+
+VERSION <|-- IMPORTED_VERSION
+
+
+@enduml

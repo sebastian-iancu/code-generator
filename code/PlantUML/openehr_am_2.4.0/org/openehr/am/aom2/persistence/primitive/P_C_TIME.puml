@@ -1,0 +1,9 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom2.persistence.primitive.P_C_TIME
+title P_C_TIME Class
+
+class P_C_TIME {
+}
+
+
+@enduml

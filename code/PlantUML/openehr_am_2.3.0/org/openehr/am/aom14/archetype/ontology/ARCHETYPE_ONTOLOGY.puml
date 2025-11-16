@@ -1,0 +1,23 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom14.archetype.ontology.ARCHETYPE_ONTOLOGY
+title ARCHETYPE_ONTOLOGY Class
+
+class ARCHETYPE_ONTOLOGY {
+  + term_codes : List<String> [1..*]
+  + constraint_codes : List<String> [1..*]
+  + parent_archetype : ARCHETYPE [1..1]
+  + terminologies_available : List<String> [0..*]
+  + specialisation_depth : Integer [1..1]
+  + term_attribute_names : List<String> [1..*]
+  + has_language(String a_lang) : Boolean [0..1]
+  + has_terminology(String a_terminology_id) : Boolean [0..1]
+  + has_term_code(String a_code) : Boolean [0..1]
+  + has_constraint_code(String a_code) : Boolean [0..1]
+  + term_definition(String a_lang, String a_code) : ARCHETYPE_TERM [0..1]
+  + constraint_definition(String a_code, String a_lang) : ARCHETYPE_TERM [0..1]
+  + term_binding(String a_terminology, String a_code) : CODE_PHRASE [0..1]
+  + constraint_binding(String a_terminology_id, String a_code) : String [0..1]
+}
+
+
+@enduml

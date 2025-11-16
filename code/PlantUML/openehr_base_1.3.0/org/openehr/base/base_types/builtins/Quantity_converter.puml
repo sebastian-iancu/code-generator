@@ -1,0 +1,10 @@
+@startuml
+' PlantUML diagram for org.openehr.base.base_types.builtins.Quantity_converter
+title Quantity_converter Interface
+
+interface Quantity_converter {
+  + convert_value(Real value, String from_units, String to_units, Terminology_code property) : Real [0..1]
+}
+
+
+@enduml

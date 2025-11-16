@@ -1,0 +1,61 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm_persistence.P_BMM_SCHEMA
+title P_BMM_SCHEMA Class
+
+class P_BMM_SCHEMA {
+  + primitive_types : List<P_BMM_CLASS> [0..*]
+  + class_definitions : List<P_BMM_CLASS> [0..*]
+  + validate_created() : void [0..1]
+  + load_finalise() : void [0..1]
+  + merge(P_BMM_SCHEMA other) : void [0..1]
+  + validate() : void [0..1]
+  + create_bmm_model() : void [0..1]
+  + canonical_packages() : P_BMM_PACKAGE [0..1]
+}
+
+class P_BMM_PACKAGE_CONTAINER {
+  + packages : Hash<String,P_BMM_PACKAGE> [1..1]
+}
+
+P_BMM_PACKAGE_CONTAINER <|-- P_BMM_SCHEMA
+
+abstract class BMM_SCHEMA {
+  + bmm_version : String [1..1]
+  + primitive_types : List<P_BMM_CLASS> [0..*]
+  + class_definitions : List<P_BMM_CLASS> [0..*]
+  + includes : Hash<String,BMM_INCLUDE_SPEC> [0..1]
+  + bmm_schema : BMM_MODEL [0..1]
+  + state : BMM_SCHEMA_STATE [1..1]
+  + model_name : String [0..1]
+  + schema_name : String [1..1]
+  + schema_revision : String [1..1]
+  + schema_lifecycle_state : String [1..1]
+  + schema_author : String [1..1]
+  + schema_description : String [1..1]
+  + schema_contributors : List<String> [0..*]
+  + {abstract} validate_created() : void [0..1]
+  + {abstract} load_finalise() : void [0..1]
+  + {abstract} merge(BMM_SCHEMA other) : void [0..1]
+  + {abstract} validate() : void [0..1]
+  + {abstract} create_bmm_model() : void [0..1]
+  + read_to_validate() : Boolean [0..1]
+  + schema_id() : String [0..1]
+}
+
+class P_BMM_PACKAGE_CONTAINER {
+  + packages : Hash<String,P_BMM_PACKAGE> [1..1]
+}
+
+P_BMM_PACKAGE_CONTAINER <|-- BMM_SCHEMA
+
+class BMM_MODEL_METADATA {
+  + rm_publisher : String [1..1]
+  + rm_release : String [1..1]
+}
+
+BMM_MODEL_METADATA <|-- BMM_SCHEMA
+
+BMM_SCHEMA <|-- P_BMM_SCHEMA
+
+
+@enduml

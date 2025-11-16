@@ -1,0 +1,13 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.support.definition
+title definition Package
+
+class OPENEHR_DEFINITIONS {
+}
+
+class BASIC_DEFINITIONS {
+}
+
+BASIC_DEFINITIONS <|-- OPENEHR_DEFINITIONS
+
+@enduml

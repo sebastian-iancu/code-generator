@@ -1,0 +1,10 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom14.archetype.assertion.EXPR_ITEM
+title EXPR_ITEM Class
+
+abstract class EXPR_ITEM {
+  + type : String [1..1]
+}
+
+
+@enduml

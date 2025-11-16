@@ -1,0 +1,42 @@
+@startuml
+' PlantUML diagram for org.openehr.am.p_aom2.primitive.P_C_STRING
+title P_C_STRING Class
+
+class P_C_STRING {
+  + constraint : List<String> [1..*]
+  + default_value : String [1..1]
+  + assumed_value : String [0..1]
+}
+
+abstract class P_C_PRIMITIVE_OBJECT {
+  + assumed_value : Any [0..1]
+  + is_enumerated_type_constraint : Boolean [0..1]
+  + constraint : Any [1..1]
+}
+
+abstract class P_C_DEFINED_OBJECT {
+  + is_frozen : Boolean [0..1]
+  + default_value : Any [1..1]
+}
+
+abstract class P_C_OBJECT {
+  + rm_type_name : String [1..1]
+  + occurrences : String [0..1]
+  + node_id : String [1..1]
+  + is_deprecated : Boolean [0..1]
+  + specialisation_depth() : Integer [0..1]
+}
+
+abstract class P_ARCHETYPE_CONSTRAINT {
+}
+
+P_ARCHETYPE_CONSTRAINT <|-- P_C_OBJECT
+
+P_C_OBJECT <|-- P_C_DEFINED_OBJECT
+
+P_C_DEFINED_OBJECT <|-- P_C_PRIMITIVE_OBJECT
+
+P_C_PRIMITIVE_OBJECT <|-- P_C_STRING
+
+
+@enduml

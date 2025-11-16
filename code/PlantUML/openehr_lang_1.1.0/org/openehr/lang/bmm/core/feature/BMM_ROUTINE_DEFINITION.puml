@@ -1,0 +1,9 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.core.feature.BMM_ROUTINE_DEFINITION
+title BMM_ROUTINE_DEFINITION Class
+
+abstract class BMM_ROUTINE_DEFINITION {
+}
+
+
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom2.profile.AOM_PROPERTY_MAPPING
+title AOM_PROPERTY_MAPPING Class
+
+class AOM_PROPERTY_MAPPING {
+  + source_property_name : String [1..1]
+  + target_property_name : String [1..1]
+}
+
+
+@enduml

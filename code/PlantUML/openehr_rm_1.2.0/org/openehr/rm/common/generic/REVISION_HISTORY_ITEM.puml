@@ -1,0 +1,11 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.common.generic.REVISION_HISTORY_ITEM
+title REVISION_HISTORY_ITEM Class
+
+class REVISION_HISTORY_ITEM {
+  + version_id : OBJECT_VERSION_ID [1..1]
+  + audits : List<AUDIT_DETAILS> [1..*]
+}
+
+
+@enduml

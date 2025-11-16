@@ -1,0 +1,10 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.composition.content
+title content Package
+
+abstract class CONTENT_ITEM {
+}
+
+LOCATABLE <|-- CONTENT_ITEM
+
+@enduml

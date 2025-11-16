@@ -1,0 +1,55 @@
+@startuml
+' PlantUML diagram for org.openehr.am.p_aom2.primitive
+title primitive Package
+
+class P_C_BOOLEAN {
+  + constraint : List<Boolean> [0..*]
+  + assumed_value : Boolean [0..1]
+  + default_value : Boolean [1..1]
+}
+
+class P_C_STRING {
+  + constraint : List<String> [1..*]
+  + default_value : String [1..1]
+  + assumed_value : String [0..1]
+}
+
+class P_C_INTEGER {
+}
+
+class P_C_REAL {
+}
+
+abstract class P_C_ORDERED <<T>> {
+  + constraint : List<Interval> [1..*]
+}
+
+class P_C_TERMINOLOGY_CODE {
+  + constraint : String [1..1]
+  + assumed_value : Terminology_code [0..1]
+  + default_value : Terminology_code [1..1]
+}
+
+abstract class P_C_TEMPORAL <<T>> {
+  + pattern_constraint : String [1..1]
+}
+
+class P_C_TIME {
+}
+
+class P_C_DATE {
+}
+
+class P_C_DATE_TIME {
+}
+
+class P_C_DURATION {
+}
+
+P_C_PRIMITIVE_OBJECT <|-- P_C_BOOLEAN
+P_C_PRIMITIVE_OBJECT <|-- P_C_STRING
+P_C_PRIMITIVE_OBJECT <|-- P_C_ORDERED
+P_C_PRIMITIVE_OBJECT <|-- P_C_TERMINOLOGY_CODE
+P_C_ORDERED <|-- P_C_TEMPORAL
+
+@enduml

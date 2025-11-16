@@ -1,0 +1,11 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.core.feature.BMM_OPERATOR_POSITION
+title BMM_OPERATOR_POSITION Enumeration
+
+enum BMM_OPERATOR_POSITION {
+  prefix 
+  infix 
+}
+
+
+@enduml

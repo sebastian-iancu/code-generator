@@ -1,0 +1,20 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom2.rm_overlay
+title rm_overlay Package
+
+class RM_ATTRIBUTE_VISIBILITY {
+  + visibility : VISIBILITY_TYPE [0..1]
+  + alias : Terminology_code [0..1]
+}
+
+class RM_OVERLAY {
+  + rm_visibility : Hash<String,RM_ATTRIBUTE_VISIBILITY> [0..1]
+}
+
+enum VISIBILITY_TYPE {
+  hide 
+  show 
+}
+
+
+@enduml

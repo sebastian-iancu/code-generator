@@ -1,0 +1,22 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm_persistence.P_BMM_CONTAINER_TYPE
+title P_BMM_CONTAINER_TYPE Class
+
+class P_BMM_CONTAINER_TYPE {
+  + container_type : String [1..1]
+  + type_def : P_BMM_BASE_TYPE [0..1]
+  + type : String [0..1]
+  + bmm_type : BMM_CONTAINER_TYPE [0..1]
+  + type_ref() : P_BMM_BASE_TYPE [0..1]
+}
+
+abstract class P_BMM_TYPE {
+  + bmm_type : BMM_TYPE [0..1]
+  + {abstract} create_bmm_type(BMM_MODEL a_schema, BMM_CLASS a_class_def) : void [0..1]
+  + {abstract} as_type_string() : String [0..1]
+}
+
+P_BMM_TYPE <|-- P_BMM_CONTAINER_TYPE
+
+
+@enduml

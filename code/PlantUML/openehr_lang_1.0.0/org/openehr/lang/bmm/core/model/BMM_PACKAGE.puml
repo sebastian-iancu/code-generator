@@ -1,0 +1,32 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.core.model.BMM_PACKAGE
+title BMM_PACKAGE Class
+
+class BMM_PACKAGE {
+  + classes : List<BMM_CLASS> [0..*]
+  + root_classes() : List<BMM_CLASS> [1..*]
+  + path() : String [0..1]
+}
+
+class BMM_PACKAGE_CONTAINER {
+  + packages : Hash<String,BMM_PACKAGE> [0..1]
+  + package_at_path(String a_path) : BMM_PACKAGE [1..1]
+  + do_recursive_packages(PROCEDURE action) : void [0..1]
+  + has_package_path(String a_path) : Boolean [0..1]
+}
+
+abstract class BMM_MODEL_ELEMENT {
+  + documentation : String [0..1]
+}
+
+class BMM_DEFINITIONS {
+}
+
+BMM_DEFINITIONS <|-- BMM_MODEL_ELEMENT
+
+BMM_MODEL_ELEMENT <|-- BMM_PACKAGE_CONTAINER
+
+BMM_PACKAGE_CONTAINER <|-- BMM_PACKAGE
+
+
+@enduml

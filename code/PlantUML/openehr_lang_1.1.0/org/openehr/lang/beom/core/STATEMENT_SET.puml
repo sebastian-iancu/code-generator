@@ -1,0 +1,12 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.beom.core.STATEMENT_SET
+title STATEMENT_SET Class
+
+class STATEMENT_SET {
+  + statement : List<STATEMENT> [0..*]
+  + name : String [0..1]
+  + execution_result() : Boolean [0..1]
+}
+
+
+@enduml

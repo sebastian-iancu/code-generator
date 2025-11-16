@@ -1,0 +1,12 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.core.feature.BMM_OPERATOR
+title BMM_OPERATOR Class
+
+class BMM_OPERATOR {
+  + position : BMM_OPERATOR_POSITION [1..1]
+  + symbols : List<String> [1..*]
+  + name : String [1..1]
+}
+
+
+@enduml

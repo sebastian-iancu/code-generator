@@ -1,0 +1,124 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.data_types.quantity.date_time.DV_DATE
+title DV_DATE Class
+
+class DV_DATE {
+  + value : String [1..1]
+  + magnitude() : Integer [0..1]
+  + is_strictly_comparable_to(DV_ORDERED other) : Boolean [0..1]
+  + infix <(DV_ORDERED other_quantity) : Boolean [0..1]
+  + add(DV_AMOUNT a_diff) : DV_ABSOLUTE_QUANTITY [0..1]
+  + subtract(DV_AMOUNT a_diif) : DV_ABSOLUTE_QUANTITY [0..1]
+  + diff(DV_DATE other) : DV_DURATION [0..1]
+}
+
+abstract class DV_TEMPORAL {
+  + accuracy : DV_DURATION [0..1]
+  + diff(DV_TEMPORAL other) : DV_DURATION [0..1]
+}
+
+abstract class DV_ABSOLUTE_QUANTITY {
+  + accuracy : DV_AMOUNT [0..1]
+  + {abstract} diff(DV_ABSOLUTE_QUANTITY other) : DV_AMOUNT [0..1]
+  + {abstract} add(DV_AMOUNT a_diff) : DV_ABSOLUTE_QUANTITY [0..1]
+  + {abstract} subtract(DV_AMOUNT a_diif) : DV_ABSOLUTE_QUANTITY [0..1]
+}
+
+abstract class DV_QUANTIFIED {
+  + magnitude_status : String [0..1]
+  + accuracy : Any [0..1]
+  + valid_magnitude_status() : Boolean [0..1]
+  + {abstract} magnitude() : Ordered_Numeric [0..1]
+  + accuracy_unknown() : Boolean [0..1]
+}
+
+abstract class DV_ORDERED {
+  + normal_status : CODE_PHRASE [0..1]
+  + normal_range : DV_INTERVAL [0..1]
+  + other_reference_ranges : List<REFERENCE_RANGE<DV_ORDERED>> [0..*]
+  + {abstract} is_strictly_comparable_to(DV_ORDERED other) : Boolean [0..1]
+  + is_simple() : Boolean [0..1]
+  + is_normal() : Boolean [0..1]
+  + {abstract} infix <(Ordered other) : Boolean [0..1]
+}
+
+abstract class DATA_VALUE {
+}
+
+DATA_VALUE <|-- DV_ORDERED
+
+abstract class Ordered {
+  + {abstract} infix <(Ordered other) : Boolean [0..1]
+}
+
+Ordered <|-- DV_ORDERED
+
+DV_ORDERED <|-- DV_QUANTIFIED
+
+DV_QUANTIFIED <|-- DV_ABSOLUTE_QUANTITY
+
+DV_ABSOLUTE_QUANTITY <|-- DV_TEMPORAL
+
+DV_TEMPORAL <|-- DV_DATE
+
+class Iso8601_date {
+  + month_unknown() : Boolean [0..1]
+  + day_unknown() : Boolean [0..1]
+  + valid_iso8601_date() : Boolean [0..1]
+  + is_partial() : Boolean [0..1]
+  + is_extended() : Boolean [0..1]
+  + as_string() : String [0..1]
+  + as_date() : Date [0..1]
+}
+
+abstract class Iso8601_type {
+  + value : String [1..1]
+  + {abstract} is_partial() : Boolean [0..1]
+  + {abstract} is_extended() : Boolean [0..1]
+}
+
+abstract class Ordered {
+  + {abstract} infix <(Ordered other) : Boolean [0..1]
+}
+
+Ordered <|-- Iso8601_type
+
+Iso8601_type <|-- Iso8601_date
+
+abstract class IDate {
+  + year() : Integer [0..1]
+  + month() : Integer [0..1]
+  + day() : Integer [0..1]
+  + timezone() : ITimezone [0..1]
+  + as_string() : String [0..1]
+}
+
+abstract class Temporal {
+}
+
+abstract class Ordered {
+  + {abstract} infix <(Ordered other) : Boolean [0..1]
+}
+
+Ordered <|-- Temporal
+
+class Time_Definitions {
+  + valid_year(Integer y) : Boolean [0..1]
+  + valid_month(Integer m) : Boolean [0..1]
+  + valid_day(Integer y, Integer m, Integer d) : Boolean [0..1]
+  + valid_hour(Integer h, Integer m, Integer s) : Boolean [0..1]
+  + valid_minute(Integer m) : Boolean [0..1]
+  + valid_second(Integer s) : Boolean [0..1]
+  + valid_fractional_second(Double fs) : Boolean [0..1]
+}
+
+Time_Definitions <|-- Temporal
+
+Temporal <|-- IDate
+
+IDate <|-- Iso8601_date
+
+Iso8601_date <|-- DV_DATE
+
+
+@enduml

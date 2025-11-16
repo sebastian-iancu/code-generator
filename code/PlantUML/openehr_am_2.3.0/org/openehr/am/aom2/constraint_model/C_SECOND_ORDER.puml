@@ -1,0 +1,12 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom2.constraint_model.C_SECOND_ORDER
+title C_SECOND_ORDER Class
+
+abstract class C_SECOND_ORDER {
+  + members : List<ARCHETYPE_CONSTRAINT> [0..*]
+  + {abstract} c_conforms_to(C_SECOND_ORDER other, FUNCTION<> rmcc) : Boolean [0..1]
+  + {abstract} c_congruent_to(C_SECOND_ORDER other) : Boolean [0..1]
+}
+
+
+@enduml

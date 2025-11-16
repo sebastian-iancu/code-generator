@@ -1,0 +1,37 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.core.literal_value.BMM_BOOLEAN_VALUE
+title BMM_BOOLEAN_VALUE Class
+
+class BMM_BOOLEAN_VALUE {
+  + value : Boolean [1..1]
+}
+
+class BMM_PRIMITIVE_VALUE {
+  + type : BMM_SIMPLE_TYPE [1..1]
+}
+
+abstract class BMM_UNITARY_VALUE {
+  + type : BMM_UNITARY_TYPE [1..1]
+}
+
+abstract class BMM_LITERAL_VALUE {
+  + value_literal : String [1..1]
+  + value : Any [0..1]
+  + syntax : String [0..1]
+}
+
+abstract class BMM_TYPED {
+  + type : BMM_TYPE [1..1]
+  + is_boolean() : Boolean [0..1]
+}
+
+BMM_TYPED <|-- BMM_LITERAL_VALUE
+
+BMM_LITERAL_VALUE <|-- BMM_UNITARY_VALUE
+
+BMM_UNITARY_VALUE <|-- BMM_PRIMITIVE_VALUE
+
+BMM_PRIMITIVE_VALUE <|-- BMM_BOOLEAN_VALUE
+
+
+@enduml

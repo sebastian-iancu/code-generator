@@ -1,0 +1,48 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.ehr_extract.openehr_extract.OPENEHR_CONTENT_ITEM
+title OPENEHR_CONTENT_ITEM Class
+
+class OPENEHR_CONTENT_ITEM {
+  + item : X_VERSIONED_OBJECT [0..1]
+}
+
+abstract class EXTRACT_CONTENT_ITEM {
+  + is_primary : Boolean [1..1]
+  + is_changed : Boolean [0..1]
+  + is_masked : Boolean [0..1]
+  + item : Any [0..1]
+}
+
+abstract class EXTRACT_ITEM {
+}
+
+abstract class LOCATABLE {
+  + name : DV_TEXT [1..1]
+  + archetype_node_id : String [1..1]
+  + uid : UID_BASED_ID [0..1]
+  + links : List<LINK> [0..*]
+  + archetype_details : ARCHETYPED [0..1]
+  + feeder_audit : FEEDER_AUDIT [0..1]
+  + concept() : DV_TEXT [0..1]
+  + is_archetype_root() : Boolean [0..1]
+}
+
+abstract class PATHABLE {
+  + parent() : PATHABLE [0..1]
+  + item_at_path(String a_path) : Any [0..1]
+  + items_at_path(String a_path) : List<Any> [1..*]
+  + path_exists(String a_path) : Boolean [0..1]
+  + path_unique(String a_path) : Boolean [0..1]
+  + path_of_item(PATHABLE a_loc) : String [0..1]
+}
+
+PATHABLE <|-- LOCATABLE
+
+LOCATABLE <|-- EXTRACT_ITEM
+
+EXTRACT_ITEM <|-- EXTRACT_CONTENT_ITEM
+
+EXTRACT_CONTENT_ITEM <|-- OPENEHR_CONTENT_ITEM
+
+
+@enduml

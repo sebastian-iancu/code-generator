@@ -1,0 +1,39 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom2.persistence.constraint_model.P_C_ARCHETYPE_ROOT
+title P_C_ARCHETYPE_ROOT Class
+
+class P_C_ARCHETYPE_ROOT {
+  + archetype_ref : String [1..1]
+}
+
+class P_C_COMPLEX_OBJECT {
+  + attributes : List<P_C_ATTRIBUTE> [0..*]
+  + attribute_tuples : List<P_C_ATTRIBUTE_TUPLE> [0..*]
+}
+
+abstract class P_C_DEFINED_OBJECT {
+  + is_frozen : Boolean [0..1]
+  + default_value : Any [1..1]
+}
+
+abstract class P_C_OBJECT {
+  + rm_type_name : String [1..1]
+  + occurrences : String [0..1]
+  + node_id : String [1..1]
+  + is_deprecated : Boolean [0..1]
+  + specialisation_depth() : Integer [0..1]
+}
+
+abstract class P_ARCHETYPE_CONSTRAINT {
+}
+
+P_ARCHETYPE_CONSTRAINT <|-- P_C_OBJECT
+
+P_C_OBJECT <|-- P_C_DEFINED_OBJECT
+
+P_C_DEFINED_OBJECT <|-- P_C_COMPLEX_OBJECT
+
+P_C_COMPLEX_OBJECT <|-- P_C_ARCHETYPE_ROOT
+
+
+@enduml

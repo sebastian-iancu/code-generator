@@ -1,0 +1,32 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.expression.EL_UNARY_OPERATOR
+title EL_UNARY_OPERATOR Class
+
+class EL_UNARY_OPERATOR {
+  + operand : EL_EXPRESSION [1..1]
+}
+
+abstract class EL_OPERATOR {
+  + precedence_overridden : Boolean [0..1]
+  + symbol : String [0..1]
+  + definition : BMM_FUNCTION [1..1]
+  + operator_definition() : BMM_OPERATOR [0..1]
+  + equivalent_call() : EL_FUNCTION_CALL [0..1]
+}
+
+abstract class EL_SIMPLE {
+}
+
+abstract class EL_EXPRESSION {
+  + {abstract} eval_type() : BMM_TYPE [0..1]
+  + is_boolean() : Boolean [0..1]
+}
+
+EL_EXPRESSION <|-- EL_SIMPLE
+
+EL_SIMPLE <|-- EL_OPERATOR
+
+EL_OPERATOR <|-- EL_UNARY_OPERATOR
+
+
+@enduml

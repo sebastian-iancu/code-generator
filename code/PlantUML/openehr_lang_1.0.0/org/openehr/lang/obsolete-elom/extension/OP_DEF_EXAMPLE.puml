@@ -1,0 +1,18 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.obsolete-elom.extension.OP_DEF_EXAMPLE
+title OP_DEF_EXAMPLE Class
+
+class OP_DEF_EXAMPLE {
+  + identifier : String [1..1]
+  + symbols : List<String> [0..*]
+  + evaluation_agent : FUNCTION<> [1..1]
+}
+
+abstract class OPERATOR_DEF_EXTERNAL {
+  + evaluation_agent : FUNCTION<TUPLE,Any> [1..1]
+}
+
+OPERATOR_DEF_EXTERNAL <|-- OP_DEF_EXAMPLE
+
+
+@enduml

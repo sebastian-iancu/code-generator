@@ -1,0 +1,18 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.beom.types.TYPE_DEF_TERMINOLOGY_CODE
+title TYPE_DEF_TERMINOLOGY_CODE Class
+
+class TYPE_DEF_TERMINOLOGY_CODE {
+  + type_name : String [1..1]
+  + type_anchor : Terminology_code [1..1]
+}
+
+abstract class EXPR_TYPE_DEF {
+  + type_name : String [1..1]
+  + type_anchor : Any [1..1]
+}
+
+EXPR_TYPE_DEF <|-- TYPE_DEF_TERMINOLOGY_CODE
+
+
+@enduml

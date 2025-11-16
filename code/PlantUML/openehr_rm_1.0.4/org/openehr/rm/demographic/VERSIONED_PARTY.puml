@@ -1,0 +1,33 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.demographic.VERSIONED_PARTY
+title VERSIONED_PARTY Class
+
+class VERSIONED_PARTY {
+}
+
+class VERSIONED_OBJECT <<T>> {
+  + uid : HIER_OBJECT_ID [1..1]
+  + owner_id : OBJECT_REF [1..1]
+  + time_created : DV_DATE_TIME [1..1]
+  + version_count() : Integer [0..1]
+  + all_version_ids() : List<OBJECT_VERSION_ID> [0..*]
+  + all_versions() : List<VERSION<T>> [0..*]
+  + has_version_at_time(OBJECT_VERSION_ID a_ver_id) : Boolean [0..1]
+  + has_version_id(OBJECT_VERSION_ID a_ver_id) : Boolean [0..1]
+  + version_with_id(OBJECT_VERSION_ID a_ver_id) : VERSION [0..1]
+  + is_original_version(OBJECT_VERSION_ID a_ver_id) : Boolean [0..1]
+  + version_at_time(DV_DATE_TIME a_time) : VERSION [0..1]
+  + revision_history() : REVISION_HISTORY [0..1]
+  + latest_version() : VERSION [0..1]
+  + latest_trunk_version() : VERSION [0..1]
+  + trunk_lifecycle_state() : DV_CODED_TEXT [0..1]
+  + commit_original_version(OBJECT_REF a_contribution, OBJECT_VERSION_ID a_new_version_uid, OBJECT_VERSION_ID a_preceding_version_id, AUDIT_DETAILS an_audit, DV_CODED_TEXT a_lifecycle_state, T a_data, String signing_key) : void [0..1]
+  + commit_original_merged_version(OBJECT_REF a_contribution, OBJECT_VERSION_ID a_new_version_uid, OBJECT_VERSION_ID a_preceding_version_id, AUDIT_DETAILS an_audit, DV_CODED_TEXT a_lifecycle_state, T a_data, List<OBJECT_VERSION_ID> an_other_input_uids, String signing_key) : void [0..1]
+  + commit_imported_version(OBJECT_REF a_contribution, AUDIT_DETAILS an_audit, ORIGINAL_VERSION a_version) : void [0..1]
+  + commit_attestation(ATTESTATION an_attestation, OBJECT_VERSION_ID a_ver_id, String signing_key) : void [0..1]
+}
+
+VERSIONED_OBJECT <|-- VERSIONED_PARTY
+
+
+@enduml

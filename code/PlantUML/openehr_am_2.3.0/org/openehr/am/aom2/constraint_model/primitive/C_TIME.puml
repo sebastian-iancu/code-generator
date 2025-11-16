@@ -1,0 +1,25 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom2.constraint_model.primitive.C_TIME
+title C_TIME Class
+
+class C_TIME {
+  + minute_validity : VALIDITY_KIND [0..1]
+  + second_validity : VALIDITY_KIND [0..1]
+  + millisecond_validity : VALIDITY_KIND [0..1]
+  + timezone_validity : VALIDITY_KIND [0..1]
+  + range : Interval<Iso8601_time> [0..1]
+  + assumed_value : Iso8601_time [0..1]
+  + validity_is_range() : Boolean [0..1]
+}
+
+abstract class C_PRIMITIVE {
+  + assumed_value : Any [0..1]
+  + {abstract} default_value() : Any [0..1]
+  + {abstract} has_assumed_value() : Boolean [0..1]
+  + {abstract} valid_value(Any a_value) : Boolean [0..1]
+}
+
+C_PRIMITIVE <|-- C_TIME
+
+
+@enduml

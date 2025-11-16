@@ -1,0 +1,57 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.core.model.BMM_MODEL
+title BMM_MODEL Class
+
+class BMM_MODEL {
+  + class_definitions : Hash<String,BMM_CLASS> [0..1]
+  + used_models : List<BMM_MODEL> [0..*]
+  + model_id() : String [0..1]
+  + class_definition(String a_name) : BMM_CLASS [0..1]
+  + type_definition() : BMM_CLASS [0..1]
+  + has_class_definition(String a_class_name) : Boolean [0..1]
+  + has_type_definition(String a_type_name) : Boolean [0..1]
+  + enumeration_definition(String a_name) : BMM_ENUMERATION [0..1]
+  + primitive_types() : List<String> [1..*]
+  + enumeration_types() : List<String> [1..*]
+  + property_definition() : BMM_PROPERTY [0..1]
+  + ms_conformant_property_type(String a_bmm_type_name, String a_bmm_property_name, String a_ms_property_name) : Boolean [0..1]
+  + property_definition_at_path() : BMM_PROPERTY [0..1]
+  + class_definition_at_path(String a_type_name, String a_prop_path) : BMM_CLASS [0..1]
+  + all_ancestor_classes(String a_class) : List<String> [1..*]
+  + is_descendant_of(String a_class_name, String a_parent_class_name) : Boolean [0..1]
+  + type_conforms_to(String a_desc_type, String an_anc_type) : Boolean [0..1]
+  + subtypes(String a_type) : List<String> [0..*]
+  + any_class_definition() : BMM_SIMPLE_CLASS [0..1]
+  + any_type_definition() : BMM_SIMPLE_TYPE [0..1]
+  + boolean_type_definition() : BMM_SIMPLE_TYPE [0..1]
+}
+
+class BMM_PACKAGE_CONTAINER {
+  + packages : Hash<String,BMM_PACKAGE> [0..1]
+  + package_at_path(String a_path) : BMM_PACKAGE [1..1]
+  + do_recursive_packages(PROCEDURE action) : void [0..1]
+  + has_package_path(String a_path) : Boolean [0..1]
+}
+
+abstract class BMM_MODEL_ELEMENT {
+  + documentation : String [0..1]
+}
+
+class BMM_DEFINITIONS {
+}
+
+BMM_DEFINITIONS <|-- BMM_MODEL_ELEMENT
+
+BMM_MODEL_ELEMENT <|-- BMM_PACKAGE_CONTAINER
+
+BMM_PACKAGE_CONTAINER <|-- BMM_MODEL
+
+class BMM_MODEL_METADATA {
+  + rm_publisher : String [1..1]
+  + rm_release : String [1..1]
+}
+
+BMM_MODEL_METADATA <|-- BMM_MODEL
+
+
+@enduml

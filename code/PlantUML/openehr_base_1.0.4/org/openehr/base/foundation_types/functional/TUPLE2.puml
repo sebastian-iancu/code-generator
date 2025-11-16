@@ -1,0 +1,14 @@
+@startuml
+' PlantUML diagram for org.openehr.base.foundation_types.functional.TUPLE2
+title TUPLE2 Class
+
+class TUPLE2 <<A, B>> {
+}
+
+class TUPLE {
+}
+
+TUPLE <|-- TUPLE2
+
+
+@enduml

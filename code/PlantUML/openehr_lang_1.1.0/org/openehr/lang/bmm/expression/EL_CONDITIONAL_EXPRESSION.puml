@@ -1,0 +1,16 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.expression.EL_CONDITIONAL_EXPRESSION
+title EL_CONDITIONAL_EXPRESSION Class
+
+class EL_CONDITIONAL_EXPRESSION <<T>> {
+  + condition : EL_EXPRESSION [1..1]
+}
+
+abstract class EL_DECISION_BRANCH {
+  + result : EL_EXPRESSION [1..1]
+}
+
+EL_DECISION_BRANCH <|-- EL_CONDITIONAL_EXPRESSION
+
+
+@enduml

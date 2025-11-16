@@ -1,0 +1,11 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.statement.BMM_CONDITIONAL_ACTION
+title BMM_CONDITIONAL_ACTION Class
+
+class BMM_CONDITIONAL_ACTION {
+  + condition : EL_BOOLEAN_EXPRESSION [1..1]
+  + statement : BMM_STATEMENT_ITEM [1..1]
+}
+
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+' PlantUML diagram for org.openehr.base.foundation_types.iso8601_time.Iso8601_type
+title Iso8601_type Class
+
+abstract class Iso8601_type {
+  + value : String [1..1]
+  + {abstract} is_partial() : Boolean [0..1]
+  + {abstract} is_extended() : Boolean [0..1]
+}
+
+abstract class Ordered {
+  + {abstract} infix <(Ordered other) : Boolean [0..1]
+}
+
+Ordered <|-- Iso8601_type
+
+
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.ehr_extract.common.EXTRACT_MANIFEST
+title EXTRACT_MANIFEST Class
+
+class EXTRACT_MANIFEST {
+  + entities : List<EXTRACT_ENTITY_MANIFEST> [1..*]
+}
+
+
+@enduml

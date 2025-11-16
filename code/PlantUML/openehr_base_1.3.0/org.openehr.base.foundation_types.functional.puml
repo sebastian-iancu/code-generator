@@ -1,0 +1,28 @@
+@startuml
+' PlantUML diagram for org.openehr.base.foundation_types.functional
+title functional Package
+
+class TUPLE {
+}
+
+class FUNCTION <<ARGS, RESULT>> {
+}
+
+class TUPLE1 <<A>> {
+}
+
+class TUPLE2 <<A, B>> {
+}
+
+class ROUTINE <<ARGS>> {
+}
+
+class PROCEDURE <<ARGS>> {
+}
+
+ROUTINE <|-- FUNCTION
+TUPLE <|-- TUPLE1
+TUPLE <|-- TUPLE2
+ROUTINE <|-- PROCEDURE
+
+@enduml

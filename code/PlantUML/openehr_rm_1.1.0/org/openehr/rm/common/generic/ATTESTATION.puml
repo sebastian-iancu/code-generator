@@ -1,0 +1,24 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.common.generic.ATTESTATION
+title ATTESTATION Class
+
+class ATTESTATION {
+  + attested_view : DV_MULTIMEDIA [0..1]
+  + proof : String [0..1]
+  + items : List<DV_EHR_URI> [0..*]
+  + reason : DV_TEXT [1..1]
+  + is_pending : Boolean [1..1]
+}
+
+class AUDIT_DETAILS {
+  + system_id : String [1..1]
+  + time_committed : DV_DATE_TIME [1..1]
+  + change_type : DV_CODED_TEXT [1..1]
+  + description : DV_TEXT [0..1]
+  + committer : PARTY_PROXY [1..1]
+}
+
+AUDIT_DETAILS <|-- ATTESTATION
+
+
+@enduml

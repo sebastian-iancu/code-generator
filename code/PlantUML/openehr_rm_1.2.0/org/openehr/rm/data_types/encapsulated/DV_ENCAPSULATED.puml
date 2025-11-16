@@ -1,0 +1,16 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.data_types.encapsulated.DV_ENCAPSULATED
+title DV_ENCAPSULATED Class
+
+abstract class DV_ENCAPSULATED {
+  + charset : CODE_PHRASE [0..1]
+  + language : CODE_PHRASE [0..1]
+}
+
+abstract class DATA_VALUE {
+}
+
+DATA_VALUE <|-- DV_ENCAPSULATED
+
+
+@enduml

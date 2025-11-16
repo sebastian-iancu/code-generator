@@ -1,0 +1,24 @@
+@startuml
+' PlantUML diagram for org.openehr.base.foundation_types.primitive_types.Uri
+title Uri Class
+
+class Uri {
+}
+
+class String {
+  + infix +(String other) : String [0..1]
+  + is_empty() : Boolean [0..1]
+  + is_integer() : Boolean [0..1]
+  + as_integer() : Integer [0..1]
+}
+
+abstract class Ordered {
+  + {abstract} infix <(Ordered other) : Boolean [0..1]
+}
+
+Ordered <|-- String
+
+String <|-- Uri
+
+
+@enduml

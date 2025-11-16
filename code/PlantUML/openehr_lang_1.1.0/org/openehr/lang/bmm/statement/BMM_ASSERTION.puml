@@ -1,0 +1,31 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.statement.BMM_ASSERTION
+title BMM_ASSERTION Class
+
+class BMM_ASSERTION {
+  + expression : EL_BOOLEAN_EXPRESSION [1..1]
+  + tag : String [0..1]
+}
+
+abstract class BMM_SIMPLE_STATEMENT {
+}
+
+abstract class BMM_STATEMENT {
+}
+
+abstract class BMM_STATEMENT_ITEM {
+}
+
+abstract class BMM_ROUTINE_BODY {
+}
+
+BMM_ROUTINE_BODY <|-- BMM_STATEMENT_ITEM
+
+BMM_STATEMENT_ITEM <|-- BMM_STATEMENT
+
+BMM_STATEMENT <|-- BMM_SIMPLE_STATEMENT
+
+BMM_SIMPLE_STATEMENT <|-- BMM_ASSERTION
+
+
+@enduml

@@ -1,0 +1,40 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.composition.COMPOSITION
+title COMPOSITION Class
+
+class COMPOSITION {
+  + language : CODE_PHRASE [1..1]
+  + territory : CODE_PHRASE [1..1]
+  + category : DV_CODED_TEXT [1..1]
+  + context : EVENT_CONTEXT [0..1]
+  + composer : PARTY_PROXY [1..1]
+  + content : List<CONTENT_ITEM> [0..*]
+  + is_persistent() : Boolean [0..1]
+}
+
+abstract class LOCATABLE {
+  + name : DV_TEXT [1..1]
+  + archetype_node_id : String [1..1]
+  + uid : UID_BASED_ID [0..1]
+  + links : List<LINK> [0..*]
+  + archetype_details : ARCHETYPED [0..1]
+  + feeder_audit : FEEDER_AUDIT [0..1]
+  + concept() : DV_TEXT [0..1]
+  + is_archetype_root() : Boolean [0..1]
+}
+
+abstract class PATHABLE {
+  + parent() : PATHABLE [0..1]
+  + item_at_path(String a_path) : Any [0..1]
+  + items_at_path(String a_path) : List<Any> [1..*]
+  + path_exists(String a_path) : Boolean [0..1]
+  + path_unique(String a_path) : Boolean [0..1]
+  + path_of_item(PATHABLE a_loc) : String [0..1]
+}
+
+PATHABLE <|-- LOCATABLE
+
+LOCATABLE <|-- COMPOSITION
+
+
+@enduml

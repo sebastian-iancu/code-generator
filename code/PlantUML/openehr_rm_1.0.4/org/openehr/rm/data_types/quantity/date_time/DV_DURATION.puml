@@ -1,0 +1,118 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.data_types.quantity.date_time.DV_DURATION
+title DV_DURATION Class
+
+class DV_DURATION {
+  + value : String [1..1]
+  + is_strictly_comparable_to(DV_ORDERED other) : Boolean [0..1]
+}
+
+abstract class DV_AMOUNT {
+  + accuracy_is_percent : Boolean [0..1]
+  + accuracy : Real [0..1]
+  + valid_percentage(Ordered_Numeric number) : Boolean [0..1]
+  + infix =(DV_AMOUNT source) : DV_AMOUNT [0..1]
+  + infix +(DV_AMOUNT other) : DV_AMOUNT [0..1]
+  + infix -(DV_AMOUNT other) : DV_AMOUNT [0..1]
+  + prefix -() : DV_AMOUNT [0..1]
+}
+
+abstract class DV_QUANTIFIED {
+  + magnitude_status : String [0..1]
+  + accuracy : Any [0..1]
+  + valid_magnitude_status() : Boolean [0..1]
+  + {abstract} magnitude() : Ordered_Numeric [0..1]
+  + accuracy_unknown() : Boolean [0..1]
+}
+
+abstract class DV_ORDERED {
+  + normal_status : CODE_PHRASE [0..1]
+  + normal_range : DV_INTERVAL [0..1]
+  + other_reference_ranges : List<REFERENCE_RANGE<DV_ORDERED>> [0..*]
+  + {abstract} is_strictly_comparable_to(DV_ORDERED other) : Boolean [0..1]
+  + is_simple() : Boolean [0..1]
+  + is_normal() : Boolean [0..1]
+  + {abstract} infix <(Ordered other) : Boolean [0..1]
+}
+
+abstract class DATA_VALUE {
+}
+
+DATA_VALUE <|-- DV_ORDERED
+
+abstract class Ordered {
+  + {abstract} infix <(Ordered other) : Boolean [0..1]
+}
+
+Ordered <|-- DV_ORDERED
+
+DV_ORDERED <|-- DV_QUANTIFIED
+
+DV_QUANTIFIED <|-- DV_AMOUNT
+
+DV_AMOUNT <|-- DV_DURATION
+
+class Iso8601_duration {
+  + is_decimal_sign_comma() : Boolean [0..1]
+  + valid_iso8601_duration(String s) : Boolean [0..1]
+  + is_partial() : Boolean [0..1]
+  + is_extended() : Boolean [0..1]
+  + as_string() : String [0..1]
+  + months() : Integer [0..1]
+  + years() : Integer [0..1]
+  + weeks() : Integer [0..1]
+  + to_seconds() : Integer [0..1]
+  + minutes() : Integer [0..1]
+  + hours() : Integer [0..1]
+  + days() : Integer [0..1]
+  + as_duration() : Duration [0..1]
+}
+
+abstract class Iso8601_type {
+  + value : String [1..1]
+  + {abstract} is_partial() : Boolean [0..1]
+  + {abstract} is_extended() : Boolean [0..1]
+}
+
+abstract class Ordered {
+  + {abstract} infix <(Ordered other) : Boolean [0..1]
+}
+
+Ordered <|-- Iso8601_type
+
+Iso8601_type <|-- Iso8601_duration
+
+abstract class IDuration {
+  + seconds() : Integer [0..1]
+  + fractional_seconds() : Real [0..1]
+}
+
+abstract class Temporal {
+}
+
+abstract class Ordered {
+  + {abstract} infix <(Ordered other) : Boolean [0..1]
+}
+
+Ordered <|-- Temporal
+
+class Time_Definitions {
+  + valid_year(Integer y) : Boolean [0..1]
+  + valid_month(Integer m) : Boolean [0..1]
+  + valid_day(Integer y, Integer m, Integer d) : Boolean [0..1]
+  + valid_hour(Integer h, Integer m, Integer s) : Boolean [0..1]
+  + valid_minute(Integer m) : Boolean [0..1]
+  + valid_second(Integer s) : Boolean [0..1]
+  + valid_fractional_second(Double fs) : Boolean [0..1]
+}
+
+Time_Definitions <|-- Temporal
+
+Temporal <|-- IDuration
+
+IDuration <|-- Iso8601_duration
+
+Iso8601_duration <|-- DV_DURATION
+
+
+@enduml

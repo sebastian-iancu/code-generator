@@ -1,0 +1,16 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.beom.core.EXPRESSION
+title EXPRESSION Class
+
+abstract class EXPRESSION {
+  + {abstract} type() : EXPR_TYPE_DEF [0..1]
+}
+
+abstract class EXPR_VALUE {
+  + {abstract} value() : Any [0..1]
+}
+
+EXPR_VALUE <|-- EXPRESSION
+
+
+@enduml

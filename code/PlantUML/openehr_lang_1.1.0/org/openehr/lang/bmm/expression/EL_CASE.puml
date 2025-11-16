@@ -1,0 +1,16 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.expression.EL_CASE
+title EL_CASE Class
+
+class EL_CASE <<T>> {
+  + value_constraint : C_OBJECT [1..1]
+}
+
+abstract class EL_DECISION_BRANCH {
+  + result : EL_EXPRESSION [1..1]
+}
+
+EL_DECISION_BRANCH <|-- EL_CASE
+
+
+@enduml

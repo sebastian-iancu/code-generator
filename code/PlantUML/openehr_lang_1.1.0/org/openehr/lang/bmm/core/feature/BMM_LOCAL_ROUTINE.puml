@@ -1,0 +1,16 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.core.feature.BMM_LOCAL_ROUTINE
+title BMM_LOCAL_ROUTINE Class
+
+class BMM_LOCAL_ROUTINE {
+  + locals : List<BMM_LOCAL> [0..*]
+  + body : BMM_STATEMENT_BLOCK [1..1]
+}
+
+abstract class BMM_ROUTINE_DEFINITION {
+}
+
+BMM_ROUTINE_DEFINITION <|-- BMM_LOCAL_ROUTINE
+
+
+@enduml

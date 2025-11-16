@@ -1,0 +1,12 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.common.archetyped.LINK
+title LINK Class
+
+class LINK {
+  + meaning : DV_TEXT [1..1]
+  + type : DV_TEXT [1..1]
+  + target : DV_EHR_URI [1..1]
+}
+
+
+@enduml

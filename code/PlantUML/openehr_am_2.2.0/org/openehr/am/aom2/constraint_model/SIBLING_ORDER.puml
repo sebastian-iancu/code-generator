@@ -1,0 +1,12 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom2.constraint_model.SIBLING_ORDER
+title SIBLING_ORDER Class
+
+class SIBLING_ORDER {
+  + is_before : Boolean [1..1]
+  + sibling_node_id : String [1..1]
+  + is_after() : Boolean [0..1]
+}
+
+
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.support.terminology.OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS
+title OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS Class
+
+class OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS {
+  + valid_terminology_group_id(Boolean an_id) : Boolean [0..1]
+}
+
+
+@enduml

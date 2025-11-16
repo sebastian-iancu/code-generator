@@ -1,0 +1,23 @@
+@startuml
+' PlantUML diagram for org.openehr.base.expression.core.EXPR_VARIABLE_REF
+title EXPR_VARIABLE_REF Class
+
+class EXPR_VARIABLE_REF {
+  + item : VARIABLE_DECLARATION [1..1]
+}
+
+class EXPR_LEAF {
+  + reference_type : String [1..1]
+  + item : Any [1..1]
+}
+
+abstract class EXPR_ITEM {
+  + type : String [1..1]
+}
+
+EXPR_ITEM <|-- EXPR_LEAF
+
+EXPR_LEAF <|-- EXPR_VARIABLE_REF
+
+
+@enduml

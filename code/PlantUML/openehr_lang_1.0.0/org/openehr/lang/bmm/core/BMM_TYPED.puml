@@ -1,0 +1,11 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.core.BMM_TYPED
+title BMM_TYPED Class
+
+abstract class BMM_TYPED {
+  + type : BMM_TYPE [1..1]
+  + is_boolean() : Boolean [0..1]
+}
+
+
+@enduml

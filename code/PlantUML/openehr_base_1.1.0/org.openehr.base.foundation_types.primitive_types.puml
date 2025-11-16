@@ -1,0 +1,69 @@
+@startuml
+' PlantUML diagram for org.openehr.base.foundation_types.primitive_types
+title primitive_types Package
+
+class Uri {
+}
+
+abstract class Comparable {
+}
+
+abstract class Ordered_Numeric {
+}
+
+class Integer {
+}
+
+class Double {
+}
+
+abstract class Numeric {
+  + {abstract} infix *(Numeric other) : Numeric [0..1]
+  + {abstract} infix +(Numeric other) : Numeric [0..1]
+  + {abstract} infix -(Numeric other) : Numeric [0..1]
+}
+
+class Octet {
+}
+
+class Character {
+}
+
+class Boolean {
+  + infix and(Boolean other) : Boolean [0..1]
+  + infix and_then(Boolean other) : Boolean [0..1]
+  + infix or(Boolean other) : Boolean [0..1]
+  + infix or_else(Boolean other) : Boolean [0..1]
+  + infix xor(Boolean other) : Boolean [0..1]
+  + infix implies(Boolean other) : Boolean [0..1]
+}
+
+class String {
+  + infix +(String other) : String [0..1]
+  + is_empty() : Boolean [0..1]
+  + is_integer() : Boolean [0..1]
+  + as_integer() : Integer [0..1]
+}
+
+class Real {
+  + floor() : Integer [0..1]
+}
+
+class Integer64 {
+}
+
+abstract class Ordered {
+  + {abstract} infix <(Ordered other) : Boolean [0..1]
+}
+
+Ordered <|-- Ordered_Numeric
+Numeric <|-- Ordered_Numeric
+Ordered_Numeric <|-- Integer
+Ordered_Numeric <|-- Double
+Ordered <|-- Octet
+Ordered <|-- Character
+Ordered <|-- String
+Ordered_Numeric <|-- Real
+Ordered_Numeric <|-- Integer64
+
+@enduml

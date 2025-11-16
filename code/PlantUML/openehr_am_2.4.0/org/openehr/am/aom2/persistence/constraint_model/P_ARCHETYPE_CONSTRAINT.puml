@@ -1,0 +1,9 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom2.persistence.constraint_model.P_ARCHETYPE_CONSTRAINT
+title P_ARCHETYPE_CONSTRAINT Class
+
+abstract class P_ARCHETYPE_CONSTRAINT {
+}
+
+
+@enduml

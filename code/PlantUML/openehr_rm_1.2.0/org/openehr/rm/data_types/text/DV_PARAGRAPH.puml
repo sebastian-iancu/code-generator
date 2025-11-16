@@ -1,0 +1,15 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.data_types.text.DV_PARAGRAPH
+title DV_PARAGRAPH Class
+
+class DV_PARAGRAPH {
+  + items : List<DV_TEXT> [1..*]
+}
+
+abstract class DATA_VALUE {
+}
+
+DATA_VALUE <|-- DV_PARAGRAPH
+
+
+@enduml

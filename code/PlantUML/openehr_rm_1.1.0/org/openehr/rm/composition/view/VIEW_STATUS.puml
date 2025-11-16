@@ -1,0 +1,11 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.composition.view.VIEW_STATUS
+title VIEW_STATUS Enumeration
+
+enum VIEW_STATUS {
+  active 
+  inactive 
+}
+
+
+@enduml

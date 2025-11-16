@@ -1,0 +1,23 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom2.archetype.ARCHETYPE_HRID
+title ARCHETYPE_HRID Class
+
+class ARCHETYPE_HRID {
+  + namespace : String [0..1]
+  + rm_publisher : String [1..1]
+  + rm_package : String [1..1]
+  + rm_class : String [1..1]
+  + concept_id : String [1..1]
+  + release_version : String [1..1]
+  + version_status : VERSION_STATUS [1..1]
+  + build_count : String [1..1]
+  + semantic_id() : String [0..1]
+  + physical_id() : String [0..1]
+  + version_id() : String [0..1]
+  + major_version() : String [0..1]
+  + minor_version() : String [0..1]
+  + patch_version() : String [0..1]
+}
+
+
+@enduml

@@ -1,0 +1,15 @@
+@startuml
+' PlantUML diagram for org.openehr.am.p_aom2.archetype.P_AUTHORED_RESOURCE
+title P_AUTHORED_RESOURCE Class
+
+abstract class P_AUTHORED_RESOURCE {
+  + original_language : String [1..1]
+  + is_controlled : Boolean [0..1]
+  + translations : List<TRANSLATION_DETAILS> [0..*]
+  + description : RESOURCE_DESCRIPTION [0..1]
+  + uid : String [0..1]
+  + annotations : Hash<String,Hash<String,String>> [0..1]
+}
+
+
+@enduml

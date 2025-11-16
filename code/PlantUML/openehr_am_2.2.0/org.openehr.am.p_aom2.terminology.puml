@@ -1,0 +1,14 @@
+@startuml
+' PlantUML diagram for org.openehr.am.p_aom2.terminology
+title terminology Package
+
+class P_ARCHETYPE_TERMINOLOGY {
+  + is_differential : Boolean [1..1]
+  + original_language : String [1..1]
+  + term_definitions : Hash<String,Hash<String,ARCHETYPE_TERM>> [1..1]
+  + term_bindings : Hash<String,Hash<String,Uri>> [0..1]
+  + value_sets : Hash<String,VALUE_SET> [0..1]
+}
+
+
+@enduml

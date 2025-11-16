@@ -1,0 +1,11 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.core.model.BMM_MODEL_METADATA
+title BMM_MODEL_METADATA Class
+
+class BMM_MODEL_METADATA {
+  + rm_publisher : String [1..1]
+  + rm_release : String [1..1]
+}
+
+
+@enduml

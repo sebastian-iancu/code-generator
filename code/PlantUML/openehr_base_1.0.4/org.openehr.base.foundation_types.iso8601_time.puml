@@ -1,0 +1,84 @@
+@startuml
+' PlantUML diagram for org.openehr.base.foundation_types.iso8601_time
+title iso8601_time Package
+
+class Iso8601_date_time {
+  + month_unknown() : Boolean [0..1]
+  + day_unknown() : Boolean [0..1]
+  + minute_unknown() : Boolean [0..1]
+  + second_unknown() : Boolean [0..1]
+  + is_decimal_sign_comma() : Boolean [0..1]
+  + valid_iso8601_date_time(String s) : Boolean [0..1]
+  + is_partial() : Boolean [0..1]
+  + is_extended() : Boolean [0..1]
+  + as_string() : String [0..1]
+  + has_fractional_second() : Boolean [0..1]
+  + as_date_time() : Date_time [0..1]
+}
+
+class Iso8601_duration {
+  + is_decimal_sign_comma() : Boolean [0..1]
+  + valid_iso8601_duration(String s) : Boolean [0..1]
+  + is_partial() : Boolean [0..1]
+  + is_extended() : Boolean [0..1]
+  + as_string() : String [0..1]
+  + months() : Integer [0..1]
+  + years() : Integer [0..1]
+  + weeks() : Integer [0..1]
+  + to_seconds() : Integer [0..1]
+  + minutes() : Integer [0..1]
+  + hours() : Integer [0..1]
+  + days() : Integer [0..1]
+  + as_duration() : Duration [0..1]
+}
+
+class Iso8601_time {
+  + minute_unknown() : Boolean [0..1]
+  + second_unknown() : Boolean [0..1]
+  + is_decimal_sign_comma() : Boolean [0..1]
+  + valid_iso8601_time() : Boolean [0..1]
+  + is_partial() : Boolean [0..1]
+  + is_extended() : Boolean [0..1]
+  + as_string() : String [0..1]
+  + has_fractional_second() : Boolean [0..1]
+  + as_time() : Time [0..1]
+}
+
+class Iso8601_timezone {
+  + minute_unknown() : Boolean [0..1]
+  + is_partial() : Boolean [0..1]
+  + is_extended() : Boolean [0..1]
+  + as_string() : String [0..1]
+  + is_gmt() : Boolean [0..1]
+  + as_timezone() : Timezone [0..1]
+}
+
+abstract class Iso8601_type {
+  + value : String [1..1]
+  + {abstract} is_partial() : Boolean [0..1]
+  + {abstract} is_extended() : Boolean [0..1]
+}
+
+class Iso8601_date {
+  + month_unknown() : Boolean [0..1]
+  + day_unknown() : Boolean [0..1]
+  + valid_iso8601_date() : Boolean [0..1]
+  + is_partial() : Boolean [0..1]
+  + is_extended() : Boolean [0..1]
+  + as_string() : String [0..1]
+  + as_date() : Date [0..1]
+}
+
+Iso8601_type <|-- Iso8601_date_time
+IDate_time <|-- Iso8601_date_time
+Iso8601_type <|-- Iso8601_duration
+IDuration <|-- Iso8601_duration
+Iso8601_type <|-- Iso8601_time
+ITime <|-- Iso8601_time
+Iso8601_type <|-- Iso8601_timezone
+ITimezone <|-- Iso8601_timezone
+Ordered <|-- Iso8601_type
+Iso8601_type <|-- Iso8601_date
+IDate <|-- Iso8601_date
+
+@enduml

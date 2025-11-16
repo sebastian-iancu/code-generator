@@ -1,0 +1,20 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.statement.BMM_STATEMENT_BLOCK
+title BMM_STATEMENT_BLOCK Class
+
+class BMM_STATEMENT_BLOCK {
+  + items : List<BMM_STATEMENT_ITEM> [0..*]
+}
+
+abstract class BMM_STATEMENT_ITEM {
+}
+
+abstract class BMM_ROUTINE_BODY {
+}
+
+BMM_ROUTINE_BODY <|-- BMM_STATEMENT_ITEM
+
+BMM_STATEMENT_ITEM <|-- BMM_STATEMENT_BLOCK
+
+
+@enduml

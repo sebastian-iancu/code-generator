@@ -1,0 +1,32 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.expression.EL_SCOPED_REF
+title EL_SCOPED_REF Class
+
+abstract class EL_SCOPED_REF {
+  + scope : EL_INSTANCE_REF [0..1]
+}
+
+abstract class EL_INSTANCE_REF {
+}
+
+abstract class EL_TERMINAL {
+}
+
+abstract class EL_SIMPLE {
+}
+
+abstract class EL_EXPRESSION {
+  + {abstract} eval_type() : BMM_TYPE [0..1]
+  + is_boolean() : Boolean [0..1]
+}
+
+EL_EXPRESSION <|-- EL_SIMPLE
+
+EL_SIMPLE <|-- EL_TERMINAL
+
+EL_TERMINAL <|-- EL_INSTANCE_REF
+
+EL_INSTANCE_REF <|-- EL_SCOPED_REF
+
+
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.core.BMM_DECLARATION
+title BMM_DECLARATION Class
+
+abstract class BMM_DECLARATION {
+  + name : String [1..1]
+  + documentation : Hash<String,Any> [0..1]
+  + scope : BMM_DECLARATION [1..1]
+  + extensions : Hash<String,Any> [0..1]
+  + is_root_scope() : Boolean [0..1]
+}
+
+
+@enduml

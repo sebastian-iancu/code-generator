@@ -1,0 +1,15 @@
+@startuml
+' PlantUML diagram for org.openehr.base.base_types.identification.ISO_OID
+title ISO_OID Class
+
+class ISO_OID {
+}
+
+abstract class UID {
+  + value : String [1..1]
+}
+
+UID <|-- ISO_OID
+
+
+@enduml

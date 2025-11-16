@@ -1,0 +1,24 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.core.literal_value.BMM_INTERVAL_VALUE
+title BMM_INTERVAL_VALUE Class
+
+class BMM_INTERVAL_VALUE {
+}
+
+abstract class BMM_LITERAL_VALUE {
+  + value_literal : String [1..1]
+  + value : Any [0..1]
+  + syntax : String [0..1]
+}
+
+abstract class BMM_TYPED {
+  + type : BMM_TYPE [1..1]
+  + is_boolean() : Boolean [0..1]
+}
+
+BMM_TYPED <|-- BMM_LITERAL_VALUE
+
+BMM_LITERAL_VALUE <|-- BMM_INTERVAL_VALUE
+
+
+@enduml

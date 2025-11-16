@@ -1,0 +1,24 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.expression.EL_CONDITION_CHAIN
+title EL_CONDITION_CHAIN Class
+
+class EL_CONDITION_CHAIN {
+  + items : List<EL_CONDITIONAL_EXPRESSION> [1..*]
+}
+
+abstract class EL_DECISION_TABLE {
+  + else : EL_EXPRESSION [1..1]
+  + items : List<EL_DECISION_BRANCH> [1..*]
+}
+
+abstract class EL_EXPRESSION {
+  + {abstract} eval_type() : BMM_TYPE [0..1]
+  + is_boolean() : Boolean [0..1]
+}
+
+EL_EXPRESSION <|-- EL_DECISION_TABLE
+
+EL_DECISION_TABLE <|-- EL_CONDITION_CHAIN
+
+
+@enduml

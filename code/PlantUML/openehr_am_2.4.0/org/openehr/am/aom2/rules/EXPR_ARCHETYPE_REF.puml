@@ -1,0 +1,29 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom2.rules.EXPR_ARCHETYPE_REF
+title EXPR_ARCHETYPE_REF Class
+
+class EXPR_ARCHETYPE_REF {
+  + path : String [1..1]
+  + item : ARCHETYPE_CONSTRAINT [1..1]
+}
+
+class EXPR_VALUE_REF {
+}
+
+class EXPR_LEAF {
+  + reference_type : String [1..1]
+  + item : Any [1..1]
+}
+
+abstract class EXPR_ITEM {
+  + type : String [1..1]
+}
+
+EXPR_ITEM <|-- EXPR_LEAF
+
+EXPR_LEAF <|-- EXPR_VALUE_REF
+
+EXPR_VALUE_REF <|-- EXPR_ARCHETYPE_REF
+
+
+@enduml

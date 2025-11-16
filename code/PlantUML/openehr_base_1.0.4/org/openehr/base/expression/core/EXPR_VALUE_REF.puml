@@ -1,0 +1,22 @@
+@startuml
+' PlantUML diagram for org.openehr.base.expression.core.EXPR_VALUE_REF
+title EXPR_VALUE_REF Class
+
+class EXPR_VALUE_REF {
+}
+
+class EXPR_LEAF {
+  + reference_type : String [1..1]
+  + item : Any [1..1]
+}
+
+abstract class EXPR_ITEM {
+  + type : String [1..1]
+}
+
+EXPR_ITEM <|-- EXPR_LEAF
+
+EXPR_LEAF <|-- EXPR_VALUE_REF
+
+
+@enduml

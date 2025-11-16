@@ -1,0 +1,53 @@
+@startuml
+' PlantUML diagram for org.openehr.base.bmm.core.BMM_SIMPLE_TYPE
+title BMM_SIMPLE_TYPE Class
+
+class BMM_SIMPLE_TYPE {
+  + type_name() : String [0..1]
+  + is_abstract() : Boolean [0..1]
+  + flattened_type_list() : List<String> [0..*]
+  + subtypes() : List<String> [0..*]
+  + has_subtypes() : Boolean [0..1]
+  + effective_base_class() : BMM_SIMPLE_CLASS [0..1]
+}
+
+abstract class BMM_DEFINED_TYPE {
+  + base_class : BMM_CLASS [1..1]
+}
+
+abstract class BMM_UNITARY_TYPE {
+}
+
+abstract class BMM_TYPE {
+  + {abstract} effective_base_class() : BMM_CLASS [0..1]
+  + {abstract} type_name() : String [0..1]
+  + {abstract} has_subtypes() : Boolean [0..1]
+  + {abstract} subtypes() : List<String> [0..*]
+  + {abstract} flattened_type_list() : List<String> [0..*]
+  + type_signature() : String [0..1]
+  + is_primitive() : Boolean [0..1]
+  + entity_metatype() : String [0..1]
+}
+
+abstract class BMM_ENTITY {
+  + {abstract} entity_category() : String [0..1]
+  + {abstract} entity_metatype() : String [0..1]
+  + {abstract} is_abstract() : Boolean [0..1]
+  + {abstract} is_primitive() : Boolean [0..1]
+}
+
+class BMM_DEFINITIONS {
+}
+
+BMM_DEFINITIONS <|-- BMM_ENTITY
+
+BMM_ENTITY <|-- BMM_TYPE
+
+BMM_TYPE <|-- BMM_UNITARY_TYPE
+
+BMM_UNITARY_TYPE <|-- BMM_DEFINED_TYPE
+
+BMM_DEFINED_TYPE <|-- BMM_SIMPLE_TYPE
+
+
+@enduml

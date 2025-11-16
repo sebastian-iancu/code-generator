@@ -1,0 +1,20 @@
+@startuml
+' PlantUML diagram for org.openehr.am.p_aom2.constraint_model.P_C_ATTRIBUTE
+title P_C_ATTRIBUTE Class
+
+class P_C_ATTRIBUTE {
+  + rm_attribute_name : String [1..1]
+  + existence : String [0..1]
+  + children : List<P_C_OBJECT> [0..*]
+  + differential_path : String [0..1]
+  + cardinality : String [0..1]
+  + is_multiple : Boolean [1..1]
+}
+
+abstract class P_ARCHETYPE_CONSTRAINT {
+}
+
+P_ARCHETYPE_CONSTRAINT <|-- P_C_ATTRIBUTE
+
+
+@enduml

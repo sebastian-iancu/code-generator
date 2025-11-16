@@ -1,0 +1,56 @@
+@startuml
+' PlantUML diagram for org.openehr.am.p_aom2.archetype.P_OPERATIONAL_TEMPLATE
+title P_OPERATIONAL_TEMPLATE Class
+
+class P_OPERATIONAL_TEMPLATE {
+  + component_terminologies : Hash<String,P_ARCHETYPE_TERMINOLOGY> [0..1]
+  + terminology_extracts : Hash<String,Hash<String,ARCHETYPE_TERM>> [0..1]
+}
+
+class P_AUTHORED_ARCHETYPE {
+  + adl_version : String [0..1]
+  + build_uid : UID [1..1]
+  + rm_release : String [1..1]
+  + is_generated : Boolean [1..1]
+  + other_meta_data : Hash<String,String> [1..1]
+}
+
+abstract class P_ARCHETYPE {
+  + parent_archetype_id : String [0..1]
+  + archetype_id : P_ARCHETYPE_HRID [1..1]
+  + is_differential : Boolean [1..1]
+  + definition : P_C_COMPLEX_OBJECT [1..1]
+  + terminology : P_ARCHETYPE_TERMINOLOGY [1..1]
+  + rules : List<STATEMENT> [0..*]
+}
+
+P_ARCHETYPE <|-- P_AUTHORED_ARCHETYPE
+
+abstract class AUTHORED_RESOURCE {
+  + original_language : Terminology_code [1..1]
+  + is_controlled : Boolean [0..1]
+  + description : RESOURCE_DESCRIPTION [0..1]
+  + uid : UUID [0..1]
+  + annotations : RESOURCE_ANNOTATIONS [0..1]
+  + translations : Hash<String,TRANSLATION_DETAILS> [0..1]
+  + current_revision() : String [0..1]
+  + languages_available() : List<String> [0..*]
+}
+
+AUTHORED_RESOURCE <|-- P_AUTHORED_ARCHETYPE
+
+abstract class P_AUTHORED_RESOURCE {
+  + original_language : String [1..1]
+  + is_controlled : Boolean [0..1]
+  + translations : List<TRANSLATION_DETAILS> [0..*]
+  + description : RESOURCE_DESCRIPTION [0..1]
+  + uid : String [0..1]
+  + annotations : Hash<String,Hash<String,String>> [0..1]
+}
+
+P_AUTHORED_RESOURCE <|-- P_AUTHORED_ARCHETYPE
+
+P_AUTHORED_ARCHETYPE <|-- P_OPERATIONAL_TEMPLATE
+
+
+@enduml

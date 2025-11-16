@@ -1,9 +1,0 @@
-@startuml
-' PlantUML diagram for org.openehr.rm.security.access_control
-title org.openehr.rm.security.access_control package
-
-abstract class ACCESS_CONTROL_SETTINGS {
-}
-
-
-@enduml

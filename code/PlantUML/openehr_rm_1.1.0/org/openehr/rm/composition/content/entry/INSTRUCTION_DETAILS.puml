@@ -1,0 +1,23 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.composition.content.entry.INSTRUCTION_DETAILS
+title INSTRUCTION_DETAILS Class
+
+class INSTRUCTION_DETAILS {
+  + instruction_id : LOCATABLE_REF [1..1]
+  + activity_id : String [1..1]
+  + wf_details : ITEM_STRUCTURE [0..1]
+}
+
+abstract class PATHABLE {
+  + parent() : PATHABLE [0..1]
+  + item_at_path(String a_path) : Any [0..1]
+  + items_at_path(String a_path) : List<Any> [1..*]
+  + path_exists(String a_path) : Boolean [0..1]
+  + path_unique(String a_path) : Boolean [0..1]
+  + path_of_item(PATHABLE a_loc) : String [0..1]
+}
+
+PATHABLE <|-- INSTRUCTION_DETAILS
+
+
+@enduml

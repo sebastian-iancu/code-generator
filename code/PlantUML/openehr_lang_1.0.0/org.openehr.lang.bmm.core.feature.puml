@@ -1,0 +1,148 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.core.feature
+title feature Package
+
+class BMM_CONSTANT {
+  + generator : EL_INSTANCE_REF [1..1]
+}
+
+class BMM_CONTAINER_PROPERTY {
+  + type : BMM_CONTAINER_TYPE [1..1]
+  + cardinality : Multiplicity_interval [0..1]
+  + display_name() : String [0..1]
+}
+
+class BMM_FUNCTION {
+  + operator_definition : BMM_OPERATOR [0..1]
+  + result : BMM_RESULT [1..1]
+}
+
+class BMM_LOCAL {
+}
+
+class BMM_OPERATOR {
+  + position : BMM_OPERATOR_POSITION [1..1]
+  + symbols : List<String> [1..*]
+  + name : String [1..1]
+}
+
+class BMM_PROPERTY <<T>> {
+  + name : String [1..1]
+  + is_mandatory : Boolean [0..1]
+  + is_computed : Boolean [0..1]
+  + type : T [1..1]
+  + is_im_runtime : Boolean [0..1]
+  + is_im_infrastructure : Boolean [0..1]
+  + is_synthesised_generic : Boolean [0..1]
+  + existence() : Multiplicity_interval [0..1]
+  + display_name() : String [0..1]
+}
+
+abstract class BMM_ROUTINE {
+  + parameters : List<BMM_PARAMETER> [0..*]
+  + locals : List<BMM_LOCAL> [0..*]
+  + pre_conditions : List<BMM_ASSERTION> [0..*]
+  + post_conditions : List<BMM_ASSERTION> [0..*]
+  + body : BMM_ROUTINE_BODY [0..1]
+  + arity() : Integer [0..1]
+  + signature() :  [0..1]
+}
+
+class BMM_PARAMETER {
+  + direction : BMM_PARAMETER_DIRECTION [0..1]
+}
+
+abstract class BMM_VARIABLE {
+  + scope : BMM_ROUTINE [1..1]
+  + signature() :  [0..1]
+}
+
+class BMM_PROCEDURE {
+}
+
+class BMM_UNITARY_PROPERTY {
+  + type : BMM_UNITARY_TYPE [1..1]
+}
+
+abstract class BMM_CLASS_FEATURE {
+  + scope : BMM_CLASS [1..1]
+  + visibility : BMM_VISIBILITY [0..1]
+  + feature_extensions : List<BMM_FEATURE_EXTENSION> [0..*]
+  + group : BMM_FEATURE_GROUP [1..1]
+}
+
+class BMM_INDEXED_CONTAINER_PROPERTY {
+  + type : BMM_INDEXED_CONTAINER_TYPE [1..1]
+  + display_name() : String [0..1]
+}
+
+abstract class BMM_TYPED_FEATURE {
+  + is_nullable : Boolean [0..1]
+}
+
+abstract class BMM_INSTANTIABLE {
+}
+
+abstract class BMM_CLASS_ENTITY {
+  + is_synthesised_generic : Boolean [0..1]
+  + {abstract} signature() : BMM_SIGNATURE [0..1]
+}
+
+class BMM_RESULT {
+  + name : String [1..1]
+}
+
+abstract class BMM_FEATURE_EXTENSION {
+}
+
+abstract class BMM_ROUTINE_BODY {
+}
+
+class BMM_ROUTINE_EXTERNAL {
+  + meta_data : Hash<String,String> [1..1]
+  + argument_mapping : Hash<String,String> [0..1]
+}
+
+class BMM_FEATURE_GROUP {
+  + name : String [1..1]
+  + properties : Hash<String,String> [1..1]
+  + features : List<BMM_CLASS_FEATURE> [0..*]
+  + visibility : BMM_VISIBILITY [0..1]
+}
+
+abstract class BMM_VISIBILITY {
+}
+
+enum BMM_OPERATOR_POSITION {
+  prefix 
+  infix 
+}
+
+enum BMM_PARAMETER_DIRECTION {
+  in 
+  out 
+  in_out 
+}
+
+BMM_INSTANTIABLE <|-- BMM_CONSTANT
+BMM_CLASS_FEATURE <|-- BMM_CONSTANT
+BMM_PROPERTY <|-- BMM_CONTAINER_PROPERTY
+BMM_TYPED_FEATURE <|-- BMM_FUNCTION
+BMM_ROUTINE <|-- BMM_FUNCTION
+BMM_VARIABLE <|-- BMM_LOCAL
+BMM_MODEL_ELEMENT <|-- BMM_PROPERTY
+BMM_CLASS_FEATURE <|-- BMM_ROUTINE
+BMM_VARIABLE <|-- BMM_PARAMETER
+BMM_INSTANTIABLE <|-- BMM_VARIABLE
+BMM_CLASS_ENTITY <|-- BMM_VARIABLE
+BMM_ROUTINE <|-- BMM_PROCEDURE
+BMM_PROPERTY <|-- BMM_UNITARY_PROPERTY
+BMM_CLASS_ENTITY <|-- BMM_CLASS_FEATURE
+BMM_CONTAINER_PROPERTY <|-- BMM_INDEXED_CONTAINER_PROPERTY
+BMM_TYPED <|-- BMM_TYPED_FEATURE
+BMM_TYPED_FEATURE <|-- BMM_INSTANTIABLE
+BMM_DECLARATION <|-- BMM_CLASS_ENTITY
+BMM_VARIABLE <|-- BMM_RESULT
+BMM_ROUTINE_BODY <|-- BMM_ROUTINE_EXTERNAL
+
+@enduml

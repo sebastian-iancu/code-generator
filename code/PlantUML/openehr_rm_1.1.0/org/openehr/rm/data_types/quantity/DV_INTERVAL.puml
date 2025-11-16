@@ -1,0 +1,29 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.data_types.quantity.DV_INTERVAL
+title DV_INTERVAL Class
+
+class DV_INTERVAL <<T>> {
+}
+
+abstract class DATA_VALUE {
+}
+
+DATA_VALUE <|-- DV_INTERVAL
+
+abstract class Interval <<T>> {
+  + lower : T [0..1]
+  + lower_unbounded : Boolean [1..1]
+  + upper_unbounded : Boolean [1..1]
+  + lower_included : Boolean [1..1]
+  + upper_included : Boolean [1..1]
+  + has(T e) : Boolean [0..1]
+  + intersects(Interval other) : Boolean [0..1]
+  + contains(Interval other) : Boolean [0..1]
+  + is_equal(Any other) : Boolean [0..1]
+  + {abstract} upper() : T [1..1]
+}
+
+Interval <|-- DV_INTERVAL
+
+
+@enduml

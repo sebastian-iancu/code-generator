@@ -1,0 +1,24 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.composition.content.entry.ISM_TRANSITION
+title ISM_TRANSITION Class
+
+class ISM_TRANSITION {
+  + current_state : DV_CODED_TEXT [1..1]
+  + transition : DV_CODED_TEXT [0..1]
+  + careflow_step : DV_CODED_TEXT [0..1]
+  + reason : List<DV_TEXT> [0..*]
+}
+
+abstract class PATHABLE {
+  + parent() : PATHABLE [0..1]
+  + item_at_path(String a_path) : Any [0..1]
+  + items_at_path(String a_path) : List<Any> [1..*]
+  + path_exists(String a_path) : Boolean [0..1]
+  + path_unique(String a_path) : Boolean [0..1]
+  + path_of_item(PATHABLE a_loc) : String [0..1]
+}
+
+PATHABLE <|-- ISM_TRANSITION
+
+
+@enduml

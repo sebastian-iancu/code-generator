@@ -1,0 +1,50 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.data_structures.item_structure.ITEM_LIST
+title ITEM_LIST Class
+
+class ITEM_LIST {
+  + items : List<ELEMENT> [0..*]
+  + item_count() : Integer [0..1]
+  + names() : List<DV_TEXT> [1..*]
+  + named_item(String a_name) : ELEMENT [0..1]
+  + ith_item(Integer i) : ELEMENT [0..1]
+  + as_hierarchy() : CLUSTER [0..1]
+}
+
+abstract class ITEM_STRUCTURE {
+}
+
+abstract class DATA_STRUCTURE {
+  + as_hierarchy() : ITEM [0..1]
+}
+
+abstract class LOCATABLE {
+  + name : DV_TEXT [1..1]
+  + archetype_node_id : String [1..1]
+  + uid : UID_BASED_ID [0..1]
+  + links : List<LINK> [0..*]
+  + archetype_details : ARCHETYPED [0..1]
+  + feeder_audit : FEEDER_AUDIT [0..1]
+  + concept() : DV_TEXT [0..1]
+  + is_archetype_root() : Boolean [0..1]
+}
+
+abstract class PATHABLE {
+  + parent() : PATHABLE [0..1]
+  + item_at_path(String a_path) : Any [0..1]
+  + items_at_path(String a_path) : List<Any> [1..*]
+  + path_exists(String a_path) : Boolean [0..1]
+  + path_unique(String a_path) : Boolean [0..1]
+  + path_of_item(PATHABLE a_loc) : String [0..1]
+}
+
+PATHABLE <|-- LOCATABLE
+
+LOCATABLE <|-- DATA_STRUCTURE
+
+DATA_STRUCTURE <|-- ITEM_STRUCTURE
+
+ITEM_STRUCTURE <|-- ITEM_LIST
+
+
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.data_types.quantity.REFERENCE_RANGE
+title REFERENCE_RANGE Class
+
+class REFERENCE_RANGE <<T>> {
+  + meaning : DV_TEXT [1..1]
+  + range : DV_INTERVAL [1..1]
+  + is_in_range(DV_ORDERED v) : Boolean [0..1]
+}
+
+
+@enduml

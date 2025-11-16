@@ -1,0 +1,81 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm.model_access
+title model_access Package
+
+class BMM_MODEL_ACCESS {
+  + schema_directories : List<String> [0..*]
+  + all_schemas : List<String> [0..*]
+  + bmm_models : Hash<String,BMM_MODEL> [0..1]
+  + matching_bmm_models : List<String> [0..*]
+  + initialise_with_load_list(List<String> a_schema_dirs, List<String> a_schema_load_list) : void [0..1]
+  + initialise_all(List<String> a_schema_dirs) : void [0..1]
+  + reload_schemas() : void [0..1]
+  + bmm_model(String a_model_key) : BMM_MODEL [0..1]
+  + has_bmm_model(String a_model_key) : Boolean [0..1]
+}
+
+abstract class BMM_SCHEMA_DESCRIPTOR {
+  + bmm_schema : BMM_SCHEMA [0..1]
+  + bmm_model : BMM_MODEL [0..1]
+  + schema_id : String [1..1]
+  + meta_data : Hash<String,String> [1..1]
+  + includes : List<String> [0..*]
+  + is_top_level() : Boolean [0..1]
+  + is_bmm_compatible() : Boolean [0..1]
+  + load() : void [0..1]
+  + validate_merged() : void [0..1]
+  + validate_includes(List<String> all_schemas_list) : void [0..1]
+  + create_model() : void [0..1]
+}
+
+abstract class BMM_SCHEMA {
+  + bmm_version : String [1..1]
+  + primitive_types : List<P_BMM_CLASS> [0..*]
+  + class_definitions : List<P_BMM_CLASS> [0..*]
+  + includes : Hash<String,BMM_INCLUDE_SPEC> [0..1]
+  + bmm_schema : BMM_MODEL [0..1]
+  + state : BMM_SCHEMA_STATE [1..1]
+  + model_name : String [0..1]
+  + schema_name : String [1..1]
+  + schema_revision : String [1..1]
+  + schema_lifecycle_state : String [1..1]
+  + schema_author : String [1..1]
+  + schema_description : String [1..1]
+  + schema_contributors : List<String> [0..*]
+  + {abstract} validate_created() : void [0..1]
+  + {abstract} load_finalise() : void [0..1]
+  + {abstract} merge(BMM_SCHEMA other) : void [0..1]
+  + {abstract} validate() : void [0..1]
+  + {abstract} create_bmm_model() : void [0..1]
+  + read_to_validate() : Boolean [0..1]
+  + schema_id() : String [0..1]
+}
+
+class BMM_INCLUDE_SPEC {
+  + id : String [1..1]
+}
+
+enum BMM_SCHEMA_METADATA_KEY {
+  bmm_version 
+  model_publisher 
+  schema_name 
+  model_release 
+  schema_revision 
+  schema_lifecycle_state 
+  schema_description 
+  schema_path 
+}
+
+enum BMM_SCHEMA_STATE {
+  State_created 
+  State_validated_created 
+  State_includes_pending 
+  State_includes_processed 
+}
+
+BMM_DEFINITIONS <|-- BMM_MODEL_ACCESS
+BMM_DEFINITIONS <|-- BMM_SCHEMA_DESCRIPTOR
+P_BMM_PACKAGE_CONTAINER <|-- BMM_SCHEMA
+BMM_MODEL_METADATA <|-- BMM_SCHEMA
+
+@enduml

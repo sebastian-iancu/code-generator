@@ -1,0 +1,41 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.support.EXTERNAL_ENVIRONMENT_ACCESS
+title EXTERNAL_ENVIRONMENT_ACCESS Class
+
+abstract class EXTERNAL_ENVIRONMENT_ACCESS {
+}
+
+class TERMINOLOGY_SERVICE {
+  + terminology(String name) : TERMINOLOGY_ACCESS [0..1]
+  + code_set(String name) : CODE_SET_ACCESS [0..1]
+  + code_set_for_id(String id) : CODE_SET_ACCESS [0..1]
+  + has_terminology(String name) : Boolean [0..1]
+  + has_code_set(String name) : Boolean [0..1]
+  + terminology_identifiers() : List<String> [1..*]
+  + openehr_code_sets() : Hash<String,String> [0..1]
+  + code_set_identifiers() : List<String> [1..*]
+}
+
+class OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS {
+  + valid_terminology_group_id(Boolean an_id) : Boolean [0..1]
+}
+
+OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS <|-- TERMINOLOGY_SERVICE
+
+class OPENEHR_CODE_SET_IDENTIFIERS {
+  + valid_code_set_id(String an_id) : Boolean [0..1]
+}
+
+OPENEHR_CODE_SET_IDENTIFIERS <|-- TERMINOLOGY_SERVICE
+
+TERMINOLOGY_SERVICE <|-- EXTERNAL_ENVIRONMENT_ACCESS
+
+class MEASUREMENT_SERVICE {
+  + is_valid_units_string(String units) : Boolean [0..1]
+  + units_equivalent(String units1, String units2) : Boolean [0..1]
+}
+
+MEASUREMENT_SERVICE <|-- EXTERNAL_ENVIRONMENT_ACCESS
+
+
+@enduml

@@ -1,0 +1,19 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm_persistence.P_BMM_GENERIC_PARAMETER
+title P_BMM_GENERIC_PARAMETER Class
+
+class P_BMM_GENERIC_PARAMETER {
+  + name : String [1..1]
+  + conforms_to_type : String [0..1]
+  + bmm_generic_parameter : BMM_PARAMETER_TYPE [0..1]
+  + create_bmm_generic_parameter(BMM_MODEL a_bmm_schema) : void [0..1]
+}
+
+abstract class P_BMM_MODEL_ELEMENT {
+  + documentation : String [0..1]
+}
+
+P_BMM_MODEL_ELEMENT <|-- P_BMM_GENERIC_PARAMETER
+
+
+@enduml

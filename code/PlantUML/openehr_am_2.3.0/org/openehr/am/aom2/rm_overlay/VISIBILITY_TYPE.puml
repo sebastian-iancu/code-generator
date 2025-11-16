@@ -1,0 +1,11 @@
+@startuml
+' PlantUML diagram for org.openehr.am.aom2.rm_overlay.VISIBILITY_TYPE
+title VISIBILITY_TYPE Enumeration
+
+enum VISIBILITY_TYPE {
+  hide 
+  show 
+}
+
+
+@enduml

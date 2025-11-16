@@ -1,0 +1,15 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.support.terminology.TERMINOLOGY_ACCESS
+title TERMINOLOGY_ACCESS Interface
+
+interface TERMINOLOGY_ACCESS {
+  + id() : String [0..1]
+  + all_codes() : CODE_PHRASE [0..1]
+  + codes_for_group_id(String a_group_id) : List<CODE_PHRASE> [1..*]
+  + codes_for_group_name(String a_lang, String a_name) : List<CODE_PHRASE> [1..*]
+  + has_code_for_group_id() : Boolean [0..1]
+  + rubric_for_code(String a_code) : String [0..1]
+}
+
+
+@enduml

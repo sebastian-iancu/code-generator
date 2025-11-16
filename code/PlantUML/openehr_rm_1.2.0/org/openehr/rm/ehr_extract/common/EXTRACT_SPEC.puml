@@ -1,0 +1,17 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.ehr_extract.common.EXTRACT_SPEC
+title EXTRACT_SPEC Class
+
+class EXTRACT_SPEC {
+  + version_spec : EXTRACT_VERSION_SPEC [0..1]
+  + manifest : EXTRACT_MANIFEST [1..1]
+  + extract_type : DV_CODED_TEXT [1..1]
+  + include_multimedia : Boolean [1..1]
+  + priority : Integer [1..1]
+  + link_depth : Integer [1..1]
+  + criteria : List<DV_PARSABLE> [0..*]
+  + other_details : ITEM_STRUCTURE [0..1]
+}
+
+
+@enduml

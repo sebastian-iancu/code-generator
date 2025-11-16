@@ -1,0 +1,31 @@
+@startuml
+' PlantUML diagram for org.openehr.lang.bmm_persistence.P_BMM_SCHEMA_DESCRIPTOR
+title P_BMM_SCHEMA_DESCRIPTOR Class
+
+class P_BMM_SCHEMA_DESCRIPTOR {
+  + bmm_schema : P_BMM_SCHEMA [0..1]
+}
+
+abstract class BMM_SCHEMA_DESCRIPTOR {
+  + bmm_schema : BMM_SCHEMA [0..1]
+  + bmm_model : BMM_MODEL [0..1]
+  + schema_id : String [1..1]
+  + meta_data : Hash<String,String> [1..1]
+  + includes : List<String> [0..*]
+  + is_top_level() : Boolean [0..1]
+  + is_bmm_compatible() : Boolean [0..1]
+  + load() : void [0..1]
+  + validate_merged() : void [0..1]
+  + validate_includes(List<String> all_schemas_list) : void [0..1]
+  + create_model() : void [0..1]
+}
+
+class BMM_DEFINITIONS {
+}
+
+BMM_DEFINITIONS <|-- BMM_SCHEMA_DESCRIPTOR
+
+BMM_SCHEMA_DESCRIPTOR <|-- P_BMM_SCHEMA_DESCRIPTOR
+
+
+@enduml

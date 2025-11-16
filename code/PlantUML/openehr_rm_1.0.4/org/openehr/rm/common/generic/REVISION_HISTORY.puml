@@ -1,0 +1,12 @@
+@startuml
+' PlantUML diagram for org.openehr.rm.common.generic.REVISION_HISTORY
+title REVISION_HISTORY Class
+
+class REVISION_HISTORY {
+  + items : List<REVISION_HISTORY_ITEM> [1..*]
+  + most_recent_version() : String [0..1]
+  + most_recent_version_time_committed() : String [0..1]
+}
+
+
+@enduml
