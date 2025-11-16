@@ -1,0 +1,11 @@
+[plantuml,OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS {
+  + valid_terminology_group_id( an_id : Boolean [1] ) : Boolean [1]
+}
+
+
+@enduml
+-----

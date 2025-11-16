@@ -1,0 +1,19 @@
+[plantuml,DV_TIME_SPECIFICATION,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class DV_TIME_SPECIFICATION {
+  + value : DV_PARSABLE [1]
+  + {abstract} calendar_alignment() : String [1]
+  + {abstract} event_alignment() : String [1]
+  + {abstract} institution_specified() : Boolean [1]
+}
+
+abstract class DATA_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+DATA_VALUE <|-- DV_TIME_SPECIFICATION
+
+
+@enduml
+-----

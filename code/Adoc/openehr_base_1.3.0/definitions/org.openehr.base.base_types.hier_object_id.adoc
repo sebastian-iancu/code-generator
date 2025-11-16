@@ -1,5 +1,3 @@
-=== HIER_OBJECT_ID Class
-
 [cols="^1,3,5"]
 |===
 h|*Class*

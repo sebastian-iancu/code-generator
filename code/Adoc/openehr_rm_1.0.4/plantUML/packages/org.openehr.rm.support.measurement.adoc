@@ -1,0 +1,12 @@
+[plantuml,measurement,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class MEASUREMENT_SERVICE {
+  + is_valid_units_string( units : String [1] ) : Boolean [1]
+  + units_equivalent( units1 : String [1], units2 : String [1] ) : Boolean [1]
+}
+
+
+@enduml
+-----

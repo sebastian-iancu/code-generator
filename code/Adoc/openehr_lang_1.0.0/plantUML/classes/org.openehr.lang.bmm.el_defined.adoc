@@ -1,0 +1,34 @@
+[plantuml,EL_DEFINED,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class EL_DEFINED {
+}
+
+abstract class EL_PREDICATE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + operand : EL_INSTANCE_REF [1]
+  + eval_type() : BMM_SIMPLE_TYPE [1]
+}
+
+abstract class EL_TERMINAL  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+abstract class EL_SIMPLE  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+abstract class EL_EXPRESSION  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} eval_type() : BMM_TYPE [1]
+  + is_boolean() : Boolean [1]
+}
+
+EL_EXPRESSION <|-- EL_SIMPLE
+
+EL_SIMPLE <|-- EL_TERMINAL
+
+EL_TERMINAL <|-- EL_PREDICATE
+
+EL_PREDICATE <|-- EL_DEFINED
+
+
+@enduml
+-----

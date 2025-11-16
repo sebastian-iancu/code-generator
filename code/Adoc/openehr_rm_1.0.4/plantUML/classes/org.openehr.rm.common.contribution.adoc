@@ -1,0 +1,13 @@
+[plantuml,CONTRIBUTION,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class CONTRIBUTION {
+  + uid : HIER_OBJECT_ID [1]
+  + versions : List<OBJECT_REF> [1..*]
+  + audit : AUDIT_DETAILS [1]
+}
+
+
+@enduml
+-----

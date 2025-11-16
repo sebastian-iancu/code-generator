@@ -1,0 +1,14 @@
+[plantuml,EXTRACT_PARTICIPATION,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class EXTRACT_PARTICIPATION {
+  + time : DV_INTERVAL<DV_DATE_TIME> [0..1]
+  + function : DV_TEXT [1]
+  + mode : DV_CODED_TEXT [0..1]
+  + performer : String [1]
+}
+
+
+@enduml
+-----

@@ -1,0 +1,10 @@
+[plantuml,P_C_DATE_TIME,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class P_C_DATE_TIME {
+}
+
+
+@enduml
+-----

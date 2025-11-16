@@ -1,0 +1,13 @@
+[plantuml,Container,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class Container <T> {
+  + {abstract} has( v : T [1] ) : Boolean [1]
+  + {abstract} count() : Integer [1]
+  + {abstract} is_empty() : Boolean [1]
+}
+
+
+@enduml
+-----

@@ -1,0 +1,17 @@
+[plantuml,EL_SIMPLE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class EL_SIMPLE {
+}
+
+abstract class EL_EXPRESSION  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} eval_type() : BMM_TYPE [1]
+  + is_boolean() : Boolean [1]
+}
+
+EL_EXPRESSION <|-- EL_SIMPLE
+
+
+@enduml
+-----

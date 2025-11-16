@@ -1,0 +1,40 @@
+[plantuml,builtins,format=svg,svg-type="inline"]
+-----
+@startuml
+
+interface Env {
+  + current_date() : Iso8601_date [1]
+  + current_time() : Iso8601_time [1]
+  + current_date_time() : Iso8601_date_time [1]
+  + current_time_zone() : Iso8601_timezone [1]
+}
+
+interface Statistical_evaluator {
+  + sum( vals : Container<Numeric> [1] ) : Double [1]
+  + avg( vals : Container<Numeric> [1] ) : Double [1]
+  + mean( vals : Container<Numeric> [1] ) : Double [1]
+  + median( vals : Container<Numeric> [1] ) : Numeric [1]
+  + mode( vals : Container<Numeric> [1] ) : Numeric [1]
+  + max( vals : Container<Numeric> [1] ) : Numeric [1]
+  + min( vals : Container<Numeric> [1] ) : Numeric [1]
+  + count( vals : Container<Numeric> [1] ) : Numeric [1]
+  + std_dev( vals : Container<Numeric> [1] ) : Double [1]
+}
+
+interface Locale {
+  + primary_language() : Terminology_code [1]
+}
+
+interface Math {
+  + ln( v : Numeric [1] ) : Double [1]
+  + log( v : Numeric [1] ) : Double [1]
+  + sin( (v : Numeric [1] ) : Double [1]
+}
+
+interface Quantity_converter {
+  + convert_value( value : Real [1], from_units : String [1], to_units : String [1], property : Terminology_code [1] ) : Real [1]
+}
+
+
+@enduml
+-----

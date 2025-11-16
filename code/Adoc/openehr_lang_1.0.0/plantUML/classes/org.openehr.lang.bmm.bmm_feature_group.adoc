@@ -1,0 +1,14 @@
+[plantuml,BMM_FEATURE_GROUP,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class BMM_FEATURE_GROUP {
+  + name : String [1]
+  + properties : Hash<String,String> [1]
+  + features : List<BMM_CLASS_FEATURE> [*]
+  + visibility : BMM_VISIBILITY [0..1]
+}
+
+
+@enduml
+-----

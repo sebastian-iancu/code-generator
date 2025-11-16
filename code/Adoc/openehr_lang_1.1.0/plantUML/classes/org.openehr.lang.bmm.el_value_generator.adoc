@@ -1,0 +1,25 @@
+[plantuml,EL_VALUE_GENERATOR,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class EL_VALUE_GENERATOR {
+  + is_writable : Boolean [1]
+  + name : String [1]
+  + reference() : String [1]
+}
+
+abstract class EL_SIMPLE  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+abstract class EL_EXPRESSION  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} eval_type() : BMM_TYPE [1]
+  + is_boolean() : Boolean [1]
+}
+
+EL_EXPRESSION <|-- EL_SIMPLE
+
+EL_SIMPLE <|-- EL_VALUE_GENERATOR
+
+
+@enduml
+-----

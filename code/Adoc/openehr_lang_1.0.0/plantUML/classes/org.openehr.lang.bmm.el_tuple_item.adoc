@@ -1,0 +1,12 @@
+[plantuml,EL_TUPLE_ITEM,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class EL_TUPLE_ITEM {
+  + item : EL_EXPRESSION [0..1]
+  + name : String [0..1]
+}
+
+
+@enduml
+-----

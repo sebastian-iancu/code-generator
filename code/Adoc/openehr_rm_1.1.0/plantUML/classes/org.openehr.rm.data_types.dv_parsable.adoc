@@ -1,0 +1,25 @@
+[plantuml,DV_PARSABLE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class DV_PARSABLE {
+  + value : String [1]
+  + formalism : String [1]
+  + size() : Integer [1]
+}
+
+abstract class DV_ENCAPSULATED  #whitesmoke;line:gray;line.dotted;text:gray {
+  + charset : CODE_PHRASE [0..1]
+  + language : CODE_PHRASE [0..1]
+}
+
+abstract class DATA_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+DATA_VALUE <|-- DV_ENCAPSULATED
+
+DV_ENCAPSULATED <|-- DV_PARSABLE
+
+
+@enduml
+-----

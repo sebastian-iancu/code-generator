@@ -1,0 +1,33 @@
+[plantuml,EL_UNARY_OPERATOR,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class EL_UNARY_OPERATOR {
+  + operand : EL_SIMPLE [1]
+}
+
+abstract class EL_OPERATOR  #whitesmoke;line:gray;line.dotted;text:gray {
+  + precedence_overridden : Boolean [0..1]
+  + symbol : String [0..1]
+  + definition : BMM_FUNCTION [1]
+  + operator_definition() : BMM_OPERATOR [1]
+  + equivalent_call() : EL_FUNCTION_CALL [1]
+}
+
+abstract class EL_SIMPLE  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+abstract class EL_EXPRESSION  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} eval_type() : BMM_TYPE [1]
+  + is_boolean() : Boolean [1]
+}
+
+EL_EXPRESSION <|-- EL_SIMPLE
+
+EL_SIMPLE <|-- EL_OPERATOR
+
+EL_OPERATOR <|-- EL_UNARY_OPERATOR
+
+
+@enduml
+-----

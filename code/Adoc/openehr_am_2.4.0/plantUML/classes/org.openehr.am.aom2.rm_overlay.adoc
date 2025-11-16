@@ -1,0 +1,11 @@
+[plantuml,RM_OVERLAY,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class RM_OVERLAY {
+  + rm_visibility : Hash<String,RM_ATTRIBUTE_VISIBILITY> [0..1]
+}
+
+
+@enduml
+-----

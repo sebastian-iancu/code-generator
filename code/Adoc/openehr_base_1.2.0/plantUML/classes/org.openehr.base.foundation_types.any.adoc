@@ -1,0 +1,15 @@
+[plantuml,Any,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class Any {
+  + {abstract} is_equal( other : Any [1] ) : Boolean [1]
+  + equal( other : Any [1] ) : Boolean [1]
+  + instance_of( a_type : String [1] ) : Any [1]
+  + type_of( an_object : Any [1] ) : String [1]
+  + not_equal( other : Ordered [1] ) : Boolean [1]
+}
+
+
+@enduml
+-----

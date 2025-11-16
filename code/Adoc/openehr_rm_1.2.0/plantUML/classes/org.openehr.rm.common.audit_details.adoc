@@ -1,0 +1,15 @@
+[plantuml,AUDIT_DETAILS,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class AUDIT_DETAILS {
+  + system_id : String [1]
+  + time_committed : DV_DATE_TIME [1]
+  + change_type : DV_CODED_TEXT [1]
+  + description : DV_TEXT [0..1]
+  + committer : PARTY_PROXY [1]
+}
+
+
+@enduml
+-----

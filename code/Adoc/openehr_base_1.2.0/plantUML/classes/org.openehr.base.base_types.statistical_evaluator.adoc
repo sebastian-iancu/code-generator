@@ -1,0 +1,19 @@
+[plantuml,Statistical_evaluator,format=svg,svg-type="inline"]
+-----
+@startuml
+
+interface Statistical_evaluator {
+  + sum( vals : Container<Numeric> [1] ) : Double [1]
+  + avg( vals : Container<Numeric> [1] ) : Double [1]
+  + mean( vals : Container<Numeric> [1] ) : Double [1]
+  + median( vals : Container<Numeric> [1] ) : Numeric [1]
+  + mode( vals : Container<Numeric> [1] ) : Numeric [1]
+  + max( vals : Container<Numeric> [1] ) : Numeric [1]
+  + min( vals : Container<Numeric> [1] ) : Numeric [1]
+  + count( vals : Container<Numeric> [1] ) : Numeric [1]
+  + std_dev( vals : Container<Numeric> [1] ) : Double [1]
+}
+
+
+@enduml
+-----

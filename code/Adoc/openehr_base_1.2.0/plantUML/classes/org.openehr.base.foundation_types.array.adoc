@@ -1,0 +1,19 @@
+[plantuml,Array,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class Array <T> {
+  + item( a_key : Integer [1] ) : T [1]
+}
+
+abstract class Container <T>  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} has( v : T [1] ) : Boolean [1]
+  + {abstract} count() : Integer [1]
+  + {abstract} is_empty() : Boolean [1]
+}
+
+Container <|-- Array
+
+
+@enduml
+-----

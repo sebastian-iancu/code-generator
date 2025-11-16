@@ -1,0 +1,100 @@
+[plantuml,time,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class Iso8601_date_time {
+  + month_unknown() : Boolean [1]
+  + day_unknown() : Boolean [1]
+  + minute_unknown() : Boolean [1]
+  + second_unknown() : Boolean [1]
+  + is_decimal_sign_comma() : Boolean [1]
+  + valid_iso8601_date_time( s : String [1] ) : Boolean [1]
+  + is_partial() : Boolean [1]
+  + is_extended() : Boolean [1]
+  + as_string() : String [1]
+  + has_fractional_second() : Boolean [1]
+  + as_date_time() : Date_time [1]
+}
+
+class Iso8601_duration {
+  + is_decimal_sign_comma() : Boolean [1]
+  + valid_iso8601_duration( s : String [1] ) : Boolean [1]
+  + is_partial() : Boolean [1]
+  + is_extended() : Boolean [1]
+  + as_string() : String [1]
+  + months() : Integer [1]
+  + years() : Integer [1]
+  + weeks() : Integer [1]
+  + to_seconds() : Integer [1]
+  + minutes() : Integer [1]
+  + hours() : Integer [1]
+  + days() : Integer [1]
+  + as_duration() : Duration [1]
+}
+
+class Iso8601_time {
+  + minute_unknown() : Boolean [1]
+  + second_unknown() : Boolean [1]
+  + is_decimal_sign_comma() : Boolean [1]
+  + valid_iso8601_time() : Boolean [1]
+  + is_partial() : Boolean [1]
+  + is_extended() : Boolean [1]
+  + as_string() : String [1]
+  + has_fractional_second() : Boolean [1]
+  + as_time() : Time [1]
+}
+
+class Iso8601_timezone {
+  + minute_unknown() : Boolean [1]
+  + is_partial() : Boolean [1]
+  + is_extended() : Boolean [1]
+  + as_string() : String [1]
+  + is_gmt() : Boolean [1]
+  + as_timezone() : Timezone [1]
+}
+
+abstract class Iso8601_type {
+  + value : String [1]
+  + {abstract} is_partial() : Boolean [1]
+  + {abstract} is_extended() : Boolean [1]
+}
+
+class Iso8601_date {
+  + month_unknown() : Boolean [1]
+  + day_unknown() : Boolean [1]
+  + valid_iso8601_date() : Boolean [1]
+  + is_partial() : Boolean [1]
+  + is_extended() : Boolean [1]
+  + as_string() : String [1]
+  + as_date() : Date [1]
+}
+
+class Time_Definitions {
+  + valid_year( y : Integer [1] ) : Boolean [1]
+  + valid_month( m : Integer [1] ) : Boolean [1]
+  + valid_day( y : Integer [1], m : Integer [1], d : Integer [1] ) : Boolean [1]
+  + valid_hour( h : Integer [1], m : Integer [1], s : Integer [1] ) : Boolean [1]
+  + valid_minute( m : Integer [1] ) : Boolean [1]
+  + valid_second( s : Integer [1] ) : Boolean [1]
+  + valid_fractional_second( fs : Double [1] ) : Boolean [1]
+}
+
+abstract class Temporal {
+}
+
+Iso8601_type <|-- Iso8601_date_time
+IDate_time <|-- Iso8601_date_time
+Iso8601_type <|-- Iso8601_duration
+IDuration <|-- Iso8601_duration
+Iso8601_type <|-- Iso8601_time
+ITime <|-- Iso8601_time
+Iso8601_type <|-- Iso8601_timezone
+ITimezone <|-- Iso8601_timezone
+Ordered <|-- Iso8601_type
+Iso8601_type <|-- Iso8601_date
+IDate <|-- Iso8601_date
+Ordered <|-- Temporal
+Time_Definitions <|-- Temporal
+
+@enduml
+-----

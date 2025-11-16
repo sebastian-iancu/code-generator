@@ -1,0 +1,13 @@
+[plantuml,Numeric,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class Numeric {
+  + {abstract} infix *( other : Numeric [1] ) : Numeric [1]
+  + {abstract} infix +( other : Numeric [1] ) : Numeric [1]
+  + {abstract} infix -( other : Numeric [1] ) : Numeric [1]
+}
+
+
+@enduml
+-----

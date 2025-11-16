@@ -1,5 +1,3 @@
-=== BMM_OPERATOR_POSITION Enumeration
-
 [cols="^1,3,5"]
 |===
 h|*Enumeration*

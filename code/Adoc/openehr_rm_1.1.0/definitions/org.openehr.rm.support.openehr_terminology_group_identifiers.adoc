@@ -1,5 +1,3 @@
-=== OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS Class
-
 [cols="^1,3,5"]
 |===
 h|*Class*

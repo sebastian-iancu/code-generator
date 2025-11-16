@@ -1,5 +1,3 @@
-=== EL_CONDITION_CHAIN Class
-
 [cols="^1,3,5"]
 |===
 h|*Class*

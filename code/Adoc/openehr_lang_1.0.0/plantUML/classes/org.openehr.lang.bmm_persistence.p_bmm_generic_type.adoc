@@ -1,0 +1,28 @@
+[plantuml,P_BMM_GENERIC_TYPE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class P_BMM_GENERIC_TYPE {
+  + root_type : String [1]
+  + generic_parameter_defs : List<P_BMM_TYPE> [1..*]
+  + generic_parameters : List<String> [*]
+  + bmm_type : BMM_GENERIC_TYPE [0..1]
+  + generic_parameter_refs() : List<P_BMM_TYPE> [*]
+}
+
+abstract class P_BMM_BASE_TYPE  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+abstract class P_BMM_TYPE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + bmm_type : BMM_TYPE [0..1]
+  + {abstract} create_bmm_type( a_schema : BMM_MODEL [1], a_class_def : BMM_CLASS [1] ) : void [1]
+  + {abstract} as_type_string() : String [1]
+}
+
+P_BMM_TYPE <|-- P_BMM_BASE_TYPE
+
+P_BMM_BASE_TYPE <|-- P_BMM_GENERIC_TYPE
+
+
+@enduml
+-----

@@ -1,5 +1,3 @@
-=== VISIBILITY_TYPE Enumeration
-
 [cols="^1,3,5"]
 |===
 h|*Enumeration*

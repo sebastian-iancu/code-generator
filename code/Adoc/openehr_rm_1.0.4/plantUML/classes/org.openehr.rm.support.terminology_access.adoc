@@ -1,0 +1,16 @@
+[plantuml,TERMINOLOGY_ACCESS,format=svg,svg-type="inline"]
+-----
+@startuml
+
+interface TERMINOLOGY_ACCESS {
+  + id() : String [1]
+  + all_codes() : CODE_PHRASE [1]
+  + codes_for_group_id( a_group_id : String [1] ) : List<CODE_PHRASE> [*]
+  + codes_for_group_name( a_lang : String [1], a_name : String [1] ) : List<CODE_PHRASE> [*]
+  + has_code_for_group_id() : Boolean [1]
+  + rubric_for_code( a_code : String [1] ) : String [1]
+}
+
+
+@enduml
+-----

@@ -1,0 +1,20 @@
+[plantuml,uri,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class DV_URI {
+  + value : String [1]
+  + scheme() : String [1]
+  + path() : String [1]
+  + fragment_id() : String [1]
+  + query() : String [1]
+}
+
+class DV_EHR_URI {
+}
+
+DATA_VALUE <|-- DV_URI
+DV_URI <|-- DV_EHR_URI
+
+@enduml
+-----

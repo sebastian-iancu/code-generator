@@ -1,0 +1,13 @@
+[plantuml,SIBLING_ORDER,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class SIBLING_ORDER {
+  + is_before : Boolean [1]
+  + sibling_node_id : String [1]
+  + is_after() : Boolean [1]
+}
+
+
+@enduml
+-----

@@ -1,0 +1,29 @@
+[plantuml,org.openehr.rm.composition,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class COMPOSITION {
+  + language : CODE_PHRASE [1]
+  + territory : CODE_PHRASE [1]
+  + category : DV_CODED_TEXT [1]
+  + context : EVENT_CONTEXT [0..1]
+  + composer : PARTY_PROXY [1]
+  + content : List<CONTENT_ITEM> [*]
+  + is_persistent() : Boolean [1]
+}
+
+class EVENT_CONTEXT {
+  + start_time : DV_DATE_TIME [1]
+  + end_time : DV_DATE_TIME [0..1]
+  + location : String [0..1]
+  + setting : DV_CODED_TEXT [1]
+  + other_context : ITEM_STRUCTURE [0..1]
+  + health_care_facility : PARTY_IDENTIFIED [0..1]
+  + participations : List<PARTICIPATION> [*]
+}
+
+LOCATABLE <|-- COMPOSITION
+PATHABLE <|-- EVENT_CONTEXT
+
+@enduml
+-----

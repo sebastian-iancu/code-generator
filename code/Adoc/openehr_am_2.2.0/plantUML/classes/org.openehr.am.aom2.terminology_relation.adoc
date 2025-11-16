@@ -1,0 +1,12 @@
+[plantuml,TERMINOLOGY_RELATION,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class TERMINOLOGY_RELATION {
+  + id : String [1]
+  + members : List<String> [1..*]
+}
+
+
+@enduml
+-----

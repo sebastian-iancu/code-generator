@@ -1,0 +1,11 @@
+[plantuml,P_BMM_PACKAGE_CONTAINER,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class P_BMM_PACKAGE_CONTAINER {
+  + packages : Hash<String,P_BMM_PACKAGE> [1]
+}
+
+
+@enduml
+-----

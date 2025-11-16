@@ -1,0 +1,70 @@
+[plantuml,primitive_types,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class Uri {
+}
+
+abstract class Comparable {
+}
+
+abstract class Ordered_Numeric {
+}
+
+class Integer {
+}
+
+class Double {
+}
+
+abstract class Numeric {
+  + {abstract} infix *( other : Numeric [1] ) : Numeric [1]
+  + {abstract} infix +( other : Numeric [1] ) : Numeric [1]
+  + {abstract} infix -( other : Numeric [1] ) : Numeric [1]
+}
+
+class Octet {
+}
+
+class Character {
+}
+
+class Boolean {
+  + infix and( other : Boolean [1] ) : Boolean [1]
+  + infix and_then( other : Boolean [1] ) : Boolean [1]
+  + infix or( other : Boolean [1] ) : Boolean [1]
+  + infix or_else( other : Boolean [1] ) : Boolean [1]
+  + infix xor( other : Boolean [1] ) : Boolean [1]
+  + infix implies( other : Boolean [1] ) : Boolean [1]
+}
+
+class String {
+  + infix +( other : String [1] ) : String [1]
+  + is_empty() : Boolean [1]
+  + is_integer() : Boolean [1]
+  + as_integer() : Integer [1]
+}
+
+class Real {
+  + floor() : Integer [1]
+}
+
+class Integer64 {
+}
+
+abstract class Ordered {
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+}
+
+Ordered <|-- Ordered_Numeric
+Numeric <|-- Ordered_Numeric
+Ordered_Numeric <|-- Integer
+Ordered_Numeric <|-- Double
+Ordered <|-- Octet
+Ordered <|-- Character
+Ordered <|-- String
+Ordered_Numeric <|-- Real
+Ordered_Numeric <|-- Integer64
+
+@enduml
+-----

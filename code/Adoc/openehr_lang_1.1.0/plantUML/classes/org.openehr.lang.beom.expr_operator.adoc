@@ -1,0 +1,25 @@
+[plantuml,EXPR_OPERATOR,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class EXPR_OPERATOR {
+  + precedence_overridden : Boolean [0..1]
+  + operator : OPERATOR_KIND [1]
+  + symbol : String [0..1]
+}
+
+abstract class EXPRESSION  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} type() : EXPR_TYPE_DEF [1]
+}
+
+abstract class EXPR_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} value() : Any [1]
+}
+
+EXPR_VALUE <|-- EXPRESSION
+
+EXPRESSION <|-- EXPR_OPERATOR
+
+
+@enduml
+-----

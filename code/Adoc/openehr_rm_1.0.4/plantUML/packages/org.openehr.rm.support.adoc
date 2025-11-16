@@ -1,0 +1,12 @@
+[plantuml,org.openehr.rm.support,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class EXTERNAL_ENVIRONMENT_ACCESS {
+}
+
+TERMINOLOGY_SERVICE <|-- EXTERNAL_ENVIRONMENT_ACCESS
+MEASUREMENT_SERVICE <|-- EXTERNAL_ENVIRONMENT_ACCESS
+
+@enduml
+-----

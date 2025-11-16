@@ -1,0 +1,35 @@
+[plantuml,BMM_SCHEMA,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class BMM_SCHEMA {
+  + bmm_version : String [1]
+  + includes : Hash<String,BMM_INCLUDE_SPEC> [0..1]
+  + bmm_model : BMM_MODEL [0..1]
+  + state : BMM_SCHEMA_STATE [1]
+  + model_name : String [0..1]
+  + schema_name : String [1]
+  + schema_revision : String [1]
+  + schema_lifecycle_state : String [1]
+  + schema_author : String [1]
+  + schema_description : String [1]
+  + schema_contributors : List<String> [*]
+  + {abstract} validate_created() : void [1]
+  + {abstract} load_finalise() : void [1]
+  + {abstract} merge( other : BMM_SCHEMA [1] ) : void [1]
+  + {abstract} validate() : void [1]
+  + {abstract} create_bmm_model() : void [1]
+  + read_to_validate() : Boolean [1]
+  + schema_id() : String [1]
+}
+
+class BMM_MODEL_METADATA  #whitesmoke;line:gray;line.dotted;text:gray {
+  + rm_publisher : String [1]
+  + rm_release : String [1]
+}
+
+BMM_MODEL_METADATA <|-- BMM_SCHEMA
+
+
+@enduml
+-----

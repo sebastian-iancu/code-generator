@@ -1,0 +1,11 @@
+[plantuml,OPERATOR_DEF_EXTERNAL,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class OPERATOR_DEF_EXTERNAL {
+  + evaluation_agent : FUNCTION<TUPLE,Any> [1]
+}
+
+
+@enduml
+-----

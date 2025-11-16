@@ -1,0 +1,17 @@
+[plantuml,ASSIGNMENT,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class ASSIGNMENT {
+  + target : VARIABLE_DECLARATION [1]
+  + source : EXPR_VALUE [1]
+}
+
+abstract class STATEMENT  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+STATEMENT <|-- ASSIGNMENT
+
+
+@enduml
+-----

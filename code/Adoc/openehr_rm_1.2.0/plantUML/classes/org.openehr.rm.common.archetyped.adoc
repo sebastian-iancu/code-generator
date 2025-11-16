@@ -1,0 +1,13 @@
+[plantuml,ARCHETYPED,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class ARCHETYPED {
+  + archetype_id : ARCHETYPE_ID [1]
+  + template_id : TEMPLATE_ID [0..1]
+  + rm_version : String [1]
+}
+
+
+@enduml
+-----

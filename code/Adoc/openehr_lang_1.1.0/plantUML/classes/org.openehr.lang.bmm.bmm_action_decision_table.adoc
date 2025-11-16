@@ -1,0 +1,10 @@
+[plantuml,BMM_ACTION_DECISION_TABLE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class BMM_ACTION_DECISION_TABLE {
+}
+
+
+@enduml
+-----

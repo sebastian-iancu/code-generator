@@ -1,0 +1,37 @@
+[plantuml,Iso8601_duration,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class Iso8601_duration {
+  + seconds() : Integer [1]
+  + fractional_seconds() : Real [1]
+  + is_decimal_sign_comma() : Boolean [1]
+  + is_partial() : Boolean [1]
+  + is_extended() : Boolean [1]
+  + months() : Integer [1]
+  + years() : Integer [1]
+  + weeks() : Integer [1]
+  + to_seconds() : Real [1]
+  + minutes() : Integer [1]
+  + hours() : Integer [1]
+  + days() : Integer [1]
+  + as_string() : String [1]
+}
+
+abstract class Iso8601_type  #whitesmoke;line:gray;line.dotted;text:gray {
+  + value : String [1]
+  + {abstract} is_partial() : Boolean [1]
+  + {abstract} is_extended() : Boolean [1]
+}
+
+abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+}
+
+Ordered <|-- Iso8601_type
+
+Iso8601_type <|-- Iso8601_duration
+
+
+@enduml
+-----

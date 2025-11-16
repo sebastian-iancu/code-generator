@@ -1,0 +1,10 @@
+[plantuml,BMM_ROUTINE_BODY,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class BMM_ROUTINE_BODY {
+}
+
+
+@enduml
+-----

@@ -1,0 +1,17 @@
+[plantuml,DV_ENCAPSULATED,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class DV_ENCAPSULATED {
+  + charset : CODE_PHRASE [0..1]
+  + language : CODE_PHRASE [0..1]
+}
+
+abstract class DATA_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+DATA_VALUE <|-- DV_ENCAPSULATED
+
+
+@enduml
+-----

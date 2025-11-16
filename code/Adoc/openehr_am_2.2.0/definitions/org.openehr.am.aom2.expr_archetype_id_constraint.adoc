@@ -1,5 +1,3 @@
-=== EXPR_ARCHETYPE_ID_CONSTRAINT Class
-
 [cols="^1,3,5"]
 |===
 h|*Class*

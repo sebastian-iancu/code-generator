@@ -1,0 +1,16 @@
+[plantuml,INTERNET_ID,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class INTERNET_ID {
+}
+
+abstract class UID  #whitesmoke;line:gray;line.dotted;text:gray {
+  + value : String [1]
+}
+
+UID <|-- INTERNET_ID
+
+
+@enduml
+-----

@@ -1,0 +1,15 @@
+[plantuml,ITEM_TAG,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class ITEM_TAG {
+  + key : String [1]
+  + value : String [0..1]
+  + target : UID_BASED_ID [1]
+  + target_path : String [0..1]
+  + owner_id : OBJECT_REF [1]
+}
+
+
+@enduml
+-----

@@ -1,0 +1,58 @@
+[plantuml,BMM_SELF,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class BMM_SELF {
+  + name : String [1]
+}
+
+abstract class BMM_READONLY_VARIABLE  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+abstract class BMM_VARIABLE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + scope : BMM_ROUTINE [1]
+  + signature() :  [1]
+}
+
+abstract class BMM_INSTANTIABLE  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+abstract class BMM_TYPED_FEATURE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + is_nullable : Boolean [0..1]
+}
+
+abstract class BMM_TYPED  #whitesmoke;line:gray;line.dotted;text:gray {
+  + type : BMM_TYPE [1]
+  + is_boolean() : Boolean [1]
+}
+
+BMM_TYPED <|-- BMM_TYPED_FEATURE
+
+BMM_TYPED_FEATURE <|-- BMM_INSTANTIABLE
+
+BMM_INSTANTIABLE <|-- BMM_VARIABLE
+
+abstract class BMM_CLASS_ENTITY  #whitesmoke;line:gray;line.dotted;text:gray {
+  + is_synthesised_generic : Boolean [0..1]
+  + {abstract} signature() : BMM_SIGNATURE [1]
+}
+
+abstract class BMM_DECLARATION  #whitesmoke;line:gray;line.dotted;text:gray {
+  + name : String [1]
+  + documentation : Hash<String,Any> [0..1]
+  + scope : BMM_DECLARATION [1]
+  + extensions : Hash<String,Any> [0..1]
+  + is_root_scope() : Boolean [1]
+}
+
+BMM_DECLARATION <|-- BMM_CLASS_ENTITY
+
+BMM_CLASS_ENTITY <|-- BMM_VARIABLE
+
+BMM_VARIABLE <|-- BMM_READONLY_VARIABLE
+
+BMM_READONLY_VARIABLE <|-- BMM_SELF
+
+
+@enduml
+-----

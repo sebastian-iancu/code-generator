@@ -1,0 +1,25 @@
+[plantuml,ATTESTATION,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class ATTESTATION {
+  + attested_view : DV_MULTIMEDIA [0..1]
+  + proof : String [0..1]
+  + items : List<DV_EHR_URI> [*]
+  + reason : DV_TEXT [1]
+  + is_pending : Boolean [1]
+}
+
+class AUDIT_DETAILS  #whitesmoke;line:gray;line.dotted;text:gray {
+  + system_id : String [1]
+  + time_committed : DV_DATE_TIME [1]
+  + change_type : DV_CODED_TEXT [1]
+  + description : DV_TEXT [0..1]
+  + committer : PARTY_PROXY [1]
+}
+
+AUDIT_DETAILS <|-- ATTESTATION
+
+
+@enduml
+-----

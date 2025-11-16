@@ -1,0 +1,32 @@
+[plantuml,ORIGINAL_VERSION,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class ORIGINAL_VERSION <T> {
+  + uid : OBJECT_VERSION_ID [1]
+  + preceding_version_uid : OBJECT_VERSION_ID [0..1]
+  + other_input_version_uids : List<OBJECT_VERSION_ID> [*]
+  + lifecycle_state : DV_CODED_TEXT [1]
+  + attestations : List<ATTESTATION> [*]
+  + data : T [0..1]
+  + is_merged() : Boolean [1]
+}
+
+abstract class VERSION <T>  #whitesmoke;line:gray;line.dotted;text:gray {
+  + contribution : OBJECT_REF [1]
+  + signature : String [0..1]
+  + commit_audit : AUDIT_DETAILS [1]
+  + {abstract} uid() : OBJECT_VERSION_ID [1]
+  + {abstract} preceding_version_uid() : OBJECT_VERSION_ID [1]
+  + {abstract} data() : T [1]
+  + {abstract} lifecycle_state() : DV_CODED_TEXT [1]
+  + canonical_form() : String [1]
+  + owner_id() : HIER_OBJECT_ID [1]
+  + is_branch() : Boolean [1]
+}
+
+VERSION <|-- ORIGINAL_VERSION
+
+
+@enduml
+-----

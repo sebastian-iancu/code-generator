@@ -1,0 +1,10 @@
+[plantuml,BMM_VISIBILITY,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class BMM_VISIBILITY {
+}
+
+
+@enduml
+-----

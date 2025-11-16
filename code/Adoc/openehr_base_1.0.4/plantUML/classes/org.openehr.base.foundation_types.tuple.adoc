@@ -1,0 +1,10 @@
+[plantuml,TUPLE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class TUPLE {
+}
+
+
+@enduml
+-----

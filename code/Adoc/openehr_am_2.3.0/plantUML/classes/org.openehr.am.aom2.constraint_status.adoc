@@ -1,0 +1,14 @@
+[plantuml,CONSTRAINT_STATUS,format=svg,svg-type="inline"]
+-----
+@startuml
+
+enum CONSTRAINT_STATUS {
+  required = 0 
+  extensible = 1 
+  preferred = 2 
+  example = 3 
+}
+
+
+@enduml
+-----

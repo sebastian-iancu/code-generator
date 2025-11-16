@@ -1,0 +1,24 @@
+[plantuml,EL_LITERAL,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class EL_LITERAL {
+  + value : BMM_LITERAL_VALUE<BMM_TYPE> [1]
+  + eval_type() : BMM_TYPE [1]
+}
+
+abstract class EL_SIMPLE  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+abstract class EL_EXPRESSION  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} eval_type() : BMM_TYPE [1]
+  + is_boolean() : Boolean [1]
+}
+
+EL_EXPRESSION <|-- EL_SIMPLE
+
+EL_SIMPLE <|-- EL_LITERAL
+
+
+@enduml
+-----

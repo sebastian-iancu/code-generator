@@ -1,0 +1,18 @@
+[plantuml,TYPE_DEF_OBJECT_REF,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class TYPE_DEF_OBJECT_REF {
+  + type_name : String [1]
+}
+
+abstract class EL_TYPE_DEF  #whitesmoke;line:gray;line.dotted;text:gray {
+  + type_name : String [1]
+  + type_anchor : Any [1]
+}
+
+EL_TYPE_DEF <|-- TYPE_DEF_OBJECT_REF
+
+
+@enduml
+-----

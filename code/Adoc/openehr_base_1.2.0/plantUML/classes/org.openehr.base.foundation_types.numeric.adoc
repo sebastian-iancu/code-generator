@@ -1,0 +1,16 @@
+[plantuml,Numeric,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class Numeric {
+  + {abstract} add( other : Numeric [1] ) : Numeric [1]
+  + {abstract} subtract( other : Numeric [1] ) : Numeric [1]
+  + {abstract} multiply( other : Numeric [1] ) : Numeric [1]
+  + {abstract} divide( other : Numeric [1] ) : Numeric [1]
+  + {abstract} exponent( other : Numeric [1] ) : Numeric [1]
+  + {abstract} negative() : Numeric [1]
+}
+
+
+@enduml
+-----

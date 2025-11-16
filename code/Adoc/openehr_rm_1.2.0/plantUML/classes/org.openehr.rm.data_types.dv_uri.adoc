@@ -1,0 +1,20 @@
+[plantuml,DV_URI,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class DV_URI {
+  + value : String [1]
+  + scheme() : String [1]
+  + path() : String [1]
+  + fragment_id() : String [1]
+  + query() : String [1]
+}
+
+abstract class DATA_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+DATA_VALUE <|-- DV_URI
+
+
+@enduml
+-----

@@ -1,0 +1,12 @@
+[plantuml,BMM_OPERATOR_POSITION,format=svg,svg-type="inline"]
+-----
+@startuml
+
+enum BMM_OPERATOR_POSITION {
+  prefix 
+  infix 
+}
+
+
+@enduml
+-----

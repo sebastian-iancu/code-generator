@@ -1,0 +1,30 @@
+[plantuml,OPERATOR_KIND,format=svg,svg-type="inline"]
+-----
+@startuml
+
+enum OPERATOR_KIND {
+  eq 
+  ne 
+  lt 
+  le 
+  gt 
+  ge 
+  matches 
+  not 
+  and 
+  or 
+  xor 
+  implies 
+  for_all 
+  exists 
+  plus 
+  minus 
+  multiply 
+  divide 
+  modulo 
+  exponent 
+}
+
+
+@enduml
+-----

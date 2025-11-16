@@ -1,0 +1,15 @@
+[plantuml,TRANSLATION_DETAILS,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class TRANSLATION_DETAILS {
+  + language : Terminology_code [1]
+  + author : Hash<String,String> [1]
+  + accreditaton : String [0..1]
+  + other_details : Hash<String,String> [0..1]
+  + version_last_translated : String [0..1]
+}
+
+
+@enduml
+-----

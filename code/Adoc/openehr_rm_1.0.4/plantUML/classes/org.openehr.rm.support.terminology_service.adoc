@@ -1,0 +1,30 @@
+[plantuml,TERMINOLOGY_SERVICE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class TERMINOLOGY_SERVICE {
+  + terminology( name : String [1] ) : TERMINOLOGY_ACCESS [1]
+  + code_set( name : String [1] ) : CODE_SET_ACCESS [1]
+  + code_set_for_id( id : String [1] ) : CODE_SET_ACCESS [1]
+  + has_terminology( name : String [1] ) : Boolean [1]
+  + has_code_set( name : String [1] ) : Boolean [1]
+  + terminology_identifiers() : List<String> [*]
+  + openehr_code_sets() : Hash<String,String> [1]
+  + code_set_identifiers() : List<String> [*]
+}
+
+class OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS  #whitesmoke;line:gray;line.dotted;text:gray {
+  + valid_terminology_group_id( an_id : Boolean [1] ) : Boolean [1]
+}
+
+OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS <|-- TERMINOLOGY_SERVICE
+
+class OPENEHR_CODE_SET_IDENTIFIERS  #whitesmoke;line:gray;line.dotted;text:gray {
+  + valid_code_set_id( an_id : String [1] ) : Boolean [1]
+}
+
+OPENEHR_CODE_SET_IDENTIFIERS <|-- TERMINOLOGY_SERVICE
+
+
+@enduml
+-----

@@ -1,0 +1,11 @@
+[plantuml,UID,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class UID {
+  + value : String [1]
+}
+
+
+@enduml
+-----

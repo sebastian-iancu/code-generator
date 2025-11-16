@@ -1,0 +1,108 @@
+[plantuml,common,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class EXTRACT {
+  + chapters : List<EXTRACT_CHAPTER> [*]
+  + specification : EXTRACT_SPEC [0..1]
+  + request_id : HIER_OBJECT_ID [0..1]
+  + time_created : DV_DATE_TIME [1]
+  + system_id : HIER_OBJECT_ID [1]
+  + sequence_nr : Integer [1]
+  + participations : List<EXTRACT_PARTICIPATION> [*]
+}
+
+class EXTRACT_ACTION_REQUEST {
+  + request_id : OBJECT_REF [1]
+  + uid : HIER_OBJECT_ID [1]
+  + action : DV_CODED_TEXT [1]
+}
+
+class EXTRACT_CHAPTER {
+  + items : List<EXTRACT_ITEM> [*]
+}
+
+abstract class EXTRACT_CONTENT_ITEM {
+  + is_primary : Boolean [1]
+  + is_changed : Boolean [0..1]
+  + is_masked : Boolean [0..1]
+  + item : Any [0..1]
+}
+
+class EXTRACT_ENTITY_CHAPTER {
+  + extract_id_key : String [1]
+}
+
+class EXTRACT_ENTITY_MANIFEST {
+  + extract_id_key : String [1]
+  + ehr_id : String [0..1]
+  + subject_id : String [0..1]
+  + other_ids : List<String> [*]
+  + item_list : List<OBJECT_REF> [*]
+}
+
+class EXTRACT_ERROR {
+  + request_id : OBJECT_REF [0..1]
+  + reason : DV_TEXT [1]
+}
+
+class EXTRACT_FOLDER {
+  + items : List<EXTRACT_ITEM> [*]
+}
+
+abstract class EXTRACT_ITEM {
+}
+
+class EXTRACT_MANIFEST {
+  + entities : List<EXTRACT_ENTITY_MANIFEST> [1..*]
+}
+
+class EXTRACT_PARTICIPATION {
+  + time : DV_INTERVAL<DV_DATE_TIME> [0..1]
+  + function : DV_TEXT [1]
+  + mode : DV_CODED_TEXT [0..1]
+  + performer : String [1]
+}
+
+class EXTRACT_REQUEST {
+  + extract_spec : EXTRACT_SPEC [1]
+  + update_spec : EXTRACT_UPDATE_SPEC [0..1]
+  + uid : HIER_OBJECT_ID [1]
+}
+
+class EXTRACT_SPEC {
+  + version_spec : EXTRACT_VERSION_SPEC [0..1]
+  + manifest : EXTRACT_MANIFEST [1]
+  + extract_type : DV_CODED_TEXT [1]
+  + include_multimedia : Boolean [1]
+  + priority : Integer [1]
+  + link_depth : Integer [1]
+  + criteria : List<DV_PARSABLE> [*]
+  + other_details : ITEM_STRUCTURE [0..1]
+}
+
+class EXTRACT_UPDATE_SPEC {
+  + persist_in_server : Boolean [1]
+  + repeat_period : DV_DURATION [0..1]
+  + trigger_events : List<DV_CODED_TEXT> [*]
+  + update_method : CODE_PHRASE [1]
+}
+
+class EXTRACT_VERSION_SPEC {
+  + include_all_versions : Boolean [1]
+  + commit_time_interval : DV_INTERVAL<DV_DATE_TIME> [0..1]
+  + include_revision_history : Boolean [1]
+  + include_data : Boolean [1]
+}
+
+LOCATABLE <|-- EXTRACT
+LOCATABLE <|-- EXTRACT_ACTION_REQUEST
+LOCATABLE <|-- EXTRACT_CHAPTER
+EXTRACT_ITEM <|-- EXTRACT_CONTENT_ITEM
+EXTRACT_CHAPTER <|-- EXTRACT_ENTITY_CHAPTER
+EXTRACT_ITEM <|-- EXTRACT_FOLDER
+LOCATABLE <|-- EXTRACT_ITEM
+LOCATABLE <|-- EXTRACT_REQUEST
+
+@enduml
+-----

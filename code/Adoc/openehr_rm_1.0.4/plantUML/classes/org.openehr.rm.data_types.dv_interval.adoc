@@ -1,0 +1,30 @@
+[plantuml,DV_INTERVAL,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class DV_INTERVAL <T> {
+}
+
+abstract class DATA_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+DATA_VALUE <|-- DV_INTERVAL
+
+abstract class Interval <T>  #whitesmoke;line:gray;line.dotted;text:gray {
+  + lower : T [0..1]
+  + lower_unbounded : Boolean [1]
+  + upper_unbounded : Boolean [1]
+  + lower_included : Boolean [1]
+  + upper_included : Boolean [1]
+  + has( e : T [1] ) : Boolean [1]
+  + intersects( other : Interval [1] ) : Boolean [1]
+  + contains( other : Interval [1] ) : Boolean [1]
+  + is_equal( other : Any [1] ) : Boolean [1]
+  + {abstract} upper() : T [0..1]
+}
+
+Interval <|-- DV_INTERVAL
+
+
+@enduml
+-----

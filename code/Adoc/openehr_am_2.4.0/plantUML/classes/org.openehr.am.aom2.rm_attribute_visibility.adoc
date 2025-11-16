@@ -1,0 +1,12 @@
+[plantuml,RM_ATTRIBUTE_VISIBILITY,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class RM_ATTRIBUTE_VISIBILITY {
+  + visibility : VISIBILITY_TYPE [0..1]
+  + alias : Terminology_code [0..1]
+}
+
+
+@enduml
+-----

@@ -1,0 +1,20 @@
+[plantuml,P_BMM_GENERIC_PARAMETER,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class P_BMM_GENERIC_PARAMETER {
+  + name : String [1]
+  + conforms_to_type : String [0..1]
+  + bmm_generic_parameter : BMM_PARAMETER_TYPE [0..1]
+  + create_bmm_generic_parameter( a_bmm_schema : BMM_MODEL [1] ) : void [1]
+}
+
+abstract class P_BMM_MODEL_ELEMENT  #whitesmoke;line:gray;line.dotted;text:gray {
+  + documentation : String [0..1]
+}
+
+P_BMM_MODEL_ELEMENT <|-- P_BMM_GENERIC_PARAMETER
+
+
+@enduml
+-----

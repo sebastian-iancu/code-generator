@@ -1,0 +1,40 @@
+[plantuml,EL_PROPERTY_REF,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class EL_PROPERTY_REF {
+  + definition : BMM_PROPERTY [1]
+  + is_writable : Boolean [1]
+  + eval_type() : BMM_TYPE [1]
+}
+
+abstract class EL_FEATURE_REF  #whitesmoke;line:gray;line.dotted;text:gray {
+  + scoper : EL_VALUE_GENERATOR [0..1]
+  + reference() : String [1]
+}
+
+abstract class EL_VALUE_GENERATOR  #whitesmoke;line:gray;line.dotted;text:gray {
+  + is_writable : Boolean [1]
+  + name : String [1]
+  + reference() : String [1]
+}
+
+abstract class EL_SIMPLE  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+abstract class EL_EXPRESSION  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} eval_type() : BMM_TYPE [1]
+  + is_boolean() : Boolean [1]
+}
+
+EL_EXPRESSION <|-- EL_SIMPLE
+
+EL_SIMPLE <|-- EL_VALUE_GENERATOR
+
+EL_VALUE_GENERATOR <|-- EL_FEATURE_REF
+
+EL_FEATURE_REF <|-- EL_PROPERTY_REF
+
+
+@enduml
+-----

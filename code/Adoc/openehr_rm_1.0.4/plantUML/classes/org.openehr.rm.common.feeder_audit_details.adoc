@@ -1,0 +1,16 @@
+[plantuml,FEEDER_AUDIT_DETAILS,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class FEEDER_AUDIT_DETAILS {
+  + system_id : String [1]
+  + location : PARTY_IDENTIFIED [0..1]
+  + subject : PARTY_PROXY [0..1]
+  + provider : PARTY_IDENTIFIED [0..1]
+  + time : DV_DATE_TIME [0..1]
+  + version_id : String [0..1]
+}
+
+
+@enduml
+-----

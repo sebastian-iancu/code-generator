@@ -1,5 +1,3 @@
-=== P_ARCHETYPE_SLOT Class
-
 [cols="^1,3,5"]
 |===
 h|*Class*

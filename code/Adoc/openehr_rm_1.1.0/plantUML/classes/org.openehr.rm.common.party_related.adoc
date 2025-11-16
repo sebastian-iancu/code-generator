@@ -1,0 +1,24 @@
+[plantuml,PARTY_RELATED,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class PARTY_RELATED {
+  + relationship : DV_CODED_TEXT [1]
+}
+
+class PARTY_IDENTIFIED  #whitesmoke;line:gray;line.dotted;text:gray {
+  + name : String [0..1]
+  + identifiers : List<DV_IDENTIFIER> [*]
+}
+
+abstract class PARTY_PROXY  #whitesmoke;line:gray;line.dotted;text:gray {
+  + external_ref : PARTY_REF [0..1]
+}
+
+PARTY_PROXY <|-- PARTY_IDENTIFIED
+
+PARTY_IDENTIFIED <|-- PARTY_RELATED
+
+
+@enduml
+-----

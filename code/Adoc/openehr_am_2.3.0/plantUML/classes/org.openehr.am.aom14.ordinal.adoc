@@ -1,0 +1,12 @@
+[plantuml,ORDINAL,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class ORDINAL {
+  + symbol : CODE_PHRASE [1]
+  + value : Integer [1]
+}
+
+
+@enduml
+-----

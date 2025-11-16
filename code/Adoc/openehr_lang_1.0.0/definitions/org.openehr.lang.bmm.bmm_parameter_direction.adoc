@@ -1,5 +1,3 @@
-=== BMM_PARAMETER_DIRECTION Enumeration
-
 [cols="^1,3,5"]
 |===
 h|*Enumeration*

@@ -1,0 +1,15 @@
+[plantuml,RESOURCE_USAGE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class RESOURCE_USAGE {
+  + prospective : RESOURCE_USE [1]
+  + actual : RESOURCE_USE [1]
+  + type : DV_TEXT [1]
+  + description : String [0..1]
+  + reference : Any [0..1]
+}
+
+
+@enduml
+-----

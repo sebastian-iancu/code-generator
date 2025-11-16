@@ -1,0 +1,15 @@
+[plantuml,EXTRACT_ENTITY_MANIFEST,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class EXTRACT_ENTITY_MANIFEST {
+  + extract_id_key : String [1]
+  + ehr_id : String [0..1]
+  + subject_id : String [0..1]
+  + other_ids : List<String> [*]
+  + item_list : List<OBJECT_REF> [*]
+}
+
+
+@enduml
+-----

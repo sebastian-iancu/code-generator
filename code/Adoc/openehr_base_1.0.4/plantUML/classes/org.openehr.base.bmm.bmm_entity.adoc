@@ -1,0 +1,19 @@
+[plantuml,BMM_ENTITY,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class BMM_ENTITY {
+  + {abstract} entity_category() : String [1]
+  + {abstract} entity_metatype() : String [1]
+  + {abstract} is_abstract() : Boolean [1]
+  + {abstract} is_primitive() : Boolean [1]
+}
+
+class BMM_DEFINITIONS  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+BMM_DEFINITIONS <|-- BMM_ENTITY
+
+
+@enduml
+-----

@@ -1,0 +1,39 @@
+[plantuml,Real,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class Real {
+  + floor() : Integer [1]
+  + add( other : Real [1] ) : Real [1]
+  + subtract( other : Real [1] ) : Real [1]
+  + multiply( other : Real [1] ) : Real [1]
+  + divide( other : Real [1] ) : Double [1]
+  + exponent( other : Double [1] ) : Double [1]
+  + less_than( other : Real [1] ) : Boolean [1]
+  + negative() : Real [1]
+  + is_equal( other : Real [1] ) : Boolean [1]
+  + equal( other : Real [1] ) : Boolean [1]
+}
+
+abstract class Ordered_Numeric  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+}
+
+Ordered <|-- Ordered_Numeric
+
+abstract class Numeric  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} infix *( other : Numeric [1] ) : Numeric [1]
+  + {abstract} infix +( other : Numeric [1] ) : Numeric [1]
+  + {abstract} infix -( other : Numeric [1] ) : Numeric [1]
+}
+
+Numeric <|-- Ordered_Numeric
+
+Ordered_Numeric <|-- Real
+
+
+@enduml
+-----

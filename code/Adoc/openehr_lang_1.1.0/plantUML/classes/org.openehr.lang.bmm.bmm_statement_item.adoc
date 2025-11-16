@@ -1,0 +1,10 @@
+[plantuml,BMM_STATEMENT_ITEM,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class BMM_STATEMENT_ITEM {
+}
+
+
+@enduml
+-----

@@ -1,0 +1,11 @@
+[plantuml,P_BMM_MODEL_ELEMENT,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class P_BMM_MODEL_ELEMENT {
+  + documentation : String [0..1]
+}
+
+
+@enduml
+-----

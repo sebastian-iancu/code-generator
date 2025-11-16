@@ -1,0 +1,12 @@
+[plantuml,VIEW_STATUS,format=svg,svg-type="inline"]
+-----
+@startuml
+
+enum VIEW_STATUS {
+  active 
+  inactive 
+}
+
+
+@enduml
+-----

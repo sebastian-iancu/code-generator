@@ -1,0 +1,16 @@
+[plantuml,CODE_SET,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class CODE_SET {
+  + name : String [1]
+  + openehr_id : String [1]
+  + issuer : String [1]
+  + codes : List<CODE> [*]
+  + external_id : String [0..1]
+  + status : TERMINOLOGY_STATUS [0..1]
+}
+
+
+@enduml
+-----

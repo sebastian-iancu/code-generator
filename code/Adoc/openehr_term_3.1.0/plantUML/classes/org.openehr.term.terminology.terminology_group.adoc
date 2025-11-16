@@ -1,0 +1,14 @@
+[plantuml,TERMINOLOGY_GROUP,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class TERMINOLOGY_GROUP {
+  + name : String [1]
+  + concepts : List<TERMINOLOGY_CONCEPT> [*]
+  + openehr_id : String [1]
+  + status : TERMINOLOGY_STATUS [0..1]
+}
+
+
+@enduml
+-----

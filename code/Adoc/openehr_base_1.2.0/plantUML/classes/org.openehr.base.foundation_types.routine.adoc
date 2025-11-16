@@ -1,0 +1,10 @@
+[plantuml,ROUTINE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class ROUTINE <ARGS> {
+}
+
+
+@enduml
+-----

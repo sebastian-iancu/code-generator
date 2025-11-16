@@ -1,0 +1,20 @@
+[plantuml,BMM_LITERAL_VALUE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class BMM_LITERAL_VALUE {
+  + value_literal : String [1]
+  + value : Any [0..1]
+  + syntax : String [0..1]
+}
+
+abstract class BMM_TYPED  #whitesmoke;line:gray;line.dotted;text:gray {
+  + type : BMM_TYPE [1]
+  + is_boolean() : Boolean [1]
+}
+
+BMM_TYPED <|-- BMM_LITERAL_VALUE
+
+
+@enduml
+-----

@@ -1,5 +1,3 @@
-=== EXTRACT_VERSION_SPEC Class
-
 [cols="^1,3,5"]
 |===
 h|*Class*

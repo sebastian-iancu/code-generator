@@ -1,0 +1,19 @@
+[plantuml,SERVICE_USE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class SERVICE_USE {
+  + identifier : GENERIC_ID [0..1]
+  + start_time : Iso8601_date_time [0..1]
+  + duration : Iso8601_duration [0..1]
+}
+
+abstract class RESOURCE_USE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + cost_data : ITEM_STRUCTURE [0..1]
+}
+
+RESOURCE_USE <|-- SERVICE_USE
+
+
+@enduml
+-----

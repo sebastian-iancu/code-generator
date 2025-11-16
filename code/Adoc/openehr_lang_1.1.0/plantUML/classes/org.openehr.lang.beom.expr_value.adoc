@@ -1,0 +1,11 @@
+[plantuml,EXPR_VALUE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class EXPR_VALUE {
+  + {abstract} value() : Any [1]
+}
+
+
+@enduml
+-----

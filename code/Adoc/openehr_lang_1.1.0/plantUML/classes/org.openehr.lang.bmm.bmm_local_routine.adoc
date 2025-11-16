@@ -1,0 +1,17 @@
+[plantuml,BMM_LOCAL_ROUTINE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class BMM_LOCAL_ROUTINE {
+  + locals : List<BMM_LOCAL> [*]
+  + body : BMM_STATEMENT_BLOCK [1]
+}
+
+abstract class BMM_ROUTINE_DEFINITION  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+BMM_ROUTINE_DEFINITION <|-- BMM_LOCAL_ROUTINE
+
+
+@enduml
+-----

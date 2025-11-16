@@ -1,5 +1,3 @@
-=== EXTRACT_ACTION_REQUEST Class
-
 [cols="^1,3,5"]
 |===
 h|*Class*

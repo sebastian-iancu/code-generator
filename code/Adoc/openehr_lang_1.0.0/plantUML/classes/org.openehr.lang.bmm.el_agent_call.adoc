@@ -1,0 +1,11 @@
+[plantuml,EL_AGENT_CALL,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class EL_AGENT_CALL {
+  + agent : EL_AGENT [1]
+}
+
+
+@enduml
+-----

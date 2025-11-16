@@ -1,0 +1,27 @@
+[plantuml,DV_CODED_TEXT,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class DV_CODED_TEXT {
+  + defining_code : CODE_PHRASE [1]
+}
+
+class DV_TEXT  #whitesmoke;line:gray;line.dotted;text:gray {
+  + value : String [1]
+  + hyperlink : DV_URI [0..1]
+  + formatting : String [0..1]
+  + mappings : List<TERM_MAPPING> [*]
+  + language : CODE_PHRASE [0..1]
+  + encoding : CODE_PHRASE [0..1]
+}
+
+abstract class DATA_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+DATA_VALUE <|-- DV_TEXT
+
+DV_TEXT <|-- DV_CODED_TEXT
+
+
+@enduml
+-----

@@ -1,0 +1,16 @@
+[plantuml,P_ARCHETYPE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class P_ARCHETYPE {
+  + parent_archetype_id : String [0..1]
+  + archetype_id : P_ARCHETYPE_HRID [1]
+  + is_differential : Boolean [1]
+  + definition : P_C_COMPLEX_OBJECT [1]
+  + terminology : P_ARCHETYPE_TERMINOLOGY [1]
+  + rules : List<EL_BOOLEAN_EXPRESSION> [*]
+}
+
+
+@enduml
+-----

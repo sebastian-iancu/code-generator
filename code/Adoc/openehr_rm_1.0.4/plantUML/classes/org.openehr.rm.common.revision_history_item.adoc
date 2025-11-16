@@ -1,0 +1,12 @@
+[plantuml,REVISION_HISTORY_ITEM,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class REVISION_HISTORY_ITEM {
+  + version_id : OBJECT_VERSION_ID [1]
+  + audits : List<AUDIT_DETAILS> [1..*]
+}
+
+
+@enduml
+-----

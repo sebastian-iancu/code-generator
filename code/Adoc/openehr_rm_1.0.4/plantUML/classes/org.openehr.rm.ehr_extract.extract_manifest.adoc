@@ -1,0 +1,11 @@
+[plantuml,EXTRACT_MANIFEST,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class EXTRACT_MANIFEST {
+  + entities : List<EXTRACT_ENTITY_MANIFEST> [1..*]
+}
+
+
+@enduml
+-----

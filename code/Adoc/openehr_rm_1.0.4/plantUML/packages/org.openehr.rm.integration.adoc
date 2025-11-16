@@ -1,0 +1,12 @@
+[plantuml,org.openehr.rm.integration,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class GENERIC_ENTRY {
+  + data : ITEM_TREE [1]
+}
+
+CONTENT_ITEM <|-- GENERIC_ENTRY
+
+@enduml
+-----

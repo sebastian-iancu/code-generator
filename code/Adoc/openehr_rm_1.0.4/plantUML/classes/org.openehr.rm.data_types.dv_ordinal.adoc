@@ -1,0 +1,38 @@
+[plantuml,DV_ORDINAL,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class DV_ORDINAL {
+  + symbol : DV_CODED_TEXT [1]
+  + value : Integer [1]
+  + limits() : DV_ORDINAL [1]
+  + is_strictly_comparable_to( other : DV_ORDERED [1] ) : Boolean [1]
+  + <( other : Ordered [1] ) : Boolean [1]
+}
+
+abstract class DV_ORDERED  #whitesmoke;line:gray;line.dotted;text:gray {
+  + normal_status : CODE_PHRASE [0..1]
+  + normal_range : DV_INTERVAL [0..1]
+  + other_reference_ranges : List<REFERENCE_RANGE<DV_ORDERED>> [*]
+  + {abstract} is_strictly_comparable_to( other : DV_ORDERED [1] ) : Boolean [1]
+  + is_simple() : Boolean [1]
+  + is_normal() : Boolean [1]
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+}
+
+abstract class DATA_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+DATA_VALUE <|-- DV_ORDERED
+
+abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+}
+
+Ordered <|-- DV_ORDERED
+
+DV_ORDERED <|-- DV_ORDINAL
+
+
+@enduml
+-----

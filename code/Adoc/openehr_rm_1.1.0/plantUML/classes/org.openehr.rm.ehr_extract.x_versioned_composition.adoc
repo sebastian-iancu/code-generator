@@ -1,0 +1,22 @@
+[plantuml,X_VERSIONED_COMPOSITION,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class X_VERSIONED_COMPOSITION {
+}
+
+class X_VERSIONED_OBJECT <T>  #whitesmoke;line:gray;line.dotted;text:gray {
+  + uid : HIER_OBJECT_ID [1]
+  + owner_id : OBJECT_REF [1]
+  + time_created : DV_DATE_TIME [1]
+  + total_version_count : Integer [1]
+  + extract_version_count : Integer [1]
+  + revision_history : REVISION_HISTORY [0..1]
+  + versions : List<ORIGINAL_VERSION<T>> [*]
+}
+
+X_VERSIONED_OBJECT <|-- X_VERSIONED_COMPOSITION
+
+
+@enduml
+-----

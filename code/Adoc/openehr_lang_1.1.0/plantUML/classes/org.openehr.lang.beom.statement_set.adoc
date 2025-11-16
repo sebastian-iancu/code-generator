@@ -1,0 +1,13 @@
+[plantuml,STATEMENT_SET,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class STATEMENT_SET {
+  + statement : List<STATEMENT> [*]
+  + name : String [0..1]
+  + execution_result() : Boolean [1]
+}
+
+
+@enduml
+-----

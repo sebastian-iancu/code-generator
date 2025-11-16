@@ -1,0 +1,37 @@
+[plantuml,EXTRACT_ACTION_REQUEST,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class EXTRACT_ACTION_REQUEST {
+  + request_id : OBJECT_REF [1]
+  + uid : HIER_OBJECT_ID [1]
+  + action : DV_CODED_TEXT [1]
+}
+
+abstract class LOCATABLE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + name : DV_TEXT [1]
+  + archetype_node_id : String [1]
+  + uid : UID_BASED_ID [0..1]
+  + links : List<LINK> [*]
+  + archetype_details : ARCHETYPED [0..1]
+  + feeder_audit : FEEDER_AUDIT [0..1]
+  + concept() : DV_TEXT [1]
+  + is_archetype_root() : Boolean [1]
+}
+
+abstract class PATHABLE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + parent() : PATHABLE [1]
+  + item_at_path( a_path : String [1] ) : Any [1]
+  + items_at_path( a_path : String [1] ) : List<Any> [*]
+  + path_exists( a_path : String [1] ) : Boolean [1]
+  + path_unique( a_path : String [1] ) : Boolean [1]
+  + path_of_item( a_loc : PATHABLE [1] ) : String [1]
+}
+
+PATHABLE <|-- LOCATABLE
+
+LOCATABLE <|-- EXTRACT_ACTION_REQUEST
+
+
+@enduml
+-----

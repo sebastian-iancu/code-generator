@@ -1,0 +1,19 @@
+[plantuml,OP_DEF_AND,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class OP_DEF_AND {
+  + identifier : String [1]
+  + symbols : List<String> [*]
+  + evaluation_agent : FUNCTION<> [1]
+}
+
+abstract class OPERATOR_DEF_EXTERNAL  #whitesmoke;line:gray;line.dotted;text:gray {
+  + evaluation_agent : FUNCTION<TUPLE,Any> [1]
+}
+
+OPERATOR_DEF_EXTERNAL <|-- OP_DEF_AND
+
+
+@enduml
+-----

@@ -1,0 +1,17 @@
+[plantuml,BMM_EXTERNAL_ROUTINE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class BMM_EXTERNAL_ROUTINE {
+  + meta_data : Hash<String,String> [1]
+  + argument_mapping : Hash<String,String> [0..1]
+}
+
+abstract class BMM_ROUTINE_DEFINITION  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+BMM_ROUTINE_DEFINITION <|-- BMM_EXTERNAL_ROUTINE
+
+
+@enduml
+-----

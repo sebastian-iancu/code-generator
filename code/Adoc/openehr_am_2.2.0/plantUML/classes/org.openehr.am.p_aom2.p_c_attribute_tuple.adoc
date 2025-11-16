@@ -1,0 +1,11 @@
+[plantuml,P_C_ATTRIBUTE_TUPLE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class P_C_ATTRIBUTE_TUPLE {
+  + members : List<String> [*]
+}
+
+
+@enduml
+-----

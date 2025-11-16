@@ -1,0 +1,30 @@
+[plantuml,P_BMM_INDEXED_CONTAINER_TYPE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class P_BMM_INDEXED_CONTAINER_TYPE {
+  + index_type : String [1]
+  + bmm_type : BMM_INDEXED_CONTAINER_TYPE [0..1]
+}
+
+class P_BMM_CONTAINER_TYPE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + container_type : String [1]
+  + type_def : P_BMM_BASE_TYPE [0..1]
+  + type : String [0..1]
+  + bmm_type : BMM_CONTAINER_TYPE [0..1]
+  + type_ref() : P_BMM_BASE_TYPE [1]
+}
+
+abstract class P_BMM_TYPE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + bmm_type : BMM_TYPE [0..1]
+  + {abstract} create_bmm_type( a_schema : BMM_MODEL [1], a_class_def : BMM_CLASS [1] ) : void [1]
+  + {abstract} as_type_string() : String [1]
+}
+
+P_BMM_TYPE <|-- P_BMM_CONTAINER_TYPE
+
+P_BMM_CONTAINER_TYPE <|-- P_BMM_INDEXED_CONTAINER_TYPE
+
+
+@enduml
+-----

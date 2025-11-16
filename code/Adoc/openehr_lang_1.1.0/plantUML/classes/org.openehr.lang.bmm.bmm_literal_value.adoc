@@ -1,0 +1,14 @@
+[plantuml,BMM_LITERAL_VALUE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class BMM_LITERAL_VALUE <T> {
+  + value_literal : String [1]
+  + value : Any [0..1]
+  + syntax : String [0..1]
+  + type : T [1]
+}
+
+
+@enduml
+-----

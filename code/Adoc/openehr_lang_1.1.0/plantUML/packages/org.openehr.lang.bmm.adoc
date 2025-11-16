@@ -1,0 +1,10 @@
+[plantuml,org.openehr.lang.bmm,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class BMM_DEFINITIONS {
+}
+
+
+@enduml
+-----

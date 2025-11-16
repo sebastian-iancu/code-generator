@@ -1,0 +1,13 @@
+[plantuml,LINK,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class LINK {
+  + meaning : DV_TEXT [1]
+  + type : DV_TEXT [1]
+  + target : DV_EHR_URI [1]
+}
+
+
+@enduml
+-----

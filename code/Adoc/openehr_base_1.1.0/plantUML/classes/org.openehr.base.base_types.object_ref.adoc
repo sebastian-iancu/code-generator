@@ -1,0 +1,13 @@
+[plantuml,OBJECT_REF,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class OBJECT_REF {
+  + namespace : String [1]
+  + type : String [1]
+  + id : OBJECT_ID [1]
+}
+
+
+@enduml
+-----

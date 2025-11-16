@@ -1,0 +1,10 @@
+[plantuml,P_C_DURATION,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class P_C_DURATION {
+}
+
+
+@enduml
+-----

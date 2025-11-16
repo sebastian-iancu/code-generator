@@ -1,0 +1,16 @@
+[plantuml,SYNC_EXTRACT_REQUEST,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class SYNC_EXTRACT_REQUEST {
+  + specification : SYNC_EXTRACT_SPEC [1]
+}
+
+abstract class MESSAGE_CONTENT  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+MESSAGE_CONTENT <|-- SYNC_EXTRACT_REQUEST
+
+
+@enduml
+-----

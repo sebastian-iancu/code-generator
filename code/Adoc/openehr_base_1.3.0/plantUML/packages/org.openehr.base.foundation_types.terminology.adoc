@@ -1,0 +1,25 @@
+[plantuml,terminology,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class Terminology_code {
+  + terminology_id : String [1]
+  + terminology_version : String [0..1]
+  + code_string : String [1]
+  + uri : Uri [0..1]
+}
+
+class Terminology_term {
+  + concept : Terminology_code [1]
+  + text : String [1]
+}
+
+class CODE_PHRASE {
+  + terminology_id : TERMINOLOGY_ID [1]
+  + code_string : String [1]
+  + preferred_term : String [0..1]
+}
+
+
+@enduml
+-----

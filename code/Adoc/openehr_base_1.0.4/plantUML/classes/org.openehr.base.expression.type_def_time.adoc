@@ -1,0 +1,19 @@
+[plantuml,TYPE_DEF_TIME,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class TYPE_DEF_TIME {
+  + type_name : String [1]
+  + type_anchor : ITime [1]
+}
+
+abstract class EXPR_TYPE_DEF  #whitesmoke;line:gray;line.dotted;text:gray {
+  + type_name : String [1]
+  + type_anchor : Any [1]
+}
+
+EXPR_TYPE_DEF <|-- TYPE_DEF_TIME
+
+
+@enduml
+-----

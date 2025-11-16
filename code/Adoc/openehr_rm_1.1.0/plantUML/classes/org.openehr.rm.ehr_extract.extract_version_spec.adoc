@@ -1,0 +1,14 @@
+[plantuml,EXTRACT_VERSION_SPEC,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class EXTRACT_VERSION_SPEC {
+  + include_all_versions : Boolean [1]
+  + commit_time_interval : DV_INTERVAL<DV_DATE_TIME> [0..1]
+  + include_revision_history : Boolean [1]
+  + include_data : Boolean [1]
+}
+
+
+@enduml
+-----

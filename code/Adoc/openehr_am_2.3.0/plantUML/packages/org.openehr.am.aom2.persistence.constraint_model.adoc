@@ -1,0 +1,69 @@
+[plantuml,constraint_model,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class P_ARCHETYPE_CONSTRAINT {
+}
+
+abstract class P_C_OBJECT {
+  + rm_type_name : String [1]
+  + occurrences : String [0..1]
+  + node_id : String [1]
+  + is_deprecated : Boolean [0..1]
+  + specialisation_depth() : Integer [1]
+}
+
+class P_C_ATTRIBUTE {
+  + rm_attribute_name : String [1]
+  + existence : String [0..1]
+  + children : List<P_C_OBJECT> [*]
+  + differential_path : String [0..1]
+  + cardinality : String [0..1]
+  + is_multiple : Boolean [1]
+}
+
+abstract class P_C_DEFINED_OBJECT {
+  + is_frozen : Boolean [0..1]
+  + default_value : Any [1]
+}
+
+class P_C_COMPLEX_OBJECT_PROXY {
+  + target_path : String [1]
+}
+
+class P_ARCHETYPE_SLOT {
+  + includes : List<> [*]
+  + excludes : List<> [*]
+  + is_closed : Boolean [1]
+}
+
+abstract class P_C_PRIMITIVE_OBJECT {
+  + assumed_value : Any [0..1]
+  + is_enumerated_type_constraint : Boolean [0..1]
+  + constraint : Any [1]
+}
+
+class P_C_COMPLEX_OBJECT {
+  + attributes : List<P_C_ATTRIBUTE> [*]
+  + attribute_tuples : List<P_C_ATTRIBUTE_TUPLE> [*]
+}
+
+class P_C_ATTRIBUTE_TUPLE {
+  + members : List<String> [*]
+}
+
+class P_C_ARCHETYPE_ROOT {
+  + archetype_ref : String [1]
+}
+
+P_ARCHETYPE_CONSTRAINT <|-- P_C_OBJECT
+P_ARCHETYPE_CONSTRAINT <|-- P_C_ATTRIBUTE
+P_C_OBJECT <|-- P_C_DEFINED_OBJECT
+P_C_OBJECT <|-- P_C_COMPLEX_OBJECT_PROXY
+P_C_OBJECT <|-- P_ARCHETYPE_SLOT
+P_C_DEFINED_OBJECT <|-- P_C_PRIMITIVE_OBJECT
+P_C_DEFINED_OBJECT <|-- P_C_COMPLEX_OBJECT
+P_C_COMPLEX_OBJECT <|-- P_C_ARCHETYPE_ROOT
+
+@enduml
+-----

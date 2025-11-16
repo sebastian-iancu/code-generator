@@ -1,0 +1,44 @@
+[plantuml,terminology,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS {
+  + valid_terminology_group_id( an_id : Boolean [1] ) : Boolean [1]
+}
+
+class OPENEHR_CODE_SET_IDENTIFIERS {
+  + valid_code_set_id( an_id : String [1] ) : Boolean [1]
+}
+
+class TERMINOLOGY_SERVICE {
+  + terminology( name : String [1] ) : TERMINOLOGY_ACCESS [1]
+  + code_set( name : String [1] ) : CODE_SET_ACCESS [1]
+  + code_set_for_id( id : String [1] ) : CODE_SET_ACCESS [1]
+  + has_terminology( name : String [1] ) : Boolean [1]
+  + has_code_set( name : String [1] ) : Boolean [1]
+  + terminology_identifiers() : List<String> [*]
+  + openehr_code_sets() : Hash<String,String> [1]
+  + code_set_identifiers() : List<String> [*]
+}
+
+interface CODE_SET_ACCESS {
+  + id() : String [1]
+  + all_codes() : List<CODE_PHRASE> [*]
+  + has_lang( a_lang : String [1] ) : Boolean [1]
+  + has_code( a_code : String [1] ) : Boolean [1]
+}
+
+interface TERMINOLOGY_ACCESS {
+  + id() : String [1]
+  + all_codes() : CODE_PHRASE [1]
+  + codes_for_group_id( a_group_id : String [1] ) : List<CODE_PHRASE> [*]
+  + codes_for_group_name( a_lang : String [1], a_name : String [1] ) : List<CODE_PHRASE> [*]
+  + has_code_for_group_id() : Boolean [1]
+  + rubric_for_code( a_code : String [1] ) : String [1]
+}
+
+OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS <|-- TERMINOLOGY_SERVICE
+OPENEHR_CODE_SET_IDENTIFIERS <|-- TERMINOLOGY_SERVICE
+
+@enduml
+-----

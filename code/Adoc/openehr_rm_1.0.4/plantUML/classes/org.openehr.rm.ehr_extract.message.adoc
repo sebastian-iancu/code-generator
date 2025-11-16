@@ -1,0 +1,14 @@
+[plantuml,MESSAGE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class MESSAGE {
+  + audit : AUDIT_DETAILS [1]
+  + author : PARTY_PROXY [1]
+  + content : MESSAGE_CONTENT [1]
+  + signature : String [0..1]
+}
+
+
+@enduml
+-----

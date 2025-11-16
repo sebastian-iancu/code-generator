@@ -1,5 +1,3 @@
-=== DV_GENERAL_TIME_SPECIFICATION Class
-
 [cols="^1,3,5"]
 |===
 h|*Class*

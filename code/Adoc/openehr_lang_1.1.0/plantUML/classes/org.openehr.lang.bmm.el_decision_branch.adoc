@@ -1,0 +1,11 @@
+[plantuml,EL_DECISION_BRANCH,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class EL_DECISION_BRANCH <T> {
+  + result : T [1]
+}
+
+
+@enduml
+-----

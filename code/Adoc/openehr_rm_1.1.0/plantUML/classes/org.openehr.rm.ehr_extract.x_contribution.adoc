@@ -1,0 +1,13 @@
+[plantuml,X_CONTRIBUTION,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class X_CONTRIBUTION {
+  + uid : HIER_OBJECT_ID [1]
+  + audit : AUDIT_DETAILS [1]
+  + versions : List<VERSION<X_CONTRIBUTION>> [*]
+}
+
+
+@enduml
+-----

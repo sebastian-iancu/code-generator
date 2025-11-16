@@ -1,0 +1,17 @@
+[plantuml,Boolean,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class Boolean {
+  + conjunction( other : Boolean [1] ) : Boolean [1]
+  + semistrict_conjunction( other : Boolean [1] ) : Boolean [1]
+  + disjunction( other : Boolean [1] ) : Boolean [1]
+  + semistrict_disjunction( other : Boolean [1] ) : Boolean [1]
+  + exclusive_disjunction( other : Boolean [1] ) : Boolean [1]
+  + implication( other : Boolean [1] ) : Boolean [1]
+  + negation() : Boolean [1]
+}
+
+
+@enduml
+-----

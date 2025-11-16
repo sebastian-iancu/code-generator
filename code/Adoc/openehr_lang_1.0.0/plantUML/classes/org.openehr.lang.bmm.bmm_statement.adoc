@@ -1,0 +1,20 @@
+[plantuml,BMM_STATEMENT,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class BMM_STATEMENT {
+}
+
+abstract class BMM_STATEMENT_ITEM  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+abstract class BMM_ROUTINE_BODY  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+BMM_ROUTINE_BODY <|-- BMM_STATEMENT_ITEM
+
+BMM_STATEMENT_ITEM <|-- BMM_STATEMENT
+
+
+@enduml
+-----

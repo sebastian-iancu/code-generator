@@ -1,0 +1,34 @@
+[plantuml,VERSIONED_EHR_ACCESS,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class VERSIONED_EHR_ACCESS {
+}
+
+class VERSIONED_OBJECT <T>  #whitesmoke;line:gray;line.dotted;text:gray {
+  + uid : HIER_OBJECT_ID [1]
+  + owner_id : OBJECT_REF [1]
+  + time_created : DV_DATE_TIME [1]
+  + version_count() : Integer [1]
+  + all_version_ids() : List<OBJECT_VERSION_ID> [1..*]
+  + all_versions() : List<VERSION<T>> [1..*]
+  + has_version_at_time( a_ver_id : OBJECT_VERSION_ID [1] ) : Boolean [1]
+  + has_version_id( a_ver_id : OBJECT_VERSION_ID [1] ) : Boolean [1]
+  + version_with_id( a_ver_id : OBJECT_VERSION_ID [1] ) : VERSION [1]
+  + is_original_version( a_ver_id : OBJECT_VERSION_ID [1] ) : Boolean [1]
+  + version_at_time( a_time : DV_DATE_TIME [1] ) : VERSION [1]
+  + revision_history() : REVISION_HISTORY [1]
+  + latest_version() : VERSION [1]
+  + latest_trunk_version() : VERSION [1]
+  + trunk_lifecycle_state() : DV_CODED_TEXT [1]
+  + commit_original_version( a_contribution : OBJECT_REF [1], a_new_version_uid : OBJECT_VERSION_ID [1], a_preceding_version_id : OBJECT_VERSION_ID [1], an_audit : AUDIT_DETAILS [1], a_lifecycle_state : DV_CODED_TEXT [1], a_data : T [1], signing_key : String [1] ) : void [1]
+  + commit_original_merged_version( a_contribution : OBJECT_REF [1], a_new_version_uid : OBJECT_VERSION_ID [1], a_preceding_version_id : OBJECT_VERSION_ID [1], an_audit : AUDIT_DETAILS [1], a_lifecycle_state : DV_CODED_TEXT [1], a_data : T [1], an_other_input_uids : List<OBJECT_VERSION_ID> [1], signing_key : String [1] ) : void [1]
+  + commit_imported_version( a_contribution : OBJECT_REF [1], an_audit : AUDIT_DETAILS [1], a_version : ORIGINAL_VERSION [1] ) : void [1]
+  + commit_attestation( an_attestation : ATTESTATION [1], a_ver_id : OBJECT_VERSION_ID [1], signing_key : String [1] ) : void [1]
+}
+
+VERSIONED_OBJECT <|-- VERSIONED_EHR_ACCESS
+
+
+@enduml
+-----

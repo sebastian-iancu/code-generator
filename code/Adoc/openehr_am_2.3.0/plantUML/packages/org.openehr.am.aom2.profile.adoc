@@ -1,0 +1,26 @@
+[plantuml,profile,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class AOM_PROFILE {
+  + aom_rm_type_substitutions : Hash<String,String> [0..1]
+  + aom_lifecycle_mappings : Hash<String,String> [0..1]
+  + profile_name : String [1]
+  + aom_rm_type_mappings : Hash<String,AOM_TYPE_MAPPING> [0..1]
+  + rm_primitive_type_equivalences : Hash<String,String> [0..1]
+}
+
+class AOM_TYPE_MAPPING {
+  + source_class_name : String [1]
+  + target_class_name : String [1]
+  + property_mappings : Hash<String,AOM_PROPERTY_MAPPING> [0..1]
+}
+
+class AOM_PROPERTY_MAPPING {
+  + source_property_name : String [1]
+  + target_property_name : String [1]
+}
+
+
+@enduml
+-----

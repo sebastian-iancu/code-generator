@@ -1,0 +1,28 @@
+[plantuml,Temporal,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class Temporal {
+}
+
+abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+}
+
+Ordered <|-- Temporal
+
+class Time_Definitions  #whitesmoke;line:gray;line.dotted;text:gray {
+  + valid_year( y : Integer [1] ) : Boolean [1]
+  + valid_month( m : Integer [1] ) : Boolean [1]
+  + valid_day( y : Integer [1], m : Integer [1], d : Integer [1] ) : Boolean [1]
+  + valid_hour( h : Integer [1], m : Integer [1], s : Integer [1] ) : Boolean [1]
+  + valid_minute( m : Integer [1] ) : Boolean [1]
+  + valid_second( s : Integer [1] ) : Boolean [1]
+  + valid_fractional_second( fs : Double [1] ) : Boolean [1]
+}
+
+Time_Definitions <|-- Temporal
+
+
+@enduml
+-----

@@ -1,0 +1,10 @@
+[plantuml,Comparable,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class Comparable {
+}
+
+
+@enduml
+-----

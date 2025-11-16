@@ -1,0 +1,13 @@
+[plantuml,CODE_PHRASE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class CODE_PHRASE {
+  + terminology_id : TERMINOLOGY_ID [1]
+  + code_string : String [1]
+  + preferred_term : String [0..1]
+}
+
+
+@enduml
+-----

@@ -1,0 +1,17 @@
+[plantuml,DV_STATE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class DV_STATE {
+  + value : DV_CODED_TEXT [1]
+  + is_terminal : Boolean [1]
+}
+
+abstract class DATA_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+DATA_VALUE <|-- DV_STATE
+
+
+@enduml
+-----

@@ -1,0 +1,14 @@
+[plantuml,CODE_SET_ACCESS,format=svg,svg-type="inline"]
+-----
+@startuml
+
+interface CODE_SET_ACCESS {
+  + id() : String [1]
+  + all_codes() : List<CODE_PHRASE> [*]
+  + has_lang( a_lang : String [1] ) : Boolean [1]
+  + has_code( a_code : String [1] ) : Boolean [1]
+}
+
+
+@enduml
+-----

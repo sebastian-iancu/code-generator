@@ -1,0 +1,10 @@
+[plantuml,P_ARCHETYPE_CONSTRAINT,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class P_ARCHETYPE_CONSTRAINT {
+}
+
+
+@enduml
+-----

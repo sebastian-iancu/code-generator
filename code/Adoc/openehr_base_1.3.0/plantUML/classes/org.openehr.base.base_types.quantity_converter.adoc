@@ -1,0 +1,11 @@
+[plantuml,Quantity_converter,format=svg,svg-type="inline"]
+-----
+@startuml
+
+interface Quantity_converter {
+  + convert_value( value : Real [1], from_units : String [1], to_units : String [1], property : Terminology_code [1] ) : Real [1]
+}
+
+
+@enduml
+-----

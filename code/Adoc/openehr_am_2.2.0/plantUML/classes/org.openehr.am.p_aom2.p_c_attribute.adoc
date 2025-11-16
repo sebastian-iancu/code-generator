@@ -1,0 +1,21 @@
+[plantuml,P_C_ATTRIBUTE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class P_C_ATTRIBUTE {
+  + rm_attribute_name : String [1]
+  + existence : String [0..1]
+  + children : List<P_C_OBJECT> [*]
+  + differential_path : String [0..1]
+  + cardinality : String [0..1]
+  + is_multiple : Boolean [1]
+}
+
+abstract class P_ARCHETYPE_CONSTRAINT  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+P_ARCHETYPE_CONSTRAINT <|-- P_C_ATTRIBUTE
+
+
+@enduml
+-----

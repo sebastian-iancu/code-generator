@@ -1,0 +1,14 @@
+[plantuml,EXTRACT_UPDATE_SPEC,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class EXTRACT_UPDATE_SPEC {
+  + persist_in_server : Boolean [1]
+  + repeat_period : DV_DURATION [0..1]
+  + trigger_events : List<DV_CODED_TEXT> [*]
+  + update_method : CODE_PHRASE [1]
+}
+
+
+@enduml
+-----

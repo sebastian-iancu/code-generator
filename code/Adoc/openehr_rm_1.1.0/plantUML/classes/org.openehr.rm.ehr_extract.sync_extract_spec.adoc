@@ -1,0 +1,14 @@
+[plantuml,SYNC_EXTRACT_SPEC,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class SYNC_EXTRACT_SPEC {
+  + includes_versions : Boolean [1]
+  + contribution_list : List<HIER_OBJECT_ID> [*]
+  + contributions_since : DV_DATE_TIME [0..1]
+  + all_contributions : Boolean [0..1]
+}
+
+
+@enduml
+-----

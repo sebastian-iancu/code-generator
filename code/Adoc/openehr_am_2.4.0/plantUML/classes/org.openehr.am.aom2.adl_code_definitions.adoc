@@ -1,0 +1,17 @@
+[plantuml,ADL_CODE_DEFINITIONS,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class ADL_CODE_DEFINITIONS {
+  + codes_conformant( a_child_code : String [1], a_parent_code : String [1] ) : Boolean [1]
+  + is_adl_code( a_code : String [1] ) : Boolean [1]
+  + is_id_code( a_code : String [1] ) : Boolean [1]
+  + is_value_code( a_code : String [1] ) : Boolean [1]
+  + is_value_set_code( a_code : String [1] ) : Boolean [1]
+  + is_redefined_code( a_code : String [1] ) : Boolean [1]
+  + code_exists_at_level( a-code : String [1], a_level : Integer [1] ) : Boolean [1]
+}
+
+
+@enduml
+-----

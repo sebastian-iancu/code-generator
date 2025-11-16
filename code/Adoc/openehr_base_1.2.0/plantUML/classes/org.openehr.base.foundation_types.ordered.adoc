@@ -1,0 +1,14 @@
+[plantuml,Ordered,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class Ordered {
+  + {abstract} less_than( other : Ordered [1] ) : Boolean [1]
+  + less_than_or_equal( other : Ordered [1] ) : Boolean [1]
+  + greater_than( other : Ordered [1] ) : Boolean [1]
+  + greater_than_or_equal( other : Ordered [1] ) : Boolean [1]
+}
+
+
+@enduml
+-----

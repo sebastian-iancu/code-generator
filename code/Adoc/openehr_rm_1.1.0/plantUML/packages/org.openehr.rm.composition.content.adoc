@@ -1,0 +1,11 @@
+[plantuml,content,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class CONTENT_ITEM {
+}
+
+LOCATABLE <|-- CONTENT_ITEM
+
+@enduml
+-----

@@ -1,0 +1,35 @@
+[plantuml,DV_MULTIMEDIA,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class DV_MULTIMEDIA {
+  + alternate_text : String [0..1]
+  + uri : DV_URI [0..1]
+  + data : Array<Octet> [*]
+  + media_type : CODE_PHRASE [1]
+  + compression_algorithm : CODE_PHRASE [0..1]
+  + integrity_check : Array<Octet> [*]
+  + integrity_check_algorithm : CODE_PHRASE [0..1]
+  + thumbnail : DV_MULTIMEDIA [0..1]
+  + size : Integer [1]
+  + is_external() : Boolean [1]
+  + is_inline() : Boolean [1]
+  + is_compressed() : Boolean [1]
+  + has_integrity_check() : Boolean [1]
+}
+
+abstract class DV_ENCAPSULATED  #whitesmoke;line:gray;line.dotted;text:gray {
+  + charset : CODE_PHRASE [0..1]
+  + language : CODE_PHRASE [0..1]
+}
+
+abstract class DATA_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+DATA_VALUE <|-- DV_ENCAPSULATED
+
+DV_ENCAPSULATED <|-- DV_MULTIMEDIA
+
+
+@enduml
+-----

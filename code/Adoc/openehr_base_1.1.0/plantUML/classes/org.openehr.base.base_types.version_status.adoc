@@ -1,0 +1,15 @@
+[plantuml,VERSION_STATUS,format=svg,svg-type="inline"]
+-----
+@startuml
+
+enum VERSION_STATUS {
+  alpha 
+  beta 
+  release_candidate 
+  released 
+  build 
+}
+
+
+@enduml
+-----

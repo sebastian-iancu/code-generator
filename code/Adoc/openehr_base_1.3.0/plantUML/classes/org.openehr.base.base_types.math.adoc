@@ -1,0 +1,13 @@
+[plantuml,Math,format=svg,svg-type="inline"]
+-----
+@startuml
+
+interface Math {
+  + ln( v : Numeric [1] ) : Double [1]
+  + log( v : Numeric [1] ) : Double [1]
+  + sin( (v : Numeric [1] ) : Double [1]
+}
+
+
+@enduml
+-----

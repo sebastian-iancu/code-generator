@@ -1,0 +1,11 @@
+[plantuml,ARCHETYPE_ID_CONSTRAINT,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class ARCHETYPE_ID_CONSTRAINT {
+  + constraint : C_STRING [1]
+}
+
+
+@enduml
+-----

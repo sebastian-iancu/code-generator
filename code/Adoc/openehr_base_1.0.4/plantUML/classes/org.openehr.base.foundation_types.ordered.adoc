@@ -1,0 +1,11 @@
+[plantuml,Ordered,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class Ordered {
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+}
+
+
+@enduml
+-----

@@ -1,0 +1,41 @@
+[plantuml,IDate_time,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class IDate_time {
+  + year() : Integer [1]
+  + month() : Integer [1]
+  + day() : Integer [1]
+  + hour() : Integer [1]
+  + minute() : Integer [1]
+  + second() : Integer [1]
+  + fractional_second() : Real [1]
+  + timezone() : ITimezone [1]
+}
+
+abstract class Temporal  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+}
+
+Ordered <|-- Temporal
+
+class Time_Definitions  #whitesmoke;line:gray;line.dotted;text:gray {
+  + valid_year( y : Integer [1] ) : Boolean [1]
+  + valid_month( m : Integer [1] ) : Boolean [1]
+  + valid_day( y : Integer [1], m : Integer [1], d : Integer [1] ) : Boolean [1]
+  + valid_hour( h : Integer [1], m : Integer [1], s : Integer [1] ) : Boolean [1]
+  + valid_minute( m : Integer [1] ) : Boolean [1]
+  + valid_second( s : Integer [1] ) : Boolean [1]
+  + valid_fractional_second( fs : Double [1] ) : Boolean [1]
+}
+
+Time_Definitions <|-- Temporal
+
+Temporal <|-- IDate_time
+
+
+@enduml
+-----

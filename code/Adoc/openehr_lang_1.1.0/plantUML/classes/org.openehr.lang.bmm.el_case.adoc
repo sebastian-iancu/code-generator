@@ -1,0 +1,17 @@
+[plantuml,EL_CASE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class EL_CASE <T> {
+  + value_constraint : C_OBJECT [1]
+}
+
+abstract class EL_DECISION_BRANCH  #whitesmoke;line:gray;line.dotted;text:gray {
+  + result : EL_EXPRESSION [1]
+}
+
+EL_DECISION_BRANCH <|-- EL_CASE
+
+
+@enduml
+-----

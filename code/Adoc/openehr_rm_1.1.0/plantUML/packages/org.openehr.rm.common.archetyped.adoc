@@ -1,0 +1,57 @@
+[plantuml,archetyped,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class PATHABLE {
+  + parent() : PATHABLE [1]
+  + item_at_path( a_path : String [1] ) : Any [1]
+  + items_at_path( a_path : String [1] ) : List<Any> [*]
+  + path_exists( a_path : String [1] ) : Boolean [1]
+  + path_unique( a_path : String [1] ) : Boolean [1]
+  + path_of_item( a_loc : PATHABLE [1] ) : String [1]
+}
+
+class LINK {
+  + meaning : DV_TEXT [1]
+  + type : DV_TEXT [1]
+  + target : DV_EHR_URI [1]
+}
+
+abstract class LOCATABLE {
+  + name : DV_TEXT [1]
+  + archetype_node_id : String [1]
+  + uid : UID_BASED_ID [0..1]
+  + links : List<LINK> [*]
+  + archetype_details : ARCHETYPED [0..1]
+  + feeder_audit : FEEDER_AUDIT [0..1]
+  + concept() : DV_TEXT [1]
+  + is_archetype_root() : Boolean [1]
+}
+
+class ARCHETYPED {
+  + archetype_id : ARCHETYPE_ID [1]
+  + template_id : TEMPLATE_ID [0..1]
+  + rm_version : String [1]
+}
+
+class FEEDER_AUDIT {
+  + originating_system_item_ids : List<DV_IDENTIFIER> [*]
+  + feeder_system_item_ids : List<DV_IDENTIFIER> [*]
+  + original_content : DV_ENCAPSULATED [0..1]
+  + originating_system_audit : FEEDER_AUDIT_DETAILS [1]
+  + feeder_system_audit : FEEDER_AUDIT_DETAILS [0..1]
+}
+
+class FEEDER_AUDIT_DETAILS {
+  + system_id : String [1]
+  + location : PARTY_IDENTIFIED [0..1]
+  + subject : PARTY_PROXY [0..1]
+  + provider : PARTY_IDENTIFIED [0..1]
+  + time : DV_DATE_TIME [0..1]
+  + version_id : String [0..1]
+}
+
+PATHABLE <|-- LOCATABLE
+
+@enduml
+-----

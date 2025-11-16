@@ -1,0 +1,20 @@
+[plantuml,VERSION,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class VERSION <T> {
+  + contribution : OBJECT_REF [1]
+  + signature : String [0..1]
+  + commit_audit : AUDIT_DETAILS [1]
+  + {abstract} uid() : OBJECT_VERSION_ID [1]
+  + {abstract} preceding_version_uid() : OBJECT_VERSION_ID [1]
+  + {abstract} data() : T [1]
+  + {abstract} lifecycle_state() : DV_CODED_TEXT [1]
+  + canonical_form() : String [1]
+  + owner_id() : HIER_OBJECT_ID [1]
+  + is_branch() : Boolean [1]
+}
+
+
+@enduml
+-----

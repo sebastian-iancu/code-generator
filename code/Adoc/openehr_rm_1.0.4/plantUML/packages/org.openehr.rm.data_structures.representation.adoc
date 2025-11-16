@@ -1,0 +1,23 @@
+[plantuml,representation,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class ITEM {
+}
+
+class CLUSTER {
+  + items : List<ITEM> [1..*]
+}
+
+class ELEMENT {
+  + null_flavour : DV_CODED_TEXT [0..1]
+  + value : DATA_VALUE [0..1]
+  + is_null() : Boolean [1]
+}
+
+LOCATABLE <|-- ITEM
+ITEM <|-- CLUSTER
+ITEM <|-- ELEMENT
+
+@enduml
+-----

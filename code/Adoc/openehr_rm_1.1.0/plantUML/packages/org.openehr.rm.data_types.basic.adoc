@@ -1,0 +1,29 @@
+[plantuml,basic,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class DATA_VALUE {
+}
+
+class DV_BOOLEAN {
+  + value : Boolean [1]
+}
+
+class DV_STATE {
+  + value : DV_CODED_TEXT [1]
+  + is_terminal : Boolean [1]
+}
+
+class DV_IDENTIFIER {
+  + issuer : String [0..1]
+  + assigner : String [0..1]
+  + id : String [1]
+  + type : String [0..1]
+}
+
+DATA_VALUE <|-- DV_BOOLEAN
+DATA_VALUE <|-- DV_STATE
+DATA_VALUE <|-- DV_IDENTIFIER
+
+@enduml
+-----

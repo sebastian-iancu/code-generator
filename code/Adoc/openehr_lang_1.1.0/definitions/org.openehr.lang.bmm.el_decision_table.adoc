@@ -1,5 +1,3 @@
-=== EL_DECISION_TABLE Class
-
 [cols="^1,3,5"]
 |===
 h|*Class*

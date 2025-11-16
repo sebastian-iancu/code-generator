@@ -1,0 +1,22 @@
+[plantuml,BMM_CLASS_ENTITY,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class BMM_CLASS_ENTITY {
+  + is_synthesised_generic : Boolean [0..1]
+  + {abstract} signature() : BMM_SIGNATURE [1]
+}
+
+abstract class BMM_DECLARATION  #whitesmoke;line:gray;line.dotted;text:gray {
+  + name : String [1]
+  + documentation : Hash<String,Any> [0..1]
+  + scope : BMM_DECLARATION [1]
+  + extensions : Hash<String,Any> [0..1]
+  + is_root_scope() : Boolean [1]
+}
+
+BMM_DECLARATION <|-- BMM_CLASS_ENTITY
+
+
+@enduml
+-----

@@ -1,0 +1,12 @@
+[plantuml,BMM_CONDITIONAL_ACTION,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class BMM_CONDITIONAL_ACTION {
+  + condition : EL_BOOLEAN_EXPRESSION [1]
+  + statement : BMM_STATEMENT_ITEM [1]
+}
+
+
+@enduml
+-----

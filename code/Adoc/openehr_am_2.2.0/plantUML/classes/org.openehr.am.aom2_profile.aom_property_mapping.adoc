@@ -1,0 +1,12 @@
+[plantuml,AOM_PROPERTY_MAPPING,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class AOM_PROPERTY_MAPPING {
+  + source_property_name : String [1]
+  + target_property_name : String [1]
+}
+
+
+@enduml
+-----

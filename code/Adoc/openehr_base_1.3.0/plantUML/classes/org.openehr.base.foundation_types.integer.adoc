@@ -1,0 +1,39 @@
+[plantuml,Integer,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class Integer {
+  + add( other : Integer [1] ) : Integer [1]
+  + subtract( other : Integer [1] ) : Integer [1]
+  + multiply( other : Integer [1] ) : Integer [1]
+  + divide( other : Integer [1] ) : Double [1]
+  + exponent( other : Double [1] ) : Double [1]
+  + modulo( mod : Integer [1] ) : Integer [1]
+  + less_than( other : Integer [1] ) : Boolean [1]
+  + negative() : Integer [1]
+  + is_equal( other : Integer [1] ) : Boolean [1]
+  + equal( other : Integer [1] ) : Boolean [1]
+}
+
+abstract class Ordered_Numeric  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+}
+
+Ordered <|-- Ordered_Numeric
+
+abstract class Numeric  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} infix *( other : Numeric [1] ) : Numeric [1]
+  + {abstract} infix +( other : Numeric [1] ) : Numeric [1]
+  + {abstract} infix -( other : Numeric [1] ) : Numeric [1]
+}
+
+Numeric <|-- Ordered_Numeric
+
+Ordered_Numeric <|-- Integer
+
+
+@enduml
+-----

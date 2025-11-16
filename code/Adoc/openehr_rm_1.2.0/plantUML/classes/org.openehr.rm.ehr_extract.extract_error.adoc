@@ -1,0 +1,12 @@
+[plantuml,EXTRACT_ERROR,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class EXTRACT_ERROR {
+  + request_id : OBJECT_REF [0..1]
+  + reason : DV_TEXT [1]
+}
+
+
+@enduml
+-----

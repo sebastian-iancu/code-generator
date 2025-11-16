@@ -1,0 +1,17 @@
+[plantuml,RESOURCE_DESCRIPTION_ITEM,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class RESOURCE_DESCRIPTION_ITEM {
+  + language : Terminology_code [1]
+  + purpose : String [1]
+  + keywords : List<String> [*]
+  + use : String [0..1]
+  + misuse : String [0..1]
+  + original_resource_uri : Hash<String,String> [0..1]
+  + other_details : Hash<String,String> [0..1]
+}
+
+
+@enduml
+-----

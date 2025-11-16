@@ -1,0 +1,18 @@
+[plantuml,FUNCTION_DEF_EXAMPLE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class FUNCTION_DEF_EXAMPLE {
+  + identifier : String [1]
+  + evaluation_agent : FUNCTION<> [1]
+}
+
+abstract class FUNCTION_DEF_EXTERNAL  #whitesmoke;line:gray;line.dotted;text:gray {
+  + evaluation_agent : FUNCTION<TUPLE,Any> [1]
+}
+
+FUNCTION_DEF_EXTERNAL <|-- FUNCTION_DEF_EXAMPLE
+
+
+@enduml
+-----

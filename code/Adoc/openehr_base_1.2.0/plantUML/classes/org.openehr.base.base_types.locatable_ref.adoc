@@ -1,0 +1,21 @@
+[plantuml,LOCATABLE_REF,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class LOCATABLE_REF {
+  + path : String [0..1]
+  + id : UID_BASED_ID [1]
+  + as_uri() : String [1]
+}
+
+class OBJECT_REF  #whitesmoke;line:gray;line.dotted;text:gray {
+  + namespace : String [1]
+  + type : String [1]
+  + id : OBJECT_ID [1]
+}
+
+OBJECT_REF <|-- LOCATABLE_REF
+
+
+@enduml
+-----

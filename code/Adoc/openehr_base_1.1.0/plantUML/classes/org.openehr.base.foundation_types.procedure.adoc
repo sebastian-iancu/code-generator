@@ -1,0 +1,15 @@
+[plantuml,PROCEDURE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class PROCEDURE <ARGS> {
+}
+
+class ROUTINE <ARGS>  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+ROUTINE <|-- PROCEDURE
+
+
+@enduml
+-----

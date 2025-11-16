@@ -1,0 +1,15 @@
+[plantuml,OPENEHR_DEFINITIONS,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class OPENEHR_DEFINITIONS {
+}
+
+class BASIC_DEFINITIONS  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+BASIC_DEFINITIONS <|-- OPENEHR_DEFINITIONS
+
+
+@enduml
+-----

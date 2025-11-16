@@ -1,0 +1,17 @@
+[plantuml,CONSUMABLE_USE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class CONSUMABLE_USE {
+  + amount : DATA_VALUE [0..1]
+}
+
+abstract class RESOURCE_USE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + cost_data : ITEM_STRUCTURE [0..1]
+}
+
+RESOURCE_USE <|-- CONSUMABLE_USE
+
+
+@enduml
+-----

@@ -1,0 +1,16 @@
+[plantuml,PARTY_SELF,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class PARTY_SELF {
+}
+
+abstract class PARTY_PROXY  #whitesmoke;line:gray;line.dotted;text:gray {
+  + external_ref : PARTY_REF [0..1]
+}
+
+PARTY_PROXY <|-- PARTY_SELF
+
+
+@enduml
+-----

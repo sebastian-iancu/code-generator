@@ -1,5 +1,3 @@
-=== EL_UNARY_OPERATOR Class
-
 [cols="^1,3,5"]
 |===
 h|*Class*

@@ -1,0 +1,52 @@
+[plantuml,item_structure,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class ITEM_STRUCTURE {
+}
+
+class ITEM_TREE {
+  + items : List<ITEM> [*]
+  + has_element_path( a_path : String [1] ) : Boolean [1]
+  + element_at_path( a_path : String [1] ) : ELEMENT [1]
+  + as_hierarchy() : CLUSTER [1]
+}
+
+class ITEM_SINGLE {
+  + item : ELEMENT [1]
+  + as_hierarchy() : ELEMENT [1]
+}
+
+class ITEM_TABLE {
+  + rows : List<CLUSTER> [*]
+  + row_count() : Integer [1]
+  + column_count() : Integer [1]
+  + row_names() : List<DV_TEXT> [*]
+  + column_names() : List<DV_TEXT> [*]
+  + ith_row( i : Integer [1] ) : CLUSTER [1]
+  + has_row_with_name( a_key : String [1] ) : Boolean [1]
+  + has_column_with_name( a_key : String [1] ) : Boolean [1]
+  + named_row( a_key : String [1] ) : CLUSTER [1]
+  + has_row_with_key( keys : List<String> [0..1] ) : Boolean [1]
+  + row_with_key( keys : List<String> [0..1] ) : CLUSTER [1]
+  + element_at_cell_ij( i : Any [1], j : Integer [1] ) : ELEMENT [1]
+  + as_hierarchy() : CLUSTER [1]
+}
+
+class ITEM_LIST {
+  + items : List<ELEMENT> [*]
+  + item_count() : Integer [1]
+  + names() : List<DV_TEXT> [*]
+  + named_item( a_name : String [1] ) : ELEMENT [1]
+  + ith_item( i : Integer [1] ) : ELEMENT [1]
+  + as_hierarchy() : CLUSTER [1]
+}
+
+DATA_STRUCTURE <|-- ITEM_STRUCTURE
+ITEM_STRUCTURE <|-- ITEM_TREE
+ITEM_STRUCTURE <|-- ITEM_SINGLE
+ITEM_STRUCTURE <|-- ITEM_TABLE
+ITEM_STRUCTURE <|-- ITEM_LIST
+
+@enduml
+-----

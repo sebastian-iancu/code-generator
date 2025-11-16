@@ -1,0 +1,48 @@
+[plantuml,org.openehr.rm.ehr,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class EHR {
+  + system_id : HIER_OBJECT_ID [1]
+  + ehr_id : HIER_OBJECT_ID [1]
+  + contributions : List<OBJECT_REF> [*]
+  + ehr_status : OBJECT_REF [1]
+  + ehr_access : OBJECT_REF [1]
+  + compositions : List<OBJECT_REF> [*]
+  + directory : OBJECT_REF [0..1]
+  + time_created : DV_DATE_TIME [1]
+}
+
+class VERSIONED_EHR_ACCESS {
+}
+
+class VERSIONED_EHR_STATUS {
+}
+
+class VERSIONED_COMPOSITION {
+  + is_persistent() : Boolean [1]
+}
+
+class EHR_ACCESS {
+  + settings : ACCESS_CONTROL_SETTINGS [0..1]
+  + scheme() : String [1]
+}
+
+class EHR_STATUS {
+  + subject : PARTY_SELF [1]
+  + is_queryable : Boolean [1]
+  + is_modifiable : Boolean [1]
+  + other_details : ITEM_STRUCTURE [0..1]
+}
+
+abstract class ACCESS_CONTROL_SETTINGS {
+}
+
+VERSIONED_OBJECT <|-- VERSIONED_EHR_ACCESS
+VERSIONED_OBJECT <|-- VERSIONED_EHR_STATUS
+VERSIONED_OBJECT <|-- VERSIONED_COMPOSITION
+LOCATABLE <|-- EHR_ACCESS
+LOCATABLE <|-- EHR_STATUS
+
+@enduml
+-----

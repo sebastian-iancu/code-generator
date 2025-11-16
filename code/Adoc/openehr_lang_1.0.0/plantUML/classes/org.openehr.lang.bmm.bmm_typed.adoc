@@ -1,0 +1,12 @@
+[plantuml,BMM_TYPED,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class BMM_TYPED {
+  + type : BMM_TYPE [1]
+  + is_boolean() : Boolean [1]
+}
+
+
+@enduml
+-----

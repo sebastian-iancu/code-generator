@@ -1,0 +1,28 @@
+[plantuml,DV_PERIODIC_TIME_SPECIFICATION,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class DV_PERIODIC_TIME_SPECIFICATION {
+  + period() : DV_DURATION [1]
+  + calendar_alignment() : String [1]
+  + event_alignment() : String [1]
+  + institution_specified() : Boolean [1]
+}
+
+abstract class DV_TIME_SPECIFICATION  #whitesmoke;line:gray;line.dotted;text:gray {
+  + value : DV_PARSABLE [1]
+  + {abstract} calendar_alignment() : String [1]
+  + {abstract} event_alignment() : String [1]
+  + {abstract} institution_specified() : Boolean [1]
+}
+
+abstract class DATA_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+DATA_VALUE <|-- DV_TIME_SPECIFICATION
+
+DV_TIME_SPECIFICATION <|-- DV_PERIODIC_TIME_SPECIFICATION
+
+
+@enduml
+-----

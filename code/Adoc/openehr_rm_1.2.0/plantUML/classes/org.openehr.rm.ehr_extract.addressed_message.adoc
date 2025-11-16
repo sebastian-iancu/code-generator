@@ -1,0 +1,15 @@
+[plantuml,ADDRESSED_MESSAGE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class ADDRESSED_MESSAGE {
+  + sender : String [1]
+  + sender_reference : String [1]
+  + addressees : List<String> [1..*]
+  + urgency : Integer [0..1]
+  + message : MESSAGE [1]
+}
+
+
+@enduml
+-----

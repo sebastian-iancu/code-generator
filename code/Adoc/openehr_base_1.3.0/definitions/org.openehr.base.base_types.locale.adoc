@@ -1,5 +1,3 @@
-=== Locale Interface
-
 [cols="^1,3,5"]
 |===
 h|*Interface*

@@ -1,0 +1,12 @@
+[plantuml,EL_TYPE_DEF,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class EL_TYPE_DEF {
+  + type_name : String [1]
+  + type_anchor : Any [1]
+}
+
+
+@enduml
+-----

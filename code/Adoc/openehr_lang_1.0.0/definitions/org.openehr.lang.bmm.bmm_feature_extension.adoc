@@ -1,5 +1,3 @@
-=== BMM_FEATURE_EXTENSION Class
-
 [cols="^1,3,5"]
 |===
 h|*Class*

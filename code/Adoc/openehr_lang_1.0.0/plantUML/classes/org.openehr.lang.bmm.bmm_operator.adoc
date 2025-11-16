@@ -1,0 +1,13 @@
+[plantuml,BMM_OPERATOR,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class BMM_OPERATOR {
+  + position : BMM_OPERATOR_POSITION [1]
+  + symbols : List<String> [1..*]
+  + name : String [1]
+}
+
+
+@enduml
+-----

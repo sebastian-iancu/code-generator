@@ -1,0 +1,13 @@
+[plantuml,REFERENCE_RANGE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class REFERENCE_RANGE <T> {
+  + meaning : DV_TEXT [1]
+  + range : DV_INTERVAL [1]
+  + is_in_range( v : DV_ORDERED [1] ) : Boolean [1]
+}
+
+
+@enduml
+-----

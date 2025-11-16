@@ -1,0 +1,77 @@
+[plantuml,types,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class EL_TYPE_DEF {
+  + type_name : String [1]
+  + type_anchor : Any [1]
+}
+
+class TYPE_DEF_BOOLEAN {
+  + type_name : String [1]
+  + type_anchor : Boolean [1]
+}
+
+class TYPE_DEF_DATE {
+  + type_name : String [1]
+  + type_anchor : IDate [1]
+}
+
+class TYPE_DEF_DATE_TIME {
+  + type_name : String [1]
+  + type_anchor : IDate_time [1]
+}
+
+class TYPE_DEF_DURATION {
+  + type_name : String [1]
+  + type_anchor : IDuration [1]
+}
+
+class TYPE_DEF_INTEGER {
+  + type_name : String [1]
+  + type_anchor : Integer [1]
+}
+
+class TYPE_DEF_OBJECT_REF {
+  + type_name : String [1]
+}
+
+class TYPE_DEF_REAL {
+  + type_name : String [1]
+  + type_anchor : Real [1]
+}
+
+class TYPE_DEF_STRING {
+  + type_name : String [1]
+  + type_anchor : String [1]
+}
+
+class TYPE_DEF_TERMINOLOGY_CODE {
+  + type_name : String [1]
+  + type_anchor : Terminology_code [1]
+}
+
+class TYPE_DEF_TIME {
+  + type_name : String [1]
+  + type_anchor : ITime [1]
+}
+
+class TYPE_DEF_URI {
+  + type_name : String [1]
+  + type_anchor : Integer [1]
+}
+
+EXPR_TYPE_DEF <|-- TYPE_DEF_BOOLEAN
+EXPR_TYPE_DEF <|-- TYPE_DEF_DATE
+EXPR_TYPE_DEF <|-- TYPE_DEF_DATE_TIME
+EXPR_TYPE_DEF <|-- TYPE_DEF_DURATION
+EXPR_TYPE_DEF <|-- TYPE_DEF_INTEGER
+EXPR_TYPE_DEF <|-- TYPE_DEF_OBJECT_REF
+EXPR_TYPE_DEF <|-- TYPE_DEF_REAL
+EXPR_TYPE_DEF <|-- TYPE_DEF_STRING
+EXPR_TYPE_DEF <|-- TYPE_DEF_TERMINOLOGY_CODE
+EXPR_TYPE_DEF <|-- TYPE_DEF_TIME
+EXPR_TYPE_DEF <|-- TYPE_DEF_URI
+
+@enduml
+-----

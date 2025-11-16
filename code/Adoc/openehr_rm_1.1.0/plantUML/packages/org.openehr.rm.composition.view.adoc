@@ -1,0 +1,34 @@
+[plantuml,view,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class VIEW_ENTRY {
+}
+
+class VIEW_SECTION {
+  + items : List<VIEW_ITEM> [*]
+}
+
+class CITATION <L> {
+  + source_type : String [0..1]
+  + source_ref : LOCATABLE_REF [1]
+  + source_parent_ref : LOCATABLE_REF [1]
+  + resolved : L [1]
+}
+
+abstract class VIEW_ITEM {
+  + meta_data : CLUSTER [0..1]
+}
+
+enum VIEW_STATUS {
+  active 
+  inactive 
+}
+
+VIEW_ITEM <|-- VIEW_ENTRY
+VIEW_ITEM <|-- VIEW_SECTION
+VIEW_ENTRY <|-- CITATION
+CONTENT_ITEM <|-- VIEW_ITEM
+
+@enduml
+-----

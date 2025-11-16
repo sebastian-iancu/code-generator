@@ -1,0 +1,23 @@
+[plantuml,EL_BOOLEAN_EXPRESSION,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class EL_BOOLEAN_EXPRESSION {
+}
+
+abstract class EL_CONSTRAINED  #whitesmoke;line:gray;line.dotted;text:gray {
+  + base_expression : EL_EXPRESSION [1]
+}
+
+abstract class EL_EXPRESSION  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} eval_type() : BMM_TYPE [1]
+  + is_boolean() : Boolean [1]
+}
+
+EL_EXPRESSION <|-- EL_CONSTRAINED
+
+EL_CONSTRAINED <|-- EL_BOOLEAN_EXPRESSION
+
+
+@enduml
+-----

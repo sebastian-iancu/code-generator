@@ -1,0 +1,32 @@
+[plantuml,Iso8601_timezone,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class Iso8601_timezone {
+  + hour() : Integer [1]
+  + minute() : Integer [1]
+  + sign() : Integer [1]
+  + minute_unknown() : Boolean [1]
+  + is_partial() : Boolean [1]
+  + is_extended() : Boolean [1]
+  + is_gmt() : Boolean [1]
+  + as_string() : String [1]
+}
+
+abstract class Iso8601_type  #whitesmoke;line:gray;line.dotted;text:gray {
+  + value : String [1]
+  + {abstract} is_partial() : Boolean [1]
+  + {abstract} is_extended() : Boolean [1]
+}
+
+abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+}
+
+Ordered <|-- Iso8601_type
+
+Iso8601_type <|-- Iso8601_timezone
+
+
+@enduml
+-----

@@ -1,0 +1,58 @@
+[plantuml,ITEM_TABLE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class ITEM_TABLE {
+  + rows : List<CLUSTER> [*]
+  + row_count() : Integer [1]
+  + column_count() : Integer [1]
+  + row_names() : List<DV_TEXT> [*]
+  + column_names() : List<DV_TEXT> [*]
+  + ith_row( i : Integer [1] ) : CLUSTER [1]
+  + has_row_with_name( a_key : String [1] ) : Boolean [1]
+  + has_column_with_name( a_key : String [1] ) : Boolean [1]
+  + named_row( a_key : String [1] ) : CLUSTER [1]
+  + has_row_with_key( keys : List<String> [0..1] ) : Boolean [1]
+  + row_with_key( keys : List<String> [0..1] ) : CLUSTER [1]
+  + element_at_cell_ij( i : Any [1], j : Integer [1] ) : ELEMENT [1]
+  + as_hierarchy() : CLUSTER [1]
+}
+
+abstract class ITEM_STRUCTURE  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+abstract class DATA_STRUCTURE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + as_hierarchy() : ITEM [1]
+}
+
+abstract class LOCATABLE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + name : DV_TEXT [1]
+  + archetype_node_id : String [1]
+  + uid : UID_BASED_ID [0..1]
+  + links : List<LINK> [*]
+  + archetype_details : ARCHETYPED [0..1]
+  + feeder_audit : FEEDER_AUDIT [0..1]
+  + concept() : DV_TEXT [1]
+  + is_archetype_root() : Boolean [1]
+}
+
+abstract class PATHABLE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + parent() : PATHABLE [1]
+  + item_at_path( a_path : String [1] ) : Any [1]
+  + items_at_path( a_path : String [1] ) : List<Any> [*]
+  + path_exists( a_path : String [1] ) : Boolean [1]
+  + path_unique( a_path : String [1] ) : Boolean [1]
+  + path_of_item( a_loc : PATHABLE [1] ) : String [1]
+}
+
+PATHABLE <|-- LOCATABLE
+
+LOCATABLE <|-- DATA_STRUCTURE
+
+DATA_STRUCTURE <|-- ITEM_STRUCTURE
+
+ITEM_STRUCTURE <|-- ITEM_TABLE
+
+
+@enduml
+-----

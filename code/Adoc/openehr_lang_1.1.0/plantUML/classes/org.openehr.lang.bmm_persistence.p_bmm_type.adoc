@@ -1,0 +1,13 @@
+[plantuml,P_BMM_TYPE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class P_BMM_TYPE {
+  + bmm_type : BMM_TYPE [0..1]
+  + {abstract} create_bmm_type( a_schema : BMM_MODEL [1], a_class_def : BMM_CLASS [1] ) : void [1]
+  + {abstract} as_type_string() : String [1]
+}
+
+
+@enduml
+-----

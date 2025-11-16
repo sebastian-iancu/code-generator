@@ -1,0 +1,23 @@
+[plantuml,rules,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class EXPR_ARCHETYPE_ID_CONSTRAINT {
+  + item : C_STRING [1]
+}
+
+class EXPR_ARCHETYPE_REF {
+  + path : String [1]
+  + item : ARCHETYPE_CONSTRAINT [1]
+}
+
+class EXPR_CONSTRAINT {
+  + item : C_PRIMITIVE_OBJECT [1]
+}
+
+EXPR_CONSTRAINT <|-- EXPR_ARCHETYPE_ID_CONSTRAINT
+EXPR_VALUE_REF <|-- EXPR_ARCHETYPE_REF
+EXPR_LEAF <|-- EXPR_CONSTRAINT
+
+@enduml
+-----

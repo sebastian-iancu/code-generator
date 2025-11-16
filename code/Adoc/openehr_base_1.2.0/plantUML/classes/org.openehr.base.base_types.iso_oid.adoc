@@ -1,0 +1,16 @@
+[plantuml,ISO_OID,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class ISO_OID {
+}
+
+abstract class UID  #whitesmoke;line:gray;line.dotted;text:gray {
+  + value : String [1]
+}
+
+UID <|-- ISO_OID
+
+
+@enduml
+-----

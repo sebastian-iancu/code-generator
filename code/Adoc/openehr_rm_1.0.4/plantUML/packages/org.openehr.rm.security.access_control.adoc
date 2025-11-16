@@ -1,0 +1,10 @@
+[plantuml,access_control,format=svg,svg-type="inline"]
+-----
+@startuml
+
+abstract class ACCESS_CONTROL_SETTINGS {
+}
+
+
+@enduml
+-----

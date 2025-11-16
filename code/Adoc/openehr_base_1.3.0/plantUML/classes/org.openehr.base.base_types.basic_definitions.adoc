@@ -1,0 +1,10 @@
+[plantuml,BASIC_DEFINITIONS,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class BASIC_DEFINITIONS {
+}
+
+
+@enduml
+-----

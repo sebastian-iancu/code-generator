@@ -1,0 +1,11 @@
+[plantuml,Locale,format=svg,svg-type="inline"]
+-----
+@startuml
+
+interface Locale {
+  + primary_language() : Terminology_code [1]
+}
+
+
+@enduml
+-----

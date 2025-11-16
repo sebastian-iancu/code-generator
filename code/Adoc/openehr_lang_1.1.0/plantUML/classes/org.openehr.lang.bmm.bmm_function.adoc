@@ -1,0 +1,50 @@
+[plantuml,BMM_FUNCTION,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class BMM_FUNCTION {
+  + operator_definition : BMM_OPERATOR [0..1]
+  + result : BMM_RESULT [1]
+}
+
+abstract class BMM_ROUTINE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + parameters : List<BMM_PARAMETER> [*]
+  + locals : List<BMM_LOCAL> [*]
+  + pre_conditions : List<BMM_ASSERTION> [*]
+  + post_conditions : List<BMM_ASSERTION> [*]
+  + body : BMM_ROUTINE_BODY [0..1]
+  + arity() : Integer [1]
+  + signature() :  [1]
+}
+
+abstract class BMM_CLASS_FEATURE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + scope : BMM_CLASS [1]
+  + visibility : BMM_VISIBILITY [0..1]
+  + feature_extensions : List<BMM_FEATURE_EXTENSION> [*]
+  + group : BMM_FEATURE_GROUP [1]
+}
+
+abstract class BMM_CLASS_ENTITY  #whitesmoke;line:gray;line.dotted;text:gray {
+  + is_synthesised_generic : Boolean [0..1]
+  + {abstract} signature() : BMM_SIGNATURE [1]
+}
+
+abstract class BMM_DECLARATION  #whitesmoke;line:gray;line.dotted;text:gray {
+  + name : String [1]
+  + documentation : Hash<String,Any> [0..1]
+  + scope : BMM_DECLARATION [1]
+  + extensions : Hash<String,Any> [0..1]
+  + is_root_scope() : Boolean [1]
+}
+
+BMM_DECLARATION <|-- BMM_CLASS_ENTITY
+
+BMM_CLASS_ENTITY <|-- BMM_CLASS_FEATURE
+
+BMM_CLASS_FEATURE <|-- BMM_ROUTINE
+
+BMM_ROUTINE <|-- BMM_FUNCTION
+
+
+@enduml
+-----

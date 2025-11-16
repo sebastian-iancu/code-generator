@@ -1,0 +1,57 @@
+[plantuml,date_time,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class DV_DURATION {
+  + value : String [1]
+  + is_strictly_comparable_to( other : DV_ORDERED [1] ) : Boolean [1]
+}
+
+abstract class DV_TEMPORAL {
+  + accuracy : DV_DURATION [0..1]
+  + diff( other : DV_TEMPORAL [1] ) : DV_DURATION [1]
+}
+
+class DV_DATE {
+  + value : String [1]
+  + magnitude() : Integer [1]
+  + is_strictly_comparable_to( other : DV_ORDERED [1] ) : Boolean [1]
+  + infix <( other_quantity : DV_ORDERED [1] ) : Boolean [1]
+  + add( a_diff : DV_AMOUNT [1] ) : DV_ABSOLUTE_QUANTITY [1]
+  + subtract( a_diif : DV_AMOUNT [1] ) : DV_ABSOLUTE_QUANTITY [1]
+  + diff( other : DV_DATE [1] ) : DV_DURATION [1]
+}
+
+class DV_TIME {
+  + value : String [1]
+  + magnitude() : Real [1]
+  + is_strictly_comparable_to( other : DV_ORDERED [1] ) : Boolean [1]
+  + add( a_diff : DV_AMOUNT [1] ) : DV_ABSOLUTE_QUANTITY [1]
+  + subtract( a_diif : DV_AMOUNT [1] ) : DV_ABSOLUTE_QUANTITY [1]
+  + operator=( source : DV_TIME [1] ) : DV_TIME [1]
+  + diff( other : DV_TIME [1] ) : DV_DURATION [1]
+}
+
+class DV_DATE_TIME {
+  + value : String [1]
+  + magnitude() : Double [1]
+  + is_strictly_comparable_to( other : DV_ORDERED [1] ) : Boolean [1]
+  + add( a_diff : DV_AMOUNT [1] ) : DV_ABSOLUTE_QUANTITY [1]
+  + subtract( a_diif : DV_AMOUNT [1] ) : DV_ABSOLUTE_QUANTITY [1]
+  + diff( other : DV_ABSOLUTE_QUANTITY [1] ) : DV_AMOUNT [1]
+  + operator=( source : DV_DATE_TIME [1] ) : DV_DATE_TIME [1]
+  + as_string() : String [1]
+}
+
+DV_AMOUNT <|-- DV_DURATION
+Iso8601_duration <|-- DV_DURATION
+DV_ABSOLUTE_QUANTITY <|-- DV_TEMPORAL
+DV_TEMPORAL <|-- DV_DATE
+Iso8601_date <|-- DV_DATE
+DV_TEMPORAL <|-- DV_TIME
+Iso8601_time <|-- DV_TIME
+DV_TEMPORAL <|-- DV_DATE_TIME
+Iso8601_date_time <|-- DV_DATE_TIME
+
+@enduml
+-----

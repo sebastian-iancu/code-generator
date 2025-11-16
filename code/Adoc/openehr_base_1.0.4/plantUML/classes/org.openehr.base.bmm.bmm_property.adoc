@@ -1,0 +1,30 @@
+[plantuml,BMM_PROPERTY,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class BMM_PROPERTY <T> {
+  + name : String [1]
+  + is_mandatory : Boolean [0..1]
+  + is_computed : Boolean [0..1]
+  + type : T [1]
+  + is_im_runtime : Boolean [0..1]
+  + is_im_infrastructure : Boolean [0..1]
+  + is_synthesised_generic : Boolean [0..1]
+  + existence() : Multiplicity_interval [1]
+  + display_name() : String [1]
+}
+
+abstract class BMM_MODEL_ELEMENT  #whitesmoke;line:gray;line.dotted;text:gray {
+  + documentation : String [0..1]
+}
+
+class BMM_DEFINITIONS  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+BMM_DEFINITIONS <|-- BMM_MODEL_ELEMENT
+
+BMM_MODEL_ELEMENT <|-- BMM_PROPERTY
+
+
+@enduml
+-----

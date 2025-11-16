@@ -1,0 +1,12 @@
+[plantuml,VISIBILITY_TYPE,format=svg,svg-type="inline"]
+-----
+@startuml
+
+enum VISIBILITY_TYPE {
+  hide 
+  show 
+}
+
+
+@enduml
+-----

@@ -1,0 +1,10 @@
+[plantuml,Uri,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class Uri {
+}
+
+
+@enduml
+-----
