@@ -1,24 +1,22 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.expression.EL_ATTACHED
-title EL_ATTACHED Class
 
 class EL_ATTACHED {
 }
 
-abstract class EL_PREDICATE {
-  + operand : EL_INSTANCE_REF [1..1]
-  + eval_type() : BMM_SIMPLE_TYPE [0..1]
+abstract class EL_PREDICATE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + operand : EL_INSTANCE_REF [1]
+  + eval_type() : BMM_SIMPLE_TYPE [1]
 }
 
-abstract class EL_TERMINAL {
+abstract class EL_TERMINAL  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
-abstract class EL_SIMPLE {
+abstract class EL_SIMPLE  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
-abstract class EL_EXPRESSION {
-  + {abstract} eval_type() : BMM_TYPE [0..1]
-  + is_boolean() : Boolean [0..1]
+abstract class EL_EXPRESSION  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} eval_type() : BMM_TYPE [1]
+  + is_boolean() : Boolean [1]
 }
 
 EL_EXPRESSION <|-- EL_SIMPLE

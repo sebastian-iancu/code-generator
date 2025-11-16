@@ -1,121 +1,119 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm_persistence
-title org.openehr.lang.bmm_persistence Package
 
 class P_BMM_CLASS {
-  + name : String [1..1]
-  + ancestors : List<String> [0..*]
+  + name : String [1]
+  + ancestors : List<String> [*]
   + properties : Hash<String,P_BMM_PROPERTY> [0..1]
   + is_abstract : Boolean [0..1]
   + is_override : Boolean [0..1]
   + generic_parameter_defs : Hash<String,P_BMM_GENERIC_PARAMETER> [0..1]
-  + source_schema_id : String [1..1]
+  + source_schema_id : String [1]
   + bmm_class : BMM_CLASS [0..1]
-  + uid : Integer [1..1]
-  + is_generic() : Boolean [0..1]
-  + create_bmm_class() : void [0..1]
-  + populate_bmm_class(BMM_MODEL a_bmm_schema) : void [0..1]
+  + uid : Integer [1]
+  + is_generic() : Boolean [1]
+  + create_bmm_class() : void [1]
+  + populate_bmm_class( a_bmm_schema : BMM_MODEL [1] ) : void [1]
 }
 
-class P_BMM_ENUMERATION <<T>> {
-  + item_names : List<String> [0..*]
-  + item_values : List<Any> [0..*]
+class P_BMM_ENUMERATION <T> {
+  + item_names : List<String> [*]
+  + item_values : List<Any> [*]
   + bmm_class : BMM_ENUMERATION [0..1]
 }
 
 class P_BMM_SCHEMA {
-  + primitive_types : List<P_BMM_CLASS> [0..*]
-  + class_definitions : List<P_BMM_CLASS> [0..*]
+  + primitive_types : List<P_BMM_CLASS> [*]
+  + class_definitions : List<P_BMM_CLASS> [*]
   + includes : Hash<String,BMM_INCLUDE_SPEC> [0..1]
-  + validate_created() : void [0..1]
-  + load_finalise() : void [0..1]
-  + merge(P_BMM_SCHEMA other) : void [0..1]
-  + validate() : void [0..1]
-  + create_bmm_model() : void [0..1]
-  + canonical_packages() : P_BMM_PACKAGE [0..1]
+  + validate_created() : void [1]
+  + load_finalise() : void [1]
+  + merge( other : P_BMM_SCHEMA [1] ) : void [1]
+  + validate() : void [1]
+  + create_bmm_model() : void [1]
+  + canonical_packages() : P_BMM_PACKAGE [1]
 }
 
 abstract class P_BMM_PROPERTY {
-  + name : String [1..1]
+  + name : String [1]
   + is_mandatory : Boolean [0..1]
   + is_computed : Boolean [0..1]
   + is_im_infrastructure : Boolean [0..1]
   + is_im_runtime : Boolean [0..1]
   + type_def : P_BMM_TYPE [0..1]
   + bmm_property : BMM_PROPERTY<BMM_TYPE> [0..1]
-  + create_bmm_property(BMM_MODEL a_bmm_schema, BMM_CLASS a_class_def) : void [0..1]
+  + create_bmm_property( a_bmm_schema : BMM_MODEL [1], a_class_def : BMM_CLASS [1] ) : void [1]
 }
 
 class P_BMM_GENERIC_PARAMETER {
-  + name : String [1..1]
+  + name : String [1]
   + conforms_to_type : String [0..1]
   + bmm_generic_parameter : BMM_PARAMETER_TYPE [0..1]
-  + create_bmm_generic_parameter(BMM_MODEL a_bmm_schema) : void [0..1]
+  + create_bmm_generic_parameter( a_bmm_schema : BMM_MODEL [1] ) : void [1]
 }
 
 abstract class P_BMM_TYPE {
   + bmm_type : BMM_TYPE [0..1]
-  + {abstract} create_bmm_type(BMM_MODEL a_schema, BMM_CLASS a_class_def) : void [0..1]
-  + {abstract} as_type_string() : String [0..1]
+  + {abstract} create_bmm_type( a_schema : BMM_MODEL [1], a_class_def : BMM_CLASS [1] ) : void [1]
+  + {abstract} as_type_string() : String [1]
 }
 
 class P_BMM_CONTAINER_TYPE {
-  + container_type : String [1..1]
+  + container_type : String [1]
   + type_def : P_BMM_BASE_TYPE [0..1]
   + type : String [0..1]
   + bmm_type : BMM_CONTAINER_TYPE [0..1]
-  + type_ref() : P_BMM_BASE_TYPE [0..1]
+  + type_ref() : P_BMM_BASE_TYPE [1]
 }
 
 class P_BMM_SIMPLE_TYPE {
-  + type : String [1..1]
+  + type : String [1]
   + bmm_type : BMM_SIMPLE_TYPE [0..1]
 }
 
 class P_BMM_OPEN_TYPE {
-  + type : String [1..1]
+  + type : String [1]
   + bmm_type : Any [0..1]
 }
 
 class P_BMM_GENERIC_TYPE {
-  + root_type : String [1..1]
+  + root_type : String [1]
   + generic_parameter_defs : List<P_BMM_TYPE> [1..*]
-  + generic_parameters : List<String> [0..*]
+  + generic_parameters : List<String> [*]
   + bmm_type : BMM_GENERIC_TYPE [0..1]
-  + generic_parameter_refs() : List<P_BMM_TYPE> [1..*]
+  + generic_parameter_refs() : List<P_BMM_TYPE> [*]
 }
 
 class P_BMM_PACKAGE {
-  + name : String [1..1]
-  + classes : List<String> [0..*]
+  + name : String [1]
+  + classes : List<String> [*]
   + bmm_package_definition : BMM_PACKAGE [0..1]
-  + merge(P_BMM_PACKAGE other) : void [0..1]
-  + create_bmm_package_definition() : void [0..1]
+  + merge( other : P_BMM_PACKAGE [1] ) : void [1]
+  + create_bmm_package_definition() : void [1]
 }
 
 class P_BMM_PACKAGE_CONTAINER {
-  + packages : Hash<String,P_BMM_PACKAGE> [1..1]
+  + packages : Hash<String,P_BMM_PACKAGE> [1]
 }
 
 class P_BMM_CONTAINER_PROPERTY {
   + cardinality : Interval<Integer> [0..1]
   + type_def : P_BMM_CONTAINER_TYPE [0..1]
   + bmm_property : BMM_CONTAINER_PROPERTY [0..1]
-  + create_bmm_property(BMM_MODEL a_bmm_schema, BMM_CLASS a_class_def) : void [0..1]
+  + create_bmm_property( a_bmm_schema : BMM_MODEL [1], a_class_def : BMM_CLASS [1] ) : void [1]
 }
 
 class P_BMM_SINGLE_PROPERTY {
   + type : String [0..1]
   + type_ref : P_BMM_SIMPLE_TYPE [0..1]
   + bmm_property : BMM_PROPERTY<BMM_SIMPLE_TYPE> [0..1]
-  + type_def() : P_BMM_SIMPLE_TYPE [0..1]
+  + type_def() : P_BMM_SIMPLE_TYPE [1]
 }
 
 class P_BMM_SINGLE_PROPERTY_OPEN {
   + type_ref : P_BMM_OPEN_TYPE [0..1]
   + type : String [0..1]
   + bmm_property : BMM_PROPERTY<BMM_OPEN_TYPE> [0..1]
-  + type_def() : P_BMM_OPEN_TYPE [0..1]
+  + type_def() : P_BMM_OPEN_TYPE [1]
 }
 
 class P_BMM_GENERIC_PROPERTY {
@@ -148,7 +146,7 @@ class P_BMM_INDEXED_CONTAINER_PROPERTY {
 }
 
 class P_BMM_INDEXED_CONTAINER_TYPE {
-  + index_type : String [1..1]
+  + index_type : String [1]
   + bmm_type : BMM_INDEXED_CONTAINER_TYPE [0..1]
 }
 

@@ -1,13 +1,11 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.data_types.basic.DV_STATE
-title DV_STATE Class
 
 class DV_STATE {
-  + value : DV_CODED_TEXT [1..1]
-  + is_terminal : Boolean [1..1]
+  + value : DV_CODED_TEXT [1]
+  + is_terminal : Boolean [1]
 }
 
-abstract class DATA_VALUE {
+abstract class DATA_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 DATA_VALUE <|-- DV_STATE

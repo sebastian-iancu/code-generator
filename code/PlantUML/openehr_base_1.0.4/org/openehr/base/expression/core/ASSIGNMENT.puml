@@ -1,13 +1,11 @@
 @startuml
-' PlantUML diagram for org.openehr.base.expression.core.ASSIGNMENT
-title ASSIGNMENT Class
 
 class ASSIGNMENT {
-  + target : VARIABLE_DECLARATION [1..1]
-  + source : EXPR_VALUE [1..1]
+  + target : VARIABLE_DECLARATION [1]
+  + source : EXPR_VALUE [1]
 }
 
-abstract class STATEMENT {
+abstract class STATEMENT  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 STATEMENT <|-- ASSIGNMENT

@@ -1,36 +1,34 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.core.feature.BMM_CONSTANT
-title BMM_CONSTANT Class
 
 class BMM_CONSTANT {
-  + generator : BMM_LITERAL_VALUE [1..1]
+  + generator : BMM_LITERAL_VALUE [1]
 }
 
-abstract class BMM_STATIC {
+abstract class BMM_STATIC  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
-abstract class BMM_INSTANTIABLE_FEATURE {
+abstract class BMM_INSTANTIABLE_FEATURE  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
-abstract class BMM_FEATURE {
+abstract class BMM_FEATURE  #whitesmoke;line:gray;line.dotted;text:gray {
   + is_synthesised_generic : Boolean [0..1]
-  + feature_extensions : List<BMM_FEATURE_EXTENSION> [0..*]
-  + group : BMM_FEATURE_GROUP [1..1]
-  + scope : BMM_CLASS [1..1]
+  + feature_extensions : List<BMM_FEATURE_EXTENSION> [*]
+  + group : BMM_FEATURE_GROUP [1]
+  + scope : BMM_CLASS [1]
 }
 
-abstract class BMM_FORMAL_ELEMENT {
-  + type : BMM_TYPE [1..1]
+abstract class BMM_FORMAL_ELEMENT  #whitesmoke;line:gray;line.dotted;text:gray {
+  + type : BMM_TYPE [1]
   + is_nullable : Boolean [0..1]
-  + {abstract} signature() : BMM_SIGNATURE [0..1]
-  + is_boolean() : Boolean [0..1]
+  + {abstract} signature() : BMM_SIGNATURE [1]
+  + is_boolean() : Boolean [1]
 }
 
-abstract class BMM_MODEL_ELEMENT {
+abstract class BMM_MODEL_ELEMENT  #whitesmoke;line:gray;line.dotted;text:gray {
   + documentation : String [0..1]
 }
 
-class BMM_DEFINITIONS {
+class BMM_DEFINITIONS  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 BMM_DEFINITIONS <|-- BMM_MODEL_ELEMENT

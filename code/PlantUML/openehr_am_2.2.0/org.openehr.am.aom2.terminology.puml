@@ -1,16 +1,14 @@
 @startuml
-' PlantUML diagram for org.openehr.am.aom2.terminology
-title terminology Package
 
 class ARCHETYPE_TERM {
-  + code : String [1..1]
-  + text : String [1..1]
-  + description : String [1..1]
+  + code : String [1]
+  + text : String [1]
+  + description : String [1]
   + other_items : Hash<String,String> [0..1]
 }
 
 abstract class TERMINOLOGY_RELATION {
-  + id : String [1..1]
+  + id : String [1]
   + members : List<String> [1..*]
 }
 
@@ -18,27 +16,27 @@ class VALUE_SET {
 }
 
 class ARCHETYPE_TERMINOLOGY {
-  + is_differential : Boolean [1..1]
-  + original_language : String [1..1]
-  + concept_code : String [1..1]
-  + term_definitions : Hash<String,Hash<String,ARCHETYPE_TERM>> [1..1]
+  + is_differential : Boolean [1]
+  + original_language : String [1]
+  + concept_code : String [1]
+  + term_definitions : Hash<String,Hash<String,ARCHETYPE_TERM>> [1]
   + term_bindings : Hash<String,Hash<String,Uri>> [0..1]
-  + owner_archetype : ARCHETYPE [1..1]
+  + owner_archetype : ARCHETYPE [1]
   + value_sets : Hash<String,VALUE_SET> [0..1]
   + terminology_extracts : Hash<String,Hash<String,ARCHETYPE_TERM>> [0..1]
-  + specialisation_depth() : Integer [0..1]
-  + id_codes() : List<String> [0..*]
-  + value_codes() : List<String> [1..*]
-  + value_set_codes() : List<String> [1..*]
-  + has_language(String a_lang) : Boolean [0..1]
-  + has_terminology(String a_terminology_id) : Boolean [0..1]
-  + has_term_code(String a_code) : Boolean [0..1]
-  + term_definition(String a_lang, String a_code) : ARCHETYPE_TERM [0..1]
-  + term_binding(String a_terminology, String a_code) : Uri [0..1]
-  + terminologies_available() : List<String> [0..*]
-  + terminology_extract_term(String a_terminology_id, String a_code) : ARCHETYPE_TERM [0..1]
-  + has_terminology_extract(String a_terminology_id) : Boolean [0..1]
-  + languages_available() : List<String> [0..*]
+  + specialisation_depth() : Integer [1]
+  + id_codes() : List<String> [1..*]
+  + value_codes() : List<String> [*]
+  + value_set_codes() : List<String> [*]
+  + has_language( a_lang : String [1] ) : Boolean [1]
+  + has_terminology( a_terminology_id : String [1] ) : Boolean [1]
+  + has_term_code( a_code : String [1] ) : Boolean [1]
+  + term_definition( a_lang : String [1], a_code : String [1] ) : ARCHETYPE_TERM [1]
+  + term_binding( a_terminology : String [1], a_code : String [1] ) : Uri [1]
+  + terminologies_available() : List<String> [1..*]
+  + terminology_extract_term( a_terminology_id : String [1], a_code : String [1] ) : ARCHETYPE_TERM [1]
+  + has_terminology_extract( a_terminology_id : String [1] ) : Boolean [1]
+  + languages_available() : List<String> [1..*]
 }
 
 TERMINOLOGY_RELATION <|-- VALUE_SET

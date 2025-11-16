@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.beom.core.STATEMENT
-title STATEMENT Class
 
 abstract class STATEMENT {
 }

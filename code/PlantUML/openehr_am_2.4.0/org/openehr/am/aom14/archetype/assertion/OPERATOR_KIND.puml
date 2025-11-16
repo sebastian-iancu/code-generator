@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.am.aom14.archetype.assertion.OPERATOR_KIND
-title OPERATOR_KIND Enumeration
 
 enum OPERATOR_KIND {
   op_eq 

@@ -1,21 +1,19 @@
 @startuml
-' PlantUML diagram for org.openehr.base.foundation_types.interval.Proper_interval
-title Proper_interval Class
 
-class Proper_interval <<T>> {
+class Proper_interval <T> {
 }
 
-abstract class Interval <<T>> {
+abstract class Interval <T>  #whitesmoke;line:gray;line.dotted;text:gray {
   + lower : T [0..1]
-  + lower_unbounded : Boolean [1..1]
-  + upper_unbounded : Boolean [1..1]
-  + lower_included : Boolean [1..1]
-  + upper_included : Boolean [1..1]
-  + has(T e) : Boolean [0..1]
-  + intersects(Interval other) : Boolean [0..1]
-  + contains(Interval other) : Boolean [0..1]
-  + is_equal(Any other) : Boolean [0..1]
-  + {abstract} upper() : T [1..1]
+  + lower_unbounded : Boolean [1]
+  + upper_unbounded : Boolean [1]
+  + lower_included : Boolean [1]
+  + upper_included : Boolean [1]
+  + has( e : T [1] ) : Boolean [1]
+  + intersects( other : Interval [1] ) : Boolean [1]
+  + contains( other : Interval [1] ) : Boolean [1]
+  + is_equal( other : Any [1] ) : Boolean [1]
+  + {abstract} upper() : T [0..1]
 }
 
 Interval <|-- Proper_interval

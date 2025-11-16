@@ -1,24 +1,22 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.composition.EVENT_CONTEXT
-title EVENT_CONTEXT Class
 
 class EVENT_CONTEXT {
-  + start_time : DV_DATE_TIME [1..1]
+  + start_time : DV_DATE_TIME [1]
   + end_time : DV_DATE_TIME [0..1]
   + location : String [0..1]
-  + setting : DV_CODED_TEXT [1..1]
+  + setting : DV_CODED_TEXT [1]
   + other_context : ITEM_STRUCTURE [0..1]
   + health_care_facility : PARTY_IDENTIFIED [0..1]
-  + participations : List<PARTICIPATION> [0..*]
+  + participations : List<PARTICIPATION> [*]
 }
 
-abstract class PATHABLE {
-  + parent() : PATHABLE [0..1]
-  + item_at_path(String a_path) : Any [0..1]
-  + items_at_path(String a_path) : List<Any> [1..*]
-  + path_exists(String a_path) : Boolean [0..1]
-  + path_unique(String a_path) : Boolean [0..1]
-  + path_of_item(PATHABLE a_loc) : String [0..1]
+abstract class PATHABLE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + parent() : PATHABLE [1]
+  + item_at_path( a_path : String [1] ) : Any [1]
+  + items_at_path( a_path : String [1] ) : List<Any> [*]
+  + path_exists( a_path : String [1] ) : Boolean [1]
+  + path_unique( a_path : String [1] ) : Boolean [1]
+  + path_of_item( a_loc : PATHABLE [1] ) : String [1]
 }
 
 PATHABLE <|-- EVENT_CONTEXT

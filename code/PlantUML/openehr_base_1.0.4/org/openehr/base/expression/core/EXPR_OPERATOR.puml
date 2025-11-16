@@ -1,19 +1,17 @@
 @startuml
-' PlantUML diagram for org.openehr.base.expression.core.EXPR_OPERATOR
-title EXPR_OPERATOR Class
 
 abstract class EXPR_OPERATOR {
   + precedence_overridden : Boolean [0..1]
-  + operator_def : OPERATOR_DEF [1..1]
+  + operator_def : OPERATOR_DEF [1]
   + symbol : String [0..1]
 }
 
-abstract class EXPRESSION {
-  + {abstract} type() : EXPR_TYPE_DEF [0..1]
+abstract class EXPRESSION  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} type() : EXPR_TYPE_DEF [1]
 }
 
-abstract class EXPR_VALUE {
-  + {abstract} value() : Any [0..1]
+abstract class EXPR_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} value() : Any [1]
 }
 
 EXPR_VALUE <|-- EXPRESSION

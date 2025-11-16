@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.base.bmm.rm_access.BMM_SCHEMA_METADATA_KEY
-title BMM_SCHEMA_METADATA_KEY Enumeration
 
 enum BMM_SCHEMA_METADATA_KEY {
   bmm_version 

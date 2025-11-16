@@ -1,12 +1,10 @@
 @startuml
-' PlantUML diagram for org.openehr.base.foundation_types
-title org.openehr.base.foundation_types Package
 
 abstract class Any {
-  + {abstract} is_equal(Any other) : Boolean [0..1]
-  + infix =(Any other) : Boolean [0..1]
-  + instance_of(String a_type) : Any [0..1]
-  + type_of(Any an_object) : String [0..1]
+  + {abstract} is_equal( other : Any [1] ) : Boolean [1]
+  + infix =( other : Any [1] ) : Boolean [1]
+  + instance_of( a_type : String [1] ) : Any [1]
+  + type_of( an_object : Any [1] ) : String [1]
 }
 
 

@@ -1,30 +1,28 @@
 @startuml
-' PlantUML diagram for org.openehr.am.aom14.openehr_archetype_profile
-title openehr_archetype_profile Package
 
 class C_ORDINAL {
-  + list : List<ORDINAL> [0..*]
+  + list : List<ORDINAL> [*]
 }
 
 class C_CODED_TEXT {
-  + terminology : String [1..1]
+  + terminology : String [1]
   + code_list : List<String> [0..1]
   + reference : String [0..1]
 }
 
 class C_QUANTITY {
-  + property : String [1..1]
-  + list : List<C_QUANTITY_ITEM> [0..*]
+  + property : String [1]
+  + list : List<C_QUANTITY_ITEM> [*]
 }
 
 class C_QUANTITY_ITEM {
-  + magnitude : Interval<Real> [1..1]
+  + magnitude : Interval<Real> [1]
   + units : String [0..1]
 }
 
 class ORDINAL {
-  + symbol : CODE_PHRASE [1..1]
-  + value : Integer [1..1]
+  + symbol : CODE_PHRASE [1]
+  + value : Integer [1]
 }
 
 C_DOMAIN_TYPE <|-- C_ORDINAL

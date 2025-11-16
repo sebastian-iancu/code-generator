@@ -1,20 +1,18 @@
 @startuml
-' PlantUML diagram for org.openehr.base.bmm.rm_access.BMM_MODEL_ACCESS
-title BMM_MODEL_ACCESS Class
 
 class BMM_MODEL_ACCESS {
-  + schema_directories : List<String> [0..*]
-  + all_schemas : List<String> [0..*]
+  + schema_directories : List<String> [*]
+  + all_schemas : List<String> [*]
   + bmm_models : Hash<String,BMM_MODEL> [0..1]
-  + matching_bmm_models : List<String> [0..*]
-  + initialise_with_load_list(List<String> a_schema_dirs, List<String> a_schema_load_list) : void [0..1]
-  + initialise_all(List<String> a_schema_dirs) : void [0..1]
-  + reload_schemas() : void [0..1]
-  + bmm_model(String a_model_key) : BMM_MODEL [0..1]
-  + has_bmm_model(String a_model_key) : Boolean [0..1]
+  + matching_bmm_models : List<String> [*]
+  + initialise_with_load_list( a_schema_dirs : List<String> [1], a_schema_load_list : List<String> [0..1] ) : void [1]
+  + initialise_all( a_schema_dirs : List<String> [1] ) : void [1]
+  + reload_schemas() : void [1]
+  + bmm_model( a_model_key : String [1] ) : BMM_MODEL [1]
+  + has_bmm_model( a_model_key : String [1] ) : Boolean [1]
 }
 
-class BMM_DEFINITIONS {
+class BMM_DEFINITIONS  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 BMM_DEFINITIONS <|-- BMM_MODEL_ACCESS

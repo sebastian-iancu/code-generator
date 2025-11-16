@@ -1,14 +1,12 @@
 @startuml
-' PlantUML diagram for org.openehr.am.p_aom2.archetype.P_ARCHETYPE
-title P_ARCHETYPE Class
 
 abstract class P_ARCHETYPE {
   + parent_archetype_id : String [0..1]
-  + archetype_id : P_ARCHETYPE_HRID [1..1]
-  + is_differential : Boolean [1..1]
-  + definition : P_C_COMPLEX_OBJECT [1..1]
-  + terminology : P_ARCHETYPE_TERMINOLOGY [1..1]
-  + rules : List<STATEMENT> [0..*]
+  + archetype_id : P_ARCHETYPE_HRID [1]
+  + is_differential : Boolean [1]
+  + definition : P_C_COMPLEX_OBJECT [1]
+  + terminology : P_ARCHETYPE_TERMINOLOGY [1]
+  + rules : List<STATEMENT> [*]
 }
 
 

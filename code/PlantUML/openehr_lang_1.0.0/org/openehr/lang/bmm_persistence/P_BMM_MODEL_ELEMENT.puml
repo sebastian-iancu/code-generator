@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm_persistence.P_BMM_MODEL_ELEMENT
-title P_BMM_MODEL_ELEMENT Class
 
 abstract class P_BMM_MODEL_ELEMENT {
   + documentation : String [0..1]

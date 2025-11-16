@@ -1,23 +1,21 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.statement.BMM_DECLARATION
-title BMM_DECLARATION Class
 
 class BMM_DECLARATION {
-  + name : String [1..1]
-  + result : EL_WRITABLE_VARIABLE [1..1]
-  + type : BMM_TYPE [1..1]
+  + name : String [1]
+  + result : EL_WRITABLE_VARIABLE [1]
+  + type : BMM_TYPE [1]
 }
 
-abstract class BMM_SIMPLE_STATEMENT {
+abstract class BMM_SIMPLE_STATEMENT  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
-abstract class BMM_STATEMENT {
+abstract class BMM_STATEMENT  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
-abstract class BMM_STATEMENT_ITEM {
+abstract class BMM_STATEMENT_ITEM  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
-abstract class BMM_ROUTINE_BODY {
+abstract class BMM_ROUTINE_BODY  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 BMM_ROUTINE_BODY <|-- BMM_STATEMENT_ITEM

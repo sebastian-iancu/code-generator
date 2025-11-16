@@ -1,14 +1,12 @@
 @startuml
-' PlantUML diagram for org.openehr.am.aom14.archetype.constraint_model.CARDINALITY
-title CARDINALITY Class
 
 class CARDINALITY {
-  + interval : Interval<Integer> [1..1]
-  + is_ordered : Boolean [1..1]
-  + is_unique : Boolean [1..1]
-  + is_bag() : Boolean [0..1]
-  + is_list() : Boolean [0..1]
-  + is_set() : Boolean [0..1]
+  + interval : Interval<Integer> [1]
+  + is_ordered : Boolean [1]
+  + is_unique : Boolean [1]
+  + is_bag() : Boolean [1]
+  + is_list() : Boolean [1]
+  + is_set() : Boolean [1]
 }
 
 

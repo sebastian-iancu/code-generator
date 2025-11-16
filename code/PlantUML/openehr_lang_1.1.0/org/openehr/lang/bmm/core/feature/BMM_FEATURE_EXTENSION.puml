@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.core.feature.BMM_FEATURE_EXTENSION
-title BMM_FEATURE_EXTENSION Class
 
 abstract class BMM_FEATURE_EXTENSION {
 }

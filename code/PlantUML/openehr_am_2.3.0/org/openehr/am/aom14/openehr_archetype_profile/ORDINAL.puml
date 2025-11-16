@@ -1,10 +1,8 @@
 @startuml
-' PlantUML diagram for org.openehr.am.aom14.openehr_archetype_profile.ORDINAL
-title ORDINAL Class
 
 class ORDINAL {
-  + symbol : CODE_PHRASE [1..1]
-  + value : Integer [1..1]
+  + symbol : CODE_PHRASE [1]
+  + value : Integer [1]
 }
 
 

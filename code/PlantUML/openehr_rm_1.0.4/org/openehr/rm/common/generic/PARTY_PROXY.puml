@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.common.generic.PARTY_PROXY
-title PARTY_PROXY Class
 
 abstract class PARTY_PROXY {
   + external_ref : PARTY_REF [0..1]

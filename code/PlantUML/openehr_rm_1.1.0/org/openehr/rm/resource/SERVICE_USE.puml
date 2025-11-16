@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.resource.SERVICE_USE
-title SERVICE_USE Class
 
 class SERVICE_USE {
   + identifier : GENERIC_ID [0..1]
@@ -8,7 +6,7 @@ class SERVICE_USE {
   + duration : Iso8601_duration [0..1]
 }
 
-abstract class RESOURCE_USE {
+abstract class RESOURCE_USE  #whitesmoke;line:gray;line.dotted;text:gray {
   + cost_data : ITEM_STRUCTURE [0..1]
 }
 

@@ -1,13 +1,11 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.ehr_extract.sync_extract.SYNC_EXTRACT
-title SYNC_EXTRACT Class
 
 class SYNC_EXTRACT {
-  + specification : SYNC_EXTRACT_SPEC [1..1]
-  + items : List<X_CONTRIBUTION> [0..*]
+  + specification : SYNC_EXTRACT_SPEC [1]
+  + items : List<X_CONTRIBUTION> [*]
 }
 
-abstract class MESSAGE_CONTENT {
+abstract class MESSAGE_CONTENT  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 MESSAGE_CONTENT <|-- SYNC_EXTRACT

@@ -1,10 +1,8 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.support.measurement
-title measurement Package
 
 class MEASUREMENT_SERVICE {
-  + is_valid_units_string(String units) : Boolean [0..1]
-  + units_equivalent(String units1, String units2) : Boolean [0..1]
+  + is_valid_units_string( units : String [1] ) : Boolean [1]
+  + units_equivalent( units1 : String [1], units2 : String [1] ) : Boolean [1]
 }
 
 

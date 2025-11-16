@@ -1,11 +1,9 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.common.resource.RESOURCE_DESCRIPTION_ITEM
-title RESOURCE_DESCRIPTION_ITEM Class
 
 class RESOURCE_DESCRIPTION_ITEM {
-  + language : CODE_PHRASE [1..1]
-  + purpose : String [1..1]
-  + keywords : List<String> [0..*]
+  + language : CODE_PHRASE [1]
+  + purpose : String [1]
+  + keywords : List<String> [*]
   + use : String [0..1]
   + misuse : String [0..1]
   + copyright : String [0..1]

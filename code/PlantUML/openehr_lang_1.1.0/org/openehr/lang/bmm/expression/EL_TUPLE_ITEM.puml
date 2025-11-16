@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.expression.EL_TUPLE_ITEM
-title EL_TUPLE_ITEM Class
 
 class EL_TUPLE_ITEM {
   + item : EL_EXPRESSION [0..1]

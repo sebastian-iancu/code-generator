@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.am.aom14.archetype.primitive.C_DATE
-title C_DATE Class
 
 class C_DATE {
   + day_validity : VALIDITY_KIND [0..1]
@@ -10,11 +8,11 @@ class C_DATE {
   + assumed_value : Iso8601_date [0..1]
 }
 
-abstract class C_PRIMITIVE {
+abstract class C_PRIMITIVE  #whitesmoke;line:gray;line.dotted;text:gray {
   + assumed_value : Any [0..1]
-  + {abstract} default_value() : Any [0..1]
-  + {abstract} has_assumed_value() : Boolean [0..1]
-  + {abstract} valid_value(Any a_value) : Boolean [0..1]
+  + {abstract} default_value() : Any [1]
+  + {abstract} has_assumed_value() : Boolean [1]
+  + {abstract} valid_value( a_value : Any [1] ) : Boolean [1]
 }
 
 C_PRIMITIVE <|-- C_DATE

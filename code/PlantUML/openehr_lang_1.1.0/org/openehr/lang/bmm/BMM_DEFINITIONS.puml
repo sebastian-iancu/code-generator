@@ -1,14 +1,12 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.BMM_DEFINITIONS
-title BMM_DEFINITIONS Class
 
 class BMM_DEFINITIONS {
-  + Any_class() : BMM_SIMPLE_CLASS [0..1]
-  + Any_type() : BMM_SIMPLE_TYPE [0..1]
-  + create_schema_id(Any a_model_publisher, Any a_schema_name, String a_model_release) : String [0..1]
+  + Any_class() : BMM_SIMPLE_CLASS [1]
+  + Any_type() : BMM_SIMPLE_TYPE [1]
+  + create_schema_id( a_model_publisher : Any [1], a_schema_name : Any [1], a_model_release : String [1] ) : String [1]
 }
 
-class BASIC_DEFINITIONS {
+class BASIC_DEFINITIONS  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 BASIC_DEFINITIONS <|-- BMM_DEFINITIONS

@@ -1,12 +1,10 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.core.literal_value.BMM_LITERAL_VALUE
-title BMM_LITERAL_VALUE Class
 
-abstract class BMM_LITERAL_VALUE <<T>> {
-  + value_literal : String [1..1]
+abstract class BMM_LITERAL_VALUE <T> {
+  + value_literal : String [1]
   + value : Any [0..1]
   + syntax : String [0..1]
-  + type : T [1..1]
+  + type : T [1]
 }
 
 

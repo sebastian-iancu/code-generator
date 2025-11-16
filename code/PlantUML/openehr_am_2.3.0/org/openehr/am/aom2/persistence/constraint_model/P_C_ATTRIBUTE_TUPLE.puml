@@ -1,9 +1,7 @@
 @startuml
-' PlantUML diagram for org.openehr.am.aom2.persistence.constraint_model.P_C_ATTRIBUTE_TUPLE
-title P_C_ATTRIBUTE_TUPLE Class
 
 class P_C_ATTRIBUTE_TUPLE {
-  + members : List<String> [0..*]
+  + members : List<String> [*]
 }
 
 

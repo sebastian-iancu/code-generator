@@ -1,16 +1,14 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.expression.EL_TERMINAL
-title EL_TERMINAL Class
 
 abstract class EL_TERMINAL {
 }
 
-abstract class EL_SIMPLE {
+abstract class EL_SIMPLE  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
-abstract class EL_EXPRESSION {
-  + {abstract} eval_type() : BMM_TYPE [0..1]
-  + is_boolean() : Boolean [0..1]
+abstract class EL_EXPRESSION  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} eval_type() : BMM_TYPE [1]
+  + is_boolean() : Boolean [1]
 }
 
 EL_EXPRESSION <|-- EL_SIMPLE

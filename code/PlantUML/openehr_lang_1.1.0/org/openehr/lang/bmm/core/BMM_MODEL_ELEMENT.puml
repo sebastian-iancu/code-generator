@@ -1,13 +1,11 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.core.BMM_MODEL_ELEMENT
-title BMM_MODEL_ELEMENT Class
 
 abstract class BMM_MODEL_ELEMENT {
-  + name : String [1..1]
+  + name : String [1]
   + documentation : Hash<String,Any> [0..1]
-  + scope : BMM_MODEL_ELEMENT [1..1]
+  + scope : BMM_MODEL_ELEMENT [1]
   + extensions : Hash<String,Any> [0..1]
-  + is_root_scope() : Boolean [0..1]
+  + is_root_scope() : Boolean [1]
 }
 
 

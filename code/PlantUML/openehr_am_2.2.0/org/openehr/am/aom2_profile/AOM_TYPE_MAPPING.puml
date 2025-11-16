@@ -1,10 +1,8 @@
 @startuml
-' PlantUML diagram for org.openehr.am.aom2_profile.AOM_TYPE_MAPPING
-title AOM_TYPE_MAPPING Class
 
 class AOM_TYPE_MAPPING {
-  + source_class_name : String [1..1]
-  + target_class_name : String [1..1]
+  + source_class_name : String [1]
+  + target_class_name : String [1]
   + property_mappings : Hash<String,AOM_PROPERTY_MAPPING> [0..1]
 }
 

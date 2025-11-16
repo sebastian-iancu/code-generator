@@ -1,25 +1,23 @@
 @startuml
-' PlantUML diagram for org.openehr.base.resource
-title org.openehr.base.resource Package
 
 abstract class AUTHORED_RESOURCE {
-  + original_language : Terminology_code [1..1]
+  + original_language : Terminology_code [1]
   + is_controlled : Boolean [0..1]
   + description : RESOURCE_DESCRIPTION [0..1]
   + uid : UUID [0..1]
   + annotations : RESOURCE_ANNOTATIONS [0..1]
   + translations : Hash<String,TRANSLATION_DETAILS> [0..1]
-  + current_revision() : String [0..1]
-  + languages_available() : List<String> [0..*]
+  + current_revision() : String [1]
+  + languages_available() : List<String> [1..*]
 }
 
 class RESOURCE_DESCRIPTION {
-  + original_author : Hash<String,String> [1..1]
+  + original_author : Hash<String,String> [1]
   + original_namespace : String [0..1]
   + original_publisher : String [0..1]
-  + other_contributors : List<String> [0..*]
-  + lifecycle_state : Terminology_code [1..1]
-  + parent_resource : AUTHORED_RESOURCE [1..1]
+  + other_contributors : List<String> [*]
+  + lifecycle_state : Terminology_code [1]
+  + parent_resource : AUTHORED_RESOURCE [1]
   + custodian_namespace : String [0..1]
   + custodian_organisation : String [0..1]
   + copyright : String [0..1]
@@ -33,17 +31,17 @@ class RESOURCE_DESCRIPTION {
 }
 
 class TRANSLATION_DETAILS {
-  + language : Terminology_code [1..1]
-  + author : Hash<String,String> [1..1]
+  + language : Terminology_code [1]
+  + author : Hash<String,String> [1]
   + accreditaton : String [0..1]
   + other_details : Hash<String,String> [0..1]
   + version_last_translated : String [0..1]
 }
 
 class RESOURCE_DESCRIPTION_ITEM {
-  + language : Terminology_code [1..1]
-  + purpose : String [1..1]
-  + keywords : List<String> [0..*]
+  + language : Terminology_code [1]
+  + purpose : String [1]
+  + keywords : List<String> [*]
   + use : String [0..1]
   + misuse : String [0..1]
   + original_resource_uri : Hash<String,String> [0..1]
@@ -51,7 +49,7 @@ class RESOURCE_DESCRIPTION_ITEM {
 }
 
 class RESOURCE_ANNOTATIONS {
-  + documentation : Hash<String,Hash<String,Hash<String,String>>> [1..1]
+  + documentation : Hash<String,Hash<String,Hash<String,String>>> [1]
 }
 
 

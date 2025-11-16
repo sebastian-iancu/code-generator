@@ -1,36 +1,34 @@
 @startuml
-' PlantUML diagram for org.openehr.base.foundation_types.time.Iso8601_duration
-title Iso8601_duration Class
 
 class Iso8601_duration {
-  + is_extended() : Boolean [0..1]
-  + is_partial() : Boolean [0..1]
-  + years() : Integer [0..1]
-  + months() : Integer [0..1]
-  + days() : Integer [0..1]
-  + hours() : Integer [0..1]
-  + minutes() : Integer [0..1]
-  + seconds() : Integer [0..1]
-  + fractional_seconds() : Real [0..1]
-  + weeks() : Integer [0..1]
-  + is_decimal_sign_comma() : Boolean [0..1]
-  + to_seconds() : Real [0..1]
-  + as_string() : String [0..1]
-  + add(Iso8601_duration a_val) : Iso8601_duration [0..1]
-  + subtract(Iso8601_duration a_val) : Iso8601_duration [0..1]
-  + multiply(Real a_val) : Iso8601_duration [0..1]
-  + divide(Real a_val) : Iso8601_duration [0..1]
-  + negative() : Iso8601_duration [0..1]
+  + is_extended() : Boolean [1]
+  + is_partial() : Boolean [1]
+  + years() : Integer [1]
+  + months() : Integer [1]
+  + days() : Integer [1]
+  + hours() : Integer [1]
+  + minutes() : Integer [1]
+  + seconds() : Integer [1]
+  + fractional_seconds() : Real [1]
+  + weeks() : Integer [1]
+  + is_decimal_sign_comma() : Boolean [1]
+  + to_seconds() : Real [1]
+  + as_string() : String [1]
+  + add( a_val : Iso8601_duration [1] ) : Iso8601_duration [1]
+  + subtract( a_val : Iso8601_duration [1] ) : Iso8601_duration [1]
+  + multiply( a_val : Real [1] ) : Iso8601_duration [1]
+  + divide( a_val : Real [1] ) : Iso8601_duration [1]
+  + negative() : Iso8601_duration [1]
 }
 
-abstract class Iso8601_type {
-  + value : String [1..1]
-  + {abstract} is_partial() : Boolean [0..1]
-  + {abstract} is_extended() : Boolean [0..1]
+abstract class Iso8601_type  #whitesmoke;line:gray;line.dotted;text:gray {
+  + value : String [1]
+  + {abstract} is_partial() : Boolean [1]
+  + {abstract} is_extended() : Boolean [1]
 }
 
-abstract class Ordered {
-  + {abstract} infix <(Ordered other) : Boolean [0..1]
+abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
 }
 
 Ordered <|-- Iso8601_type

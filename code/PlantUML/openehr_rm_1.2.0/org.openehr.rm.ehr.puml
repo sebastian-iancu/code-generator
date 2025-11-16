@@ -1,16 +1,14 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.ehr
-title org.openehr.rm.ehr Package
 
 class EHR {
-  + system_id : HIER_OBJECT_ID [1..1]
-  + ehr_id : HIER_OBJECT_ID [1..1]
-  + contributions : List<OBJECT_REF> [0..*]
-  + ehr_status : OBJECT_REF [1..1]
-  + ehr_access : OBJECT_REF [1..1]
-  + compositions : List<OBJECT_REF> [0..*]
+  + system_id : HIER_OBJECT_ID [1]
+  + ehr_id : HIER_OBJECT_ID [1]
+  + contributions : List<OBJECT_REF> [*]
+  + ehr_status : OBJECT_REF [1]
+  + ehr_access : OBJECT_REF [1]
+  + compositions : List<OBJECT_REF> [*]
   + directory : OBJECT_REF [0..1]
-  + time_created : DV_DATE_TIME [1..1]
+  + time_created : DV_DATE_TIME [1]
 }
 
 class VERSIONED_EHR_ACCESS {
@@ -20,18 +18,18 @@ class VERSIONED_EHR_STATUS {
 }
 
 class VERSIONED_COMPOSITION {
-  + is_persistent() : Boolean [0..1]
+  + is_persistent() : Boolean [1]
 }
 
 class EHR_ACCESS {
   + settings : ACCESS_CONTROL_SETTINGS [0..1]
-  + scheme() : String [0..1]
+  + scheme() : String [1]
 }
 
 class EHR_STATUS {
-  + subject : PARTY_SELF [1..1]
-  + is_queryable : Boolean [1..1]
-  + is_modifiable : Boolean [1..1]
+  + subject : PARTY_SELF [1]
+  + is_queryable : Boolean [1]
+  + is_modifiable : Boolean [1]
   + other_details : ITEM_STRUCTURE [0..1]
 }
 

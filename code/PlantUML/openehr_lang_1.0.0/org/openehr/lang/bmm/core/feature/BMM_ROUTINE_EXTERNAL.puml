@@ -1,13 +1,11 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.core.feature.BMM_ROUTINE_EXTERNAL
-title BMM_ROUTINE_EXTERNAL Class
 
 class BMM_ROUTINE_EXTERNAL {
-  + meta_data : Hash<String,String> [1..1]
+  + meta_data : Hash<String,String> [1]
   + argument_mapping : Hash<String,String> [0..1]
 }
 
-abstract class BMM_ROUTINE_BODY {
+abstract class BMM_ROUTINE_BODY  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 BMM_ROUTINE_BODY <|-- BMM_ROUTINE_EXTERNAL

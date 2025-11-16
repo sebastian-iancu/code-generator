@@ -1,44 +1,42 @@
 @startuml
-' PlantUML diagram for org.openehr.base.foundation_types.time.Iso8601_type
-title Iso8601_type Class
 
 abstract class Iso8601_type {
-  + value : String [1..1]
-  + {abstract} is_partial() : Boolean [0..1]
-  + {abstract} is_extended() : Boolean [0..1]
+  + value : String [1]
+  + {abstract} is_partial() : Boolean [1]
+  + {abstract} is_extended() : Boolean [1]
 }
 
-abstract class Temporal {
+abstract class Temporal  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
-abstract class Ordered {
-  + {abstract} infix <(Ordered other) : Boolean [0..1]
+abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
 }
 
 Ordered <|-- Temporal
 
-class Time_Definitions {
-  + valid_year(Integer y) : Boolean [0..1]
-  + valid_month(Integer m) : Boolean [0..1]
-  + valid_day(Integer y, Integer m, Integer d) : Boolean [0..1]
-  + valid_hour(Integer h, Integer m, Integer s) : Boolean [0..1]
-  + valid_minute(Integer m) : Boolean [0..1]
-  + valid_second(Integer s) : Boolean [0..1]
-  + valid_fractional_second(Double fs) : Boolean [0..1]
+class Time_Definitions  #whitesmoke;line:gray;line.dotted;text:gray {
+  + valid_year( y : Integer [1] ) : Boolean [1]
+  + valid_month( m : Integer [1] ) : Boolean [1]
+  + valid_day( y : Integer [1], m : Integer [1], d : Integer [1] ) : Boolean [1]
+  + valid_hour( h : Integer [1], m : Integer [1], s : Integer [1] ) : Boolean [1]
+  + valid_minute( m : Integer [1] ) : Boolean [1]
+  + valid_second( s : Integer [1] ) : Boolean [1]
+  + valid_fractional_second( fs : Double [1] ) : Boolean [1]
 }
 
 Time_Definitions <|-- Temporal
 
 Temporal <|-- Iso8601_type
 
-class Time_Definitions {
-  + valid_year(Integer y) : Boolean [0..1]
-  + valid_month(Integer m) : Boolean [0..1]
-  + valid_day(Integer y, Integer m, Integer d) : Boolean [0..1]
-  + valid_hour(Integer h, Integer m, Integer s) : Boolean [0..1]
-  + valid_minute(Integer m) : Boolean [0..1]
-  + valid_second(Integer s) : Boolean [0..1]
-  + valid_fractional_second(Double fs) : Boolean [0..1]
+class Time_Definitions  #whitesmoke;line:gray;line.dotted;text:gray {
+  + valid_year( y : Integer [1] ) : Boolean [1]
+  + valid_month( m : Integer [1] ) : Boolean [1]
+  + valid_day( y : Integer [1], m : Integer [1], d : Integer [1] ) : Boolean [1]
+  + valid_hour( h : Integer [1], m : Integer [1], s : Integer [1] ) : Boolean [1]
+  + valid_minute( m : Integer [1] ) : Boolean [1]
+  + valid_second( s : Integer [1] ) : Boolean [1]
+  + valid_fractional_second( fs : Double [1] ) : Boolean [1]
 }
 
 Time_Definitions <|-- Iso8601_type

@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.beom.core.OPERATOR_KIND
-title OPERATOR_KIND Enumeration
 
 enum OPERATOR_KIND {
   eq 

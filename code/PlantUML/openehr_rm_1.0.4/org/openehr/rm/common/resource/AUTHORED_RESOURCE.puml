@@ -1,15 +1,13 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.common.resource.AUTHORED_RESOURCE
-title AUTHORED_RESOURCE Class
 
 abstract class AUTHORED_RESOURCE {
-  + original_language : CODE_PHRASE [1..1]
+  + original_language : CODE_PHRASE [1]
   + is_controlled : Boolean [0..1]
   + translations : Hash<String,TRANSLATION_DETAILS> [0..1]
   + description : RESOURCE_DESCRIPTION [0..1]
   + revision_history : REVISION_HISTORY [0..1]
-  + current_revision() : String [0..1]
-  + languages_available() : List<String> [0..*]
+  + current_revision() : String [1]
+  + languages_available() : List<String> [1..*]
 }
 
 

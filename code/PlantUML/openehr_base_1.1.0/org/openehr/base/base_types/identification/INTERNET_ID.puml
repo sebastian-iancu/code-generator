@@ -1,12 +1,10 @@
 @startuml
-' PlantUML diagram for org.openehr.base.base_types.identification.INTERNET_ID
-title INTERNET_ID Class
 
 class INTERNET_ID {
 }
 
-abstract class UID {
-  + value : String [1..1]
+abstract class UID  #whitesmoke;line:gray;line.dotted;text:gray {
+  + value : String [1]
 }
 
 UID <|-- INTERNET_ID

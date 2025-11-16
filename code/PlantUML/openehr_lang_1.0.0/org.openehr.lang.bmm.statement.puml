@@ -1,10 +1,8 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.statement
-title statement Package
 
 class BMM_CONDITIONAL_ACTION {
-  + condition : EL_BOOLEAN_EXPRESSION [1..1]
-  + statement : BMM_STATEMENT_ITEM [1..1]
+  + condition : EL_BOOLEAN_EXPRESSION [1]
+  + statement : BMM_STATEMENT_ITEM [1]
 }
 
 class BMM_ACTION_TABLE {
@@ -12,17 +10,17 @@ class BMM_ACTION_TABLE {
 }
 
 class BMM_ASSIGNMENT {
-  + target : EL_INSTANTIABLE_REF [1..1]
-  + source : EL_EXPRESSION [1..1]
+  + target : EL_INSTANTIABLE_REF [1]
+  + source : EL_EXPRESSION [1]
 }
 
 class BMM_ASSERTION {
-  + expression : EL_BOOLEAN_EXPRESSION [1..1]
+  + expression : EL_BOOLEAN_EXPRESSION [1]
   + tag : String [0..1]
 }
 
 class BMM_PROCEDURE_CALL {
-  + agent : EL_PROCEDURE_AGENT [1..1]
+  + agent : EL_PROCEDURE_AGENT [1]
 }
 
 abstract class BMM_STATEMENT_ITEM {
@@ -32,7 +30,7 @@ abstract class BMM_STATEMENT {
 }
 
 class BMM_STATEMENT_BLOCK {
-  + items : List<BMM_STATEMENT_ITEM> [0..*]
+  + items : List<BMM_STATEMENT_ITEM> [*]
 }
 
 abstract class BMM_SIMPLE_STATEMENT {

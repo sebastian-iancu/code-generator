@@ -1,40 +1,38 @@
 @startuml
-' PlantUML diagram for org.openehr.base.foundation_types.time.Iso8601_date_time
-title Iso8601_date_time Class
 
 class Iso8601_date_time {
-  + year() : Integer [0..1]
-  + month() : Integer [0..1]
-  + day() : Integer [0..1]
-  + hour() : Integer [0..1]
-  + minute() : Integer [0..1]
-  + second() : Integer [0..1]
-  + fractional_second() : Real [0..1]
-  + timezone() : Iso8601_timezone [0..1]
-  + month_unknown() : Boolean [0..1]
-  + day_unknown() : Boolean [0..1]
-  + minute_unknown() : Boolean [0..1]
-  + second_unknown() : Boolean [0..1]
-  + is_decimal_sign_comma() : Boolean [0..1]
-  + is_partial() : Boolean [0..1]
-  + is_extended() : Boolean [0..1]
-  + has_fractional_second() : Boolean [0..1]
-  + as_string() : String [0..1]
-  + add(Iso8601_duration a_diff) : Iso8601_date_time [0..1]
-  + subtract(Iso8601_duration a_diff) : Iso8601_date_time [0..1]
-  + diff(Iso8601_date_time a_date_time) : Iso8601_duration [0..1]
-  + add_nominal(Iso8601_duration a_diff) : Iso8601_date [0..1]
-  + subtract_nominal(Iso8601_duration a_diff) : Iso8601_date [0..1]
+  + year() : Integer [1]
+  + month() : Integer [1]
+  + day() : Integer [1]
+  + hour() : Integer [1]
+  + minute() : Integer [1]
+  + second() : Integer [1]
+  + fractional_second() : Real [1]
+  + timezone() : Iso8601_timezone [1]
+  + month_unknown() : Boolean [1]
+  + day_unknown() : Boolean [1]
+  + minute_unknown() : Boolean [1]
+  + second_unknown() : Boolean [1]
+  + is_decimal_sign_comma() : Boolean [1]
+  + is_partial() : Boolean [1]
+  + is_extended() : Boolean [1]
+  + has_fractional_second() : Boolean [1]
+  + as_string() : String [1]
+  + add( a_diff : Iso8601_duration [1] ) : Iso8601_date_time [1]
+  + subtract( a_diff : Iso8601_duration [1] ) : Iso8601_date_time [1]
+  + diff( a_date_time : Iso8601_date_time [1] ) : Iso8601_duration [1]
+  + add_nominal( a_diff : Iso8601_duration [1] ) : Iso8601_date [1]
+  + subtract_nominal( a_diff : Iso8601_duration [1] ) : Iso8601_date [1]
 }
 
-abstract class Iso8601_type {
-  + value : String [1..1]
-  + {abstract} is_partial() : Boolean [0..1]
-  + {abstract} is_extended() : Boolean [0..1]
+abstract class Iso8601_type  #whitesmoke;line:gray;line.dotted;text:gray {
+  + value : String [1]
+  + {abstract} is_partial() : Boolean [1]
+  + {abstract} is_extended() : Boolean [1]
 }
 
-abstract class Ordered {
-  + {abstract} infix <(Ordered other) : Boolean [0..1]
+abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
 }
 
 Ordered <|-- Iso8601_type

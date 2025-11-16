@@ -1,24 +1,22 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.data_types.quantity.DV_ORDERED
-title DV_ORDERED Class
 
 abstract class DV_ORDERED {
   + normal_status : CODE_PHRASE [0..1]
   + normal_range : DV_INTERVAL [0..1]
-  + other_reference_ranges : List<REFERENCE_RANGE<DV_ORDERED>> [0..*]
-  + {abstract} is_strictly_comparable_to(DV_ORDERED other) : Boolean [0..1]
-  + is_simple() : Boolean [0..1]
-  + is_normal() : Boolean [0..1]
-  + {abstract} infix <(Ordered other) : Boolean [0..1]
+  + other_reference_ranges : List<REFERENCE_RANGE<DV_ORDERED>> [*]
+  + {abstract} is_strictly_comparable_to( other : DV_ORDERED [1] ) : Boolean [1]
+  + is_simple() : Boolean [1]
+  + is_normal() : Boolean [1]
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
 }
 
-abstract class DATA_VALUE {
+abstract class DATA_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 DATA_VALUE <|-- DV_ORDERED
 
-abstract class Ordered {
-  + {abstract} infix <(Ordered other) : Boolean [0..1]
+abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
 }
 
 Ordered <|-- DV_ORDERED

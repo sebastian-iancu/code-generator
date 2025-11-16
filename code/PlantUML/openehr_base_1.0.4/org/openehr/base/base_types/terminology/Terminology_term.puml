@@ -1,10 +1,8 @@
 @startuml
-' PlantUML diagram for org.openehr.base.base_types.terminology.Terminology_term
-title Terminology_term Class
 
 class Terminology_term {
-  + concept : Terminology_code [1..1]
-  + text : String [1..1]
+  + concept : Terminology_code [1]
+  + text : String [1]
 }
 
 

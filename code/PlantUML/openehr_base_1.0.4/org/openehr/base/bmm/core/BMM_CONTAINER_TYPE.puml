@@ -1,38 +1,36 @@
 @startuml
-' PlantUML diagram for org.openehr.base.bmm.core.BMM_CONTAINER_TYPE
-title BMM_CONTAINER_TYPE Class
 
 class BMM_CONTAINER_TYPE {
-  + container_class : BMM_GENERIC_CLASS [1..1]
-  + base_type : BMM_UNITARY_TYPE [1..1]
-  + type_name() : String [0..1]
-  + effective_base_class() : BMM_CLASS [0..1]
-  + is_abstract() : Boolean [0..1]
-  + entity_metatype() : String [0..1]
-  + flattened_type_list() : List<String> [0..*]
-  + subtypes() : List<String> [0..*]
-  + has_subtypes() : Boolean [0..1]
+  + container_class : BMM_GENERIC_CLASS [1]
+  + base_type : BMM_UNITARY_TYPE [1]
+  + type_name() : String [1]
+  + effective_base_class() : BMM_CLASS [1]
+  + is_abstract() : Boolean [1]
+  + entity_metatype() : String [1]
+  + flattened_type_list() : List<String> [1..*]
+  + subtypes() : List<String> [1..*]
+  + has_subtypes() : Boolean [1]
 }
 
-abstract class BMM_TYPE {
-  + {abstract} effective_base_class() : BMM_CLASS [0..1]
-  + {abstract} type_name() : String [0..1]
-  + {abstract} has_subtypes() : Boolean [0..1]
-  + {abstract} subtypes() : List<String> [0..*]
-  + {abstract} flattened_type_list() : List<String> [0..*]
-  + type_signature() : String [0..1]
-  + is_primitive() : Boolean [0..1]
-  + entity_metatype() : String [0..1]
+abstract class BMM_TYPE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} effective_base_class() : BMM_CLASS [1]
+  + {abstract} type_name() : String [1]
+  + {abstract} has_subtypes() : Boolean [1]
+  + {abstract} subtypes() : List<String> [1..*]
+  + {abstract} flattened_type_list() : List<String> [1..*]
+  + type_signature() : String [1]
+  + is_primitive() : Boolean [1]
+  + entity_metatype() : String [1]
 }
 
-abstract class BMM_ENTITY {
-  + {abstract} entity_category() : String [0..1]
-  + {abstract} entity_metatype() : String [0..1]
-  + {abstract} is_abstract() : Boolean [0..1]
-  + {abstract} is_primitive() : Boolean [0..1]
+abstract class BMM_ENTITY  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} entity_category() : String [1]
+  + {abstract} entity_metatype() : String [1]
+  + {abstract} is_abstract() : Boolean [1]
+  + {abstract} is_primitive() : Boolean [1]
 }
 
-class BMM_DEFINITIONS {
+class BMM_DEFINITIONS  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 BMM_DEFINITIONS <|-- BMM_ENTITY

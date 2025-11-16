@@ -1,45 +1,43 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.demographic
-title org.openehr.rm.demographic Package
 
 abstract class PARTY {
   + identities : List<PARTY_IDENTITY> [1..*]
-  + contacts : List<CONTACT> [0..*]
+  + contacts : List<CONTACT> [*]
   + details : ITEM_STRUCTURE [0..1]
-  + reverse_relationships : List<LOCATABLE_REF> [0..*]
-  + relationships : List<PARTY_RELATIONSHIP> [0..*]
-  + type() : DV_TEXT [0..1]
+  + reverse_relationships : List<LOCATABLE_REF> [*]
+  + relationships : List<PARTY_RELATIONSHIP> [*]
+  + type() : DV_TEXT [1]
 }
 
 class CONTACT {
   + addresses : List<ADDRESS> [1..*]
   + time_validity : DV_INTERVAL<DV_DATE> [0..1]
-  + purpose() : DV_TEXT [0..1]
+  + purpose() : DV_TEXT [1]
 }
 
 class ADDRESS {
-  + details : ITEM_STRUCTURE [1..1]
-  + type() : DV_TEXT [0..1]
+  + details : ITEM_STRUCTURE [1]
+  + type() : DV_TEXT [1]
 }
 
 class PARTY_IDENTITY {
-  + details : ITEM_STRUCTURE [1..1]
-  + purpose() : DV_TEXT [0..1]
+  + details : ITEM_STRUCTURE [1]
+  + purpose() : DV_TEXT [1]
 }
 
 class ROLE {
   + time_validity : DV_INTERVAL<DV_DATE> [0..1]
-  + performer : PARTY_REF [1..1]
-  + capabilities : List<CAPABILITY> [0..*]
+  + performer : PARTY_REF [1]
+  + capabilities : List<CAPABILITY> [*]
 }
 
 abstract class ACTOR {
-  + languages : List<DV_TEXT> [0..*]
-  + roles : List<PARTY_REF> [0..*]
+  + languages : List<DV_TEXT> [*]
+  + roles : List<PARTY_REF> [*]
 }
 
 class CAPABILITY {
-  + credentials : ITEM_STRUCTURE [1..1]
+  + credentials : ITEM_STRUCTURE [1]
   + time_validity : DV_INTERVAL<DV_DATE> [0..1]
 }
 
@@ -57,10 +55,10 @@ class PERSON {
 
 class PARTY_RELATIONSHIP {
   + details : ITEM_STRUCTURE [0..1]
-  + target : PARTY_REF [1..1]
+  + target : PARTY_REF [1]
   + time_validity : DV_INTERVAL<DV_DATE> [0..1]
-  + source : PARTY_REF [1..1]
-  + type() : DV_TEXT [0..1]
+  + source : PARTY_REF [1]
+  + type() : DV_TEXT [1]
 }
 
 class VERSIONED_PARTY {

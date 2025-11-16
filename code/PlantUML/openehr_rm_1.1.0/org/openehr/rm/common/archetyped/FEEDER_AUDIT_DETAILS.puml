@@ -1,9 +1,7 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.common.archetyped.FEEDER_AUDIT_DETAILS
-title FEEDER_AUDIT_DETAILS Class
 
 class FEEDER_AUDIT_DETAILS {
-  + system_id : String [1..1]
+  + system_id : String [1]
   + location : PARTY_IDENTIFIED [0..1]
   + subject : PARTY_PROXY [0..1]
   + provider : PARTY_IDENTIFIED [0..1]

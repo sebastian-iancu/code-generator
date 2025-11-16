@@ -1,25 +1,23 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.data_types.time_specification
-title time_specification Package
 
 abstract class DV_TIME_SPECIFICATION {
-  + value : DV_PARSABLE [1..1]
-  + {abstract} calendar_alignment() : String [0..1]
-  + {abstract} event_alignment() : String [0..1]
-  + {abstract} institution_specified() : Boolean [0..1]
+  + value : DV_PARSABLE [1]
+  + {abstract} calendar_alignment() : String [1]
+  + {abstract} event_alignment() : String [1]
+  + {abstract} institution_specified() : Boolean [1]
 }
 
 class DV_PERIODIC_TIME_SPECIFICATION {
-  + period() : DV_DURATION [0..1]
-  + calendar_alignment() : String [0..1]
-  + event_alignment() : String [0..1]
-  + institution_specified() : Boolean [0..1]
+  + period() : DV_DURATION [1]
+  + calendar_alignment() : String [1]
+  + event_alignment() : String [1]
+  + institution_specified() : Boolean [1]
 }
 
 class DV_GENERAL_TIME_SPECIFICATION {
-  + calendar_alignment() : String [0..1]
-  + event_alignment() : String [0..1]
-  + institution_specified() : Boolean [0..1]
+  + calendar_alignment() : String [1]
+  + event_alignment() : String [1]
+  + institution_specified() : Boolean [1]
 }
 
 DATA_VALUE <|-- DV_TIME_SPECIFICATION

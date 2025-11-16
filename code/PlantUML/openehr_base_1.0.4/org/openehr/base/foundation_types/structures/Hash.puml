@@ -1,16 +1,14 @@
 @startuml
-' PlantUML diagram for org.openehr.base.foundation_types.structures.Hash
-title Hash Class
 
-class Hash <<K, V>> {
-  + has_key(K a_key) : Boolean [0..1]
-  + item(K a_key) : V [0..1]
+class Hash <K, V> {
+  + has_key( a_key : K [1] ) : Boolean [1]
+  + item( a_key : K [1] ) : V [1]
 }
 
-abstract class Aggregate <<T>> {
-  + {abstract} has(T v) : Boolean [0..1]
-  + {abstract} count() : Integer [0..1]
-  + {abstract} is_empty() : Boolean [0..1]
+abstract class Aggregate <T>  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} has( v : T [1] ) : Boolean [1]
+  + {abstract} count() : Integer [1]
+  + {abstract} is_empty() : Boolean [1]
 }
 
 Aggregate <|-- Hash

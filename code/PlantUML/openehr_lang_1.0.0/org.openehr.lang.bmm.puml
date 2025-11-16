@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm
-title org.openehr.lang.bmm Package
 
 class BMM_DEFINITIONS {
 }

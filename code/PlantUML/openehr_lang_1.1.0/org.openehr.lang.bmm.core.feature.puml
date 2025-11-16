@@ -1,51 +1,49 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.core.feature
-title feature Package
 
 class BMM_CONSTANT {
-  + generator : EL_INSTANCE_REF [1..1]
+  + generator : EL_INSTANCE_REF [1]
 }
 
 class BMM_CONTAINER_PROPERTY {
-  + type : BMM_CONTAINER_TYPE [1..1]
+  + type : BMM_CONTAINER_TYPE [1]
   + cardinality : Multiplicity_interval [0..1]
-  + display_name() : String [0..1]
+  + display_name() : String [1]
 }
 
 class BMM_FUNCTION {
   + operator_definition : BMM_OPERATOR [0..1]
-  + result : BMM_RESULT [1..1]
+  + result : BMM_RESULT [1]
 }
 
 class BMM_LOCAL {
 }
 
 class BMM_OPERATOR {
-  + position : BMM_OPERATOR_POSITION [1..1]
+  + position : BMM_OPERATOR_POSITION [1]
   + symbols : List<String> [1..*]
-  + name : String [1..1]
+  + name : String [1]
 }
 
-class BMM_PROPERTY <<T>> {
-  + name : String [1..1]
+class BMM_PROPERTY <T> {
+  + name : String [1]
   + is_mandatory : Boolean [0..1]
   + is_computed : Boolean [0..1]
-  + type : T [1..1]
+  + type : T [1]
   + is_im_runtime : Boolean [0..1]
   + is_im_infrastructure : Boolean [0..1]
   + is_synthesised_generic : Boolean [0..1]
-  + existence() : Multiplicity_interval [0..1]
-  + display_name() : String [0..1]
+  + existence() : Multiplicity_interval [1]
+  + display_name() : String [1]
 }
 
 abstract class BMM_ROUTINE {
-  + parameters : List<BMM_PARAMETER> [0..*]
-  + locals : List<BMM_LOCAL> [0..*]
-  + pre_conditions : List<BMM_ASSERTION> [0..*]
-  + post_conditions : List<BMM_ASSERTION> [0..*]
+  + parameters : List<BMM_PARAMETER> [*]
+  + locals : List<BMM_LOCAL> [*]
+  + pre_conditions : List<BMM_ASSERTION> [*]
+  + post_conditions : List<BMM_ASSERTION> [*]
   + body : BMM_ROUTINE_BODY [0..1]
-  + arity() : Integer [0..1]
-  + signature() :  [0..1]
+  + arity() : Integer [1]
+  + signature() :  [1]
 }
 
 class BMM_PARAMETER {
@@ -53,27 +51,27 @@ class BMM_PARAMETER {
 }
 
 abstract class BMM_VARIABLE {
-  + scope : BMM_ROUTINE [1..1]
-  + signature() :  [0..1]
+  + scope : BMM_ROUTINE [1]
+  + signature() :  [1]
 }
 
 class BMM_PROCEDURE {
 }
 
 class BMM_UNITARY_PROPERTY {
-  + type : BMM_UNITARY_TYPE [1..1]
+  + type : BMM_UNITARY_TYPE [1]
 }
 
 class BMM_INDEXED_CONTAINER_PROPERTY {
-  + type : BMM_INDEXED_CONTAINER_TYPE [1..1]
-  + display_name() : String [0..1]
+  + type : BMM_INDEXED_CONTAINER_TYPE [1]
+  + display_name() : String [1]
 }
 
 abstract class BMM_INSTANTIABLE_FEATURE {
 }
 
 class BMM_RESULT {
-  + name : String [1..1]
+  + name : String [1]
 }
 
 abstract class BMM_FEATURE_EXTENSION {
@@ -83,14 +81,14 @@ abstract class BMM_ROUTINE_DEFINITION {
 }
 
 class BMM_EXTERNAL_ROUTINE {
-  + meta_data : Hash<String,String> [1..1]
+  + meta_data : Hash<String,String> [1]
   + argument_mapping : Hash<String,String> [0..1]
 }
 
 class BMM_FEATURE_GROUP {
-  + name : String [1..1]
-  + properties : Hash<String,String> [1..1]
-  + features : List<BMM_CLASS_FEATURE> [0..*]
+  + name : String [1]
+  + properties : Hash<String,String> [1]
+  + features : List<BMM_CLASS_FEATURE> [*]
   + visibility : BMM_VISIBILITY [0..1]
 }
 
@@ -99,13 +97,13 @@ abstract class BMM_VISIBILITY {
 
 abstract class BMM_FEATURE {
   + is_synthesised_generic : Boolean [0..1]
-  + feature_extensions : List<BMM_FEATURE_EXTENSION> [0..*]
-  + group : BMM_FEATURE_GROUP [1..1]
-  + scope : BMM_CLASS [1..1]
+  + feature_extensions : List<BMM_FEATURE_EXTENSION> [*]
+  + group : BMM_FEATURE_GROUP [1]
+  + scope : BMM_CLASS [1]
 }
 
 class BMM_SELF {
-  + name : String [1..1]
+  + name : String [1]
 }
 
 abstract class BMM_WRITABLE_VARIABLE {
@@ -115,15 +113,15 @@ abstract class BMM_READONLY_VARIABLE {
 }
 
 class BMM_SINGLETON {
-  + generator : BMM_ROUTINE_DEFINITION [1..1]
+  + generator : BMM_ROUTINE_DEFINITION [1]
 }
 
 abstract class BMM_STATIC {
 }
 
 class BMM_LOCAL_ROUTINE {
-  + locals : List<BMM_LOCAL> [0..*]
-  + body : BMM_STATEMENT_BLOCK [1..1]
+  + locals : List<BMM_LOCAL> [*]
+  + body : BMM_STATEMENT_BLOCK [1]
 }
 
 enum BMM_OPERATOR_POSITION {

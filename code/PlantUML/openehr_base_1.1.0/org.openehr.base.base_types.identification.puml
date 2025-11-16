@@ -1,19 +1,17 @@
 @startuml
-' PlantUML diagram for org.openehr.base.base_types.identification
-title identification Package
 
 class ARCHETYPE_ID {
-  + qualified_rm_entity() : String [0..1]
-  + domain_concept() : String [0..1]
-  + rm_originator() : String [0..1]
-  + rm_name() : String [0..1]
-  + rm_entity() : String [0..1]
-  + specialisation() : String [0..1]
-  + version_id() : String [0..1]
+  + qualified_rm_entity() : String [1]
+  + domain_concept() : String [1]
+  + rm_originator() : String [1]
+  + rm_name() : String [1]
+  + rm_entity() : String [1]
+  + specialisation() : String [1]
+  + version_id() : String [1]
 }
 
 class GENERIC_ID {
-  + scheme : String [1..1]
+  + scheme : String [1]
 }
 
 class HIER_OBJECT_ID {
@@ -21,47 +19,47 @@ class HIER_OBJECT_ID {
 
 class LOCATABLE_REF {
   + path : String [0..1]
-  + id : UID_BASED_ID [1..1]
-  + as_uri() : String [0..1]
+  + id : UID_BASED_ID [1]
+  + as_uri() : String [1]
 }
 
 abstract class OBJECT_ID {
-  + value : String [1..1]
+  + value : String [1]
 }
 
 class OBJECT_REF {
-  + namespace : String [1..1]
-  + type : String [1..1]
-  + id : OBJECT_ID [1..1]
+  + namespace : String [1]
+  + type : String [1]
+  + id : OBJECT_ID [1]
 }
 
 class OBJECT_VERSION_ID {
-  + object_id() : UID [0..1]
-  + version_tree_id() : VERSION_TREE_ID [0..1]
-  + creating_system_id() : UID [0..1]
-  + is_branch() : Boolean [0..1]
+  + object_id() : UID [1]
+  + version_tree_id() : VERSION_TREE_ID [1]
+  + creating_system_id() : UID [1]
+  + is_branch() : Boolean [1]
 }
 
 class PARTY_REF {
 }
 
 class TERMINOLOGY_ID {
-  + name() : String [0..1]
-  + version_id() : String [0..1]
+  + name() : String [1]
+  + version_id() : String [1]
 }
 
 class VERSION_TREE_ID {
-  + value : String [1..1]
-  + trunk_version() : String [0..1]
-  + is_branch() : Boolean [0..1]
-  + branch_number() : String [0..1]
-  + branch_version() : String [0..1]
+  + value : String [1]
+  + trunk_version() : String [1]
+  + is_branch() : Boolean [1]
+  + branch_number() : String [1]
+  + branch_version() : String [1]
 }
 
 abstract class UID_BASED_ID {
-  + root() : UID [0..1]
-  + extension() : String [0..1]
-  + has_extension() : Boolean [0..1]
+  + root() : UID [1]
+  + extension() : String [1]
+  + has_extension() : Boolean [1]
 }
 
 class UUID {
@@ -71,7 +69,7 @@ class INTERNET_ID {
 }
 
 abstract class UID {
-  + value : String [1..1]
+  + value : String [1]
 }
 
 class ISO_OID {

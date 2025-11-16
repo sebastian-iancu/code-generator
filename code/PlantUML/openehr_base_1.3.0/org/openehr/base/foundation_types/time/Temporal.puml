@@ -1,12 +1,10 @@
 @startuml
-' PlantUML diagram for org.openehr.base.foundation_types.time.Temporal
-title Temporal Class
 
 abstract class Temporal {
 }
 
-abstract class Ordered {
-  + {abstract} infix <(Ordered other) : Boolean [0..1]
+abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
 }
 
 Ordered <|-- Temporal

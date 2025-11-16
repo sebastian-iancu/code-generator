@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.data_structures.representation
-title representation Package
 
 abstract class ITEM {
 }
@@ -12,7 +10,7 @@ class CLUSTER {
 class ELEMENT {
   + null_flavour : DV_CODED_TEXT [0..1]
   + value : DATA_VALUE [0..1]
-  + is_null() : Boolean [0..1]
+  + is_null() : Boolean [1]
 }
 
 LOCATABLE <|-- ITEM

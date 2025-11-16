@@ -1,9 +1,7 @@
 @startuml
-' PlantUML diagram for org.openehr.am.aom2.terminology.TERMINOLOGY_RELATION
-title TERMINOLOGY_RELATION Class
 
 abstract class TERMINOLOGY_RELATION {
-  + id : String [1..1]
+  + id : String [1]
   + members : List<String> [1..*]
 }
 

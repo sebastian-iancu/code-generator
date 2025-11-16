@@ -1,9 +1,7 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.integration
-title org.openehr.rm.integration Package
 
 class GENERIC_ENTRY {
-  + data : ITEM_TREE [1..1]
+  + data : ITEM_TREE [1]
 }
 
 CONTENT_ITEM <|-- GENERIC_ENTRY

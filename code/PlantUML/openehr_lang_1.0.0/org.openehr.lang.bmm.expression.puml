@@ -1,66 +1,64 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.expression
-title expression Package
 
 class EL_BINARY_OPERATOR {
-  + left_operand : EL_SIMPLE [1..1]
-  + right_operand : EL_TERMINAL [1..1]
+  + left_operand : EL_SIMPLE [1]
+  + right_operand : EL_TERMINAL [1]
 }
 
 abstract class EL_EXPRESSION {
-  + {abstract} eval_type() : BMM_TYPE [0..1]
-  + is_boolean() : Boolean [0..1]
+  + {abstract} eval_type() : BMM_TYPE [1]
+  + is_boolean() : Boolean [1]
 }
 
 abstract class EL_TERMINAL {
 }
 
 class EL_LITERAL {
-  + value : BMM_LITERAL_VALUE [1..1]
-  + eval_type() : BMM_TYPE [0..1]
+  + value : BMM_LITERAL_VALUE [1]
+  + eval_type() : BMM_TYPE [1]
 }
 
 abstract class EL_OPERATOR {
   + precedence_overridden : Boolean [0..1]
   + symbol : String [0..1]
-  + definition : BMM_FUNCTION [1..1]
-  + operator_definition() : BMM_OPERATOR [0..1]
-  + equivalent_call() : EL_FUNCTION_CALL [0..1]
+  + definition : BMM_FUNCTION [1]
+  + operator_definition() : BMM_OPERATOR [1]
+  + equivalent_call() : EL_FUNCTION_CALL [1]
 }
 
 class EL_UNARY_OPERATOR {
-  + operand : EL_SIMPLE [1..1]
+  + operand : EL_SIMPLE [1]
 }
 
-class EL_INSTANTIABLE_REF <<T>> {
+class EL_INSTANTIABLE_REF <T> {
   + definition : T [0..1]
-  + eval_type() : BMM_TYPE [0..1]
+  + eval_type() : BMM_TYPE [1]
 }
 
 abstract class EL_PREDICATE {
-  + operand : EL_INSTANCE_REF [1..1]
-  + eval_type() : BMM_SIMPLE_TYPE [0..1]
+  + operand : EL_INSTANCE_REF [1]
+  + eval_type() : BMM_SIMPLE_TYPE [1]
 }
 
 class EL_DEFINED {
 }
 
 class EL_FUNCTION_CALL {
-  + agent : EL_FUNCTION_AGENT [1..1]
-  + eval_type() : BMM_TYPE [0..1]
+  + agent : EL_FUNCTION_AGENT [1]
+  + eval_type() : BMM_TYPE [1]
 }
 
 abstract class EL_AGENT_CALL {
-  + agent : EL_AGENT [1..1]
+  + agent : EL_AGENT [1]
 }
 
 abstract class EL_AGENT {
-  + name : String [1..1]
+  + name : String [1]
   + closed_args : EL_TUPLE [0..1]
-  + open_args : List<String> [0..*]
+  + open_args : List<String> [*]
   + definition : BMM_ROUTINE [0..1]
-  + eval_type() : BMM_SIGNATURE [0..1]
-  + is_callable() : Boolean [0..1]
+  + eval_type() : BMM_SIGNATURE [1]
+  + is_callable() : Boolean [1]
 }
 
 class EL_TUPLE_ITEM {
@@ -73,9 +71,9 @@ class EL_PROCEDURE_AGENT {
 }
 
 class EL_TUPLE {
-  + items : List<EL_TUPLE_ITEM> [0..*]
-  + type : BMM_TUPLE_TYPE [1..1]
-  + eval_type() : BMM_TYPE [0..1]
+  + items : List<EL_TUPLE_ITEM> [*]
+  + type : BMM_TUPLE_TYPE [1]
+  + eval_type() : BMM_TYPE [1]
 }
 
 class EL_FUNCTION_AGENT {
@@ -89,16 +87,16 @@ abstract class EL_INSTANCE_REF {
 }
 
 class EL_SELF_REF {
-  + type : BMM_TYPE [1..1]
-  + eval_type() : BMM_TYPE [0..1]
+  + type : BMM_TYPE [1]
+  + eval_type() : BMM_TYPE [1]
 }
 
 class EL_BOOLEAN_EXPRESSION {
 }
 
 class EL_TYPE_REF {
-  + type : BMM_TYPE [1..1]
-  + eval_type() : BMM_TYPE [0..1]
+  + type : BMM_TYPE [1]
+  + eval_type() : BMM_TYPE [1]
 }
 
 abstract class EL_SCOPED_REF {
@@ -106,7 +104,7 @@ abstract class EL_SCOPED_REF {
 }
 
 class EL_CONDITIONAL_EXPRESSION {
-  + condition : EL_SIMPLE [1..1]
+  + condition : EL_SIMPLE [1]
 }
 
 class EL_CONDITION_CHAIN {
@@ -114,25 +112,25 @@ class EL_CONDITION_CHAIN {
 }
 
 abstract class EL_CONSTRAINED {
-  + base_expression : EL_EXPRESSION [1..1]
+  + base_expression : EL_EXPRESSION [1]
 }
 
 class EL_CASE_TABLE {
   + items : List<EL_CASE> [1..*]
-  + input : EL_SIMPLE [1..1]
+  + input : EL_SIMPLE [1]
 }
 
 class EL_CASE {
-  + value_constraint : C_OBJECT [1..1]
+  + value_constraint : C_OBJECT [1]
 }
 
 abstract class EL_DECISION_TABLE {
-  + else : EL_EXPRESSION [1..1]
+  + else : EL_EXPRESSION [1]
   + items : List<EL_DECISION_BRANCH> [1..*]
 }
 
 abstract class EL_DECISION_BRANCH {
-  + result : EL_EXPRESSION [1..1]
+  + result : EL_EXPRESSION [1]
 }
 
 abstract class EL_SIMPLE {

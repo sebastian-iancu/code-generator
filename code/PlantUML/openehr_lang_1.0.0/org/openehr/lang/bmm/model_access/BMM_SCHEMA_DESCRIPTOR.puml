@@ -1,19 +1,17 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.model_access.BMM_SCHEMA_DESCRIPTOR
-title BMM_SCHEMA_DESCRIPTOR Class
 
 abstract class BMM_SCHEMA_DESCRIPTOR {
   + bmm_schema : BMM_SCHEMA [0..1]
   + bmm_model : BMM_MODEL [0..1]
-  + schema_id : String [1..1]
-  + meta_data : Hash<String,String> [1..1]
-  + includes : List<String> [0..*]
-  + is_top_level() : Boolean [0..1]
-  + is_bmm_compatible() : Boolean [0..1]
-  + load() : void [0..1]
-  + validate_merged() : void [0..1]
-  + validate_includes(List<String> all_schemas_list) : void [0..1]
-  + create_model() : void [0..1]
+  + schema_id : String [1]
+  + meta_data : Hash<String,String> [1]
+  + includes : List<String> [*]
+  + is_top_level() : Boolean [1]
+  + is_bmm_compatible() : Boolean [1]
+  + load() : void [1]
+  + validate_merged() : void [1]
+  + validate_includes( all_schemas_list : List<String> [0..1] ) : void [1]
+  + create_model() : void [1]
 }
 
 

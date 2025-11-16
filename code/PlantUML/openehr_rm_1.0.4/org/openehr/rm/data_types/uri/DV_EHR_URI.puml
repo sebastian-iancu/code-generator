@@ -1,19 +1,17 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.data_types.uri.DV_EHR_URI
-title DV_EHR_URI Class
 
 class DV_EHR_URI {
 }
 
-class DV_URI {
-  + value : String [1..1]
-  + scheme() : String [0..1]
-  + path() : String [0..1]
-  + fragment_id() : String [0..1]
-  + query() : String [0..1]
+class DV_URI  #whitesmoke;line:gray;line.dotted;text:gray {
+  + value : String [1]
+  + scheme() : String [1]
+  + path() : String [1]
+  + fragment_id() : String [1]
+  + query() : String [1]
 }
 
-abstract class DATA_VALUE {
+abstract class DATA_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 DATA_VALUE <|-- DV_URI

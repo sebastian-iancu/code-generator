@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.ehr_extract.generic_extract
-title generic_extract Package
 
 class GENERIC_CONTENT_ITEM {
   + item_type : DV_CODED_TEXT [0..1]

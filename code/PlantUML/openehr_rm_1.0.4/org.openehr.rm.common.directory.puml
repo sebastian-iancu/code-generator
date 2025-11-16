@@ -1,13 +1,11 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.common.directory
-title directory Package
 
 class VERSIONED_FOLDER {
 }
 
 class FOLDER {
-  + items : List<OBJECT_REF> [0..*]
-  + folders : List<FOLDER> [0..*]
+  + items : List<OBJECT_REF> [*]
+  + folders : List<FOLDER> [*]
   + details : ITEM_STRUCTURE [0..1]
 }
 

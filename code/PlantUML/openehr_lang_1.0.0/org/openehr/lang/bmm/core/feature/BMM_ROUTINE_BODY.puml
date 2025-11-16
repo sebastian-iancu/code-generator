@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.core.feature.BMM_ROUTINE_BODY
-title BMM_ROUTINE_BODY Class
 
 abstract class BMM_ROUTINE_BODY {
 }

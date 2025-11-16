@@ -1,15 +1,13 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm_persistence.P_BMM_BASE_TYPE
-title P_BMM_BASE_TYPE Class
 
 abstract class P_BMM_BASE_TYPE {
   + value_constraint : String [0..1]
 }
 
-abstract class P_BMM_TYPE {
+abstract class P_BMM_TYPE  #whitesmoke;line:gray;line.dotted;text:gray {
   + bmm_type : BMM_TYPE [0..1]
-  + {abstract} create_bmm_type(BMM_MODEL a_schema, BMM_CLASS a_class_def) : void [0..1]
-  + {abstract} as_type_string() : String [0..1]
+  + {abstract} create_bmm_type( a_schema : BMM_MODEL [1], a_class_def : BMM_CLASS [1] ) : void [1]
+  + {abstract} as_type_string() : String [1]
 }
 
 P_BMM_TYPE <|-- P_BMM_BASE_TYPE

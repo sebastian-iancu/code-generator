@@ -1,15 +1,13 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.obsolete-elom.extension.OP_DEF_EXISTS
-title OP_DEF_EXISTS Class
 
 class OP_DEF_EXISTS {
-  + identifier : String [1..1]
-  + symbols : List<String> [0..*]
-  + evaluation_agent : FUNCTION<> [1..1]
+  + identifier : String [1]
+  + symbols : List<String> [*]
+  + evaluation_agent : FUNCTION<> [1]
 }
 
-abstract class OPERATOR_DEF_EXTERNAL {
-  + evaluation_agent : FUNCTION<TUPLE,Any> [1..1]
+abstract class OPERATOR_DEF_EXTERNAL  #whitesmoke;line:gray;line.dotted;text:gray {
+  + evaluation_agent : FUNCTION<TUPLE,Any> [1]
 }
 
 OPERATOR_DEF_EXTERNAL <|-- OP_DEF_EXISTS

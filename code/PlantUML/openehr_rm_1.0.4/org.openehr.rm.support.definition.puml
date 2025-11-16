@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.support.definition
-title definition Package
 
 class OPENEHR_DEFINITIONS {
 }

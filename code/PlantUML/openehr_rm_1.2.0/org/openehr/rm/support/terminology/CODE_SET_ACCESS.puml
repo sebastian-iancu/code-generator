@@ -1,12 +1,10 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.support.terminology.CODE_SET_ACCESS
-title CODE_SET_ACCESS Interface
 
 interface CODE_SET_ACCESS {
-  + id() : String [0..1]
-  + all_codes() : List<CODE_PHRASE> [1..*]
-  + has_lang(String a_lang) : Boolean [0..1]
-  + has_code(String a_code) : Boolean [0..1]
+  + id() : String [1]
+  + all_codes() : List<CODE_PHRASE> [*]
+  + has_lang( a_lang : String [1] ) : Boolean [1]
+  + has_code( a_code : String [1] ) : Boolean [1]
 }
 
 

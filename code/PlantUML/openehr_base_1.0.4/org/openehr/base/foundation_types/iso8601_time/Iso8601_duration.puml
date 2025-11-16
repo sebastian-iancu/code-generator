@@ -1,59 +1,57 @@
 @startuml
-' PlantUML diagram for org.openehr.base.foundation_types.iso8601_time.Iso8601_duration
-title Iso8601_duration Class
 
 class Iso8601_duration {
-  + is_decimal_sign_comma() : Boolean [0..1]
-  + valid_iso8601_duration(String s) : Boolean [0..1]
-  + is_partial() : Boolean [0..1]
-  + is_extended() : Boolean [0..1]
-  + as_string() : String [0..1]
-  + months() : Integer [0..1]
-  + years() : Integer [0..1]
-  + weeks() : Integer [0..1]
-  + to_seconds() : Integer [0..1]
-  + minutes() : Integer [0..1]
-  + hours() : Integer [0..1]
-  + days() : Integer [0..1]
-  + as_duration() : Duration [0..1]
+  + is_decimal_sign_comma() : Boolean [1]
+  + valid_iso8601_duration( s : String [1] ) : Boolean [1]
+  + is_partial() : Boolean [1]
+  + is_extended() : Boolean [1]
+  + as_string() : String [1]
+  + months() : Integer [1]
+  + years() : Integer [1]
+  + weeks() : Integer [1]
+  + to_seconds() : Integer [1]
+  + minutes() : Integer [1]
+  + hours() : Integer [1]
+  + days() : Integer [1]
+  + as_duration() : Duration [1]
 }
 
-abstract class Iso8601_type {
-  + value : String [1..1]
-  + {abstract} is_partial() : Boolean [0..1]
-  + {abstract} is_extended() : Boolean [0..1]
+abstract class Iso8601_type  #whitesmoke;line:gray;line.dotted;text:gray {
+  + value : String [1]
+  + {abstract} is_partial() : Boolean [1]
+  + {abstract} is_extended() : Boolean [1]
 }
 
-abstract class Ordered {
-  + {abstract} infix <(Ordered other) : Boolean [0..1]
+abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
 }
 
 Ordered <|-- Iso8601_type
 
 Iso8601_type <|-- Iso8601_duration
 
-abstract class IDuration {
-  + seconds() : Integer [0..1]
-  + fractional_seconds() : Real [0..1]
+abstract class IDuration  #whitesmoke;line:gray;line.dotted;text:gray {
+  + seconds() : Integer [1]
+  + fractional_seconds() : Real [1]
 }
 
-abstract class Temporal {
+abstract class Temporal  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
-abstract class Ordered {
-  + {abstract} infix <(Ordered other) : Boolean [0..1]
+abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
 }
 
 Ordered <|-- Temporal
 
-class Time_Definitions {
-  + valid_year(Integer y) : Boolean [0..1]
-  + valid_month(Integer m) : Boolean [0..1]
-  + valid_day(Integer y, Integer m, Integer d) : Boolean [0..1]
-  + valid_hour(Integer h, Integer m, Integer s) : Boolean [0..1]
-  + valid_minute(Integer m) : Boolean [0..1]
-  + valid_second(Integer s) : Boolean [0..1]
-  + valid_fractional_second(Double fs) : Boolean [0..1]
+class Time_Definitions  #whitesmoke;line:gray;line.dotted;text:gray {
+  + valid_year( y : Integer [1] ) : Boolean [1]
+  + valid_month( m : Integer [1] ) : Boolean [1]
+  + valid_day( y : Integer [1], m : Integer [1], d : Integer [1] ) : Boolean [1]
+  + valid_hour( h : Integer [1], m : Integer [1], s : Integer [1] ) : Boolean [1]
+  + valid_minute( m : Integer [1] ) : Boolean [1]
+  + valid_second( s : Integer [1] ) : Boolean [1]
+  + valid_fractional_second( fs : Double [1] ) : Boolean [1]
 }
 
 Time_Definitions <|-- Temporal

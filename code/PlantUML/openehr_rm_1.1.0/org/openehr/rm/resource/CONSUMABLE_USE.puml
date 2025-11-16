@@ -1,12 +1,10 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.resource.CONSUMABLE_USE
-title CONSUMABLE_USE Class
 
 class CONSUMABLE_USE {
   + amount : DATA_VALUE [0..1]
 }
 
-abstract class RESOURCE_USE {
+abstract class RESOURCE_USE  #whitesmoke;line:gray;line.dotted;text:gray {
   + cost_data : ITEM_STRUCTURE [0..1]
 }
 

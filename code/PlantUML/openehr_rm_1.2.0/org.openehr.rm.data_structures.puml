@@ -1,9 +1,7 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.data_structures
-title org.openehr.rm.data_structures Package
 
 abstract class DATA_STRUCTURE {
-  + as_hierarchy() : ITEM [0..1]
+  + as_hierarchy() : ITEM [1]
 }
 
 LOCATABLE <|-- DATA_STRUCTURE

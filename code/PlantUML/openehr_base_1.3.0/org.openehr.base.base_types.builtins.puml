@@ -1,38 +1,36 @@
 @startuml
-' PlantUML diagram for org.openehr.base.base_types.builtins
-title builtins Package
 
 interface Env {
-  + current_date() : Iso8601_date [0..1]
-  + current_time() : Iso8601_time [0..1]
-  + current_date_time() : Iso8601_date_time [0..1]
-  + current_time_zone() : Iso8601_timezone [0..1]
+  + current_date() : Iso8601_date [1]
+  + current_time() : Iso8601_time [1]
+  + current_date_time() : Iso8601_date_time [1]
+  + current_time_zone() : Iso8601_timezone [1]
 }
 
 interface Statistical_evaluator {
-  + sum(Container<Numeric> vals) : Double [0..1]
-  + avg(Container<Numeric> vals) : Double [0..1]
-  + mean(Container<Numeric> vals) : Double [0..1]
-  + median(Container<Numeric> vals) : Numeric [0..1]
-  + mode(Container<Numeric> vals) : Numeric [0..1]
-  + max(Container<Numeric> vals) : Numeric [0..1]
-  + min(Container<Numeric> vals) : Numeric [0..1]
-  + count(Container<Numeric> vals) : Numeric [0..1]
-  + std_dev(Container<Numeric> vals) : Double [0..1]
+  + sum( vals : Container<Numeric> [1] ) : Double [1]
+  + avg( vals : Container<Numeric> [1] ) : Double [1]
+  + mean( vals : Container<Numeric> [1] ) : Double [1]
+  + median( vals : Container<Numeric> [1] ) : Numeric [1]
+  + mode( vals : Container<Numeric> [1] ) : Numeric [1]
+  + max( vals : Container<Numeric> [1] ) : Numeric [1]
+  + min( vals : Container<Numeric> [1] ) : Numeric [1]
+  + count( vals : Container<Numeric> [1] ) : Numeric [1]
+  + std_dev( vals : Container<Numeric> [1] ) : Double [1]
 }
 
 interface Locale {
-  + primary_language() : Terminology_code [0..1]
+  + primary_language() : Terminology_code [1]
 }
 
 interface Math {
-  + ln(Numeric v) : Double [0..1]
-  + log(Numeric v) : Double [0..1]
-  + sin(Numeric (v) : Double [0..1]
+  + ln( v : Numeric [1] ) : Double [1]
+  + log( v : Numeric [1] ) : Double [1]
+  + sin( (v : Numeric [1] ) : Double [1]
 }
 
 interface Quantity_converter {
-  + convert_value(Real value, String from_units, String to_units, Terminology_code property) : Real [0..1]
+  + convert_value( value : Real [1], from_units : String [1], to_units : String [1], property : Terminology_code [1] ) : Real [1]
 }
 
 

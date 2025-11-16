@@ -1,11 +1,9 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.common.generic.PARTICIPATION
-title PARTICIPATION Class
 
 class PARTICIPATION {
-  + function : DV_TEXT [1..1]
+  + function : DV_TEXT [1]
   + mode : DV_CODED_TEXT [0..1]
-  + performer : PARTY_PROXY [1..1]
+  + performer : PARTY_PROXY [1]
   + time : DV_INTERVAL<DV_DATE_TIME> [0..1]
 }
 

@@ -1,33 +1,31 @@
 @startuml
-' PlantUML diagram for org.openehr.base.bmm_persistence.P_BMM_ENUMERATION_INTEGER
-title P_BMM_ENUMERATION_INTEGER Class
 
 class P_BMM_ENUMERATION_INTEGER {
   + bmm_class : BMM_ENUMERATION_INTEGER [0..1]
 }
 
-class P_BMM_ENUMERATION <<T>> {
-  + item_names : List<String> [0..*]
-  + item_values : List<Any> [0..*]
+class P_BMM_ENUMERATION <T>  #whitesmoke;line:gray;line.dotted;text:gray {
+  + item_names : List<String> [*]
+  + item_values : List<Any> [*]
   + bmm_class : BMM_ENUMERATION [0..1]
 }
 
-class P_BMM_CLASS {
-  + name : String [1..1]
-  + ancestors : List<String> [0..*]
+class P_BMM_CLASS  #whitesmoke;line:gray;line.dotted;text:gray {
+  + name : String [1]
+  + ancestors : List<String> [*]
   + properties : Hash<String,P_BMM_PROPERTY> [0..1]
   + is_abstract : Boolean [0..1]
   + is_override : Boolean [0..1]
   + generic_parameter_defs : Hash<String,P_BMM_GENERIC_PARAMETER> [0..1]
-  + source_schema_id : String [1..1]
+  + source_schema_id : String [1]
   + bmm_class : BMM_CLASS [0..1]
-  + uid : Integer [1..1]
-  + is_generic() : Boolean [0..1]
-  + create_bmm_class() : void [0..1]
-  + populate_bmm_class(BMM_MODEL a_bmm_schema) : void [0..1]
+  + uid : Integer [1]
+  + is_generic() : Boolean [1]
+  + create_bmm_class() : void [1]
+  + populate_bmm_class( a_bmm_schema : BMM_MODEL [1] ) : void [1]
 }
 
-abstract class P_BMM_MODEL_ELEMENT {
+abstract class P_BMM_MODEL_ELEMENT  #whitesmoke;line:gray;line.dotted;text:gray {
   + documentation : String [0..1]
 }
 

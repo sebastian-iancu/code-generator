@@ -1,89 +1,87 @@
 @startuml
-' PlantUML diagram for org.openehr.base.expression.core
-title core Package
 
 class ASSERTION {
   + tag : String [0..1]
   + string_expression : String [0..1]
-  + expression : EXPR_ITEM [1..1]
-  + variables : List<ASSERTION_VARIABLE> [0..*]
+  + expression : EXPR_ITEM [1]
+  + variables : List<ASSERTION_VARIABLE> [*]
 }
 
 class ASSIGNMENT {
-  + target : VARIABLE_DECLARATION [1..1]
-  + source : EXPR_VALUE [1..1]
+  + target : VARIABLE_DECLARATION [1]
+  + source : EXPR_VALUE [1]
 }
 
 class EXPR_BINARY_OPERATOR {
-  + left_operand : EXPR_ITEM [1..1]
-  + right_operand : EXPR_ITEM [1..1]
+  + left_operand : EXPR_ITEM [1]
+  + right_operand : EXPR_ITEM [1]
 }
 
 class EXPR_FUNCTION_CALL {
-  + arguments : List<EXPRESSION> [0..*]
+  + arguments : List<EXPRESSION> [*]
 }
 
 abstract class EXPRESSION {
-  + {abstract} type() : EXPR_TYPE_DEF [0..1]
+  + {abstract} type() : EXPR_TYPE_DEF [1]
 }
 
 class EXPR_LEAF {
-  + reference_type : String [1..1]
-  + item : Any [1..1]
+  + reference_type : String [1]
+  + item : Any [1]
 }
 
 class EXPR_LITERAL {
-  + item : Any [1..1]
+  + item : Any [1]
 }
 
 abstract class EXPR_OPERATOR {
   + precedence_overridden : Boolean [0..1]
-  + operator : OPERATOR_KIND [1..1]
+  + operator : OPERATOR_KIND [1]
 }
 
 class EXPR_UNARY_OPERATOR {
-  + operand : EXPR_ITEM [1..1]
+  + operand : EXPR_ITEM [1]
 }
 
 class EXPR_VARIABLE_REF {
-  + item : VARIABLE_DECLARATION [1..1]
+  + item : VARIABLE_DECLARATION [1]
 }
 
 class EXTERNAL_QUERY {
-  + context : String [1..1]
-  + query_id : String [1..1]
-  + query_args : List<String> [0..*]
+  + context : String [1]
+  + query_id : String [1]
+  + query_args : List<String> [*]
 }
 
 abstract class EXPR_VALUE {
-  + {abstract} value() : Any [0..1]
+  + {abstract} value() : Any [1]
 }
 
 class STATEMENT_SET {
-  + statement : List<STATEMENT> [0..*]
+  + statement : List<STATEMENT> [*]
   + name : String [0..1]
-  + execution_result() : Boolean [0..1]
+  + execution_result() : Boolean [1]
 }
 
 abstract class STATEMENT {
 }
 
 class VARIABLE_DECLARATION {
-  + name : String [1..1]
-  + type : EXPR_TYPE_DEF [1..1]
+  + name : String [1]
+  + type : EXPR_TYPE_DEF [1]
 }
 
 class OPERATOR_DEF {
-  + identifier : String [1..1]
-  + symbols : List<String> [0..*]
+  + identifier : String [1]
+  + symbols : List<String> [*]
 }
 
 class EXPR_VALUE_REF {
 }
 
 class EXPR_FOR_ALL {
-  + condition : ASSERTION [1..1]
-  + operand : EXPR_VALUE_REF [1..1]
+  + condition : ASSERTION [1]
+  + operand : EXPR_VALUE_REF [1]
 }
 
 STATEMENT <|-- ASSIGNMENT

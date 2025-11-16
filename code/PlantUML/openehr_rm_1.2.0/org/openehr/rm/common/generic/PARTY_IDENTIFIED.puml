@@ -1,13 +1,11 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.common.generic.PARTY_IDENTIFIED
-title PARTY_IDENTIFIED Class
 
 class PARTY_IDENTIFIED {
   + name : String [0..1]
-  + identifiers : List<DV_IDENTIFIER> [0..*]
+  + identifiers : List<DV_IDENTIFIER> [*]
 }
 
-abstract class PARTY_PROXY {
+abstract class PARTY_PROXY  #whitesmoke;line:gray;line.dotted;text:gray {
   + external_ref : PARTY_REF [0..1]
 }
 

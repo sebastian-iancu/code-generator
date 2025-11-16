@@ -1,18 +1,16 @@
 @startuml
-' PlantUML diagram for org.openehr.am.aom2.constraint_model.C_ATTRIBUTE_TUPLE
-title C_ATTRIBUTE_TUPLE Class
 
 class C_ATTRIBUTE_TUPLE {
-  + tuples : List<C_PRIMITIVE_TUPLE> [0..*]
-  + members : List<C_ATTRIBUTE> [0..*]
-  + c_conforms_to(C_SECOND_ORDER other) : Boolean [0..1]
-  + c_congruent_to(C_SECOND_ORDER other) : Boolean [0..1]
+  + tuples : List<C_PRIMITIVE_TUPLE> [*]
+  + members : List<C_ATTRIBUTE> [*]
+  + c_conforms_to( other : C_SECOND_ORDER [1] ) : Boolean [1]
+  + c_congruent_to( other : C_SECOND_ORDER [1] ) : Boolean [1]
 }
 
-abstract class C_SECOND_ORDER {
-  + members : List<ARCHETYPE_CONSTRAINT> [0..*]
-  + {abstract} c_conforms_to(C_SECOND_ORDER other, FUNCTION<> rmcc) : Boolean [0..1]
-  + {abstract} c_congruent_to(C_SECOND_ORDER other) : Boolean [0..1]
+abstract class C_SECOND_ORDER  #whitesmoke;line:gray;line.dotted;text:gray {
+  + members : List<ARCHETYPE_CONSTRAINT> [*]
+  + {abstract} c_conforms_to( other : C_SECOND_ORDER [1], rmcc : FUNCTION<> [1] ) : Boolean [1]
+  + {abstract} c_congruent_to( other : C_SECOND_ORDER [1] ) : Boolean [1]
 }
 
 C_SECOND_ORDER <|-- C_ATTRIBUTE_TUPLE

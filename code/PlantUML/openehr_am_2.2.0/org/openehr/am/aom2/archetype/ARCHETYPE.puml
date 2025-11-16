@@ -1,20 +1,18 @@
 @startuml
-' PlantUML diagram for org.openehr.am.aom2.archetype.ARCHETYPE
-title ARCHETYPE Class
 
 abstract class ARCHETYPE {
   + parent_archetype_id : String [0..1]
-  + archetype_id : ARCHETYPE_HRID [1..1]
-  + is_differential : Boolean [1..1]
-  + definition : C_COMPLEX_OBJECT [1..1]
-  + terminology : ARCHETYPE_TERMINOLOGY [1..1]
-  + rules : List<STATEMENT> [0..*]
+  + archetype_id : ARCHETYPE_HRID [1]
+  + is_differential : Boolean [1]
+  + definition : C_COMPLEX_OBJECT [1]
+  + terminology : ARCHETYPE_TERMINOLOGY [1]
+  + rules : List<STATEMENT> [*]
   + rm_overlay : RM_OVERLAY [0..1]
-  + concept_code() : String [0..1]
-  + physical_paths() : List<String> [0..*]
-  + logical_paths(String lang) : List<String> [0..*]
-  + specialisation_depth() : Integer [0..1]
-  + is_specialised() : Boolean [0..1]
+  + concept_code() : String [1]
+  + physical_paths() : List<String> [1..*]
+  + logical_paths( lang : String [1] ) : List<String> [1..*]
+  + specialisation_depth() : Integer [1]
+  + is_specialised() : Boolean [1]
 }
 
 

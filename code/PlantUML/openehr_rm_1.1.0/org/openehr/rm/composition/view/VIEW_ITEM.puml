@@ -1,32 +1,30 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.composition.view.VIEW_ITEM
-title VIEW_ITEM Class
 
 abstract class VIEW_ITEM {
   + meta_data : CLUSTER [0..1]
 }
 
-abstract class CONTENT_ITEM {
+abstract class CONTENT_ITEM  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
-abstract class LOCATABLE {
-  + name : DV_TEXT [1..1]
-  + archetype_node_id : String [1..1]
+abstract class LOCATABLE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + name : DV_TEXT [1]
+  + archetype_node_id : String [1]
   + uid : UID_BASED_ID [0..1]
-  + links : List<LINK> [0..*]
+  + links : List<LINK> [*]
   + archetype_details : ARCHETYPED [0..1]
   + feeder_audit : FEEDER_AUDIT [0..1]
-  + concept() : DV_TEXT [0..1]
-  + is_archetype_root() : Boolean [0..1]
+  + concept() : DV_TEXT [1]
+  + is_archetype_root() : Boolean [1]
 }
 
-abstract class PATHABLE {
-  + parent() : PATHABLE [0..1]
-  + item_at_path(String a_path) : Any [0..1]
-  + items_at_path(String a_path) : List<Any> [1..*]
-  + path_exists(String a_path) : Boolean [0..1]
-  + path_unique(String a_path) : Boolean [0..1]
-  + path_of_item(PATHABLE a_loc) : String [0..1]
+abstract class PATHABLE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + parent() : PATHABLE [1]
+  + item_at_path( a_path : String [1] ) : Any [1]
+  + items_at_path( a_path : String [1] ) : List<Any> [*]
+  + path_exists( a_path : String [1] ) : Boolean [1]
+  + path_unique( a_path : String [1] ) : Boolean [1]
+  + path_of_item( a_loc : PATHABLE [1] ) : String [1]
 }
 
 PATHABLE <|-- LOCATABLE

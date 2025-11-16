@@ -1,14 +1,12 @@
 @startuml
-' PlantUML diagram for org.openehr.base.foundation_types.primitive_types.Boolean
-title Boolean Class
 
 class Boolean {
-  + infix and(Boolean other) : Boolean [0..1]
-  + infix and_then(Boolean other) : Boolean [0..1]
-  + infix or(Boolean other) : Boolean [0..1]
-  + infix or_else(Boolean other) : Boolean [0..1]
-  + infix xor(Boolean other) : Boolean [0..1]
-  + infix implies(Boolean other) : Boolean [0..1]
+  + infix and( other : Boolean [1] ) : Boolean [1]
+  + infix and_then( other : Boolean [1] ) : Boolean [1]
+  + infix or( other : Boolean [1] ) : Boolean [1]
+  + infix or_else( other : Boolean [1] ) : Boolean [1]
+  + infix xor( other : Boolean [1] ) : Boolean [1]
+  + infix implies( other : Boolean [1] ) : Boolean [1]
 }
 
 

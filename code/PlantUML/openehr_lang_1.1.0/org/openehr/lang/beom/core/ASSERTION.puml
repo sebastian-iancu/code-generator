@@ -1,14 +1,12 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.beom.core.ASSERTION
-title ASSERTION Class
 
 class ASSERTION {
   + tag : String [0..1]
   + string_expression : String [0..1]
-  + expression : EXPRESSION [1..1]
+  + expression : EXPRESSION [1]
 }
 
-abstract class STATEMENT {
+abstract class STATEMENT  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 STATEMENT <|-- ASSERTION

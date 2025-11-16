@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.support
-title org.openehr.rm.support Package
 
 abstract class EXTERNAL_ENVIRONMENT_ACCESS {
 }

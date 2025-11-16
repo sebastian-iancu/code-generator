@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.core.feature.BMM_PARAMETER_DIRECTION
-title BMM_PARAMETER_DIRECTION Enumeration
 
 enum BMM_PARAMETER_DIRECTION {
   in 

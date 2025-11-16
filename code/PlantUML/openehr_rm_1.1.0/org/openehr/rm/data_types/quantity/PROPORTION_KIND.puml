@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.data_types.quantity.PROPORTION_KIND
-title PROPORTION_KIND Enumeration
 
 enum PROPORTION_KIND {
   pk_ratio = 0 

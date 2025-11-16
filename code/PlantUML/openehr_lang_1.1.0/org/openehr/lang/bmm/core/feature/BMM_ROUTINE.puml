@@ -1,34 +1,32 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.core.feature.BMM_ROUTINE
-title BMM_ROUTINE Class
 
 abstract class BMM_ROUTINE {
-  + parameters : List<BMM_PARAMETER> [0..*]
-  + pre_conditions : List<BMM_ASSERTION> [0..*]
-  + post_conditions : List<BMM_ASSERTION> [0..*]
+  + parameters : List<BMM_PARAMETER> [*]
+  + pre_conditions : List<BMM_ASSERTION> [*]
+  + post_conditions : List<BMM_ASSERTION> [*]
   + definition : BMM_ROUTINE_DEFINITION [0..1]
-  + arity() : Integer [0..1]
+  + arity() : Integer [1]
 }
 
-abstract class BMM_FEATURE {
+abstract class BMM_FEATURE  #whitesmoke;line:gray;line.dotted;text:gray {
   + is_synthesised_generic : Boolean [0..1]
-  + feature_extensions : List<BMM_FEATURE_EXTENSION> [0..*]
-  + group : BMM_FEATURE_GROUP [1..1]
-  + scope : BMM_CLASS [1..1]
+  + feature_extensions : List<BMM_FEATURE_EXTENSION> [*]
+  + group : BMM_FEATURE_GROUP [1]
+  + scope : BMM_CLASS [1]
 }
 
-abstract class BMM_FORMAL_ELEMENT {
-  + type : BMM_TYPE [1..1]
+abstract class BMM_FORMAL_ELEMENT  #whitesmoke;line:gray;line.dotted;text:gray {
+  + type : BMM_TYPE [1]
   + is_nullable : Boolean [0..1]
-  + {abstract} signature() : BMM_SIGNATURE [0..1]
-  + is_boolean() : Boolean [0..1]
+  + {abstract} signature() : BMM_SIGNATURE [1]
+  + is_boolean() : Boolean [1]
 }
 
-abstract class BMM_MODEL_ELEMENT {
+abstract class BMM_MODEL_ELEMENT  #whitesmoke;line:gray;line.dotted;text:gray {
   + documentation : String [0..1]
 }
 
-class BMM_DEFINITIONS {
+class BMM_DEFINITIONS  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 BMM_DEFINITIONS <|-- BMM_MODEL_ELEMENT

@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.support.definition.BASIC_DEFINITIONS
-title BASIC_DEFINITIONS Class
 
 class BASIC_DEFINITIONS {
 }

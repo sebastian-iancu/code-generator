@@ -1,72 +1,70 @@
 @startuml
-' PlantUML diagram for org.openehr.base.foundation_types.time
-title time Package
 
 abstract class IDate {
-  + year() : Integer [0..1]
-  + month() : Integer [0..1]
-  + day() : Integer [0..1]
-  + timezone() : ITimezone [0..1]
-  + as_string() : String [0..1]
+  + year() : Integer [1]
+  + month() : Integer [1]
+  + day() : Integer [1]
+  + timezone() : ITimezone [1]
+  + as_string() : String [1]
 }
 
 abstract class IDate_time {
-  + year() : Integer [0..1]
-  + month() : Integer [0..1]
-  + day() : Integer [0..1]
-  + hour() : Integer [0..1]
-  + minute() : Integer [0..1]
-  + second() : Integer [0..1]
-  + fractional_second() : Real [0..1]
-  + timezone() : ITimezone [0..1]
+  + year() : Integer [1]
+  + month() : Integer [1]
+  + day() : Integer [1]
+  + hour() : Integer [1]
+  + minute() : Integer [1]
+  + second() : Integer [1]
+  + fractional_second() : Real [1]
+  + timezone() : ITimezone [1]
 }
 
 abstract class IDuration {
-  + seconds() : Integer [0..1]
-  + fractional_seconds() : Real [0..1]
+  + seconds() : Integer [1]
+  + fractional_seconds() : Real [1]
 }
 
 abstract class ITimezone {
-  + hour() : Integer [0..1]
-  + minute() : Integer [0..1]
-  + sign() : Integer [0..1]
+  + hour() : Integer [1]
+  + minute() : Integer [1]
+  + sign() : Integer [1]
 }
 
 abstract class ITime {
-  + hour() : Integer [0..1]
-  + minute() : Integer [0..1]
-  + second() : Integer [0..1]
-  + fractional_second() : Real [0..1]
-  + timezone() : ITimezone [1..1]
+  + hour() : Integer [1]
+  + minute() : Integer [1]
+  + second() : Integer [1]
+  + fractional_second() : Real [1]
+  + timezone() : ITimezone [0..1]
 }
 
 abstract class Temporal {
 }
 
 class Time_Definitions {
-  + valid_year(Integer y) : Boolean [0..1]
-  + valid_month(Integer m) : Boolean [0..1]
-  + valid_day(Integer y, Integer m, Integer d) : Boolean [0..1]
-  + valid_hour(Integer h, Integer m, Integer s) : Boolean [0..1]
-  + valid_minute(Integer m) : Boolean [0..1]
-  + valid_second(Integer s) : Boolean [0..1]
-  + valid_fractional_second(Double fs) : Boolean [0..1]
+  + valid_year( y : Integer [1] ) : Boolean [1]
+  + valid_month( m : Integer [1] ) : Boolean [1]
+  + valid_day( y : Integer [1], m : Integer [1], d : Integer [1] ) : Boolean [1]
+  + valid_hour( h : Integer [1], m : Integer [1], s : Integer [1] ) : Boolean [1]
+  + valid_minute( m : Integer [1] ) : Boolean [1]
+  + valid_second( s : Integer [1] ) : Boolean [1]
+  + valid_fractional_second( fs : Double [1] ) : Boolean [1]
 }
 
 class Date {
-  + value : Any [1..1]
+  + value : Any [1]
 }
 
 class Date_time {
-  + value : Any [1..1]
+  + value : Any [1]
 }
 
 class Time {
-  + value : Any [1..1]
+  + value : Any [1]
 }
 
 class Duration {
-  + value : Any [1..1]
+  + value : Any [1]
 }
 
 class Timezone {

@@ -1,15 +1,13 @@
 @startuml
-' PlantUML diagram for org.openehr.base.base_types.identification.UID_BASED_ID
-title UID_BASED_ID Class
 
 abstract class UID_BASED_ID {
-  + root() : UID [0..1]
-  + extension() : String [0..1]
-  + has_extension() : Boolean [0..1]
+  + root() : UID [1]
+  + extension() : String [1]
+  + has_extension() : Boolean [1]
 }
 
-abstract class OBJECT_ID {
-  + value : String [1..1]
+abstract class OBJECT_ID  #whitesmoke;line:gray;line.dotted;text:gray {
+  + value : String [1]
 }
 
 OBJECT_ID <|-- UID_BASED_ID

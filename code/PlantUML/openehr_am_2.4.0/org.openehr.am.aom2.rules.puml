@@ -1,18 +1,16 @@
 @startuml
-' PlantUML diagram for org.openehr.am.aom2.rules
-title rules Package
 
 class EXPR_ARCHETYPE_ID_CONSTRAINT {
-  + item : C_STRING [1..1]
+  + item : C_STRING [1]
 }
 
 class EXPR_ARCHETYPE_REF {
-  + path : String [1..1]
-  + item : ARCHETYPE_CONSTRAINT [1..1]
+  + path : String [1]
+  + item : ARCHETYPE_CONSTRAINT [1]
 }
 
 class EXPR_CONSTRAINT {
-  + item : C_PRIMITIVE_OBJECT [1..1]
+  + item : C_PRIMITIVE_OBJECT [1]
 }
 
 EXPR_CONSTRAINT <|-- EXPR_ARCHETYPE_ID_CONSTRAINT

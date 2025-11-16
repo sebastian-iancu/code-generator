@@ -1,9 +1,7 @@
 @startuml
-' PlantUML diagram for org.openehr.base.base_types.builtins.Locale
-title Locale Interface
 
 interface Locale {
-  + primary_language() : Terminology_code [0..1]
+  + primary_language() : Terminology_code [1]
 }
 
 

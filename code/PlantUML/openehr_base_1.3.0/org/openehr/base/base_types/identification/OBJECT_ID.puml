@@ -1,9 +1,7 @@
 @startuml
-' PlantUML diagram for org.openehr.base.base_types.identification.OBJECT_ID
-title OBJECT_ID Class
 
 abstract class OBJECT_ID {
-  + value : String [1..1]
+  + value : String [1]
 }
 
 

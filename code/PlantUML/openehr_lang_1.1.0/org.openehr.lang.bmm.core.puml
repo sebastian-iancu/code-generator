@@ -1,16 +1,14 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.core
-title core Package
 
 abstract class BMM_MODEL_ELEMENT {
   + documentation : String [0..1]
 }
 
 abstract class BMM_FORMAL_ELEMENT {
-  + type : BMM_TYPE [1..1]
+  + type : BMM_TYPE [1]
   + is_nullable : Boolean [0..1]
-  + {abstract} signature() : BMM_SIGNATURE [0..1]
-  + is_boolean() : Boolean [0..1]
+  + {abstract} signature() : BMM_SIGNATURE [1]
+  + is_boolean() : Boolean [1]
 }
 
 BMM_DEFINITIONS <|-- BMM_MODEL_ELEMENT

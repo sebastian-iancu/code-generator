@@ -1,32 +1,30 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.common.generic
-title generic Package
 
 class REVISION_HISTORY_ITEM {
-  + version_id : OBJECT_VERSION_ID [1..1]
+  + version_id : OBJECT_VERSION_ID [1]
   + audits : List<AUDIT_DETAILS> [1..*]
 }
 
 class AUDIT_DETAILS {
-  + system_id : String [1..1]
-  + time_committed : DV_DATE_TIME [1..1]
-  + change_type : DV_CODED_TEXT [1..1]
+  + system_id : String [1]
+  + time_committed : DV_DATE_TIME [1]
+  + change_type : DV_CODED_TEXT [1]
   + description : DV_TEXT [0..1]
-  + committer : PARTY_PROXY [1..1]
+  + committer : PARTY_PROXY [1]
 }
 
 class ATTESTATION {
   + attested_view : DV_MULTIMEDIA [0..1]
   + proof : String [0..1]
-  + items : List<DV_EHR_URI> [0..*]
-  + reason : DV_TEXT [1..1]
-  + is_pending : Boolean [1..1]
+  + items : List<DV_EHR_URI> [*]
+  + reason : DV_TEXT [1]
+  + is_pending : Boolean [1]
 }
 
 class PARTICIPATION {
-  + function : DV_TEXT [1..1]
+  + function : DV_TEXT [1]
   + mode : DV_CODED_TEXT [0..1]
-  + performer : PARTY_PROXY [1..1]
+  + performer : PARTY_PROXY [1]
   + time : DV_INTERVAL<DV_DATE_TIME> [0..1]
 }
 
@@ -36,20 +34,20 @@ abstract class PARTY_PROXY {
 
 class PARTY_IDENTIFIED {
   + name : String [0..1]
-  + identifiers : List<DV_IDENTIFIER> [0..*]
+  + identifiers : List<DV_IDENTIFIER> [*]
 }
 
 class PARTY_SELF {
 }
 
 class PARTY_RELATED {
-  + relationship : DV_CODED_TEXT [1..1]
+  + relationship : DV_CODED_TEXT [1]
 }
 
 class REVISION_HISTORY {
   + items : List<REVISION_HISTORY_ITEM> [1..*]
-  + most_recent_version() : String [0..1]
-  + most_recent_version_time_committed() : String [0..1]
+  + most_recent_version() : String [1]
+  + most_recent_version_time_committed() : String [1]
 }
 
 AUDIT_DETAILS <|-- ATTESTATION

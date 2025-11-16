@@ -1,12 +1,10 @@
 @startuml
-' PlantUML diagram for org.openehr.term.terminology.CODE_SET
-title CODE_SET Class
 
 class CODE_SET {
-  + name : String [1..1]
-  + openehr_id : String [1..1]
-  + issuer : String [1..1]
-  + codes : List<CODE> [0..*]
+  + name : String [1]
+  + openehr_id : String [1]
+  + issuer : String [1]
+  + codes : List<CODE> [*]
   + external_id : String [0..1]
   + status : TERMINOLOGY_STATUS [0..1]
 }

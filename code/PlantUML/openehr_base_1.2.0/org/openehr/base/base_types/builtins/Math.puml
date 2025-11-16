@@ -1,11 +1,9 @@
 @startuml
-' PlantUML diagram for org.openehr.base.base_types.builtins.Math
-title Math Interface
 
 interface Math {
-  + ln(Numeric v) : Double [0..1]
-  + log(Numeric v) : Double [0..1]
-  + sin(Numeric (v) : Double [0..1]
+  + ln( v : Numeric [1] ) : Double [1]
+  + log( v : Numeric [1] ) : Double [1]
+  + sin( (v : Numeric [1] ) : Double [1]
 }
 
 

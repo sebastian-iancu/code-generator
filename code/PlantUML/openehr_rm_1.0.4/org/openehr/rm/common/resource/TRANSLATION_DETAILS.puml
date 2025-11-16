@@ -1,10 +1,8 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.common.resource.TRANSLATION_DETAILS
-title TRANSLATION_DETAILS Class
 
 class TRANSLATION_DETAILS {
-  + language : CODE_PHRASE [1..1]
-  + author : Hash<String,String> [1..1]
+  + language : CODE_PHRASE [1]
+  + author : Hash<String,String> [1]
   + accreditaton : String [0..1]
   + other_details : Hash<String,String> [0..1]
 }

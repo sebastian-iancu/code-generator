@@ -1,15 +1,13 @@
 @startuml
-' PlantUML diagram for org.openehr.base.resource.RESOURCE_DESCRIPTION
-title RESOURCE_DESCRIPTION Class
 
 class RESOURCE_DESCRIPTION {
   + title : String [0..1]
-  + original_author : Hash<String,String> [1..1]
+  + original_author : Hash<String,String> [1]
   + original_namespace : String [0..1]
   + original_publisher : String [0..1]
-  + other_contributors : List<String> [0..*]
-  + parent_resource : AUTHORED_RESOURCE [1..1]
-  + lifecycle_state : String [1..1]
+  + other_contributors : List<String> [*]
+  + parent_resource : AUTHORED_RESOURCE [1]
+  + lifecycle_state : String [1]
   + custodian_namespace : String [0..1]
   + custodian_organisation : String [0..1]
   + copyright : String [0..1]

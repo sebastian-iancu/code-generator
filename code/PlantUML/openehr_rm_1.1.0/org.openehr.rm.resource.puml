@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.resource
-title org.openehr.rm.resource Package
 
 class SERVICE_USE {
   + identifier : GENERIC_ID [0..1]
@@ -17,9 +15,9 @@ class CONSUMABLE_USE {
 }
 
 class RESOURCE_USAGE {
-  + prospective : RESOURCE_USE [1..1]
-  + actual : RESOURCE_USE [1..1]
-  + type : DV_TEXT [1..1]
+  + prospective : RESOURCE_USE [1]
+  + actual : RESOURCE_USE [1]
+  + type : DV_TEXT [1]
   + description : String [0..1]
   + reference : Any [0..1]
 }

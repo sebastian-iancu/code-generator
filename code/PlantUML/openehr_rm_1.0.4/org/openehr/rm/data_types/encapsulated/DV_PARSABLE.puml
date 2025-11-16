@@ -1,19 +1,17 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.data_types.encapsulated.DV_PARSABLE
-title DV_PARSABLE Class
 
 class DV_PARSABLE {
-  + value : String [1..1]
-  + formalism : String [1..1]
-  + size() : Integer [0..1]
+  + value : String [1]
+  + formalism : String [1]
+  + size() : Integer [1]
 }
 
-abstract class DV_ENCAPSULATED {
+abstract class DV_ENCAPSULATED  #whitesmoke;line:gray;line.dotted;text:gray {
   + charset : CODE_PHRASE [0..1]
   + language : CODE_PHRASE [0..1]
 }
 
-abstract class DATA_VALUE {
+abstract class DATA_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 DATA_VALUE <|-- DV_ENCAPSULATED

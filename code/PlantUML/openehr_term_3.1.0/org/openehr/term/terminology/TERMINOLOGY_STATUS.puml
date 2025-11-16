@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.term.terminology.TERMINOLOGY_STATUS
-title TERMINOLOGY_STATUS Enumeration
 
 enum TERMINOLOGY_STATUS {
   trial 

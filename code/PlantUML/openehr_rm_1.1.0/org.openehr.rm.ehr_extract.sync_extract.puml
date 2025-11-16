@@ -1,25 +1,23 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.ehr_extract.sync_extract
-title sync_extract Package
 
 class SYNC_EXTRACT_REQUEST {
-  + specification : SYNC_EXTRACT_SPEC [1..1]
+  + specification : SYNC_EXTRACT_SPEC [1]
 }
 
 class SYNC_EXTRACT {
-  + specification : SYNC_EXTRACT_SPEC [1..1]
-  + items : List<X_CONTRIBUTION> [0..*]
+  + specification : SYNC_EXTRACT_SPEC [1]
+  + items : List<X_CONTRIBUTION> [*]
 }
 
 class X_CONTRIBUTION {
-  + uid : HIER_OBJECT_ID [1..1]
-  + audit : AUDIT_DETAILS [1..1]
-  + versions : List<VERSION<X_CONTRIBUTION>> [0..*]
+  + uid : HIER_OBJECT_ID [1]
+  + audit : AUDIT_DETAILS [1]
+  + versions : List<VERSION<X_CONTRIBUTION>> [*]
 }
 
 class SYNC_EXTRACT_SPEC {
-  + includes_versions : Boolean [1..1]
-  + contribution_list : List<HIER_OBJECT_ID> [0..*]
+  + includes_versions : Boolean [1]
+  + contribution_list : List<HIER_OBJECT_ID> [*]
   + contributions_since : DV_DATE_TIME [0..1]
   + all_contributions : Boolean [0..1]
 }

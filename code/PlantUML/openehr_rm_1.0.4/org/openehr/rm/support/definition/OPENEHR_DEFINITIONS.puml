@@ -1,11 +1,9 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.support.definition.OPENEHR_DEFINITIONS
-title OPENEHR_DEFINITIONS Class
 
 class OPENEHR_DEFINITIONS {
 }
 
-class BASIC_DEFINITIONS {
+class BASIC_DEFINITIONS  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 BASIC_DEFINITIONS <|-- OPENEHR_DEFINITIONS

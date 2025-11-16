@@ -1,39 +1,37 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.data_structures.item_structure.ITEM_TREE
-title ITEM_TREE Class
 
 class ITEM_TREE {
-  + items : List<ITEM> [0..*]
-  + has_element_path(String a_path) : Boolean [0..1]
-  + element_at_path(String a_path) : ELEMENT [0..1]
-  + as_hierarchy() : CLUSTER [0..1]
+  + items : List<ITEM> [*]
+  + has_element_path( a_path : String [1] ) : Boolean [1]
+  + element_at_path( a_path : String [1] ) : ELEMENT [1]
+  + as_hierarchy() : CLUSTER [1]
 }
 
-abstract class ITEM_STRUCTURE {
+abstract class ITEM_STRUCTURE  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
-abstract class DATA_STRUCTURE {
-  + as_hierarchy() : ITEM [0..1]
+abstract class DATA_STRUCTURE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + as_hierarchy() : ITEM [1]
 }
 
-abstract class LOCATABLE {
-  + name : DV_TEXT [1..1]
-  + archetype_node_id : String [1..1]
+abstract class LOCATABLE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + name : DV_TEXT [1]
+  + archetype_node_id : String [1]
   + uid : UID_BASED_ID [0..1]
-  + links : List<LINK> [0..*]
+  + links : List<LINK> [*]
   + archetype_details : ARCHETYPED [0..1]
   + feeder_audit : FEEDER_AUDIT [0..1]
-  + concept() : DV_TEXT [0..1]
-  + is_archetype_root() : Boolean [0..1]
+  + concept() : DV_TEXT [1]
+  + is_archetype_root() : Boolean [1]
 }
 
-abstract class PATHABLE {
-  + parent() : PATHABLE [0..1]
-  + item_at_path(String a_path) : Any [0..1]
-  + items_at_path(String a_path) : List<Any> [1..*]
-  + path_exists(String a_path) : Boolean [0..1]
-  + path_unique(String a_path) : Boolean [0..1]
-  + path_of_item(PATHABLE a_loc) : String [0..1]
+abstract class PATHABLE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + parent() : PATHABLE [1]
+  + item_at_path( a_path : String [1] ) : Any [1]
+  + items_at_path( a_path : String [1] ) : List<Any> [*]
+  + path_exists( a_path : String [1] ) : Boolean [1]
+  + path_unique( a_path : String [1] ) : Boolean [1]
+  + path_of_item( a_loc : PATHABLE [1] ) : String [1]
 }
 
 PATHABLE <|-- LOCATABLE

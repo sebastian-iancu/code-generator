@@ -16,7 +16,6 @@ use OpenEHR\Tools\CodeGen\Model\Bmm\BmmGenericProperty;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmGenericType;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmInterface;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmPackage;
-use OpenEHR\Tools\CodeGen\Model\Bmm\BmmSchema;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmSimpleType;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmSingleFunctionParameter;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmSingleFunctionParameterOpen;
@@ -31,18 +30,12 @@ class PlantUml
         $content = "Unsupported *{$bmmItem->name}*, context *format-plantUML*";
         if ($bmmItem instanceof BmmInterface) {
             $content = $this->formatInterface($bmmItem);
-            $purpose = $prefix . '.' . $bmmItem->name;
-            $title = $bmmItem->name . ' Interface';
         }
         if ($bmmItem instanceof BmmClass) {
             $content = $this->formatClass($bmmItem) . $this->formatClassAncestors($bmmItem);
-            $purpose = $prefix . '.' . $bmmItem->name;
-            $title = $bmmItem->name . ' Class';
         }
         if ($bmmItem instanceof BmmEnumerationString || $bmmItem instanceof BmmEnumerationInteger) {
             $content = $this->formatEnum($bmmItem);
-            $purpose = $prefix . '.' . $bmmItem->name;
-            $title = $bmmItem->name . ' Enumeration';
         }
         if ($bmmItem instanceof BmmPackage && count($bmmItem->classes)) {
             $classesOutput = [];
@@ -61,14 +54,10 @@ class PlantUml
                 }
             }
             $content = implode('', $classesOutput) . implode('', $relationshipOutput);
-            $purpose = $prefix;
-            $title = $bmmItem->name . ' Package';
         }
 
         return <<<EOD
 @startuml
-' PlantUML diagram for {$purpose}
-title {$title}
 
 {$content}
 @enduml
@@ -91,7 +80,7 @@ EOD;
         $output .= "class " . $class->name . " ";
         if ($class->genericParameterDefs->count() > 0) {
             $genericParameterDefs = array_map(fn($item) => $item->getName(), $class->genericParameterDefs->getArrayCopy());
-            $output .= '<<' . implode(', ', $genericParameterDefs) . '>> ';
+            $output .= '<' . implode(', ', $genericParameterDefs) . '> ';
         }
         $output .= "{\n";
 
@@ -147,18 +136,18 @@ EOD;
     private function formatProperty(AbstractBmmProperty $property): string
     {
         $type = '';
-        $minOccurs = (int)($property->isMandatory ?? 0);
-        $maxOccurs = 1;
+        $minOccurs = !empty($property->isMandatory) ? '1' : '0';
+        $maxOccurs = '1';
         if ($property instanceof BmmContainerProperty) {
             $type = $this->formatContainerParameterType($property->typeDef);
-            $maxOccurs = $property->cardinality->upperUnbounded ? '*' : $property->cardinality->upper;
+            $maxOccurs = $property->cardinality->upperUnbounded ? '*' : $property->cardinality->upper ?? '*';
         } elseif ($property instanceof BmmGenericProperty) {
             $type = $this->formatGenericParameterType($property->typeDef);
         } elseif ($property instanceof BmmSingleProperty || $property instanceof BmmSinglePropertyOpen) {
             $type = $property->type;
         }
 
-        return "+ " . $property->name . " : " . $type . " [" . $minOccurs . ".." . $maxOccurs . "]";
+        return "+ " . $property->name . " : " . $type . $this->formatCardinality($minOccurs, $maxOccurs);
     }
 
     /**
@@ -171,8 +160,8 @@ EOD;
     {
         $abstract = $function->isAbstract ? '{abstract} ' : '';
         $type = '';
-        $minOccurs = (int)($function->isNullable ?? 0);
-        $maxOccurs = 1;
+        $minOccurs = empty($function->isNullable) ? '1' : '0';
+        $maxOccurs = '1';
         if ($function->result instanceof BmmContainerType) {
             $type = $this->formatContainerParameterType($function->result);
             $maxOccurs = '*';
@@ -181,18 +170,24 @@ EOD;
         } elseif ($function->result instanceof BmmSimpleType) {
             $type = $function->result->type;
         }
-        $arguments = implode(', ', array_map(function ($parameter) {
-            if ($parameter instanceof BmmContainerFunctionParameter) {
-                return $this->formatContainerParameterType($parameter->typeDef) . ' ' . $parameter->name;
-            } elseif ($parameter instanceof BmmGenericFunctionParameter) {
-                return $this->formatGenericParameterType($parameter->typeDef) . ' ' . $parameter->name;
-            } elseif ($parameter instanceof BmmSingleFunctionParameter || $parameter instanceof BmmSingleFunctionParameterOpen) {
-                return $parameter->type . ' ' . $parameter->name;
-            }
-            return '';
-        }, $function->parameters->getArrayCopy()));
+        $arguments = '';
+        if ($function->parameters->count()) {
+            $arguments = ' ' . implode(', ', array_map(function ($parameter) {
+                    $minOccurs = empty($parameter->isNullable) ? '1' : '0';
+                    $maxOccurs = '1';
+                    $cardinality = $this->formatCardinality($minOccurs, $maxOccurs);
+                    if ($parameter instanceof BmmContainerFunctionParameter) {
+                        return $parameter->name . ' : ' . $this->formatContainerParameterType($parameter->typeDef) . $cardinality;
+                    } elseif ($parameter instanceof BmmGenericFunctionParameter) {
+                        return $parameter->name . ' : ' . $this->formatGenericParameterType($parameter->typeDef) . $cardinality;
+                    } elseif ($parameter instanceof BmmSingleFunctionParameter || $parameter instanceof BmmSingleFunctionParameterOpen) {
+                        return $parameter->name . ' : ' . $parameter->type . $cardinality;
+                    }
+                    return '';
+                }, $function->parameters->getArrayCopy())) . ' ';
+        }
 
-        return "+ " . $abstract . $function->name . "(" . $arguments . ") : " . $type . " [" . $minOccurs . ".." . $maxOccurs . "]";
+        return '+ ' . $abstract . $function->name . '(' . $arguments . ') : ' . $type . $this->formatCardinality($minOccurs, $maxOccurs);
     }
 
     /**
@@ -248,6 +243,20 @@ EOD;
     }
 
     /**
+     * @param string $minOccurs
+     * @param string $maxOccurs
+     * @return string
+     */
+    private function formatCardinality(string $minOccurs, string $maxOccurs): string
+    {
+        return match ($minOccurs . '..' . $maxOccurs) {
+            '1..1' => ' [1]',
+            '0..*' => ' [*]',
+            default => ' [' . $minOccurs . '..' . $maxOccurs . ']'
+        };
+    }
+
+    /**
      * Generates PlantUML representation for all ancestor classes and their inheritance relationships
      *
      * @param BmmClass $class The BMM class to generate ancestors for
@@ -267,6 +276,7 @@ EOD;
             }
             $output .= $ancestorName . " <|-- " . $class->name . "\n\n";
         }
+        $output = preg_replace('/\bclass ([^{#]+)\{/', "class $1 #whitesmoke;line:gray;line.dotted;text:gray {", $output);
         return $output;
     }
 

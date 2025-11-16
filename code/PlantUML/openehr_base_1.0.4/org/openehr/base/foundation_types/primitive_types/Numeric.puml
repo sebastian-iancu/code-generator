@@ -1,11 +1,9 @@
 @startuml
-' PlantUML diagram for org.openehr.base.foundation_types.primitive_types.Numeric
-title Numeric Class
 
 abstract class Numeric {
-  + {abstract} infix *(Numeric other) : Numeric [0..1]
-  + {abstract} infix +(Numeric other) : Numeric [0..1]
-  + {abstract} infix -(Numeric other) : Numeric [0..1]
+  + {abstract} infix *( other : Numeric [1] ) : Numeric [1]
+  + {abstract} infix +( other : Numeric [1] ) : Numeric [1]
+  + {abstract} infix -( other : Numeric [1] ) : Numeric [1]
 }
 
 

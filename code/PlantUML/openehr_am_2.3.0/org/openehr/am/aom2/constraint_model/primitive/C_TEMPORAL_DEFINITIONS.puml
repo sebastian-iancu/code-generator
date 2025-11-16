@@ -1,19 +1,17 @@
 @startuml
-' PlantUML diagram for org.openehr.am.aom2.constraint_model.primitive.C_TEMPORAL_DEFINITIONS
-title C_TEMPORAL_DEFINITIONS Class
 
 class C_TEMPORAL_DEFINITIONS {
   + valid_date_constraint_patterns : List<String> [1..*]
-  + valid_date_constraint_replacements : Hash<String,List<String>> [1..1]
+  + valid_date_constraint_replacements : Hash<String,List<String>> [1]
   + valid_time_constraint_patterns : List<String> [1..*]
-  + valid_time_constraint_replacements : Hash<String,List<String>> [1..1]
+  + valid_time_constraint_replacements : Hash<String,List<String>> [1]
   + valid_date_time_constraint_patterns : List<String> [1..*]
-  + valid_date_time_constraint_replacements : Hash<String,List<String>> [1..1]
-  + valid_duration_constraint_replacement(String a_dur, String other_dur) : Boolean [0..1]
-  + valid_iso8601_date_constraint_pattern(String s) : Boolean [0..1]
-  + valid_iso8601_time_constraint_pattern(String s) : Boolean [0..1]
-  + valid_iso8601_date_time_constraint_pattern(String s) : Boolean [0..1]
-  + valid_iso8601_duration_constraint_pattern(String s) : Boolean [0..1]
+  + valid_date_time_constraint_replacements : Hash<String,List<String>> [1]
+  + valid_duration_constraint_replacement( a_dur : String [1], other_dur : String [1] ) : Boolean [1]
+  + valid_iso8601_date_constraint_pattern( s : String [1] ) : Boolean [1]
+  + valid_iso8601_time_constraint_pattern( s : String [1] ) : Boolean [1]
+  + valid_iso8601_date_time_constraint_pattern( s : String [1] ) : Boolean [1]
+  + valid_iso8601_duration_constraint_pattern( s : String [1] ) : Boolean [1]
 }
 
 

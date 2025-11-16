@@ -1,13 +1,11 @@
 @startuml
-' PlantUML diagram for org.openehr.base.base_types.identification.GENERIC_ID
-title GENERIC_ID Class
 
 class GENERIC_ID {
-  + scheme : String [1..1]
+  + scheme : String [1]
 }
 
-abstract class OBJECT_ID {
-  + value : String [1..1]
+abstract class OBJECT_ID  #whitesmoke;line:gray;line.dotted;text:gray {
+  + value : String [1]
 }
 
 OBJECT_ID <|-- GENERIC_ID

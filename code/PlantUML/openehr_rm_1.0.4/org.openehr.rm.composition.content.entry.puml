@@ -1,9 +1,7 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.composition.content.entry
-title entry Package
 
 class ADMIN_ENTRY {
-  + data : ITEM_STRUCTURE [1..1]
+  + data : ITEM_STRUCTURE [1]
 }
 
 abstract class CARE_ENTRY {
@@ -12,55 +10,55 @@ abstract class CARE_ENTRY {
 }
 
 class OBSERVATION {
-  + data : HISTORY<ITEM_STRUCTURE> [1..1]
+  + data : HISTORY<ITEM_STRUCTURE> [1]
   + state : HISTORY<ITEM_STRUCTURE> [0..1]
 }
 
 class EVALUATION {
-  + data : ITEM_STRUCTURE [1..1]
+  + data : ITEM_STRUCTURE [1]
 }
 
 class ACTION {
-  + time : DV_DATE_TIME [1..1]
-  + ism_transition : ISM_TRANSITION [1..1]
+  + time : DV_DATE_TIME [1]
+  + ism_transition : ISM_TRANSITION [1]
   + instruction_details : INSTRUCTION_DETAILS [0..1]
-  + description : ITEM_STRUCTURE [1..1]
+  + description : ITEM_STRUCTURE [1]
 }
 
 class ACTIVITY {
   + timing : DV_PARSABLE [0..1]
-  + action_archetype_id : String [1..1]
-  + description : ITEM_STRUCTURE [1..1]
+  + action_archetype_id : String [1]
+  + description : ITEM_STRUCTURE [1]
 }
 
 class ISM_TRANSITION {
-  + current_state : DV_CODED_TEXT [1..1]
+  + current_state : DV_CODED_TEXT [1]
   + transition : DV_CODED_TEXT [0..1]
   + careflow_step : DV_CODED_TEXT [0..1]
-  + reason : List<DV_TEXT> [0..*]
+  + reason : List<DV_TEXT> [*]
 }
 
 class INSTRUCTION_DETAILS {
-  + instruction_id : LOCATABLE_REF [1..1]
-  + activity_id : String [1..1]
+  + instruction_id : LOCATABLE_REF [1]
+  + activity_id : String [1]
   + wf_details : ITEM_STRUCTURE [0..1]
 }
 
 abstract class ENTRY {
-  + language : CODE_PHRASE [1..1]
-  + encoding : CODE_PHRASE [1..1]
-  + other_participations : List<PARTICIPATION> [0..*]
+  + language : CODE_PHRASE [1]
+  + encoding : CODE_PHRASE [1]
+  + other_participations : List<PARTICIPATION> [*]
   + workflow_id : OBJECT_REF [0..1]
-  + subject : PARTY_PROXY [1..1]
+  + subject : PARTY_PROXY [1]
   + provider : PARTY_PROXY [0..1]
-  + subject_is_self() : Boolean [0..1]
+  + subject_is_self() : Boolean [1]
 }
 
 class INSTRUCTION {
-  + narrative : DV_TEXT [1..1]
+  + narrative : DV_TEXT [1]
   + expiry_time : DV_DATE_TIME [0..1]
   + wf_definition : DV_PARSABLE [0..1]
-  + activities : List<ACTIVITY> [0..*]
+  + activities : List<ACTIVITY> [*]
 }
 
 ENTRY <|-- ADMIN_ENTRY

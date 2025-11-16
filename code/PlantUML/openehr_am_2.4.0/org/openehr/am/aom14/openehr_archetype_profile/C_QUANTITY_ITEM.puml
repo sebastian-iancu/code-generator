@@ -1,9 +1,7 @@
 @startuml
-' PlantUML diagram for org.openehr.am.aom14.openehr_archetype_profile.C_QUANTITY_ITEM
-title C_QUANTITY_ITEM Class
 
 class C_QUANTITY_ITEM {
-  + magnitude : Interval<Real> [1..1]
+  + magnitude : Interval<Real> [1]
   + units : String [0..1]
 }
 

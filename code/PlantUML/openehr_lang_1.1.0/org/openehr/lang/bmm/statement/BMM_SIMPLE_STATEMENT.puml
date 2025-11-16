@@ -1,17 +1,15 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.statement.BMM_SIMPLE_STATEMENT
-title BMM_SIMPLE_STATEMENT Class
 
 abstract class BMM_SIMPLE_STATEMENT {
 }
 
-abstract class BMM_STATEMENT {
+abstract class BMM_STATEMENT  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
-abstract class BMM_STATEMENT_ITEM {
+abstract class BMM_STATEMENT_ITEM  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
-abstract class BMM_ROUTINE_BODY {
+abstract class BMM_ROUTINE_BODY  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 BMM_ROUTINE_BODY <|-- BMM_STATEMENT_ITEM

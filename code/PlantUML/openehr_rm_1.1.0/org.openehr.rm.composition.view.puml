@@ -1,19 +1,17 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.composition.view
-title view Package
 
 abstract class VIEW_ENTRY {
 }
 
 class VIEW_SECTION {
-  + items : List<VIEW_ITEM> [0..*]
+  + items : List<VIEW_ITEM> [*]
 }
 
-class CITATION <<L>> {
+class CITATION <L> {
   + source_type : String [0..1]
-  + source_ref : LOCATABLE_REF [1..1]
-  + source_parent_ref : LOCATABLE_REF [1..1]
-  + resolved : L [1..1]
+  + source_ref : LOCATABLE_REF [1]
+  + source_parent_ref : LOCATABLE_REF [1]
+  + resolved : L [1]
 }
 
 abstract class VIEW_ITEM {

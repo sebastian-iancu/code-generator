@@ -1,46 +1,44 @@
 @startuml
-' PlantUML diagram for org.openehr.base.bmm.core.BMM_PARAMETER_TYPE
-title BMM_PARAMETER_TYPE Class
 
 class BMM_PARAMETER_TYPE {
-  + name : String [1..1]
+  + name : String [1]
   + type_constraint : BMM_DEFINED_TYPE [0..1]
   + inheritance_precursor : BMM_PARAMETER_TYPE [0..1]
-  + flattened_conforms_to_type() : String [0..1]
-  + effective_conforms_to_type() : BMM_CLASS [0..1]
-  + type_signature() : String [0..1]
-  + is_primitive() : Boolean [0..1]
-  + is_abstract() : Boolean [0..1]
-  + entity_metatype() : String [0..1]
-  + effective_base_class() : BMM_CLASS [0..1]
-  + has_subtypes() : Boolean [0..1]
-  + subtypes() : List<String> [0..*]
-  + type_name() : String [0..1]
-  + flattened_type_list() : List<String> [0..*]
+  + flattened_conforms_to_type() : String [1]
+  + effective_conforms_to_type() : BMM_CLASS [1]
+  + type_signature() : String [1]
+  + is_primitive() : Boolean [1]
+  + is_abstract() : Boolean [1]
+  + entity_metatype() : String [1]
+  + effective_base_class() : BMM_CLASS [1]
+  + has_subtypes() : Boolean [1]
+  + subtypes() : List<String> [1..*]
+  + type_name() : String [1]
+  + flattened_type_list() : List<String> [1..*]
 }
 
-abstract class BMM_UNITARY_TYPE {
+abstract class BMM_UNITARY_TYPE  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
-abstract class BMM_TYPE {
-  + {abstract} effective_base_class() : BMM_CLASS [0..1]
-  + {abstract} type_name() : String [0..1]
-  + {abstract} has_subtypes() : Boolean [0..1]
-  + {abstract} subtypes() : List<String> [0..*]
-  + {abstract} flattened_type_list() : List<String> [0..*]
-  + type_signature() : String [0..1]
-  + is_primitive() : Boolean [0..1]
-  + entity_metatype() : String [0..1]
+abstract class BMM_TYPE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} effective_base_class() : BMM_CLASS [1]
+  + {abstract} type_name() : String [1]
+  + {abstract} has_subtypes() : Boolean [1]
+  + {abstract} subtypes() : List<String> [1..*]
+  + {abstract} flattened_type_list() : List<String> [1..*]
+  + type_signature() : String [1]
+  + is_primitive() : Boolean [1]
+  + entity_metatype() : String [1]
 }
 
-abstract class BMM_ENTITY {
-  + {abstract} entity_category() : String [0..1]
-  + {abstract} entity_metatype() : String [0..1]
-  + {abstract} is_abstract() : Boolean [0..1]
-  + {abstract} is_primitive() : Boolean [0..1]
+abstract class BMM_ENTITY  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} entity_category() : String [1]
+  + {abstract} entity_metatype() : String [1]
+  + {abstract} is_abstract() : Boolean [1]
+  + {abstract} is_primitive() : Boolean [1]
 }
 
-class BMM_DEFINITIONS {
+class BMM_DEFINITIONS  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 BMM_DEFINITIONS <|-- BMM_ENTITY

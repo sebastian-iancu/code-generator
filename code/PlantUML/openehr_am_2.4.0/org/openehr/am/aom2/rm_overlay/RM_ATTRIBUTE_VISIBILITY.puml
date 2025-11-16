@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.am.aom2.rm_overlay.RM_ATTRIBUTE_VISIBILITY
-title RM_ATTRIBUTE_VISIBILITY Class
 
 class RM_ATTRIBUTE_VISIBILITY {
   + visibility : VISIBILITY_TYPE [0..1]

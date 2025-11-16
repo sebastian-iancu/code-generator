@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.am.aom2.rm_overlay.RM_OVERLAY
-title RM_OVERLAY Class
 
 class RM_OVERLAY {
   + rm_visibility : Hash<String,RM_ATTRIBUTE_VISIBILITY> [0..1]

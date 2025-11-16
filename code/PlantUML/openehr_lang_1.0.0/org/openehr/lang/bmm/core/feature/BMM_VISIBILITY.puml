@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.core.feature.BMM_VISIBILITY
-title BMM_VISIBILITY Class
 
 abstract class BMM_VISIBILITY {
 }

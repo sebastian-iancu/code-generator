@@ -1,9 +1,7 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.support.terminology.OPENEHR_CODE_SET_IDENTIFIERS
-title OPENEHR_CODE_SET_IDENTIFIERS Class
 
 class OPENEHR_CODE_SET_IDENTIFIERS {
-  + valid_code_set_id(String an_id) : Boolean [0..1]
+  + valid_code_set_id( an_id : String [1] ) : Boolean [1]
 }
 
 

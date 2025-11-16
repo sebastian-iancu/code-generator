@@ -1,22 +1,20 @@
 @startuml
-' PlantUML diagram for org.openehr.base.base_types.identification.OBJECT_VERSION_ID
-title OBJECT_VERSION_ID Class
 
 class OBJECT_VERSION_ID {
-  + object_id() : UID [0..1]
-  + version_tree_id() : VERSION_TREE_ID [0..1]
-  + creating_system_id() : UID [0..1]
-  + is_branch() : Boolean [0..1]
+  + object_id() : UID [1]
+  + version_tree_id() : VERSION_TREE_ID [1]
+  + creating_system_id() : UID [1]
+  + is_branch() : Boolean [1]
 }
 
-abstract class UID_BASED_ID {
-  + root() : UID [0..1]
-  + extension() : String [0..1]
-  + has_extension() : Boolean [0..1]
+abstract class UID_BASED_ID  #whitesmoke;line:gray;line.dotted;text:gray {
+  + root() : UID [1]
+  + extension() : String [1]
+  + has_extension() : Boolean [1]
 }
 
-abstract class OBJECT_ID {
-  + value : String [1..1]
+abstract class OBJECT_ID  #whitesmoke;line:gray;line.dotted;text:gray {
+  + value : String [1]
 }
 
 OBJECT_ID <|-- UID_BASED_ID

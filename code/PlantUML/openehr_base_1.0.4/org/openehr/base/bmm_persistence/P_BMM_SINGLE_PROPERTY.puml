@@ -1,26 +1,24 @@
 @startuml
-' PlantUML diagram for org.openehr.base.bmm_persistence.P_BMM_SINGLE_PROPERTY
-title P_BMM_SINGLE_PROPERTY Class
 
 class P_BMM_SINGLE_PROPERTY {
   + type : String [0..1]
   + type_ref : P_BMM_SIMPLE_TYPE [0..1]
   + bmm_property : BMM_PROPERTY<BMM_SIMPLE_TYPE> [0..1]
-  + type_def() : P_BMM_SIMPLE_TYPE [0..1]
+  + type_def() : P_BMM_SIMPLE_TYPE [1]
 }
 
-abstract class P_BMM_PROPERTY {
-  + name : String [1..1]
+abstract class P_BMM_PROPERTY  #whitesmoke;line:gray;line.dotted;text:gray {
+  + name : String [1]
   + is_mandatory : Boolean [0..1]
   + is_computed : Boolean [0..1]
   + is_im_infrastructure : Boolean [0..1]
   + is_im_runtime : Boolean [0..1]
   + type_def : P_BMM_TYPE [0..1]
   + bmm_property : BMM_PROPERTY<BMM_TYPE> [0..1]
-  + create_bmm_property(BMM_MODEL a_bmm_schema, BMM_CLASS a_class_def) : void [0..1]
+  + create_bmm_property( a_bmm_schema : BMM_MODEL [1], a_class_def : BMM_CLASS [1] ) : void [1]
 }
 
-abstract class P_BMM_MODEL_ELEMENT {
+abstract class P_BMM_MODEL_ELEMENT  #whitesmoke;line:gray;line.dotted;text:gray {
   + documentation : String [0..1]
 }
 

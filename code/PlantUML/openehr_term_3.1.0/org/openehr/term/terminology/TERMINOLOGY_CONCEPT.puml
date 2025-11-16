@@ -1,10 +1,8 @@
 @startuml
-' PlantUML diagram for org.openehr.term.terminology.TERMINOLOGY_CONCEPT
-title TERMINOLOGY_CONCEPT Class
 
 class TERMINOLOGY_CONCEPT {
-  + id : String [1..1]
-  + rubric : String [1..1]
+  + id : String [1]
+  + rubric : String [1]
   + status : TERMINOLOGY_STATUS [0..1]
 }
 

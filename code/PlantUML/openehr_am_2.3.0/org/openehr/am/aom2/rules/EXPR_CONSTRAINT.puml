@@ -1,18 +1,16 @@
 @startuml
-' PlantUML diagram for org.openehr.am.aom2.rules.EXPR_CONSTRAINT
-title EXPR_CONSTRAINT Class
 
 class EXPR_CONSTRAINT {
-  + item : C_PRIMITIVE_OBJECT [1..1]
+  + item : C_PRIMITIVE_OBJECT [1]
 }
 
-class EXPR_LEAF {
-  + reference_type : String [1..1]
-  + item : Any [1..1]
+class EXPR_LEAF  #whitesmoke;line:gray;line.dotted;text:gray {
+  + reference_type : String [1]
+  + item : Any [1]
 }
 
-abstract class EXPR_ITEM {
-  + type : String [1..1]
+abstract class EXPR_ITEM  #whitesmoke;line:gray;line.dotted;text:gray {
+  + type : String [1]
 }
 
 EXPR_ITEM <|-- EXPR_LEAF

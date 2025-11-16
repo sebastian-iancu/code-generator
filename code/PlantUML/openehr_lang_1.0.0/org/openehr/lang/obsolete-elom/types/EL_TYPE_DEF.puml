@@ -1,10 +1,8 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.obsolete-elom.types.EL_TYPE_DEF
-title EL_TYPE_DEF Class
 
 abstract class EL_TYPE_DEF {
-  + type_name : String [1..1]
-  + type_anchor : Any [1..1]
+  + type_name : String [1]
+  + type_anchor : Any [1]
 }
 
 

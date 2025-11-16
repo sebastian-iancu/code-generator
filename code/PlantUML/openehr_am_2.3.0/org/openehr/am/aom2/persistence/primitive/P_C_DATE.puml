@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.am.aom2.persistence.primitive.P_C_DATE
-title P_C_DATE Class
 
 class P_C_DATE {
 }

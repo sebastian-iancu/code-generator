@@ -1,14 +1,12 @@
 @startuml
-' PlantUML diagram for org.openehr.base.foundation_types.structures.Array
-title Array Class
 
-class Array <<T>> {
+class Array <T> {
 }
 
-abstract class Container <<T>> {
-  + {abstract} has(T v) : Boolean [0..1]
-  + {abstract} count() : Integer [0..1]
-  + {abstract} is_empty() : Boolean [0..1]
+abstract class Container <T>  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} has( v : T [1] ) : Boolean [1]
+  + {abstract} count() : Integer [1]
+  + {abstract} is_empty() : Boolean [1]
 }
 
 Container <|-- Array

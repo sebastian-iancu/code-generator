@@ -1,12 +1,10 @@
 @startuml
-' PlantUML diagram for org.openehr.am.aom2.terminology.VALUE_SET
-title VALUE_SET Class
 
 class VALUE_SET {
 }
 
-abstract class TERMINOLOGY_RELATION {
-  + id : String [1..1]
+abstract class TERMINOLOGY_RELATION  #whitesmoke;line:gray;line.dotted;text:gray {
+  + id : String [1]
   + members : List<String> [1..*]
 }
 

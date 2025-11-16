@@ -1,15 +1,13 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.obsolete-elom.types.TYPE_DEF_URI
-title TYPE_DEF_URI Class
 
 class TYPE_DEF_URI {
-  + type_name : String [1..1]
-  + type_anchor : Integer [1..1]
+  + type_name : String [1]
+  + type_anchor : Integer [1]
 }
 
-abstract class EL_TYPE_DEF {
-  + type_name : String [1..1]
-  + type_anchor : Any [1..1]
+abstract class EL_TYPE_DEF  #whitesmoke;line:gray;line.dotted;text:gray {
+  + type_name : String [1]
+  + type_anchor : Any [1]
 }
 
 EL_TYPE_DEF <|-- TYPE_DEF_URI

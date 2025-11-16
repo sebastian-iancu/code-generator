@@ -1,20 +1,18 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.expression.EL_CASE_TABLE
-title EL_CASE_TABLE Class
 
 class EL_CASE_TABLE {
   + items : List<EL_CASE> [1..*]
-  + input : EL_SIMPLE [1..1]
+  + input : EL_SIMPLE [1]
 }
 
-abstract class EL_DECISION_TABLE {
-  + else : EL_EXPRESSION [1..1]
+abstract class EL_DECISION_TABLE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + else : EL_EXPRESSION [1]
   + items : List<EL_DECISION_BRANCH> [1..*]
 }
 
-abstract class EL_EXPRESSION {
-  + {abstract} eval_type() : BMM_TYPE [0..1]
-  + is_boolean() : Boolean [0..1]
+abstract class EL_EXPRESSION  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} eval_type() : BMM_TYPE [1]
+  + is_boolean() : Boolean [1]
 }
 
 EL_EXPRESSION <|-- EL_DECISION_TABLE

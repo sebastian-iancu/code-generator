@@ -1,35 +1,33 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm.expression.EL_AGENT
-title EL_AGENT Class
 
 abstract class EL_AGENT {
-  + name : String [1..1]
+  + name : String [1]
   + closed_args : EL_TUPLE [0..1]
-  + open_args : List<String> [0..*]
+  + open_args : List<String> [*]
   + definition : BMM_ROUTINE [0..1]
-  + is_writable : Boolean [1..1]
-  + eval_type() : BMM_ROUTINE_TYPE [0..1]
-  + is_callable() : Boolean [0..1]
-  + reference() : String [0..1]
+  + is_writable : Boolean [1]
+  + eval_type() : BMM_ROUTINE_TYPE [1]
+  + is_callable() : Boolean [1]
+  + reference() : String [1]
 }
 
-abstract class EL_FEATURE_REF {
+abstract class EL_FEATURE_REF  #whitesmoke;line:gray;line.dotted;text:gray {
   + scoper : EL_VALUE_GENERATOR [0..1]
-  + reference() : String [0..1]
+  + reference() : String [1]
 }
 
-abstract class EL_VALUE_GENERATOR {
-  + is_writable : Boolean [1..1]
-  + name : String [1..1]
-  + reference() : String [0..1]
+abstract class EL_VALUE_GENERATOR  #whitesmoke;line:gray;line.dotted;text:gray {
+  + is_writable : Boolean [1]
+  + name : String [1]
+  + reference() : String [1]
 }
 
-abstract class EL_SIMPLE {
+abstract class EL_SIMPLE  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
-abstract class EL_EXPRESSION {
-  + {abstract} eval_type() : BMM_TYPE [0..1]
-  + is_boolean() : Boolean [0..1]
+abstract class EL_EXPRESSION  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} eval_type() : BMM_TYPE [1]
+  + is_boolean() : Boolean [1]
 }
 
 EL_EXPRESSION <|-- EL_SIMPLE

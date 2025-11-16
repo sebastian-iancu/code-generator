@@ -1,6 +1,4 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.ehr_extract.message.MESSAGE_CONTENT
-title MESSAGE_CONTENT Class
 
 abstract class MESSAGE_CONTENT {
 }

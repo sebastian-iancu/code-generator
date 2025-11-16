@@ -1,55 +1,53 @@
 @startuml
-' PlantUML diagram for org.openehr.base.bmm.core.BMM_GENERIC_CLASS
-title BMM_GENERIC_CLASS Class
 
 class BMM_GENERIC_CLASS {
-  + generic_parameters : Hash<String,BMM_PARAMETER_TYPE> [1..1]
-  + suppliers() : List<String> [1..*]
-  + entity_metatype() : String [0..1]
-  + type() : BMM_GENERIC_TYPE [0..1]
-  + generic_parameter_conformance_type(String a_name) : String [0..1]
+  + generic_parameters : Hash<String,BMM_PARAMETER_TYPE> [1]
+  + suppliers() : List<String> [*]
+  + entity_metatype() : String [1]
+  + type() : BMM_GENERIC_TYPE [1]
+  + generic_parameter_conformance_type( a_name : String [1] ) : String [1]
 }
 
-abstract class BMM_CLASS {
-  + name : String [1..1]
-  + ancestors : List<String> [0..*]
-  + package : BMM_PACKAGE [1..1]
+abstract class BMM_CLASS  #whitesmoke;line:gray;line.dotted;text:gray {
+  + name : String [1]
+  + ancestors : List<String> [*]
+  + package : BMM_PACKAGE [1]
   + properties : Hash<String,BMM_PROPERTY> [0..1]
-  + source_schema_id : String [1..1]
-  + immediate_descendants : List<BMM_CLASS> [0..*]
-  + is_override : Boolean [1..1]
-  + all_ancestors() : List<String> [1..*]
-  + all_descendants() : List<String> [1..*]
-  + suppliers() : List<String> [1..*]
-  + suppliers_non_primitive() : List<String> [1..*]
-  + supplier_closure() : List<String> [1..*]
-  + package_path() : String [0..1]
-  + class_path() : String [0..1]
-  + flat_properties() : List<Hash<String,BMM_PROPERTY<BMM_TYPE>>> [1..*]
-  + is_primitive() : Boolean [0..1]
-  + is_abstract() : Boolean [0..1]
-  + {abstract} type() : BMM_DEFINED_TYPE [0..1]
+  + source_schema_id : String [1]
+  + immediate_descendants : List<BMM_CLASS> [*]
+  + is_override : Boolean [1]
+  + all_ancestors() : List<String> [*]
+  + all_descendants() : List<String> [*]
+  + suppliers() : List<String> [*]
+  + suppliers_non_primitive() : List<String> [*]
+  + supplier_closure() : List<String> [*]
+  + package_path() : String [1]
+  + class_path() : String [1]
+  + flat_properties() : List<Hash<String,BMM_PROPERTY<BMM_TYPE>>> [*]
+  + is_primitive() : Boolean [1]
+  + is_abstract() : Boolean [1]
+  + {abstract} type() : BMM_DEFINED_TYPE [1]
 }
 
-abstract class BMM_ENTITY {
-  + {abstract} entity_category() : String [0..1]
-  + {abstract} entity_metatype() : String [0..1]
-  + {abstract} is_abstract() : Boolean [0..1]
-  + {abstract} is_primitive() : Boolean [0..1]
+abstract class BMM_ENTITY  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} entity_category() : String [1]
+  + {abstract} entity_metatype() : String [1]
+  + {abstract} is_abstract() : Boolean [1]
+  + {abstract} is_primitive() : Boolean [1]
 }
 
-class BMM_DEFINITIONS {
+class BMM_DEFINITIONS  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 BMM_DEFINITIONS <|-- BMM_ENTITY
 
 BMM_ENTITY <|-- BMM_CLASS
 
-abstract class BMM_MODEL_ELEMENT {
+abstract class BMM_MODEL_ELEMENT  #whitesmoke;line:gray;line.dotted;text:gray {
   + documentation : String [0..1]
 }
 
-class BMM_DEFINITIONS {
+class BMM_DEFINITIONS  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 BMM_DEFINITIONS <|-- BMM_MODEL_ELEMENT

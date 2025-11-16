@@ -1,24 +1,22 @@
 @startuml
-' PlantUML diagram for org.openehr.lang.bmm_persistence.P_BMM_CLASS
-title P_BMM_CLASS Class
 
 class P_BMM_CLASS {
-  + name : String [1..1]
-  + ancestors : List<String> [0..*]
+  + name : String [1]
+  + ancestors : List<String> [*]
   + properties : Hash<String,P_BMM_PROPERTY> [0..1]
   + is_abstract : Boolean [0..1]
   + is_override : Boolean [0..1]
   + generic_parameter_defs : Hash<String,P_BMM_GENERIC_PARAMETER> [0..1]
-  + source_schema_id : String [1..1]
+  + source_schema_id : String [1]
   + bmm_class : BMM_CLASS [0..1]
-  + uid : Integer [1..1]
-  + ancestor_defs : List<P_BMM_GENERIC_TYPE> [0..*]
-  + is_generic() : Boolean [0..1]
-  + create_bmm_class() : void [0..1]
-  + populate_bmm_class(BMM_MODEL a_bmm_schema) : void [0..1]
+  + uid : Integer [1]
+  + ancestor_defs : List<P_BMM_GENERIC_TYPE> [*]
+  + is_generic() : Boolean [1]
+  + create_bmm_class() : void [1]
+  + populate_bmm_class( a_bmm_schema : BMM_MODEL [1] ) : void [1]
 }
 
-abstract class P_BMM_MODEL_ELEMENT {
+abstract class P_BMM_MODEL_ELEMENT  #whitesmoke;line:gray;line.dotted;text:gray {
   + documentation : String [0..1]
 }
 

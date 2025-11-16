@@ -1,18 +1,16 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.ehr.EHR
-title EHR Class
 
 class EHR {
-  + system_id : HIER_OBJECT_ID [1..1]
-  + ehr_id : HIER_OBJECT_ID [1..1]
-  + contributions : List<OBJECT_REF> [0..*]
-  + ehr_status : OBJECT_REF [1..1]
-  + ehr_access : OBJECT_REF [1..1]
-  + compositions : List<OBJECT_REF> [0..*]
+  + system_id : HIER_OBJECT_ID [1]
+  + ehr_id : HIER_OBJECT_ID [1]
+  + contributions : List<OBJECT_REF> [*]
+  + ehr_status : OBJECT_REF [1]
+  + ehr_access : OBJECT_REF [1]
+  + compositions : List<OBJECT_REF> [*]
   + directory : OBJECT_REF [0..1]
-  + time_created : DV_DATE_TIME [1..1]
-  + folders : List<OBJECT_REF> [0..*]
-  + tags : List<OBJECT_REF> [0..*]
+  + time_created : DV_DATE_TIME [1]
+  + folders : List<OBJECT_REF> [*]
+  + tags : List<OBJECT_REF> [*]
 }
 
 

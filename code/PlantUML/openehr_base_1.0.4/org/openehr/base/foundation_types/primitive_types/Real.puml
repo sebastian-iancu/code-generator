@@ -1,24 +1,22 @@
 @startuml
-' PlantUML diagram for org.openehr.base.foundation_types.primitive_types.Real
-title Real Class
 
 class Real {
-  + floor() : Integer [0..1]
+  + floor() : Integer [1]
 }
 
-abstract class Ordered_Numeric {
+abstract class Ordered_Numeric  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
-abstract class Ordered {
-  + {abstract} infix <(Ordered other) : Boolean [0..1]
+abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
 }
 
 Ordered <|-- Ordered_Numeric
 
-abstract class Numeric {
-  + {abstract} infix *(Numeric other) : Numeric [0..1]
-  + {abstract} infix +(Numeric other) : Numeric [0..1]
-  + {abstract} infix -(Numeric other) : Numeric [0..1]
+abstract class Numeric  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} infix *( other : Numeric [1] ) : Numeric [1]
+  + {abstract} infix +( other : Numeric [1] ) : Numeric [1]
+  + {abstract} infix -( other : Numeric [1] ) : Numeric [1]
 }
 
 Numeric <|-- Ordered_Numeric

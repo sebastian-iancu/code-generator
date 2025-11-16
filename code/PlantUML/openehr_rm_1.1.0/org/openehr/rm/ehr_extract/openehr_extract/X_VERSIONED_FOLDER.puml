@@ -1,18 +1,16 @@
 @startuml
-' PlantUML diagram for org.openehr.rm.ehr_extract.openehr_extract.X_VERSIONED_FOLDER
-title X_VERSIONED_FOLDER Class
 
 class X_VERSIONED_FOLDER {
 }
 
-class X_VERSIONED_OBJECT <<T>> {
-  + uid : HIER_OBJECT_ID [1..1]
-  + owner_id : OBJECT_REF [1..1]
-  + time_created : DV_DATE_TIME [1..1]
-  + total_version_count : Integer [1..1]
-  + extract_version_count : Integer [1..1]
+class X_VERSIONED_OBJECT <T>  #whitesmoke;line:gray;line.dotted;text:gray {
+  + uid : HIER_OBJECT_ID [1]
+  + owner_id : OBJECT_REF [1]
+  + time_created : DV_DATE_TIME [1]
+  + total_version_count : Integer [1]
+  + extract_version_count : Integer [1]
   + revision_history : REVISION_HISTORY [0..1]
-  + versions : List<ORIGINAL_VERSION<T>> [0..*]
+  + versions : List<ORIGINAL_VERSION<T>> [*]
 }
 
 X_VERSIONED_OBJECT <|-- X_VERSIONED_FOLDER
