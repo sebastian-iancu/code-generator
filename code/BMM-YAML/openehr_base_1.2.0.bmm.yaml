@@ -37,6 +37,14 @@ packages:
           - BASIC_DEFINITIONS
           - VALIDITY_KIND
           - VERSION_STATUS
+      builtins:
+        name: builtins
+        classes:
+          - Env
+          - Statistical_evaluator
+          - Locale
+          - Math
+          - Quantity_converter
   org.openehr.base.foundation_types:
     name: org.openehr.base.foundation_types
     packages:
@@ -64,6 +72,15 @@ packages:
           - Real
           - Integer64
           - Ordered
+      functional:
+        name: functional
+        classes:
+          - TUPLE
+          - FUNCTION
+          - TUPLE1
+          - TUPLE2
+          - ROUTINE
+          - PROCEDURE
       time:
         name: time
         classes:
@@ -116,6 +133,9 @@ primitive_types:
           type: Boolean
       equal:
         name: equal
+        aliases:
+          - '='
+          - '=='
         documentation: 'Reference equality for reference types, value equality for value types.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -143,6 +163,9 @@ primitive_types:
           type: String
       not_equal:
         name: not_equal
+        aliases:
+          - '!='
+          - ≠
         documentation: 'True if current object not equal to `_other_`. Returns not `_equal_()`.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -173,6 +196,8 @@ primitive_types:
           type: Boolean
       item:
         name: item
+        aliases:
+          - '[]'
         documentation: 'Return item for key `_a_key_`.'
         parameters:
           a_key: !P_BMM_SINGLE_FUNCTION_PARAMETER_OPEN
@@ -215,6 +240,9 @@ primitive_types:
           type: Boolean
       there_exists:
         name: there_exists
+        aliases:
+          - 'there exists'
+          - ∃
         documentation: 'Existential quantifier applied to container, taking one agent argument `_test_` whose signature is `(v:T): Boolean`.'
         parameters:
           test: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -224,6 +252,9 @@ primitive_types:
           type: Boolean
       for_all:
         name: for_all
+        aliases:
+          - 'for all'
+          - ∀
         documentation: 'Universal quantifier applied to container, taking one agent argument `_test_` whose signature is `(v:T): Boolean`.'
         parameters:
           test: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -296,6 +327,8 @@ primitive_types:
     functions:
       item:
         name: item
+        aliases:
+          - '[]'
         documentation: 'Return item for key  `_a_key_`.'
         parameters:
           a_key: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -323,6 +356,8 @@ primitive_types:
     functions:
       add:
         name: add
+        aliases:
+          - +
         documentation: 'Integer addition.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -332,6 +367,8 @@ primitive_types:
           type: Integer
       subtract:
         name: subtract
+        aliases:
+          - '-'
         documentation: 'Integer subtraction.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -341,6 +378,8 @@ primitive_types:
           type: Integer
       multiply:
         name: multiply
+        aliases:
+          - '&#42;'
         documentation: 'Integer multiplication.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -350,6 +389,8 @@ primitive_types:
           type: Integer
       divide:
         name: divide
+        aliases:
+          - /
         documentation: 'Integer division.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -359,6 +400,8 @@ primitive_types:
           type: Double
       exponent:
         name: exponent
+        aliases:
+          - ^
         documentation: 'Integer exponentiation.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -368,6 +411,9 @@ primitive_types:
           type: Double
       modulo:
         name: modulo
+        aliases:
+          - mod
+          - \\
         documentation: 'Return self modulo other.'
         parameters:
           mod: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -377,6 +423,8 @@ primitive_types:
           type: Integer
       less_than:
         name: less_than
+        aliases:
+          - '<'
         documentation: 'Returns True if current Integer is less than `_other_`.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -386,6 +434,8 @@ primitive_types:
           type: Boolean
       negative:
         name: negative
+        aliases:
+          - '-'
         documentation: 'Generate negative of current Integer value.'
         result: !P_BMM_SIMPLE_TYPE
           type: Integer
@@ -400,6 +450,9 @@ primitive_types:
           type: Boolean
       equal:
         name: equal
+        aliases:
+          - '='
+          - '=='
         documentation: 'Reference equality for reference types, value equality for value types.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -420,6 +473,8 @@ primitive_types:
           type: Integer
       add:
         name: add
+        aliases:
+          - +
         documentation: 'Double-precision real number addition.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -429,6 +484,8 @@ primitive_types:
           type: Double
       subtract:
         name: subtract
+        aliases:
+          - '-'
         documentation: 'Double-precision real number subtraction.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -438,6 +495,8 @@ primitive_types:
           type: Double
       multiply:
         name: multiply
+        aliases:
+          - '&#42;'
         documentation: 'Double-precision real number multiplication.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -447,6 +506,8 @@ primitive_types:
           type: Double
       divide:
         name: divide
+        aliases:
+          - /
         documentation: 'Double-precision real number division.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -456,6 +517,8 @@ primitive_types:
           type: Double
       exponent:
         name: exponent
+        aliases:
+          - ^
         documentation: 'Double-precision real number exponentiation.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -465,6 +528,8 @@ primitive_types:
           type: Double
       less_than:
         name: less_than
+        aliases:
+          - '<'
         documentation: 'Returns True if current Double is less than `_other_`.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -474,6 +539,8 @@ primitive_types:
           type: Boolean
       negative:
         name: negative
+        aliases:
+          - '-'
         documentation: 'Generate negative of current Double value.'
         result: !P_BMM_SIMPLE_TYPE
           type: Double
@@ -488,6 +555,9 @@ primitive_types:
           type: Boolean
       equal:
         name: equal
+        aliases:
+          - '='
+          - '=='
         documentation: 'Reference equality for reference types, value equality for value types.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -504,6 +574,8 @@ primitive_types:
     functions:
       add:
         name: add
+        aliases:
+          - +
         documentation: 'Sum with `_other_` (commutative). Actual type of result depends on arithmetic balancing rules.'
         is_abstract: true
         parameters:
@@ -514,6 +586,8 @@ primitive_types:
           type: Numeric
       subtract:
         name: subtract
+        aliases:
+          - '-'
         documentation: 'Result of subtracting `_other_`. Actual type of result depends on arithmetic balancing rules.'
         is_abstract: true
         parameters:
@@ -524,6 +598,8 @@ primitive_types:
           type: Numeric
       multiply:
         name: multiply
+        aliases:
+          - '&#42;'
         documentation: 'Product by `_other_`. Actual type of result depends on arithmetic balancing rules.'
         is_abstract: true
         parameters:
@@ -534,6 +610,8 @@ primitive_types:
           type: Numeric
       divide:
         name: divide
+        aliases:
+          - /
         documentation: 'Divide by`_other_`. Actual type of result depends on arithmetic balancing rules.'
         is_abstract: true
         parameters:
@@ -544,6 +622,8 @@ primitive_types:
           type: Numeric
       exponent:
         name: exponent
+        aliases:
+          - ^
         documentation: 'Expontiation of this by `_other_`.'
         is_abstract: true
         parameters:
@@ -554,6 +634,8 @@ primitive_types:
           type: Numeric
       negative:
         name: negative
+        aliases:
+          - '-'
         documentation: 'Generate negative of current value.'
         is_abstract: true
         result: !P_BMM_SIMPLE_TYPE
@@ -576,6 +658,10 @@ primitive_types:
     functions:
       conjunction:
         name: conjunction
+        aliases:
+          - and
+          - ∧
+          - '&'
         documentation: 'Logical conjunction of this with `_other_`.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -588,6 +674,9 @@ primitive_types:
           type: Boolean
       semistrict_conjunction:
         name: semistrict_conjunction
+        aliases:
+          - 'and then'
+          - '&&'
         documentation: 'Boolean semi-strict conjunction with `_other_`.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -599,6 +688,10 @@ primitive_types:
           type: Boolean
       disjunction:
         name: disjunction
+        aliases:
+          - or
+          - ∨
+          - '&#124;'
         documentation: 'Boolean disjunction with `_other_`.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -612,6 +705,9 @@ primitive_types:
           type: Boolean
       semistrict_disjunction:
         name: semistrict_disjunction
+        aliases:
+          - 'or else'
+          - '&#124;&#124;'
         documentation: 'Boolean semi-strict disjunction with `_other_`.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -623,6 +719,9 @@ primitive_types:
           type: Boolean
       exclusive_disjunction:
         name: exclusive_disjunction
+        aliases:
+          - xor
+          - ⊻
         documentation: 'Boolean exclusive or with `_other_`.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -634,6 +733,9 @@ primitive_types:
           type: Boolean
       implication:
         name: implication
+        aliases:
+          - implies
+          - ⇒
         documentation: 'Boolean implication of `_other_` (semi-strict)'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -645,6 +747,10 @@ primitive_types:
           type: Boolean
       negation:
         name: negation
+        aliases:
+          - not
+          - ¬
+          - '!'
         documentation: 'Boolean negation of the current value.'
         result: !P_BMM_SIMPLE_TYPE
           type: Boolean
@@ -675,6 +781,8 @@ primitive_types:
           type: Integer
       append:
         name: append
+        aliases:
+          - +
         documentation: 'Concatenation operator - causes `_other_` to be appended to this string.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -713,6 +821,8 @@ primitive_types:
           type: Integer
       add:
         name: add
+        aliases:
+          - +
         documentation: 'Real number addition.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -722,6 +832,8 @@ primitive_types:
           type: Real
       subtract:
         name: subtract
+        aliases:
+          - '-'
         documentation: 'Real number subtraction.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -731,6 +843,8 @@ primitive_types:
           type: Real
       multiply:
         name: multiply
+        aliases:
+          - '&#42;'
         documentation: 'Real number multiplication.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -740,6 +854,8 @@ primitive_types:
           type: Real
       divide:
         name: divide
+        aliases:
+          - /
         documentation: 'Real number division.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -749,6 +865,8 @@ primitive_types:
           type: Double
       exponent:
         name: exponent
+        aliases:
+          - ^
         documentation: 'Real number exponentiation.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -758,6 +876,8 @@ primitive_types:
           type: Double
       less_than:
         name: less_than
+        aliases:
+          - '<'
         documentation: 'Returns True if current Real is less than `_other_`.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -767,6 +887,8 @@ primitive_types:
           type: Boolean
       negative:
         name: negative
+        aliases:
+          - '-'
         documentation: 'Generate negative of current Real value.'
         result: !P_BMM_SIMPLE_TYPE
           type: Real
@@ -781,6 +903,9 @@ primitive_types:
           type: Boolean
       equal:
         name: equal
+        aliases:
+          - '='
+          - '=='
         documentation: 'Reference equality for reference types, value equality for value types.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -796,6 +921,8 @@ primitive_types:
     functions:
       add:
         name: add
+        aliases:
+          - +
         documentation: 'Large integer addition.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -805,6 +932,8 @@ primitive_types:
           type: Integer64
       subtract:
         name: subtract
+        aliases:
+          - '-'
         documentation: 'Large integer subtraction.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -814,6 +943,8 @@ primitive_types:
           type: Integer64
       multiply:
         name: multiply
+        aliases:
+          - '&#42;'
         documentation: 'Large integer multiplication.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -823,6 +954,8 @@ primitive_types:
           type: Integer64
       divide:
         name: divide
+        aliases:
+          - /
         documentation: 'Large integer division.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -832,6 +965,8 @@ primitive_types:
           type: Double
       exponent:
         name: exponent
+        aliases:
+          - ^
         documentation: 'Large integer exponentiation.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -841,6 +976,9 @@ primitive_types:
           type: Double
       modulo:
         name: modulo
+        aliases:
+          - mod
+          - \\
         documentation: 'Large integer modulus.'
         parameters:
           mod: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -850,6 +988,8 @@ primitive_types:
           type: Integer64
       less_than:
         name: less_than
+        aliases:
+          - '<'
         documentation: 'Returns True if current Integer is less than `_other_`.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -859,6 +999,8 @@ primitive_types:
           type: Boolean
       negative:
         name: negative
+        aliases:
+          - '-'
         documentation: 'Generate negative of current Integer value.'
         result: !P_BMM_SIMPLE_TYPE
           type: Integer64
@@ -873,6 +1015,9 @@ primitive_types:
           type: Boolean
       equal:
         name: equal
+        aliases:
+          - '='
+          - '=='
         documentation: 'Reference equality for reference types, value equality for value types.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -889,6 +1034,8 @@ primitive_types:
     functions:
       less_than:
         name: less_than
+        aliases:
+          - '<'
         documentation: |-
           Arithmetic value comparison. Returns True if current object is less than `_other_`. This operator is effected and/or redefined in descendants to provide the appropriate ordering semantics for concrete types.
 
@@ -902,6 +1049,9 @@ primitive_types:
           type: Boolean
       less_than_or_equal:
         name: less_than_or_equal
+        aliases:
+          - '<='
+          - ≤
         documentation: 'True if current object less than or equal to `_other_`.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -913,6 +1063,8 @@ primitive_types:
           type: Boolean
       greater_than:
         name: greater_than
+        aliases:
+          - '>'
         documentation: 'True if current object greater than `_other_`.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -924,6 +1076,9 @@ primitive_types:
           type: Boolean
       greater_than_or_equal:
         name: greater_than_or_equal
+        aliases:
+          - '>='
+          - ≥
         documentation: 'True if current object greater than or equal to `_other_`.'
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -1048,6 +1203,8 @@ primitive_types:
           type: String
       add:
         name: add
+        aliases:
+          - +
         documentation: 'Arithmetic addition of a duration to a date/time.'
         parameters:
           a_diff: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -1057,6 +1214,8 @@ primitive_types:
           type: Iso8601_date_time
       subtract:
         name: subtract
+        aliases:
+          - '-'
         documentation: 'Arithmetic subtraction of a duration from a date/time.'
         parameters:
           a_diff: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -1066,6 +1225,8 @@ primitive_types:
           type: Iso8601_date_time
       diff:
         name: diff
+        aliases:
+          - '-'
         documentation: 'Difference of two date/times.'
         parameters:
           a_date_time: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -1075,6 +1236,8 @@ primitive_types:
           type: Iso8601_duration
       add_nominal:
         name: add_nominal
+        aliases:
+          - ++
         documentation: 'Addition of nominal duration represented by `_a_diff_`. See `Iso8601_date._add_nominal_()` for semantics.'
         parameters:
           a_diff: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -1084,6 +1247,8 @@ primitive_types:
           type: Iso8601_date
       subtract_nominal:
         name: subtract_nominal
+        aliases:
+          - '--'
         documentation: 'Subtraction of nominal duration represented by `_a_diff_`. See `_add_nominal_()` for semantics.'
         parameters:
           a_diff: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -1182,6 +1347,8 @@ primitive_types:
           type: String
       add:
         name: add
+        aliases:
+          - +
         documentation: 'Arithmetic addition of a duration to a duration, via conversion to seconds, using `Time_definitions._Average_days_in_year_` and `Time_definitions._Average_days_in_month_`'
         parameters:
           a_val: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -1191,6 +1358,8 @@ primitive_types:
           type: Iso8601_duration
       subtract:
         name: subtract
+        aliases:
+          - '-'
         documentation: 'Arithmetic subtraction of a duration from a duration, via conversion to seconds, using `Time_definitions._Average_days_in_year_` and `Time_definitions._Average_days_in_month_`'
         parameters:
           a_val: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -1200,6 +1369,8 @@ primitive_types:
           type: Iso8601_duration
       multiply:
         name: multiply
+        aliases:
+          - '&#42;'
         documentation: 'Arithmetic multiplication a duration by a number.'
         parameters:
           a_val: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -1209,6 +1380,8 @@ primitive_types:
           type: Iso8601_duration
       divide:
         name: divide
+        aliases:
+          - /
         documentation: 'Arithmetic division of a duration by a number.'
         parameters:
           a_val: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -1218,6 +1391,8 @@ primitive_types:
           type: Iso8601_duration
       negative:
         name: negative
+        aliases:
+          - '-'
         documentation: 'Generate negative of current duration value.'
         result: !P_BMM_SIMPLE_TYPE
           type: Iso8601_duration
@@ -1309,6 +1484,8 @@ primitive_types:
           type: String
       add:
         name: add
+        aliases:
+          - +
         documentation: 'Arithmetic addition of a duration to a time.'
         parameters:
           a_diff: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -1318,6 +1495,8 @@ primitive_types:
           type: Iso8601_time
       subtract:
         name: subtract
+        aliases:
+          - '-'
         documentation: 'Arithmetic subtraction of a duration from a time.'
         parameters:
           a_diff: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -1327,6 +1506,8 @@ primitive_types:
           type: Iso8601_time
       diff:
         name: diff
+        aliases:
+          - '-'
         documentation: 'Difference of two times.'
         parameters:
           a_time: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -1430,6 +1611,8 @@ primitive_types:
           type: String
       add:
         name: add
+        aliases:
+          - +
         documentation: 'Arithmetic addition of a duration to a date.'
         parameters:
           a_diff: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -1439,6 +1622,8 @@ primitive_types:
           type: Iso8601_date
       subtract:
         name: subtract
+        aliases:
+          - '-'
         documentation: 'Arithmetic subtraction of a duration from a date.'
         parameters:
           a_diff: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -1448,6 +1633,8 @@ primitive_types:
           type: Iso8601_date
       diff:
         name: diff
+        aliases:
+          - '-'
         documentation: 'Difference of two dates.'
         parameters:
           a_date: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -1457,6 +1644,8 @@ primitive_types:
           type: Iso8601_duration
       add_nominal:
         name: add_nominal
+        aliases:
+          - ++
         documentation: |-
           Addition of nominal duration represented by `_a_diff_`. For example, a duration of `'P1Y'` means advance to the same date next year, with the exception of the date 29 February in a leap year, to which the addition of a nominal year will result in 28 February of the following year. Similarly, `'P1M'` is understood here as a nominal month, the addition of which will result in one of:
 
@@ -1471,6 +1660,8 @@ primitive_types:
           type: Iso8601_date
       subtract_nominal:
         name: subtract_nominal
+        aliases:
+          - '--'
         documentation: 'Subtraction of nominal duration represented by `_a_diff_`. See `_add_nominal_()` for semantics.'
         parameters:
           a_diff: !P_BMM_SINGLE_FUNCTION_PARAMETER
@@ -2048,9 +2239,259 @@ class_definitions:
       - "Value representing a version which is 'release candidate', i.e. contains only patch-level changes on the base version. Rendered as a string as `N.M.P-rc.B` e.g. `2.0.1-rc.27`."
       - "Value representing a version which is 'released', i.e. is the definitive base version. `N.M.P` e.g. `2.0.1`."
       - 'Value representing a version which is a build of the current base release. Rendered with the build number as a string in the form `N.M.P+B` e.g. `2.0.1+33`.'
+  Env: !P_BMM_INTERFACE
+    name: Env
+    documentation: 'Class representing the real-world environment, providing basic information like current time, date, etc.'
+    functions:
+      current_date:
+        name: current_date
+        documentation: "Return today's date in the current locale."
+        result: !P_BMM_SIMPLE_TYPE
+          type: Iso8601_date
+      current_time:
+        name: current_time
+        documentation: 'Return current time in the current locale.'
+        result: !P_BMM_SIMPLE_TYPE
+          type: Iso8601_time
+      current_date_time:
+        name: current_date_time
+        documentation: 'Return current date/time in the current locale.'
+        result: !P_BMM_SIMPLE_TYPE
+          type: Iso8601_date_time
+      current_time_zone:
+        name: current_time_zone
+        documentation: 'Return the timezone of the current locale.'
+        result: !P_BMM_SIMPLE_TYPE
+          type: Iso8601_timezone
+  Statistical_evaluator: !P_BMM_INTERFACE
+    name: Statistical_evaluator
+    documentation: 'A basic statistical evaluator class providing common functions on collections of numbers.'
+    functions:
+      sum:
+        name: sum
+        documentation: 'Sum of a container of values.'
+        parameters:
+          vals: !P_BMM_GENERIC_FUNCTION_PARAMETER
+            name: vals
+            type_def: !P_BMM_GENERIC_TYPE
+              root_type: Container
+              generic_parameters:
+                - Numeric
+        result: !P_BMM_SIMPLE_TYPE
+          type: Double
+      avg:
+        name: avg
+        documentation: 'Synonym for `_mean()_`.'
+        parameters:
+          vals: !P_BMM_GENERIC_FUNCTION_PARAMETER
+            name: vals
+            type_def: !P_BMM_GENERIC_TYPE
+              root_type: Container
+              generic_parameters:
+                - Numeric
+        result: !P_BMM_SIMPLE_TYPE
+          type: Double
+      mean:
+        name: mean
+        documentation: 'Mean (arithmetic average) of a container of values.'
+        parameters:
+          vals: !P_BMM_GENERIC_FUNCTION_PARAMETER
+            name: vals
+            type_def: !P_BMM_GENERIC_TYPE
+              root_type: Container
+              generic_parameters:
+                - Numeric
+        result: !P_BMM_SIMPLE_TYPE
+          type: Double
+      median:
+        name: median
+        documentation: 'Return numerically centre value in ordered form of container contents.'
+        parameters:
+          vals: !P_BMM_GENERIC_FUNCTION_PARAMETER
+            name: vals
+            type_def: !P_BMM_GENERIC_TYPE
+              root_type: Container
+              generic_parameters:
+                - Numeric
+        result: !P_BMM_SIMPLE_TYPE
+          type: Numeric
+      mode:
+        name: mode
+        documentation: 'Mode (most frequent) of a container of values.'
+        parameters:
+          vals: !P_BMM_GENERIC_FUNCTION_PARAMETER
+            name: vals
+            type_def: !P_BMM_GENERIC_TYPE
+              root_type: Container
+              generic_parameters:
+                - Numeric
+        result: !P_BMM_SIMPLE_TYPE
+          type: Numeric
+      max:
+        name: max
+        documentation: 'Maximum of a container of values.'
+        parameters:
+          vals: !P_BMM_GENERIC_FUNCTION_PARAMETER
+            name: vals
+            type_def: !P_BMM_GENERIC_TYPE
+              root_type: Container
+              generic_parameters:
+                - Numeric
+        result: !P_BMM_SIMPLE_TYPE
+          type: Numeric
+      min:
+        name: min
+        documentation: 'Minimum of a container of values.'
+        parameters:
+          vals: !P_BMM_GENERIC_FUNCTION_PARAMETER
+            name: vals
+            type_def: !P_BMM_GENERIC_TYPE
+              root_type: Container
+              generic_parameters:
+                - Numeric
+        result: !P_BMM_SIMPLE_TYPE
+          type: Numeric
+      count:
+        name: count
+        documentation: 'Return the number of items in `_vals_`, i.e. `_vals.count_`.'
+        parameters:
+          vals: !P_BMM_GENERIC_FUNCTION_PARAMETER
+            name: vals
+            type_def: !P_BMM_GENERIC_TYPE
+              root_type: Container
+              generic_parameters:
+                - Numeric
+        result: !P_BMM_SIMPLE_TYPE
+          type: Numeric
+      std_dev:
+        name: std_dev
+        documentation: 'Compute standard deviation of a container of values.'
+        parameters:
+          vals: !P_BMM_GENERIC_FUNCTION_PARAMETER
+            name: vals
+            type_def: !P_BMM_GENERIC_TYPE
+              root_type: Container
+              generic_parameters:
+                - Numeric
+        result: !P_BMM_SIMPLE_TYPE
+          type: Double
+  Locale: !P_BMM_INTERFACE
+    name: Locale
+    documentation: 'Class representing current Locale.'
+    functions:
+      primary_language:
+        name: primary_language
+        documentation: 'Primary language of the current locale.'
+        result: !P_BMM_SIMPLE_TYPE
+          type: Terminology_code
+  Math: !P_BMM_INTERFACE
+    name: Math
+    documentation: 'Mathematical computation.'
+    functions:
+      ln:
+        name: ln
+        documentation: 'Compute natural log of v.'
+        parameters:
+          v: !P_BMM_SINGLE_FUNCTION_PARAMETER
+            name: v
+            type: Numeric
+        result: !P_BMM_SIMPLE_TYPE
+          type: Double
+      log:
+        name: log
+        documentation: 'Compute base 10 log of v.'
+        parameters:
+          v: !P_BMM_SINGLE_FUNCTION_PARAMETER
+            name: v
+            type: Numeric
+        result: !P_BMM_SIMPLE_TYPE
+          type: Double
+      sin:
+        name: sin
+        documentation: 'Compute sin(v).'
+        parameters:
+          (v: !P_BMM_SINGLE_FUNCTION_PARAMETER
+            name: (v
+            type: Numeric
+        result: !P_BMM_SIMPLE_TYPE
+          type: Double
+  Quantity_converter: !P_BMM_INTERFACE
+    name: Quantity_converter
+    documentation: 'Quantity conversion.'
+    functions:
+      convert_value:
+        name: convert_value
+        documentation: "Convert `_value_` of physical property type (e.g. 'pressure' etc) from one units to another."
+        parameters:
+          value: !P_BMM_SINGLE_FUNCTION_PARAMETER
+            name: value
+            type: Real
+          from_units: !P_BMM_SINGLE_FUNCTION_PARAMETER
+            name: from_units
+            type: String
+          to_units: !P_BMM_SINGLE_FUNCTION_PARAMETER
+            name: to_units
+            type: String
+          property: !P_BMM_SINGLE_FUNCTION_PARAMETER
+            name: property
+            type: Terminology_code
+        result: !P_BMM_SIMPLE_TYPE
+          type: Real
   Comparable:
     name: Comparable
     is_abstract: true
+  TUPLE:
+    name: TUPLE
+    documentation: 'Parent type of all TUPLE types.'
+  FUNCTION:
+    name: FUNCTION
+    documentation: 'Type representing a function with a return type and 0 or more arguments represented as a TUPLE.'
+    ancestors:
+      - ROUTINE
+    generic_parameter_defs:
+      ARGS:
+        name: ARGS
+        conforms_to_type: TUPLE
+      RESULT:
+        name: RESULT
+        conforms_to_type: Any
+  TUPLE1:
+    name: TUPLE1
+    documentation: 'A Tuple type used, among other things, for representing a single typed argument within a Routine signature.'
+    ancestors:
+      - TUPLE
+    generic_parameter_defs:
+      A:
+        name: A
+        conforms_to_type: Any
+  TUPLE2:
+    name: TUPLE2
+    documentation: 'A Tuple type used, among other things, for representing two typed arguments within a Routine signature.'
+    ancestors:
+      - TUPLE
+    generic_parameter_defs:
+      A:
+        name: A
+        conforms_to_type: Any
+      B:
+        name: B
+        conforms_to_type: Any
+  ROUTINE:
+    name: ROUTINE
+    documentation: 'Type representing a function with a return type and 0 or more arguments represented as a TUPLE.'
+    generic_parameter_defs:
+      ARGS:
+        name: ARGS
+        conforms_to_type: TUPLE
+  PROCEDURE:
+    name: PROCEDURE
+    documentation: 'Type representing a procedure with 0 or more arguments represented as a TUPLE.'
+    ancestors:
+      - ROUTINE
+    generic_parameter_defs:
+      ARGS:
+        name: ARGS
+        conforms_to_type: TUPLE
   Iso8601_timezone:
     name: Iso8601_timezone
     documentation: |

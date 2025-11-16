@@ -64,6 +64,15 @@ packages:
           - Real
           - Integer64
           - Ordered
+      functional:
+        name: functional
+        classes:
+          - TUPLE
+          - FUNCTION
+          - TUPLE1
+          - TUPLE2
+          - ROUTINE
+          - PROCEDURE
       time:
         name: time
         classes:
@@ -1394,6 +1403,58 @@ class_definitions:
   Comparable:
     name: Comparable
     is_abstract: true
+  TUPLE:
+    name: TUPLE
+    documentation: 'Parent type of all TUPLE types.'
+  FUNCTION:
+    name: FUNCTION
+    documentation: 'Type representing a function with a return type and 0 or more arguments represented as a TUPLE.'
+    ancestors:
+      - ROUTINE
+    generic_parameter_defs:
+      ARGS:
+        name: ARGS
+        conforms_to_type: TUPLE
+      RESULT:
+        name: RESULT
+        conforms_to_type: Any
+  TUPLE1:
+    name: TUPLE1
+    documentation: 'A Tuple type used, among other things, for representing a single typed argument within a Routine signature.'
+    ancestors:
+      - TUPLE
+    generic_parameter_defs:
+      A:
+        name: A
+        conforms_to_type: Any
+  TUPLE2:
+    name: TUPLE2
+    documentation: 'A Tuple type used, among other things, for representing two typed arguments within a Routine signature.'
+    ancestors:
+      - TUPLE
+    generic_parameter_defs:
+      A:
+        name: A
+        conforms_to_type: Any
+      B:
+        name: B
+        conforms_to_type: Any
+  ROUTINE:
+    name: ROUTINE
+    documentation: 'Type representing a function with a return type and 0 or more arguments represented as a TUPLE.'
+    generic_parameter_defs:
+      ARGS:
+        name: ARGS
+        conforms_to_type: TUPLE
+  PROCEDURE:
+    name: PROCEDURE
+    documentation: 'Type representing a procedure with 0 or more arguments represented as a TUPLE.'
+    ancestors:
+      - ROUTINE
+    generic_parameter_defs:
+      ARGS:
+        name: ARGS
+        conforms_to_type: TUPLE
   Iso8601_timezone:
     name: Iso8601_timezone
     documentation: |

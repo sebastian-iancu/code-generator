@@ -2464,6 +2464,16 @@ class_definitions:
       - |
         Numerator and denominator are integral, and the presentation method uses a slash, e.g.  1/2 . 
       - 'Numerator and denominator are integral, and the presentation method uses a slash, e.g.  1/2 ; if the numerator is greater than the denominator, e.g. n=3, d=2, the presentation is  1 1/2 .'
+    functions:
+      valid_proportion_kind:
+        name: valid_proportion_kind
+        documentation: 'True if n is one of the defined types. '
+        parameters:
+          nq: !P_BMM_SINGLE_FUNCTION_PARAMETER
+            name: nq
+            type: Integer
+        result: !P_BMM_SIMPLE_TYPE
+          type: Boolean
   DV_AMOUNT:
     name: DV_AMOUNT
     documentation: |
@@ -3387,7 +3397,7 @@ class_definitions:
           container_type: List
           type: String
         is_nullable: true
-  CODE_SET_ACCESS:
+  CODE_SET_ACCESS: !P_BMM_INTERFACE
     name: CODE_SET_ACCESS
     documentation: 'Defines an object providing proxy access to a code_set.'
     functions:
@@ -3421,7 +3431,7 @@ class_definitions:
             type: String
         result: !P_BMM_SIMPLE_TYPE
           type: Boolean
-  TERMINOLOGY_ACCESS:
+  TERMINOLOGY_ACCESS: !P_BMM_INTERFACE
     name: TERMINOLOGY_ACCESS
     documentation: 'Defines an object providing proxy access to a terminology. '
     functions:
