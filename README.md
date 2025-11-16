@@ -105,7 +105,7 @@ docker compose run --rm app ./bin/generate bmm:plantuml openehr_base_1.3.0 opene
 docker compose run --rm app ./bin/generate bmm:plantuml all
 ```
 
-Convert BMM JSON files to AsciiDoc tables:
+Convert BMM JSON files to AsciiDoc tables, tabs, and tabs with diagrams:
 ```bash
 docker compose run --rm app ./bin/generate bmm:adoc <filename>
 ```
@@ -115,18 +115,6 @@ Examples
 docker compose run --rm app ./bin/generate bmm:adoc openehr_rm_1.2.0
 # Or convert all
 docker compose run --rm app ./bin/generate bmm:adoc all
-```
-
-Split package BMM JSON into per-class JSON files:
-```bash
-docker compose run --rm app ./bin/generate bmm:split <filename>|all
-```
-Examples
-```bash
-# Specific files
-docker compose run --rm app ./bin/generate bmm:split openehr_base_1.3.0
-# Or split all packages
-docker compose run --rm app ./bin/generate bmm:split all
 ```
 
 

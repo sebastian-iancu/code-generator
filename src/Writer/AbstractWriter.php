@@ -36,6 +36,12 @@ abstract class AbstractWriter
         }
     }
 
+    protected function writeFile(string $filename, string $content): void
+    {
+        $bytes = file_put_contents($filename, $content);
+        self::log('  Wrote %s bytes to %s file.', $bytes, $filename);
+    }
+
     abstract public function write(): void;
 
 }

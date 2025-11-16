@@ -4,7 +4,7 @@ namespace Console\Command;
 
 use OpenEHR\Tools\CodeGen\CodeGenerator;
 use OpenEHR\Tools\CodeGen\Reader\BmmJsonReader;
-use OpenEHR\Tools\CodeGen\Writer\BmmAsciiDocWriter;
+use OpenEHR\Tools\CodeGen\Writer\BmmAsciidocWriter;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -50,7 +50,7 @@ class BmmJsonToAsciiDoc extends Command
                 $reader->read($schema);
             }
             $generator = new CodeGenerator($reader);
-            $generator->addWriter(new BmmAsciiDocWriter());
+            $generator->addWriter(new BmmAsciidocWriter());
             $generator->generate();
         } catch (\UnhandledMatchError $e) {
             $output->writeln((string)$e);

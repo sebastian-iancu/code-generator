@@ -37,4 +37,16 @@ final class Globals
         }
         return null;
     }
+
+    public static function getClass(string $className): ?AbstractBmmClass
+    {
+        /** @var BmmSchema $schema */
+        foreach (self::getSchemas() as $schema) {
+            $class = $schema->classDefinitions->get($className) ?? $schema->primitiveTypes->get($className);
+            if ($class instanceof AbstractBmmClass) {
+                return $class;
+            }
+        }
+        return null;
+    }
 }

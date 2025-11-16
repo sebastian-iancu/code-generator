@@ -29,8 +29,7 @@ class BmmYamlWriter extends AbstractWriter
         foreach ($this->reader->files as $schemaId => $bmmSchema) {
             $filename = self::DIR . $schemaId . '.bmm.yaml';
             self::log('Writing to [%s] filename.', $filename);
-            $bytes = file_put_contents($filename, Yaml::dump($bmmSchema->yamlSerialize(), 10, 2, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK | Yaml::DUMP_COMPACT_NESTED_MAPPING));
-            self::log('  Wrote %s bytes to %s file.', $bytes, $filename);
+            $this->writeFile($filename, Yaml::dump($bmmSchema->yamlSerialize(), 10, 2, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK | Yaml::DUMP_COMPACT_NESTED_MAPPING));
         }
         self::log('Done - wrote %s file(s).', $this->reader->files->count());
     }

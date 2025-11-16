@@ -26,7 +26,6 @@ try {
     $console->add(new BmmJsonToYaml());
     $console->add(new BmmJsonToPlantUml());
     $console->add(new BmmJsonToAsciiDoc());
-    $console->add(new BmmJsonToClassJson());
     exit($console->run());
 } catch (\Throwable $exception) {
     error_log((string)$exception);

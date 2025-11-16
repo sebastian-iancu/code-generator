@@ -125,9 +125,7 @@ class UmlToBmmWriter extends AbstractWriter
             }
             // saving as a file
             $filename = self::DIR . 'openehr_' . strtolower($umlFile->name) . '_' . $umlFile->getRelease() . '.bmm.json';
-            $content = json_encode($schema, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT) . PHP_EOL;
-            $bytes = file_put_contents($filename, $content);
-            self::log('  Wrote %s bytes to %s file.', $bytes, $filename);
+            $this->writeFile($filename, json_encode($schema, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT) . PHP_EOL);
         }
     }
 
