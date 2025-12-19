@@ -95,7 +95,7 @@ docker compose run --rm app composer run phplint
 
 - Architecture overview
   - `bin/generate` registers Symfony Console commands:
-    - Console\Command\XmiToBmm, XmiToInternalModel, AllXmi, BmmJsonToYaml, BmmJsonToPlantUml, BmmJsonToAsciiDoc, BmmJsonToClassJson.
+    - Console\Command\XmiToBmm, XmiToInternalModel, AllXmi, BmmJsonToYaml, BmmJsonToPlantUml, BmmJsonToAsciiDoc, BmmJsonToSplitJson.
   - `src/` contains:
     - Reader: parsing BMM/XMI/YAML/etc.
     - Model: internal representations (Bmm, Uml, etc.).

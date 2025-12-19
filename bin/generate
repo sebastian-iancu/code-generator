@@ -13,7 +13,7 @@ use Console\Command\AllXmi;
 use Console\Command\BmmJsonToYaml;
 use Console\Command\BmmJsonToPlantUml;
 use Console\Command\BmmJsonToAsciiDoc;
-use Console\Command\BmmJsonToClassJson;
+use Console\Command\BmmJsonSplitJson;
 use Console\Command\XmiToBmm;
 use Console\Command\XmiToInternalModel;
 use Symfony\Component\Console\Application;
@@ -26,6 +26,7 @@ try {
     $console->add(new BmmJsonToYaml());
     $console->add(new BmmJsonToPlantUml());
     $console->add(new BmmJsonToAsciiDoc());
+    $console->add(new BmmJsonSplitJson());
     exit($console->run());
 } catch (\Throwable $exception) {
     error_log((string)$exception);
