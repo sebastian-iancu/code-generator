@@ -591,7 +591,6 @@
                 }
             },
             "invariants": {
-                "rm_version_valid": "not rm_version.is_empty",
                 "Rm_version_valid": "not rm_version.is_empty"
             }
         },
@@ -2386,7 +2385,6 @@
                 }
             },
             "invariants": {
-                "Offset_validity": "",
                 "Offset_validity1": "offset \/= Void and then offset = time.diff (parent.origin)"
             }
         },
@@ -3794,10 +3792,6 @@
                         "type": "Boolean"
                     }
                 }
-            },
-            "invariants": {
-                "Limits_valid": "limits.meaning.is_equal (\u201climits\u201d)",
-                "Reference_range_valid": "other_reference_ranges.has (limits)"
             }
         },
         "DV_DURATION": {
@@ -6461,9 +6455,6 @@
                 }
             },
             "invariants": {
-                "Setting_valid": "",
-                "unnamed2": "",
-                "unnamed3": "Terminology (Terminology_id_openehr).has_code_for_group_id (Group_id_setting, setting.defining_code)",
                 "Category_validity": "terminology (Terminology_id_openehr).has_code_for_group_id (Group_id_composition_category, category.defining_code)",
                 "Is_persistent_validity": "is_persistent implies context = Void",
                 "Territory_valid": "code_set(Code_set_id_countries).has_code(territory)",

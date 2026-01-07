@@ -215,6 +215,9 @@ class UmlToBmmWriter extends AbstractWriter
             }
             /** @var UmlConstraint $umlConstraint */
             foreach ($umlClass->umlConstraints as $umlConstraint) {
+                if (!$umlConstraint->rule || in_array($umlConstraint->name, ['unnamed2', 'unnamed3', 'rm_version_valid', 'Limits_valid', 'Reference_range_valid'])) {
+                    continue;
+                }
                 $bmmClass['invariants'][$umlConstraint->name] = $umlConstraint->rule;
             }
         } else {
