@@ -124,6 +124,10 @@ a_type: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|Generate type substitutions for the supplied type, which may be simple, generic (closed, open or partially open), or a container type. In the generic and container cases, the result is the permutation of the base class type and type substitutions of all generic parameters.
 
+.Parameters +
+[horizontal]
+`_a_type_`:: Name of a type.
+
 h|*1..1*
 |*any_class_definition* (): `<<_bmm_simple_class_class,BMM_SIMPLE_CLASS>>`
 a|`BMM_SIMPLE_CLASS` instance for the `Any` class. This may be defined in the BMM schema, but if not, use `BMM_DEFINITIONS._any_class_`.

@@ -34,4 +34,8 @@ other: `link:/releases/AM/{am_release}/aom14.html#_c_object_class[C_OBJECT^][1]`
 a|True if this node occurrences conforms to `_other.occurrences_`; `_other_` is assumed to be in a flat archetype.
 
 If `_other_` is a `C_COMPLEX_OBJECT`, then always `True`, since if occurrences defined on proxy node, it is an override of  the occurrences on the target, and it doesn't have to conform to anything except the containing attribute's cardinality. However, if `_other_` is also a `C_COMPLEX_OBJECT` then the override is of another use_node, and normal occurrences apply
+
+.Parameters +
+[horizontal]
+`_other_`:: `C_OBJECT` from a flat parent archetype.
 |===

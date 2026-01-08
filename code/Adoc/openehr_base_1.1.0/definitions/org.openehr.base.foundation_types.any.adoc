@@ -23,6 +23,10 @@ other: `<<_any_class,Any>>[1]` +
 ): `<<_boolean_class,Boolean>>`
 a|Reference equality.
 
+.Parameters +
+[horizontal]
+`_other_`:: Reference equality.
+
 h|*1..1*
 |*instance_of* ( +
 a_type: `<<_string_class,String>>[1]` +

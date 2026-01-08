@@ -70,6 +70,7 @@
                 "rmcc": {
                     "_type": "P_BMM_GENERIC_FUNCTION_PARAMETER",
                     "name": "rmcc",
+                    "documentation": "Reference Model conformance checker agent (lambda).",
                     "type_def": {
                         "root_type": "FUNCTION"
                     }
@@ -102,6 +103,7 @@
                 "other": {
                     "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                     "name": "other",
+                    "documentation": "`C_OBJECT` from a flat parent archetype.",
                     "type": "C_OBJECT"
                 }
             },

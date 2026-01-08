@@ -189,11 +189,19 @@ class AsciidocDefinition
             /** @var BmmFunction $function */
             foreach ($class->functions as $function) {
                 $rows[] = '';
-                [$card, $signature] = $this->formatFunctionSignature($function, $prefix);
+                [$card, $signature, $parameterDocs] = $this->formatFunctionSignature($function, $prefix);
                 $override = $this->formatFunctionOverride($class, $function);
                 $rows[] = 'h|*' . $card . $override . '*';
                 $rows[] = '|' . $signature;
                 $rows[] = 'a|' . $this->formatText($function->documentation ?? '');
+                if ($parameterDocs) {
+                    $rows[] = '';
+                    $rows[] = '.Parameters +';
+                    $rows[] = '[horizontal]';
+                    foreach ($parameterDocs as $parameterName => $doc) {
+                        $rows[] = '`_' . $parameterName . '_`:: ' . $this->formatText($doc);
+                    }
+                }
             }
         }
 
@@ -342,8 +350,12 @@ class AsciidocDefinition
                 }, array_keys($function->postConditions), array_values($function->postConditions)));
         }
         $card = $minOccurs . '..' . $maxOccurs;
+        // parameter docs
+        $parameterDocs = array_filter(array_map(function ($parameter) {
+            return $parameter->documentation ?? false;
+        }, $function->parameters->getArrayCopy()));
 
-        return [$card, $signature];
+        return [$card, $signature, $parameterDocs];
     }
 
     private function formatContainerType(BmmContainerType $type, string $prefix): string

@@ -40,6 +40,10 @@ rmcc: `link:/releases/BASE/{base_release}/foundation_types.html#_function_class[
 a|True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. 
 Typically used during validation of specialised archetype nodes.
 
+.Parameters +
+[horizontal]
+`_rmcc_`:: Reference Model conformance checker agent (lambda).
+
 h|*1..1*
 |*c_congruent_to* ( +
 other: `link:/releases/AM/{am_release}/aom14.html#_c_complex_object_class[C_COMPLEX_OBJECT^][1]` +
