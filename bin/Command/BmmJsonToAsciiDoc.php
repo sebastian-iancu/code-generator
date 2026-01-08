@@ -36,6 +36,7 @@ class BmmJsonToAsciiDoc extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
+        $legacyFormat = false;
         $toRead = $input->getArgument('filename');
         if (empty($toRead)) {
             $output->writeln('<error>Please specify which BMM file(s) should be read. See usage with --help.</error>');
@@ -47,10 +48,14 @@ class BmmJsonToAsciiDoc extends Command
         try {
             $reader = new BmmJsonReader();
             foreach ($toRead as $schema) {
+                if ($schema === 'legacy') {
+                    $legacyFormat = true;
+                    continue;
+                }
                 $reader->read($schema);
             }
             $generator = new CodeGenerator($reader);
-            $generator->addWriter(new BmmAsciidocWriter());
+            $generator->addWriter(new BmmAsciidocWriter($legacyFormat));
             $generator->generate();
         } catch (\UnhandledMatchError $e) {
             $output->writeln((string)$e);

@@ -24,10 +24,10 @@ class BmmAsciidocWriter extends AbstractWriter
     private AsciidocBmmJson $bmmJson;
     private AsciidocPlantUml $plantUml;
 
-    public function __construct()
+    public function __construct(private readonly bool $legacyFormat = false)
     {
         $this->tab = new AsciidocTab();
-        $this->definition = new AsciidocDefinition();
+        $this->definition = new AsciidocDefinition($this->legacyFormat);
         $this->bmmJson = new AsciidocBmmJson();
         $this->plantUml = new AsciidocPlantUml();
     }

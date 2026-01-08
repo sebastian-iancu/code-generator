@@ -25,6 +25,9 @@ use OpenEHR\Tools\CodeGen\Model\Bmm\Globals;
 
 class AsciidocDefinition
 {
+    public function __construct(private readonly bool $legacyFormat = false)
+    {
+    }
 
     public function format(AbstractBmmClass $class, string $prefix): string
     {
@@ -44,10 +47,10 @@ class AsciidocDefinition
     {
         $rows = [];
 
-//        // todo remove this once all classes are converted to BmmClass
-//        $rows[] = '=== ' . $enum->name . ' Enumeration';
-//        $rows[] = '';
-//        // end-remove
+        if ($this->legacyFormat) {
+            $rows[] = '=== ' . $enum->name . ' Enumeration';
+            $rows[] = '';
+        }
 
         $rows[] = '[cols="^1,3,5"]';
         $rows[] = '|===';
@@ -58,7 +61,7 @@ class AsciidocDefinition
         if (!empty($enum->documentation)) {
             $rows[] = '';
             $rows[] = 'h|*Description*';
-            $rows[] = '2+a|' . trim($enum->documentation);
+            $rows[] = '2+a|' . $this->formatText($enum->documentation);
         }
 
         // Constants
@@ -78,7 +81,7 @@ class AsciidocDefinition
                     $signature = $name;
                 }
                 $rows[] = '|' . $signature;
-                $rows[] = 'a|' . $enum->itemDocumentations[$i] ?? '';
+                $rows[] = 'a|' . $this->formatText($enum->itemDocumentations[$i] ?? '');
             }
         }
 
@@ -95,7 +98,7 @@ class AsciidocDefinition
                 [$card, $signature] = $this->formatFunctionSignature($function, $prefix);
                 $rows[] = 'h|*' . $card . '*';
                 $rows[] = '|' . $signature;
-                $rows[] = 'a|' . rtrim($function->documentation ?? '');
+                $rows[] = 'a|' . $this->formatText($function->documentation ?? '');
             }
         }
 
@@ -107,10 +110,10 @@ class AsciidocDefinition
     {
         $rows = [];
 
-//        // todo remove this once all classes are converted to BmmClass
-//        $rows[] = '=== ' . $class->name . ' Class';
-//        $rows[] = '';
-//        // end-remove
+        if ($this->legacyFormat) {
+            $rows[] = '=== ' . $class->name . ' Class';
+            $rows[] = '';
+        }
 
         $rows[] = '[cols="^1,3,5"]';
         $rows[] = '|===';
@@ -128,7 +131,7 @@ class AsciidocDefinition
         if (!empty($class->documentation)) {
             $rows[] = '';
             $rows[] = 'h|*Description*';
-            $rows[] = '2+a|' . trim($class->documentation);
+            $rows[] = '2+a|' . $this->formatText($class->documentation);
         }
 
         // Inherit
@@ -136,7 +139,7 @@ class AsciidocDefinition
             $rows[] = '';
             $rows[] = 'h|*Inherit*';
             $parts = array_map(fn($ancestorName): string => $this->formatType($ancestorName, $prefix), $class->ancestors);
-            $rows[] = '2+|`' . implode(', ', $parts) . '`';
+            $rows[] = '2+|`' . implode('`, `', $parts) . '`';
         }
 
         // Constants
@@ -152,7 +155,7 @@ class AsciidocDefinition
                 $rows[] = '';
                 $rows[] = 'h|*' . $card . '*';
                 $rows[] = '|' . $signature;
-                $doc = property_exists($constant, 'documentation') ? rtrim($constant->documentation ?? '') : '';
+                $doc = property_exists($constant, 'documentation') ? $this->formatText($constant->documentation ?? '') : '';
                 $rows[] = 'a|' . $doc;
             }
         }
@@ -167,10 +170,11 @@ class AsciidocDefinition
             /** @var AbstractBmmProperty $property */
             foreach ($class->properties as $property) {
                 [$card, $signature] = $this->formatPropertySignature($property, $prefix);
+                $override = $this->formatPropertyOverride($class, $property);
                 $rows[] = '';
-                $rows[] = 'h|*' . $card . '*';
+                $rows[] = 'h|*' . $card . $override . '*';
                 $rows[] = '|' . $signature;
-                $doc = property_exists($property, 'documentation') ? rtrim($property->documentation ?? '') : '';
+                $doc = property_exists($property, 'documentation') ? $this->formatText($property->documentation ?? '') : '';
                 $rows[] = 'a|' . $doc;
             }
         }
@@ -186,9 +190,10 @@ class AsciidocDefinition
             foreach ($class->functions as $function) {
                 $rows[] = '';
                 [$card, $signature] = $this->formatFunctionSignature($function, $prefix);
-                $rows[] = 'h|*' . $card . '*';
+                $override = $this->formatFunctionOverride($class, $function);
+                $rows[] = 'h|*' . $card . $override . '*';
                 $rows[] = '|' . $signature;
-                $rows[] = 'a|' . rtrim($function->documentation ?? '');
+                $rows[] = 'a|' . $this->formatText($function->documentation ?? '');
             }
         }
 
@@ -204,7 +209,7 @@ class AsciidocDefinition
             $invariants = $class->invariants;
             $last = end($invariants);
             foreach ($class->invariants as $name => $expr) {
-                $rows[] = '2+a|__' . $name . '__: `' . $expr . '`';
+                $rows[] = '2+a|__' . $name . '__: `' . $this->formatText($expr) . '`';
                 if ($expr !== $last) {
                     $rows[] = '';
                     $rows[] = 'h|';
@@ -220,10 +225,10 @@ class AsciidocDefinition
     {
         $rows = [];
 
-//        // todo remove this once all classes are converted to BmmClass
-//        $rows[] = '=== ' . $class->name . ' Interface';
-//        $rows[] = '';
-//        // end-remove
+        if ($this->legacyFormat) {
+            $rows[] = '=== ' . $class->name . ' Interface';
+            $rows[] = '';
+        }
 
         $rows[] = '[cols="^1,3,5"]';
         $rows[] = '|===';
@@ -234,7 +239,7 @@ class AsciidocDefinition
         if (!empty($class->documentation)) {
             $rows[] = '';
             $rows[] = 'h|*Description*';
-            $rows[] = '2+a|' . trim($class->documentation);
+            $rows[] = '2+a|' . $this->formatText($class->documentation);
         }
 
         // Functions
@@ -250,7 +255,7 @@ class AsciidocDefinition
                 [$card, $signature] = $this->formatFunctionSignature($function, $prefix);
                 $rows[] = 'h|*' . $card . '*';
                 $rows[] = '|' . $signature;
-                $rows[] = 'a|' . rtrim($function->documentation ?? '');
+                $rows[] = 'a|' . $this->formatText($function->documentation ?? '');
             }
         }
 
@@ -281,7 +286,7 @@ class AsciidocDefinition
         $maxOccurs = 1;
         if ($property instanceof BmmContainerProperty) {
             $type = $this->formatContainerType($property->typeDef, $prefix);
-            $maxOccurs = $property->cardinality->upperUnbounded ? '*' : $property->cardinality->upper;
+            $maxOccurs = $property->cardinality->upperUnbounded ? '1' : $property->cardinality->upper;
         } elseif ($property instanceof BmmGenericProperty) {
             $type = $this->formatGenericType($property->typeDef, $prefix);
         } elseif ($property instanceof BmmSingleProperty || $property instanceof BmmSinglePropertyOpen) {
@@ -298,11 +303,11 @@ class AsciidocDefinition
     private function formatFunctionSignature(BmmFunction $function, string $prefix): array
     {
         $type = '';
-        $minOccurs = 1;//(int)($function->isNullable ?? 0);
+        $minOccurs = $function->isNullable ? 0 : 1;
         $maxOccurs = 1;
         if ($function->result instanceof BmmContainerType) {
             $type = $this->formatContainerType($function->result, $prefix);
-            $maxOccurs = '*';
+            $maxOccurs = '1';
         } elseif ($function->result instanceof BmmGenericType) {
             $type = $this->formatGenericType($function->result, $prefix);
         } elseif ($function->result instanceof BmmSimpleType) {
@@ -328,18 +333,15 @@ class AsciidocDefinition
         $signature = '*' . $function->name . '* ' . $aliases . '(' . $args . '): `' . $type . '`';
         if ($function->preConditions) {
             $signature .= " +\n +\n" . implode(" +\n", array_map(function ($key, $value) {
-                    return '__' . $key . '__: `' . $value . '`';
+                    return '__' . $key . '__: `' . $this->formatText($value) . '`';
                 }, array_keys($function->preConditions), array_values($function->preConditions)));
         }
         if ($function->postConditions) {
             $signature .= " +\n +\n" . implode(" +\n", array_map(function ($key, $value) {
-                    return '__' . $key . '__: `' . $value . '`';
+                    return '__' . $key . '__: `' . $this->formatText($value) . '`';
                 }, array_keys($function->postConditions), array_values($function->postConditions)));
         }
         $card = $minOccurs . '..' . $maxOccurs;
-        if ($function->isAbstract) {
-            $card .= " +\n(abstract)";
-        }
 
         return [$card, $signature];
     }
@@ -357,7 +359,9 @@ class AsciidocDefinition
     private function formatGenericType(BmmGenericType $type, string $prefix): string
     {
         if (!empty($type->genericParameters)) {
-            $genericParameters = implode(',', $type->genericParameters);
+            $genericParameters = implode(',', array_map(function ($t) use ($prefix) {
+                return $this->formatType($t, $prefix);
+            }, $type->genericParameters));
         } elseif (!empty($type->genericParameterDefs)) {
             $genericParameters = implode(',', array_map(function ($t) use ($prefix) {
                 if ($t instanceof BmmGenericType) {
@@ -382,12 +386,65 @@ class AsciidocDefinition
         // todo adapt this once all pages are in Antora
         if ($packageQname && preg_match('/^[\w.]+\.org\.openehr\.(\w+)\.(\w+)(?:\.\w+){0,2}$/', $packageQname, $m) === 1) {
             if (preg_match('/^org\.openehr\.(\w+)\.(\w+)(?:\.\w+){0,2}$/', $prefix, $p) && $m[2] === $p[2]) {
-                // tpe is on the same spec page, an example format is '<<_boolean_class,Boolean>>'
-                return '<<_' . strtolower($type) . '_class,' . $type . '>>';
+                // type is on the same spec page, an example format is '<<_boolean_class,Boolean>>'
+                $ref = strtolower($type);
+                $class = Globals::getClass($type);
+                if ($class instanceof BmmInterface) {
+                    $classType = 'interface';
+                } elseif ($class instanceof BmmEnumerationInteger || $class instanceof BmmEnumerationString) {
+                    $classType = 'enumeration';
+                } else {
+                    $classType = 'class';
+                }
+                return '<<_' . $ref . '_' . $classType . ',' . $type . '>>';
             }
             // an example format is 'link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]'
             return 'link:/releases/' . strtoupper($m[1]) . '/{' . $m[1] . '_release}/' . $m[2] . '.html#_' . strtolower($type) . '_class[' . $type . '^]';
         }
-        return 'link:/classes/' . $type . '[' . $type . ']';
+        return 'link:/classes/' . $type . '[' . $type . '] '.$packageQname;
+    }
+
+    public function formatText(string $text): string
+    {
+        return str_replace(['|', '"<="', ' <='], ['&#124;', '"\<="', ' \<='], trim($text));
+    }
+
+    public function formatPropertyOverride(BmmClass $class, AbstractBmmProperty $property): string
+    {
+        foreach ($class->ancestors as $ancestor) {
+            $ancestorClass = Globals::getClass($ancestor);
+            if ($ancestorClass instanceof BmmClass) {
+                if ($ancestorClass->properties->offsetExists($property->name)) {
+                    return " +\n(" . ($ancestorClass->isAbstract ? 'effected' : 'redefined') . ')';
+                }
+                $parent = $this->formatPropertyOverride($ancestorClass, $property);
+                if ($parent) {
+                    return $parent;
+                }
+            }
+        }
+        return '';
+    }
+
+    public function formatFunctionOverride(BmmClass $class, BmmFunction $function): string
+    {
+        if ($function->isAbstract) {
+            return " +\n(abstract)";
+        }
+        foreach ($class->ancestors as $ancestor) {
+            $ancestorClass = Globals::getClass($ancestor);
+            if ($ancestorClass instanceof BmmClass) {
+                /** @var BmmFunction $ancestorFunction */
+                $ancestorFunction = $ancestorClass->functions->get($function->name);
+                if ($ancestorFunction) {
+                    return " +\n(" . ($ancestorFunction->isAbstract ? 'effected' : 'redefined') . ')';
+                }
+                $parent = $this->formatFunctionOverride($ancestorClass, $function);
+                if ($parent) {
+                    return $parent;
+                }
+            }
+        }
+        return '';
     }
 }
