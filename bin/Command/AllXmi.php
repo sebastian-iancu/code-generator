@@ -120,7 +120,7 @@ class AllXmi extends Command
                 $writer = new CodeGenerator($reader);
                 $reader->read('BASE-v1.1.0.xmi');
                 $reader->read('AM-v2.2.0.xmi');
-                $writer->addWriter(new UmlToBmmWriter());
+                $writer->addWriter(new UmlToBmmWriter(['aom14']));
                 $writer->generate();
                 //
                 $reader = new XmiReader();
@@ -130,7 +130,7 @@ class AllXmi extends Command
                 $reader->read('TERM-v3.0.0.xmi');
                 $reader->read('RM-v1.1.0.xmi');
                 $reader->read('AM-v2.3.0.xmi');
-                $writer->addWriter(new UmlToBmmWriter());
+                $writer->addWriter(new UmlToBmmWriter(['aom14']));
                 $writer->generate();
                 //
                 $reader = new XmiReader();
@@ -140,7 +140,16 @@ class AllXmi extends Command
                 $reader->read('TERM-v3.1.0-dev.xmi');
                 $reader->read('RM-v1.2.0-dev.xmi');
                 $reader->read('AM-v2.4.0-dev.xmi');
-                $writer->addWriter(new UmlToBmmWriter());
+                $writer->addWriter(new UmlToBmmWriter(['aom14']));
+                $writer->generate();
+                //
+                $reader = new XmiReader();
+                $writer = new CodeGenerator($reader);
+                $reader->read('BASE-v1.3.0-dev.xmi');
+                $reader->read('LANG-v1.1.0-dev.xmi');
+                $reader->read('RM-v1.2.0-dev.xmi');
+                $reader->read('AM-v1.4.0-dev.xmi');
+                $writer->addWriter(new UmlToBmmWriter(['aom2']));
                 $writer->generate();
             }
 

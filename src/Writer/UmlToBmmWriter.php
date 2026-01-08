@@ -20,12 +20,14 @@ use OpenEHR\Tools\CodeGen\Model\Uml\UmlTemplateParameter;
 class UmlToBmmWriter extends AbstractWriter
 {
 
+    public function __construct(public readonly array $skipPackages = [])
+    {
+    }
+
     public const string DIR = __WRITER_DIR__ . DIRECTORY_SEPARATOR . 'BMM-JSON' . DIRECTORY_SEPARATOR;
 
     public const string REVISION = '2';
     public const string AUTHOR = 'Thomas Beale <thomas.beale@openehr.org>, code-generator';
-
-    public const array SKIP_PACKAGES = [];
 
     public const array PRIMITIVES = [
         'Any',
@@ -88,10 +90,10 @@ class UmlToBmmWriter extends AbstractWriter
             // serializing packages and their classes
             /** @var UmlPackage $umlPackage */
             foreach ($umlFile->umlPackage->getPackages('org::openehr::' . $schema_name . '::*') as $umlPackage) {
-                if (in_array($umlPackage->name, self::SKIP_PACKAGES)) {
+                if (in_array($umlPackage->name, $this->skipPackages)) {
                     continue;
                 }
-                $bmmPackage = self::asBmmPackage($umlPackage, "org.openehr.{$schema_name}.", $collectedUmlClasses);
+                $bmmPackage = $this->asBmmPackage($umlPackage, "org.openehr.{$schema_name}.", $collectedUmlClasses);
                 $schema['packages'][$bmmPackage['name']] = $bmmPackage;
             }
             // serializing primitive_types and class
@@ -120,6 +122,7 @@ class UmlToBmmWriter extends AbstractWriter
                     break;
                 case 'openehr_rm_1.2.0':
                 case 'openehr_am_2.4.0':
+                case 'openehr_am_1.4.0':
                     $schema->includes->add(new BmmSchemaInclude(id: 'openehr_base_1.3.0'));
                     break;
             }
@@ -135,7 +138,7 @@ class UmlToBmmWriter extends AbstractWriter
      * @param Collection $collectedUmlClasses
      * @return array<string, mixed>
      */
-    protected static function asBmmPackage(UmlPackage $umlPackage, string $namePrefix, Collection $collectedUmlClasses): array
+    protected function asBmmPackage(UmlPackage $umlPackage, string $namePrefix, Collection $collectedUmlClasses): array
     {
         $bmmPackage = [
             'name' => $namePrefix . $umlPackage->name,
@@ -144,10 +147,10 @@ class UmlToBmmWriter extends AbstractWriter
         ];
         /** @var UmlPackage $childUmlPackage */
         foreach ($umlPackage->umlPackages as $childUmlPackage) {
-            if (in_array($childUmlPackage->name, self::SKIP_PACKAGES)) {
+            if (in_array($childUmlPackage->name, $this->skipPackages)) {
                 continue;
             }
-            $bmmChildUmlPackage = self::asBmmPackage($childUmlPackage, '', $collectedUmlClasses);
+            $bmmChildUmlPackage = $this->asBmmPackage($childUmlPackage, '', $collectedUmlClasses);
             $bmmPackage['packages'][$bmmChildUmlPackage['name']] = $bmmChildUmlPackage;
         }
         self::log('  Generated [%s] package.', $bmmPackage['name']);
