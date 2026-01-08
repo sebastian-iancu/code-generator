@@ -14,6 +14,7 @@ class AbstractUmlAttribute implements CollectableInterface
 
     public readonly string $id;
     public readonly string $name;
+    public readonly ?string $description;
     public readonly UmlTypeReference $type;
     public readonly ?string $templateParameterId;
     public readonly int $minOccurs;
@@ -23,6 +24,7 @@ class AbstractUmlAttribute implements CollectableInterface
     {
         $this->id = (string)$xmlNode->attributes('xmi', true)?->id;
         $this->name = (string)$xmlNode['name'];
+        $this->description = isset($xmlNode->ownedComment['body']) ? (string)$xmlNode->ownedComment['body'] : null;
 
         // detect type
         if (isset($xmlNode['type'])) {

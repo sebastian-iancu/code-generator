@@ -7,7 +7,6 @@ use SimpleXMLElement;
 class UmlProperty extends UmlParameter
 {
 
-    public readonly string $description;
     public readonly bool $isStatic;
     public readonly bool $isReadOnly;
     public readonly mixed $default;
@@ -15,7 +14,6 @@ class UmlProperty extends UmlParameter
     public function __construct(SimpleXMLElement $xmlNode)
     {
         parent::__construct($xmlNode);
-        $this->description = (string)$xmlNode->ownedComment['body'];
         $this->isStatic = strcasecmp((string)$xmlNode['isStatic'], 'true') === 0;
         $this->isReadOnly = strcasecmp((string)$xmlNode['isReadOnly'], 'true') === 0;
         // detect default value

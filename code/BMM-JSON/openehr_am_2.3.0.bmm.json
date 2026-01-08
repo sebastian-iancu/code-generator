@@ -613,6 +613,7 @@
                         "rmcc": {
                             "_type": "P_BMM_GENERIC_FUNCTION_PARAMETER",
                             "name": "rmcc",
+                            "documentation": "RM conformance checker - a lambda (i.e. function object) that can compute conformance of type-names within the  Reference Model on which the current archetype is based. The signature provides two arguments representing respectively, the `_rm_type_name_` of the current node and the `_rm_type_name_` of the node being redefined in a specialisation parent archetype.",
                             "type_def": {
                                 "root_type": "FUNCTION"
                             }
@@ -741,6 +742,7 @@
                         "rmcc": {
                             "_type": "P_BMM_GENERIC_FUNCTION_PARAMETER",
                             "name": "rmcc",
+                            "documentation": "Reference Model conformance checker agent (lambda).",
                             "type_def": {
                                 "root_type": "FUNCTION"
                             }
@@ -773,6 +775,7 @@
                         "other": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
+                            "documentation": "`C_OBJECT` from a flat parent archetype.",
                             "type": "C_OBJECT"
                         }
                     },
@@ -1057,6 +1060,7 @@
                         "other": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
+                            "documentation": "`C_OBJECT` from a flat parent archetype.",
                             "type": "C_OBJECT"
                         }
                     },
@@ -1176,6 +1180,7 @@
                         "rmcc": {
                             "_type": "P_BMM_GENERIC_FUNCTION_PARAMETER",
                             "name": "rmcc",
+                            "documentation": "Reference Model conformance checker lambda.",
                             "type_def": {
                                 "root_type": "FUNCTION"
                             }
@@ -1315,6 +1320,7 @@
                         "rmcc": {
                             "_type": "P_BMM_GENERIC_FUNCTION_PARAMETER",
                             "name": "rmcc",
+                            "documentation": "RM conformance checker agent.",
                             "type_def": {
                                 "root_type": "FUNCTION"
                             }
@@ -1377,6 +1383,7 @@
                         "rmcc": {
                             "_type": "P_BMM_GENERIC_FUNCTION_PARAMETER",
                             "name": "rmcc",
+                            "documentation": "RM conformance checker agent.",
                             "type_def": {
                                 "root_type": "FUNCTION"
                             }
@@ -1437,6 +1444,7 @@
                         "rmcc": {
                             "_type": "P_BMM_GENERIC_FUNCTION_PARAMETER",
                             "name": "rmcc",
+                            "documentation": "RM conformance checker agent - a lambda (i.e. function object) that can compute conformance of type-names within the  Reference Model on which the current archetype is based. The signature provides two arguments representing respectively, the `_rm_type_name_` of the current node and the `_rm_type_name_` of the node being redefined in a specialisation parent archetype.",
                             "type_def": {
                                 "root_type": "FUNCTION"
                             }
@@ -1539,6 +1547,7 @@
                         "rmcc": {
                             "_type": "P_BMM_GENERIC_FUNCTION_PARAMETER",
                             "name": "rmcc",
+                            "documentation": "Reference Model conformance checker agent (lambda).",
                             "type_def": {
                                 "root_type": "FUNCTION"
                             }

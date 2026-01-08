@@ -313,7 +313,7 @@ class UmlToBmmWriter extends AbstractWriter
         $bmmParameter = [
             '_type' => null,
             'name' => $umlParameter->name,
-            'documentation' => $umlParameter->description ?? null,
+            'documentation' => $umlParameter->description,
             'is_nullable' => $umlParameter->minOccurs === 0,
         ];
         if ($umlParameter->templateParameterId) {
@@ -342,7 +342,7 @@ class UmlToBmmWriter extends AbstractWriter
         $bmmConstant = [
             '_type' => null,
             'name' => $umlProperty->name,
-            'documentation' => $umlProperty->description ?? null,
+            'documentation' => $umlProperty->description,
             'type' => $umlProperty->type->name,
             'value' => $umlProperty->default,
         ];

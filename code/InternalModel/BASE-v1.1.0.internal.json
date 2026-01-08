@@ -268,6 +268,7 @@
                                                                     "scheme": {
                                                                         "id": "_18_5_1_83e026d_1503073094528_82109_7697",
                                                                         "name": "scheme",
+                                                                        "description": "Name of the scheme to which this identifier conforms. Ideally this name will be recognisable globally but realistically it may be a local ad hoc scheme whose name is not controlled or standardised in any way. ",
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -278,7 +279,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "Name of the scheme to which this identifier conforms. Ideally this name will be recognisable globally but realistically it may be a local ad hoc scheme whose name is not controlled or standardised in any way. ",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -345,6 +345,7 @@
                                                                     "path": {
                                                                         "id": "_18_5_1_83e026d_1503073094531_393130_7703",
                                                                         "name": "path",
+                                                                        "description": "The path to an instance in question, as an absolute path with respect to the object found at `VERSION._data_`. An empty path means that the object referred to by id being specified. ",
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -355,7 +356,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 0,
                                                                         "maxOccurs": 1,
-                                                                        "description": "The path to an instance in question, as an absolute path with respect to the object found at `VERSION._data_`. An empty path means that the object referred to by id being specified. ",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -363,6 +363,7 @@
                                                                     "id": {
                                                                         "id": "_19_0_83e026d_1542378728467_781163_4770",
                                                                         "name": "id",
+                                                                        "description": "Globally unique id of an object, regardless of where it is stored.",
                                                                         "type": {
                                                                             "id": "_18_5_1_83e026d_1503073638540_947002_8168",
                                                                             "name": "UID_BASED_ID",
@@ -373,7 +374,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "Globally unique id of an object, regardless of where it is stored.",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -419,6 +419,7 @@
                                                                     "value": {
                                                                         "id": "_18_5_1_83e026d_1503073094533_891923_7709",
                                                                         "name": "value",
+                                                                        "description": "The value of the id in the form defined below. ",
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -429,7 +430,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "The value of the id in the form defined below. ",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -455,6 +455,7 @@
                                                                     "namespace": {
                                                                         "id": "_18_5_1_83e026d_1503073094534_998113_7712",
                                                                         "name": "namespace",
+                                                                        "description": "Namespace to which this identifier belongs in the local system context (and possibly in any other openEHR compliant environment) e.g.  terminology ,  demographic . These names are not yet standardised. Legal values for `_namespace_` are:\n\n* `\"local\"`\n* `\"unknown\"`\n* a string matching the regex `[a-zA-Z][a-zA-Z0-9_-:\/&+?]*`\n",
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -465,7 +466,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "Namespace to which this identifier belongs in the local system context (and possibly in any other openEHR compliant environment) e.g.  terminology ,  demographic . These names are not yet standardised. Legal values for `_namespace_` are:\n\n* `\"local\"`\n* `\"unknown\"`\n* a string matching the regex `[a-zA-Z][a-zA-Z0-9_-:\/&+?]*`\n",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -473,6 +473,7 @@
                                                                     "type": {
                                                                         "id": "_18_5_1_83e026d_1503073094534_307820_7713",
                                                                         "name": "type",
+                                                                        "description": "Name of the  class (concrete or abstract) of object to which this identifier type refers, e.g. `PARTY`, `PERSON`,  `GUIDELINE`  etc. These class names are from the relevant reference model. The type name `ANY` can be used to indicate that any type is accepted (e.g. if the type is unknown). ",
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -483,7 +484,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "Name of the  class (concrete or abstract) of object to which this identifier type refers, e.g. `PARTY`, `PERSON`,  `GUIDELINE`  etc. These class names are from the relevant reference model. The type name `ANY` can be used to indicate that any type is accepted (e.g. if the type is unknown). ",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -491,6 +491,7 @@
                                                                     "id": {
                                                                         "id": "_18_5_1_83e026d_1503073094534_3342_7714",
                                                                         "name": "id",
+                                                                        "description": "Globally unique id of an object, regardless of where it is stored.",
                                                                         "type": {
                                                                             "id": "_18_5_1_83e026d_1503073094519_443263_7680",
                                                                             "name": "OBJECT_ID",
@@ -501,7 +502,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "Globally unique id of an object, regardless of where it is stored.",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -735,6 +735,7 @@
                                                                     "value": {
                                                                         "id": "_18_5_1_83e026d_1503073094539_329031_7738",
                                                                         "name": "value",
+                                                                        "description": "String form of this identifier.",
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -745,7 +746,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "String form of this identifier.",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -1043,6 +1043,7 @@
                                                                     "value": {
                                                                         "id": "_18_1_83e026d_1422968609456_613686_26506",
                                                                         "name": "value",
+                                                                        "description": "The value of the id.",
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -1053,7 +1054,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "The value of the id.",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -1205,6 +1205,7 @@
                                                                     "Local_terminology_id": {
                                                                         "id": "_18_2_83e026d_1463665158920_318483_4904",
                                                                         "name": "Local_terminology_id",
+                                                                        "description": "Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype",
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -1215,7 +1216,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype",
                                                                         "isStatic": true,
                                                                         "isReadOnly": false,
                                                                         "default": "\"local\""
@@ -1243,6 +1243,7 @@
                                                                     "CR": {
                                                                         "id": "_18_1_83e026d_1422968609456_33390_26486",
                                                                         "name": "CR",
+                                                                        "description": "Carriage return character.",
                                                                         "type": {
                                                                             "id": "UML_Standard_Profile.mdzip#eee_1045467100323_377050_61",
                                                                             "name": "Character",
@@ -1253,7 +1254,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "Carriage return character.",
                                                                         "isStatic": true,
                                                                         "isReadOnly": true,
                                                                         "default": "'\\015'"
@@ -1261,6 +1261,7 @@
                                                                     "LF": {
                                                                         "id": "_18_1_83e026d_1422968609456_353223_26487",
                                                                         "name": "LF",
+                                                                        "description": "Line feed character.",
                                                                         "type": {
                                                                             "id": "UML_Standard_Profile.mdzip#eee_1045467100323_377050_61",
                                                                             "name": "Character",
@@ -1271,7 +1272,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "Line feed character.",
                                                                         "isStatic": true,
                                                                         "isReadOnly": true,
                                                                         "default": "'\\012'"
@@ -1279,6 +1279,7 @@
                                                                     "Any_type": {
                                                                         "id": "_18_2_83e026d_1463666695695_699791_5077",
                                                                         "name": "Any_type",
+                                                                        "description": null,
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -1289,7 +1290,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "",
                                                                         "isStatic": true,
                                                                         "isReadOnly": true,
                                                                         "default": "\"Any\""
@@ -1297,6 +1297,7 @@
                                                                     "Regex_any_pattern": {
                                                                         "id": "_18_2_83e026d_1463666748893_600517_5081",
                                                                         "name": "Regex_any_pattern",
+                                                                        "description": null,
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -1307,7 +1308,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "",
                                                                         "isStatic": true,
                                                                         "isReadOnly": true,
                                                                         "default": "\".*\""
@@ -1315,6 +1315,7 @@
                                                                     "Default_encoding": {
                                                                         "id": "_18_2_83e026d_1463666805014_478840_5085",
                                                                         "name": "Default_encoding",
+                                                                        "description": null,
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -1325,7 +1326,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "",
                                                                         "isStatic": true,
                                                                         "isReadOnly": true,
                                                                         "default": "\"UTF-8\""
@@ -1490,6 +1490,7 @@
                                                                             "a_key": {
                                                                                 "id": "_18_1_83e026d_1422968609394_301885_26036",
                                                                                 "name": "a_key",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "_18_1_83e026d_1423238585821_726207_4325",
                                                                                     "name": "K",
@@ -1526,6 +1527,7 @@
                                                                             "a_key": {
                                                                                 "id": "_18_1_83e026d_1422968609409_654355_26039",
                                                                                 "name": "a_key",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "_18_1_83e026d_1423238585821_726207_4325",
                                                                                     "name": "K",
@@ -1786,6 +1788,7 @@
                                                                             "v": {
                                                                                 "id": "_18_1_83e026d_1437046557049_998290_5196",
                                                                                 "name": "v",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "_18_1_83e026d_1437046360991_140904_5190",
                                                                                     "name": "T",
@@ -2396,6 +2399,7 @@
                                                                             "other": {
                                                                                 "id": "_18_1_83e026d_1437043586797_714496_4788",
                                                                                 "name": "other",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "_18_1_83e026d_1437041647455_666508_4494",
                                                                                     "name": "Numeric",
@@ -2432,6 +2436,7 @@
                                                                             "other": {
                                                                                 "id": "_18_1_83e026d_1437043653349_709859_4794",
                                                                                 "name": "other",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "_18_1_83e026d_1437041647455_666508_4494",
                                                                                     "name": "Numeric",
@@ -2468,6 +2473,7 @@
                                                                             "other": {
                                                                                 "id": "_18_1_83e026d_1437043744316_609524_4803",
                                                                                 "name": "other",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "_18_1_83e026d_1437041647455_666508_4494",
                                                                                     "name": "Numeric",
@@ -2594,6 +2600,7 @@
                                                                             "other": {
                                                                                 "id": "_18_1_83e026d_1437044600266_194868_4929",
                                                                                 "name": "other",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                                     "name": "Boolean",
@@ -2645,6 +2652,7 @@
                                                                             "other": {
                                                                                 "id": "_18_1_83e026d_1437044670753_207674_4936",
                                                                                 "name": "other",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                                     "name": "Boolean",
@@ -2690,6 +2698,7 @@
                                                                             "other": {
                                                                                 "id": "_18_1_83e026d_1437044866536_404676_4949",
                                                                                 "name": "other",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                                     "name": "Boolean",
@@ -2747,6 +2756,7 @@
                                                                             "other": {
                                                                                 "id": "_18_1_83e026d_1437045031943_729952_4962",
                                                                                 "name": "other",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                                     "name": "Boolean",
@@ -2792,6 +2802,7 @@
                                                                             "other": {
                                                                                 "id": "_18_1_83e026d_1437045124911_611805_4970",
                                                                                 "name": "other",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                                     "name": "Boolean",
@@ -2837,6 +2848,7 @@
                                                                             "other": {
                                                                                 "id": "_18_1_83e026d_1437045222470_534019_4980",
                                                                                 "name": "other",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                                     "name": "Boolean",
@@ -2937,6 +2949,7 @@
                                                                             "other": {
                                                                                 "id": "_18_1_83e026d_1437045909716_263928_5173",
                                                                                 "name": "other",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "_18_1_83e026d_1437045555791_888328_4996",
                                                                                     "name": "String",
@@ -3134,6 +3147,7 @@
                                                                             "other": {
                                                                                 "id": "_18_1_83e026d_1425474826084_698985_4625",
                                                                                 "name": "other",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "_18_1_83e026d_1422968609347_357665_25676",
                                                                                     "name": "Ordered",
@@ -4798,6 +4812,7 @@
                                                                     "value": {
                                                                         "id": "_18_2_83e026d_1463655819772_86880_4797",
                                                                         "name": "value",
+                                                                        "description": "Representation of all descendants is a single String.",
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -4808,7 +4823,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "Representation of all descendants is a single String.",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -5317,6 +5331,7 @@
                                                                     "Seconds_in_minute": {
                                                                         "id": "_18_2_83e026d_1463653930984_254429_5820",
                                                                         "name": "Seconds_in_minute",
+                                                                        "description": null,
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -5327,7 +5342,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "",
                                                                         "isStatic": true,
                                                                         "isReadOnly": true,
                                                                         "default": 60
@@ -5335,6 +5349,7 @@
                                                                     "Minutes_in_hour": {
                                                                         "id": "_18_2_83e026d_1463653930986_347503_5821",
                                                                         "name": "Minutes_in_hour",
+                                                                        "description": null,
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -5345,7 +5360,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "",
                                                                         "isStatic": true,
                                                                         "isReadOnly": true,
                                                                         "default": 60
@@ -5353,6 +5367,7 @@
                                                                     "Hours_in_day": {
                                                                         "id": "_18_2_83e026d_1463653930988_203248_5822",
                                                                         "name": "Hours_in_day",
+                                                                        "description": null,
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -5363,7 +5378,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "",
                                                                         "isStatic": true,
                                                                         "isReadOnly": true,
                                                                         "default": 24
@@ -5371,6 +5385,7 @@
                                                                     "Nominal_days_in_month": {
                                                                         "id": "_18_2_83e026d_1463653930989_168960_5823",
                                                                         "name": "Nominal_days_in_month",
+                                                                        "description": "Used for conversions of durations containing months to days and \/ or seconds.",
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Real",
                                                                             "name": "Real",
@@ -5381,7 +5396,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "Used for conversions of durations containing months to days and \/ or seconds.",
                                                                         "isStatic": true,
                                                                         "isReadOnly": true,
                                                                         "default": 30.42
@@ -5389,6 +5403,7 @@
                                                                     "Max_days_in_month": {
                                                                         "id": "_18_2_83e026d_1463653930990_43542_5824",
                                                                         "name": "Max_days_in_month",
+                                                                        "description": null,
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -5399,7 +5414,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "",
                                                                         "isStatic": true,
                                                                         "isReadOnly": true,
                                                                         "default": 31
@@ -5407,6 +5421,7 @@
                                                                     "Days_in_year": {
                                                                         "id": "_18_2_83e026d_1463653930991_675715_5825",
                                                                         "name": "Days_in_year",
+                                                                        "description": null,
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -5417,7 +5432,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "",
                                                                         "isStatic": true,
                                                                         "isReadOnly": true,
                                                                         "default": 365
@@ -5425,6 +5439,7 @@
                                                                     "Days_in_leap_year": {
                                                                         "id": "_18_2_83e026d_1463653930991_78660_5826",
                                                                         "name": "Days_in_leap_year",
+                                                                        "description": null,
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -5435,7 +5450,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "",
                                                                         "isStatic": true,
                                                                         "isReadOnly": true,
                                                                         "default": 366
@@ -5443,6 +5457,7 @@
                                                                     "Max_days_in_year": {
                                                                         "id": "_18_2_83e026d_1463653930992_967594_5827",
                                                                         "name": "Max_days_in_year",
+                                                                        "description": null,
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -5453,7 +5468,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "",
                                                                         "isStatic": true,
                                                                         "isReadOnly": true,
                                                                         "default": ""
@@ -5461,6 +5475,7 @@
                                                                     "Nominal_days_in_year": {
                                                                         "id": "_18_2_83e026d_1463653930992_299932_5828",
                                                                         "name": "Nominal_days_in_year",
+                                                                        "description": "Used for conversions of durations containing years to days and \/ or seconds.",
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Real",
                                                                             "name": "Real",
@@ -5471,7 +5486,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "Used for conversions of durations containing years to days and \/ or seconds.",
                                                                         "isStatic": true,
                                                                         "isReadOnly": true,
                                                                         "default": 365.24
@@ -5479,6 +5493,7 @@
                                                                     "Days_in_week": {
                                                                         "id": "_18_2_83e026d_1463653930993_850050_5829",
                                                                         "name": "Days_in_week",
+                                                                        "description": null,
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -5489,7 +5504,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "",
                                                                         "isStatic": true,
                                                                         "isReadOnly": true,
                                                                         "default": 7
@@ -5497,6 +5511,7 @@
                                                                     "Months_in_year": {
                                                                         "id": "_18_2_83e026d_1463653930994_372414_5830",
                                                                         "name": "Months_in_year",
+                                                                        "description": null,
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -5507,7 +5522,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "",
                                                                         "isStatic": true,
                                                                         "isReadOnly": true,
                                                                         "default": 12
@@ -5515,6 +5529,7 @@
                                                                     "Min_timezone_hour": {
                                                                         "id": "_18_2_83e026d_1463653930994_268002_5831",
                                                                         "name": "Min_timezone_hour",
+                                                                        "description": "Minimum hour value of a timezone (note that the -ve sign is supplied in the ISO8601_TIMEZONE class).",
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -5525,7 +5540,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "Minimum hour value of a timezone (note that the -ve sign is supplied in the ISO8601_TIMEZONE class).",
                                                                         "isStatic": true,
                                                                         "isReadOnly": true,
                                                                         "default": 12
@@ -5533,6 +5547,7 @@
                                                                     "Max_timezone_hour": {
                                                                         "id": "_18_2_83e026d_1463653930995_750429_5832",
                                                                         "name": "Max_timezone_hour",
+                                                                        "description": null,
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                             "name": "Integer",
@@ -5543,7 +5558,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "",
                                                                         "isStatic": true,
                                                                         "isReadOnly": true,
                                                                         "default": 13
@@ -5575,6 +5589,7 @@
                                                                             "y": {
                                                                                 "id": "_18_2_83e026d_1463653930996_861599_5834",
                                                                                 "name": "y",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                                     "name": "Integer",
@@ -5620,6 +5635,7 @@
                                                                             "m": {
                                                                                 "id": "_18_2_83e026d_1463653930999_685512_5837",
                                                                                 "name": "m",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                                     "name": "Integer",
@@ -5667,6 +5683,7 @@
                                                                             "y": {
                                                                                 "id": "_18_2_83e026d_1463653931000_35317_5840",
                                                                                 "name": "y",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                                     "name": "Integer",
@@ -5681,6 +5698,7 @@
                                                                             "m": {
                                                                                 "id": "_18_2_83e026d_1463653931000_716744_5841",
                                                                                 "name": "m",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                                     "name": "Integer",
@@ -5695,6 +5713,7 @@
                                                                             "d": {
                                                                                 "id": "_18_2_83e026d_1463653931001_418458_5842",
                                                                                 "name": "d",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                                     "name": "Integer",
@@ -5742,6 +5761,7 @@
                                                                             "h": {
                                                                                 "id": "_18_2_83e026d_1463653931002_751587_5846",
                                                                                 "name": "h",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                                     "name": "Integer",
@@ -5756,6 +5776,7 @@
                                                                             "m": {
                                                                                 "id": "_18_2_83e026d_1463653931002_456939_5847",
                                                                                 "name": "m",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                                     "name": "Integer",
@@ -5770,6 +5791,7 @@
                                                                             "s": {
                                                                                 "id": "_18_2_83e026d_1463653931002_982855_5848",
                                                                                 "name": "s",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                                     "name": "Integer",
@@ -5815,6 +5837,7 @@
                                                                             "m": {
                                                                                 "id": "_18_2_83e026d_1463653931004_22568_5852",
                                                                                 "name": "m",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                                     "name": "Integer",
@@ -5860,6 +5883,7 @@
                                                                             "s": {
                                                                                 "id": "_18_2_83e026d_1463653931004_635317_5856",
                                                                                 "name": "s",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Integer",
                                                                                     "name": "Integer",
@@ -5905,6 +5929,7 @@
                                                                             "fs": {
                                                                                 "id": "_18_2_83e026d_1463653931005_870912_5860",
                                                                                 "name": "fs",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "_18_1_83e026d_1437041599239_313753_4467",
                                                                                     "name": "Double",
@@ -5950,6 +5975,7 @@
                                                                             "s": {
                                                                                 "id": "_19_0_83e026d_1541936301354_571908_5044",
                                                                                 "name": "s",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                                     "name": "String",
@@ -5986,6 +6012,7 @@
                                                                             "s": {
                                                                                 "id": "_19_0_83e026d_1541936263241_757257_5039",
                                                                                 "name": "s",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                                     "name": "String",
@@ -6022,6 +6049,7 @@
                                                                             "s": {
                                                                                 "id": "_18_2_83e026d_1461851902614_939263_5160",
                                                                                 "name": "s",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                                     "name": "String",
@@ -6058,6 +6086,7 @@
                                                                             "s": {
                                                                                 "id": "_18_2_83e026d_1461851902618_85262_5194",
                                                                                 "name": "s",
+                                                                                "description": "String is a valid ISO 8601 duration, i.e. takes the form:\n\n* `P[nnY][nnM][nnW][nnD][T[nnH][nnM][nnS]]`\n\nWhere each `nn` represents a number of years, months, etc. `nnW` represents a number of 7- day weeks.\n\nNOTE: allowing the `W` designator in the same expression as other designators is an exception to the published standard, but necessary in clinical information (typically for representing pregnancy duration).",
                                                                                 "type": {
                                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                                     "name": "String",
@@ -6179,6 +6208,7 @@
                                                                     "Multiplicity_range_marker": {
                                                                         "id": "_18_2_83e026d_1463743491328_156645_6280",
                                                                         "name": "Multiplicity_range_marker",
+                                                                        "description": "Marker to use in string form of interval between limits.",
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -6189,7 +6219,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "Marker to use in string form of interval between limits.",
                                                                         "isStatic": true,
                                                                         "isReadOnly": true,
                                                                         "default": "\"..\""
@@ -6197,6 +6226,7 @@
                                                                     "Multiplicity_unbounded_marker": {
                                                                         "id": "_18_2_83e026d_1463743684654_100631_6284",
                                                                         "name": "Multiplicity_unbounded_marker",
+                                                                        "description": "Symbol to use to indicate upper limit unbounded.",
                                                                         "type": {
                                                                             "id": "UML_Standard_Profile.mdzip#eee_1045467100323_377050_61",
                                                                             "name": "Character",
@@ -6207,7 +6237,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "Symbol to use to indicate upper limit unbounded.",
                                                                         "isStatic": true,
                                                                         "isReadOnly": true,
                                                                         "default": "'*'"
@@ -6400,6 +6429,7 @@
                                                                     "lower": {
                                                                         "id": "_18_1_83e026d_1422968609316_978889_25492",
                                                                         "name": "lower",
+                                                                        "description": "Lower bound.",
                                                                         "type": {
                                                                             "id": "_18_1_83e026d_1422968609550_577611_27367",
                                                                             "name": "T",
@@ -6410,7 +6440,6 @@
                                                                         "templateParameterId": "_18_1_83e026d_1422968609394_653208_26007",
                                                                         "minOccurs": 0,
                                                                         "maxOccurs": 1,
-                                                                        "description": "Lower bound.",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -6418,6 +6447,7 @@
                                                                     "upper": {
                                                                         "id": "_18_1_83e026d_1422968609316_105724_25493",
                                                                         "name": "upper",
+                                                                        "description": "Upper bound.",
                                                                         "type": {
                                                                             "id": "_18_1_83e026d_1422968609550_577611_27367",
                                                                             "name": "T",
@@ -6428,7 +6458,6 @@
                                                                         "templateParameterId": "_18_1_83e026d_1422968609394_653208_26007",
                                                                         "minOccurs": 0,
                                                                         "maxOccurs": 1,
-                                                                        "description": "Upper bound.",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -6436,6 +6465,7 @@
                                                                     "lower_unbounded": {
                                                                         "id": "_18_1_83e026d_1422968609316_338344_25494",
                                                                         "name": "lower_unbounded",
+                                                                        "description": "`lower` boundary open (i.e. = -infinity).",
                                                                         "type": {
                                                                             "id": "UML_Standard_Profile.mdzip#eee_1045467100323_191782_59",
                                                                             "name": "Boolean",
@@ -6446,7 +6476,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "`lower` boundary open (i.e. = -infinity).",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -6454,6 +6483,7 @@
                                                                     "upper_unbounded": {
                                                                         "id": "_18_1_83e026d_1422968609316_169685_25495",
                                                                         "name": "upper_unbounded",
+                                                                        "description": "`upper` boundary open (i.e. = +infinity).",
                                                                         "type": {
                                                                             "id": "UML_Standard_Profile.mdzip#eee_1045467100323_191782_59",
                                                                             "name": "Boolean",
@@ -6464,7 +6494,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "`upper` boundary open (i.e. = +infinity).",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -6472,6 +6501,7 @@
                                                                     "lower_included": {
                                                                         "id": "_18_1_83e026d_1422968609316_61718_25496",
                                                                         "name": "lower_included",
+                                                                        "description": "`lower` boundary value included in range if not `lower_unbounded`.",
                                                                         "type": {
                                                                             "id": "UML_Standard_Profile.mdzip#eee_1045467100323_191782_59",
                                                                             "name": "Boolean",
@@ -6482,7 +6512,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "`lower` boundary value included in range if not `lower_unbounded`.",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -6490,6 +6519,7 @@
                                                                     "upper_included": {
                                                                         "id": "_18_1_83e026d_1422968609316_606952_25497",
                                                                         "name": "upper_included",
+                                                                        "description": "`upper` boundary value included in range if not `upper_unbounded`.",
                                                                         "type": {
                                                                             "id": "UML_Standard_Profile.mdzip#eee_1045467100323_191782_59",
                                                                             "name": "Boolean",
@@ -6500,7 +6530,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "`upper` boundary value included in range if not `upper_unbounded`.",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -6525,6 +6554,7 @@
                                                                             "e": {
                                                                                 "id": "_18_1_83e026d_1422968609394_109340_26009",
                                                                                 "name": "e",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "_18_1_83e026d_1422968609550_577611_27367",
                                                                                     "name": "T",
@@ -6561,6 +6591,7 @@
                                                                             "other": {
                                                                                 "id": "_18_2_83e026d_1463743129282_746102_6262",
                                                                                 "name": "other",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "_18_1_83e026d_1422968609284_208630_25363",
                                                                                     "name": "Interval",
@@ -6597,6 +6628,7 @@
                                                                             "other": {
                                                                                 "id": "_18_2_83e026d_1463743189521_649060_6268",
                                                                                 "name": "other",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "_18_1_83e026d_1422968609284_208630_25363",
                                                                                     "name": "Interval",
@@ -6633,6 +6665,7 @@
                                                                             "other": {
                                                                                 "id": "_18_2_83e026d_1463743402387_466872_6273",
                                                                                 "name": "other",
+                                                                                "description": null,
                                                                                 "type": {
                                                                                     "id": "_18_1_83e026d_1422968609284_691010_25365",
                                                                                     "name": "Any",
@@ -6737,6 +6770,7 @@
                                                                     "lower_unbounded": {
                                                                         "id": "_18_2_83e026d_1484417177744_659666_5161",
                                                                         "name": "lower_unbounded",
+                                                                        "description": "lower boundary open (i.e. = -infinity)",
                                                                         "type": {
                                                                             "id": "UML_Standard_Profile.mdzip#eee_1045467100323_191782_59",
                                                                             "name": "Boolean",
@@ -6747,7 +6781,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "lower boundary open (i.e. = -infinity)",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": false
@@ -6755,6 +6788,7 @@
                                                                     "upper_unbounded": {
                                                                         "id": "_18_2_83e026d_1484417180926_359100_5166",
                                                                         "name": "upper_unbounded",
+                                                                        "description": "upper boundary open (i.e. = +infinity)",
                                                                         "type": {
                                                                             "id": "UML_Standard_Profile.mdzip#eee_1045467100323_191782_59",
                                                                             "name": "Boolean",
@@ -6765,7 +6799,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "upper boundary open (i.e. = +infinity)",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": false
@@ -6773,6 +6806,7 @@
                                                                     "lower_included": {
                                                                         "id": "_18_2_83e026d_1484417183425_399662_5171",
                                                                         "name": "lower_included",
+                                                                        "description": "lower boundary value included in range if not lower_unbounded.",
                                                                         "type": {
                                                                             "id": "UML_Standard_Profile.mdzip#eee_1045467100323_191782_59",
                                                                             "name": "Boolean",
@@ -6783,7 +6817,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "lower boundary value included in range if not lower_unbounded.",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": true
@@ -6791,6 +6824,7 @@
                                                                     "upper_included": {
                                                                         "id": "_18_2_83e026d_1484417186349_646764_5176",
                                                                         "name": "upper_included",
+                                                                        "description": "upper boundary value included in range if not upper_unbounded.",
                                                                         "type": {
                                                                             "id": "UML_Standard_Profile.mdzip#eee_1045467100323_191782_59",
                                                                             "name": "Boolean",
@@ -6801,7 +6835,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "upper boundary value included in range if not upper_unbounded.",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": true
@@ -6836,6 +6869,7 @@
                                                                     "interval": {
                                                                         "id": "_18_1_83e026d_1422968609519_335706_27211",
                                                                         "name": "interval",
+                                                                        "description": "The interval of this cardinality. ",
                                                                         "type": {
                                                                             "id": "_18_1_83e026d_1423136028127_343721_6013",
                                                                             "name": "Multiplicity_interval",
@@ -6846,7 +6880,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "The interval of this cardinality. ",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -6854,6 +6887,7 @@
                                                                     "is_ordered": {
                                                                         "id": "_18_1_83e026d_1422968609519_169078_27212",
                                                                         "name": "is_ordered",
+                                                                        "description": "True if the members of the container attribute to which this cardinality refers are ordered. ",
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -6864,7 +6898,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "True if the members of the container attribute to which this cardinality refers are ordered. ",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -6872,6 +6905,7 @@
                                                                     "is_unique": {
                                                                         "id": "_18_1_83e026d_1422968609519_893396_27213",
                                                                         "name": "is_unique",
+                                                                        "description": "True if the members of the container attribute to which this cardinality refers are unique.",
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                             "name": "Boolean",
@@ -6882,7 +6916,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "True if the members of the container attribute to which this cardinality refers are unique.",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -7088,6 +7121,7 @@
                                                                     "terminology_id": {
                                                                         "id": "_18_1_83e026d_1423133137139_444689_5903",
                                                                         "name": "terminology_id",
+                                                                        "description": "The archetype environment namespace identifier used to identify a terminology. Typically a value like `\"snomed_ct\"` that is mapped elsewhere to the full URI identifying the terminology.",
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -7098,7 +7132,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "The archetype environment namespace identifier used to identify a terminology. Typically a value like `\"snomed_ct\"` that is mapped elsewhere to the full URI identifying the terminology.",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -7106,6 +7139,7 @@
                                                                     "terminology_version": {
                                                                         "id": "_18_1_83e026d_1423133163540_734139_5906",
                                                                         "name": "terminology_version",
+                                                                        "description": "Optional string value representing terminology version, typically a date or dotted numeric.",
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -7116,7 +7150,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 0,
                                                                         "maxOccurs": 1,
-                                                                        "description": "Optional string value representing terminology version, typically a date or dotted numeric.",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -7124,6 +7157,7 @@
                                                                     "code_string": {
                                                                         "id": "_18_1_83e026d_1423133192131_289969_5909",
                                                                         "name": "code_string",
+                                                                        "description": "A terminology code or post-coordinated code expression, if supported by the terminology. The code may refer to a single term, a value set consisting of multiple terms, or some other entity representable within the terminology.",
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -7134,7 +7168,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "A terminology code or post-coordinated code expression, if supported by the terminology. The code may refer to a single term, a value set consisting of multiple terms, or some other entity representable within the terminology.",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -7142,6 +7175,7 @@
                                                                     "uri": {
                                                                         "id": "_18_1_83e026d_1423133219081_20555_5912",
                                                                         "name": "uri",
+                                                                        "description": "The URI reference that may be used as a concrete key into a notional terminology service for queries that can obtain the term text, definition, and other associated elements.",
                                                                         "type": {
                                                                             "id": "_18_1_83e026d_1423133385358_956007_5915",
                                                                             "name": "Uri",
@@ -7152,7 +7186,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 0,
                                                                         "maxOccurs": 1,
-                                                                        "description": "The URI reference that may be used as a concrete key into a notional terminology service for queries that can obtain the term text, definition, and other associated elements.",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -7192,6 +7225,7 @@
                                                                     "concept": {
                                                                         "id": "_18_2_83e026d_1487179068234_512245_5031",
                                                                         "name": "concept",
+                                                                        "description": "Refrence to the terminology concept formally representing this term.",
                                                                         "type": {
                                                                             "id": "_18_1_83e026d_1423133121170_943500_5902",
                                                                             "name": "Terminology_code",
@@ -7202,7 +7236,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "Refrence to the terminology concept formally representing this term.",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -7210,6 +7243,7 @@
                                                                     "text": {
                                                                         "id": "_18_2_83e026d_1487179110915_450161_5063",
                                                                         "name": "text",
+                                                                        "description": "Text of term.",
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -7220,7 +7254,6 @@
                                                                         "templateParameterId": null,
                                                                         "minOccurs": 1,
                                                                         "maxOccurs": 1,
-                                                                        "description": "Text of term.",
                                                                         "isStatic": false,
                                                                         "isReadOnly": false,
                                                                         "default": null
@@ -7264,6 +7297,7 @@
                                                                     "other": {
                                                                         "id": "_18_1_83e026d_1437044160579_963303_4830",
                                                                         "name": "other",
+                                                                        "description": null,
                                                                         "type": {
                                                                             "id": "_18_1_83e026d_1422968609284_691010_25365",
                                                                             "name": "Any",
@@ -7300,6 +7334,7 @@
                                                                     "other": {
                                                                         "id": "_18_1_83e026d_1437043917492_661271_4813",
                                                                         "name": "other",
+                                                                        "description": "Reference equality.",
                                                                         "type": {
                                                                             "id": "_18_1_83e026d_1422968609284_691010_25365",
                                                                             "name": "Any",
@@ -7336,6 +7371,7 @@
                                                                     "a_type": {
                                                                         "id": "_18_1_83e026d_1437043978996_288732_4818",
                                                                         "name": "a_type",
+                                                                        "description": null,
                                                                         "type": {
                                                                             "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                             "name": "String",
@@ -7372,6 +7408,7 @@
                                                                     "an_object": {
                                                                         "id": "_18_1_83e026d_1437044097371_261016_4825",
                                                                         "name": "an_object",
+                                                                        "description": null,
                                                                         "type": {
                                                                             "id": "_18_1_83e026d_1422968609284_691010_25365",
                                                                             "name": "Any",
@@ -7436,6 +7473,7 @@
                                                             "uid": {
                                                                 "id": "_18_1_83e026d_1422968609378_914697_25925",
                                                                 "name": "uid",
+                                                                "description": "Unique identifier of the family of archetypes having the same interface identifier (same major version).",
                                                                 "type": {
                                                                     "id": "_18_1_83e026d_1446048598798_479008_4831",
                                                                     "name": "UUID",
@@ -7446,7 +7484,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Unique identifier of the family of archetypes having the same interface identifier (same major version).",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7454,6 +7491,7 @@
                                                             "original_language": {
                                                                 "id": "_18_1_83e026d_1422968609425_37904_26200",
                                                                 "name": "original_language",
+                                                                "description": "Language in which this resource was initially authored. Although there is no language primacy of resources overall, the language of original authoring is required to ensure natural language translations can preserve quality. Language is relevant in both the description and ontology sections. ",
                                                                 "type": {
                                                                     "id": "_18_1_83e026d_1423133121170_943500_5902",
                                                                     "name": "Terminology_code",
@@ -7464,7 +7502,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
                                                                 "maxOccurs": 1,
-                                                                "description": "Language in which this resource was initially authored. Although there is no language primacy of resources overall, the language of original authoring is required to ensure natural language translations can preserve quality. Language is relevant in both the description and ontology sections. ",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7472,6 +7509,7 @@
                                                             "description": {
                                                                 "id": "_18_1_83e026d_1422968609425_556838_26203",
                                                                 "name": "description",
+                                                                "description": "Description and lifecycle information of the resource.",
                                                                 "type": {
                                                                     "id": "_18_1_83e026d_1422968609316_109462_25553",
                                                                     "name": "RESOURCE_DESCRIPTION",
@@ -7482,7 +7520,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Description and lifecycle information of the resource.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7490,6 +7527,7 @@
                                                             "is_controlled": {
                                                                 "id": "_18_1_83e026d_1422968609425_482753_26201",
                                                                 "name": "is_controlled",
+                                                                "description": "True if this resource is under any kind of change control (even file copying), in which case revision history is created. ",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#Boolean",
                                                                     "name": "Boolean",
@@ -7500,7 +7538,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "True if this resource is under any kind of change control (even file copying), in which case revision history is created. ",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7508,6 +7545,7 @@
                                                             "annotations": {
                                                                 "id": "_18_1_83e026d_1423935002562_920638_4407",
                                                                 "name": "annotations",
+                                                                "description": "Annotations on individual items within the resource, keyed by path. The inner table takes the form of a Hash table of String values keyed by String tags.",
                                                                 "type": {
                                                                     "id": "_18_1_83e026d_1429721427946_83239_4696",
                                                                     "name": "RESOURCE_ANNOTATIONS",
@@ -7518,7 +7556,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Annotations on individual items within the resource, keyed by path. The inner table takes the form of a Hash table of String values keyed by String tags.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7526,6 +7563,7 @@
                                                             "translations": {
                                                                 "id": "_18_2_83e026d_1456155732657_22041_4628",
                                                                 "name": "translations",
+                                                                "description": "List of details for each natural translation made of this resource, keyed by language code. For each translation listed here, there must be corresponding sections in all language-dependent parts of the resource. The `_original_language_` does not appear in this list.",
                                                                 "type": {
                                                                     "id": "_18_2_83e026d_1453124256362_269917_4743",
                                                                     "name": "Hash<String, TRANSLATION_DETAILS>",
@@ -7536,7 +7574,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "List of details for each natural translation made of this resource, keyed by language code. For each translation listed here, there must be corresponding sections in all language-dependent parts of the resource. The `_original_language_` does not appear in this list.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7664,6 +7701,7 @@
                                                             "original_author": {
                                                                 "id": "_18_1_83e026d_1422968609425_637872_26206",
                                                                 "name": "original_author",
+                                                                "description": "Original author of this resource, with all relevant details, including organisation.",
                                                                 "type": {
                                                                     "id": "_18_1_83e026d_1423239115882_688870_4327",
                                                                     "name": "Hash<String, String>",
@@ -7674,7 +7712,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
                                                                 "maxOccurs": 1,
-                                                                "description": "Original author of this resource, with all relevant details, including organisation.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7682,6 +7719,7 @@
                                                             "original_namespace": {
                                                                 "id": "_18_1_83e026d_1423132874772_630303_5894",
                                                                 "name": "original_namespace",
+                                                                "description": "Namespace of original author's organisation, in reverse internet form, if applicable.",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -7692,7 +7730,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Namespace of original author's organisation, in reverse internet form, if applicable.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7700,6 +7737,7 @@
                                                             "original_publisher": {
                                                                 "id": "_18_1_83e026d_1423132905082_296278_5897",
                                                                 "name": "original_publisher",
+                                                                "description": "Plain text name of organisation that originally published this artefact, if any.",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -7710,7 +7748,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Plain text name of organisation that originally published this artefact, if any.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7718,6 +7755,7 @@
                                                             "other_contributors": {
                                                                 "id": "_18_1_83e026d_1422968609425_517506_26207",
                                                                 "name": "other_contributors",
+                                                                "description": "Other contributors to the resource, each listed in \"name <email>\"  form. ",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -7728,7 +7766,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": -1,
-                                                                "description": "Other contributors to the resource, each listed in \"name <email>\"  form. ",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7736,6 +7773,7 @@
                                                             "lifecycle_state": {
                                                                 "id": "_18_1_83e026d_1422968609425_375203_26208",
                                                                 "name": "lifecycle_state",
+                                                                "description": "Lifecycle state of the resource, typically including states such as: initial, in_development, in_review, published, superseded, obsolete. ",
                                                                 "type": {
                                                                     "id": "_18_1_83e026d_1423133121170_943500_5902",
                                                                     "name": "Terminology_code",
@@ -7746,7 +7784,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
                                                                 "maxOccurs": 1,
-                                                                "description": "Lifecycle state of the resource, typically including states such as: initial, in_development, in_review, published, superseded, obsolete. ",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7754,6 +7791,7 @@
                                                             "parent_resource": {
                                                                 "id": "_18_1_83e026d_1422968609425_952915_26211",
                                                                 "name": "parent_resource",
+                                                                "description": "Reference to owning resource. ",
                                                                 "type": {
                                                                     "id": "_18_1_83e026d_1422968609316_657335_25552",
                                                                     "name": "AUTHORED_RESOURCE",
@@ -7764,7 +7802,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
                                                                 "maxOccurs": 1,
-                                                                "description": "Reference to owning resource. ",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": ""
@@ -7772,6 +7809,7 @@
                                                             "custodian_namespace": {
                                                                 "id": "_18_1_83e026d_1423132776965_457368_5885",
                                                                 "name": "custodian_namespace",
+                                                                "description": "Namespace in reverse internet id form, of current custodian organisation.",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -7782,7 +7820,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Namespace in reverse internet id form, of current custodian organisation.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7790,6 +7827,7 @@
                                                             "custodian_organisation": {
                                                                 "id": "_18_1_83e026d_1423132813059_72505_5888",
                                                                 "name": "custodian_organisation",
+                                                                "description": "Plain text name of current custodian organisation.",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -7800,7 +7838,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Plain text name of current custodian organisation.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7808,6 +7845,7 @@
                                                             "copyright": {
                                                                 "id": "_18_1_83e026d_1422968609425_790170_26224",
                                                                 "name": "copyright",
+                                                                "description": "Optional copyright statement for the resource as a knowledge resource. \n",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -7818,7 +7856,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Optional copyright statement for the resource as a knowledge resource. \n",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7826,6 +7863,7 @@
                                                             "licence": {
                                                                 "id": "_18_1_83e026d_1423132841885_768441_5891",
                                                                 "name": "licence",
+                                                                "description": "Licence of current artefact, in format \"short licence name <URL of licence>\", e.g. \"Apache 2.0 License <http:\/\/www.apache.org\/licenses\/LICENSE-2.0.html>\"",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -7836,7 +7874,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Licence of current artefact, in format \"short licence name <URL of licence>\", e.g. \"Apache 2.0 License <http:\/\/www.apache.org\/licenses\/LICENSE-2.0.html>\"",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7844,6 +7881,7 @@
                                                             "ip_acknowledgements": {
                                                                 "id": "_18_1_83e026d_1430228115435_455207_4808",
                                                                 "name": "ip_acknowledgements",
+                                                                "description": "List of acknowledgements of other IP directly referenced in this archetype, typically terminology codes, ontology ids etc. Recommended keys are the widely known name or namespace for the IP source, as shown in the following example:\n\n----\nip_acknowledgements = <\n    [\"loinc\"] = <\"This content from LOINC\u00ae is copyright \u00a9 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http:\/\/loinc.org\/terms-of-use\">\n    [\"snomedct\"] = <\"Content from SNOMED CT\u00ae is copyright \u00a9 2007 IHTSDO <ihtsdo.org>\">\n>\n----",
                                                                 "type": {
                                                                     "id": "_18_1_83e026d_1423239115882_688870_4327",
                                                                     "name": "Hash<String, String>",
@@ -7854,7 +7892,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "List of acknowledgements of other IP directly referenced in this archetype, typically terminology codes, ontology ids etc. Recommended keys are the widely known name or namespace for the IP source, as shown in the following example:\n\n----\nip_acknowledgements = <\n    [\"loinc\"] = <\"This content from LOINC\u00ae is copyright \u00a9 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http:\/\/loinc.org\/terms-of-use\">\n    [\"snomedct\"] = <\"Content from SNOMED CT\u00ae is copyright \u00a9 2007 IHTSDO <ihtsdo.org>\">\n>\n----",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7862,6 +7899,7 @@
                                                             "references": {
                                                                 "id": "_18_1_83e026d_1423218088604_6643_8930",
                                                                 "name": "references",
+                                                                "description": "List of references of material on which this artefact is based, as a keyed list of strings. The keys should be in a standard citation format.",
                                                                 "type": {
                                                                     "id": "_18_1_83e026d_1423239115882_688870_4327",
                                                                     "name": "Hash<String, String>",
@@ -7872,7 +7910,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "List of references of material on which this artefact is based, as a keyed list of strings. The keys should be in a standard citation format.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7880,6 +7917,7 @@
                                                             "resource_package_uri": {
                                                                 "id": "_18_1_83e026d_1422968609425_636559_26209",
                                                                 "name": "resource_package_uri",
+                                                                "description": "URI of package to which this resource belongs.",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -7890,7 +7928,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "URI of package to which this resource belongs.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7898,6 +7935,7 @@
                                                             "conversion_details": {
                                                                 "id": "_18_1_83e026d_1430226958282_173516_4439",
                                                                 "name": "conversion_details",
+                                                                "description": "Details related to conversion process that generated this model from an original, if relevant, as a list of name\/value pairs. Typical example with recommended tags:\n\n----\nconversion_details = <\n    [\"source_model\"] = <\"CEM model xyz <http:\/\/location.in.clinicalelementmodels.com>\">\n    [\"tool\"] = <\"cem2adl v6.3.0\">\n    [\"time\"] = <\"2014-11-03T09:05:00\">\n>\n----",
                                                                 "type": {
                                                                     "id": "_18_1_83e026d_1423239115882_688870_4327",
                                                                     "name": "Hash<String, String>",
@@ -7908,7 +7946,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Details related to conversion process that generated this model from an original, if relevant, as a list of name\/value pairs. Typical example with recommended tags:\n\n----\nconversion_details = <\n    [\"source_model\"] = <\"CEM model xyz <http:\/\/location.in.clinicalelementmodels.com>\">\n    [\"tool\"] = <\"cem2adl v6.3.0\">\n    [\"time\"] = <\"2014-11-03T09:05:00\">\n>\n----",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7916,6 +7953,7 @@
                                                             "other_details": {
                                                                 "id": "_18_1_83e026d_1422968609425_332098_26210",
                                                                 "name": "other_details",
+                                                                "description": "Additional non-language-sensitive resource meta-data, as a list of name\/value pairs.",
                                                                 "type": {
                                                                     "id": "_18_1_83e026d_1423239115882_688870_4327",
                                                                     "name": "Hash<String, String>",
@@ -7926,7 +7964,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Additional non-language-sensitive resource meta-data, as a list of name\/value pairs.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7934,6 +7971,7 @@
                                                             "details": {
                                                                 "id": "_18_2_83e026d_1453125717158_602776_4829",
                                                                 "name": "details",
+                                                                "description": "Details of all parts of resource description that are natural language-dependent, keyed by language code.",
                                                                 "type": {
                                                                     "id": "_18_2_83e026d_1453125164736_976750_4822",
                                                                     "name": "Hash<String, RESOURCE_DESCRIPTION_ITEM>",
@@ -7944,7 +7982,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Details of all parts of resource description that are natural language-dependent, keyed by language code.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7972,6 +8009,7 @@
                                                             "language": {
                                                                 "id": "_18_1_83e026d_1422968609425_166232_26214",
                                                                 "name": "language",
+                                                                "description": "Language of the translation, coded using ISO 639-1 (2 character) language codes.",
                                                                 "type": {
                                                                     "id": "_18_1_83e026d_1423133121170_943500_5902",
                                                                     "name": "Terminology_code",
@@ -7982,7 +8020,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
                                                                 "maxOccurs": 1,
-                                                                "description": "Language of the translation, coded using ISO 639-1 (2 character) language codes.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -7990,6 +8027,7 @@
                                                             "author": {
                                                                 "id": "_18_1_83e026d_1422968609425_438816_26215",
                                                                 "name": "author",
+                                                                "description": "Translator name and other demographic details.",
                                                                 "type": {
                                                                     "id": "_18_1_83e026d_1423239115882_688870_4327",
                                                                     "name": "Hash<String, String>",
@@ -8000,7 +8038,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
                                                                 "maxOccurs": 1,
-                                                                "description": "Translator name and other demographic details.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -8008,6 +8045,7 @@
                                                             "accreditaton": {
                                                                 "id": "_18_1_83e026d_1422968609425_881927_26216",
                                                                 "name": "accreditaton",
+                                                                "description": "Accreditation of translator, usually a national translator's registration or association membership id.",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -8018,7 +8056,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Accreditation of translator, usually a national translator's registration or association membership id.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -8026,6 +8063,7 @@
                                                             "other_details": {
                                                                 "id": "_18_1_83e026d_1422968609425_294389_26217",
                                                                 "name": "other_details",
+                                                                "description": "Any other meta-data.",
                                                                 "type": {
                                                                     "id": "_18_1_83e026d_1423239115882_688870_4327",
                                                                     "name": "Hash<String, String>",
@@ -8036,7 +8074,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Any other meta-data.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -8044,6 +8081,7 @@
                                                             "version_last_translated": {
                                                                 "id": "_18_1_83e026d_1423128040748_321145_4911",
                                                                 "name": "version_last_translated",
+                                                                "description": "Version of this resource last time it was translated into the language represented by this `TRANSLATION_DETAILS` object.",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -8054,7 +8092,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Version of this resource last time it was translated into the language represented by this `TRANSLATION_DETAILS` object.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -8084,6 +8121,7 @@
                                                             "language": {
                                                                 "id": "_18_1_83e026d_1422968609425_974374_26219",
                                                                 "name": "language",
+                                                                "description": "The localised language in which the items in this description item are written. Coded using ISO 639-1 (2 character) language codes.",
                                                                 "type": {
                                                                     "id": "_18_1_83e026d_1423133121170_943500_5902",
                                                                     "name": "Terminology_code",
@@ -8094,7 +8132,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
                                                                 "maxOccurs": 1,
-                                                                "description": "The localised language in which the items in this description item are written. Coded using ISO 639-1 (2 character) language codes.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -8102,6 +8139,7 @@
                                                             "purpose": {
                                                                 "id": "_18_1_83e026d_1422968609425_247290_26220",
                                                                 "name": "purpose",
+                                                                "description": "Purpose of the resource.",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -8112,7 +8150,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
                                                                 "maxOccurs": 1,
-                                                                "description": "Purpose of the resource.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -8120,6 +8157,7 @@
                                                             "keywords": {
                                                                 "id": "_18_1_83e026d_1422968609425_631304_26221",
                                                                 "name": "keywords",
+                                                                "description": "Keywords which characterise this resource, used e.g. for indexing and searching. \n",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -8130,7 +8168,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": -1,
-                                                                "description": "Keywords which characterise this resource, used e.g. for indexing and searching. \n",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -8138,6 +8175,7 @@
                                                             "use": {
                                                                 "id": "_18_1_83e026d_1422968609425_187542_26222",
                                                                 "name": "use",
+                                                                "description": "Description of the uses of the resource, i.e. contexts in which it could be used. \n",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -8148,7 +8186,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Description of the uses of the resource, i.e. contexts in which it could be used. \n",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -8156,6 +8193,7 @@
                                                             "misuse": {
                                                                 "id": "_18_1_83e026d_1422968609425_6233_26223",
                                                                 "name": "misuse",
+                                                                "description": "Description of any misuses of the resource, i.e. contexts in which it should not be used.",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -8166,7 +8204,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Description of any misuses of the resource, i.e. contexts in which it should not be used.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -8174,6 +8211,7 @@
                                                             "original_resource_uri": {
                                                                 "id": "_18_1_83e026d_1422968609425_713034_26225",
                                                                 "name": "original_resource_uri",
+                                                                "description": "URIs of original clinical document(s) or description of which resource is a formalisation, in the language of this description item; keyed by meaning.",
                                                                 "type": {
                                                                     "id": "_18_1_83e026d_1423239115882_688870_4327",
                                                                     "name": "Hash<String, String>",
@@ -8184,7 +8222,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "URIs of original clinical document(s) or description of which resource is a formalisation, in the language of this description item; keyed by meaning.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -8192,6 +8229,7 @@
                                                             "other_details": {
                                                                 "id": "_18_1_83e026d_1422968609425_473429_26226",
                                                                 "name": "other_details",
+                                                                "description": "Additional language-senstive resource metadata, as a list of name\/value pairs. ",
                                                                 "type": {
                                                                     "id": "_18_1_83e026d_1423239115882_688870_4327",
                                                                     "name": "Hash<String, String>",
@@ -8202,7 +8240,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Additional language-senstive resource metadata, as a list of name\/value pairs. ",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -8226,6 +8263,7 @@
                                                             "documentation": {
                                                                 "id": "_18_1_83e026d_1429721447997_899494_4697",
                                                                 "name": "documentation",
+                                                                "description": "Documentary annotations in a multi-level keyed structure.",
                                                                 "type": {
                                                                     "id": "_18_1_83e026d_1429721008065_401960_4679",
                                                                     "name": "Hash<String, Hash<String, Hash<String, String>>>",
@@ -8236,7 +8274,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
                                                                 "maxOccurs": 1,
-                                                                "description": "Documentary annotations in a multi-level keyed structure.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null

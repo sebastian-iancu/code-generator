@@ -73,6 +73,7 @@
                                                             "name": {
                                                                 "id": "_19_0_3_8fe028d_1676199594610_318714_5144",
                                                                 "name": "name",
+                                                                "description": "Name of this code set.",
                                                                 "type": {
                                                                     "id": "openEHR_UML-BASE.mdzip#_18_1_83e026d_1437045555791_888328_4996",
                                                                     "name": "String",
@@ -83,7 +84,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
                                                                 "maxOccurs": 1,
-                                                                "description": "Name of this code set.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -91,6 +91,7 @@
                                                             "openehr_id": {
                                                                 "id": "_18_5_2_83e026d_1510167981922_926441_5788",
                                                                 "name": "openehr_id",
+                                                                "description": "Identifier used for code set in the openEHR Reference Model. The value is inferred from the `_name_` attribute.\n\nValid values take the form of an xs:NCName value, i.e. cannot contain:\n\n* symbol characters `:, @, $, %, &, \/, +, ,, ;`;\n* whitespace characters or different parentheses. \n\nAn NCName cannot begin with a number, dot or minus character although these can appear later in the value.",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -101,7 +102,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
                                                                 "maxOccurs": 1,
-                                                                "description": "Identifier used for code set in the openEHR Reference Model. The value is inferred from the `_name_` attribute.\n\nValid values take the form of an xs:NCName value, i.e. cannot contain:\n\n* symbol characters `:, @, $, %, &, \/, +, ,, ;`;\n* whitespace characters or different parentheses. \n\nAn NCName cannot begin with a number, dot or minus character although these can appear later in the value.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -109,6 +109,7 @@
                                                             "issuer": {
                                                                 "id": "_18_5_2_83e026d_1510167968968_647182_5784",
                                                                 "name": "issuer",
+                                                                "description": "Name of the issuing organisation.",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -119,7 +120,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
                                                                 "maxOccurs": 1,
-                                                                "description": "Name of the issuing organisation.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -127,6 +127,7 @@
                                                             "codes": {
                                                                 "id": "_18_5_2_83e026d_1510168144284_549656_5838",
                                                                 "name": "codes",
+                                                                "description": "Codes in this code set.",
                                                                 "type": {
                                                                     "id": "_18_5_2_83e026d_1510167847155_63569_5750",
                                                                     "name": "CODE",
@@ -137,7 +138,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": -1,
-                                                                "description": "Codes in this code set.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -145,6 +145,7 @@
                                                             "external_id": {
                                                                 "id": "_18_5_2_83e026d_1510168001105_498378_5792",
                                                                 "name": "external_id",
+                                                                "description": "An optional identifier assumed by openEHR to be the identifier of this code set, based on its published name, with spaces replaced by underscores.\n\nValid values take the form of an xs:NCName value, i.e. cannot contain:\n\n* symbol characters `:, @, $, %, &, \/, +, ,, ;`;\n* whitespace characters or different parentheses. \n\nAn NCName cannot begin with a number, dot or minus character although these can appear later in the value.",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -155,7 +156,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "An optional identifier assumed by openEHR to be the identifier of this code set, based on its published name, with spaces replaced by underscores.\n\nValid values take the form of an xs:NCName value, i.e. cannot contain:\n\n* symbol characters `:, @, $, %, &, \/, +, ,, ;`;\n* whitespace characters or different parentheses. \n\nAn NCName cannot begin with a number, dot or minus character although these can appear later in the value.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -163,6 +163,7 @@
                                                             "status": {
                                                                 "id": "_19_0_3_8fe028d_1676199626523_713835_5148",
                                                                 "name": "status",
+                                                                "description": "Status of this code set.",
                                                                 "type": {
                                                                     "id": "_19_0_3_8fe028d_1676301317832_820525_5192",
                                                                     "name": "TERMINOLOGY_STATUS",
@@ -173,7 +174,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Status of this code set.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": ""
@@ -200,6 +200,7 @@
                                                             "name": {
                                                                 "id": "_18_5_2_83e026d_1510168053345_202891_5796",
                                                                 "name": "name",
+                                                                "description": "Name of this vocabulary.",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -210,7 +211,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
                                                                 "maxOccurs": 1,
-                                                                "description": "Name of this vocabulary.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -218,6 +218,7 @@
                                                             "concepts": {
                                                                 "id": "_18_5_2_83e026d_1510168165690_411162_5871",
                                                                 "name": "concepts",
+                                                                "description": "List of concepts (i.e. coded terms) in this vocabulary.",
                                                                 "type": {
                                                                     "id": "_18_5_2_83e026d_1510168075558_312296_5801",
                                                                     "name": "TERMINOLOGY_CONCEPT",
@@ -228,7 +229,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": -1,
-                                                                "description": "List of concepts (i.e. coded terms) in this vocabulary.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -236,6 +236,7 @@
                                                             "openehr_id": {
                                                                 "id": "_19_0_3_8fe028d_1676200580173_752988_5160",
                                                                 "name": "openehr_id",
+                                                                "description": "Identifier used for terminology group in the openEHR Reference Model. The value is inferred from the `_name_` attribute.\n\nValid values take the form of an xs:NCName value, i.e. cannot contain:\n\n* symbol characters `:, @, $, %, &, \/, +, ,, ;`;\n* whitespace characters or different parentheses. \n\nAn NCName cannot begin with a number, dot or minus character although these can appear later in the value.",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -246,7 +247,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
                                                                 "maxOccurs": 1,
-                                                                "description": "Identifier used for terminology group in the openEHR Reference Model. The value is inferred from the `_name_` attribute.\n\nValid values take the form of an xs:NCName value, i.e. cannot contain:\n\n* symbol characters `:, @, $, %, &, \/, +, ,, ;`;\n* whitespace characters or different parentheses. \n\nAn NCName cannot begin with a number, dot or minus character although these can appear later in the value.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -254,6 +254,7 @@
                                                             "status": {
                                                                 "id": "_19_0_3_8fe028d_1676301529610_813562_5233",
                                                                 "name": "status",
+                                                                "description": "Status of this vocabulary.",
                                                                 "type": {
                                                                     "id": "_19_0_3_8fe028d_1676301317832_820525_5192",
                                                                     "name": "TERMINOLOGY_STATUS",
@@ -264,7 +265,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Status of this vocabulary.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": ""
@@ -290,6 +290,7 @@
                                                             "value": {
                                                                 "id": "_18_5_2_83e026d_1510167869306_284171_5774",
                                                                 "name": "value",
+                                                                "description": "The code string for this code entity, e.g. `\"AF\"`.",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -300,7 +301,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
                                                                 "maxOccurs": 1,
-                                                                "description": "The code string for this code entity, e.g. `\"AF\"`.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -308,6 +308,7 @@
                                                             "description": {
                                                                 "id": "_19_0_3_8fe028d_1676301004047_513371_5175",
                                                                 "name": "description",
+                                                                "description": "Optional description of this code, e.g. `\"AFGHANISTAN\"`.\n\nThis field may be used to hold translations of the description in a language-specific copy of the English language original code set.",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -318,7 +319,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Optional description of this code, e.g. `\"AFGHANISTAN\"`.\n\nThis field may be used to hold translations of the description in a language-specific copy of the English language original code set.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -326,6 +326,7 @@
                                                             "status": {
                                                                 "id": "_19_0_3_8fe028d_1676301522502_795476_5221",
                                                                 "name": "status",
+                                                                "description": "Status of this code within the code set.",
                                                                 "type": {
                                                                     "id": "_19_0_3_8fe028d_1676301317832_820525_5192",
                                                                     "name": "TERMINOLOGY_STATUS",
@@ -336,7 +337,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Status of this code within the code set.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": ""
@@ -362,6 +362,7 @@
                                                             "id": {
                                                                 "id": "_18_5_2_83e026d_1510168098728_752902_5825",
                                                                 "name": "id",
+                                                                "description": "The code of this concept.",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -372,7 +373,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
                                                                 "maxOccurs": 1,
-                                                                "description": "The code of this concept.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -380,6 +380,7 @@
                                                             "rubric": {
                                                                 "id": "_18_5_2_83e026d_1510168111431_116181_5829",
                                                                 "name": "rubric",
+                                                                "description": "The rubric, i.e. linguistic expression, of this concept, in the language of this terminology instance.",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -390,7 +391,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
                                                                 "maxOccurs": 1,
-                                                                "description": "The rubric, i.e. linguistic expression, of this concept, in the language of this terminology instance.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -398,6 +398,7 @@
                                                             "status": {
                                                                 "id": "_19_0_3_8fe028d_1676301526368_830018_5227",
                                                                 "name": "status",
+                                                                "description": "Status of this concept within the vocabulary.",
                                                                 "type": {
                                                                     "id": "_19_0_3_8fe028d_1676301317832_820525_5192",
                                                                     "name": "TERMINOLOGY_STATUS",
@@ -408,7 +409,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Status of this concept within the vocabulary.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": ""
@@ -437,6 +437,7 @@
                                                             "name": {
                                                                 "id": "_18_5_2_83e026d_1510168276260_350110_5928",
                                                                 "name": "name",
+                                                                "description": "Name of this terminology.",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -447,7 +448,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
                                                                 "maxOccurs": 1,
-                                                                "description": "Name of this terminology.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -455,6 +455,7 @@
                                                             "language": {
                                                                 "id": "_18_5_2_83e026d_1510168235428_319211_5924",
                                                                 "name": "language",
+                                                                "description": "Language of this terminology, as an ISO:639 2-letter code.",
                                                                 "type": {
                                                                     "id": "http:\/\/www.omg.org\/spec\/UML\/20131001\/PrimitiveTypes.xmi#String",
                                                                     "name": "String",
@@ -465,7 +466,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 1,
                                                                 "maxOccurs": 1,
-                                                                "description": "Language of this terminology, as an ISO:639 2-letter code.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -473,6 +473,7 @@
                                                             "code_sets": {
                                                                 "id": "_18_5_2_83e026d_1510169176161_591436_5941",
                                                                 "name": "code_sets",
+                                                                "description": "Code sets in this Terminology.",
                                                                 "type": {
                                                                     "id": "_18_5_2_83e026d_1510167281075_276933_5282",
                                                                     "name": "CODE_SET",
@@ -483,7 +484,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": -1,
-                                                                "description": "Code sets in this Terminology.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -491,6 +491,7 @@
                                                             "vocabularies": {
                                                                 "id": "_18_5_2_83e026d_1510169218556_281833_5974",
                                                                 "name": "vocabularies",
+                                                                "description": "Vocabularies of coded terms in this terminology.",
                                                                 "type": {
                                                                     "id": "_18_5_2_83e026d_1510167290293_389864_5283",
                                                                     "name": "TERMINOLOGY_GROUP",
@@ -501,7 +502,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": -1,
-                                                                "description": "Vocabularies of coded terms in this terminology.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -509,6 +509,7 @@
                                                             "version": {
                                                                 "id": "_19_0_3_8fe028d_1676301665171_471118_5239",
                                                                 "name": "version",
+                                                                "description": "Version of this instance of the terminology.",
                                                                 "type": {
                                                                     "id": "openEHR_UML-BASE.mdzip#_18_1_83e026d_1437045555791_888328_4996",
                                                                     "name": "String",
@@ -519,7 +520,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Version of this instance of the terminology.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null
@@ -527,6 +527,7 @@
                                                             "date": {
                                                                 "id": "_19_0_3_8fe028d_1676301703418_492818_5243",
                                                                 "name": "date",
+                                                                "description": "Date of issue of this version of the terminology.",
                                                                 "type": {
                                                                     "id": "openEHR_UML-BASE.mdzip#_18_2_83e026d_1461851902572_855852_4973",
                                                                     "name": "Iso8601_date",
@@ -537,7 +538,6 @@
                                                                 "templateParameterId": null,
                                                                 "minOccurs": 0,
                                                                 "maxOccurs": 1,
-                                                                "description": "Date of issue of this version of the terminology.",
                                                                 "isStatic": false,
                                                                 "isReadOnly": false,
                                                                 "default": null

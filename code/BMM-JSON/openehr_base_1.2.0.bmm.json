@@ -156,6 +156,7 @@
                         "other": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
+                            "documentation": "Other object for comparison.",
                             "type": "Any"
                         }
                     },
@@ -175,6 +176,7 @@
                         "other": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
+                            "documentation": "Other object for comparison.",
                             "type": "Any"
                         }
                     },
@@ -655,6 +657,7 @@
                         "other": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
+                            "documentation": "Other object for comparison.",
                             "type": "Integer"
                         }
                     },
@@ -674,6 +677,7 @@
                         "other": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
+                            "documentation": "Other object for comparison.",
                             "type": "Integer"
                         }
                     },
@@ -825,6 +829,7 @@
                         "other": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
+                            "documentation": "Other object for comparison.",
                             "type": "Double"
                         }
                     },
@@ -844,6 +849,7 @@
                         "other": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
+                            "documentation": "Other object for comparison.",
                             "type": "Double"
                         }
                     },
@@ -1371,6 +1377,7 @@
                         "other": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
+                            "documentation": "Other object for comparison.",
                             "type": "Real"
                         }
                     },
@@ -1390,6 +1397,7 @@
                         "other": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
+                            "documentation": "Other object for comparison.",
                             "type": "Real"
                         }
                     },
@@ -1552,6 +1560,7 @@
                         "other": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
+                            "documentation": "Other object for comparison.",
                             "type": "Integer64"
                         }
                     },
@@ -1571,6 +1580,7 @@
                         "other": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "other",
+                            "documentation": "Other object for comparison.",
                             "type": "Integer64"
                         }
                     },
@@ -4100,6 +4110,7 @@
                         "s": {
                             "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
                             "name": "s",
+                            "documentation": "String is a valid ISO 8601 duration, i.e. takes the form:\n\n* `P[nnY][nnM][nnW][nnD][T[nnH][nnM][nnS]]`\n\nWhere each `nn` represents a number of years, months, etc. `nnW` represents a number of 7- day weeks.\n\nNOTE: allowing the `W` designator in the same expression as other designators is an exception to the published standard, but necessary in clinical information (typically for representing pregnancy duration).",
                             "type": "String"
                         }
                     },
