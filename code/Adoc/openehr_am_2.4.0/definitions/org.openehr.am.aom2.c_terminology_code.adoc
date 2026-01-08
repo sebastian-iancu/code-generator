@@ -14,7 +14,7 @@ If there is an assumed value for the ac-code case above, the `_assumed_value_` a
 The `_constraint_status_` attribute and `_constraint_required_()` function together define whether the `_constraint_` is considered formal ('required') or not. In the non-required cases, a data-item matched to this constraint may be any coded term.
 
 h|*Inherit*
-2+|`<<_c_primitive_object_class,C_PRIMITIVE_OBJECT>>`
+2+|`link:/releases/AM/{am_release}/aom14.html#_c_primitive_object_class[C_PRIMITIVE_OBJECT^]`
 
 h|*Attributes*
 ^h|*Signature*
@@ -26,7 +26,8 @@ a|Type of individual constraint - a single string that can either be a local at-
 
 Use an empty string for no constraint.
 
-h|*0..1*
+h|*0..1 +
+(effected)*
 |*assumed_value*: `link:/releases/BASE/{base_release}/base_types.html#_terminology_code_class[Terminology_code^]`
 a|Assumed Terminology code value.
 
@@ -35,7 +36,7 @@ h|*0..1*
 a|
 
 h|*0..1*
-|*constraint_status*: `<<_constraint_status_class,CONSTRAINT_STATUS>>`
+|*constraint_status*: `<<_constraint_status_enumeration,CONSTRAINT_STATUS>>`
 a|Constraint status of this terminology constraint. If Void, the meaning is as follows:
 
 * in a top-level  archetype, equivalent to `required`;
@@ -60,29 +61,32 @@ a|Return the effective integer value of the `_constraint_status_` field if it ex
 
 NOTE: the above logic applies to any `C_TERMINOLOGY_NODE` instance in a specialised archetype that redefines another such instance in the flat parent. I.e. no stated `_constraint_status_` means `required`.
 
-h|*1..**
+h|*0..1*
 |*value_set_expanded* (): `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|Effective set of at-code values corresponding to an ac-code for a locally defined value set. Not defined for ac-codes that have no local value set.
 
-h|*1..**
+h|*0..1*
 |*value_set_substituted* (): `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_uri_class[Uri^]>`
 a|For locally defined value sets within individual code bindings: return the term URI(s) substituted from bindings for local at-codes in `_value_set_expanded_`.
 
-h|*1..**
+h|*0..1*
 |*value_set_resolved* (): `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/base_types.html#_terminology_code_class[Terminology_code^]>`
 a|For locally defined value sets within individual code bindings: final set of external codes to which value set is resolved.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*valid_value* ( +
 a_value: `link:/releases/BASE/{base_release}/base_types.html#_terminology_code_class[Terminology_code^][1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True if a `_value_` is valid with respect to constraint expressed in concrete instance of this type.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*prototype_value* (): `link:/releases/BASE/{base_release}/base_types.html#_terminology_code_class[Terminology_code^]`
 a|A generated prototype value from this constraint object.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*any_allowed* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
  +
 __Post__: `Result := constraint.is_empty`
@@ -92,7 +96,7 @@ h|*1..1*
 |*c_value_conforms_to* ( +
 other: `<<_c_terminology_code_class,C_TERMINOLOGY_CODE>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
-a|True if `_other.any_allowed_` or else every constraint in the `_constraint_` list exists in the `_other.constraint_`, and `_effective_constraint_status()_` is <= `_other.effective_constraint_status()_`.
+a|True if `_other.any_allowed_` or else every constraint in the `_constraint_` list exists in the `_other.constraint_`, and `_effective_constraint_status()_` is \<= `_other.effective_constraint_status()_`.
 
 h|*1..1*
 |*c_value_congruent_to* ( +

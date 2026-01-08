@@ -18,7 +18,7 @@ h|*1..1*
 a|Version of BMM model, enabling schema evolution reasoning. Persisted attribute.
 
 h|*0..1*
-|*includes*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<String,BMM_INCLUDE_SPEC>`
+|*includes*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/bmm_persistence.html#_bmm_include_spec_class[BMM_INCLUDE_SPEC^]>`
 a|Inclusion list of any form of BMM model, in the form of a hash of individual include specifications, each of which at least specifies the id of another schema, and may specify a namespace via which types from the included schemas are known in this schema.
 Persisted attribute.
 
@@ -54,7 +54,7 @@ h|*1..1*
 |*schema_description*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|Description of schema.
 
-h|*0..**
+h|*0..1*
 |*schema_contributors*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|Contributing authors of schema.
 
@@ -64,7 +64,7 @@ h|*Functions*
 
 h|*1..1 +
 (abstract)*
-|*validate_created* (): `link:/classes/void[void]` +
+|*validate_created* (): `link:/classes/void[void] ` +
  +
 __Pre_state__: `state = State_created` +
  +
@@ -79,7 +79,7 @@ a|Do some basic validation post initial creation
 
 h|*1..1 +
 (abstract)*
-|*load_finalise* (): `link:/classes/void[void]` +
+|*load_finalise* (): `link:/classes/void[void] ` +
  +
 __Pre_state__: `state = State_validated_created` +
  +
@@ -93,7 +93,7 @@ h|*1..1 +
 (abstract)*
 |*merge* ( +
 other: `<<_bmm_schema_class,BMM_SCHEMA>>[1]` +
-): `link:/classes/void[void]` +
+): `link:/classes/void[void] ` +
  +
 __Pre_state__: `state = State_includes_pending` +
 __Pre_other_valid__: `includes_to_process.has (included_schema.schema_id)`
@@ -101,12 +101,12 @@ a|Merge in class and package definitions from `_other_`, except where the curren
 
 h|*1..1 +
 (abstract)*
-|*validate* (): `link:/classes/void[void]`
+|*validate* (): `link:/classes/void[void] `
 a|Main validation prior to generation of `_bmm_model_`.
 
 h|*1..1 +
 (abstract)*
-|*create_bmm_model* (): `link:/classes/void[void]` +
+|*create_bmm_model* (): `link:/classes/void[void] ` +
  +
 __Pre_state__: `state = P_BMM_PACKAGE_STATE.State_includes_processed`
 a|Populate `_bmm_model_` from schema.

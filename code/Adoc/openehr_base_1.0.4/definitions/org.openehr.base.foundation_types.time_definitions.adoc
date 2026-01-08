@@ -79,7 +79,7 @@ h|*1..1*
 m: `<<_integer_class,Integer>>[1]` +
 ): `<<_boolean_class,Boolean>>` +
  +
-__Post__: `Result = m >= 1 and m <= Months_in_year`
+__Post__: `Result = m >= 1 and m \<= Months_in_year`
 a|
 
 h|*1..1*
@@ -89,8 +89,8 @@ m: `<<_integer_class,Integer>>[1]`, +
 d: `<<_integer_class,Integer>>[1]` +
 ): `<<_boolean_class,Boolean>>` +
  +
-__Post__: `Result = d >= 1 and d <= days_in_month (m, y)`
-a|True if d >= 1 and d <= days_in_month (m, y)
+__Post__: `Result = d >= 1 and d \<= days_in_month (m, y)`
+a|True if d >= 1 and d \<= days_in_month (m, y)
 
 h|*1..1*
 |*valid_hour* ( +

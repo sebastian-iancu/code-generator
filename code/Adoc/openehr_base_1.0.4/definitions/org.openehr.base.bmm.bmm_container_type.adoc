@@ -25,33 +25,40 @@ h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*type_name* (): `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|Return full type name, e.g. `List<ELEMENT>`.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*effective_base_class* (): `<<_bmm_class_class,BMM_CLASS>>` +
  +
 __Post_validity__: `Result = base_type.base_class`
 a|Result is `_base_class_` of `_base_type_`.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_abstract* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True if `_base_type.is_abstract_` or `_container_type.is_abstract_`.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*entity_metatype* (): `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|Meta-type of container type is `Classifier_metatype_container`.
 
-h|*1..**
+h|*1..1 +
+(effected)*
 |*flattened_type_list* (): `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|Completely flattened list of type names, flattening out all generic parameters.
 
-h|*1..**
+h|*1..1 +
+(effected)*
 |*subtypes* (): `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|Result is all permutations of current container type and its descendants with the current `_base_type_` and its descendants.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*has_subtypes* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|Determine if there are any type substitutions.
 |===

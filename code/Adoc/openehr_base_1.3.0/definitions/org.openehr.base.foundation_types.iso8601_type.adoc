@@ -7,7 +7,7 @@ h|*Description*
 2+a|Abstract ancestor type of ISO 8601 types, defining interface for 'extended' and 'partial' concepts from ISO 8601.
 
 h|*Inherit*
-2+|`<<_temporal_class,Temporal>>, <<_time_definitions_class,Time_Definitions>>`
+2+|`<<_temporal_class,Temporal>>`, `<<_time_definitions_class,Time_Definitions>>`
 
 h|*Attributes*
 ^h|*Signature*

@@ -31,7 +31,7 @@ h|*0..1*
 |*summary*: `<<_item_structure_class,ITEM_STRUCTURE>>`
 a|Optional summary data that aggregates, organizes, reduces and transforms the event series. This may be a text or image that presents a graphical presentation, or some data that assists with the interpretation of the data.
 
-h|*0..**
+h|*0..1*
 |*events*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_event_class,EVENT>><T>>`
 a|The events in the series. This attribute is of a generic type whose parameter must be a descendant of `ITEM_SUTRUCTURE`.
 
@@ -50,5 +50,5 @@ h|
 2+a|__Periodic_validity__: `is_periodic xor period = Void`
 
 h|
-2+a|__Period_consistency__: `is_periodic implies events.for_all (e: EVENT | e.offset. to_seconds.mod(period.to_seconds) = 0)`
+2+a|__Period_consistency__: `is_periodic implies events.for_all (e: EVENT &#124; e.offset. to_seconds.mod(period.to_seconds) = 0)`
 |===

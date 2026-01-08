@@ -9,7 +9,7 @@ h|*Description*
     func (v: Numeric): Numeric
 
 h|*Inherit*
-2+|`link:/classes/FUNCTION_DEF_EXTERNAL[FUNCTION_DEF_EXTERNAL]`
+2+|`link:/classes/FUNCTION_DEF_EXTERNAL[FUNCTION_DEF_EXTERNAL] openehr_lang_1.0.0.org.openehr.lang.obsolete-elom.extension`
 
 h|*Attributes*
 ^h|*Signature*
@@ -19,7 +19,8 @@ h|*1..1*
 |*identifier*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*evaluation_agent*: `link:/releases/BASE/{base_release}/foundation_types.html#_function_class[FUNCTION^]<>`
 a|
 |===

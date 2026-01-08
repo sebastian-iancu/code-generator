@@ -20,7 +20,7 @@ a|Optional status of magnitude with values:
 * `"="`   :   magnitude is a point value 
 * `"<"`   :   value is < magnitude 
 * `">"`   :   value is > magnitude 
-* `"<="` : value is <= magnitude 
+* `"\<="` : value is \<= magnitude 
 * `">="` : value is >= magnitude 
 * `"~"`   :   value is approximately magnitude 
 

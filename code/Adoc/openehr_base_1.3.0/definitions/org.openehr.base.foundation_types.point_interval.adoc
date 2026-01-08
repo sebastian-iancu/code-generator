@@ -13,19 +13,23 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*lower_unbounded*: `<<_boolean_class,Boolean>>`
 a|Lower boundary open (i.e. = -infinity).
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*upper_unbounded*: `<<_boolean_class,Boolean>>`
 a|Upper boundary open (i.e. = +infinity).
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*lower_included*: `<<_boolean_class,Boolean>>`
 a|Lower boundary value included in range if not `_lower_unbounded_`.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*upper_included*: `<<_boolean_class,Boolean>>`
 a|Upper boundary value included in range if not `_upper_unbounded_`.
 

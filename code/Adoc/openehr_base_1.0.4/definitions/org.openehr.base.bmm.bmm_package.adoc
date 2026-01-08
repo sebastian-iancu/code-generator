@@ -17,7 +17,7 @@ h|*1..1*
 |*name*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|Name of this package. This name may be qualified if it is a top-level package.
 
-h|*0..**
+h|*0..1*
 |*classes*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_bmm_class_class,BMM_CLASS>>>`
 a|Classes listed as being in this package.
 
@@ -25,7 +25,7 @@ h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..**
+h|*0..1*
 |*root_classes* (): `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_bmm_class_class,BMM_CLASS>>>`
 a|Obtain the set of top-level classes in this package, either from this package itself or by recursing into the structure until classes are obtained from child packages. Recurse into each child only far enough to find the first level of classes.
 

@@ -31,7 +31,7 @@ h|*1..1*
 __Pre__: `not second_unknown`
 a|Fractional seconds.
 
-h|*1..1*
+h|*0..1*
 |*timezone* (): `<<_itimezone_class,ITimezone>>`
 a|Timezone; may be Void.
 

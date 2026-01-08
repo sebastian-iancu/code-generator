@@ -13,7 +13,7 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..**
+h|*1..1*
 |*items*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_bmm_conditional_action_class,BMM_CONDITIONAL_ACTION>>>`
 a|Decision branches.
 |===

@@ -7,7 +7,7 @@ h|*Description*
 2+a|A concrete form of the bare `ARCHETYPE` class, used to represent overlays in a source template. Overlays have no meta-data of their own, and are instead documented by their owning template.
 
 h|*Inherit*
-2+|`<<_archetype_class,ARCHETYPE>>`
+2+|`link:/releases/AM/{am_release}/aom14.html#_archetype_class[ARCHETYPE^]`
 
 
 h|*Invariants*

@@ -13,11 +13,11 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*0..**
+h|*0..1*
 |*includes*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_any_class[Any^]>`
 a|List of constraints defining other archetypes that could be included at this point.
 
-h|*0..**
+h|*0..1*
 |*excludes*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_any_class[Any^]>`
 a|List of constraints defining other archetypes that cannot be included at this point.
 

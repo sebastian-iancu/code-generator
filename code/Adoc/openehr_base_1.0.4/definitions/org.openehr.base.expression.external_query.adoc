@@ -23,7 +23,7 @@ h|*1..1*
 a|Identifier of query in the external context, e.g. “date_of_birth”.
 Not yet standardised.
 
-h|*0..**
+h|*0..1*
 |*query_args*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|Optional arguments to query.
 Not yet standardised.

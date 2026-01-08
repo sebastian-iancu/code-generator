@@ -18,7 +18,7 @@ h|*1..1*
 |*sender_reference*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|Identification of message used by sender. This will be the same no matter how many times this message is sent to these recipients.
 
-h|*1..**
+h|*1..1*
 |*addressees*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|Intended recipients, in the form of internet addresses.
 

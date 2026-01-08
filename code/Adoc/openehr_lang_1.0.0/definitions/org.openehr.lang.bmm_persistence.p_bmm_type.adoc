@@ -23,7 +23,7 @@ h|*1..1 +
 |*create_bmm_type* ( +
 a_schema: `link:/releases/BASE/{base_release}/bmm.html#_bmm_model_class[BMM_MODEL^][1]`, +
 a_class_def: `link:/releases/BASE/{base_release}/bmm.html#_bmm_class_class[BMM_CLASS^][1]` +
-): `link:/classes/void[void]`
+): `link:/classes/void[void] `
 a|Create appropriate `BMM_XXX` object; effected in descendants.
 
 h|*1..1 +

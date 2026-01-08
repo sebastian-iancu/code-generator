@@ -23,7 +23,7 @@ h|*Functions*
 
 h|*1..1 +
 (abstract)*
-|*signature* (): `link:/classes/BMM_SIGNATURE[BMM_SIGNATURE]`
+|*signature* (): `link:/classes/BMM_SIGNATURE[BMM_SIGNATURE] `
 a|Formal signature of this element, in the form:
 
 `name [arg1_name: T_arg1, ...][:T_value]`

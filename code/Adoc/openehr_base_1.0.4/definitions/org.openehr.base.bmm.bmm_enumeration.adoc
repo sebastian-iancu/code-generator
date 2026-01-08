@@ -21,7 +21,7 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*0..**
+h|*0..1*
 |*item_names*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|The list of names of the enumeration. If no values are supplied, the integer values 0, 1, 2, ... are assumed.
 
@@ -33,11 +33,12 @@ h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*entity_metatype* (): `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|Meta-type of `BMM_ENUMERATION`, which is `Entity_metatype_enumeration`.
 
 h|*1..1*
-|*name_map* (): `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<String,String>`
+|*name_map* (): `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/classes/String,String[String,String] >`
 a|Map of `_item_values_` (stringified) to `_item_names_`.
 |===

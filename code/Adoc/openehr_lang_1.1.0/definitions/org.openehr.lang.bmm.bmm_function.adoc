@@ -22,7 +22,7 @@ h|*1..1*
 a|Automatically created Result variable, usable in body and post-condition.
 
 h|*Invariants*
-2+a|__Operator_validity__: `operator_def /= Void implies arity in |1..2|`
+2+a|__Operator_validity__: `operator_def /= Void implies arity in &#124;1..2&#124;`
 
 h|
 2+a|__Inv_signature_has_result__: `signature().result /= Void`

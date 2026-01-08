@@ -14,14 +14,15 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*value*: `<<_bmm_literal_value_class,BMM_LITERAL_VALUE>><BMM_TYPE>`
+|*value*: `<<_bmm_literal_value_class,BMM_LITERAL_VALUE>><<<_bmm_type_class,BMM_TYPE>>>`
 a|The reference item from which the value of this node can be computed.
 
 h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*eval_type* (): `<<_bmm_type_class,BMM_TYPE>>`
 a|Return `_value.type_`.
 

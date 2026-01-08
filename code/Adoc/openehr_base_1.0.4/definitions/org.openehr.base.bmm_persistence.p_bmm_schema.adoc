@@ -7,22 +7,25 @@ h|*Description*
 2+a|Persisted form of `BMM_SCHEMA`.
 
 h|*Inherit*
-2+|`<<_p_bmm_package_container_class,P_BMM_PACKAGE_CONTAINER>>, link:/releases/BASE/{base_release}/bmm.html#_bmm_schema_class[BMM_SCHEMA^]`
+2+|`<<_p_bmm_package_container_class,P_BMM_PACKAGE_CONTAINER>>`, `link:/releases/BASE/{base_release}/bmm.html#_bmm_schema_class[BMM_SCHEMA^]`
 
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*0..**
+h|*0..1 +
+(effected)*
 |*primitive_types*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_p_bmm_class_class,P_BMM_CLASS>>>`
 a|Primitive type definitions. Persisted attribute.
 
-h|*0..**
+h|*0..1 +
+(effected)*
 |*class_definitions*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_p_bmm_class_class,P_BMM_CLASS>>>`
 a|Class definitions. Persisted attribute.
 
-h|*0..1*
-|*includes*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<String,BMM_INCLUDE_SPEC>`
+h|*0..1 +
+(effected)*
+|*includes*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],<<_bmm_include_spec_class,BMM_INCLUDE_SPEC>>>`
 a|Inclusion list, in the form of a hash of individual include specifications, each of which at least specifies the id of another schema, and may specify a namespace via which types from the included schemas are known in this schema.
 Persisted attribute.
 
@@ -30,37 +33,42 @@ h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
-|*validate_created* (): `link:/classes/void[void]` +
+h|*1..1 +
+(effected)*
+|*validate_created* (): `link:/classes/void[void] ` +
  +
 __Pre_state__: `state = State_created` +
  +
 __Post_state__: `passed implies state = State_validated_created`
 a|Implementation of `_validate_created()_`
 
-h|*1..1*
-|*load_finalise* (): `link:/classes/void[void]` +
+h|*1..1 +
+(effected)*
+|*load_finalise* (): `link:/classes/void[void] ` +
  +
 __Pre_state__: `state = State_validated_created` +
  +
 __Post_state__: `state = State_includes_processed or state = State_includes_pending`
 a|Implementation of `_load_finalise()_`
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*merge* ( +
 other: `<<_p_bmm_schema_class,P_BMM_SCHEMA>>[1]` +
-): `link:/classes/void[void]` +
+): `link:/classes/void[void] ` +
  +
 __Pre_state__: `state = State_includes_pending` +
 __Pre_other_valid__: `includes_to_process.has (included_schema.schema_id)`
 a|Implementation of `_merge()_`
 
-h|*1..1*
-|*validate* (): `link:/classes/void[void]`
+h|*1..1 +
+(effected)*
+|*validate* (): `link:/classes/void[void] `
 a|Implementation of `_validate()_`
 
-h|*1..1*
-|*create_bmm_model* (): `link:/classes/void[void]` +
+h|*1..1 +
+(effected)*
+|*create_bmm_model* (): `link:/classes/void[void] ` +
  +
 __Pre_state__: `state = P_BMM_PACKAGE_STATE.State_includes_processed`
 a|Implementation of `_create_bmm_model()_`

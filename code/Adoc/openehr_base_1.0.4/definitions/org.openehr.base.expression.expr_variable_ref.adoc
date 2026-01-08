@@ -13,7 +13,8 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*item*: `<<_variable_declaration_class,VARIABLE_DECLARATION>>`
 a|The variable referred to.
 |===

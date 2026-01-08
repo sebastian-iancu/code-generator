@@ -17,7 +17,8 @@ h|*0..1*
 |*path*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|The path to an instance, as an absolute path with respect to the object found at `VERSION._data_`. An empty path means that the object referred to by `_id_` is being specified.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*id*: `<<_uid_based_id_class,UID_BASED_ID>>`
 a|Globally unique id of an object, regardless of where it is stored.
 

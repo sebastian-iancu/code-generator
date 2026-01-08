@@ -7,6 +7,6 @@ h|*Description*
 2+a|A mixin class providing access to services in the external environment.
 
 h|*Inherit*
-2+|`<<_terminology_service_class,TERMINOLOGY_SERVICE>>, <<_measurement_service_class,MEASUREMENT_SERVICE>>`
+2+|`<<_terminology_service_class,TERMINOLOGY_SERVICE>>`, `<<_measurement_service_class,MEASUREMENT_SERVICE>>`
 
 |===

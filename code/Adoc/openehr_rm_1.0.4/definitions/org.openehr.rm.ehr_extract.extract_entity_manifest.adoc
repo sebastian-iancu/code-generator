@@ -24,11 +24,11 @@ h|*0..1*
 |*subject_id*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|Subject (i.e. patient or similar) identifier for the entity at the target system.
 
-h|*0..**
+h|*0..1*
 |*other_ids*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|Other identifiers that may be used to find the entity at the target system, keyed by type. May include medicare numbers, drivers license number, tax number etc.
 
-h|*0..**
+h|*0..1*
 |*item_list*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/base_types.html#_object_ref_class[OBJECT_REF^]>`
 a|List of uids of items to be included in the Extract, in cases where individual items are being requested by id. More typically, this attribute is not used, and the EXTRACT_SPEC.criteria query defines the Extract contents. If set, for openEHR data, these are uids identifying the version containers.
 |===

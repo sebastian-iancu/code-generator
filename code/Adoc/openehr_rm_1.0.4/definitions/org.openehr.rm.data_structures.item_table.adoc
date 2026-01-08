@@ -19,7 +19,7 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*0..**
+h|*0..1*
 |*rows*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_cluster_class,CLUSTER>>>`
 a|Physical representation of the table as a list of `CLUSTERs`, each containing the data of one row of the table.
 
@@ -35,11 +35,11 @@ h|*1..1*
 |*column_count* (): `link:/releases/BASE/{base_release}/foundation_types.html#_integer_class[Integer^]`
 a|Return number of columns in the table.
 
-h|*1..**
+h|*0..1*
 |*row_names* (): `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/RM/{rm_release}/data_types.html#_dv_text_class[DV_TEXT^]>`
 a|Return set of row names.
 
-h|*1..**
+h|*0..1*
 |*column_names* (): `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/RM/{rm_release}/data_types.html#_dv_text_class[DV_TEXT^]>`
 a|Return set of column names.
 
@@ -86,7 +86,8 @@ j: `link:/releases/BASE/{base_release}/foundation_types.html#_integer_class[Inte
 ): `<<_element_class,ELEMENT>>`
 a|Return cell at a particular location.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*as_hierarchy* (): `<<_cluster_class,CLUSTER>>`
 a|Generate a CEN EN13606-compatible hierarchy consisting of a single `CLUSTER` containing the `CLUSTERs` representing the columns of this table.
 

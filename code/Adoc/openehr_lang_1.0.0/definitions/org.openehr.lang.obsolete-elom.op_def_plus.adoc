@@ -11,7 +11,7 @@ h|*1..1*
 |*name*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|
 
-h|*0..**
+h|*0..1*
 |*symbols*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|
 |===

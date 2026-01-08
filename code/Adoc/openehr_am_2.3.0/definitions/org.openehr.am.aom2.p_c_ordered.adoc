@@ -17,7 +17,8 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..**
+h|*1..1 +
+(effected)*
 |*constraint*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_interval_class[Interval^]>`
 a|
 |===

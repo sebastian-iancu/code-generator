@@ -12,7 +12,7 @@ Note that this class includes 2 deviations from ISO 8601:2004:
 * the time 24:00:00 is not allowed, since it would mean the date was really on the next day.
 
 h|*Inherit*
-2+|`<<_iso8601_type_class,Iso8601_type>>, <<_idate_time_class,IDate_time>>`
+2+|`<<_iso8601_type_class,Iso8601_type>>`, `<<_idate_time_class,IDate_time>>`
 
 h|*Functions*
 ^h|*Signature*
@@ -44,11 +44,11 @@ s: `<<_string_class,String>>[1]` +
 ): `<<_boolean_class,Boolean>>`
 a|String is a valid ISO 8601 date-time, i.e. takes the form:
 
-* YYYYMMDDThhmmss[(,|.)s+][Z|±hh[mm]]
+* YYYYMMDDThhmmss[(,&#124;.)s+][Z&#124;±hh[mm]]
 
 or the extended form:
 
-* YYYY-MM-DDThh:mm:ss[(,|.)s+][Z|±hh[:mm]]
+* YYYY-MM-DDThh:mm:ss[(,&#124;.)s+][Z&#124;±hh[:mm]]
 
 or one of the partial forms:
 
@@ -62,11 +62,13 @@ or the equivalent extended forms:
 
 (meanings as in DV_DATE, DV_TIME) and the values in each field are valid.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_partial* (): `<<_boolean_class,Boolean>>`
 a|True if this date time is partial, i.e. if seconds or more is missing.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_extended* (): `<<_boolean_class,Boolean>>`
 a|True if this date/time uses ‘-’, ‘:’ separators.
 
@@ -74,11 +76,11 @@ h|*1..1*
 |*as_string* (): `<<_string_class,String>>`
 a|ISO8601 string for date/time, in format:
 
-* `YYYYMMDDThhmmss[,sss][Z | ±hh[mm]]` 
+* `YYYYMMDDThhmmss[,sss][Z &#124; ±hh[mm]]` 
 
 or in extended format:
 
-* `YYYY-MM-DDThh:mm:ss[,sss][Z | ±hh[mm]]`
+* `YYYY-MM-DDThh:mm:ss[,sss][Z &#124; ±hh[mm]]`
 
 or a partial variant; see `_valid_iso8601_date_time()_` for validity.
 

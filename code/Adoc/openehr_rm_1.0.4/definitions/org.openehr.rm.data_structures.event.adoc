@@ -36,8 +36,5 @@ __Post_condition__: `Result = time.diff(parent.origin)`
 a|Offset of this event from origin, computed as time.diff(parent.origin).
 
 h|*Invariants*
-2+a|__Offset_validity__: ``
-
-h|
 2+a|__Offset_validity1__: `offset /= Void and then offset = time.diff (parent.origin)`
 |===

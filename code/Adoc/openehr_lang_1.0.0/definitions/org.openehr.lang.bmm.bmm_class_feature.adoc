@@ -13,7 +13,8 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*scope*: `<<_bmm_class_class,BMM_CLASS>>`
 a|Class within which a referenceable element is known.
 
@@ -21,7 +22,7 @@ h|*0..1*
 |*visibility*: `<<_bmm_visibility_class,BMM_VISIBILITY>>`
 a|Visibility of this item to client entities.
 
-h|*0..**
+h|*0..1*
 |*feature_extensions*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_bmm_feature_extension_class,BMM_FEATURE_EXTENSION>>>`
 a|Extensions to feature-level meta-types.
 

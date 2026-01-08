@@ -15,10 +15,10 @@ h|*1..1*
 a|Name of this feature group; defaults to 'feature'.
 
 h|*1..1*
-|*properties*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<String,String>`
+|*properties*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|Set of properties of this group, represented as name/value pairs. These are understood to apply logically to all of the features contained within the group.
 
-h|*0..**
+h|*0..1*
 |*features*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_bmm_feature_class,BMM_FEATURE>>>`
 a|Set of features in this group.
 

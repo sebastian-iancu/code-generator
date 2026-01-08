@@ -25,7 +25,7 @@ h|*0..1*
 |*careflow_step*: `link:/releases/RM/{rm_release}/data_types.html#_dv_coded_text_class[DV_CODED_TEXT^]`
 a|The step in the careflow process which occurred as part of generating this action, e.g.  dispense ,  start_administration. This attribute represents the clinical  label for the activity, as  opposed to current_state which represents  the state machine (ISM)  computable form. Defined in archetype.
 
-h|*0..**
+h|*0..1*
 |*reason*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/RM/{rm_release}/data_types.html#_dv_text_class[DV_TEXT^]>`
 a|Optional possibility of adding one or more reasons for this careflow step having been taken. Multiple reasons may occur in medication management for example.
 

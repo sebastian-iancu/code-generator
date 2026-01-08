@@ -17,15 +17,16 @@ h|*1..1*
 |*root_type*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|Root type of this generic type, e.g. `Interval` in `Interval<Integer>`.
 
-h|*1..**
+h|*1..1*
 |*generic_parameter_defs*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_p_bmm_type_class,P_BMM_TYPE>>>`
 a|Generic parameters of the root_type in this type specifier if non-simple types. The order must match the order of the owning class's formal generic parameter declarations. Persistent attribute.
 
-h|*0..**
+h|*0..1*
 |*generic_parameters*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|Generic parameters of the `_root_type_` in this type specifier, if simple types. The order must match the order of the owning class's formal generic parameter declarations. Persistent attribute.
 
-h|*0..1*
+h|*0..1 +
+(effected)*
 |*bmm_type*: `link:/releases/BASE/{base_release}/bmm.html#_bmm_generic_type_class[BMM_GENERIC_TYPE^]`
 a|Result of `_create_bmm_type()_` call.
 
@@ -33,7 +34,7 @@ h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..**
+h|*0..1*
 |*generic_parameter_refs* (): `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_p_bmm_type_class,P_BMM_TYPE>>>`
 a|Generic parameters of the root_type in this type specifier. The order must match the order of the owning class's formal generic parameter declarations
 |===

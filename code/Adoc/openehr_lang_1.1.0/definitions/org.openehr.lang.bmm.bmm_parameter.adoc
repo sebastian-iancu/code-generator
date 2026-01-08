@@ -14,6 +14,6 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*direction*: `<<_bmm_parameter_direction_class,BMM_PARAMETER_DIRECTION>>`
+|*direction*: `<<_bmm_parameter_direction_enumeration,BMM_PARAMETER_DIRECTION>>`
 a|Optional read/write direction of the parameter. If none-supplied, the parameter is treated as `in`, i.e. readable.
 |===

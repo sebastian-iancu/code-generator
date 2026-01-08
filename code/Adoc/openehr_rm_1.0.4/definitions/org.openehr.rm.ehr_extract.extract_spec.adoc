@@ -52,7 +52,7 @@ All items at the target end of followed links at the given depth are also includ
 - ....
 - n = follow nth degree links
 
-h|*0..**
+h|*0..1*
 |*criteria*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/RM/{rm_release}/data_types.html#_dv_parsable_class[DV_PARSABLE^]>`
 a|Queries specifying the contents of this Extract.
 

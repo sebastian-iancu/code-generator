@@ -14,14 +14,14 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*time_validity*: `link:/releases/RM/{rm_release}/data_types.html#_dv_interval_class[DV_INTERVAL^]<DV_DATE>`
+|*time_validity*: `link:/releases/RM/{rm_release}/data_types.html#_dv_interval_class[DV_INTERVAL^]<link:/releases/RM/{rm_release}/data_types.html#_dv_date_class[DV_DATE^]>`
 a|Valid time interval for this role.
 
 h|*1..1*
 |*performer*: `link:/releases/BASE/{base_release}/base_types.html#_party_ref_class[PARTY_REF^]`
 a|Reference to Version container of Actor playing the role.
 
-h|*0..**
+h|*0..1*
 |*capabilities*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_capability_class,CAPABILITY>>>`
 a|The capabilities of this role.
 

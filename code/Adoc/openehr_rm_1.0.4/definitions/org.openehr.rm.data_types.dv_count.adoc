@@ -19,11 +19,13 @@ h|*1..1*
 |*magnitude*: `link:/releases/BASE/{base_release}/foundation_types.html#_integer64_class[Integer64^]`
 a|
 
-h|*0..1*
-|*normal_range*: `<<_dv_interval_class,DV_INTERVAL>><DV_COUNT>`
+h|*0..1 +
+(effected)*
+|*normal_range*: `<<_dv_interval_class,DV_INTERVAL>><<<_dv_count_class,DV_COUNT>>>`
 a|Optional normal range.
 
-h|*0..**
-|*other_reference_ranges*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_reference_range_class,REFERENCE_RANGE>><DV_COUNT>>`
+h|*0..1 +
+(effected)*
+|*other_reference_ranges*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_reference_range_class,REFERENCE_RANGE>><<<_dv_count_class,DV_COUNT>>>>`
 a|Optional tagged other reference ranges for this value in its particular measurement context.
 |===

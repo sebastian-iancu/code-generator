@@ -13,19 +13,19 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*0..**
+h|*0..1*
 |*parameters*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_bmm_parameter_class,BMM_PARAMETER>>>`
 a|Formal parameters of the routine.
 
-h|*0..**
+h|*0..1*
 |*locals*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_bmm_local_class,BMM_LOCAL>>>`
 a|Local variables of the routine.
 
-h|*0..**
+h|*0..1*
 |*pre_conditions*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_bmm_assertion_class,BMM_ASSERTION>>>`
 a|
 
-h|*0..**
+h|*0..1*
 |*post_conditions*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_bmm_assertion_class,BMM_ASSERTION>>>`
 a|
 
@@ -41,8 +41,9 @@ h|*1..1*
 |*arity* (): `link:/releases/BASE/{base_release}/foundation_types.html#_integer_class[Integer^]`
 a|Return number of arguments of this routine.
 
-h|*1..1*
-|*signature* (): `link:/classes/[]`
+h|*1..1 +
+(effected)*
+|*signature* (): `link:/classes/[] `
 a|Formal signature of this element, in the form
 
 `'[arg1_name: T_arg1, ...]:T_value'`.

@@ -27,7 +27,7 @@ h|*0..1*
 |*wf_definition*: `link:/releases/RM/{rm_release}/data_types.html#_dv_parsable_class[DV_PARSABLE^]`
 a|Optional workflow engine executable expression of the Instruction.
 
-h|*0..**
+h|*0..1*
 |*activities*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_activity_class,ACTIVITY>>>`
 a|List of all activities in Instruction.
 

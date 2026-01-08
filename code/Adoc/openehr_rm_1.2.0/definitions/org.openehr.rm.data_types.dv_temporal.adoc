@@ -13,7 +13,8 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*0..1*
+h|*0..1 +
+(effected)*
 |*accuracy*: `<<_dv_duration_class,DV_DURATION>>`
 a|Time accuracy, expressed as a duration.
 

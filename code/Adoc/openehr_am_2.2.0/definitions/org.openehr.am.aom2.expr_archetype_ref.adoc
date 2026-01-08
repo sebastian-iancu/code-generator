@@ -20,7 +20,8 @@ h|*1..1*
 |*path*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|The path to the archetype node.
 
-h|*1..1*
-|*item*: `<<_archetype_constraint_class,ARCHETYPE_CONSTRAINT>>`
+h|*1..1 +
+(redefined)*
+|*item*: `link:/releases/AM/{am_release}/aom14.html#_archetype_constraint_class[ARCHETYPE_CONSTRAINT^]`
 a|
 |===

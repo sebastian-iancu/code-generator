@@ -13,11 +13,13 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*0..1*
+h|*0..1 +
+(effected)*
 |*type_def*: `<<_p_bmm_generic_type_class,P_BMM_GENERIC_TYPE>>`
 a|Type definition of this property, if not a simple String type reference. Persistent attribute.
 
-h|*0..1*
-|*bmm_property*: `link:/releases/BASE/{base_release}/bmm.html#_bmm_property_class[BMM_PROPERTY^]<BMM_GENERIC_TYPE>`
+h|*0..1 +
+(effected)*
+|*bmm_property*: `link:/releases/BASE/{base_release}/bmm.html#_bmm_property_class[BMM_PROPERTY^]<link:/releases/BASE/{base_release}/bmm.html#_bmm_generic_type_class[BMM_GENERIC_TYPE^]>`
 a|`BMM_PROPERTY` created by `_create_bmm_property_definition_`.
 |===

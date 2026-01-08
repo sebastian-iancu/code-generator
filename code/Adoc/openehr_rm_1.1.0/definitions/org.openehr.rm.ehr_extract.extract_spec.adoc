@@ -24,10 +24,10 @@ h|*1..1*
 |*extract_type*: `link:/releases/RM/{rm_release}/data_types.html#_dv_coded_text_class[DV_CODED_TEXT^]`
 a|Coded term indicating the type of content required, e.g.
 
-* `|openehr-ehr|`
-* `|openehr-demographic|`
-* `|generic-emr|`
-* `|other|`
+* `&#124;openehr-ehr&#124;`
+* `&#124;openehr-demographic&#124;`
+* `&#124;generic-emr&#124;`
+* `&#124;other&#124;`
 
 Coded by openEHR Terminology group `'extract content type'`.
 
@@ -53,7 +53,7 @@ All items at the target end of followed links at the given depth are also includ
 * ....
 * n = follow nth degree links
 
-h|*0..**
+h|*0..1*
 |*criteria*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/RM/{rm_release}/data_types.html#_dv_parsable_class[DV_PARSABLE^]>`
 a|Queries specifying the contents of this Extract.
 

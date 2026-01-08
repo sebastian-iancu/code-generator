@@ -13,15 +13,18 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..**
+h|*1..1 +
+(effected)*
 |*constraint*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|String constraint - a list of literal strings and / or regular expression strings delimited by the ‘/’ character.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*default_value*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|
 
-h|*0..1*
+h|*0..1 +
+(effected)*
 |*assumed_value*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|
 |===

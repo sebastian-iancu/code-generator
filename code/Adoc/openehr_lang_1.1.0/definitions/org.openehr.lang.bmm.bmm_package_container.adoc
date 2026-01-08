@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*packages*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<String,BMM_PACKAGE>`
+|*packages*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],<<_bmm_package_class,BMM_PACKAGE>>>`
 a|Child packages; keys all in upper case for guaranteed matching.
 
 h|*1..1*
@@ -25,7 +25,7 @@ h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*0..1*
 |*package_at_path* ( +
 a_path: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^][1]` +
 ): `<<_bmm_package_class,BMM_PACKAGE>>`
@@ -34,7 +34,7 @@ a|Package at the path `_a_path_`.
 h|*1..1*
 |*do_recursive_packages* ( +
 action: `<<_el_procedure_agent_class,EL_PROCEDURE_AGENT>>[1]` +
-): `link:/classes/void[void]`
+): `link:/classes/void[void] `
 a|Recursively execute `_action_`, which is a procedure taking a `BMM_PACKAGE` argument, on all members of packages.
 
 h|*1..1*

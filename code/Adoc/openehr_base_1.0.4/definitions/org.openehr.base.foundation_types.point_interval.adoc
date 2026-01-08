@@ -13,19 +13,23 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*lower_unbounded*: `<<_boolean_class,Boolean>>`
 a|lower boundary open (i.e. = -infinity)
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*upper_unbounded*: `<<_boolean_class,Boolean>>`
 a|upper boundary open (i.e. = +infinity)
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*lower_included*: `<<_boolean_class,Boolean>>`
 a|lower boundary value included in range if not lower_unbounded.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*upper_included*: `<<_boolean_class,Boolean>>`
 a|upper boundary value included in range if not upper_unbounded.
 
@@ -33,7 +37,8 @@ h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*0..1 +
+(effected)*
 |*upper* (): `T`
 a|
 |===

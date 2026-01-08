@@ -13,7 +13,7 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*0..**
+h|*0..1*
 |*items*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_item_class,ITEM>>>`
 a|The items comprising the `ITEM_TREE`. Can include 0 or more `CLUSTERs` and/or 0 or more individual `ELEMENTs`.
 
@@ -33,7 +33,8 @@ a_path: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[
 ): `<<_element_class,ELEMENT>>`
 a|Return the leaf element at the path  a_path'.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*as_hierarchy* (): `<<_cluster_class,CLUSTER>>`
 a|Generate a CEN EN13606-compatible hierarchy, which is the same as the tree's physical representation.
 |===

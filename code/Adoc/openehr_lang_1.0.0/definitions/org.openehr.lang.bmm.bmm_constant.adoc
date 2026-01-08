@@ -7,7 +7,7 @@ h|*Description*
 2+a|An immutable, static value-returning element scoped to a class. The `_value_` is the result of the evaluation of the `_generator_`, which may be as simple as a literal value, or may be any expression, including a function call.
 
 h|*Inherit*
-2+|`<<_bmm_instantiable_class,BMM_INSTANTIABLE>>, <<_bmm_class_feature_class,BMM_CLASS_FEATURE>>`
+2+|`<<_bmm_instantiable_class,BMM_INSTANTIABLE>>`, `<<_bmm_class_feature_class,BMM_CLASS_FEATURE>>`
 
 h|*Attributes*
 ^h|*Signature*

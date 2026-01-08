@@ -13,17 +13,17 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*0..**
+h|*0..1*
 |*parameters*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_bmm_parameter_class,BMM_PARAMETER>>>`
 a|Formal parameters of the routine.
 
-h|*0..**
+h|*0..1*
 |*pre_conditions*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_bmm_assertion_class,BMM_ASSERTION>>>`
 a|Boolean conditions that must evaluate to True for the routine to execute correctly, May be used to generate exceptions if included in run-time build.
 
 A False pre-condition implies an error in the passed parameters.
 
-h|*0..**
+h|*0..1*
 |*post_conditions*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_bmm_assertion_class,BMM_ASSERTION>>>`
 a|Boolean conditions that will evaluate to True if the routine executed correctly, May be used to generate exceptions if included in run-time build.
 

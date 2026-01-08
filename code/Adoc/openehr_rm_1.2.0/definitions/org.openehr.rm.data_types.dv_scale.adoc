@@ -47,7 +47,8 @@ h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_strictly_comparable_to* ( +
 other: `<<_dv_scale_class,DV_SCALE>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`

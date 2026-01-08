@@ -23,7 +23,7 @@ h|*1..1*
 |*encoding*: `link:/releases/BASE/{base_release}/foundation_types.html#_code_phrase_class[CODE_PHRASE^]`
 a|Name of character set in which text values in this Entry are encoded. Coded from openEHR Code Set  character sets.
 
-h|*0..**
+h|*0..1*
 |*other_participations*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/RM/{rm_release}/common.html#_participation_class[PARTICIPATION^]>`
 a|Other participations at `ENTRY` level.
 

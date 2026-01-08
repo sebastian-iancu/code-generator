@@ -7,14 +7,14 @@ h|*Description*
 2+a|Definition of the root of a BMM model (along with what is inherited from `BMM_SCHEMA_CORE`).
 
 h|*Inherit*
-2+|`<<_bmm_package_container_class,BMM_PACKAGE_CONTAINER>>, <<_bmm_model_metadata_class,BMM_MODEL_METADATA>>`
+2+|`<<_bmm_package_container_class,BMM_PACKAGE_CONTAINER>>`, `<<_bmm_model_metadata_class,BMM_MODEL_METADATA>>`
 
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
 h|*0..1*
-|*class_definitions*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<String,BMM_CLASS>`
+|*class_definitions*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],<<_bmm_class_class,BMM_CLASS>>>`
 a|All classes in this schema, keyed by type name.
 
 h|*1..1*
@@ -61,11 +61,11 @@ a_name: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[
 ): `<<_bmm_enumeration_class,BMM_ENUMERATION>>`
 a|Retrieve the enumeration definition corresponding to `_a_type_name_`.
 
-h|*1..**
+h|*0..1*
 |*primitive_types* (): `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|List of keys in `_class_definitions_` of items marked as primitive types.
 
-h|*1..**
+h|*0..1*
 |*enumeration_types* (): `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|List of keys in `_class_definitions_` of items that are enumeration types.
 
@@ -92,7 +92,7 @@ a_prop_path: `link:/releases/BASE/{base_release}/foundation_types.html#_string_c
 ): `<<_bmm_class_class,BMM_CLASS>>`
 a|Retrieve the class definition for the class that owns the terminal attribute in `a_prop_path` in flattened class corresponding to `a_type_name`.
 
-h|*1..**
+h|*0..1*
 |*all_ancestor_classes* ( +
 a_class: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^][1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`

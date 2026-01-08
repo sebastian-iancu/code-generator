@@ -43,6 +43,6 @@ h|*1..1*
 other: `<<_ordered_class,Ordered>>[1]` +
 ): `<<_boolean_class,Boolean>>` +
  +
-__Post_result__: `Result = (other <= self)`
+__Post_result__: `Result = (other \<= self)`
 a|True if current object greater than or equal to `_other_`.
 |===

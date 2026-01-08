@@ -11,7 +11,7 @@ Used for recording titers (e.g. 1:128), concentration ratios, e.g. Na:K (unitary
 Misuse: Should not be used to represent things like blood pressure which are often written using a  '/' character, giving the misleading impression that the item is a ratio, when in fact it is a structured value. Similarly, visual acuity, often written as (e.g.) "6/24" in clinical notes is not a ratio but an ordinal (which includes non-numeric symbols like CF = count fingers etc). Should not be used for formulations.
 
 h|*Inherit*
-2+|`<<_proportion_kind_class,PROPORTION_KIND>>, <<_dv_amount_class,DV_AMOUNT>>`
+2+|`<<_proportion_kind_enumeration,PROPORTION_KIND>>`, `<<_dv_amount_class,DV_AMOUNT>>`
 
 h|*Attributes*
 ^h|*Signature*
@@ -33,19 +33,22 @@ h|*0..1*
 |*precision*: `link:/releases/BASE/{base_release}/foundation_types.html#_integer_class[Integer^]`
 a|Precision  to  which  the  numerator and denominator values of  the  proportion are expressed, in terms of number  of  decimal places. The value 0 implies an integral quantity. The value -1 implies no limit, i.e. any number of decimal places.
 
-h|*0..1*
-|*normal_range*: `<<_dv_interval_class,DV_INTERVAL>><DV_PROPORTION>`
+h|*0..1 +
+(effected)*
+|*normal_range*: `<<_dv_interval_class,DV_INTERVAL>><<<_dv_proportion_class,DV_PROPORTION>>>`
 a|Optional normal range.
 
-h|*0..**
-|*other_reference_ranges*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_reference_range_class,REFERENCE_RANGE>><DV_PROPORTION>>`
+h|*0..1 +
+(effected)*
+|*other_reference_ranges*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_reference_range_class,REFERENCE_RANGE>><<<_dv_proportion_class,DV_PROPORTION>>>>`
 a|Optional tagged other reference ranges for this value in its particular measurement context.
 
 h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*magnitude* (): `link:/releases/BASE/{base_release}/foundation_types.html#_real_class[Real^]`
 a|Effective magnitude represented by ratio.
 
@@ -53,7 +56,8 @@ h|*1..1*
 |*is_integral* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True if the numerator and denominator values are integers, i.e. if the precision is 0.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*infix =* ( +
 source: `<<_dv_proportion_class,DV_PROPORTION>>[1]` +
 ): `<<_dv_proportion_class,DV_PROPORTION>>`

@@ -19,20 +19,20 @@ h|*1..1*
 a|
 
 h|*1..1*
-|*term_definitions*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<String,ARCHETYPE_TERM>>`
+|*term_definitions*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/AM/{am_release}/aom14.html#_archetype_term_class[ARCHETYPE_TERM^]>>`
 a|Directory of term definitions as a two-level 
 table. The outer hash keys are term codes, 
 e.g. "at0004", and the inner hash key are term 
 attribute names, e.g. "text", "description" etc.
 
 h|*0..1*
-|*term_bindings*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<String,Uri>>`
+|*term_bindings*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_uri_class[Uri^]>>`
 a|Directory of term bindings as a two-level 
 table. The outer hash keys are local term codes, 
 e.g. "at0004", and the inner hash keys are terminology 
 code phrases, e.g. "SNOMED(2003)::163034007" etc.
 
 h|*0..1*
-|*value_sets*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<String,VALUE_SET>`
+|*value_sets*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],<<_value_set_class,VALUE_SET>>>`
 a|
 |===

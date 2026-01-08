@@ -21,7 +21,8 @@ h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*reference* (): `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|Generated full reference name, consisting of scoping elements and `_name_` concatenated using dot notation.
 |===

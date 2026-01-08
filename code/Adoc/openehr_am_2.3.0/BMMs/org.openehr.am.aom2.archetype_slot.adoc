@@ -2,15 +2,15 @@
 --------
 {
     "name": "ARCHETYPE_SLOT",
-    "documentation": "Constraint describing a  slot' where another archetype can occur. ",
+    "documentation": "Constraint describing a 'slot' where another archetype can occur. ",
     "ancestors": [
-        "C_REFERENCE_OBJECT"
+        "C_OBJECT"
     ],
     "properties": {
         "includes": {
             "_type": "P_BMM_CONTAINER_PROPERTY",
             "name": "includes",
-            "documentation": "List of constraints defining other archetypes that could be included at this point. ",
+            "documentation": "List of constraints defining other archetypes that could be included at this point. Represented as an `ASSERTION` containing an expression of the form  `EXPR_ARCHETYPE_REF matches EXPR_ARCHETYPE_ID_CONSTRAINT`.",
             "type_def": {
                 "container_type": "List",
                 "type": "ASSERTION"
@@ -23,7 +23,7 @@
         "excludes": {
             "_type": "P_BMM_CONTAINER_PROPERTY",
             "name": "excludes",
-            "documentation": "List of constraints defining other archetypes that cannot be included at this point. ",
+            "documentation": "List of constraints defining other archetypes that cannot be included at this point. Represented as an `ASSERTION` containing an expression of the form  `EXPR_ARCHETYPE_REF matches EXPR_ARCHETYPE_ID_CONSTRAINT`.",
             "type_def": {
                 "container_type": "List",
                 "type": "ASSERTION"
@@ -32,12 +32,24 @@
                 "lower": 0,
                 "upper_unbounded": true
             }
+        },
+        "is_closed": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "is_closed",
+            "documentation": "True if this slot specification in this artefact is closed to further filling either in further specialisations or at runtime. Default value False, i.e. unless explicitly set, a slot remains open.",
+            "is_mandatory": true,
+            "type": "Boolean"
         }
     },
-    "invariants": {
-        "Includes_valid": "includes /= Void implies not includes.is_empty",
-        "Excludes_valid": "excludes /= Void implies not excludes.is_empty",
-        "Validity": "any_allowed xor (includes /= Void or excludes /= Void)"
+    "functions": {
+        "any_allowed": {
+            "name": "any_allowed",
+            "documentation": "True if no constraints stated, and slot is not closed.",
+            "result": {
+                "_type": "P_BMM_SIMPLE_TYPE",
+                "type": "Boolean"
+            }
+        }
     }
 }
 --------

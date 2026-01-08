@@ -7,7 +7,7 @@ h|*Description*
 2+a|Represents an ISO 8601 date, including partial and extended forms.
 
 h|*Inherit*
-2+|`<<_iso8601_type_class,Iso8601_type>>, <<_idate_class,IDate>>`
+2+|`<<_iso8601_type_class,Iso8601_type>>`, `<<_idate_class,IDate>>`
 
 h|*Functions*
 ^h|*Signature*
@@ -42,15 +42,18 @@ Where:
 
 The combinations of YYYY, MM, DD numbers must be correct with respect to the Gregorian calendar.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_partial* (): `<<_boolean_class,Boolean>>`
 a|True if this date is partial, i.e. if days or more is missing.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_extended* (): `<<_boolean_class,Boolean>>`
 a|True if this date uses `'-'` separators.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*as_string* (): `<<_string_class,String>>`
 a|ISO8601 string for date, in format `YYYYMMDD` or `YYYY-MM-DD`, or a partial invariant. See `_valid_iso8601_date()_` for validity.
 

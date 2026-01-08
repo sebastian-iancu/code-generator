@@ -35,7 +35,7 @@ h|*1..1*
 |*composer*: `link:/releases/RM/{rm_release}/common.html#_party_proxy_class[PARTY_PROXY^]`
 a|The person primarily responsible for the content of the Composition (but not necessarily its committal into the EHR system). This is the identifier which should appear on the screen. It may or may not be the person who entered the data. When it is the patient, the special self  instance of `PARTY_PROXY` will be used.
 
-h|*0..**
+h|*0..1*
 |*content*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_content_item_class,CONTENT_ITEM>>>`
 a|The content of this Composition.
 
@@ -48,15 +48,6 @@ h|*1..1*
 a|True if category is a  persistent  type, False otherwise. Useful for finding Compositions in an EHR which are guaranteed to be of interest to most users.
 
 h|*Invariants*
-2+a|__Setting_valid__: ``
-
-h|
-2+a|__unnamed2__: ``
-
-h|
-2+a|__unnamed3__: `Terminology (Terminology_id_openehr).has_code_for_group_id (Group_id_setting, setting.defining_code)`
-
-h|
 2+a|__Category_validity__: `terminology (Terminology_id_openehr).has_code_for_group_id (Group_id_composition_category, category.defining_code)`
 
 h|

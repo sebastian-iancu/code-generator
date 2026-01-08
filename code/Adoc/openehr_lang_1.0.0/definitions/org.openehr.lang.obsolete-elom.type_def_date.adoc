@@ -7,17 +7,19 @@ h|*Description*
 2+a|Rules meta-type representing the primitive type Date.
 
 h|*Inherit*
-2+|`link:/classes/EL_TYPE_DEF[EL_TYPE_DEF]`
+2+|`link:/classes/EL_TYPE_DEF[EL_TYPE_DEF] openehr_lang_1.0.0.org.openehr.lang.obsolete-elom.types`
 
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*type_name*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*type_anchor*: `link:/releases/BASE/{base_release}/foundation_types.html#_any_class[Any^]`
 a|
 |===

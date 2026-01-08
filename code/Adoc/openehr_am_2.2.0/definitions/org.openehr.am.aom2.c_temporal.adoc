@@ -36,19 +36,22 @@ an_other_pattern: `link:/releases/BASE/{base_release}/foundation_types.html#_str
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|Return True if `_a_pattern_` can be replaced by `_an_other_pattern_` in a specialised constraint. Define in concrete subtypes.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*any_allowed* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
  +
 __Post__: `Result = precursor and pattern_constraint.is_empty`
 a|True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*c_value_conforms_to* ( +
 other: `<<_c_ordered_class,C_ORDERED>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True if precursor() or else `_other.pattern_constraint_` is empty, or else `_pattern_constraint_` is a valid (narrower) replacement for `_other.pattern_constraint_`.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*c_value_congruent_to* ( +
 other: `<<_c_ordered_class,C_ORDERED>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`

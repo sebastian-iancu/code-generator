@@ -18,7 +18,7 @@ h|*1..1*
 |*purpose*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|Purpose of the resource.
 
-h|*0..**
+h|*0..1*
 |*keywords*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|Keywords which characterise this resource, used e.g. for indexing and searching.
 
@@ -31,10 +31,10 @@ h|*0..1*
 a|Description of any misuses of the resource, i.e. contexts in which it should not be used.
 
 h|*0..1*
-|*original_resource_uri*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<String,String>`
+|*original_resource_uri*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|URIs of original clinical document(s) or description of which resource is a formalisation, in the language of this description item; keyed by meaning.
 
 h|*0..1*
-|*other_details*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<String,String>`
+|*other_details*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|Additional language-senstive resource metadata, as a list of name/value pairs.
 |===

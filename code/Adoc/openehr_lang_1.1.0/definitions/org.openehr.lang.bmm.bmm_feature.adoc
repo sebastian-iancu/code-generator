@@ -17,7 +17,7 @@ h|*0..1*
 |*is_synthesised_generic*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True if this feature was synthesised due to generic substitution in an inherited type, or further constraining of a formal generic parameter.
 
-h|*0..**
+h|*0..1*
 |*feature_extensions*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_bmm_feature_extension_class,BMM_FEATURE_EXTENSION>>>`
 a|Extensions to feature-level meta-types.
 

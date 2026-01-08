@@ -17,7 +17,8 @@ h|*1..1*
 |*definition*: `<<_bmm_readonly_variable_class,BMM_READONLY_VARIABLE>>`
 a|Variable definition to which this reference refers.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_writable*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|Defined to return False in all cases.
 |===

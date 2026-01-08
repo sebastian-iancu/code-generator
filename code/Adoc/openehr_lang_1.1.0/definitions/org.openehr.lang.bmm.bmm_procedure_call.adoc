@@ -7,13 +7,14 @@ h|*Description*
 2+a|A call made on a closed procedure agent. The method in BMM via which external actions are achieved from within a program.
 
 h|*Inherit*
-2+|`<<_el_agent_call_class,EL_AGENT_CALL>>, <<_bmm_simple_statement_class,BMM_SIMPLE_STATEMENT>>`
+2+|`<<_el_agent_call_class,EL_AGENT_CALL>>`, `<<_bmm_simple_statement_class,BMM_SIMPLE_STATEMENT>>`
 
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*agent*: `<<_el_procedure_agent_class,EL_PROCEDURE_AGENT>>`
 a|The procedure agent being called.
 |===

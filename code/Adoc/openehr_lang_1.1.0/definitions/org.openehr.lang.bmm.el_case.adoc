@@ -14,6 +14,6 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*value_constraint*: `link:/releases/AM/{am_release}/aom2.html#_c_object_class[C_OBJECT^]`
+|*value_constraint*: `link:/releases/AM/{am_release}/aom14.html#_c_object_class[C_OBJECT^]`
 a|Constraint on
 |===

@@ -27,11 +27,13 @@ h|*1..1*
 |*is_decimal_sign_comma* (): `<<_boolean_class,Boolean>>`
 a|True if this time has a decimal part indicated by ',' (comma) rather than '.' (period).
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_partial* (): `<<_boolean_class,Boolean>>`
 a|Returns False.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_extended* (): `<<_boolean_class,Boolean>>`
 a|Returns True.
 

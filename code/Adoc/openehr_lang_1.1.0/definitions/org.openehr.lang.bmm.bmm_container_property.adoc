@@ -17,7 +17,8 @@ h|*0..1*
 |*cardinality*: `link:/releases/BASE/{base_release}/foundation_types.html#_multiplicity_interval_class[Multiplicity_interval^]`
 a|Cardinality of this container.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*type*: `<<_bmm_container_type_class,BMM_CONTAINER_TYPE>>`
 a|Declared or inferred static type of the entity.
 
@@ -25,7 +26,8 @@ h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*display_name* (): `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|Name of this property in form `name: ContainerTypeName<>`.
 |===

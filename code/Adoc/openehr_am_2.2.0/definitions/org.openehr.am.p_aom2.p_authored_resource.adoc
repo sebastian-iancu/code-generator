@@ -18,7 +18,7 @@ h|*0..1*
 |*is_controlled*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True if this resource is under any kind of change control (even file copying), in which case revision history is created.
 
-h|*0..**
+h|*0..1*
 |*translations*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/resource.html#_translation_details_class[TRANSLATION_DETAILS^]>`
 a|List of details for each natural translation made of this resource, keyed by language. For each translation listed here, there must be corresponding sections in all language-dependent parts of the resource. The original_language does not appear in this list.
 
@@ -31,6 +31,6 @@ h|*0..1*
 a|Unique identifier of the family of archetypes having the same interface identifier (same major version).
 
 h|*0..1*
-|*annotations*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<String,String>>`
+|*annotations*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>>`
 a|Annotations on individual items within the resource, keyed by path. The inner table takes the form of a Hash table of String values keyed by String tags.
 |===

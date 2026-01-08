@@ -35,7 +35,7 @@ a|Timezone; may be Void.
 
 h|*1..1*
 |*as_string* (): `<<_string_class,String>>`
-a|ISO8601 string for date/time, in format `YYYYMMDDThhmmss[,sss][Z | ±hh[mm]]` or in extended format `YYYY-MM-DDThh:mm:ss[,sss][Z | ±hh[mm]]` or a partial variant; see valid_iso8601_date_time() below.
+a|ISO8601 string for date/time, in format `YYYYMMDDThhmmss[,sss][Z &#124; ±hh[mm]]` or in extended format `YYYY-MM-DDThh:mm:ss[,sss][Z &#124; ±hh[mm]]` or a partial variant; see valid_iso8601_date_time() below.
 
 h|*Invariants*
 2+a|__Day_valid__: `valid_day(year, month, day)`

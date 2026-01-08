@@ -59,7 +59,8 @@ h|*1..1*
 |*negative* __alias__ "-" (): `<<_integer_class,Integer>>`
 a|Generate negative of current Integer value.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_equal* ( +
 other: `<<_integer_class,Integer>>[1]` +
 ): `<<_boolean_class,Boolean>>`

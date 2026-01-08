@@ -21,6 +21,6 @@ a|Optional description of this code, e.g. `"AFGHANISTAN"`.
 This field may be used to hold translations of the description in a language-specific copy of the English language original code set.
 
 h|*0..1*
-|*status*: `<<_terminology_status_class,TERMINOLOGY_STATUS>>`
+|*status*: `<<_terminology_status_enumeration,TERMINOLOGY_STATUS>>`
 a|Status of this code within the code set.
 |===

@@ -7,7 +7,7 @@ h|*Description*
 2+a|Abstract model of constraint on any kind of object node.
 
 h|*Inherit*
-2+|`<<_archetype_constraint_class,ARCHETYPE_CONSTRAINT>>`
+2+|`link:/releases/AM/{am_release}/aom14.html#_archetype_constraint_class[ARCHETYPE_CONSTRAINT^]`
 
 h|*Attributes*
 ^h|*Signature*
@@ -50,7 +50,7 @@ a|
 
 h|*1..1*
 |*c_conforms_to* ( +
-other: `<<_archetype_constraint_class,ARCHETYPE_CONSTRAINT>>[1]`, +
+other: `link:/releases/AM/{am_release}/aom14.html#_archetype_constraint_class[ARCHETYPE_CONSTRAINT^][1]`, +
 rmcc: `link:/releases/BASE/{base_release}/foundation_types.html#_function_class[FUNCTION^]<>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. 
@@ -58,7 +58,7 @@ Typically used during validation of special-ised archetype nodes.
 
 h|*1..1*
 |*c_congruent_to* ( +
-other: `<<_archetype_constraint_class,ARCHETYPE_CONSTRAINT>>[1]` +
+other: `link:/releases/AM/{am_release}/aom14.html#_archetype_constraint_class[ARCHETYPE_CONSTRAINT^][1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True if constraints represented by this node contain no further redefinitions with respect to the node `_other_`, with the exception of node_id redefnition in `C_OBJECT` nodes. 
 
@@ -66,13 +66,13 @@ Typically used to test if an inherited node locally contains any constraints.
 
 h|*1..1*
 |*occurrences_conforms_to* ( +
-other: `<<_c_object_class,C_OBJECT>>[1]` +
+other: `link:/releases/AM/{am_release}/aom14.html#_c_object_class[C_OBJECT^][1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True if this node `_occurrences_` conforms to `_other.occurrences_`; `other' is assumed to be in a flat archetype.
 
 h|*1..1*
 |*node_id_conforms_to* ( +
-other: `<<_c_object_class,C_OBJECT>>[1]` +
+other: `link:/releases/AM/{am_release}/aom14.html#_c_object_class[C_OBJECT^][1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
  +
 __Post__: `Result = codes_conformant (node_id, other.node_id)`

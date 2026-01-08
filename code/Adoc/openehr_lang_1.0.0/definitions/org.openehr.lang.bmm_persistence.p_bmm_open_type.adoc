@@ -17,7 +17,8 @@ h|*1..1*
 |*type*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|Simple type parameter as a single letter like 'T', 'G' etc.
 
-h|*0..1*
+h|*0..1 +
+(effected)*
 |*bmm_type*: `link:/releases/BASE/{base_release}/foundation_types.html#_any_class[Any^]`
 a|Result of `_create_bmm_type()_` call.
 |===

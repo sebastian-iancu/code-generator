@@ -25,7 +25,7 @@ a_path: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[
 __Pre__: `path_unique (a_path)`
 a|The item at a path (relative to this item); only valid for unique paths, i.e. paths that resolve to a single item.
 
-h|*1..**
+h|*0..1*
 |*items_at_path* ( +
 a_path: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^][1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_any_class[Any^]>`

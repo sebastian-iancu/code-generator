@@ -13,7 +13,7 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..**
+h|*1..1*
 |*items*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_item_class,ITEM>>>`
 a|Ordered list of items - `CLUSTER` or `ELEMENT` objects - under this `CLUSTER`.
 |===

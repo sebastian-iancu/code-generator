@@ -30,10 +30,10 @@ a|Schema id, formed by
 e.g. `openehr_rm_1.0.3`, `openehr_test_1.0.1`, `iso_13606_1_2008_2.1.2`.
 
 h|*1..1*
-|*meta_data*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<String,String>`
+|*meta_data*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|Table of `{key, value}` of schema meta-data, keys are string values defined by `{BMM_DEFINITIONS}.Metadata_*` constants.
 
-h|*0..**
+h|*0..1*
 |*includes*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|Identifiers of schemas included by this schema.
 
@@ -50,20 +50,20 @@ h|*1..1*
 a|True if the BMM version found in the schema (or assumed, if none) is compatible with that in this software.
 
 h|*1..1*
-|*load* (): `link:/classes/void[void]`
+|*load* (): `link:/classes/void[void] `
 a|Load schema into in-memory form, i.e. a `P_BMM_SCHEMA` instance, if structurally valid. If successful, `_p_schema_` will be set.
 
 h|*1..1*
-|*validate_merged* (): `link:/classes/void[void]`
+|*validate_merged* (): `link:/classes/void[void] `
 a|Validate loaded schema and report errors.
 
 h|*1..1*
 |*validate_includes* ( +
 all_schemas_list: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>` +
-): `link:/classes/void[void]`
+): `link:/classes/void[void] `
 a|Validate includes list for this schema, to see if each mentioned schema exists in `_all_schemas_` list.
 
 h|*1..1*
-|*create_model* (): `link:/classes/void[void]`
+|*create_model* (): `link:/classes/void[void] `
 a|Create `schema`, i.e. the `BMM_MODEL` from one `P_BMM_SCHEMA` schema.
 |===

@@ -13,7 +13,8 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*0..1*
+h|*0..1 +
+(effected)*
 |*definition*: `<<_bmm_procedure_class,BMM_PROCEDURE>>`
 a|Reference to definition of routine for which this is a call instance.
 
@@ -21,8 +22,9 @@ h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
-|*eval_type* (): `link:/classes/BMM_PROCEDURE_TYPE[BMM_PROCEDURE_TYPE]` +
+h|*1..1 +
+(redefined)*
+|*eval_type* (): `link:/classes/BMM_PROCEDURE_TYPE[BMM_PROCEDURE_TYPE] ` +
  +
 __Post_result__: `Result = definition.signature`
 a|Eval type is the signature corresponding to the (remaining) open arguments and return type, if any.

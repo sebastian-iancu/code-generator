@@ -14,15 +14,16 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*type*: `link:/classes/BMM_STATUS_TYPE[BMM_STATUS_TYPE]`
+|*type*: `link:/classes/BMM_STATUS_TYPE[BMM_STATUS_TYPE] `
 a|Declared or inferred static type of the entity.
 
 h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
-|*signature* (): `link:/classes/BMM_PROCEDURE_TYPE[BMM_PROCEDURE_TYPE]`
+h|*1..1 +
+(redefined)*
+|*signature* (): `link:/classes/BMM_PROCEDURE_TYPE[BMM_PROCEDURE_TYPE] `
 a|Formal signature of this element, in the form:
 
 `name [arg1_name: T_arg1, ...][:T_value]`

@@ -15,7 +15,7 @@ h|*1..1*
 a|Name of this model element.
 
 h|*0..1*
-|*documentation*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<String,Any>`
+|*documentation*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_any_class[Any^]>`
 a|Optional documentation of this element, as a keyed list.
 
 It is strongly recommended to use the following key /type combinations for the relevant purposes:
@@ -33,7 +33,7 @@ h|*1..1*
 a|Model element within which an element is declared.
 
 h|*0..1*
-|*extensions*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<String,Any>`
+|*extensions*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_any_class[Any^]>`
 a|Optional meta-data of this element, as a keyed list. May be used to extend the meta-model.
 
 h|*Functions*

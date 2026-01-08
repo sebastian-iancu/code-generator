@@ -54,10 +54,11 @@ h|*0..1*
 a|Identifier of EMR or other system from which the item was created / extracted. Typically in the form of a domain name.
 
 h|*0..1*
-|*other_details*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<String,String>`
+|*other_details*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|Other details about the content item.
 
-h|*0..1*
+h|*0..1 +
+(effected)*
 |*item*: `link:/releases/RM/{rm_release}/common.html#_locatable_class[LOCATABLE^]`
 a|Content object.
 |===

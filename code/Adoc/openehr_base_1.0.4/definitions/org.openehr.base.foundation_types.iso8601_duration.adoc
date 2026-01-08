@@ -7,7 +7,7 @@ h|*Description*
 2+a|Represents an ISO 8601 duration, which may have multiple parts from years down to seconds.
 
 h|*Inherit*
-2+|`<<_iso8601_type_class,Iso8601_type>>, <<_iduration_class,IDuration>>`
+2+|`<<_iso8601_type_class,Iso8601_type>>`, `<<_iduration_class,IDuration>>`
 
 h|*Functions*
 ^h|*Signature*
@@ -29,11 +29,13 @@ Where each nn represents a number of years, months, etc. nnW represents a number
 
 Note: allowing the W designator in the same expression as other designators is an exception to the published standard, but necessary in clinical information (typically for representing pregnancy duration).
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_partial* (): `<<_boolean_class,Boolean>>`
 a|Returns False.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_extended* (): `<<_boolean_class,Boolean>>`
 a|Returns True.
 

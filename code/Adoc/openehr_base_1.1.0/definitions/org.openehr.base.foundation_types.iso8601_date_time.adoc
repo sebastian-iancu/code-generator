@@ -6,8 +6,8 @@ h|*Class*
 h|*Description*
 2+a|Represents an ISO 8601 date/time, including partial and extended forms. Value may be:
 
-* `YYYY-MM-DDThh:mm:ss[,sss][Z | ±hh[mm]]` (extended, preferred) or
-* `YYYYMMDDThhmmss[,sss][Z | ±hh[mm]]` (compact)
+* `YYYY-MM-DDThh:mm:ss[,sss][Z &#124; ±hh[mm]]` (extended, preferred) or
+* `YYYYMMDDThhmmss[,sss][Z &#124; ±hh[mm]]` (compact)
 * or a partial variant.
 
 See `_valid_iso8601_date_time()_` for validity.
@@ -86,11 +86,13 @@ h|*1..1*
 |*is_decimal_sign_comma* (): `<<_boolean_class,Boolean>>`
 a|True if this time has a decimal part indicated by ‘,’ (comma) rather than ‘.’ (period).
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_partial* (): `<<_boolean_class,Boolean>>`
 a|True if this date time is partial, i.e. if seconds or more is missing.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_extended* (): `<<_boolean_class,Boolean>>`
 a|True if this date/time uses ‘-’, ‘:’ separators.
 

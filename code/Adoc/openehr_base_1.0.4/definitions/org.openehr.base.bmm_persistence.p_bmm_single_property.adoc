@@ -21,8 +21,9 @@ h|*0..1*
 |*type_ref*: `<<_p_bmm_simple_type_class,P_BMM_SIMPLE_TYPE>>`
 a|Type definition of this property computed from `_type_` for later use in `_bmm_property_`.
 
-h|*0..1*
-|*bmm_property*: `link:/releases/BASE/{base_release}/bmm.html#_bmm_property_class[BMM_PROPERTY^]<BMM_SIMPLE_TYPE>`
+h|*0..1 +
+(effected)*
+|*bmm_property*: `link:/releases/BASE/{base_release}/bmm.html#_bmm_property_class[BMM_PROPERTY^]<link:/releases/BASE/{base_release}/bmm.html#_bmm_simple_type_class[BMM_SIMPLE_TYPE^]>`
 a|`BMM_PROPERTY` created by `_create_bmm_property_definition_`.
 
 h|*Functions*

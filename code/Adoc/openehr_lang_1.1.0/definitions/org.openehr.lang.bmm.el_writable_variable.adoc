@@ -17,7 +17,8 @@ h|*1..1*
 |*definition*: `<<_bmm_writable_variable_class,BMM_WRITABLE_VARIABLE>>`
 a|Variable definition to which this reference refers.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_writable*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|Defined to return True in all cases.
 |===

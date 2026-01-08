@@ -23,7 +23,7 @@ h|*0..1*
 |*closed_args*: `<<_el_tuple_class,EL_TUPLE>>`
 a|Closed arguments of a routine call as a tuple of objects.
 
-h|*0..**
+h|*0..1*
 |*open_args*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|Optional list of names of open arguments of the call. If not provided, and the `_name_` refers to a routine with more arguments than supplied in `_closed_args_`, the missing arguments are inferred from the `_definition_`.
 
@@ -35,8 +35,9 @@ h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
-|*eval_type* (): `link:/classes/BMM_SIGNATURE[BMM_SIGNATURE]` +
+h|*1..1 +
+(effected)*
+|*eval_type* (): `link:/classes/BMM_SIGNATURE[BMM_SIGNATURE] ` +
  +
 __Post_result__: `Result = definition.signature`
 a|Eval type is the signature corresponding to the (remaining) open arguments and return type, if any.

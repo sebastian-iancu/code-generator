@@ -87,8 +87,8 @@ h|*1..1*
 m: `<<_integer_class,Integer>>[1]` +
 ): `<<_boolean_class,Boolean>>` +
  +
-__Post__: `Result = m >= 1 and m <= Months_in_year`
-a|True if `m >= 1 and m <= months_in_year`.
+__Post__: `Result = m >= 1 and m \<= Months_in_year`
+a|True if `m >= 1 and m \<= months_in_year`.
 
 h|*1..1*
 |*valid_day* ( +
@@ -97,8 +97,8 @@ m: `<<_integer_class,Integer>>[1]`, +
 d: `<<_integer_class,Integer>>[1]` +
 ): `<<_boolean_class,Boolean>>` +
  +
-__Post__: `Result = d >= 1 and d <= days_in_month (m, y)`
-a|True if `d >= 1 and d <= days_in_month (m, y)`.
+__Post__: `Result = d >= 1 and d \<= days_in_month (m, y)`
+a|True if `d >= 1 and d \<= days_in_month (m, y)`.
 
 h|*1..1*
 |*valid_hour* ( +
@@ -157,8 +157,8 @@ s: `<<_string_class,String>>[1]` +
 ): `<<_boolean_class,Boolean>>`
 a|String is a valid ISO 8601 date, i.e. takes the form:
 
-* `hh:mm:ss[(,|.)s+][Z|±hh[:mm]]` (extended)
-* `hhmmss[(,|.)s+][Z|±hh[mm]]` (compact)
+* `hh:mm:ss[(,&#124;.)s+][Z&#124;±hh[:mm]]` (extended)
+* `hhmmss[(,&#124;.)s+][Z&#124;±hh[mm]]` (compact)
 * or one of the partial forms:
 ** `hh:mm` (extended)
 ** `hhmm` or `hh` (compact)
@@ -172,7 +172,7 @@ Where:
 * `hh` is "00" - "23" (0-filled to two digits)
 * `mm` is "00" - "59" (0-filled to two digits)
 * `ss` is "00" - "60" (0-filled to two digits)
-* `[(,|.)s+]` is an optional string consisting of a comma or decimal point followed by numeric string of 1 or more digits, representing a fractional second
+* `[(,&#124;.)s+]` is an optional string consisting of a comma or decimal point followed by numeric string of 1 or more digits, representing a fractional second
 * `Z` is a literal meaning UTC (modern replacement for GMT), i.e. timezone `+0000`
 
 h|*1..1*
@@ -181,8 +181,8 @@ s: `<<_string_class,String>>[1]` +
 ): `<<_boolean_class,Boolean>>`
 a|String is a valid ISO 8601 date-time, i.e. takes the form:
 
-* `YYYY-MM-DDThh:mm:ss[(,|.)s+][Z|±hh[:mm]]` (extended)
-* `YYYYMMDDThhmmss[(,|.)s+][Z|±hh[mm]]` (compact)
+* `YYYY-MM-DDThh:mm:ss[(,&#124;.)s+][Z&#124;±hh[:mm]]` (extended)
+* `YYYYMMDDThhmmss[(,&#124;.)s+][Z&#124;±hh[mm]]` (compact)
 * or one of the partial forms:
 ** `YYYY-MM-DDThh:mm` or `YYYY-MM-DDThh` (extended)
 ** `YYYYMMDDThhmm` or `YYYYMMDDThh` (compact)

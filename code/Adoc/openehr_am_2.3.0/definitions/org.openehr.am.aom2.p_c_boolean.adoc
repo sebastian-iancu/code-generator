@@ -13,15 +13,18 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*0..**
+h|*0..1 +
+(effected)*
 |*constraint*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]>`
 a|
 
-h|*0..1*
+h|*0..1 +
+(effected)*
 |*assumed_value*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*default_value*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|
 |===

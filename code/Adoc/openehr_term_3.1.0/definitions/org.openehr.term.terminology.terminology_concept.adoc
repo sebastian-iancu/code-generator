@@ -19,6 +19,6 @@ h|*1..1*
 a|The rubric, i.e. linguistic expression, of this concept, in the language of this terminology instance.
 
 h|*0..1*
-|*status*: `<<_terminology_status_class,TERMINOLOGY_STATUS>>`
+|*status*: `<<_terminology_status_enumeration,TERMINOLOGY_STATUS>>`
 a|Status of this concept within the vocabulary.
 |===

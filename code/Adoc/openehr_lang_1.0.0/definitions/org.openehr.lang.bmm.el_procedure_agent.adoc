@@ -13,7 +13,8 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*0..1*
+h|*0..1 +
+(effected)*
 |*definition*: `<<_bmm_procedure_class,BMM_PROCEDURE>>`
 a|Reference to definition of routine for which this is a call instance.
 |===

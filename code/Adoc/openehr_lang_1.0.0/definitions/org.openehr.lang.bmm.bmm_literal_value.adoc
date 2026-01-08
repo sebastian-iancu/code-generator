@@ -23,5 +23,5 @@ a|A native representation of the value, possibly derived by deserialising `_valu
 
 h|*0..1*
 |*syntax*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
-a|Optional specification of formalism of the `_value_literal_` attribute for complex values. Value may be any of `json | yawl | xml | odin | rdf` or another value agreed by the user community. If not set, `json` is assumed.
+a|Optional specification of formalism of the `_value_literal_` attribute for complex values. Value may be any of `json &#124; yawl &#124; xml &#124; odin &#124; rdf` or another value agreed by the user community. If not set, `json` is assumed.
 |===

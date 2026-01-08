@@ -15,15 +15,15 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*0..**
-|*members*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/classes/BMM_MODULE[BMM_MODULE]>`
+h|*0..1*
+|*members*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/classes/BMM_MODULE[BMM_MODULE] >`
 a|Member modules in this package.
 
 h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..**
+h|*0..1*
 |*root_classes* (): `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_bmm_class_class,BMM_CLASS>>>`
 a|Obtain the set of top-level classes in this package, either from this package itself or by recursing into the structure until classes are obtained from child packages. Recurse into each child only far enough to find the first level of classes.
 

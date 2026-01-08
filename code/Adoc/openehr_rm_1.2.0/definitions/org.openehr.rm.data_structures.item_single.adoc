@@ -21,7 +21,8 @@ h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*as_hierarchy* (): `<<_element_class,ELEMENT>>`
 a|Generate a CEN EN13606-compatible hierarchy consisting of a single `ELEMENT`.
 |===

@@ -65,10 +65,6 @@
                 "type": "Boolean"
             }
         }
-    },
-    "invariants": {
-        "Limits_valid": "limits.meaning.is_equal (“limits”)",
-        "Reference_range_valid": "other_reference_ranges.has (limits)"
     }
 }
 --------

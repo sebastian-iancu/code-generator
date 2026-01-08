@@ -57,7 +57,8 @@ h|*1..1*
 |*negative* __alias__ "-" (): `<<_double_class,Double>>`
 a|Generate negative of current Double value.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_equal* ( +
 other: `<<_double_class,Double>>[1]` +
 ): `<<_boolean_class,Boolean>>`

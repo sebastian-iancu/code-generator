@@ -9,13 +9,14 @@ h|*Description*
 Used for recording real world times, rather than scientifically measured fine amounts of time. The partial form is used for approximate times of events and substance administrations.
 
 h|*Inherit*
-2+|`<<_dv_temporal_class,DV_TEMPORAL>>, link:/releases/BASE/{base_release}/foundation_types.html#_iso8601_time_class[Iso8601_time^]`
+2+|`<<_dv_temporal_class,DV_TEMPORAL>>`, `link:/releases/BASE/{base_release}/foundation_types.html#_iso8601_time_class[Iso8601_time^]`
 
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*value*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|ISO8601 time string
 
@@ -23,23 +24,27 @@ h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*magnitude* (): `link:/releases/BASE/{base_release}/foundation_types.html#_real_class[Real^]`
 a|Numeric value of the time as seconds since the start of day, i.e. `00:00:00`.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*add* __alias__ "+" ( +
 a_diff: `<<_dv_duration_class,DV_DURATION>>[1]` +
 ): `<<_dv_time_class,DV_TIME>>`
 a|Addition of a Duration to this Time.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*subtract* __alias__ "-" ( +
 a_diff: `<<_dv_duration_class,DV_DURATION>>[1]` +
 ): `<<_dv_time_class,DV_TIME>>`
 a|Subtract a Duration from this Time.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*diff* __alias__ "-" ( +
 other: `<<_dv_time_class,DV_TIME>>[1]` +
 ): `<<_dv_duration_class,DV_DURATION>>`
@@ -55,7 +60,8 @@ __Pre_comparable__: `is_strictly_comparable()` +
 __Post_result__: `Result = magnitude > other.magnitude`
 a|True if `_other_` is less than this Quantified object. Based on comparison of `_magnitude_`.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_strictly_comparable_to* ( +
 other: `<<_dv_time_class,DV_TIME>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`

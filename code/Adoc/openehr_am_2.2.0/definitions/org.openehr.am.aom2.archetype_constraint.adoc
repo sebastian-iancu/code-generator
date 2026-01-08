@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*parent*: `<<_archetype_constraint_class,ARCHETYPE_CONSTRAINT>>`
+|*parent*: `link:/releases/AM/{am_release}/aom14.html#_archetype_constraint_class[ARCHETYPE_CONSTRAINT^]`
 a|Parent node, except in the case of the top of a tree, i.e. root `C_COMPLEX_OBJECT` of an archetype definition.
 
 h|*0..1*
@@ -43,7 +43,7 @@ a|Path of this node relative to root of archetype.
 h|*1..1 +
 (abstract)*
 |*c_conforms_to* ( +
-other: `<<_archetype_constraint_class,ARCHETYPE_CONSTRAINT>>[1]`, +
+other: `link:/releases/AM/{am_release}/aom14.html#_archetype_constraint_class[ARCHETYPE_CONSTRAINT^][1]`, +
 rmcc: `link:/releases/BASE/{base_release}/foundation_types.html#_function_class[FUNCTION^]<>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. 
@@ -52,7 +52,7 @@ Typically used during validation of special-ised archetype nodes.
 h|*1..1 +
 (abstract)*
 |*c_congruent_to* ( +
-other: `<<_archetype_constraint_class,ARCHETYPE_CONSTRAINT>>[1]` +
+other: `link:/releases/AM/{am_release}/aom14.html#_archetype_constraint_class[ARCHETYPE_CONSTRAINT^][1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True if constraints represented by this node contain no further redefinitions with respect to the node other, with the exception of node_id redefnition in `C_OBJECT` nodes. 
 

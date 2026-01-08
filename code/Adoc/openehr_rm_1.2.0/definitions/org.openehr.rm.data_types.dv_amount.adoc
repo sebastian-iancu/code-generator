@@ -17,7 +17,8 @@ h|*0..1*
 |*accuracy_is_percent*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|If `True`, indicates that when this object was created, `_accuracy_` was recorded as a percent value; if `False`, as an absolute quantity value.
 
-h|*0..1*
+h|*0..1 +
+(effected)*
 |*accuracy*: `link:/releases/BASE/{base_release}/foundation_types.html#_real_class[Real^]`
 a|Accuracy of measurement, expressed either as a half-range percent value (`_accuracy_is_percent_` = `True`) or a half-range quantity. A value of `0` means that accuracy is 100%, i.e. no error.
 

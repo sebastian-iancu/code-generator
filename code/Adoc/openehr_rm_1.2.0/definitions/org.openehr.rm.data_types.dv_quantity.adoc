@@ -34,12 +34,14 @@ If the `_units_display_name_` field is set, this may be used for display. If not
 
 Example values from UCUM: "kg/m^2", “mm[Hg]", "ms-1", "km/h".
 
-h|*0..1*
-|*normal_range*: `<<_dv_interval_class,DV_INTERVAL>><DV_QUANTITY>`
+h|*0..1 +
+(effected)*
+|*normal_range*: `<<_dv_interval_class,DV_INTERVAL>><<<_dv_quantity_class,DV_QUANTITY>>>`
 a|Optional normal range.
 
-h|*0..**
-|*other_reference_ranges*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_reference_range_class,REFERENCE_RANGE>><DV_QUANTITY>>`
+h|*0..1 +
+(effected)*
+|*other_reference_ranges*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_reference_range_class,REFERENCE_RANGE>><<<_dv_quantity_class,DV_QUANTITY>>>>`
 a|Optional tagged other reference ranges for this value in its particular measurement context.
 
 h|*0..1*
@@ -92,7 +94,8 @@ h|*1..1*
 |*is_integral* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True if `_precision_` = 0, meaning that the `_magnitude_` is a whole number.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_strictly_comparable_to* ( +
 other: `<<_dv_ordered_class,DV_ORDERED>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`

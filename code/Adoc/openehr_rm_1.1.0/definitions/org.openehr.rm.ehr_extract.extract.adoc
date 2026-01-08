@@ -13,7 +13,7 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*0..**
+h|*0..1*
 |*chapters*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_extract_chapter_class,EXTRACT_CHAPTER>>>`
 a|The content extracted and serialised from the source repository for this Extract.
 
@@ -37,7 +37,7 @@ h|*1..1*
 |*sequence_nr*: `link:/releases/BASE/{base_release}/foundation_types.html#_integer_class[Integer^]`
 a|Number of this Extract response in sequence of responses to Extract request identified by `_request_id_`. If this is the sole response, or there was no request, value is 1.
 
-h|*0..**
+h|*0..1*
 |*participations*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_extract_participation_class,EXTRACT_PARTICIPATION>>>`
 a|Participations relevant to the creation of this Extract.
 

@@ -28,12 +28,14 @@ h|*1..1*
 |*units*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|Stringified units, expressed in UCUM unit syntax, e.g. "kg/m2", “mm[Hg]", "ms-1", "km/h". Implemented accordingly in subtypes.
 
-h|*0..1*
-|*normal_range*: `<<_dv_interval_class,DV_INTERVAL>><DV_QUANTITY>`
+h|*0..1 +
+(effected)*
+|*normal_range*: `<<_dv_interval_class,DV_INTERVAL>><<<_dv_quantity_class,DV_QUANTITY>>>`
 a|Optional normal range.
 
-h|*0..**
-|*other_reference_ranges*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_reference_range_class,REFERENCE_RANGE>><DV_QUANTITY>>`
+h|*0..1 +
+(effected)*
+|*other_reference_ranges*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_reference_range_class,REFERENCE_RANGE>><<<_dv_quantity_class,DV_QUANTITY>>>>`
 a|Optional tagged other reference ranges for this value in its particular measurement context.
 
 h|*Functions*

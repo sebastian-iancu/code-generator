@@ -50,7 +50,7 @@ h|*1..1 +
 |*entity_category* (): `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|Generate a category code-string to use in visualisation, that indicates:
 
-* _entity meta-type_: simple | enumerated | generic | generic_effective | parameter
+* _entity meta-type_: simple &#124; enumerated &#124; generic &#124; generic_effective &#124; parameter
 * _abstract modifier_ - abstract status
 * _primitive modifier_ primitive status
 

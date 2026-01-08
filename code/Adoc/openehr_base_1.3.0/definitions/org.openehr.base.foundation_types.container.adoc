@@ -42,13 +42,13 @@ test: `Operation[1]` +
 ): `<<_boolean_class,Boolean>>`
 a|Universal quantifier applied to container, taking one agent argument `_test_` whose signature is `(v:T): Boolean`.
 
-h|*1..**
+h|*0..1*
 |*matching* ( +
 test: `Operation[1]` +
 ): `<<_list_class,List>><T>`
 a|Return a List all items matching the predicate function `_test_` which has signature `(v:T): Boolean`. If no matches, an empty List is returned.
 
-h|*1..1*
+h|*0..1*
 |*select* ( +
 test: `Operation[1]` +
 ): `T`

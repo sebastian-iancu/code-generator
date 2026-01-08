@@ -14,7 +14,7 @@ h|*1..1*
 |*identifier*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|Unique identifier of this operator within the rules system.
 
-h|*0..**
+h|*0..1*
 |*symbols*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|
 |===

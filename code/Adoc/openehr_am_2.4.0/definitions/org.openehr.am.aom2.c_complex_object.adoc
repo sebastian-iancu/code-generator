@@ -7,26 +7,44 @@ h|*Description*
 2+a|Constraint on complex objects, i.e. any object that consists of other object constraints.
 
 h|*Inherit*
-2+|`<<_c_defined_object_class,C_DEFINED_OBJECT>>`
+2+|`link:/releases/AM/{am_release}/aom14.html#_c_defined_object_class[C_DEFINED_OBJECT^]`
 
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*0..**
-|*attributes*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_c_attribute_class,C_ATTRIBUTE>>>`
+h|*0..1*
+|*attributes*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/AM/{am_release}/aom14.html#_c_attribute_class[C_ATTRIBUTE^]>`
 a|List of constraints on attributes of the reference model type represented by this object.
+
+h|*0..1*
+|*attribute_tuples*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_c_attribute_tuple_class,C_ATTRIBUTE_TUPLE>>>`
+a|List of attribute tuple constraints under this object constraint, if any.
 
 h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*any_allowed* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
  +
-__Post__: `Result = attributes.is_empty`
-a|True if any value of the reference model type being constrained is allowed.
+__Post__: `Result = attributes.is_empty and not is_prohibited`
+a|True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.
 
-h|*Invariants*
-2+a|__Attributes_valid__: ` any_allowed xor (attributes /= Void and not attributes.is_empty)`
+h|*1..1*
+|*c_conforms_to* ( +
+other: `link:/releases/AM/{am_release}/aom14.html#_c_complex_object_class[C_COMPLEX_OBJECT^][1]`, +
+rmcc: `link:/releases/BASE/{base_release}/foundation_types.html#_function_class[FUNCTION^]<>[1]` +
+): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
+a|True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. 
+Typically used during validation of specialised archetype nodes.
+
+h|*1..1*
+|*c_congruent_to* ( +
+other: `link:/releases/AM/{am_release}/aom14.html#_c_complex_object_class[C_COMPLEX_OBJECT^][1]` +
+): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
+a|True if constraints represented by this node contain no further redefinitions with respect to the node `_other_`, with the exception of `_node_id_` redefinition in `C_OBJECT` nodes. 
+
+Typically used to test if an inherited node locally contains any constraints.
 |===

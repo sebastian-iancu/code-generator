@@ -21,7 +21,7 @@ h|*0..1*
 |*uri*: `<<_dv_uri_class,DV_URI>>`
 a|URI reference to electronic information stored outside the record as a file, database entry etc, if supplied as a reference.
 
-h|*0..**
+h|*0..1*
 |*data*: `link:/releases/BASE/{base_release}/foundation_types.html#_array_class[Array^]<link:/releases/BASE/{base_release}/foundation_types.html#_octet_class[Octet^]>`
 a|The actual data found at `_uri_`, if supplied inline.
 
@@ -33,7 +33,7 @@ h|*0..1*
 |*compression_algorithm*: `link:/releases/BASE/{base_release}/foundation_types.html#_code_phrase_class[CODE_PHRASE^]`
 a|Compression type, a coded value from the openEHR Integrity check code set. Void means no compression.
 
-h|*0..**
+h|*0..1*
 |*integrity_check*: `link:/releases/BASE/{base_release}/foundation_types.html#_array_class[Array^]<link:/releases/BASE/{base_release}/foundation_types.html#_octet_class[Octet^]>`
 a|Binary cryptographic integrity checksum.
 

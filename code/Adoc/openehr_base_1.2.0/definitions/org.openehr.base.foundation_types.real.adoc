@@ -57,7 +57,8 @@ h|*1..1*
 |*negative* __alias__ "-" (): `<<_real_class,Real>>`
 a|Generate negative of current Real value.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_equal* ( +
 other: `<<_real_class,Real>>[1]` +
 ): `<<_boolean_class,Boolean>>`

@@ -4,24 +4,53 @@ h|*Class*
 2+^h|*C_BOOLEAN*
 
 h|*Description*
-2+a|Constraint on instances of Boolean. Both attributes cannot be set to False, since this would mean that the Boolean value being constrained cannot be True or False.
+2+a|Constraint on instances of `Boolean`. Both attributes cannot be set to False, since this would mean that the Boolean value being constrained cannot be `True` or `False`.
 
 h|*Inherit*
-2+|`link:/releases/AM/{am_release}/aom14.html#_c_primitive_class[C_PRIMITIVE^]`
+2+|`link:/releases/AM/{am_release}/aom14.html#_c_primitive_object_class[C_PRIMITIVE_OBJECT^]`
 
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
-|*true_valid*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
-a|True if the value True is allowed.
+h|*0..1*
+|*constraint*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]>`
+a|Boolean constraint - a list of Boolean values.
 
-h|*1..1*
-|*false_valid*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
-a|True if the value False is allowed.
+h|*0..1 +
+(effected)*
+|*assumed_value*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
+a|Assumed Boolean value.
 
 h|*0..1*
-|*assumed_value*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
-a|The value to assume if this item is not included in data, due to being part of an optional structure.
+|*default_value*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
+a|Default Boolean value.
+
+h|*Functions*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1 +
+(effected)*
+|*prototype_value* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
+a|Prototype Boolean value.
+
+h|*1..1 +
+(redefined)*
+|*any_allowed* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
+ +
+__Post__: `Result = constraint.is_empty`
+a|True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.
+
+h|*1..1*
+|*c_value_conforms_to* ( +
+other: `link:/releases/AM/{am_release}/aom14.html#_c_boolean_class[C_BOOLEAN^][1]` +
+): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
+a|True if `_other.any_allowed_` or else every constraint in the `_constraint_` list exists in the `_other.constraint_`.
+
+h|*1..1*
+|*c_value_congruent_to* ( +
+other: `link:/releases/AM/{am_release}/aom14.html#_c_boolean_class[C_BOOLEAN^][1]` +
+): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
+a|True if the items in `_constraint_` are equal in number and identical pair-wise with those in `_other.constraint_`.
 |===

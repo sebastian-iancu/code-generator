@@ -17,7 +17,7 @@ h|*1..1*
 |*else*: `<<_el_expression_class,EL_EXPRESSION>>`
 a|Result expression of the chain if no member of `_items_` succeeds in evaluation.
 
-h|*1..**
+h|*1..1*
 |*items*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_el_decision_branch_class,EL_DECISION_BRANCH>>>`
 a|Members of the chain, equivalent to branches in an if/then/else chain and cases in a case statement.
 |===

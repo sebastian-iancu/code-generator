@@ -20,7 +20,7 @@ a|The unique identifier of this EHR.
 
 NOTE: is is strongly recommended that a UUID always be used for this field.
 
-h|*0..**
+h|*0..1*
 |*contributions*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/base_types.html#_object_ref_class[OBJECT_REF^]>`
 a|List of contributions causing changes to this EHR. Each contribution contains a list of versions, which may include references to any number of `VERSION` instances, i.e. items of type `VERSIONED_COMPOSITION` and `VERSIONED_FOLDER`.
 
@@ -32,7 +32,7 @@ h|*1..1*
 |*ehr_access*: `link:/releases/BASE/{base_release}/base_types.html#_object_ref_class[OBJECT_REF^]`
 a|Reference to `EHR_ACCESS` object for this EHR.
 
-h|*0..**
+h|*0..1*
 |*compositions*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/base_types.html#_object_ref_class[OBJECT_REF^]>`
 a|Master list of all Versioned Composition references in this EHR.
 
@@ -44,12 +44,12 @@ h|*1..1*
 |*time_created*: `link:/releases/RM/{rm_release}/data_types.html#_dv_date_time_class[DV_DATE_TIME^]`
 a|Time of creation of the EHR.
 
-h|*0..**
+h|*0..1*
 |*folders*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/base_types.html#_object_ref_class[OBJECT_REF^]>`
 a|Optional additional Folder structures for this EHR. If set, the `_directory_` attribute refers to the first member.
 
 h|*Invariants*
-2+a|__Contributions_valid__: `for_all c in contributions | c.type.is_equal("CONTRIBUTION")`
+2+a|__Contributions_valid__: `for_all c in contributions &#124; c.type.is_equal("CONTRIBUTION")`
 
 h|
 2+a|__Ehr_access_valid__: `ehr_access.type.is_equal ("VERSIONED_EHR_ACCESS")`
@@ -58,13 +58,13 @@ h|
 2+a|__Ehr_status_valid__: `ehr_status.type.is_equal("VERSIONED_EHR_STATUS")`
 
 h|
-2+a|__Compositions_valid__: `for_all c in compositions | c.type.is_equal ("VERSIONED_COMPOSITION")`
+2+a|__Compositions_valid__: `for_all c in compositions &#124; c.type.is_equal ("VERSIONED_COMPOSITION")`
 
 h|
 2+a|__Directory_valid__: `directory /= Void implies directory.type.is_equal ("VERSIONED_FOLDER")`
 
 h|
-2+a|__Folders_valid__: `folders /= Void implies for_all f in folders | f.type.is_equal("VERSIONED_FOLDER")`
+2+a|__Folders_valid__: `folders /= Void implies for_all f in folders &#124; f.type.is_equal("VERSIONED_FOLDER")`
 
 h|
 2+a|__Directory_in_folders__: `folders /= Void implies folders.item(1) = directory`

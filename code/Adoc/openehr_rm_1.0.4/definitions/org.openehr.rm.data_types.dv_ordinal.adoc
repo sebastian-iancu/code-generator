@@ -38,11 +38,11 @@ h|*Functions*
 
 h|*1..1*
 |*limits* (): `<<_dv_ordinal_class,DV_ORDINAL>>`
-a|
-Limits of the ordinal enumeration, to allow comparison of an ordinal 
+a|Limits of the ordinal enumeration, to allow comparison of an ordinal 
 value to its limits.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_strictly_comparable_to* ( +
 other: `<<_dv_ordered_class,DV_ORDERED>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
@@ -57,10 +57,4 @@ other: `link:/releases/BASE/{base_release}/foundation_types.html#_ordered_class[
  +
 __Post__: `Result = value < other.value`
 a|
-
-h|*Invariants*
-2+a|__Limits_valid__: `limits.meaning.is_equal (“limits”)`
-
-h|
-2+a|__Reference_range_valid__: `other_reference_ranges.has (limits)`
 |===

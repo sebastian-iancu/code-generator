@@ -38,7 +38,7 @@ h|*0..1*
 a|Type definition of this property, if not a simple String type reference. Persisted attribute.
 
 h|*0..1*
-|*bmm_property*: `link:/releases/BASE/{base_release}/bmm.html#_bmm_property_class[BMM_PROPERTY^]<BMM_TYPE>`
+|*bmm_property*: `link:/releases/BASE/{base_release}/bmm.html#_bmm_property_class[BMM_PROPERTY^]<link:/releases/BASE/{base_release}/bmm.html#_bmm_type_class[BMM_TYPE^]>`
 a|BMM_PROPERTY created by create_bmm_property_definition.
 
 h|*Functions*
@@ -49,6 +49,6 @@ h|*1..1*
 |*create_bmm_property* ( +
 a_bmm_schema: `link:/releases/BASE/{base_release}/bmm.html#_bmm_model_class[BMM_MODEL^][1]`, +
 a_class_def: `link:/releases/BASE/{base_release}/bmm.html#_bmm_class_class[BMM_CLASS^][1]` +
-): `link:/classes/void[void]`
+): `link:/classes/void[void] `
 a|Create `_bmm_property_definition_` from `P_BMM_XX` parts.
 |===

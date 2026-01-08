@@ -17,7 +17,8 @@ h|*1..1*
 |*type*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|Name of type - must be a simple class name.
 
-h|*0..1*
+h|*0..1 +
+(effected)*
 |*bmm_type*: `link:/releases/BASE/{base_release}/bmm.html#_bmm_simple_type_class[BMM_SIMPLE_TYPE^]`
 a|Result of `_create_bmm_type()_` call.
 |===

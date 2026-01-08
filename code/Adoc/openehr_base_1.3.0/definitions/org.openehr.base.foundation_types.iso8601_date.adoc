@@ -47,11 +47,13 @@ h|*1..1*
 |*day_unknown* (): `<<_boolean_class,Boolean>>`
 a|Indicates whether day in month is unknown. If so, and month is known, the date is of the form `"YYYY-MM"` or `"YYYYMM"`.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_partial* (): `<<_boolean_class,Boolean>>`
 a|True if this date is partial, i.e. if days or more is missing.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_extended* (): `<<_boolean_class,Boolean>>`
 a|True if this date uses `'-'` separators.
 

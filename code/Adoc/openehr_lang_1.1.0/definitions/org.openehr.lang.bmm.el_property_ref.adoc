@@ -17,7 +17,8 @@ h|*1..1*
 |*definition*: `<<_bmm_property_class,BMM_PROPERTY>>`
 a|Property definition (within class).
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_writable*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|Defined to return True.
 
@@ -25,7 +26,8 @@ h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*eval_type* (): `<<_bmm_type_class,BMM_TYPE>>`
 a|Type definition (i.e. BMM meta-type definition object) of the constant, property or variable, inferred by inspection of the current scoping instance. Return `_definition.type_`.
 |===

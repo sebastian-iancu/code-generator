@@ -37,41 +37,50 @@ h|*1..1*
 |*effective_conforms_to_type* (): `<<_bmm_class_class,BMM_CLASS>>`
 a|Generate ultimate conformance type, which is either `_flattened_conforms_to_type_` or if not set, `Any`.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*type_signature* (): `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|Signature form of the open type, including constrainer type if there is one, e.g. `T:Ordered`.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*is_primitive* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
  +
 __Post_validity__: `Result = base_class.is_primitive`
 a|Result = `False` - generic parameters are understood by definition to be non-primitive.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_abstract* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|Result = `False` - generic parameters are understood by definition to be non-abstract.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*entity_metatype* (): `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|Meta-type of a container type is `Entity_metatype_generic_parameter`.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*effective_base_class* (): `<<_bmm_class_class,BMM_CLASS>>`
 a|The effective conformance type of this parameter, or the 'Any' class if none.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*has_subtypes* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True if `_effective_conforms_to_type.base_class.has_descendants_`.
 
-h|*1..**
+h|*1..1 +
+(effected)*
 |*subtypes* (): `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|Result is `_effective_conforms_to_type.base_class.all_descendants_` .
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*type_name* (): `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|Result is `_name_`.
 
-h|*1..**
+h|*1..1 +
+(effected)*
 |*flattened_type_list* (): `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|Result is either `_flattened_conforms_to_type.flattened_type_list_` or the `Any` type.
 

@@ -13,7 +13,8 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*0..1*
+h|*0..1 +
+(effected)*
 |*definition*: `<<_bmm_function_class,BMM_FUNCTION>>`
 a|Reference to definition of a routine for which this is a direct call instance, if one exists.
 |===

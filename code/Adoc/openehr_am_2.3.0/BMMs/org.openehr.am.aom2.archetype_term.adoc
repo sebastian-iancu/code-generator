@@ -11,10 +11,24 @@
             "is_mandatory": true,
             "type": "String"
         },
-        "items": {
+        "text": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "text",
+            "documentation": "Short term text, typically for display.",
+            "is_mandatory": true,
+            "type": "String"
+        },
+        "description": {
+            "_type": "P_BMM_SINGLE_PROPERTY",
+            "name": "description",
+            "documentation": "Full description text.",
+            "is_mandatory": true,
+            "type": "String"
+        },
+        "other_items": {
             "_type": "P_BMM_GENERIC_PROPERTY",
-            "name": "items",
-            "documentation": "Hash of keys (“text”, “description” etc) and corresponding values.",
+            "name": "other_items",
+            "documentation": "Hash of keys and corresponding values for other items in a term, e.g. provenance.",
             "type_def": {
                 "root_type": "Hash",
                 "generic_parameters": [
@@ -23,21 +37,6 @@
                 ]
             }
         }
-    },
-    "functions": {
-        "keys": {
-            "name": "keys",
-            "documentation": "List of all keys used in this term.",
-            "result": {
-                "_type": "P_BMM_CONTAINER_TYPE",
-                "container_type": "List",
-                "type": "String"
-            },
-            "is_nullable": true
-        }
-    },
-    "invariants": {
-        "Code_valid": "not code.is_empty"
     }
 }
 --------

@@ -47,7 +47,7 @@ h|*1..1 +
 e: `T[1]` +
 ): `<<_boolean_class,Boolean>>` +
  +
-__Post_result__: `Result = (lower_unbounded or lower_included and v >= lower) or v > lower and (upper_unbounded or upper_included and v <= upper or v < upper)`
+__Post_result__: `Result = (lower_unbounded or lower_included and v >= lower) or v > lower and (upper_unbounded or upper_included and v \<= upper or v < upper)`
 a|True if the value `e` is properly contained in this Interval.
 
 h|*1..1 +
@@ -78,7 +78,7 @@ h|
 2+a|__Upper_included_valid__: `upper_unbounded implies not upper_included`
 
 h|
-2+a|__Limits_consistent__: `(not upper_unbounded and not lower_unbounded) implies lower <= upper`
+2+a|__Limits_consistent__: `(not upper_unbounded and not lower_unbounded) implies lower \<= upper`
 
 h|
 2+a|__Limits_comparable__: `(not upper_unbounded and not lower_unbounded) implies lower.strictly_comparable_to (upper)`

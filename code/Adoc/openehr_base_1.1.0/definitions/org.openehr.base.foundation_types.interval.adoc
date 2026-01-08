@@ -45,7 +45,7 @@ h|*1..1*
 |*has* ( +
 e: `T[1]` +
 ): `<<_boolean_class,Boolean>>`
-a|True if `(lower_unbounded or lower_included and v >= lower) or v > lower and (upper_unbounded or upper_included and v <= upper or v < upper)`.
+a|True if `(lower_unbounded or lower_included and v >= lower) or v > lower and (upper_unbounded or upper_included and v \<= upper or v < upper)`.
 
 h|*1..1*
 |*intersects* ( +
@@ -59,7 +59,8 @@ other: `<<_interval_class,Interval>>[1]` +
 ): `<<_boolean_class,Boolean>>`
 a|True if current interval properly contains `other`? True if all points of `other` are inside the current interval.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_equal* ( +
 other: `<<_any_class,Any>>[1]` +
 ): `<<_boolean_class,Boolean>>`
@@ -72,7 +73,7 @@ h|
 2+a|__Upper_included_valid__: `upper_unbounded implies not upper_included`
 
 h|
-2+a|__Limits_consistent__: `(not upper_unbounded and not lower_unbounded) implies lower <= upper`
+2+a|__Limits_consistent__: `(not upper_unbounded and not lower_unbounded) implies lower \<= upper`
 
 h|
 2+a|__Limits_comparable__: `(not upper_unbounded and not lower_unbounded) implies lower.strictly_comparable_to (upper)`

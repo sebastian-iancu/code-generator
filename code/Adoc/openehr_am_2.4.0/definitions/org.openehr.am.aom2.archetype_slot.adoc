@@ -4,29 +4,32 @@ h|*Class*
 2+^h|*ARCHETYPE_SLOT*
 
 h|*Description*
-2+a|Constraint describing a  slot' where another archetype can occur.
+2+a|Constraint describing a 'slot' where another archetype can occur.
 
 h|*Inherit*
-2+|`link:/releases/AM/{am_release}/aom14.html#_c_reference_object_class[C_REFERENCE_OBJECT^]`
+2+|`link:/releases/AM/{am_release}/aom14.html#_c_object_class[C_OBJECT^]`
 
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*0..**
+h|*0..1*
 |*includes*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/AM/{am_release}/aom14.html#_assertion_class[ASSERTION^]>`
-a|List of constraints defining other archetypes that could be included at this point.
+a|List of constraints defining other archetypes that could be included at this point. Represented as an `ASSERTION` containing an expression of the form  `EXPR_ARCHETYPE_REF matches EXPR_ARCHETYPE_ID_CONSTRAINT`.
 
-h|*0..**
+h|*0..1*
 |*excludes*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/AM/{am_release}/aom14.html#_assertion_class[ASSERTION^]>`
-a|List of constraints defining other archetypes that cannot be included at this point.
+a|List of constraints defining other archetypes that cannot be included at this point. Represented as an `ASSERTION` containing an expression of the form  `EXPR_ARCHETYPE_REF matches EXPR_ARCHETYPE_ID_CONSTRAINT`.
 
-h|*Invariants*
-2+a|__Includes_valid__: `includes /= Void implies not includes.is_empty`
+h|*1..1*
+|*is_closed*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
+a|True if this slot specification in this artefact is closed to further filling either in further specialisations or at runtime. Default value False, i.e. unless explicitly set, a slot remains open.
 
-h|
-2+a|__Excludes_valid__: `excludes /= Void implies not excludes.is_empty`
+h|*Functions*
+^h|*Signature*
+^h|*Meaning*
 
-h|
-2+a|__Validity__: `any_allowed xor (includes /= Void or excludes /= Void)`
+h|*1..1*
+|*any_allowed* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
+a|True if no constraints stated, and slot is not closed.
 |===

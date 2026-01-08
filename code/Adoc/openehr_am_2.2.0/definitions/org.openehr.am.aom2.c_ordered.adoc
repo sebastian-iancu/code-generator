@@ -11,13 +11,13 @@ In its simplest form, the constraint accessor returns just a single point `Inter
 The next simplest form is a single proper `Interval <T>` (i.e. normal two-sided or half-open interval). The most complex form is a list of any combination of point and proper intervals.
 
 h|*Inherit*
-2+|`<<_c_primitive_object_class,C_PRIMITIVE_OBJECT>>`
+2+|`link:/releases/AM/{am_release}/aom14.html#_c_primitive_object_class[C_PRIMITIVE_OBJECT^]`
 
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*0..**
+h|*0..1*
 |*constraint*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_interval_class[Interval^]>`
 a|Constraint in the form of a List of Intervals of the parameter type T. Concrete types generated in descendants via template binding.
 
@@ -25,7 +25,8 @@ h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*any_allowed* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
  +
 __Post__: `Result = constraint.is_empty`

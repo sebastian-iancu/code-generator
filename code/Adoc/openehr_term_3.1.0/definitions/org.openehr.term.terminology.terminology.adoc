@@ -18,11 +18,11 @@ h|*1..1*
 |*language*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|Language of this terminology, as an ISO:639 2-letter code.
 
-h|*0..**
+h|*0..1*
 |*code_sets*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_code_set_class,CODE_SET>>>`
 a|Code sets in this Terminology.
 
-h|*0..**
+h|*0..1*
 |*vocabularies*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_terminology_group_class,TERMINOLOGY_GROUP>>>`
 a|Vocabularies of coded terms in this terminology.
 

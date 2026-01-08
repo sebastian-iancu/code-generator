@@ -13,7 +13,8 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*0..1*
+h|*0..1 +
+(effected)*
 |*bmm_schema*: `link:/releases/BASE/{base_release}/bmm_persistence.html#_p_bmm_schema_class[P_BMM_SCHEMA^]`
 a|Persistent form of model.
 |===

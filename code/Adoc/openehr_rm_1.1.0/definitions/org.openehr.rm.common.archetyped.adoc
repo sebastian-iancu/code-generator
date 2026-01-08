@@ -25,6 +25,5 @@ h|*1..1*
 a|Version of the openEHR reference model used to create this object. Expressed in terms of the release version string, e.g.  1.0 ,  1.2.4 .
 
 h|*Invariants*
-2+a|__rm_version_valid__: `not rm_version.is_empty`
 2+a|__Rm_version_valid__: `not rm_version.is_empty`
 |===
