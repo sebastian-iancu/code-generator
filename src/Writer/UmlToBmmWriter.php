@@ -6,6 +6,7 @@ use JsonException;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmSchema;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmSchemaInclude;
 use OpenEHR\Tools\CodeGen\Model\Collection;
+use OpenEHR\Tools\CodeGen\Model\Uml\Globals;
 use OpenEHR\Tools\CodeGen\Model\Uml\UmlClass;
 use OpenEHR\Tools\CodeGen\Model\Uml\UmlConstraint;
 use OpenEHR\Tools\CodeGen\Model\Uml\UmlEnumeration;
@@ -22,6 +23,7 @@ class UmlToBmmWriter extends AbstractWriter
 
     public function __construct(public readonly array $skipPackages = [])
     {
+        Globals::flush();
     }
 
     public const string DIR = __WRITER_DIR__ . DIRECTORY_SEPARATOR . 'BMM-JSON' . DIRECTORY_SEPARATOR;
@@ -102,9 +104,9 @@ class UmlToBmmWriter extends AbstractWriter
             /** @var UmlClass $umlClass */
             foreach ($collectedUmlClasses as $umlClass) {
                 if (in_array($umlClass->name, self::PRIMITIVES)) {
-                    $schema['primitive_types'][$umlClass->name] = self::asBmmClass($umlClass, $collectedUmlClasses);
+                    $schema['primitive_types'][$umlClass->name] = self::asBmmClass($umlClass);
                 } else {
-                    $schema['class_definitions'][$umlClass->name] = self::asBmmClass($umlClass, $collectedUmlClasses);
+                    $schema['class_definitions'][$umlClass->name] = self::asBmmClass($umlClass);
                 }
             }
             $schema = BmmSchema::fromArray($schema);
@@ -167,20 +169,21 @@ class UmlToBmmWriter extends AbstractWriter
         $names = [];
         foreach ($umlPackage->umlClasses as $umlClass) {
             if (str_contains($umlClass->name, '<')) {
+                self::log('  Skipping [%s] class as it is generic.', $umlClass->name);
                 continue;
             }
             $names[] = $umlClass->name;
             $collectedUmlClasses->add($umlClass);
+            Globals::addUmlClass($umlClass);
         }
         return $names;
     }
 
     /**
      * @param UmlClass|UmlEnumeration $umlClass
-     * @param Collection $collectedUmlClasses
      * @return array<string, mixed>
      */
-    protected static function asBmmClass(UmlClass|UmlEnumeration $umlClass, Collection $collectedUmlClasses): array
+    protected static function asBmmClass(UmlClass|UmlEnumeration $umlClass): array
     {
         $bmmClass = [
             '_type' => null,
@@ -191,7 +194,7 @@ class UmlToBmmWriter extends AbstractWriter
             $bmmClass['_type'] = 'P_BMM_INTERFACE';
             /** @var UmlOperation $umlOperation */
             foreach ($umlClass->umlOperations as $umlOperation) {
-                $bmmClass['functions'][$umlOperation->name] = self::asBmmFunction($umlOperation, $umlClass, $collectedUmlClasses);
+                $bmmClass['functions'][$umlOperation->name] = self::asBmmFunction($umlOperation, $umlClass);
             }
         } elseif ($umlClass instanceof UmlClass) {
             if ($umlClass->isAbstract) {
@@ -207,14 +210,14 @@ class UmlToBmmWriter extends AbstractWriter
             /** @var UmlProperty $umlProperty */
             foreach ($umlClass->umlProperties as $umlProperty) {
                 if ($umlProperty->isStatic) {
-                    $bmmClass['constants'][$umlProperty->name] = self::asBmmConstant($umlProperty, $umlClass, $collectedUmlClasses);
+                    $bmmClass['constants'][$umlProperty->name] = self::asBmmConstant($umlProperty, $umlClass);
                 } else {
-                    $bmmClass['properties'][$umlProperty->name] = self::asBmmProperty($umlProperty, $umlClass, $collectedUmlClasses);
+                    $bmmClass['properties'][$umlProperty->name] = self::asBmmProperty($umlProperty, $umlClass);
                 }
             }
             /** @var UmlOperation $umlOperation */
             foreach ($umlClass->umlOperations as $umlOperation) {
-                $bmmClass['functions'][$umlOperation->name] = self::asBmmFunction($umlOperation, $umlClass, $collectedUmlClasses);
+                $bmmClass['functions'][$umlOperation->name] = self::asBmmFunction($umlOperation, $umlClass);
             }
             /** @var UmlConstraint $umlConstraint */
             foreach ($umlClass->umlConstraints as $umlConstraint) {
@@ -246,7 +249,7 @@ class UmlToBmmWriter extends AbstractWriter
             }
             /** @var UmlOperation $umlOperation */
             foreach ($umlClass->umlOperations as $umlOperation) {
-                $functions[$umlOperation->name] = self::asBmmFunction($umlOperation, $umlClass, $collectedUmlClasses);
+                $functions[$umlOperation->name] = self::asBmmFunction($umlOperation, $umlClass);
             }
             $bmmClass = [
                 '_type' => 'P_BMM_ENUMERATION_INTEGER',
@@ -278,7 +281,7 @@ class UmlToBmmWriter extends AbstractWriter
         return $bmmGenericParameterDef;
     }
 
-    protected static function asBmmFunction(UmlOperation $umlOperation, UmlClass $umlClass, Collection $collectedUmlClasses): array
+    protected static function asBmmFunction(UmlOperation $umlOperation, UmlClass $umlClass): array
     {
         $bmmFunction = [
             'name' => $umlOperation->name,
@@ -289,7 +292,7 @@ class UmlToBmmWriter extends AbstractWriter
         ];
         /** @var UmlParameter $umlParameter */
         foreach ($umlOperation->umlParameters as $umlParameter) {
-            $bmmFunction['parameters'][$umlParameter->name] = self::asBmmParameter($umlParameter, $umlClass, $collectedUmlClasses);
+            $bmmFunction['parameters'][$umlParameter->name] = self::asBmmParameter($umlParameter, $umlClass);
         }
         /** @var UmlConstraint $umlConstraint */
         foreach ($umlOperation->umlConstraints as $umlConstraint) {
@@ -299,7 +302,7 @@ class UmlToBmmWriter extends AbstractWriter
                 $bmmFunction['post_conditions'][$umlConstraint->name] = $umlConstraint->rule;
             }
         }
-        $bmmProperty = self::asType($umlOperation->return->name, $umlOperation->maxOccurs, $umlClass, $collectedUmlClasses);
+        $bmmProperty = self::asType($umlOperation->return->name, $umlOperation->maxOccurs, $umlClass);
         $bmmFunction['result'] = match ($bmmProperty['_type'] ?? null) {
             'P_BMM_GENERIC_PROPERTY' => array_merge(['_type' => 'P_BMM_GENERIC_TYPE'], $bmmProperty['type_def']),
             'P_BMM_CONTAINER_PROPERTY' => array_merge(['_type' => 'P_BMM_CONTAINER_TYPE'], $bmmProperty['type_def']),
@@ -308,7 +311,7 @@ class UmlToBmmWriter extends AbstractWriter
         return array_filter($bmmFunction);
     }
 
-    protected static function asBmmParameter(UmlParameter $umlParameter, UmlClass $umlClass, Collection $collectedUmlClasses): array
+    protected static function asBmmParameter(UmlParameter $umlParameter, UmlClass $umlClass): array
     {
         $bmmParameter = [
             '_type' => null,
@@ -322,7 +325,7 @@ class UmlToBmmWriter extends AbstractWriter
             $umlTemplateParameter = $umlClass->umlTemplateParameters->get($umlParameter->templateParameterId);
             $bmmParameter['type'] = $umlTemplateParameter->name;
         } else {
-            $bmmParameter = array_merge($bmmParameter, self::asType($umlParameter->type->name, $umlParameter->maxOccurs, $umlClass, $collectedUmlClasses));
+            $bmmParameter = array_merge($bmmParameter, self::asType($umlParameter->type->name, $umlParameter->maxOccurs, $umlClass));
         }
         if ($umlParameter->maxOccurs === -1 && ($bmmParameter['_type'] === 'P_BMM_CONTAINER_PROPERTY')) {
             $bmmParameter['cardinality'] = [
@@ -337,7 +340,7 @@ class UmlToBmmWriter extends AbstractWriter
         return array_filter($bmmParameter);
     }
 
-    protected static function asBmmConstant(UmlProperty $umlProperty, UmlClass $umlClass, Collection $collectedUmlClasses): array
+    protected static function asBmmConstant(UmlProperty $umlProperty, UmlClass $umlClass): array
     {
         $bmmConstant = [
             '_type' => null,
@@ -353,10 +356,9 @@ class UmlToBmmWriter extends AbstractWriter
     /**
      * @param UmlProperty $umlProperty
      * @param UmlClass $umlClass
-     * @param Collection $collectedUmlClasses
      * @return array<string, mixed>
      */
-    protected static function asBmmProperty(UmlProperty $umlProperty, UmlClass $umlClass, Collection $collectedUmlClasses): array
+    protected static function asBmmProperty(UmlProperty $umlProperty, UmlClass $umlClass): array
     {
         $bmmProperty = [
             '_type' => null,
@@ -370,7 +372,7 @@ class UmlToBmmWriter extends AbstractWriter
             $umlTemplateParameter = $umlClass->umlTemplateParameters->get($umlProperty->templateParameterId);
             $bmmProperty['type'] = $umlTemplateParameter->name;
         } else {
-            $bmmProperty = array_merge($bmmProperty, self::asType($umlProperty->type->name, $umlProperty->maxOccurs, $umlClass, $collectedUmlClasses));
+            $bmmProperty = array_merge($bmmProperty, self::asType($umlProperty->type->name, $umlProperty->maxOccurs, $umlClass));
         }
         if ($umlProperty->maxOccurs === -1 && ($bmmProperty['_type'] === 'P_BMM_CONTAINER_PROPERTY')) {
             $bmmProperty['cardinality'] = [
@@ -381,7 +383,7 @@ class UmlToBmmWriter extends AbstractWriter
         return array_filter($bmmProperty);
     }
 
-    public static function asType(string $typeName, int|null $maxOccurs, UmlClass $umlClass, Collection $collectedUmlClasses): array
+    public static function asType(string $typeName, int|null $maxOccurs, UmlClass $umlClass): array
     {
         $bmmPropertyType = [];
         if (str_contains($typeName, '<')) {
@@ -389,23 +391,21 @@ class UmlToBmmWriter extends AbstractWriter
                 $bmmPropertyType['_type'] = 'P_BMM_CONTAINER_PROPERTY';
                 $bmmPropertyType['type_def'] = [
                     'container_type' => 'List',
-                    'type_def' => array_merge(['_type' => 'P_BMM_GENERIC_TYPE'], self::asTypeDef($typeName, $collectedUmlClasses)),
+                    'type_def' => array_merge(['_type' => 'P_BMM_GENERIC_TYPE'], self::asTypeDef($typeName)),
                 ];
             } else {
                 $bmmPropertyType['_type'] = 'P_BMM_GENERIC_PROPERTY';
-                $bmmPropertyType['type_def'] = self::asTypeDef($typeName, $collectedUmlClasses);
+                $bmmPropertyType['type_def'] = self::asTypeDef($typeName);
             }
         } elseif ($maxOccurs === -1) {
             $bmmPropertyType['_type'] = 'P_BMM_CONTAINER_PROPERTY';
-            /** @var UmlClass|null $typeDefUmlClass */
-            $typeDefUmlClass = $collectedUmlClasses->get($typeName);
             // exceptional situation on data = Octet[]
             if ($typeName === 'Byte') {
                 $bmmPropertyType['type_def'] = [
                     'container_type' => 'Array',
                     'type' => 'Octet'
                 ];
-            } elseif ($typeDefUmlClass && $typeDefUmlClass->isGenericType()) {
+            } elseif (($typeDefUmlClass = Globals::getUmlClass($typeName)) && ($typeDefUmlClass instanceof UmlClass) && $typeDefUmlClass->isGenericType()) {
                 $bmmPropertyType['type_def'] = [
                     'container_type' => 'List',
                     'type_def' => [
@@ -429,21 +429,24 @@ class UmlToBmmWriter extends AbstractWriter
 
     /**
      * @param string $descriptor
-     * @param Collection $collectedUmlClasses
      * @return array<string, mixed>
      */
-    public static function asTypeDef(string $descriptor, Collection $collectedUmlClasses): array
+    public static function asTypeDef(string $descriptor): array
     {
         $typeDef = [];
-        if (preg_match('/^(\w+)\s*\<(.*)\>$/', $descriptor, $m)) {
+        if (preg_match('/^(\w+)\s*<(.*)>$/', $descriptor, $m)) {
             $typeDef['root_type'] = $m[1];
             if (str_contains($m[2], '<')) {
                 $descriptorPart = $m[2];
                 $typeDef['generic_parameter_defs'] = [];
-                /** @var UmlClass $umlTemplateClass */
-                $umlTemplateClass = $collectedUmlClasses->get($m[1]);
+                $umlTemplateClass = Globals::getUmlClass($m[1]);
+                if (!$umlTemplateClass instanceof UmlClass) {
+                    $typeDef['err_type_def'] = $descriptor;
+                    self::log('  Error finding [%s] after parsing type definition [%s].', $m[1], $descriptor);
+                    return $typeDef;
+                }
                 $keys = array_keys((array)$umlTemplateClass->umlTemplateParameters);
-                while (preg_match('/^(\w+)(\<(?:([^\<\>]*)|(?:(?3)(?2)(?3))*)\>)?(?:,\s*)?/', $descriptorPart, $p)) {
+                while (preg_match('/^(\w+)(<(?:([^<>]*)|(?:(?3)(?2)(?3))*)>)?(?:,\s*)?/', $descriptorPart, $p)) {
                     $descriptorPart = substr($descriptorPart, strlen($p[0]));
                     $key = current($keys) ?: count($typeDef['generic_parameter_defs']);
                     if (empty($p[2])) {
@@ -453,7 +456,7 @@ class UmlToBmmWriter extends AbstractWriter
                     } else {
                         $typeDef['generic_parameter_defs'][$key] = array_merge([
                             '_type' => 'P_BMM_GENERIC_TYPE',
-                        ], self::asTypeDef($p[1] . $p[2], $collectedUmlClasses));
+                        ], self::asTypeDef($p[1] . $p[2]));
                     }
                     next($keys);
                 }

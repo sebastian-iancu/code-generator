@@ -2,20 +2,12 @@
 
 namespace OpenEHR\Tools\CodeGen\Model\Uml;
 
-use OpenEHR\Tools\CodeGen\Helper\ConsoleTrait;
-use OpenEHR\Tools\CodeGen\Model\CollectableInterface;
 use OpenEHR\Tools\CodeGen\Model\Collection;
 use SimpleXMLElement;
 
-class UmlClass implements CollectableInterface
+class UmlClass extends AbstractUmlClass
 {
 
-    use CollectableTrait;
-    use ConsoleTrait;
-
-    public readonly string $id;
-    public readonly string $name;
-    public readonly string $description;
     public readonly bool $isAbstract;
     public readonly Collection $umlGeneralizations;
     public readonly Collection $umlTemplateParameters;
@@ -26,9 +18,7 @@ class UmlClass implements CollectableInterface
 
     public function __construct(SimpleXMLElement $xmlNode)
     {
-        $this->id = (string)$xmlNode->attributes('xmi', true)?->id;
-        $this->name = (string)$xmlNode['name'];
-        $this->description = (string)$xmlNode->ownedComment['body'];
+        parent::__construct($xmlNode);
         $this->isAbstract = (string)$xmlNode['isAbstract'] === 'true';
         // collect generalizations
         $this->umlGeneralizations = new Collection();
