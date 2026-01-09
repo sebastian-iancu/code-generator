@@ -47,6 +47,7 @@
                 "rmcc": {
                     "_type": "P_BMM_GENERIC_FUNCTION_PARAMETER",
                     "name": "rmcc",
+                    "documentation": "RM conformance checker agent.",
                     "type_def": {
                         "root_type": "FUNCTION"
                     }

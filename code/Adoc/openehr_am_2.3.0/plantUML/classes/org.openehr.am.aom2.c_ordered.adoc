@@ -3,7 +3,7 @@
 @startuml
 
 abstract class C_ORDERED <T> {
-  + constraint : List<Interval> [*]
+  + constraint : List<Interval<T>> [*]
   + default_value : T [0..1]
   + assumed_value : T [0..1]
   + any_allowed() : Boolean [1]

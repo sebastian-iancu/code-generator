@@ -58,6 +58,7 @@
                 "rmcc": {
                     "_type": "P_BMM_GENERIC_FUNCTION_PARAMETER",
                     "name": "rmcc",
+                    "documentation": "Reference Model conformance checker agent (lambda).",
                     "type_def": {
                         "root_type": "FUNCTION"
                     }

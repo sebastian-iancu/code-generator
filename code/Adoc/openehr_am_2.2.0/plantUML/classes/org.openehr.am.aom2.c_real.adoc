@@ -7,7 +7,7 @@ class C_REAL {
 }
 
 abstract class C_ORDERED <T>  #whitesmoke;line:gray;line.dotted;text:gray {
-  + constraint : List<Interval> [*]
+  + constraint : List<Interval<T>> [*]
   + any_allowed() : Boolean [1]
   + c_value_conforms_to( other : C_ORDERED [1] ) : Boolean [1]
   + c_value_congruent_to( other : C_ORDERED [1] ) : Boolean [1]
