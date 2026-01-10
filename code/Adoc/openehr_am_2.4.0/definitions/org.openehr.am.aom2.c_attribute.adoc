@@ -7,7 +7,7 @@ h|*Description*
 2+a|Abstract model of constraint on any kind of attribute in a class model.
 
 h|*Inherit*
-2+|`link:/releases/AM/{am_release}/aom14.html#_archetype_constraint_class[ARCHETYPE_CONSTRAINT^]`
+2+|`<<_archetype_constraint_class,ARCHETYPE_CONSTRAINT>>`
 
 h|*Attributes*
 ^h|*Signature*
@@ -22,7 +22,7 @@ h|*0..1*
 a|Constraint settable on every attribute, regardless of whether it is singular or of a container type, which indicates whether its target object exists or not (i.e. is mandatory or not). Only set if it overrides the underlying reference model or parent archetype in the case of specialised archetypes.
 
 h|*0..1*
-|*children*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/AM/{am_release}/aom14.html#_c_object_class[C_OBJECT^]>`
+|*children*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_c_object_class,C_OBJECT>>>`
 a|Child `C_OBJECT` nodes. Each such node represents a constraint on the type of this attribute in its reference model. Multiples occur both for multiple items in the case of container attributes, and alternatives in the case of singular attributes.
 
 h|*0..1*
@@ -61,9 +61,10 @@ h|*1..1*
 |*is_single* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True if this node logically represents a single-valued attribute. Evaluated as not `_is_multiple_`.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*c_congruent_to* ( +
-other: `link:/releases/AM/{am_release}/aom14.html#_archetype_constraint_class[ARCHETYPE_CONSTRAINT^][1]` +
+other: `<<_archetype_constraint_class,ARCHETYPE_CONSTRAINT>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
  +
 __Post__: `Result = existence = Void and ((is_single and other.is_single) or (is_multiple and other.is_multiple and cardinality = Void))`
@@ -71,9 +72,10 @@ a|True if constraints represented by this node contain no further redefinitions 
 
 Typically used to test if an inherited node locally contains any constraints.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*c_conforms_to* ( +
-other: `link:/releases/AM/{am_release}/aom14.html#_archetype_constraint_class[ARCHETYPE_CONSTRAINT^][1]`, +
+other: `<<_archetype_constraint_class,ARCHETYPE_CONSTRAINT>>[1]`, +
 rmcc: `link:/releases/BASE/{base_release}/foundation_types.html#_function_class[FUNCTION^]<>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
  +
@@ -81,7 +83,8 @@ __Post__: `Result = existence_conforms_to (other) and ((is_single and other.is_s
 a|True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. 
 Typically used during validation of specialised archetype nodes.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_prohibited* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
  +
 __Post__: `Result = existence /= Void and then existence.is_prohibited`

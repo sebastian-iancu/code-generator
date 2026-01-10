@@ -7,9 +7,12 @@ class EL_CASE_TABLE <T> {
   + test_value : EL_VALUE_GENERATOR [1]
 }
 
-abstract class EL_DECISION_TABLE  #whitesmoke;line:gray;line.dotted;text:gray {
-  + else : EL_EXPRESSION [1]
-  + items : List<EL_DECISION_BRANCH> [1..*]
+abstract class EL_DECISION_TABLE <T>  #whitesmoke;line:gray;line.dotted;text:gray {
+  + items : List<EL_DECISION_BRANCH<T>> [1..*]
+  + else : T [1]
+}
+
+abstract class EL_TERMINAL  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 abstract class EL_EXPRESSION  #whitesmoke;line:gray;line.dotted;text:gray {
@@ -17,7 +20,9 @@ abstract class EL_EXPRESSION  #whitesmoke;line:gray;line.dotted;text:gray {
   + is_boolean() : Boolean [1]
 }
 
-EL_EXPRESSION <|-- EL_DECISION_TABLE
+EL_EXPRESSION <|-- EL_TERMINAL
+
+EL_TERMINAL <|-- EL_DECISION_TABLE
 
 EL_DECISION_TABLE <|-- EL_CASE_TABLE
 

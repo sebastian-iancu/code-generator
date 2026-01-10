@@ -17,12 +17,17 @@ abstract class EL_VALUE_GENERATOR  #whitesmoke;line:gray;line.dotted;text:gray {
 abstract class EL_SIMPLE  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
+abstract class EL_TERMINAL  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
 abstract class EL_EXPRESSION  #whitesmoke;line:gray;line.dotted;text:gray {
   + {abstract} eval_type() : BMM_TYPE [1]
   + is_boolean() : Boolean [1]
 }
 
-EL_EXPRESSION <|-- EL_SIMPLE
+EL_EXPRESSION <|-- EL_TERMINAL
+
+EL_TERMINAL <|-- EL_SIMPLE
 
 EL_SIMPLE <|-- EL_VALUE_GENERATOR
 

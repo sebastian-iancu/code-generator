@@ -14,15 +14,15 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*name*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
+|*name*: `link:/classes/String[String] `
 a|Name of the package from schema; this name may be qualified if it is a top-level package within the schema, or unqualified. Persistent attribute.
 
 h|*0..1*
-|*classes*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
+|*classes*: `link:/classes/List[List] <link:/classes/String[String] >`
 a|List of classes in this package. Persistent attribute.
 
 h|*0..1*
-|*bmm_package_definition*: `link:/releases/BASE/{base_release}/bmm.html#_bmm_package_class[BMM_PACKAGE^]`
+|*bmm_package_definition*: `link:/releases/LANG/{lang_release}/bmm.html#_bmm_package_class[BMM_PACKAGE^]`
 a|`BMM_PACKAGE` created by `_create_bmm_package_definition_`.
 
 h|*Functions*

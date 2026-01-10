@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*cardinality*: `link:/releases/BASE/{base_release}/foundation_types.html#_interval_class[Interval^]<link:/releases/BASE/{base_release}/foundation_types.html#_integer_class[Integer^]>`
+|*cardinality*: `link:/classes/Interval[Interval] <link:/classes/Integer[Integer] >`
 a|Cardinality of this property in its class. Persistent attribute.
 
 h|*0..1 +
@@ -24,7 +24,7 @@ a|Type definition of this property, if not a simple String type reference. Persi
 
 h|*0..1 +
 (effected)*
-|*bmm_property*: `link:/releases/BASE/{base_release}/bmm.html#_bmm_container_property_class[BMM_CONTAINER_PROPERTY^]`
+|*bmm_property*: `link:/releases/LANG/{lang_release}/bmm.html#_bmm_container_property_class[BMM_CONTAINER_PROPERTY^]`
 a|`BMM_PROPERTY` created by `_create_bmm_property_`.
 
 h|*Functions*
@@ -34,8 +34,8 @@ h|*Functions*
 h|*1..1 +
 (redefined)*
 |*create_bmm_property* ( +
-a_bmm_schema: `link:/releases/BASE/{base_release}/bmm.html#_bmm_model_class[BMM_MODEL^][1]`, +
-a_class_def: `link:/releases/BASE/{base_release}/bmm.html#_bmm_class_class[BMM_CLASS^][1]` +
+a_bmm_schema: `link:/releases/LANG/{lang_release}/bmm.html#_bmm_model_class[BMM_MODEL^][1]`, +
+a_class_def: `link:/classes/BMM_CLASS[BMM_CLASS] [1]` +
 ): `link:/classes/void[void] `
 a|Create `_bmm_property_definition_`.
 |===

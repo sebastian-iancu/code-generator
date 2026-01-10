@@ -11,6 +11,7 @@ class EHR {
   + compositions : List<OBJECT_REF> [*]
   + directory : OBJECT_REF [0..1]
   + time_created : DV_DATE_TIME [1]
+  + folders : List<OBJECT_REF> [*]
 }
 
 class VERSIONED_EHR_ACCESS {

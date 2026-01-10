@@ -5,8 +5,7 @@
 class ASSERTION {
   + tag : String [0..1]
   + string_expression : String [0..1]
-  + expression : EXPR_ITEM [1]
-  + variables : List<ASSERTION_VARIABLE> [*]
+  + expression : EXPRESSION [1]
 }
 
 class ASSIGNMENT {
@@ -15,8 +14,8 @@ class ASSIGNMENT {
 }
 
 class EXPR_BINARY_OPERATOR {
-  + left_operand : EXPR_ITEM [1]
-  + right_operand : EXPR_ITEM [1]
+  + left_operand : EXPRESSION [1]
+  + right_operand : EXPRESSION [1]
 }
 
 class EXPR_FUNCTION_CALL {
@@ -27,9 +26,8 @@ abstract class EXPRESSION {
   + {abstract} type() : EXPR_TYPE_DEF [1]
 }
 
-class EXPR_LEAF {
-  + reference_type : String [1]
-  + item : Any [1]
+abstract class EXPR_LEAF {
+  + item : Any [0..1]
 }
 
 class EXPR_LITERAL {
@@ -39,10 +37,11 @@ class EXPR_LITERAL {
 abstract class EXPR_OPERATOR {
   + precedence_overridden : Boolean [0..1]
   + operator : OPERATOR_KIND [1]
+  + symbol : String [0..1]
 }
 
 class EXPR_UNARY_OPERATOR {
-  + operand : EXPR_ITEM [1]
+  + operand : EXPRESSION [1]
 }
 
 class EXPR_VARIABLE_REF {
@@ -82,34 +81,36 @@ class EXPR_FOR_ALL {
 }
 
 enum OPERATOR_KIND {
-  op_eq 
-  op_ne 
-  op_le 
-  op_lt 
-  op_ge 
-  op_gt 
-  op_matches 
-  op_not 
-  op_and 
-  op_or 
-  op_xor 
-  op_implies 
-  op_for_all 
-  op_exists 
-  op_plus 
-  op_minus 
-  op_multiply 
-  op_divide 
-  op_exponent 
+  eq 
+  ne 
+  lt 
+  le 
+  gt 
+  ge 
+  matches 
+  not 
+  and 
+  or 
+  xor 
+  implies 
+  for_all 
+  exists 
+  plus 
+  minus 
+  multiply 
+  divide 
+  modulo 
+  exponent 
 }
 
+STATEMENT <|-- ASSERTION
 STATEMENT <|-- ASSIGNMENT
 EXPR_OPERATOR <|-- EXPR_BINARY_OPERATOR
 EXPR_LEAF <|-- EXPR_FUNCTION_CALL
 EXPR_VALUE <|-- EXPRESSION
-EXPR_ITEM <|-- EXPR_LEAF
+EXPRESSION <|-- EXPR_LEAF
 EXPR_LEAF <|-- EXPR_LITERAL
-EXPR_ITEM <|-- EXPR_OPERATOR
+EXPRESSION <|-- EXPR_OPERATOR
 EXPR_OPERATOR <|-- EXPR_UNARY_OPERATOR
 EXPR_LEAF <|-- EXPR_VARIABLE_REF
 EXPR_VALUE <|-- EXTERNAL_QUERY

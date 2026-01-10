@@ -15,6 +15,6 @@ h|*Attributes*
 
 h|*1..1 +
 (effected)*
-|*value*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
+|*value*: `link:/classes/String[String] `
 a|Native String value.
 |===

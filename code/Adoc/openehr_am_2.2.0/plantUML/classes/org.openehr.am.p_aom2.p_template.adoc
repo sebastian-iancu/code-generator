@@ -25,10 +25,10 @@ abstract class P_ARCHETYPE  #whitesmoke;line:gray;line.dotted;text:gray {
 P_ARCHETYPE <|-- P_AUTHORED_ARCHETYPE
 
 abstract class AUTHORED_RESOURCE  #whitesmoke;line:gray;line.dotted;text:gray {
-  + original_language : Terminology_code [1]
-  + is_controlled : Boolean [0..1]
-  + description : RESOURCE_DESCRIPTION [0..1]
   + uid : UUID [0..1]
+  + original_language : Terminology_code [1]
+  + description : RESOURCE_DESCRIPTION [0..1]
+  + is_controlled : Boolean [0..1]
   + annotations : RESOURCE_ANNOTATIONS [0..1]
   + translations : Hash<String,TRANSLATION_DETAILS> [0..1]
   + current_revision() : String [1]

@@ -40,11 +40,11 @@ E.g. `"openehr_ehr_1.0.4"`.
 h|*1..1*
 |*class_definition* ( +
 a_name: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^][1]` +
-): `<<_bmm_class_class,BMM_CLASS>>`
+): `link:/classes/BMM_CLASS[BMM_CLASS] `
 a|Retrieve the class definition corresponding to `_a_type_name_` (which may contain a generic part).
 
 h|*1..1*
-|*type_definition* (): `<<_bmm_class_class,BMM_CLASS>>`
+|*type_definition* (): `link:/classes/BMM_CLASS[BMM_CLASS] `
 a|Retrieve the class definition corresponding to `_a_type_name_`. If it contains a generic part, this will be removed if it is a fully open generic name, otherwise it will remain intact, i.e. if it is an effective generic name that identifies a `BMM_GENERIC_CLASS_EFFECTIVE`.
 
 h|*1..1*
@@ -62,7 +62,7 @@ a|True if `_a_type_name_` is already concretely known in the system, including i
 h|*1..1*
 |*enumeration_definition* ( +
 a_name: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^][1]` +
-): `<<_bmm_enumeration_class,BMM_ENUMERATION>>`
+): `link:/classes/BMM_ENUMERATION[BMM_ENUMERATION] `
 a|Retrieve the enumeration definition corresponding to `_a_type_name_`.
 
 h|*0..1*
@@ -93,7 +93,7 @@ h|*1..1*
 |*class_definition_at_path* ( +
 a_type_name: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^][1]`, +
 a_prop_path: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^][1]` +
-): `<<_bmm_class_class,BMM_CLASS>>`
+): `link:/classes/BMM_CLASS[BMM_CLASS] `
 a|Retrieve the class definition for the class that owns the terminal attribute in `a_prop_path` in flattened class corresponding to `a_type_name`.
 
 h|*0..1*
@@ -133,15 +133,15 @@ a|Generate type substitutions for the supplied type, which may be simple, generi
 `_a_type_`:: Name of a type.
 
 h|*1..1*
-|*any_class_definition* (): `<<_bmm_simple_class_class,BMM_SIMPLE_CLASS>>`
+|*any_class_definition* (): `link:/classes/BMM_SIMPLE_CLASS[BMM_SIMPLE_CLASS] `
 a|`BMM_SIMPLE_CLASS` instance for the `Any` class. This may be defined in the BMM schema, but if not, use `BMM_DEFINITIONS._any_class_`.
 
 h|*1..1*
-|*any_type_definition* (): `<<_bmm_simple_type_class,BMM_SIMPLE_TYPE>>`
+|*any_type_definition* (): `link:/classes/BMM_SIMPLE_TYPE[BMM_SIMPLE_TYPE] `
 a|`BMM_SIMPLE_TYPE` instance for the `Any` type.
 
 h|*1..1*
-|*boolean_type_definition* (): `<<_bmm_simple_type_class,BMM_SIMPLE_TYPE>>`
+|*boolean_type_definition* (): `link:/classes/BMM_SIMPLE_TYPE[BMM_SIMPLE_TYPE] `
 a|`BMM_SIMPLE_TYPE` instance for the `Boolean` type.
 
 h|*Invariants*

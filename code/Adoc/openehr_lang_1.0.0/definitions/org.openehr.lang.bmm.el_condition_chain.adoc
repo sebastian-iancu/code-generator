@@ -19,6 +19,6 @@ h|*Attributes*
 
 h|*1..1 +
 (effected)*
-|*items*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_el_conditional_expression_class,EL_CONDITIONAL_EXPRESSION>>>`
+|*items*: `link:/classes/List[List] <<<_el_conditional_expression_class,EL_CONDITIONAL_EXPRESSION>>>`
 a|Members of the chain, equivalent to branches in an if/then/else chain and cases in a case statement.
 |===

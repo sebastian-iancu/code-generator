@@ -3,8 +3,8 @@
 @startuml
 
 class EL_BINARY_OPERATOR {
-  + left_operand : EL_SIMPLE [1]
-  + right_operand : EL_TERMINAL [1]
+  + left_operand : EL_EXPRESSION [1]
+  + right_operand : EL_EXPRESSION [1]
 }
 
 abstract class EL_EXPRESSION {
@@ -13,20 +13,20 @@ abstract class EL_EXPRESSION {
 }
 
 class EL_LITERAL {
-  + value : BMM_LITERAL_VALUE [1]
+  + value : BMM_LITERAL_VALUE<BMM_TYPE> [1]
   + eval_type() : BMM_TYPE [1]
 }
 
 abstract class EL_OPERATOR {
   + precedence_overridden : Boolean [0..1]
   + symbol : String [0..1]
-  + definition : BMM_FUNCTION [1]
+  + call : EL_FUNCTION_CALL [1]
   + operator_definition() : BMM_OPERATOR [1]
   + equivalent_call() : EL_FUNCTION_CALL [1]
 }
 
 class EL_UNARY_OPERATOR {
-  + operand : EL_SIMPLE [1]
+  + operand : EL_EXPRESSION [1]
 }
 
 class EL_PROPERTY_REF {
@@ -36,7 +36,7 @@ class EL_PROPERTY_REF {
 }
 
 abstract class EL_PREDICATE {
-  + operand : EL_INSTANCE_REF [1]
+  + operand : EL_VALUE_GENERATOR [1]
   + eval_type() : BMM_SIMPLE_TYPE [1]
 }
 
@@ -45,7 +45,9 @@ class EL_DEFINED {
 
 class EL_FUNCTION_CALL {
   + agent : EL_FUNCTION_AGENT [1]
+  + is_writable : Boolean [1]
   + eval_type() : BMM_TYPE [1]
+  + reference() : String [1]
 }
 
 abstract class EL_AGENT_CALL {
@@ -57,8 +59,10 @@ abstract class EL_AGENT {
   + closed_args : EL_TUPLE [0..1]
   + open_args : List<String> [*]
   + definition : BMM_ROUTINE [0..1]
-  + eval_type() : BMM_SIGNATURE [1]
+  + is_writable : Boolean [1]
+  + eval_type() : BMM_ROUTINE_TYPE [1]
   + is_callable() : Boolean [1]
+  + reference() : String [1]
 }
 
 class EL_TUPLE_ITEM {
@@ -68,6 +72,7 @@ class EL_TUPLE_ITEM {
 
 class EL_PROCEDURE_AGENT {
   + definition : BMM_PROCEDURE [0..1]
+  + eval_type() : BMM_PROCEDURE_TYPE [1]
 }
 
 class EL_TUPLE {
@@ -78,6 +83,7 @@ class EL_TUPLE {
 
 class EL_FUNCTION_AGENT {
   + definition : BMM_FUNCTION [0..1]
+  + eval_type() : BMM_FUNCTION_TYPE [1]
 }
 
 class EL_ATTACHED {
@@ -94,6 +100,7 @@ class EL_BOOLEAN_EXPRESSION {
 
 class EL_TYPE_REF {
   + type : BMM_TYPE [1]
+  + is_mutable : Boolean [1]
   + eval_type() : BMM_TYPE [1]
 }
 
@@ -102,34 +109,34 @@ abstract class EL_FEATURE_REF {
   + reference() : String [1]
 }
 
-class EL_CONDITIONAL_EXPRESSION {
-  + condition : EL_SIMPLE [1]
+class EL_CONDITIONAL_EXPRESSION <T> {
+  + condition : EL_EXPRESSION [1]
 }
 
-class EL_CONDITION_CHAIN {
-  + items : List<EL_CONDITIONAL_EXPRESSION> [1..*]
+class EL_CONDITION_CHAIN <T> {
+  + items : List<EL_CONDITIONAL_EXPRESSION<T>> [1..*]
 }
 
 abstract class EL_CONSTRAINED {
   + base_expression : EL_EXPRESSION [1]
 }
 
-class EL_CASE_TABLE {
-  + items : List<EL_CASE> [1..*]
-  + input : EL_SIMPLE [1]
+class EL_CASE_TABLE <T> {
+  + items : List<EL_CASE<T>> [1..*]
+  + test_value : EL_VALUE_GENERATOR [1]
 }
 
-class EL_CASE {
+class EL_CASE <T> {
   + value_constraint : C_OBJECT [1]
 }
 
-abstract class EL_DECISION_TABLE {
-  + else : EL_EXPRESSION [1]
-  + items : List<EL_DECISION_BRANCH> [1..*]
+abstract class EL_DECISION_TABLE <T> {
+  + items : List<EL_DECISION_BRANCH<T>> [1..*]
+  + else : T [1]
 }
 
-abstract class EL_DECISION_BRANCH {
-  + result : EL_EXPRESSION [1]
+abstract class EL_DECISION_BRANCH <T> {
+  + result : T [1]
 }
 
 abstract class EL_VARIABLE {
@@ -157,32 +164,32 @@ class EL_READONLY_VARIABLE {
 }
 
 EL_OPERATOR <|-- EL_BINARY_OPERATOR
-EL_INSTANCE_REF <|-- EL_LITERAL
-EL_SIMPLE <|-- EL_OPERATOR
+EL_SIMPLE <|-- EL_LITERAL
+EL_EXPRESSION <|-- EL_OPERATOR
 EL_OPERATOR <|-- EL_UNARY_OPERATOR
 EL_FEATURE_REF <|-- EL_PROPERTY_REF
-EL_TERMINAL <|-- EL_PREDICATE
+EL_SIMPLE <|-- EL_PREDICATE
 EL_PREDICATE <|-- EL_DEFINED
-EL_SCOPED_REF <|-- EL_FUNCTION_CALL
+EL_FEATURE_REF <|-- EL_FUNCTION_CALL
 EL_AGENT_CALL <|-- EL_FUNCTION_CALL
-EL_SCOPED_REF <|-- EL_AGENT
+EL_FEATURE_REF <|-- EL_AGENT
 EL_AGENT <|-- EL_PROCEDURE_AGENT
-EL_INSTANCE_REF <|-- EL_TUPLE
+EL_EXPRESSION <|-- EL_TUPLE
 EL_AGENT <|-- EL_FUNCTION_AGENT
 EL_PREDICATE <|-- EL_ATTACHED
 EL_SIMPLE <|-- EL_VALUE_GENERATOR
 EL_CONSTRAINED <|-- EL_BOOLEAN_EXPRESSION
-EL_INSTANCE_REF <|-- EL_TYPE_REF
+EL_VALUE_GENERATOR <|-- EL_TYPE_REF
 EL_VALUE_GENERATOR <|-- EL_FEATURE_REF
 EL_DECISION_BRANCH <|-- EL_CONDITIONAL_EXPRESSION
 EL_DECISION_TABLE <|-- EL_CONDITION_CHAIN
 EL_EXPRESSION <|-- EL_CONSTRAINED
 EL_DECISION_TABLE <|-- EL_CASE_TABLE
 EL_DECISION_BRANCH <|-- EL_CASE
-EL_EXPRESSION <|-- EL_DECISION_TABLE
+EL_TERMINAL <|-- EL_DECISION_TABLE
 EL_VALUE_GENERATOR <|-- EL_VARIABLE
-EL_SIMPLE <|-- EL_TERMINAL
-EL_EXPRESSION <|-- EL_SIMPLE
+EL_EXPRESSION <|-- EL_TERMINAL
+EL_TERMINAL <|-- EL_SIMPLE
 EL_FEATURE_REF <|-- EL_STATIC_REF
 EL_VARIABLE <|-- EL_WRITABLE_VARIABLE
 EL_VARIABLE <|-- EL_READONLY_VARIABLE

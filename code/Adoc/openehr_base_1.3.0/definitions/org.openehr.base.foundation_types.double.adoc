@@ -17,43 +17,50 @@ h|*1..1*
 |*floor* (): `<<_integer_class,Integer>>`
 a|Return the greatest integer no greater than the value of this object.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*add* __alias__ "+" ( +
 other: `<<_double_class,Double>>[1]` +
 ): `<<_double_class,Double>>`
 a|Double-precision real number addition.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*subtract* __alias__ "-" ( +
 other: `<<_double_class,Double>>[1]` +
 ): `<<_double_class,Double>>`
 a|Double-precision real number subtraction.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*multiply* __alias__ "&#42;" ( +
 other: `<<_double_class,Double>>[1]` +
 ): `<<_double_class,Double>>`
 a|Double-precision real number multiplication.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*divide* __alias__ "/" ( +
 other: `<<_double_class,Double>>[1]` +
 ): `<<_double_class,Double>>`
 a|Double-precision real number division.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*exponent* __alias__ "^" ( +
 other: `<<_double_class,Double>>[1]` +
 ): `<<_double_class,Double>>`
 a|Double-precision real number exponentiation.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*less_than* __alias__ "<" ( +
 other: `<<_double_class,Double>>[1]` +
 ): `<<_boolean_class,Boolean>>`
 a|Returns True if current Double is less than `_other_`.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*negative* __alias__ "-" (): `<<_double_class,Double>>`
 a|Generate negative of current Double value.
 
@@ -68,7 +75,8 @@ a|Value equality: return True if `this` and `_other_` are attached to objects co
 [horizontal]
 `_other_`:: Other object for comparison.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*equal* __alias__ "=", "==" ( +
 other: `<<_double_class,Double>>[1]` +
 ): `<<_boolean_class,Boolean>>`

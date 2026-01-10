@@ -19,7 +19,7 @@ h|*0..1*
 a|Computable form of model.
 
 h|*1..1*
-|*schema_id*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
+|*schema_id*: `link:/classes/String[String] `
 a|Schema id, formed by 
 
 `{BMM_DEFINITIONS}.create_schema_id(
@@ -30,11 +30,11 @@ a|Schema id, formed by
 e.g. `openehr_rm_1.0.3`, `openehr_test_1.0.1`, `iso_13606_1_2008_2.1.2`.
 
 h|*1..1*
-|*meta_data*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
+|*meta_data*: `link:/classes/Hash[Hash] <link:/classes/String[String] ,link:/classes/String[String] >`
 a|Table of `{key, value}` of schema meta-data, keys are string values defined by `{BMM_DEFINITIONS}.Metadata_*` constants.
 
 h|*0..1*
-|*includes*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
+|*includes*: `link:/classes/List[List] <link:/classes/String[String] >`
 a|Identifiers of schemas included by this schema.
 
 h|*Functions*
@@ -42,11 +42,11 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*is_top_level* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
+|*is_top_level* (): `link:/classes/Boolean[Boolean] `
 a|True if this is a top-level schema, i.e. not included by some other schema.
 
 h|*1..1*
-|*is_bmm_compatible* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
+|*is_bmm_compatible* (): `link:/classes/Boolean[Boolean] `
 a|True if the BMM version found in the schema (or assumed, if none) is compatible with that in this software.
 
 h|*1..1*
@@ -59,7 +59,7 @@ a|Validate loaded schema and report errors.
 
 h|*1..1*
 |*validate_includes* ( +
-all_schemas_list: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>` +
+all_schemas_list: `link:/classes/List[List] <link:/classes/String[String] >` +
 ): `link:/classes/void[void] `
 a|Validate includes list for this schema, to see if each mentioned schema exists in `_all_schemas_` list.
 

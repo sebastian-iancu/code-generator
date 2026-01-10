@@ -37,8 +37,8 @@ class OBJECT_REF {
 
 class OBJECT_VERSION_ID {
   + object_id() : UID [1]
-  + version_tree_id() : VERSION_TREE_ID [1]
   + creating_system_id() : UID [1]
+  + version_tree_id() : VERSION_TREE_ID [1]
   + is_branch() : Boolean [1]
 }
 

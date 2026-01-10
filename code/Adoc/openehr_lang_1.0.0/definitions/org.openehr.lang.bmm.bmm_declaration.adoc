@@ -11,11 +11,11 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*name*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
+|*name*: `link:/classes/String[String] `
 a|Name of this model element.
 
 h|*0..1*
-|*documentation*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_any_class[Any^]>`
+|*documentation*: `link:/classes/Hash[Hash] <link:/classes/String[String] ,link:/classes/Any[Any] >`
 a|Optional documentation of this element, as a keyed list.
 
 It is strongly recommended to use the following key /type combinations for the relevant purposes:
@@ -33,7 +33,7 @@ h|*1..1*
 a|Model element within which an element is declared.
 
 h|*0..1*
-|*extensions*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_any_class[Any^]>`
+|*extensions*: `link:/classes/Hash[Hash] <link:/classes/String[String] ,link:/classes/Any[Any] >`
 a|Optional meta-data of this element, as a keyed list. May be used to extend the meta-model.
 
 h|*Functions*
@@ -41,7 +41,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*is_root_scope* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
+|*is_root_scope* (): `link:/classes/Boolean[Boolean] ` +
  +
 __Post_result__: `Result = (scope = self)`
 a|True if this declaration entity is the root of the declaration hierarchy.

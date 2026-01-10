@@ -15,6 +15,6 @@ h|*Attributes*
 
 h|*1..1 +
 (effected)*
-|*value*: `link:/releases/BASE/{base_release}/foundation_types.html#_integer_class[Integer^]`
+|*value*: `link:/classes/Integer[Integer] `
 a|Native Integer value.
 |===

@@ -22,7 +22,7 @@ h|*0..1*
 a|Optional conformance constraint - the name of a type to which a concrete substitution of this generic parameter must conform. Persisted attribute.
 
 h|*0..1*
-|*bmm_generic_parameter*: `link:/releases/BASE/{base_release}/bmm.html#_bmm_parameter_type_class[BMM_PARAMETER_TYPE^]`
+|*bmm_generic_parameter*: `link:/classes/BMM_PARAMETER_TYPE[BMM_PARAMETER_TYPE] `
 a|`BMM_GENERIC_PARAMETER` created by `_create_bmm_generic_parameter_`.
 
 h|*Functions*
@@ -31,7 +31,7 @@ h|*Functions*
 
 h|*1..1*
 |*create_bmm_generic_parameter* ( +
-a_bmm_schema: `link:/releases/BASE/{base_release}/bmm.html#_bmm_model_class[BMM_MODEL^][1]` +
+a_bmm_schema: `link:/releases/LANG/{lang_release}/bmm.html#_bmm_model_class[BMM_MODEL^][1]` +
 ): `link:/classes/void[void] `
 a|Create `_bmm_generic_parameter_`.
 

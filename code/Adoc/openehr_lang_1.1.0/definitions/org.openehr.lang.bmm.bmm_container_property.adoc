@@ -18,8 +18,8 @@ h|*0..1*
 a|Cardinality of this container.
 
 h|*1..1 +
-(redefined)*
-|*type*: `<<_bmm_container_type_class,BMM_CONTAINER_TYPE>>`
+(effected)*
+|*type*: `link:/classes/BMM_CONTAINER_TYPE[BMM_CONTAINER_TYPE] `
 a|Declared or inferred static type of the entity.
 
 h|*Functions*

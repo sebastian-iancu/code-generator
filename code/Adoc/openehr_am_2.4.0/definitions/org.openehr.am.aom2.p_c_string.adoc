@@ -7,7 +7,7 @@ h|*Description*
 2+a|Constraint on instances of STRING.
 
 h|*Inherit*
-2+|`link:/releases/AM/{am_release}/p_aom2.html#_p_c_primitive_object_class[P_C_PRIMITIVE_OBJECT^]`
+2+|`<<_p_c_primitive_object_class,P_C_PRIMITIVE_OBJECT>>`
 
 h|*Attributes*
 ^h|*Signature*

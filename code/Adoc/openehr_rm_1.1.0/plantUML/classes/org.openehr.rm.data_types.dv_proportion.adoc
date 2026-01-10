@@ -25,10 +25,12 @@ abstract class DV_AMOUNT  #whitesmoke;line:gray;line.dotted;text:gray {
   + accuracy_is_percent : Boolean [0..1]
   + accuracy : Real [0..1]
   + valid_percentage( number : Ordered_Numeric [1] ) : Boolean [1]
-  + infix =( source : DV_AMOUNT [1] ) : DV_AMOUNT [1]
-  + infix +( other : DV_AMOUNT [1] ) : DV_AMOUNT [1]
-  + infix -( other : DV_AMOUNT [1] ) : DV_AMOUNT [1]
-  + prefix -() : DV_AMOUNT [1]
+  + add( other : DV_AMOUNT [1] ) : DV_AMOUNT [1]
+  + subtract( other : DV_AMOUNT [1] ) : DV_AMOUNT [1]
+  + {abstract} is_equal( other : DV_AMOUNT [1] ) : Boolean [1]
+  + multiply( factor : Real [1] ) : DV_AMOUNT [1]
+  + negative() : DV_AMOUNT [1]
+  + less_than( other : DV_AMOUNT [1] ) : Boolean [1]
 }
 
 abstract class DV_QUANTIFIED  #whitesmoke;line:gray;line.dotted;text:gray {
@@ -37,6 +39,8 @@ abstract class DV_QUANTIFIED  #whitesmoke;line:gray;line.dotted;text:gray {
   + valid_magnitude_status() : Boolean [1]
   + {abstract} magnitude() : Ordered_Numeric [1]
   + accuracy_unknown() : Boolean [1]
+  + {abstract} is_equal( other : DV_QUANTIFIED [1] ) : Boolean [1]
+  + less_than( other : DV_QUANTIFIED [1] ) : Boolean [1]
 }
 
 abstract class DV_ORDERED  #whitesmoke;line:gray;line.dotted;text:gray {
@@ -46,7 +50,7 @@ abstract class DV_ORDERED  #whitesmoke;line:gray;line.dotted;text:gray {
   + {abstract} is_strictly_comparable_to( other : DV_ORDERED [1] ) : Boolean [1]
   + is_simple() : Boolean [1]
   + is_normal() : Boolean [1]
-  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+  + {abstract} less_than( other : DV_ORDERED [1] ) : Boolean [1]
 }
 
 abstract class DATA_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
@@ -55,7 +59,10 @@ abstract class DATA_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
 DATA_VALUE <|-- DV_ORDERED
 
 abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
-  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+  + {abstract} less_than( other : Ordered [1] ) : Boolean [1]
+  + less_than_or_equal( other : Ordered [1] ) : Boolean [1]
+  + greater_than( other : Ordered [1] ) : Boolean [1]
+  + greater_than_or_equal( other : Ordered [1] ) : Boolean [1]
 }
 
 Ordered <|-- DV_ORDERED

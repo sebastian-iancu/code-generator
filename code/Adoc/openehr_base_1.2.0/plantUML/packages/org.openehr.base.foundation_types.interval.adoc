@@ -10,20 +10,19 @@ class Multiplicity_interval {
 }
 
 class Proper_interval <T> {
-  + upper : T [0..1]
 }
 
 abstract class Interval <T> {
   + lower : T [0..1]
+  + upper : T [0..1]
   + lower_unbounded : Boolean [1]
   + upper_unbounded : Boolean [1]
   + lower_included : Boolean [1]
   + upper_included : Boolean [1]
-  + has( e : T [1] ) : Boolean [1]
-  + intersects( other : Interval [1] ) : Boolean [1]
-  + contains( other : Interval [1] ) : Boolean [1]
-  + is_equal( other : Any [1] ) : Boolean [1]
-  + {abstract} upper() : T [0..1]
+  + {abstract} has( e : T [1] ) : Boolean [1]
+  + {abstract} intersects( other : Interval [1] ) : Boolean [1]
+  + {abstract} contains( other : Interval [1] ) : Boolean [1]
+  + {abstract} is_equal( other : Any [1] ) : Boolean [1]
 }
 
 class Point_interval <T> {
@@ -31,7 +30,6 @@ class Point_interval <T> {
   + upper_unbounded : Boolean [1]
   + lower_included : Boolean [1]
   + upper_included : Boolean [1]
-  + upper() : T [0..1]
 }
 
 class Cardinality {

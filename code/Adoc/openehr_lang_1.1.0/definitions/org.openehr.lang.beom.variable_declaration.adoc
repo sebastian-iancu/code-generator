@@ -7,7 +7,7 @@ h|*Description*
 2+a|Meta-type for the declaration of a named variable that can be used in an expression.
 
 h|*Inherit*
-2+|`link:/releases/BASE/{base_release}/expression.html#_statement_class[STATEMENT^]`
+2+|`<<_statement_class,STATEMENT>>`
 
 h|*Attributes*
 ^h|*Signature*
@@ -18,6 +18,6 @@ h|*1..1*
 a|Name of the variable.
 
 h|*1..1*
-|*type*: `link:/releases/BASE/{base_release}/expression.html#_expr_type_def_class[EXPR_TYPE_DEF^]`
+|*type*: `<<_expr_type_def_class,EXPR_TYPE_DEF>>`
 a|Primitive type of the variable, enabling its use to be type-checked in expressions.
 |===

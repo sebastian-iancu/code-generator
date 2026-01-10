@@ -7,7 +7,7 @@ h|*Description*
 2+a|Rules meta-type representing the primitive type Uri.
 
 h|*Inherit*
-2+|`link:/releases/BASE/{base_release}/expression.html#_expr_type_def_class[EXPR_TYPE_DEF^]`
+2+|`<<_expr_type_def_class,EXPR_TYPE_DEF>>`
 
 h|*Attributes*
 ^h|*Signature*

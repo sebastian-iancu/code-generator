@@ -6,8 +6,8 @@ class EL_CASE <T> {
   + value_constraint : C_OBJECT [1]
 }
 
-abstract class EL_DECISION_BRANCH  #whitesmoke;line:gray;line.dotted;text:gray {
-  + result : EL_EXPRESSION [1]
+abstract class EL_DECISION_BRANCH <T>  #whitesmoke;line:gray;line.dotted;text:gray {
+  + result : T [1]
 }
 
 EL_DECISION_BRANCH <|-- EL_CASE

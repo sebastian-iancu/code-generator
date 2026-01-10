@@ -75,7 +75,8 @@ h|*1..1*
 |*negative* __alias__ "-" (): `<<_dv_amount_class,DV_AMOUNT>>`
 a|Negated version of current object, such as used for representing a difference, e.g. a weight loss.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*less_than* __alias__ "<" ( +
 other: `<<_dv_amount_class,DV_AMOUNT>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +

@@ -10,7 +10,7 @@ h|*Description*
 * Paths with no leading ‘/’ are in the outer part of the archetype, e.g. “archetype_id/value” refers to the String value of the archetype_id attribute of the enclosing archetype.
 
 h|*Inherit*
-2+|`link:/releases/BASE/{base_release}/expression.html#_expr_value_ref_class[EXPR_VALUE_REF^]`
+2+|`link:/classes/EXPR_VALUE_REF[EXPR_VALUE_REF] `
 
 h|*Attributes*
 ^h|*Signature*
@@ -20,8 +20,7 @@ h|*1..1*
 |*path*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|The path to the archetype node.
 
-h|*1..1 +
-(redefined)*
-|*item*: `link:/releases/AM/{am_release}/aom14.html#_archetype_constraint_class[ARCHETYPE_CONSTRAINT^]`
+h|*1..1*
+|*item*: `<<_archetype_constraint_class,ARCHETYPE_CONSTRAINT>>`
 a|
 |===

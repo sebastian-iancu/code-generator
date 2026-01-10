@@ -21,10 +21,8 @@ P_BMM_PACKAGE_CONTAINER <|-- P_BMM_SCHEMA
 
 abstract class BMM_SCHEMA  #whitesmoke;line:gray;line.dotted;text:gray {
   + bmm_version : String [1]
-  + primitive_types : List<P_BMM_CLASS> [*]
-  + class_definitions : List<P_BMM_CLASS> [*]
   + includes : Hash<String,BMM_INCLUDE_SPEC> [0..1]
-  + bmm_schema : BMM_MODEL [0..1]
+  + bmm_model : BMM_MODEL [0..1]
   + state : BMM_SCHEMA_STATE [1]
   + model_name : String [0..1]
   + schema_name : String [1]
@@ -41,12 +39,6 @@ abstract class BMM_SCHEMA  #whitesmoke;line:gray;line.dotted;text:gray {
   + read_to_validate() : Boolean [1]
   + schema_id() : String [1]
 }
-
-class P_BMM_PACKAGE_CONTAINER  #whitesmoke;line:gray;line.dotted;text:gray {
-  + packages : Hash<String,P_BMM_PACKAGE> [1]
-}
-
-P_BMM_PACKAGE_CONTAINER <|-- BMM_SCHEMA
 
 class BMM_MODEL_METADATA  #whitesmoke;line:gray;line.dotted;text:gray {
   + rm_publisher : String [1]

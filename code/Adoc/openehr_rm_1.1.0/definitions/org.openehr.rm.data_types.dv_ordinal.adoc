@@ -39,7 +39,8 @@ h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*less_than* __alias__ "<" ( +
 other: `<<_dv_ordinal_class,DV_ORDINAL>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`

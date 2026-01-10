@@ -11,6 +11,10 @@ abstract class Container <T> {
   + {abstract} has( v : T [1] ) : Boolean [1]
   + {abstract} count() : Integer [1]
   + {abstract} is_empty() : Boolean [1]
+  + there_exists( test : Operation [1] ) : Boolean [1]
+  + for_all( test : Operation [1] ) : Boolean [1]
+  + matching( test : Operation [1] ) : List<T> [*]
+  + select( test : Operation [1] ) : T [0..1]
 }
 
 class List <T> {
@@ -22,12 +26,13 @@ class Set <T> {
 }
 
 class Array <T> {
+  + item( a_key : Integer [1] ) : T [1]
 }
 
-Aggregate <|-- Hash
-Aggregate <|-- List
-Aggregate <|-- Set
-Aggregate <|-- Array
+Container <|-- Hash
+Container <|-- List
+Container <|-- Set
+Container <|-- Array
 
 @enduml
 -----

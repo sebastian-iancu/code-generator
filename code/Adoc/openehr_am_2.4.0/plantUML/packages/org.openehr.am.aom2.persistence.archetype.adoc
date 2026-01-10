@@ -8,7 +8,7 @@ abstract class P_ARCHETYPE {
   + is_differential : Boolean [1]
   + definition : P_C_COMPLEX_OBJECT [1]
   + terminology : P_ARCHETYPE_TERMINOLOGY [1]
-  + rules : List<STATEMENT> [*]
+  + rules : List<EL_BOOLEAN_EXPRESSION> [*]
 }
 
 class P_AUTHORED_ARCHETYPE {

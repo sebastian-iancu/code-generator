@@ -22,6 +22,6 @@ h|*1..1*
 a|
 
 h|*1..1*
-|*type*: `<<_bmm_type_class,BMM_TYPE>>`
+|*type*: `link:/classes/BMM_TYPE[BMM_TYPE] `
 a|The declared type of the variable.
 |===

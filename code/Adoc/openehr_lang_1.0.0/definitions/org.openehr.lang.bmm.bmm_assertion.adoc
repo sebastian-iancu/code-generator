@@ -20,6 +20,6 @@ h|*1..1*
 a|
 
 h|*0..1*
-|*tag*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
+|*tag*: `link:/classes/String[String] `
 a|Optional tag, typically used to designate design intention of the assertion, e.g. `"Inv_all_members_valid"`.
 |===

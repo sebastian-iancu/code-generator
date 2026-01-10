@@ -17,7 +17,8 @@ h|*0..1*
 |*packages*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],<<_bmm_package_class,BMM_PACKAGE>>>`
 a|Child packages; keys all in upper case for guaranteed matching.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*scope*: `<<_bmm_package_container_class,BMM_PACKAGE_CONTAINER>>`
 a|Model element within which a referenceable element is known.
 

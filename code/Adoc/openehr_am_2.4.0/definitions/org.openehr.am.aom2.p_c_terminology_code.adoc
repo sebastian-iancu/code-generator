@@ -11,7 +11,7 @@ h|*Description*
 The last possibility above is enabled by the merge_tuple routine, which enables the constraint of another single-valued C_TERMINOLOGY_CODE to be merged with the current one.
 
 h|*Inherit*
-2+|`link:/releases/AM/{am_release}/p_aom2.html#_p_c_primitive_object_class[P_C_PRIMITIVE_OBJECT^]`
+2+|`<<_p_c_primitive_object_class,P_C_PRIMITIVE_OBJECT>>`
 
 h|*Attributes*
 ^h|*Signature*
@@ -24,11 +24,11 @@ a|
 
 h|*0..1 +
 (effected)*
-|*assumed_value*: `link:/releases/BASE/{base_release}/base_types.html#_terminology_code_class[Terminology_code^]`
+|*assumed_value*: `link:/releases/BASE/{base_release}/foundation_types.html#_terminology_code_class[Terminology_code^]`
 a|
 
 h|*1..1 +
 (effected)*
-|*default_value*: `link:/releases/BASE/{base_release}/base_types.html#_terminology_code_class[Terminology_code^]`
+|*default_value*: `link:/releases/BASE/{base_release}/foundation_types.html#_terminology_code_class[Terminology_code^]`
 a|
 |===

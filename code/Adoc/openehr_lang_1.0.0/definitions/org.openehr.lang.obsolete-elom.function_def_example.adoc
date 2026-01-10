@@ -16,12 +16,12 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*identifier*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^] +
+|*identifier*: `link:/classes/String[String]  +
 {default{nbsp}={nbsp}"funny"}`
 a|
 
 h|*1..1 +
 (effected)*
-|*evaluation_agent*: `link:/releases/BASE/{base_release}/foundation_types.html#_function_class[FUNCTION^]<>`
+|*evaluation_agent*: `link:/classes/FUNCTION[FUNCTION] <>`
 a|
 |===

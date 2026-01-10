@@ -6,7 +6,7 @@ class P_BMM_ENUMERATION_STRING {
   + bmm_class : BMM_ENUMERATION_STRING [0..1]
 }
 
-class P_BMM_ENUMERATION <T>  #whitesmoke;line:gray;line.dotted;text:gray {
+class P_BMM_ENUMERATION  #whitesmoke;line:gray;line.dotted;text:gray {
   + item_names : List<String> [*]
   + item_values : List<Any> [*]
   + bmm_class : BMM_ENUMERATION [0..1]
@@ -22,6 +22,7 @@ class P_BMM_CLASS  #whitesmoke;line:gray;line.dotted;text:gray {
   + source_schema_id : String [1]
   + bmm_class : BMM_CLASS [0..1]
   + uid : Integer [1]
+  + ancestor_defs : List<P_BMM_GENERIC_TYPE> [*]
   + is_generic() : Boolean [1]
   + create_bmm_class() : void [1]
   + populate_bmm_class( a_bmm_schema : BMM_MODEL [1] ) : void [1]

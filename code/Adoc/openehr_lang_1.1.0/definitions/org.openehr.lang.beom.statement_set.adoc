@@ -11,7 +11,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*statement*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/expression.html#_statement_class[STATEMENT^]>`
+|*statement*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_statement_class,STATEMENT>>>`
 a|The member statements of this statement set.
 
 h|*0..1*

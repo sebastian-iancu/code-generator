@@ -7,13 +7,13 @@ h|*Description*
 2+a|Unary operator expression node.
 
 h|*Inherit*
-2+|`link:/releases/AM/{am_release}/aom14.html#_expr_operator_class[EXPR_OPERATOR^]`
+2+|`<<_expr_operator_class,EXPR_OPERATOR>>`
 
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
 h|*1..1*
-|*operand*: `link:/releases/BASE/{base_release}/expression.html#_expression_class[EXPRESSION^]`
+|*operand*: `<<_expression_class,EXPRESSION>>`
 a|Operand node.
 |===

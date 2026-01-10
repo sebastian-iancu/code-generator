@@ -24,10 +24,10 @@ class Set <T> {
 class Array <T> {
 }
 
-Aggregate <|-- Hash
-Aggregate <|-- List
-Aggregate <|-- Set
-Aggregate <|-- Array
+Container <|-- Hash
+Container <|-- List
+Container <|-- Set
+Container <|-- Array
 
 @enduml
 -----

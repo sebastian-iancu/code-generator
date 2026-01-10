@@ -7,7 +7,7 @@ h|*Description*
 2+a|Abstract model of constraint on any kind of object node.
 
 h|*Inherit*
-2+|`link:/releases/AM/{am_release}/aom14.html#_archetype_constraint_class[ARCHETYPE_CONSTRAINT^]`
+2+|`<<_archetype_constraint_class,ARCHETYPE_CONSTRAINT>>`
 
 h|*Attributes*
 ^h|*Signature*
@@ -50,9 +50,10 @@ a|Compute effective occurrences, where no local occurrences constraint set. If t
 
 If local `occurrences` not set, always assume 0 as the lower bound.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*c_conforms_to* ( +
-other: `link:/releases/AM/{am_release}/aom14.html#_c_object_class[C_OBJECT^][1]`, +
+other: `<<_c_object_class,C_OBJECT>>[1]`, +
 rmcc: `link:/releases/BASE/{base_release}/foundation_types.html#_function_class[FUNCTION^]<>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True if constraints represented by this node, ignoring any sub-parts, are narrower or the same as other. 
@@ -62,9 +63,10 @@ Typically used during validation of specialised archetype nodes.
 [horizontal]
 `_rmcc_`:: Reference Model conformance checker agent (lambda).
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*c_congruent_to* ( +
-other: `link:/releases/AM/{am_release}/aom14.html#_archetype_constraint_class[ARCHETYPE_CONSTRAINT^][1]` +
+other: `<<_archetype_constraint_class,ARCHETYPE_CONSTRAINT>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True if constraints represented by this node contain no further redefinitions with respect to the node `_other_`, with the exception of `_node_id_` redefinition in `C_OBJECT` nodes. 
 
@@ -72,7 +74,7 @@ Typically used to test if an inherited node locally contains any constraints.
 
 h|*1..1*
 |*occurrences_conforms_to* ( +
-other: `link:/releases/AM/{am_release}/aom14.html#_c_object_class[C_OBJECT^][1]` +
+other: `<<_c_object_class,C_OBJECT>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True if this node `_occurrences_` conforms to `_other.occurrences_`; `other` is assumed to be in a flat archetype.
 
@@ -82,13 +84,14 @@ a|True if this node `_occurrences_` conforms to `_other.occurrences_`; `other` i
 
 h|*1..1*
 |*node_id_conforms_to* ( +
-other: `link:/releases/AM/{am_release}/aom14.html#_c_object_class[C_OBJECT^][1]` +
+other: `<<_c_object_class,C_OBJECT>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
  +
 __Post__: `Result = codes_conformant (node_id, other.node_id)`
 a|True if this node id conforms to `_other.node_id_`, which includes the ids being identical; `_other_` is assumed to be in a flat archetype.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*is_prohibited* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
  +
 __Post__: `Result = occurrences /= Void and then occurrences.is_prohibited`

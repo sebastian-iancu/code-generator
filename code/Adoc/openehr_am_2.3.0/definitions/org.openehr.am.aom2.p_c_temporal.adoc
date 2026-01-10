@@ -7,7 +7,7 @@ h|*Description*
 2+a|Purpose Abstract parent of C_ORDERED types whose base type is an ISO date/time type.
 
 h|*Inherit*
-2+|`link:/releases/AM/{am_release}/p_aom2.html#_p_c_ordered_class[P_C_ORDERED^]`
+2+|`<<_p_c_ordered_class,P_C_ORDERED>>`
 
 h|*Attributes*
 ^h|*Signature*

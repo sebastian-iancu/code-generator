@@ -29,7 +29,7 @@ class ITEM_TABLE {
   + named_row( a_key : String [1] ) : CLUSTER [1]
   + has_row_with_key( keys : List<String> [0..1] ) : Boolean [1]
   + row_with_key( keys : List<String> [0..1] ) : CLUSTER [1]
-  + element_at_cell_ij( i : Any [1], j : Integer [1] ) : ELEMENT [1]
+  + element_at_cell_ij( i : Integer [1], j : Integer [1] ) : ELEMENT [1]
   + as_hierarchy() : CLUSTER [1]
 }
 

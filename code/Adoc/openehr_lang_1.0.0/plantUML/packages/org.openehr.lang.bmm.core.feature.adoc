@@ -7,8 +7,8 @@ class BMM_CONSTANT {
 }
 
 class BMM_CONTAINER_PROPERTY {
-  + type : BMM_CONTAINER_TYPE [1]
   + cardinality : Multiplicity_interval [0..1]
+  + type : BMM_CONTAINER_TYPE [1]
   + display_name() : String [1]
 }
 
@@ -26,14 +26,10 @@ class BMM_OPERATOR {
   + name : String [1]
 }
 
-class BMM_PROPERTY <T> {
-  + name : String [1]
-  + is_mandatory : Boolean [0..1]
-  + is_computed : Boolean [0..1]
-  + type : T [1]
+abstract class BMM_PROPERTY {
   + is_im_runtime : Boolean [0..1]
   + is_im_infrastructure : Boolean [0..1]
-  + is_synthesised_generic : Boolean [0..1]
+  + is_composition : Boolean [0..1]
   + existence() : Multiplicity_interval [1]
   + display_name() : String [1]
 }
@@ -130,7 +126,8 @@ BMM_PROPERTY <|-- BMM_CONTAINER_PROPERTY
 BMM_TYPED_FEATURE <|-- BMM_FUNCTION
 BMM_ROUTINE <|-- BMM_FUNCTION
 BMM_VARIABLE <|-- BMM_LOCAL
-BMM_MODEL_ELEMENT <|-- BMM_PROPERTY
+BMM_INSTANTIABLE <|-- BMM_PROPERTY
+BMM_CLASS_FEATURE <|-- BMM_PROPERTY
 BMM_CLASS_FEATURE <|-- BMM_ROUTINE
 BMM_VARIABLE <|-- BMM_PARAMETER
 BMM_INSTANTIABLE <|-- BMM_VARIABLE

@@ -7,7 +7,7 @@ h|*Description*
 2+a|Abstract model of constraint on any kind of object node.
 
 h|*Inherit*
-2+|`link:/releases/AM/{am_release}/p_aom2.html#_p_archetype_constraint_class[P_ARCHETYPE_CONSTRAINT^]`
+2+|`<<_p_archetype_constraint_class,P_ARCHETYPE_CONSTRAINT>>`
 
 h|*Attributes*
 ^h|*Signature*

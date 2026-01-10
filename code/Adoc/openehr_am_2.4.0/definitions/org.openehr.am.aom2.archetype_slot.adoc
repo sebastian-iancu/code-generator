@@ -7,18 +7,18 @@ h|*Description*
 2+a|Constraint describing a 'slot' where another archetype can occur.
 
 h|*Inherit*
-2+|`link:/releases/AM/{am_release}/aom14.html#_c_object_class[C_OBJECT^]`
+2+|`<<_c_object_class,C_OBJECT>>`
 
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
 h|*0..1*
-|*includes*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/AM/{am_release}/aom14.html#_assertion_class[ASSERTION^]>`
+|*includes*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/LANG/{lang_release}/beom.html#_assertion_class[ASSERTION^]>`
 a|List of constraints defining other archetypes that could be included at this point. Represented as an `ASSERTION` containing an expression of the form  `EXPR_ARCHETYPE_REF matches EXPR_ARCHETYPE_ID_CONSTRAINT`.
 
 h|*0..1*
-|*excludes*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/AM/{am_release}/aom14.html#_assertion_class[ASSERTION^]>`
+|*excludes*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/LANG/{lang_release}/beom.html#_assertion_class[ASSERTION^]>`
 a|List of constraints defining other archetypes that cannot be included at this point. Represented as an `ASSERTION` containing an expression of the form  `EXPR_ARCHETYPE_REF matches EXPR_ARCHETYPE_ID_CONSTRAINT`.
 
 h|*1..1*

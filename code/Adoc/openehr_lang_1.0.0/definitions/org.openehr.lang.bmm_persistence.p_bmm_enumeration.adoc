@@ -14,15 +14,15 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*item_names*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
+|*item_names*: `link:/classes/List[List] <link:/classes/String[String] >`
 a|
 
 h|*0..1*
-|*item_values*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_any_class[Any^]>`
+|*item_values*: `link:/classes/List[List] <link:/classes/Any[Any] >`
 a|
 
 h|*0..1 +
 (redefined)*
-|*bmm_class*: `link:/releases/BASE/{base_release}/bmm.html#_bmm_enumeration_class[BMM_ENUMERATION^]`
+|*bmm_class*: `link:/classes/BMM_ENUMERATION[BMM_ENUMERATION] `
 a|`BMM_CLASS` object build by `_create_bmm_class_definition_` and `_populate_bmm_class_definition_`.
 |===

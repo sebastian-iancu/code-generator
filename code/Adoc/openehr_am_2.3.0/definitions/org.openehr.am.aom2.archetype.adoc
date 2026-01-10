@@ -24,7 +24,7 @@ h|*1..1*
 a|Flag indicating whether this archetype is differential or flat in its contents. Top-level source archetypes have this flag set to True.
 
 h|*1..1*
-|*definition*: `link:/releases/AM/{am_release}/aom14.html#_c_complex_object_class[C_COMPLEX_OBJECT^]`
+|*definition*: `<<_c_complex_object_class,C_COMPLEX_OBJECT>>`
 a|Root node of the definition of this archetype.
 
 h|*1..1*
@@ -32,7 +32,7 @@ h|*1..1*
 a|The terminology of the archetype.
 
 h|*0..1*
-|*rules*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/expression.html#_statement_set_class[STATEMENT_SET^]>`
+|*rules*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/classes/STATEMENT_SET[STATEMENT_SET] >`
 a|Rules relating to this archetype. Statements are expressed in first order predicate logic, and usually refer to at least two attributes.
 
 h|*0..1*

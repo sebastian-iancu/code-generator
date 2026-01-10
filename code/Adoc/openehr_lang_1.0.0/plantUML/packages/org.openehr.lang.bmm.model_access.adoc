@@ -30,10 +30,8 @@ abstract class BMM_SCHEMA_DESCRIPTOR {
 
 abstract class BMM_SCHEMA {
   + bmm_version : String [1]
-  + primitive_types : List<P_BMM_CLASS> [*]
-  + class_definitions : List<P_BMM_CLASS> [*]
   + includes : Hash<String,BMM_INCLUDE_SPEC> [0..1]
-  + bmm_schema : BMM_MODEL [0..1]
+  + bmm_model : BMM_MODEL [0..1]
   + state : BMM_SCHEMA_STATE [1]
   + model_name : String [0..1]
   + schema_name : String [1]
@@ -69,9 +67,6 @@ enum BMM_SCHEMA_STATE {
   State_includes_processed 
 }
 
-BMM_DEFINITIONS <|-- BMM_MODEL_ACCESS
-BMM_DEFINITIONS <|-- BMM_SCHEMA_DESCRIPTOR
-P_BMM_PACKAGE_CONTAINER <|-- BMM_SCHEMA
 BMM_MODEL_METADATA <|-- BMM_SCHEMA
 
 @enduml

@@ -15,6 +15,6 @@ h|*Attributes*
 
 h|*1..1 +
 (effected)*
-|*type*: `<<_bmm_simple_type_class,BMM_SIMPLE_TYPE>>`
+|*type*: `link:/classes/BMM_SIMPLE_TYPE[BMM_SIMPLE_TYPE] `
 a|Declared or inferred static type of the entity.
 |===

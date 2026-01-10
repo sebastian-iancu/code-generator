@@ -6,14 +6,14 @@ class EL_DEFINED {
 }
 
 abstract class EL_PREDICATE  #whitesmoke;line:gray;line.dotted;text:gray {
-  + operand : EL_INSTANCE_REF [1]
+  + operand : EL_VALUE_GENERATOR [1]
   + eval_type() : BMM_SIMPLE_TYPE [1]
 }
 
-abstract class EL_TERMINAL  #whitesmoke;line:gray;line.dotted;text:gray {
+abstract class EL_SIMPLE  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
-abstract class EL_SIMPLE  #whitesmoke;line:gray;line.dotted;text:gray {
+abstract class EL_TERMINAL  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 abstract class EL_EXPRESSION  #whitesmoke;line:gray;line.dotted;text:gray {
@@ -21,11 +21,11 @@ abstract class EL_EXPRESSION  #whitesmoke;line:gray;line.dotted;text:gray {
   + is_boolean() : Boolean [1]
 }
 
-EL_EXPRESSION <|-- EL_SIMPLE
+EL_EXPRESSION <|-- EL_TERMINAL
 
-EL_SIMPLE <|-- EL_TERMINAL
+EL_TERMINAL <|-- EL_SIMPLE
 
-EL_TERMINAL <|-- EL_PREDICATE
+EL_SIMPLE <|-- EL_PREDICATE
 
 EL_PREDICATE <|-- EL_DEFINED
 

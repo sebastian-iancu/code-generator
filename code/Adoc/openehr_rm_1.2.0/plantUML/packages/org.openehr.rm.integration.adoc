@@ -3,7 +3,7 @@
 @startuml
 
 class GENERIC_ENTRY {
-  + data : ITEM_TREE [1]
+  + data : ITEM [1]
 }
 
 CONTENT_ITEM <|-- GENERIC_ENTRY

@@ -7,7 +7,7 @@ h|*Description*
 2+a|Parent of types representing constraints on primitive types.
 
 h|*Inherit*
-2+|`link:/releases/AM/{am_release}/p_aom2.html#_p_c_defined_object_class[P_C_DEFINED_OBJECT^]`
+2+|`<<_p_c_defined_object_class,P_C_DEFINED_OBJECT>>`
 
 h|*Attributes*
 ^h|*Signature*

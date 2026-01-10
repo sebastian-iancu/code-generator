@@ -12,7 +12,10 @@ class String {
 }
 
 abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
-  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+  + {abstract} less_than( other : Ordered [1] ) : Boolean [1]
+  + less_than_or_equal( other : Ordered [1] ) : Boolean [1]
+  + greater_than( other : Ordered [1] ) : Boolean [1]
+  + greater_than_or_equal( other : Ordered [1] ) : Boolean [1]
 }
 
 Ordered <|-- String

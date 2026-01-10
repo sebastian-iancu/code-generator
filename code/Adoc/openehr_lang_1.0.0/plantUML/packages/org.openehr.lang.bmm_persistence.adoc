@@ -12,12 +12,13 @@ class P_BMM_CLASS {
   + source_schema_id : String [1]
   + bmm_class : BMM_CLASS [0..1]
   + uid : Integer [1]
+  + ancestor_defs : List<P_BMM_GENERIC_TYPE> [*]
   + is_generic() : Boolean [1]
   + create_bmm_class() : void [1]
   + populate_bmm_class( a_bmm_schema : BMM_MODEL [1] ) : void [1]
 }
 
-class P_BMM_ENUMERATION <T> {
+class P_BMM_ENUMERATION {
   + item_names : List<String> [*]
   + item_values : List<Any> [*]
   + bmm_class : BMM_ENUMERATION [0..1]
@@ -26,7 +27,6 @@ class P_BMM_ENUMERATION <T> {
 class P_BMM_SCHEMA {
   + primitive_types : List<P_BMM_CLASS> [*]
   + class_definitions : List<P_BMM_CLASS> [*]
-  + includes : Hash<String,BMM_INCLUDE_SPEC> [0..1]
   + validate_created() : void [1]
   + load_finalise() : void [1]
   + merge( other : P_BMM_SCHEMA [1] ) : void [1]
@@ -42,7 +42,7 @@ abstract class P_BMM_PROPERTY {
   + is_im_infrastructure : Boolean [0..1]
   + is_im_runtime : Boolean [0..1]
   + type_def : P_BMM_TYPE [0..1]
-  + bmm_property : BMM_PROPERTY<BMM_TYPE> [0..1]
+  + bmm_property : BMM_PROPERTY [0..1]
   + create_bmm_property( a_bmm_schema : BMM_MODEL [1], a_class_def : BMM_CLASS [1] ) : void [1]
 }
 
@@ -107,20 +107,20 @@ class P_BMM_CONTAINER_PROPERTY {
 class P_BMM_SINGLE_PROPERTY {
   + type : String [0..1]
   + type_ref : P_BMM_SIMPLE_TYPE [0..1]
-  + bmm_property : BMM_PROPERTY<BMM_SIMPLE_TYPE> [0..1]
+  + bmm_property : BMM_UNITARY_PROPERTY [0..1]
   + type_def() : P_BMM_SIMPLE_TYPE [1]
 }
 
 class P_BMM_SINGLE_PROPERTY_OPEN {
   + type_ref : P_BMM_OPEN_TYPE [0..1]
   + type : String [0..1]
-  + bmm_property : BMM_PROPERTY<BMM_OPEN_TYPE> [0..1]
+  + bmm_property : BMM_UNITARY_PROPERTY [0..1]
   + type_def() : P_BMM_OPEN_TYPE [1]
 }
 
 class P_BMM_GENERIC_PROPERTY {
   + type_def : P_BMM_GENERIC_TYPE [0..1]
-  + bmm_property : BMM_PROPERTY<BMM_GENERIC_TYPE> [0..1]
+  + bmm_property : BMM_UNITARY_PROPERTY [0..1]
 }
 
 class P_BMM_ENUMERATION_INTEGER {
@@ -140,6 +140,7 @@ abstract class P_BMM_MODEL_ELEMENT {
 }
 
 abstract class P_BMM_BASE_TYPE {
+  + value_constraint : String [0..1]
 }
 
 class P_BMM_SCHEMA_DESCRIPTOR {

@@ -11,7 +11,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*type*: `<<_bmm_type_class,BMM_TYPE>>`
+|*type*: `link:/classes/BMM_TYPE[BMM_TYPE] `
 a|Declared or inferred static type of the entity.
 
 h|*Functions*
@@ -19,7 +19,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*is_boolean* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
+|*is_boolean* (): `link:/classes/Boolean[Boolean] ` +
  +
 __Post_result__: `Result = type().equal( {BMM_MODEL}.boolean_type_definition())`
 a|True if `_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `'Boolean'`).

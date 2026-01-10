@@ -16,6 +16,6 @@ a|
 
 h|*0..1 +
 (redefined)*
-|*bmm_type*: `link:/releases/BASE/{base_release}/bmm.html#_bmm_indexed_container_type_class[BMM_INDEXED_CONTAINER_TYPE^]`
+|*bmm_type*: `link:/classes/BMM_INDEXED_CONTAINER_TYPE[BMM_INDEXED_CONTAINER_TYPE] `
 a|Result of `_create_bmm_type()_` call.
 |===

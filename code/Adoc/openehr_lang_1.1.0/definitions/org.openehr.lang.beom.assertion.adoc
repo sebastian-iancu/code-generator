@@ -7,7 +7,7 @@ h|*Description*
 2+a|Meta-type for a first order predicate logic expression with a Boolean result.
 
 h|*Inherit*
-2+|`link:/releases/BASE/{base_release}/expression.html#_statement_class[STATEMENT^]`
+2+|`<<_statement_class,STATEMENT>>`
 
 h|*Attributes*
 ^h|*Signature*
@@ -22,6 +22,6 @@ h|*0..1*
 a|String form of expression, in case an expression evaluator taking String expressions is used for evaluation.
 
 h|*1..1*
-|*expression*: `link:/releases/BASE/{base_release}/expression.html#_expression_class[EXPRESSION^]`
+|*expression*: `<<_expression_class,EXPRESSION>>`
 a|Root of expression tree.
 |===

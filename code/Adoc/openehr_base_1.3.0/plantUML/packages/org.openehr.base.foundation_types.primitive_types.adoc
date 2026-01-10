@@ -12,15 +12,38 @@ abstract class Ordered_Numeric {
 }
 
 class Integer {
+  + add( other : Integer [1] ) : Integer [1]
+  + subtract( other : Integer [1] ) : Integer [1]
+  + multiply( other : Integer [1] ) : Integer [1]
+  + divide( other : Integer [1] ) : Double [1]
+  + exponent( other : Double [1] ) : Double [1]
+  + modulo( mod : Integer [1] ) : Integer [1]
+  + less_than( other : Integer [1] ) : Boolean [1]
+  + negative() : Integer [1]
+  + is_equal( other : Integer [1] ) : Boolean [1]
+  + equal( other : Integer [1] ) : Boolean [1]
 }
 
 class Double {
+  + floor() : Integer [1]
+  + add( other : Double [1] ) : Double [1]
+  + subtract( other : Double [1] ) : Double [1]
+  + multiply( other : Double [1] ) : Double [1]
+  + divide( other : Double [1] ) : Double [1]
+  + exponent( other : Double [1] ) : Double [1]
+  + less_than( other : Double [1] ) : Boolean [1]
+  + negative() : Double [1]
+  + is_equal( other : Double [1] ) : Boolean [1]
+  + equal( other : Double [1] ) : Boolean [1]
 }
 
 abstract class Numeric {
-  + {abstract} infix *( other : Numeric [1] ) : Numeric [1]
-  + {abstract} infix +( other : Numeric [1] ) : Numeric [1]
-  + {abstract} infix -( other : Numeric [1] ) : Numeric [1]
+  + {abstract} add( other : Numeric [1] ) : Numeric [1]
+  + {abstract} subtract( other : Numeric [1] ) : Numeric [1]
+  + {abstract} multiply( other : Numeric [1] ) : Numeric [1]
+  + {abstract} divide( other : Numeric [1] ) : Numeric [1]
+  + {abstract} exponent( other : Numeric [1] ) : Numeric [1]
+  + {abstract} negative() : Numeric [1]
 }
 
 class Octet {
@@ -30,35 +53,61 @@ class Character {
 }
 
 class Boolean {
-  + infix and( other : Boolean [1] ) : Boolean [1]
-  + infix and_then( other : Boolean [1] ) : Boolean [1]
-  + infix or( other : Boolean [1] ) : Boolean [1]
-  + infix or_else( other : Boolean [1] ) : Boolean [1]
-  + infix xor( other : Boolean [1] ) : Boolean [1]
-  + infix implies( other : Boolean [1] ) : Boolean [1]
+  + conjunction( other : Boolean [1] ) : Boolean [1]
+  + semistrict_conjunction( other : Boolean [1] ) : Boolean [1]
+  + disjunction( other : Boolean [1] ) : Boolean [1]
+  + semistrict_disjunction( other : Boolean [1] ) : Boolean [1]
+  + exclusive_disjunction( other : Boolean [1] ) : Boolean [1]
+  + implication( other : Boolean [1] ) : Boolean [1]
+  + negation() : Boolean [1]
 }
 
 class String {
-  + infix +( other : String [1] ) : String [1]
   + is_empty() : Boolean [1]
   + is_integer() : Boolean [1]
   + as_integer() : Integer [1]
+  + append( other : String [1] ) : String [1]
+  + less_than( other : String [1] ) : Boolean [1]
+  + contains( other : String [1] ) : Boolean [1]
 }
 
 class Real {
   + floor() : Integer [1]
+  + add( other : Real [1] ) : Real [1]
+  + subtract( other : Real [1] ) : Real [1]
+  + multiply( other : Real [1] ) : Real [1]
+  + divide( other : Real [1] ) : Double [1]
+  + exponent( other : Double [1] ) : Double [1]
+  + less_than( other : Real [1] ) : Boolean [1]
+  + negative() : Real [1]
+  + is_equal( other : Real [1] ) : Boolean [1]
+  + equal( other : Real [1] ) : Boolean [1]
 }
 
 class Integer64 {
+  + add( other : Integer [1] ) : Integer64 [1]
+  + subtract( other : Integer [1] ) : Integer64 [1]
+  + multiply( other : Integer [1] ) : Integer64 [1]
+  + divide( other : Integer [1] ) : Double [1]
+  + exponent( other : Double [1] ) : Double [1]
+  + modulo( mod : Integer [1] ) : Integer64 [1]
+  + less_than( other : Integer64 [1] ) : Boolean [1]
+  + negative() : Integer64 [1]
+  + is_equal( other : Integer64 [1] ) : Boolean [1]
+  + equal( other : Integer64 [1] ) : Boolean [1]
 }
 
 abstract class Ordered {
-  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+  + {abstract} less_than( other : Ordered [1] ) : Boolean [1]
+  + less_than_or_equal( other : Ordered [1] ) : Boolean [1]
+  + greater_than( other : Ordered [1] ) : Boolean [1]
+  + greater_than_or_equal( other : Ordered [1] ) : Boolean [1]
 }
 
 class Byte {
 }
 
+String <|-- Uri
 Ordered <|-- Ordered_Numeric
 Numeric <|-- Ordered_Numeric
 Ordered_Numeric <|-- Integer

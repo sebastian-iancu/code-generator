@@ -13,7 +13,8 @@ h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*scope*: `<<_bmm_routine_class,BMM_ROUTINE>>`
 a|Routine within which variable is defined.
 |===

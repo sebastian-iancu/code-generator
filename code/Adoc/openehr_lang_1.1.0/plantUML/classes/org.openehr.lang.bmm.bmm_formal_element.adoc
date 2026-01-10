@@ -10,13 +10,12 @@ abstract class BMM_FORMAL_ELEMENT {
 }
 
 abstract class BMM_MODEL_ELEMENT  #whitesmoke;line:gray;line.dotted;text:gray {
-  + documentation : String [0..1]
+  + name : String [1]
+  + documentation : Hash<String,Any> [0..1]
+  + scope : BMM_MODEL_ELEMENT [1]
+  + extensions : Hash<String,Any> [0..1]
+  + is_root_scope() : Boolean [1]
 }
-
-class BMM_DEFINITIONS  #whitesmoke;line:gray;line.dotted;text:gray {
-}
-
-BMM_DEFINITIONS <|-- BMM_MODEL_ELEMENT
 
 BMM_MODEL_ELEMENT <|-- BMM_FORMAL_ELEMENT
 

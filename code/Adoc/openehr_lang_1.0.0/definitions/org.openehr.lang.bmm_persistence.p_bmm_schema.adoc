@@ -7,20 +7,18 @@ h|*Description*
 2+a|Persisted form of `BMM_SCHEMA`.
 
 h|*Inherit*
-2+|`<<_p_bmm_package_container_class,P_BMM_PACKAGE_CONTAINER>>`, `link:/releases/BASE/{base_release}/bmm.html#_bmm_schema_class[BMM_SCHEMA^]`
+2+|`<<_p_bmm_package_container_class,P_BMM_PACKAGE_CONTAINER>>`, `link:/releases/LANG/{lang_release}/bmm.html#_bmm_schema_class[BMM_SCHEMA^]`
 
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*0..1 +
-(effected)*
-|*primitive_types*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_p_bmm_class_class,P_BMM_CLASS>>>`
+h|*0..1*
+|*primitive_types*: `link:/classes/List[List] <<<_p_bmm_class_class,P_BMM_CLASS>>>`
 a|Primitive type definitions. Persisted attribute.
 
-h|*0..1 +
-(effected)*
-|*class_definitions*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_p_bmm_class_class,P_BMM_CLASS>>>`
+h|*0..1*
+|*class_definitions*: `link:/classes/List[List] <<<_p_bmm_class_class,P_BMM_CLASS>>>`
 a|Class definitions. Persisted attribute.
 
 h|*Functions*

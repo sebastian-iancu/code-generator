@@ -14,6 +14,6 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*items*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_bmm_statement_item_class,BMM_STATEMENT_ITEM>>>`
+|*items*: `link:/classes/List[List] <<<_bmm_statement_item_class,BMM_STATEMENT_ITEM>>>`
 a|Child blocks of the current block.
 |===

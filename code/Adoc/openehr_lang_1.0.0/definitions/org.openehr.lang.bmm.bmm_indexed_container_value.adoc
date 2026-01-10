@@ -15,6 +15,6 @@ h|*Attributes*
 
 h|*1..1 +
 (redefined)*
-|*type*: `<<_bmm_indexed_container_type_class,BMM_INDEXED_CONTAINER_TYPE>>`
+|*type*: `link:/classes/BMM_INDEXED_CONTAINER_TYPE[BMM_INDEXED_CONTAINER_TYPE] `
 a|Declared or inferred static type of the entity.
 |===

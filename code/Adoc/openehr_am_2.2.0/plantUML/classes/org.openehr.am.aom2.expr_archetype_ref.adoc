@@ -7,22 +7,6 @@ class EXPR_ARCHETYPE_REF {
   + item : ARCHETYPE_CONSTRAINT [1]
 }
 
-class EXPR_VALUE_REF  #whitesmoke;line:gray;line.dotted;text:gray {
-}
-
-class EXPR_LEAF  #whitesmoke;line:gray;line.dotted;text:gray {
-  + reference_type : String [1]
-  + item : Any [1]
-}
-
-abstract class EXPR_ITEM  #whitesmoke;line:gray;line.dotted;text:gray {
-  + type : String [1]
-}
-
-EXPR_ITEM <|-- EXPR_LEAF
-
-EXPR_LEAF <|-- EXPR_VALUE_REF
-
 EXPR_VALUE_REF <|-- EXPR_ARCHETYPE_REF
 
 

@@ -3,10 +3,13 @@
 @startuml
 
 class AOM_PROFILE {
+  + profile_name : String [1]
+  + archetype_parent_class : String [0..1]
+  + archetype_data_value_parent_class : String [0..1]
+  + aom_rm_type_mappings : Hash<String,AOM_TYPE_MAPPING> [0..1]
+  + archetype_visualise_descendants_of : String [0..1]
   + aom_rm_type_substitutions : Hash<String,String> [0..1]
   + aom_lifecycle_mappings : Hash<String,String> [0..1]
-  + profile_name : String [1]
-  + aom_rm_type_mappings : Hash<String,AOM_TYPE_MAPPING> [0..1]
   + rm_primitive_type_equivalences : Hash<String,String> [0..1]
 }
 

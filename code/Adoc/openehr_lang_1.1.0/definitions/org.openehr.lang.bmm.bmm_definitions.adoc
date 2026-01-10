@@ -109,11 +109,11 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*Any_class* (): `<<_bmm_simple_class_class,BMM_SIMPLE_CLASS>>`
+|*Any_class* (): `link:/classes/BMM_SIMPLE_CLASS[BMM_SIMPLE_CLASS] `
 a|built-in class definition corresponding to the top `Any' class.
 
 h|*1..1*
-|*Any_type* (): `<<_bmm_simple_type_class,BMM_SIMPLE_TYPE>>`
+|*Any_type* (): `link:/classes/BMM_SIMPLE_TYPE[BMM_SIMPLE_TYPE] `
 a|Built-in type definition corresponding to the top `Any' type.
 
 h|*1..1*

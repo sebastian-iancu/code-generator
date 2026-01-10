@@ -27,7 +27,7 @@ h|*0..1*
 a|Other contributors to the resource, each listed in "name <email>"  form.
 
 h|*1..1*
-|*lifecycle_state*: `link:/releases/BASE/{base_release}/base_types.html#_terminology_code_class[Terminology_code^]`
+|*lifecycle_state*: `link:/releases/BASE/{base_release}/foundation_types.html#_terminology_code_class[Terminology_code^]`
 a|Lifecycle state of the resource, typically including states such as: initial, in_development, in_review, published, superseded, obsolete.
 
 h|*1..1*

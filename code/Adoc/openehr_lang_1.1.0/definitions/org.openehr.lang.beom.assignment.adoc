@@ -7,17 +7,17 @@ h|*Description*
 2+a|Meta-type representing the assignment statement, which associates a named variable with an expression, and produces no value.
 
 h|*Inherit*
-2+|`link:/releases/BASE/{base_release}/expression.html#_statement_class[STATEMENT^]`
+2+|`<<_statement_class,STATEMENT>>`
 
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
 h|*1..1*
-|*target*: `link:/releases/BASE/{base_release}/expression.html#_variable_declaration_class[VARIABLE_DECLARATION^]`
+|*target*: `<<_variable_declaration_class,VARIABLE_DECLARATION>>`
 a|The target variable on the notional left-hand side of this assignment.
 
 h|*1..1*
-|*source*: `link:/releases/BASE/{base_release}/expression.html#_expr_value_class[EXPR_VALUE^]`
+|*source*: `<<_expr_value_class,EXPR_VALUE>>`
 a|Source right hand side) of the assignment.
 |===

@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*type*: `<<_bmm_type_class,BMM_TYPE>>`
+|*type*: `link:/classes/BMM_TYPE[BMM_TYPE] `
 a|Declared or inferred static type of the entity.
 
 h|*0..1*

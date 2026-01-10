@@ -7,17 +7,17 @@ h|*Description*
 2+a|Binary operator expression node.
 
 h|*Inherit*
-2+|`link:/releases/AM/{am_release}/aom14.html#_expr_operator_class[EXPR_OPERATOR^]`
+2+|`<<_expr_operator_class,EXPR_OPERATOR>>`
 
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
 h|*1..1*
-|*left_operand*: `link:/releases/BASE/{base_release}/expression.html#_expression_class[EXPRESSION^]`
+|*left_operand*: `<<_expression_class,EXPRESSION>>`
 a|Left operand node.
 
 h|*1..1*
-|*right_operand*: `link:/releases/BASE/{base_release}/expression.html#_expression_class[EXPRESSION^]`
+|*right_operand*: `<<_expression_class,EXPRESSION>>`
 a|Right operand node.
 |===

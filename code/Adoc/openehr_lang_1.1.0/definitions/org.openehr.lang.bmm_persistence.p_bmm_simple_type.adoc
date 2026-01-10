@@ -19,6 +19,6 @@ a|Name of type - must be a simple class name.
 
 h|*0..1 +
 (effected)*
-|*bmm_type*: `link:/releases/BASE/{base_release}/bmm.html#_bmm_simple_type_class[BMM_SIMPLE_TYPE^]`
+|*bmm_type*: `link:/classes/BMM_SIMPLE_TYPE[BMM_SIMPLE_TYPE] `
 a|Result of `_create_bmm_type()_` call.
 |===

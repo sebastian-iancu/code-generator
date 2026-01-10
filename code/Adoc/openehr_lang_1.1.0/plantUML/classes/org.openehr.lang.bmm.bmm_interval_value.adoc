@@ -5,18 +5,12 @@
 class BMM_INTERVAL_VALUE {
 }
 
-abstract class BMM_LITERAL_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
+abstract class BMM_LITERAL_VALUE <T>  #whitesmoke;line:gray;line.dotted;text:gray {
   + value_literal : String [1]
   + value : Any [0..1]
   + syntax : String [0..1]
+  + type : T [1]
 }
-
-abstract class BMM_TYPED  #whitesmoke;line:gray;line.dotted;text:gray {
-  + type : BMM_TYPE [1]
-  + is_boolean() : Boolean [1]
-}
-
-BMM_TYPED <|-- BMM_LITERAL_VALUE
 
 BMM_LITERAL_VALUE <|-- BMM_INTERVAL_VALUE
 

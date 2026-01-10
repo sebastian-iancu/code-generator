@@ -15,12 +15,12 @@ h|*Attributes*
 
 h|*1..1 +
 (effected)*
-|*type_name*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^] +
+|*type_name*: `link:/classes/String[String]  +
 {default{nbsp}={nbsp}"Real"}`
 a|
 
 h|*1..1 +
 (effected)*
-|*type_anchor*: `link:/releases/BASE/{base_release}/foundation_types.html#_real_class[Real^]`
+|*type_anchor*: `link:/classes/Real[Real] `
 a|
 |===

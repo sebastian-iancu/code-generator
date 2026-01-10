@@ -19,7 +19,7 @@ h|*1..1*
 a|
 
 h|*1..1*
-|*term_definitions*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/AM/{am_release}/aom14.html#_archetype_term_class[ARCHETYPE_TERM^]>>`
+|*term_definitions*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/AM/{am_release}/aom2.html#_archetype_term_class[ARCHETYPE_TERM^]>>`
 a|Directory of term definitions as a two-level 
 table. The outer hash keys are term codes, 
 e.g. "at0004", and the inner hash key are term 

@@ -16,7 +16,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*name*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
+|*name*: `link:/classes/String[String] `
 a|Name of the routine being called.
 
 h|*0..1*
@@ -24,7 +24,7 @@ h|*0..1*
 a|Closed arguments of a routine call as a tuple of objects.
 
 h|*0..1*
-|*open_args*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
+|*open_args*: `link:/classes/List[List] <link:/classes/String[String] >`
 a|Optional list of names of open arguments of the call. If not provided, and the `_name_` refers to a routine with more arguments than supplied in `_closed_args_`, the missing arguments are inferred from the `_definition_`.
 
 h|*0..1*
@@ -43,7 +43,7 @@ __Post_result__: `Result = definition.signature`
 a|Eval type is the signature corresponding to the (remaining) open arguments and return type, if any.
 
 h|*1..1*
-|*is_callable* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
+|*is_callable* (): `link:/classes/Boolean[Boolean] ` +
  +
 __Post_result_validity__: `Result = open_arguments = Void`
 a|True if there are no open arguments.

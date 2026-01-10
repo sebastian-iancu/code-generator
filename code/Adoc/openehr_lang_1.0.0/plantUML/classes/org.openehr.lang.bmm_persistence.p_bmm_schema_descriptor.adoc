@@ -20,11 +20,6 @@ abstract class BMM_SCHEMA_DESCRIPTOR  #whitesmoke;line:gray;line.dotted;text:gra
   + create_model() : void [1]
 }
 
-class BMM_DEFINITIONS  #whitesmoke;line:gray;line.dotted;text:gray {
-}
-
-BMM_DEFINITIONS <|-- BMM_SCHEMA_DESCRIPTOR
-
 BMM_SCHEMA_DESCRIPTOR <|-- P_BMM_SCHEMA_DESCRIPTOR
 
 

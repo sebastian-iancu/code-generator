@@ -7,7 +7,7 @@ h|*Description*
 2+a|Constraint describing a  slot' where another archetype can occur.
 
 h|*Inherit*
-2+|`link:/releases/AM/{am_release}/p_aom2.html#_p_c_object_class[P_C_OBJECT^]`
+2+|`<<_p_c_object_class,P_C_OBJECT>>`
 
 h|*Attributes*
 ^h|*Signature*

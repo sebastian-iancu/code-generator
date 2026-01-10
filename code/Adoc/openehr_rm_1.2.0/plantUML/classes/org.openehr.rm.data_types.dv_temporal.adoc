@@ -11,9 +11,9 @@ abstract class DV_TEMPORAL {
 
 abstract class DV_ABSOLUTE_QUANTITY  #whitesmoke;line:gray;line.dotted;text:gray {
   + accuracy : DV_AMOUNT [0..1]
-  + {abstract} diff( other : DV_ABSOLUTE_QUANTITY [1] ) : DV_AMOUNT [1]
   + {abstract} add( a_diff : DV_AMOUNT [1] ) : DV_ABSOLUTE_QUANTITY [1]
-  + {abstract} subtract( a_diif : DV_AMOUNT [1] ) : DV_ABSOLUTE_QUANTITY [1]
+  + {abstract} subtract( a_diff : DV_AMOUNT [1] ) : DV_ABSOLUTE_QUANTITY [1]
+  + {abstract} diff( other : DV_ABSOLUTE_QUANTITY [1] ) : DV_AMOUNT [1]
 }
 
 abstract class DV_QUANTIFIED  #whitesmoke;line:gray;line.dotted;text:gray {
@@ -22,6 +22,8 @@ abstract class DV_QUANTIFIED  #whitesmoke;line:gray;line.dotted;text:gray {
   + valid_magnitude_status() : Boolean [1]
   + {abstract} magnitude() : Ordered_Numeric [1]
   + accuracy_unknown() : Boolean [1]
+  + {abstract} is_equal( other : DV_QUANTIFIED [1] ) : Boolean [1]
+  + less_than( other : DV_QUANTIFIED [1] ) : Boolean [1]
 }
 
 abstract class DV_ORDERED  #whitesmoke;line:gray;line.dotted;text:gray {
@@ -31,7 +33,7 @@ abstract class DV_ORDERED  #whitesmoke;line:gray;line.dotted;text:gray {
   + {abstract} is_strictly_comparable_to( other : DV_ORDERED [1] ) : Boolean [1]
   + is_simple() : Boolean [1]
   + is_normal() : Boolean [1]
-  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+  + {abstract} less_than( other : DV_ORDERED [1] ) : Boolean [1]
 }
 
 abstract class DATA_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
@@ -40,7 +42,10 @@ abstract class DATA_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
 DATA_VALUE <|-- DV_ORDERED
 
 abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
-  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+  + {abstract} less_than( other : Ordered [1] ) : Boolean [1]
+  + less_than_or_equal( other : Ordered [1] ) : Boolean [1]
+  + greater_than( other : Ordered [1] ) : Boolean [1]
+  + greater_than_or_equal( other : Ordered [1] ) : Boolean [1]
 }
 
 Ordered <|-- DV_ORDERED

@@ -14,17 +14,17 @@ class TYPE_DEF_BOOLEAN {
 
 class TYPE_DEF_DATE {
   + type_name : String [1]
-  + type_anchor : IDate [1]
+  + type_anchor : Iso8601_date [1]
 }
 
 class TYPE_DEF_DATE_TIME {
   + type_name : String [1]
-  + type_anchor : IDate_time [1]
+  + type_anchor : Iso8601_date_time [1]
 }
 
 class TYPE_DEF_DURATION {
   + type_name : String [1]
-  + type_anchor : IDuration [1]
+  + type_anchor : Iso8601_duration [1]
 }
 
 class TYPE_DEF_INTEGER {
@@ -53,12 +53,12 @@ class TYPE_DEF_TERMINOLOGY_CODE {
 
 class TYPE_DEF_TIME {
   + type_name : String [1]
-  + type_anchor : ITime [1]
+  + type_anchor : Iso8601_time [1]
 }
 
 class TYPE_DEF_URI {
   + type_name : String [1]
-  + type_anchor : Integer [1]
+  + type_anchor : Uri [1]
 }
 
 EXPR_TYPE_DEF <|-- TYPE_DEF_BOOLEAN

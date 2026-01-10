@@ -26,7 +26,8 @@ h|*1..1*
 |*group*: `<<_bmm_feature_group_class,BMM_FEATURE_GROUP>>`
 a|Group containing this feature.
 
-h|*1..1*
-|*scope*: `<<_bmm_class_class,BMM_CLASS>>`
+h|*1..1 +
+(effected)*
+|*scope*: `link:/classes/BMM_CLASS[BMM_CLASS] `
 a|Model element within which an element is declared.
 |===

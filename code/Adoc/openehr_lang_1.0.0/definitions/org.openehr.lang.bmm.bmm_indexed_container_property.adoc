@@ -15,7 +15,7 @@ h|*Attributes*
 
 h|*1..1 +
 (redefined)*
-|*type*: `<<_bmm_indexed_container_type_class,BMM_INDEXED_CONTAINER_TYPE>>`
+|*type*: `link:/classes/BMM_INDEXED_CONTAINER_TYPE[BMM_INDEXED_CONTAINER_TYPE] `
 a|Declared or inferred static type of the entity.
 
 h|*Functions*
@@ -24,6 +24,6 @@ h|*Functions*
 
 h|*1..1 +
 (redefined)*
-|*display_name* (): `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
+|*display_name* (): `link:/classes/String[String] `
 a|Name of this property in form `name: ContainerTypeName<IndexTypeName, ...>`.
 |===

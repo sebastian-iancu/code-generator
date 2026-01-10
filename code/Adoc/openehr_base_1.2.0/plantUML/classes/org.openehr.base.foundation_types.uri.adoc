@@ -6,14 +6,19 @@ class Uri {
 }
 
 class String  #whitesmoke;line:gray;line.dotted;text:gray {
-  + infix +( other : String [1] ) : String [1]
   + is_empty() : Boolean [1]
   + is_integer() : Boolean [1]
   + as_integer() : Integer [1]
+  + append( other : String [1] ) : String [1]
+  + less_than( other : String [1] ) : Boolean [1]
+  + contains( other : String [1] ) : Boolean [1]
 }
 
 abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
-  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+  + {abstract} less_than( other : Ordered [1] ) : Boolean [1]
+  + less_than_or_equal( other : Ordered [1] ) : Boolean [1]
+  + greater_than( other : Ordered [1] ) : Boolean [1]
+  + greater_than_or_equal( other : Ordered [1] ) : Boolean [1]
 }
 
 Ordered <|-- String

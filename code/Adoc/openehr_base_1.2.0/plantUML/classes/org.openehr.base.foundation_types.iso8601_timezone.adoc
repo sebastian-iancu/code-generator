@@ -19,11 +19,35 @@ abstract class Iso8601_type  #whitesmoke;line:gray;line.dotted;text:gray {
   + {abstract} is_extended() : Boolean [1]
 }
 
-abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
-  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+abstract class Temporal  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
-Ordered <|-- Iso8601_type
+abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} less_than( other : Ordered [1] ) : Boolean [1]
+  + less_than_or_equal( other : Ordered [1] ) : Boolean [1]
+  + greater_than( other : Ordered [1] ) : Boolean [1]
+  + greater_than_or_equal( other : Ordered [1] ) : Boolean [1]
+}
+
+Ordered <|-- Temporal
+
+Temporal <|-- Iso8601_type
+
+class Time_Definitions  #whitesmoke;line:gray;line.dotted;text:gray {
+  + valid_year( y : Integer [1] ) : Boolean [1]
+  + valid_month( m : Integer [1] ) : Boolean [1]
+  + valid_day( y : Integer [1], m : Integer [1], d : Integer [1] ) : Boolean [1]
+  + valid_hour( h : Integer [1], m : Integer [1], s : Integer [1] ) : Boolean [1]
+  + valid_minute( m : Integer [1] ) : Boolean [1]
+  + valid_second( s : Integer [1] ) : Boolean [1]
+  + valid_fractional_second( fs : Double [1] ) : Boolean [1]
+  + valid_iso8601_date( s : String [1] ) : Boolean [1]
+  + valid_iso8601_time( s : String [1] ) : Boolean [1]
+  + valid_iso8601_date_time( s : String [1] ) : Boolean [1]
+  + valid_iso8601_duration( s : String [1] ) : Boolean [1]
+}
+
+Time_Definitions <|-- Iso8601_type
 
 Iso8601_type <|-- Iso8601_timezone
 

@@ -16,7 +16,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*type*: `<<_bmm_type_class,BMM_TYPE>>`
+|*type*: `link:/classes/BMM_TYPE[BMM_TYPE] `
 a|Type, directly from the name of the reference, e.g. `{SOME_TYPE}`.
 
 h|*1..1*
@@ -30,7 +30,7 @@ h|*Functions*
 
 h|*1..1 +
 (effected)*
-|*eval_type* (): `<<_bmm_type_class,BMM_TYPE>>`
+|*eval_type* (): `link:/classes/BMM_TYPE[BMM_TYPE] `
 a|Return `_type_`.
 
 h|*Invariants*

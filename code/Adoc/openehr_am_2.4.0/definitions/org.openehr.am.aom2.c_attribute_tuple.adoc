@@ -19,7 +19,7 @@ a|Tuple definitions.
 
 h|*0..1 +
 (effected)*
-|*members*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/AM/{am_release}/aom14.html#_c_attribute_class[C_ATTRIBUTE^]>`
+|*members*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_c_attribute_class,C_ATTRIBUTE>>>`
 a|List of `C_ATTRIBUTEs` forming the definition of the tuple.
 
 h|*Functions*

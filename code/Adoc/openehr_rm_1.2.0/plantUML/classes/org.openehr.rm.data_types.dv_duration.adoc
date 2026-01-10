@@ -17,10 +17,12 @@ abstract class DV_AMOUNT  #whitesmoke;line:gray;line.dotted;text:gray {
   + accuracy_is_percent : Boolean [0..1]
   + accuracy : Real [0..1]
   + valid_percentage( number : Ordered_Numeric [1] ) : Boolean [1]
-  + infix =( source : DV_AMOUNT [1] ) : DV_AMOUNT [1]
-  + infix +( other : DV_AMOUNT [1] ) : DV_AMOUNT [1]
-  + infix -( other : DV_AMOUNT [1] ) : DV_AMOUNT [1]
-  + prefix -() : DV_AMOUNT [1]
+  + add( other : DV_AMOUNT [1] ) : DV_AMOUNT [1]
+  + subtract( other : DV_AMOUNT [1] ) : DV_AMOUNT [1]
+  + {abstract} is_equal( other : DV_AMOUNT [1] ) : Boolean [1]
+  + multiply( factor : Real [1] ) : DV_AMOUNT [1]
+  + negative() : DV_AMOUNT [1]
+  + less_than( other : DV_AMOUNT [1] ) : Boolean [1]
 }
 
 abstract class DV_QUANTIFIED  #whitesmoke;line:gray;line.dotted;text:gray {
@@ -29,6 +31,8 @@ abstract class DV_QUANTIFIED  #whitesmoke;line:gray;line.dotted;text:gray {
   + valid_magnitude_status() : Boolean [1]
   + {abstract} magnitude() : Ordered_Numeric [1]
   + accuracy_unknown() : Boolean [1]
+  + {abstract} is_equal( other : DV_QUANTIFIED [1] ) : Boolean [1]
+  + less_than( other : DV_QUANTIFIED [1] ) : Boolean [1]
 }
 
 abstract class DV_ORDERED  #whitesmoke;line:gray;line.dotted;text:gray {
@@ -38,7 +42,7 @@ abstract class DV_ORDERED  #whitesmoke;line:gray;line.dotted;text:gray {
   + {abstract} is_strictly_comparable_to( other : DV_ORDERED [1] ) : Boolean [1]
   + is_simple() : Boolean [1]
   + is_normal() : Boolean [1]
-  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+  + {abstract} less_than( other : DV_ORDERED [1] ) : Boolean [1]
 }
 
 abstract class DATA_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
@@ -47,7 +51,10 @@ abstract class DATA_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
 DATA_VALUE <|-- DV_ORDERED
 
 abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
-  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+  + {abstract} less_than( other : Ordered [1] ) : Boolean [1]
+  + less_than_or_equal( other : Ordered [1] ) : Boolean [1]
+  + greater_than( other : Ordered [1] ) : Boolean [1]
+  + greater_than_or_equal( other : Ordered [1] ) : Boolean [1]
 }
 
 Ordered <|-- DV_ORDERED
@@ -59,19 +66,24 @@ DV_QUANTIFIED <|-- DV_AMOUNT
 DV_AMOUNT <|-- DV_DURATION
 
 class Iso8601_duration  #whitesmoke;line:gray;line.dotted;text:gray {
-  + is_decimal_sign_comma() : Boolean [1]
-  + valid_iso8601_duration( s : String [1] ) : Boolean [1]
-  + is_partial() : Boolean [1]
   + is_extended() : Boolean [1]
-  + as_string() : String [1]
-  + months() : Integer [1]
+  + is_partial() : Boolean [1]
   + years() : Integer [1]
-  + weeks() : Integer [1]
-  + to_seconds() : Integer [1]
-  + minutes() : Integer [1]
-  + hours() : Integer [1]
+  + months() : Integer [1]
   + days() : Integer [1]
-  + as_duration() : Duration [1]
+  + hours() : Integer [1]
+  + minutes() : Integer [1]
+  + seconds() : Integer [1]
+  + fractional_seconds() : Real [1]
+  + weeks() : Integer [1]
+  + is_decimal_sign_comma() : Boolean [1]
+  + to_seconds() : Real [1]
+  + as_string() : String [1]
+  + add( a_val : Iso8601_duration [1] ) : Iso8601_duration [1]
+  + subtract( a_val : Iso8601_duration [1] ) : Iso8601_duration [1]
+  + multiply( a_val : Real [1] ) : Iso8601_duration [1]
+  + divide( a_val : Real [1] ) : Iso8601_duration [1]
+  + negative() : Iso8601_duration [1]
 }
 
 abstract class Iso8601_type  #whitesmoke;line:gray;line.dotted;text:gray {
@@ -80,27 +92,19 @@ abstract class Iso8601_type  #whitesmoke;line:gray;line.dotted;text:gray {
   + {abstract} is_extended() : Boolean [1]
 }
 
-abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
-  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
-}
-
-Ordered <|-- Iso8601_type
-
-Iso8601_type <|-- Iso8601_duration
-
-abstract class IDuration  #whitesmoke;line:gray;line.dotted;text:gray {
-  + seconds() : Integer [1]
-  + fractional_seconds() : Real [1]
-}
-
 abstract class Temporal  #whitesmoke;line:gray;line.dotted;text:gray {
 }
 
 abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
-  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+  + {abstract} less_than( other : Ordered [1] ) : Boolean [1]
+  + less_than_or_equal( other : Ordered [1] ) : Boolean [1]
+  + greater_than( other : Ordered [1] ) : Boolean [1]
+  + greater_than_or_equal( other : Ordered [1] ) : Boolean [1]
 }
 
 Ordered <|-- Temporal
+
+Temporal <|-- Iso8601_type
 
 class Time_Definitions  #whitesmoke;line:gray;line.dotted;text:gray {
   + valid_year( y : Integer [1] ) : Boolean [1]
@@ -110,13 +114,15 @@ class Time_Definitions  #whitesmoke;line:gray;line.dotted;text:gray {
   + valid_minute( m : Integer [1] ) : Boolean [1]
   + valid_second( s : Integer [1] ) : Boolean [1]
   + valid_fractional_second( fs : Double [1] ) : Boolean [1]
+  + valid_iso8601_date( s : String [1] ) : Boolean [1]
+  + valid_iso8601_time( s : String [1] ) : Boolean [1]
+  + valid_iso8601_date_time( s : String [1] ) : Boolean [1]
+  + valid_iso8601_duration( s : String [1] ) : Boolean [1]
 }
 
-Time_Definitions <|-- Temporal
+Time_Definitions <|-- Iso8601_type
 
-Temporal <|-- IDuration
-
-IDuration <|-- Iso8601_duration
+Iso8601_type <|-- Iso8601_duration
 
 Iso8601_duration <|-- DV_DURATION
 

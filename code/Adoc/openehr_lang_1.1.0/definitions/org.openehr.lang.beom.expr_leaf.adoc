@@ -12,7 +12,7 @@ h|*Description*
 * a variable reference.
 
 h|*Inherit*
-2+|`link:/releases/BASE/{base_release}/expression.html#_expression_class[EXPRESSION^]`
+2+|`<<_expression_class,EXPRESSION>>`
 
 h|*Attributes*
 ^h|*Signature*

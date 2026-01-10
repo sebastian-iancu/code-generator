@@ -8,11 +8,11 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*name*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^] +
+|*name*: `link:/classes/String[String]  +
 {default{nbsp}={nbsp}"plus"}`
 a|
 
 h|*0..1*
-|*symbols*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
+|*symbols*: `link:/classes/List[List] <link:/classes/String[String] >`
 a|
 |===

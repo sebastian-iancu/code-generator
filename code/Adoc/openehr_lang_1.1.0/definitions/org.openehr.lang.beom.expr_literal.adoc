@@ -7,14 +7,14 @@ h|*Description*
 2+a|Literal value expression tree leaf item. This can represent a literal value of any primitive type included in the `PRIMITIVE_TYPE` enumeration.
 
 h|*Inherit*
-2+|`link:/releases/AM/{am_release}/aom14.html#_expr_leaf_class[EXPR_LEAF^]`
+2+|`<<_expr_leaf_class,EXPR_LEAF>>`
 
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*item*: `link:/releases/BASE/{base_release}/foundation_types.html#_any_class[Any^]`
 a|A statically set constant value of a primitive type.
 |===

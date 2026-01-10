@@ -3,8 +3,12 @@
 @startuml
 
 class BMM_DEFINITIONS {
+  + Any_class() : BMM_SIMPLE_CLASS [1]
+  + Any_type() : BMM_SIMPLE_TYPE [1]
+  + create_schema_id( a_model_publisher : Any [1], a_schema_name : Any [1], a_model_release : String [1] ) : String [1]
 }
 
+BASIC_DEFINITIONS <|-- BMM_DEFINITIONS
 
 @enduml
 -----

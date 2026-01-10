@@ -27,7 +27,7 @@ a|The target type; this converts to the first parameter in `_generic_parameters_
 
 h|*0..1 +
 (effected)*
-|*bmm_type*: `link:/releases/BASE/{base_release}/bmm.html#_bmm_container_type_class[BMM_CONTAINER_TYPE^]`
+|*bmm_type*: `link:/classes/BMM_CONTAINER_TYPE[BMM_CONTAINER_TYPE] `
 a|Result of `_create_bmm_type()_` call.
 
 h|*Functions*

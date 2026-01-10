@@ -11,6 +11,6 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*documentation*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
+|*documentation*: `link:/classes/String[String] `
 a|Optional documentation of this element.
 |===

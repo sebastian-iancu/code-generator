@@ -11,6 +11,6 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*id*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
+|*id*: `link:/classes/String[String] `
 a|Full identifier of the included schema, e.g. `"openehr_primitive_types_1.0.2"`.
 |===

@@ -28,25 +28,29 @@ h|*Functions*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*add* __alias__ "+" ( +
 other: `<<_dv_duration_class,DV_DURATION>>[1]` +
 ): `<<_dv_duration_class,DV_DURATION>>`
 a|Sum of this Duration and `_other_`.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*subtract* __alias__ "-" ( +
 other: `<<_dv_duration_class,DV_DURATION>>[1]` +
 ): `<<_dv_duration_class,DV_DURATION>>`
 a|Difference of this Duration and `_other_`.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*multiply* __alias__ "&#42;" ( +
 factor: `link:/releases/BASE/{base_release}/foundation_types.html#_real_class[Real^][1]` +
 ): `<<_dv_duration_class,DV_DURATION>>`
 a|Product of this Duration and `_factor_`.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*less_than* __alias__ "<" ( +
 other: `<<_dv_duration_class,DV_DURATION>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
@@ -63,7 +67,8 @@ other: `<<_dv_duration_class,DV_DURATION>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True, for any two Durations.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*negative* __alias__ "-" (): `<<_dv_duration_class,DV_DURATION>>`
 a|Negated version of current duration.
 

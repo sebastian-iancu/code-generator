@@ -23,6 +23,6 @@ h|*Functions*
 
 h|*1..1 +
 (effected)*
-|*eval_type* (): `<<_bmm_simple_type_class,BMM_SIMPLE_TYPE>>`
+|*eval_type* (): `link:/classes/BMM_SIMPLE_TYPE[BMM_SIMPLE_TYPE] `
 a|Return `{BMM_MODEL}._boolean_type_definition_()`.
 |===

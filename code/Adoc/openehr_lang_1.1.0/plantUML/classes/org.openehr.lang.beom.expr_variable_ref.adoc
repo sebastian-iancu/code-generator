@@ -6,16 +6,21 @@ class EXPR_VARIABLE_REF {
   + item : VARIABLE_DECLARATION [1]
 }
 
-class EXPR_LEAF  #whitesmoke;line:gray;line.dotted;text:gray {
-  + reference_type : String [1]
-  + item : Any [1]
+abstract class EXPR_LEAF  #whitesmoke;line:gray;line.dotted;text:gray {
+  + item : Any [0..1]
 }
 
-abstract class EXPR_ITEM  #whitesmoke;line:gray;line.dotted;text:gray {
-  + type : String [1]
+abstract class EXPRESSION  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} type() : EXPR_TYPE_DEF [1]
 }
 
-EXPR_ITEM <|-- EXPR_LEAF
+abstract class EXPR_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} value() : Any [1]
+}
+
+EXPR_VALUE <|-- EXPRESSION
+
+EXPRESSION <|-- EXPR_LEAF
 
 EXPR_LEAF <|-- EXPR_VARIABLE_REF
 

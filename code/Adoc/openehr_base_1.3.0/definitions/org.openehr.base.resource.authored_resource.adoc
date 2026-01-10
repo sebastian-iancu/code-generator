@@ -15,7 +15,7 @@ h|*0..1*
 a|Unique identifier of the family of archetypes having the same interface identifier (same major version).
 
 h|*1..1*
-|*original_language*: `link:/releases/BASE/{base_release}/base_types.html#_terminology_code_class[Terminology_code^]`
+|*original_language*: `link:/releases/BASE/{base_release}/foundation_types.html#_terminology_code_class[Terminology_code^]`
 a|Language in which this resource was initially authored. Although there is no language primacy of resources overall, the language of original authoring is required to ensure natural language translations can preserve quality. Language is relevant in both the description and ontology sections.
 
 h|*0..1*

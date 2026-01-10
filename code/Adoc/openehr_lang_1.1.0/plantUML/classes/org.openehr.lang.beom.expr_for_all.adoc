@@ -10,13 +10,20 @@ class EXPR_FOR_ALL {
 abstract class EXPR_OPERATOR  #whitesmoke;line:gray;line.dotted;text:gray {
   + precedence_overridden : Boolean [0..1]
   + operator : OPERATOR_KIND [1]
+  + symbol : String [0..1]
 }
 
-abstract class EXPR_ITEM  #whitesmoke;line:gray;line.dotted;text:gray {
-  + type : String [1]
+abstract class EXPRESSION  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} type() : EXPR_TYPE_DEF [1]
 }
 
-EXPR_ITEM <|-- EXPR_OPERATOR
+abstract class EXPR_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} value() : Any [1]
+}
+
+EXPR_VALUE <|-- EXPRESSION
+
+EXPRESSION <|-- EXPR_OPERATOR
 
 EXPR_OPERATOR <|-- EXPR_FOR_ALL
 

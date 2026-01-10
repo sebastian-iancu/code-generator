@@ -12,6 +12,7 @@ class CLUSTER {
 class ELEMENT {
   + null_flavour : DV_CODED_TEXT [0..1]
   + value : DATA_VALUE [0..1]
+  + null_reason : DV_TEXT [0..1]
   + is_null() : Boolean [1]
 }
 

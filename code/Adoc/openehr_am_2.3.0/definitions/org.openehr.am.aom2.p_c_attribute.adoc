@@ -7,7 +7,7 @@ h|*Description*
 2+a|Abstract model of constraint on any kind of attribute node.
 
 h|*Inherit*
-2+|`link:/releases/AM/{am_release}/p_aom2.html#_p_archetype_constraint_class[P_ARCHETYPE_CONSTRAINT^]`
+2+|`<<_p_archetype_constraint_class,P_ARCHETYPE_CONSTRAINT>>`
 
 h|*Attributes*
 ^h|*Signature*
@@ -22,7 +22,7 @@ h|*0..1*
 a|Constraint on every attribute, regardless of whether it is singular or of a container type, which indicates whether its target object exists or not (i.e. is mandatory or not).
 
 h|*0..1*
-|*children*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/AM/{am_release}/p_aom2.html#_p_c_object_class[P_C_OBJECT^]>`
+|*children*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_p_c_object_class,P_C_OBJECT>>>`
 a|Child C_OBJECT nodes. Each such node represents a constraint on the type of this attribute in its reference model. Multiples occur both for multiple items in the case of container attributes, and alternatives in the case of singular attributes.
 
 h|*0..1*

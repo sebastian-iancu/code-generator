@@ -8,6 +8,7 @@ class P_BMM_OPEN_TYPE {
 }
 
 abstract class P_BMM_BASE_TYPE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + value_constraint : String [0..1]
 }
 
 abstract class P_BMM_TYPE  #whitesmoke;line:gray;line.dotted;text:gray {

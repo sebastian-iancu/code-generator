@@ -9,8 +9,9 @@ class Point_interval <T> {
   + upper_included : Boolean [1]
 }
 
-abstract class Interval <T>  #whitesmoke;line:gray;line.dotted;text:gray {
+class Interval <T>  #whitesmoke;line:gray;line.dotted;text:gray {
   + lower : T [0..1]
+  + upper : T [0..1]
   + lower_unbounded : Boolean [1]
   + upper_unbounded : Boolean [1]
   + lower_included : Boolean [1]
@@ -19,7 +20,6 @@ abstract class Interval <T>  #whitesmoke;line:gray;line.dotted;text:gray {
   + intersects( other : Interval [1] ) : Boolean [1]
   + contains( other : Interval [1] ) : Boolean [1]
   + is_equal( other : Any [1] ) : Boolean [1]
-  + {abstract} upper() : T [0..1]
 }
 
 Interval <|-- Point_interval

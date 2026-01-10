@@ -7,13 +7,13 @@ h|*Description*
 2+a|Node representing a function call with 0 or more arguments.
 
 h|*Inherit*
-2+|`link:/releases/AM/{am_release}/aom14.html#_expr_leaf_class[EXPR_LEAF^]`
+2+|`<<_expr_leaf_class,EXPR_LEAF>>`
 
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
 h|*0..1*
-|*arguments*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/expression.html#_expression_class[EXPRESSION^]>`
+|*arguments*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_expression_class,EXPRESSION>>>`
 a|Arguments of this function, which can be from 0 to any number. Functions with no arguments are typically used to represent real world varying values like 'current time' and so on.
 |===

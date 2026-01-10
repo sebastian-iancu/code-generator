@@ -56,6 +56,7 @@ abstract class Ordered {
   + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
 }
 
+String <|-- Uri
 Ordered <|-- Ordered_Numeric
 Numeric <|-- Ordered_Numeric
 Ordered_Numeric <|-- Integer

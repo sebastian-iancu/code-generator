@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*type*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
+|*type*: `link:/classes/String[String] `
 a|If the type is a simple type, then this attribute will hold the type name. If the type is a container or generic, then type_ref will hold the type definition. The resulting type is generated in type_def.
 
 h|*0..1*

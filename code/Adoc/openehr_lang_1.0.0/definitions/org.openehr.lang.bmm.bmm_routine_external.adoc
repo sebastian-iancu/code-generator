@@ -14,10 +14,10 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*meta_data*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
+|*meta_data*: `link:/classes/Hash[Hash] <link:/classes/String[String] ,link:/classes/String[String] >`
 a|External call general meta-data, including target routine name, type mapping etc.
 
 h|*0..1*
-|*argument_mapping*: `link:/releases/BASE/{base_release}/foundation_types.html#_hash_class[Hash^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^],link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
+|*argument_mapping*: `link:/classes/Hash[Hash] <link:/classes/String[String] ,link:/classes/String[String] >`
 a|Optional argument-mapping meta-data.
 |===

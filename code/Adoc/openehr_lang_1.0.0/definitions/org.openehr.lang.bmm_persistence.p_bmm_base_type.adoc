@@ -14,6 +14,6 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*value_constraint*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
+|*value_constraint*: `link:/classes/String[String] `
 a|
 |===

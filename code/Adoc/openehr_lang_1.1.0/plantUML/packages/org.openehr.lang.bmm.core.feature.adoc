@@ -3,12 +3,12 @@
 @startuml
 
 class BMM_CONSTANT {
-  + generator : EL_INSTANCE_REF [1]
+  + generator : BMM_LITERAL_VALUE [1]
 }
 
 class BMM_CONTAINER_PROPERTY {
-  + type : BMM_CONTAINER_TYPE [1]
   + cardinality : Multiplicity_interval [0..1]
+  + type : BMM_CONTAINER_TYPE [1]
   + display_name() : String [1]
 }
 
@@ -26,26 +26,20 @@ class BMM_OPERATOR {
   + name : String [1]
 }
 
-class BMM_PROPERTY <T> {
-  + name : String [1]
-  + is_mandatory : Boolean [0..1]
-  + is_computed : Boolean [0..1]
-  + type : T [1]
+abstract class BMM_PROPERTY {
   + is_im_runtime : Boolean [0..1]
   + is_im_infrastructure : Boolean [0..1]
-  + is_synthesised_generic : Boolean [0..1]
+  + is_composition : Boolean [0..1]
   + existence() : Multiplicity_interval [1]
   + display_name() : String [1]
 }
 
 abstract class BMM_ROUTINE {
   + parameters : List<BMM_PARAMETER> [*]
-  + locals : List<BMM_LOCAL> [*]
   + pre_conditions : List<BMM_ASSERTION> [*]
   + post_conditions : List<BMM_ASSERTION> [*]
-  + body : BMM_ROUTINE_BODY [0..1]
+  + definition : BMM_ROUTINE_DEFINITION [0..1]
   + arity() : Integer [1]
-  + signature() :  [1]
 }
 
 class BMM_PARAMETER {
@@ -54,10 +48,11 @@ class BMM_PARAMETER {
 
 abstract class BMM_VARIABLE {
   + scope : BMM_ROUTINE [1]
-  + signature() :  [1]
 }
 
 class BMM_PROCEDURE {
+  + type : BMM_STATUS_TYPE [1]
+  + signature() : BMM_PROCEDURE_TYPE [1]
 }
 
 class BMM_UNITARY_PROPERTY {
@@ -90,7 +85,7 @@ class BMM_EXTERNAL_ROUTINE {
 class BMM_FEATURE_GROUP {
   + name : String [1]
   + properties : Hash<String,String> [1]
-  + features : List<BMM_CLASS_FEATURE> [*]
+  + features : List<BMM_FEATURE> [*]
   + visibility : BMM_VISIBILITY [0..1]
 }
 
@@ -137,22 +132,19 @@ enum BMM_PARAMETER_DIRECTION {
   in_out 
 }
 
-BMM_INSTANTIABLE <|-- BMM_CONSTANT
-BMM_CLASS_FEATURE <|-- BMM_CONSTANT
+BMM_STATIC <|-- BMM_CONSTANT
 BMM_PROPERTY <|-- BMM_CONTAINER_PROPERTY
-BMM_TYPED_FEATURE <|-- BMM_FUNCTION
 BMM_ROUTINE <|-- BMM_FUNCTION
-BMM_VARIABLE <|-- BMM_LOCAL
-BMM_MODEL_ELEMENT <|-- BMM_PROPERTY
-BMM_CLASS_FEATURE <|-- BMM_ROUTINE
-BMM_VARIABLE <|-- BMM_PARAMETER
-BMM_INSTANTIABLE <|-- BMM_VARIABLE
-BMM_CLASS_ENTITY <|-- BMM_VARIABLE
+BMM_WRITABLE_VARIABLE <|-- BMM_LOCAL
+BMM_INSTANTIABLE_FEATURE <|-- BMM_PROPERTY
+BMM_FEATURE <|-- BMM_ROUTINE
+BMM_READONLY_VARIABLE <|-- BMM_PARAMETER
+BMM_FORMAL_ELEMENT <|-- BMM_VARIABLE
 BMM_ROUTINE <|-- BMM_PROCEDURE
 BMM_PROPERTY <|-- BMM_UNITARY_PROPERTY
 BMM_CONTAINER_PROPERTY <|-- BMM_INDEXED_CONTAINER_PROPERTY
 BMM_FEATURE <|-- BMM_INSTANTIABLE_FEATURE
-BMM_VARIABLE <|-- BMM_RESULT
+BMM_WRITABLE_VARIABLE <|-- BMM_RESULT
 BMM_ROUTINE_DEFINITION <|-- BMM_EXTERNAL_ROUTINE
 BMM_FORMAL_ELEMENT <|-- BMM_FEATURE
 BMM_READONLY_VARIABLE <|-- BMM_SELF

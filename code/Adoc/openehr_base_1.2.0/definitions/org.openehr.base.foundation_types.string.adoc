@@ -31,7 +31,8 @@ other: `<<_string_class,String>>[1]` +
 ): `<<_string_class,String>>`
 a|Concatenation operator - causes `_other_` to be appended to this string.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*less_than* ( +
 other: `<<_string_class,String>>[1]` +
 ): `<<_boolean_class,Boolean>>`

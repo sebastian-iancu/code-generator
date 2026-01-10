@@ -56,13 +56,15 @@ h|*1..1*
 |*is_integral* (): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|True if the `_numerator_` and `_denominator_` values are integers, i.e. if `_precision_` is 0.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*add* __alias__ "+" ( +
 other: `<<_dv_proportion_class,DV_PROPORTION>>[1]` +
 ): `<<_dv_proportion_class,DV_PROPORTION>>`
 a|Sum of two strictly comparable proportions.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*subtract* __alias__ "-" ( +
 other: `<<_dv_proportion_class,DV_PROPORTION>>[1]` +
 ): `<<_dv_proportion_class,DV_PROPORTION>>`
@@ -75,13 +77,15 @@ other: `<<_dv_proportion_class,DV_PROPORTION>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|Return True if this `DV_AMOUNT` is considered equal to `_other_`.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*multiply* __alias__ "&#42;" ( +
 factor: `link:/releases/BASE/{base_release}/foundation_types.html#_real_class[Real^][1]` +
 ): `<<_dv_proportion_class,DV_PROPORTION>>`
 a|Product of this Proportion and `_factor_`.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*less_than* __alias__ "<" ( +
 other: `<<_dv_proportion_class,DV_PROPORTION>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +

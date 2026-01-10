@@ -6,15 +6,21 @@ abstract class Ordered_Numeric {
 }
 
 abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
-  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+  + {abstract} less_than( other : Ordered [1] ) : Boolean [1]
+  + less_than_or_equal( other : Ordered [1] ) : Boolean [1]
+  + greater_than( other : Ordered [1] ) : Boolean [1]
+  + greater_than_or_equal( other : Ordered [1] ) : Boolean [1]
 }
 
 Ordered <|-- Ordered_Numeric
 
 abstract class Numeric  #whitesmoke;line:gray;line.dotted;text:gray {
-  + {abstract} infix *( other : Numeric [1] ) : Numeric [1]
-  + {abstract} infix +( other : Numeric [1] ) : Numeric [1]
-  + {abstract} infix -( other : Numeric [1] ) : Numeric [1]
+  + {abstract} add( other : Numeric [1] ) : Numeric [1]
+  + {abstract} subtract( other : Numeric [1] ) : Numeric [1]
+  + {abstract} multiply( other : Numeric [1] ) : Numeric [1]
+  + {abstract} divide( other : Numeric [1] ) : Numeric [1]
+  + {abstract} exponent( other : Numeric [1] ) : Numeric [1]
+  + {abstract} negative() : Numeric [1]
 }
 
 Numeric <|-- Ordered_Numeric

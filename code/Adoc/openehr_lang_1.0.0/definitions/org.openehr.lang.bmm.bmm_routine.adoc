@@ -14,19 +14,19 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*parameters*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_bmm_parameter_class,BMM_PARAMETER>>>`
+|*parameters*: `link:/classes/List[List] <<<_bmm_parameter_class,BMM_PARAMETER>>>`
 a|Formal parameters of the routine.
 
 h|*0..1*
-|*locals*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_bmm_local_class,BMM_LOCAL>>>`
+|*locals*: `link:/classes/List[List] <<<_bmm_local_class,BMM_LOCAL>>>`
 a|Local variables of the routine.
 
 h|*0..1*
-|*pre_conditions*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_bmm_assertion_class,BMM_ASSERTION>>>`
+|*pre_conditions*: `link:/classes/List[List] <<<_bmm_assertion_class,BMM_ASSERTION>>>`
 a|
 
 h|*0..1*
-|*post_conditions*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<<<_bmm_assertion_class,BMM_ASSERTION>>>`
+|*post_conditions*: `link:/classes/List[List] <<<_bmm_assertion_class,BMM_ASSERTION>>>`
 a|
 
 h|*0..1*
@@ -38,7 +38,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*arity* (): `link:/releases/BASE/{base_release}/foundation_types.html#_integer_class[Integer^]`
+|*arity* (): `link:/classes/Integer[Integer] `
 a|Return number of arguments of this routine.
 
 h|*1..1 +

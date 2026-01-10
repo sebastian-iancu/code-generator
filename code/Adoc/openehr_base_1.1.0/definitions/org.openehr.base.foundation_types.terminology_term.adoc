@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*concept*: `link:/releases/BASE/{base_release}/base_types.html#_terminology_code_class[Terminology_code^]`
+|*concept*: `<<_terminology_code_class,Terminology_code>>`
 a|Refrence to the terminology concept formally representing this term.
 
 h|*1..1*

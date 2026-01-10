@@ -14,7 +14,7 @@ abstract class P_BMM_PROPERTY  #whitesmoke;line:gray;line.dotted;text:gray {
   + is_im_infrastructure : Boolean [0..1]
   + is_im_runtime : Boolean [0..1]
   + type_def : P_BMM_TYPE [0..1]
-  + bmm_property : BMM_PROPERTY<BMM_TYPE> [0..1]
+  + bmm_property : BMM_PROPERTY [0..1]
   + create_bmm_property( a_bmm_schema : BMM_MODEL [1], a_class_def : BMM_CLASS [1] ) : void [1]
 }
 

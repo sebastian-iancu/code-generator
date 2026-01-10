@@ -7,14 +7,13 @@ h|*Description*
 2+a|Root object of a standalone, authored archetype, including all meta-data, description, other identifiers and lifecycle.
 
 h|*Inherit*
-2+|`link:/releases/AM/{am_release}/aom14.html#_archetype_class[ARCHETYPE^]`, `link:/releases/BASE/{base_release}/resource.html#_authored_resource_class[AUTHORED_RESOURCE^]`
+2+|`<<_archetype_class,ARCHETYPE>>`, `link:/releases/BASE/{base_release}/resource.html#_authored_resource_class[AUTHORED_RESOURCE^]`
 
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*0..1 +
-(redefined)*
+h|*0..1*
 |*adl_version*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
 a|ADL version if archetype was read in from an ADL sharable archetype.
 

@@ -14,25 +14,25 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*lower_unbounded*: `<<_boolean_class,Boolean>> +
 {default{nbsp}={nbsp}false}`
 a|lower boundary open (i.e. = -infinity)
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*upper_unbounded*: `<<_boolean_class,Boolean>> +
 {default{nbsp}={nbsp}false}`
 a|upper boundary open (i.e. = +infinity)
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*lower_included*: `<<_boolean_class,Boolean>> +
 {default{nbsp}={nbsp}true}`
 a|lower boundary value included in range if not lower_unbounded.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*upper_included*: `<<_boolean_class,Boolean>> +
 {default{nbsp}={nbsp}true}`
 a|upper boundary value included in range if not upper_unbounded.

@@ -8,28 +8,46 @@ class BMM_CONTAINER_PROPERTY {
   + display_name() : String [1]
 }
 
-class BMM_PROPERTY <T>  #whitesmoke;line:gray;line.dotted;text:gray {
-  + name : String [1]
-  + is_mandatory : Boolean [0..1]
-  + is_computed : Boolean [0..1]
-  + type : T [1]
+abstract class BMM_PROPERTY  #whitesmoke;line:gray;line.dotted;text:gray {
   + is_im_runtime : Boolean [0..1]
   + is_im_infrastructure : Boolean [0..1]
-  + is_synthesised_generic : Boolean [0..1]
+  + is_composition : Boolean [0..1]
   + existence() : Multiplicity_interval [1]
   + display_name() : String [1]
 }
 
+abstract class BMM_INSTANTIABLE_FEATURE  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+abstract class BMM_FEATURE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + is_synthesised_generic : Boolean [0..1]
+  + feature_extensions : List<BMM_FEATURE_EXTENSION> [*]
+  + group : BMM_FEATURE_GROUP [1]
+  + scope : BMM_CLASS [1]
+}
+
+abstract class BMM_FORMAL_ELEMENT  #whitesmoke;line:gray;line.dotted;text:gray {
+  + type : BMM_TYPE [1]
+  + is_nullable : Boolean [0..1]
+  + {abstract} signature() : BMM_SIGNATURE [1]
+  + is_boolean() : Boolean [1]
+}
+
 abstract class BMM_MODEL_ELEMENT  #whitesmoke;line:gray;line.dotted;text:gray {
-  + documentation : String [0..1]
+  + name : String [1]
+  + documentation : Hash<String,Any> [0..1]
+  + scope : BMM_MODEL_ELEMENT [1]
+  + extensions : Hash<String,Any> [0..1]
+  + is_root_scope() : Boolean [1]
 }
 
-class BMM_DEFINITIONS  #whitesmoke;line:gray;line.dotted;text:gray {
-}
+BMM_MODEL_ELEMENT <|-- BMM_FORMAL_ELEMENT
 
-BMM_DEFINITIONS <|-- BMM_MODEL_ELEMENT
+BMM_FORMAL_ELEMENT <|-- BMM_FEATURE
 
-BMM_MODEL_ELEMENT <|-- BMM_PROPERTY
+BMM_FEATURE <|-- BMM_INSTANTIABLE_FEATURE
+
+BMM_INSTANTIABLE_FEATURE <|-- BMM_PROPERTY
 
 BMM_PROPERTY <|-- BMM_CONTAINER_PROPERTY
 

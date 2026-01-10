@@ -7,14 +7,13 @@ h|*Description*
 2+a|Expression tree leaf item representing a constraint on a primitive type, expressed in the form of a concrete subtype of C_PRIMITIVE_OBJECT.
 
 h|*Inherit*
-2+|`link:/releases/AM/{am_release}/aom14.html#_expr_leaf_class[EXPR_LEAF^]`
+2+|`link:/classes/EXPR_LEAF[EXPR_LEAF] `
 
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
-h|*1..1 +
-(redefined)*
-|*item*: `link:/releases/AM/{am_release}/aom14.html#_c_primitive_object_class[C_PRIMITIVE_OBJECT^]`
+h|*1..1*
+|*item*: `<<_c_primitive_object_class,C_PRIMITIVE_OBJECT>>`
 a|The constraint.
 |===

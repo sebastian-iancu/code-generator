@@ -54,7 +54,8 @@ other: `<<_dv_scale_class,DV_SCALE>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
 a|Test if this Scale value is strictly comparable to `_other_`.
 
-h|*1..1*
+h|*1..1 +
+(effected)*
 |*less_than* __alias__ "<" ( +
 other: `<<_dv_scale_class,DV_SCALE>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`

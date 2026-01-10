@@ -2,27 +2,19 @@
 -----
 @startuml
 
-class ARCHETYPE {
+abstract class ARCHETYPE {
+  + parent_archetype_id : String [0..1]
+  + archetype_id : ARCHETYPE_HRID [1]
+  + is_differential : Boolean [1]
   + definition : C_COMPLEX_OBJECT [1]
-  + ontology : ARCHETYPE_ONTOLOGY [1]
-  + adl_version : String [0..1]
-  + archetype_id : ARCHETYPE_ID [1]
-  + uid : HIER_OBJECT_ID [0..1]
-  + concept : String [1]
-  + parent_archetype_id : ARCHETYPE_ID [0..1]
-  + invariants : List<ASSERTION> [*]
-  + concept_name( a_lang : String [1] ) : String [1]
+  + terminology : ARCHETYPE_TERMINOLOGY [1]
+  + rules : List<STATEMENT> [*]
+  + rm_overlay : RM_OVERLAY [0..1]
+  + concept_code() : String [1]
   + physical_paths() : List<String> [1..*]
   + logical_paths( lang : String [1] ) : List<String> [1..*]
   + specialisation_depth() : Integer [1]
   + is_specialised() : Boolean [1]
-  + is_valid() : Boolean [1]
-  + node_ids_valid() : Boolean [1]
-  + previous_version() : String [0..1]
-  + internal_references_valid() : Boolean [1]
-  + constraint_references_valid() : Boolean [1]
-  + short_concept_name() : String [1]
-  + version() : String [1]
 }
 
 class AUTHORED_ARCHETYPE {
@@ -63,7 +55,6 @@ class ARCHETYPE_HRID {
   + patch_version() : String [1]
 }
 
-AUTHORED_RESOURCE <|-- ARCHETYPE
 ARCHETYPE <|-- AUTHORED_ARCHETYPE
 AUTHORED_RESOURCE <|-- AUTHORED_ARCHETYPE
 AUTHORED_ARCHETYPE <|-- TEMPLATE

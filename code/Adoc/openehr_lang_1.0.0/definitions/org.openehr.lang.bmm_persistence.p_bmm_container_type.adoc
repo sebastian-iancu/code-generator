@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*container_type*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
+|*container_type*: `link:/classes/String[String] `
 a|The type of the container. This converts to the `_root_type_` in `BMM_GENERIC_TYPE`. Persisted attribute.
 
 h|*0..1*
@@ -22,12 +22,12 @@ h|*0..1*
 a|Type definition of `_type_`, if not a simple String type reference. Persisted attribute.
 
 h|*0..1*
-|*type*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
+|*type*: `link:/classes/String[String] `
 a|The target type; this converts to the first parameter in `_generic_parameters_` in `BMM_GENERIC_TYPE`. Persisted attribute.
 
 h|*0..1 +
 (effected)*
-|*bmm_type*: `link:/releases/BASE/{base_release}/bmm.html#_bmm_container_type_class[BMM_CONTAINER_TYPE^]`
+|*bmm_type*: `link:/classes/BMM_CONTAINER_TYPE[BMM_CONTAINER_TYPE] `
 a|Result of `_create_bmm_type()_` call.
 
 h|*Functions*

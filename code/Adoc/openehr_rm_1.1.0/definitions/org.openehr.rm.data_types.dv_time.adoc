@@ -44,13 +44,14 @@ a_diff: `<<_dv_duration_class,DV_DURATION>>[1]` +
 a|Subtract a Duration from this Time.
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*diff* __alias__ "-" ( +
 other: `<<_dv_time_class,DV_TIME>>[1]` +
 ): `<<_dv_duration_class,DV_DURATION>>`
 a|Difference between this Time and `_other_`.
 
-h|*1..1*
+h|*1..1 +
+(redefined)*
 |*less_than* __alias__ "<" ( +
 other: `<<_dv_time_class,DV_TIME>>[1]` +
 ): `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]` +
