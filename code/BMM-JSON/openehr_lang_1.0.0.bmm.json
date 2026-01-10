@@ -233,7 +233,8 @@
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "type_name",
                     "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "default": "\"Boolean\""
                 },
                 "type_anchor": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
@@ -254,7 +255,8 @@
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "type_name",
                     "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "default": "\"Date\""
                 },
                 "type_anchor": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
@@ -275,7 +277,8 @@
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "type_name",
                     "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "default": "\"Date_time\""
                 },
                 "type_anchor": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
@@ -296,7 +299,8 @@
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "type_name",
                     "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "default": "\"Duration\""
                 },
                 "type_anchor": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
@@ -317,7 +321,8 @@
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "type_name",
                     "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "default": "\"Integer\""
                 },
                 "type_anchor": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
@@ -338,7 +343,8 @@
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "type_name",
                     "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "default": "\"Object_ref\""
                 }
             }
         },
@@ -353,7 +359,8 @@
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "type_name",
                     "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "default": "\"Real\""
                 },
                 "type_anchor": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
@@ -374,7 +381,8 @@
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "type_name",
                     "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "default": "\"String\""
                 },
                 "type_anchor": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
@@ -395,7 +403,8 @@
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "type_name",
                     "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "default": "\"Terminology_code\""
                 },
                 "type_anchor": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
@@ -416,7 +425,8 @@
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "type_name",
                     "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "default": "\"Time\""
                 },
                 "type_anchor": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
@@ -437,7 +447,8 @@
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "type_name",
                     "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "default": "\"Uri\""
                 },
                 "type_anchor": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
@@ -458,7 +469,8 @@
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "identifier",
                     "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "default": "\"funny\""
                 },
                 "evaluation_agent": {
                     "_type": "P_BMM_GENERIC_PROPERTY",
@@ -499,7 +511,8 @@
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "identifier",
                     "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "default": "\"and\""
                 },
                 "symbols": {
                     "_type": "P_BMM_CONTAINER_PROPERTY",
@@ -534,7 +547,8 @@
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "identifier",
                     "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "default": "\"xxx\""
                 },
                 "symbols": {
                     "_type": "P_BMM_CONTAINER_PROPERTY",
@@ -569,7 +583,8 @@
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "identifier",
                     "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "default": "\"exists\""
                 },
                 "symbols": {
                     "_type": "P_BMM_CONTAINER_PROPERTY",
@@ -600,7 +615,8 @@
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "name",
                     "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "default": "\"plus\""
                 },
                 "symbols": {
                     "_type": "P_BMM_CONTAINER_PROPERTY",
@@ -1542,19 +1558,22 @@
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "is_im_runtime",
                     "documentation": "True if this property is marked with info model `_im_runtime_` property.",
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "default": false
                 },
                 "is_im_infrastructure": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "is_im_infrastructure",
                     "documentation": "True if this property was marked with info model `_im_infrastructure_` flag.",
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "default": false
                 },
                 "is_composition": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "is_composition",
                     "documentation": "True if this property instance is a compositional sub-part of the owning class instance. Equivalent to 'composition' in UML associations (but missing from UML properties without associations) and also 'cascade-delete' semantics in ER schemas.",
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "default": false
                 }
             },
             "functions": {
@@ -1813,7 +1832,8 @@
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "is_nullable",
                     "documentation": "True if this element can be null (Void) at execution time. May be interpreted as optionality in subtypes..",
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "default": false
                 }
             }
         },
@@ -1837,7 +1857,8 @@
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "is_synthesised_generic",
                     "documentation": "True if this feature was synthesised due to generic substitution in an inherited type, or further constraining of a formal generic parameter.",
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "default": false
                 }
             },
             "functions": {
@@ -1864,7 +1885,8 @@
                     "name": "name",
                     "documentation": "Name of this model element.",
                     "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "default": "\"Result\""
                 }
             }
         },
@@ -1921,7 +1943,8 @@
                     "name": "name",
                     "documentation": "Name of this feature group; defaults to 'feature'.",
                     "is_mandatory": true,
-                    "type": "String"
+                    "type": "String",
+                    "default": "\"feature\""
                 },
                 "properties": {
                     "_type": "P_BMM_GENERIC_PROPERTY",

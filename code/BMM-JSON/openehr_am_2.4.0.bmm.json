@@ -10,6 +10,9 @@
     "includes": {
         "openehr_base_1.3.0": {
             "id": "openehr_base_1.3.0"
+        },
+        "openehr_lang_1.1.0": {
+            "id": "openehr_lang_1.1.0"
         }
     },
     "packages": {

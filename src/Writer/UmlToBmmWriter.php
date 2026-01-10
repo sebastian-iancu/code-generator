@@ -119,13 +119,19 @@ class UmlToBmmWriter extends AbstractWriter
                     $schema->includes->add(new BmmSchemaInclude(id: 'openehr_base_1.1.0'));
                     break;
                 case 'openehr_rm_1.1.0':
-                case 'openehr_am_2.3.0':
                     $schema->includes->add(new BmmSchemaInclude(id: 'openehr_base_1.2.0'));
                     break;
+                case 'openehr_am_2.3.0':
+                    $schema->includes->add(new BmmSchemaInclude(id: 'openehr_base_1.2.0'));
+                    $schema->includes->add(new BmmSchemaInclude(id: 'openehr_lang_1.0.0'));
+                    break;
                 case 'openehr_rm_1.2.0':
-                case 'openehr_am_2.4.0':
                 case 'openehr_am_1.4.0':
                     $schema->includes->add(new BmmSchemaInclude(id: 'openehr_base_1.3.0'));
+                    break;
+                case 'openehr_am_2.4.0':
+                    $schema->includes->add(new BmmSchemaInclude(id: 'openehr_base_1.3.0'));
+                    $schema->includes->add(new BmmSchemaInclude(id: 'openehr_lang_1.1.0'));
                     break;
             }
             // saving as a file
@@ -380,7 +386,11 @@ class UmlToBmmWriter extends AbstractWriter
                 'upper_unbounded' => true,
             ];
         }
-        return array_filter($bmmProperty);
+        $bmmProperty = array_filter($bmmProperty);
+        if ($umlProperty->default !== null) {
+            $bmmProperty['default'] = $umlProperty->default;
+        }
+        return $bmmProperty;
     }
 
     public static function asType(string $typeName, int|null $maxOccurs, UmlClass $umlClass): array

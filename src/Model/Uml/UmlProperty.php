@@ -18,11 +18,12 @@ class UmlProperty extends UmlParameter
         $this->isReadOnly = strcasecmp((string)$xmlNode['isReadOnly'], 'true') === 0;
         // detect default value
         if (isset($xmlNode->defaultValue)) {
+            $defaultValue = (string)($xmlNode->defaultValue['value'] ?? $xmlNode->defaultValue->body ?? '');
             $this->default = match ((string)$xmlNode->defaultValue->attributes('xmi', true)?->type) {
-                'uml:LiteralInteger' => (int)(string)$xmlNode->defaultValue['value'],
-                'uml:LiteralReal' => (float)(string)$xmlNode->defaultValue['value'],
-                'uml:LiteralBoolean' => (bool)(string)$xmlNode->defaultValue['value'],
-                default => str_replace(array('&#39;', '&quote;'), '', (string)$xmlNode->defaultValue['value']),
+                'uml:LiteralInteger' => (int)$defaultValue,
+                'uml:LiteralReal' => (float)$defaultValue,
+                'uml:LiteralBoolean' => (bool)$defaultValue,
+                default => str_replace(array('&#39;', '&quote;'), '', $defaultValue),
             };
         } else {
             $this->default = null;

@@ -3880,7 +3880,8 @@
                 "Max_days_in_year": {
                     "name": "Max_days_in_year",
                     "documentation": "Maximum number of days in a year, i.e. accounting for leap years.",
-                    "type": "Integer"
+                    "type": "Integer",
+                    "value": "Days_in_leap_year"
                 },
                 "Days_in_week": {
                     "name": "Days_in_week",
@@ -4163,28 +4164,32 @@
                     "name": "lower_unbounded",
                     "documentation": "Lower boundary open (i.e. = -infinity).",
                     "is_mandatory": true,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "default": false
                 },
                 "upper_unbounded": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "upper_unbounded",
                     "documentation": "Upper boundary open (i.e. = +infinity).",
                     "is_mandatory": true,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "default": false
                 },
                 "lower_included": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "lower_included",
                     "documentation": "Lower boundary value included in range if not `_lower_unbounded_`.",
                     "is_mandatory": true,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "default": true
                 },
                 "upper_included": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "upper_included",
                     "documentation": "Upper boundary value included in range if not `_upper_unbounded_`.",
                     "is_mandatory": true,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "default": true
                 }
             },
             "invariants": {
@@ -4353,7 +4358,8 @@
                     "name": "parent_resource",
                     "documentation": "Reference to owning resource. ",
                     "is_mandatory": true,
-                    "type": "AUTHORED_RESOURCE"
+                    "type": "AUTHORED_RESOURCE",
+                    "default": ""
                 },
                 "lifecycle_state": {
                     "_type": "P_BMM_SINGLE_PROPERTY",

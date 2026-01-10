@@ -17,12 +17,14 @@ readonly class BmmSingleProperty extends AbstractBmmProperty implements JsonSeri
      * @param string $type
      * @param string|null $documentation
      * @param bool|null $isMandatory
+     * @param mixed $default
      */
     public function __construct(
         public string $name,
         public string $type,
         public ?string $documentation = null,
         public ?bool $isMandatory = false,
+        public mixed $default = null,
     )
     {
     }
@@ -32,13 +34,17 @@ readonly class BmmSingleProperty extends AbstractBmmProperty implements JsonSeri
      */
     public function jsonSerialize(): array
     {
-        return array_filter([
+        $result = array_filter([
             '_type' => 'P_BMM_SINGLE_PROPERTY',
             'name' => $this->name,
             'documentation' => $this->documentation,
             'is_mandatory' => $this->isMandatory,
             'type' => $this->type,
         ]);
+        if ($this->default !== null) {
+            $result['default'] = $this->default;
+        }
+        return $result;
     }
 
     /**
@@ -46,12 +52,17 @@ readonly class BmmSingleProperty extends AbstractBmmProperty implements JsonSeri
      */
     public function yamlSerialize(): TaggedValue
     {
-        return new TaggedValue('P_BMM_SINGLE_PROPERTY', array_filter([
+        $result = array_filter([
             'name' => $this->name,
             'documentation' => $this->documentation,
             'is_mandatory' => $this->isMandatory,
             'type' => $this->type,
-        ]));
+            'default' => $this->default,
+        ]);
+        if ($this->default !== null) {
+            $result['default'] = $this->default;
+        }
+        return new TaggedValue('P_BMM_SINGLE_PROPERTY', $result);
     }
 
     /**
@@ -67,6 +78,7 @@ readonly class BmmSingleProperty extends AbstractBmmProperty implements JsonSeri
             type: $data['type'] ?? 'Any',
             documentation: $data['documentation'] ?? null,
             isMandatory: $data['is_mandatory'] ?? false,
+            default: $data['default'] ?? null,
         );
     }
 }

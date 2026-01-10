@@ -2196,7 +2196,8 @@
                 },
                 "Max_days_in_year": {
                     "name": "Max_days_in_year",
-                    "type": "Integer"
+                    "type": "Integer",
+                    "value": "Days_in_leap_year"
                 },
                 "Nominal_days_in_year": {
                     "name": "Nominal_days_in_year",
@@ -2468,28 +2469,32 @@
                     "name": "lower_unbounded",
                     "documentation": "lower boundary open (i.e. = -infinity)",
                     "is_mandatory": true,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "default": false
                 },
                 "upper_unbounded": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "upper_unbounded",
                     "documentation": "upper boundary open (i.e. = +infinity)",
                     "is_mandatory": true,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "default": false
                 },
                 "lower_included": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "lower_included",
                     "documentation": "lower boundary value included in range if not lower_unbounded.",
                     "is_mandatory": true,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "default": true
                 },
                 "upper_included": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "upper_included",
                     "documentation": "upper boundary value included in range if not upper_unbounded.",
                     "is_mandatory": true,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "default": true
                 }
             },
             "invariants": {
@@ -2630,7 +2635,8 @@
                     "name": "parent_resource",
                     "documentation": "Reference to owning resource. ",
                     "is_mandatory": true,
-                    "type": "AUTHORED_RESOURCE"
+                    "type": "AUTHORED_RESOURCE",
+                    "default": ""
                 },
                 "custodian_namespace": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
