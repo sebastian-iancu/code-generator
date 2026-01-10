@@ -1,0 +1,11 @@
+@startuml
+
+class ASSERTION {
+  + tag : String [0..1]
+  + string_expression : String [0..1]
+  + expression : EXPR_ITEM [1]
+  + variables : List<ASSERTION_VARIABLE> [*]
+}
+
+
+@enduml

@@ -1,0 +1,8 @@
+@startuml
+
+abstract class EXPR_ITEM {
+  + type : String [1]
+}
+
+
+@enduml

@@ -1,0 +1,36 @@
+@startuml
+
+abstract class C_DOMAIN_TYPE {
+  + {abstract} standard_equivalent() : C_COMPLEX_OBJECT [1]
+}
+
+abstract class C_DEFINED_OBJECT  #whitesmoke;line:gray;line.dotted;text:gray {
+  + assumed_value : Any [0..1]
+  + {abstract} valid_value( a_value : Any [1] ) : Boolean [1]
+  + {abstract} prototype_value() : Any [1]
+  + has_assumed_value() : Boolean [1]
+  + {abstract} default_value() : Any [0..1]
+  + {abstract} any_allowed() : Boolean [1]
+}
+
+abstract class C_OBJECT  #whitesmoke;line:gray;line.dotted;text:gray {
+  + rm_type_name : String [1]
+  + occurrences : Interval<Integer> [1]
+  + node_id : String [1]
+}
+
+abstract class ARCHETYPE_CONSTRAINT  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} is_subset_of( other : ARCHETYPE_CONSTRAINT [1] ) : Boolean [1]
+  + {abstract} is_valid() : Boolean [1]
+  + path() : String [1]
+  + has_path( a_path : String [1] ) : Boolean [1]
+}
+
+ARCHETYPE_CONSTRAINT <|-- C_OBJECT
+
+C_OBJECT <|-- C_DEFINED_OBJECT
+
+C_DEFINED_OBJECT <|-- C_DOMAIN_TYPE
+
+
+@enduml

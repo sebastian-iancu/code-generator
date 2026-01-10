@@ -1,0 +1,65 @@
+@startuml
+
+class ASSERTION {
+  + tag : String [0..1]
+  + string_expression : String [0..1]
+  + expression : EXPR_ITEM [1]
+  + variables : List<ASSERTION_VARIABLE> [*]
+}
+
+class ASSERTION_VARIABLE {
+  + name : String [1]
+  + definition : String [1]
+}
+
+abstract class EXPR_ITEM {
+  + type : String [1]
+}
+
+class EXPR_LEAF {
+  + reference_type : String [1]
+  + item : Any [1]
+}
+
+abstract class EXPR_OPERATOR {
+  + precedence_overridden : Boolean [0..1]
+  + operator : OPERATOR_KIND [1]
+}
+
+class EXPR_UNARY_OPERATOR {
+  + operand : EXPR_ITEM [1]
+}
+
+class EXPR_BINARY_OPERATOR {
+  + left_operand : EXPR_ITEM [1]
+  + right_operand : EXPR_ITEM [1]
+}
+
+enum OPERATOR_KIND {
+  op_eq 
+  op_ne 
+  op_le 
+  op_lt 
+  op_ge 
+  op_gt 
+  op_matches 
+  op_not 
+  op_and 
+  op_or 
+  op_xor 
+  op_implies 
+  op_for_all 
+  op_exists 
+  op_plus 
+  op_minus 
+  op_multiply 
+  op_divide 
+  op_exponent 
+}
+
+EXPR_ITEM <|-- EXPR_LEAF
+EXPR_ITEM <|-- EXPR_OPERATOR
+EXPR_OPERATOR <|-- EXPR_UNARY_OPERATOR
+EXPR_OPERATOR <|-- EXPR_BINARY_OPERATOR
+
+@enduml

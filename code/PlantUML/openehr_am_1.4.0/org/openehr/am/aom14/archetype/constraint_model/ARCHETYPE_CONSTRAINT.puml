@@ -1,0 +1,11 @@
+@startuml
+
+abstract class ARCHETYPE_CONSTRAINT {
+  + {abstract} is_subset_of( other : ARCHETYPE_CONSTRAINT [1] ) : Boolean [1]
+  + {abstract} is_valid() : Boolean [1]
+  + path() : String [1]
+  + has_path( a_path : String [1] ) : Boolean [1]
+}
+
+
+@enduml

@@ -1,0 +1,27 @@
+@startuml
+
+class ARCHETYPE_TERM {
+  + code : String [1]
+  + items : Hash<String,String> [0..1]
+  + keys() : List<String> [*]
+}
+
+class ARCHETYPE_ONTOLOGY {
+  + term_codes : List<String> [1..*]
+  + constraint_codes : List<String> [1..*]
+  + parent_archetype : ARCHETYPE [1]
+  + terminologies_available : List<String> [*]
+  + specialisation_depth : Integer [1]
+  + term_attribute_names : List<String> [1..*]
+  + has_language( a_lang : String [1] ) : Boolean [1]
+  + has_terminology( a_terminology_id : String [1] ) : Boolean [1]
+  + has_term_code( a_code : String [1] ) : Boolean [1]
+  + has_constraint_code( a_code : String [1] ) : Boolean [1]
+  + term_definition( a_lang : String [1], a_code : String [1] ) : ARCHETYPE_TERM [1]
+  + constraint_definition( a_code : String [1], a_lang : String [1] ) : ARCHETYPE_TERM [1]
+  + term_binding( a_terminology : String [1], a_code : String [1] ) : CODE_PHRASE [1]
+  + constraint_binding( a_terminology_id : String [1], a_code : String [1] ) : String [1]
+}
+
+
+@enduml

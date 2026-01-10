@@ -1,0 +1,22 @@
+@startuml
+
+class EXPR_BINARY_OPERATOR {
+  + left_operand : EXPR_ITEM [1]
+  + right_operand : EXPR_ITEM [1]
+}
+
+abstract class EXPR_OPERATOR  #whitesmoke;line:gray;line.dotted;text:gray {
+  + precedence_overridden : Boolean [0..1]
+  + operator : OPERATOR_KIND [1]
+}
+
+abstract class EXPR_ITEM  #whitesmoke;line:gray;line.dotted;text:gray {
+  + type : String [1]
+}
+
+EXPR_ITEM <|-- EXPR_OPERATOR
+
+EXPR_OPERATOR <|-- EXPR_BINARY_OPERATOR
+
+
+@enduml

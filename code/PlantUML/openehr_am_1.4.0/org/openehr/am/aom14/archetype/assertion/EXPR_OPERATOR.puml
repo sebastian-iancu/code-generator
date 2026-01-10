@@ -1,0 +1,15 @@
+@startuml
+
+abstract class EXPR_OPERATOR {
+  + precedence_overridden : Boolean [0..1]
+  + operator : OPERATOR_KIND [1]
+}
+
+abstract class EXPR_ITEM  #whitesmoke;line:gray;line.dotted;text:gray {
+  + type : String [1]
+}
+
+EXPR_ITEM <|-- EXPR_OPERATOR
+
+
+@enduml

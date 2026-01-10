@@ -1,0 +1,93 @@
+@startuml
+
+abstract class ARCHETYPE_CONSTRAINT {
+  + {abstract} is_subset_of( other : ARCHETYPE_CONSTRAINT [1] ) : Boolean [1]
+  + {abstract} is_valid() : Boolean [1]
+  + path() : String [1]
+  + has_path( a_path : String [1] ) : Boolean [1]
+}
+
+abstract class C_OBJECT {
+  + rm_type_name : String [1]
+  + occurrences : Interval<Integer> [1]
+  + node_id : String [1]
+}
+
+abstract class C_ATTRIBUTE {
+  + rm_attribute_name : String [1]
+  + existence : Interval<Integer> [1]
+  + children : List<C_OBJECT> [*]
+  + any_allowed() : Boolean [1]
+}
+
+abstract class C_DEFINED_OBJECT {
+  + assumed_value : Any [0..1]
+  + {abstract} valid_value( a_value : Any [1] ) : Boolean [1]
+  + {abstract} prototype_value() : Any [1]
+  + has_assumed_value() : Boolean [1]
+  + {abstract} default_value() : Any [0..1]
+  + {abstract} any_allowed() : Boolean [1]
+}
+
+class CARDINALITY {
+  + interval : Interval<Integer> [1]
+  + is_ordered : Boolean [1]
+  + is_unique : Boolean [1]
+  + is_bag() : Boolean [1]
+  + is_list() : Boolean [1]
+  + is_set() : Boolean [1]
+}
+
+class ARCHETYPE_INTERNAL_REF {
+  + target_path : String [1]
+}
+
+class ARCHETYPE_SLOT {
+  + includes : List<ASSERTION> [*]
+  + excludes : List<ASSERTION> [*]
+}
+
+class C_SINGLE_ATTRIBUTE {
+  + alternatives() : List<C_OBJECT> [*]
+}
+
+class CONSTRAINT_REF {
+  + reference : String [1]
+}
+
+class C_MULTIPLE_ATTRIBUTE {
+  + cardinality : CARDINALITY [1]
+  + members() : List<C_OBJECT> [*]
+}
+
+abstract class C_DOMAIN_TYPE {
+  + {abstract} standard_equivalent() : C_COMPLEX_OBJECT [1]
+}
+
+abstract class C_REFERENCE_OBJECT {
+}
+
+class C_PRIMITIVE_OBJECT {
+  + item : C_PRIMITIVE [1]
+  + any_allowed() : Boolean [1]
+}
+
+class C_COMPLEX_OBJECT {
+  + attributes : List<C_ATTRIBUTE> [*]
+  + any_allowed() : Boolean [1]
+}
+
+ARCHETYPE_CONSTRAINT <|-- C_OBJECT
+ARCHETYPE_CONSTRAINT <|-- C_ATTRIBUTE
+C_OBJECT <|-- C_DEFINED_OBJECT
+C_REFERENCE_OBJECT <|-- ARCHETYPE_INTERNAL_REF
+C_REFERENCE_OBJECT <|-- ARCHETYPE_SLOT
+C_ATTRIBUTE <|-- C_SINGLE_ATTRIBUTE
+C_REFERENCE_OBJECT <|-- CONSTRAINT_REF
+C_ATTRIBUTE <|-- C_MULTIPLE_ATTRIBUTE
+C_DEFINED_OBJECT <|-- C_DOMAIN_TYPE
+C_OBJECT <|-- C_REFERENCE_OBJECT
+C_DEFINED_OBJECT <|-- C_PRIMITIVE_OBJECT
+C_DEFINED_OBJECT <|-- C_COMPLEX_OBJECT
+
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+
+class ARCHETYPE_TERM {
+  + code : String [1]
+  + items : Hash<String,String> [0..1]
+  + keys() : List<String> [*]
+}
+
+
+@enduml

@@ -19,7 +19,7 @@ class P_C_REAL {
 }
 
 abstract class P_C_ORDERED <T> {
-  + constraint : List<Interval> [1..*]
+  + constraint : List<Interval<T>> [1..*]
 }
 
 class P_C_TERMINOLOGY_CODE {

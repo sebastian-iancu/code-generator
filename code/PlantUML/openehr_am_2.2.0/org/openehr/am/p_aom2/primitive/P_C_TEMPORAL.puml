@@ -5,7 +5,7 @@ abstract class P_C_TEMPORAL <T> {
 }
 
 abstract class P_C_ORDERED <T>  #whitesmoke;line:gray;line.dotted;text:gray {
-  + constraint : List<Interval> [1..*]
+  + constraint : List<Interval<T>> [1..*]
 }
 
 abstract class P_C_PRIMITIVE_OBJECT  #whitesmoke;line:gray;line.dotted;text:gray {

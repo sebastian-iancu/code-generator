@@ -1,0 +1,28 @@
+@startuml
+
+class ARCHETYPE {
+  + definition : C_COMPLEX_OBJECT [1]
+  + ontology : ARCHETYPE_ONTOLOGY [1]
+  + adl_version : String [0..1]
+  + archetype_id : ARCHETYPE_ID [1]
+  + uid : HIER_OBJECT_ID [0..1]
+  + concept : String [1]
+  + parent_archetype_id : ARCHETYPE_ID [0..1]
+  + invariants : List<ASSERTION> [*]
+  + concept_name( a_lang : String [1] ) : String [1]
+  + physical_paths() : List<String> [1..*]
+  + logical_paths( lang : String [1] ) : List<String> [1..*]
+  + specialisation_depth() : Integer [1]
+  + is_specialised() : Boolean [1]
+  + is_valid() : Boolean [1]
+  + node_ids_valid() : Boolean [1]
+  + previous_version() : String [0..1]
+  + internal_references_valid() : Boolean [1]
+  + constraint_references_valid() : Boolean [1]
+  + short_concept_name() : String [1]
+  + version() : String [1]
+}
+
+AUTHORED_RESOURCE <|-- ARCHETYPE
+
+@enduml

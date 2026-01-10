@@ -1,0 +1,30 @@
+@startuml
+
+class CONSTRAINT_REF {
+  + reference : String [1]
+}
+
+abstract class C_REFERENCE_OBJECT  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+abstract class C_OBJECT  #whitesmoke;line:gray;line.dotted;text:gray {
+  + rm_type_name : String [1]
+  + occurrences : Interval<Integer> [1]
+  + node_id : String [1]
+}
+
+abstract class ARCHETYPE_CONSTRAINT  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} is_subset_of( other : ARCHETYPE_CONSTRAINT [1] ) : Boolean [1]
+  + {abstract} is_valid() : Boolean [1]
+  + path() : String [1]
+  + has_path( a_path : String [1] ) : Boolean [1]
+}
+
+ARCHETYPE_CONSTRAINT <|-- C_OBJECT
+
+C_OBJECT <|-- C_REFERENCE_OBJECT
+
+C_REFERENCE_OBJECT <|-- CONSTRAINT_REF
+
+
+@enduml

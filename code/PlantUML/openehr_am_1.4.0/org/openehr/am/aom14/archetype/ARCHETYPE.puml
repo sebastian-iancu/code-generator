@@ -1,0 +1,40 @@
+@startuml
+
+class ARCHETYPE {
+  + definition : C_COMPLEX_OBJECT [1]
+  + ontology : ARCHETYPE_ONTOLOGY [1]
+  + adl_version : String [0..1]
+  + archetype_id : ARCHETYPE_ID [1]
+  + uid : HIER_OBJECT_ID [0..1]
+  + concept : String [1]
+  + parent_archetype_id : ARCHETYPE_ID [0..1]
+  + invariants : List<ASSERTION> [*]
+  + concept_name( a_lang : String [1] ) : String [1]
+  + physical_paths() : List<String> [1..*]
+  + logical_paths( lang : String [1] ) : List<String> [1..*]
+  + specialisation_depth() : Integer [1]
+  + is_specialised() : Boolean [1]
+  + is_valid() : Boolean [1]
+  + node_ids_valid() : Boolean [1]
+  + previous_version() : String [0..1]
+  + internal_references_valid() : Boolean [1]
+  + constraint_references_valid() : Boolean [1]
+  + short_concept_name() : String [1]
+  + version() : String [1]
+}
+
+abstract class AUTHORED_RESOURCE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + original_language : Terminology_code [1]
+  + is_controlled : Boolean [0..1]
+  + description : RESOURCE_DESCRIPTION [0..1]
+  + uid : UUID [0..1]
+  + annotations : RESOURCE_ANNOTATIONS [0..1]
+  + translations : Hash<String,TRANSLATION_DETAILS> [0..1]
+  + current_revision() : String [1]
+  + languages_available() : List<String> [1..*]
+}
+
+AUTHORED_RESOURCE <|-- ARCHETYPE
+
+
+@enduml

@@ -1,0 +1,26 @@
+@startuml
+
+class C_SINGLE_ATTRIBUTE {
+  + alternatives() : List<C_OBJECT> [*]
+}
+
+abstract class C_ATTRIBUTE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + rm_attribute_name : String [1]
+  + existence : Interval<Integer> [1]
+  + children : List<C_OBJECT> [*]
+  + any_allowed() : Boolean [1]
+}
+
+abstract class ARCHETYPE_CONSTRAINT  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} is_subset_of( other : ARCHETYPE_CONSTRAINT [1] ) : Boolean [1]
+  + {abstract} is_valid() : Boolean [1]
+  + path() : String [1]
+  + has_path( a_path : String [1] ) : Boolean [1]
+}
+
+ARCHETYPE_CONSTRAINT <|-- C_ATTRIBUTE
+
+C_ATTRIBUTE <|-- C_SINGLE_ATTRIBUTE
+
+
+@enduml

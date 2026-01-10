@@ -1,0 +1,23 @@
+@startuml
+
+class C_TIME {
+  + minute_validity : VALIDITY_KIND [0..1]
+  + second_validity : VALIDITY_KIND [0..1]
+  + millisecond_validity : VALIDITY_KIND [0..1]
+  + timezone_validity : VALIDITY_KIND [0..1]
+  + range : Interval<Iso8601_time> [0..1]
+  + assumed_value : Iso8601_time [0..1]
+  + validity_is_range() : Boolean [1]
+}
+
+abstract class C_PRIMITIVE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + assumed_value : Any [0..1]
+  + {abstract} default_value() : Any [1]
+  + {abstract} has_assumed_value() : Boolean [1]
+  + {abstract} valid_value( a_value : Any [1] ) : Boolean [1]
+}
+
+C_PRIMITIVE <|-- C_TIME
+
+
+@enduml

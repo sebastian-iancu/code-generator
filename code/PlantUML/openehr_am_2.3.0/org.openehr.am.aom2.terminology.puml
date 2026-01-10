@@ -2,9 +2,8 @@
 
 class ARCHETYPE_TERM {
   + code : String [1]
-  + text : String [1]
-  + description : String [1]
-  + other_items : Hash<String,String> [0..1]
+  + items : Hash<String,String> [0..1]
+  + keys() : List<String> [*]
 }
 
 abstract class TERMINOLOGY_RELATION {

@@ -1,0 +1,9 @@
+@startuml
+
+class C_QUANTITY_ITEM {
+  + magnitude : Interval<Real> [1]
+  + units : String [0..1]
+}
+
+
+@enduml

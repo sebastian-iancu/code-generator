@@ -1,0 +1,9 @@
+@startuml
+
+class ASSERTION_VARIABLE {
+  + name : String [1]
+  + definition : String [1]
+}
+
+
+@enduml

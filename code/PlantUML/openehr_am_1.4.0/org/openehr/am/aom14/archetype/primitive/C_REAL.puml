@@ -1,0 +1,19 @@
+@startuml
+
+class C_REAL {
+  + list : List<Real> [*]
+  + range : Interval<Real> [0..1]
+  + assumed_value : Real [0..1]
+}
+
+abstract class C_PRIMITIVE  #whitesmoke;line:gray;line.dotted;text:gray {
+  + assumed_value : Any [0..1]
+  + {abstract} default_value() : Any [1]
+  + {abstract} has_assumed_value() : Boolean [1]
+  + {abstract} valid_value( a_value : Any [1] ) : Boolean [1]
+}
+
+C_PRIMITIVE <|-- C_REAL
+
+
+@enduml

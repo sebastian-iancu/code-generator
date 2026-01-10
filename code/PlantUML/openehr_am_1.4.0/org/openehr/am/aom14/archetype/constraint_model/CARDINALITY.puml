@@ -1,0 +1,13 @@
+@startuml
+
+class CARDINALITY {
+  + interval : Interval<Integer> [1]
+  + is_ordered : Boolean [1]
+  + is_unique : Boolean [1]
+  + is_bag() : Boolean [1]
+  + is_list() : Boolean [1]
+  + is_set() : Boolean [1]
+}
+
+
+@enduml

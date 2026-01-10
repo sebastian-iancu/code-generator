@@ -1,0 +1,32 @@
+@startuml
+
+class C_ORDINAL {
+  + list : List<ORDINAL> [*]
+}
+
+class C_CODED_TEXT {
+  + terminology : String [1]
+  + code_list : List<String> [0..1]
+  + reference : String [0..1]
+}
+
+class C_QUANTITY {
+  + property : String [1]
+  + list : List<C_QUANTITY_ITEM> [*]
+}
+
+class C_QUANTITY_ITEM {
+  + magnitude : Interval<Real> [1]
+  + units : String [0..1]
+}
+
+class ORDINAL {
+  + symbol : CODE_PHRASE [1]
+  + value : Integer [1]
+}
+
+C_DOMAIN_TYPE <|-- C_ORDINAL
+C_DOMAIN_TYPE <|-- C_CODED_TEXT
+C_DOMAIN_TYPE <|-- C_QUANTITY
+
+@enduml

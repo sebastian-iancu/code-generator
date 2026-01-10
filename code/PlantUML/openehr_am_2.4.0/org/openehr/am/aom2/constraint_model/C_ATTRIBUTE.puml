@@ -1,36 +1,27 @@
 @startuml
 
-abstract class C_ATTRIBUTE {
+class C_ATTRIBUTE {
   + rm_attribute_name : String [1]
-  + existence : Interval<Integer> [1]
+  + existence : Multiplicity_interval [0..1]
   + children : List<C_OBJECT> [*]
+  + differential_path : String [0..1]
+  + cardinality : Cardinality [0..1]
+  + is_multiple : Boolean [1]
   + any_allowed() : Boolean [1]
+  + is_mandatory() : Boolean [1]
+  + rm_attribute_path() : String [1]
+  + is_single() : Boolean [1]
+  + c_congruent_to( other : ARCHETYPE_CONSTRAINT [1] ) : Boolean [1]
+  + c_conforms_to( other : ARCHETYPE_CONSTRAINT [1], rmcc : FUNCTION<> [1] ) : Boolean [1]
+  + is_prohibited() : Boolean [1]
 }
 
 abstract class ARCHETYPE_CONSTRAINT  #whitesmoke;line:gray;line.dotted;text:gray {
-  + parent : ARCHETYPE_CONSTRAINT [0..1]
-  + soc_parent : C_SECOND_ORDER [0..1]
-  + {abstract} is_prohibited() : Boolean [1]
-  + has_path( a_path : String [1] ) : Boolean [1]
+  + {abstract} is_subset_of( other : ARCHETYPE_CONSTRAINT [1] ) : Boolean [1]
+  + {abstract} is_valid() : Boolean [1]
   + path() : String [1]
-  + {abstract} c_conforms_to( other : ARCHETYPE_CONSTRAINT [1], rmcc : FUNCTION<> [1] ) : Boolean [1]
-  + {abstract} c_congruent_to( other : ARCHETYPE_CONSTRAINT [1] ) : Boolean [1]
-  + is_second_order_constrained() : Boolean [1]
-  + is_root() : Boolean [1]
-  + is_leaf() : Boolean [1]
+  + has_path( a_path : String [1] ) : Boolean [1]
 }
-
-class ADL_CODE_DEFINITIONS  #whitesmoke;line:gray;line.dotted;text:gray {
-  + codes_conformant( a_child_code : String [1], a_parent_code : String [1] ) : Boolean [1]
-  + is_adl_code( a_code : String [1] ) : Boolean [1]
-  + is_id_code( a_code : String [1] ) : Boolean [1]
-  + is_value_code( a_code : String [1] ) : Boolean [1]
-  + is_value_set_code( a_code : String [1] ) : Boolean [1]
-  + is_redefined_code( a_code : String [1] ) : Boolean [1]
-  + code_exists_at_level( a-code : String [1], a_level : Integer [1] ) : Boolean [1]
-}
-
-ADL_CODE_DEFINITIONS <|-- ARCHETYPE_CONSTRAINT
 
 ARCHETYPE_CONSTRAINT <|-- C_ATTRIBUTE
 

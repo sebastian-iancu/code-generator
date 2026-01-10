@@ -1,0 +1,15 @@
+@startuml
+
+class EXPR_LEAF {
+  + reference_type : String [1]
+  + item : Any [1]
+}
+
+abstract class EXPR_ITEM  #whitesmoke;line:gray;line.dotted;text:gray {
+  + type : String [1]
+}
+
+EXPR_ITEM <|-- EXPR_LEAF
+
+
+@enduml
