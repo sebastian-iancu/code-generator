@@ -36,6 +36,7 @@ class BmmJsonSplitJson extends Command
             foreach ($latest as $filename) {
                 $reader->read(basename($filename));
             }
+            $reader->read('openehr_am_1.4.0');
             $generator = new CodeGenerator($reader);
             $generator->addWriter(new BmmJsonSplitWriter());
             $generator->generate();

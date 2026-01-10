@@ -43,12 +43,16 @@ class BmmJsonSplitWriter extends AbstractWriter
     private function writePackage(BmmPackage $package, BmmSchema $schema, string $namePrefix): void
     {
         if (!count($package->classes)) {
-            self::log('WARN: Empty package %s.', $package->name);
+            self::log('WARN: Empty package [%s] found.', $package->name);
             return;
         }
         $packagePrefixName = 'org.openehr.' . strtolower($schema->schemaName) . '.';
         $packageName = $packagePrefixName . str_replace($packagePrefixName, '', $namePrefix . $package->name);
-        $outputDir = self::DIR . strtoupper($schema->schemaName) . '/';
+        if (($schema->schemaName === 'am')) {
+            $outputDir = self::DIR . 'AM' . (str_starts_with($schema->rmRelease, '2') ? '2' : '') . '/';
+        } else {
+            $outputDir = self::DIR . strtoupper($schema->schemaName) . '/';
+        }
         $this->assureOutputDir($outputDir);
         foreach ($package->classes as $className) {
             /** @var AbstractBmmClass $class */
