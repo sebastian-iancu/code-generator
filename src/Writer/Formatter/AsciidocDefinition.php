@@ -25,6 +25,16 @@ use OpenEHR\Tools\CodeGen\Model\Bmm\Globals;
 
 class AsciidocDefinition
 {
+    public const array TEXT_REPLACEMENT = [
+        '|' => '&#124;',
+        '"<="' => '"\<="',
+        ' <=' => ' \<=',
+        '(<=)' => '(\<=)',
+        '".*"' => '".&#42;"',
+        '/.*/' => '/.&#42;/',
+        "'*'" => "'&#42;'",
+    ];
+
     public function __construct(private readonly bool $legacyFormat = false)
     {
     }
@@ -301,6 +311,10 @@ class AsciidocDefinition
             $type = $this->formatType($property->type, $prefix);
         }
         $card = $minOccurs . '..' . $maxOccurs;
+        if (isset($property->default)) {
+            $default = is_bool($property->default) ? ($property->default ? 'true' : 'false') : $property->default;
+            $type .= " +\n" . '{default{nbsp}={nbsp}' . $default . '}';
+        }
         $signature = '*' . $property->name . '*: `' . $type . '`';
         return [$card, $signature];
     }
@@ -397,28 +411,27 @@ class AsciidocDefinition
         $packageQname = Globals::getClassPackageQName($type);
         // todo adapt this once all pages are in Antora
         if ($packageQname && preg_match('/^[\w.]+\.org\.openehr\.(\w+)\.(\w+)(?:\.\w+){0,2}$/', $packageQname, $m) === 1) {
+            $class = Globals::getClass($type);
+            if ($class instanceof BmmInterface) {
+                $classType = 'interface';
+            } elseif ($class instanceof BmmEnumerationInteger || $class instanceof BmmEnumerationString) {
+                $classType = 'enumeration';
+            } else {
+                $classType = 'class';
+            }
             if (preg_match('/^org\.openehr\.(\w+)\.(\w+)(?:\.\w+){0,2}$/', $prefix, $p) && $m[2] === $p[2]) {
                 // type is on the same spec page, an example format is '<<_boolean_class,Boolean>>'
-                $ref = strtolower($type);
-                $class = Globals::getClass($type);
-                if ($class instanceof BmmInterface) {
-                    $classType = 'interface';
-                } elseif ($class instanceof BmmEnumerationInteger || $class instanceof BmmEnumerationString) {
-                    $classType = 'enumeration';
-                } else {
-                    $classType = 'class';
-                }
-                return '<<_' . $ref . '_' . $classType . ',' . $type . '>>';
+                return '<<_' . strtolower($type) . '_' . $classType . ',' . $type . '>>';
             }
             // an example format is 'link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]'
-            return 'link:/releases/' . strtoupper($m[1]) . '/{' . $m[1] . '_release}/' . $m[2] . '.html#_' . strtolower($type) . '_class[' . $type . '^]';
+            return 'link:/releases/' . strtoupper($m[1]) . '/{' . $m[1] . '_release}/' . $m[2] . '.html#_' . strtolower($type) . '_' . $classType . '[' . $type . '^]';
         }
         return 'link:/classes/' . $type . '[' . $type . '] '.$packageQname;
     }
 
     public function formatText(string $text): string
     {
-        return str_replace(['|', '"<="', ' <='], ['&#124;', '"\<="', ' \<='], trim($text));
+        return str_replace(array_keys(self::TEXT_REPLACEMENT), array_values(self::TEXT_REPLACEMENT), trim($text));
     }
 
     public function formatPropertyOverride(BmmClass $class, AbstractBmmProperty $property): string

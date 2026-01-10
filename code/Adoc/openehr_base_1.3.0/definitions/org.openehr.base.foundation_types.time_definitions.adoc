@@ -43,7 +43,7 @@ h|*1..1*
 a|Calendar days in a standard leap year, i.e. 366.
 
 h|*1..1*
-|*Max_days_in_year*: `<<_integer_class,Integer>>{nbsp}={nbsp}`
+|*Max_days_in_year*: `<<_integer_class,Integer>>{nbsp}={nbsp}Days_in_leap_year`
 a|Maximum number of days in a year, i.e. accounting for leap years.
 
 h|*1..1*

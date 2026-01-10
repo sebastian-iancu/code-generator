@@ -20,7 +20,8 @@ h|*1..1*
 a|Type, directly from the name of the reference, e.g. `{SOME_TYPE}`.
 
 h|*1..1*
-|*is_mutable*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
+|*is_mutable*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^] +
+{default{nbsp}={nbsp}false}`
 a|
 
 h|*Functions*

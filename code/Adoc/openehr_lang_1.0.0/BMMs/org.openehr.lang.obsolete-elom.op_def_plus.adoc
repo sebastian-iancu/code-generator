@@ -7,7 +7,8 @@
             "_type": "P_BMM_SINGLE_PROPERTY",
             "name": "name",
             "is_mandatory": true,
-            "type": "String"
+            "type": "String",
+            "default": "\"plus\""
         },
         "symbols": {
             "_type": "P_BMM_CONTAINER_PROPERTY",

@@ -14,15 +14,18 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*is_im_runtime*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
+|*is_im_runtime*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^] +
+{default{nbsp}={nbsp}false}`
 a|True if this property is marked with info model `_im_runtime_` property.
 
 h|*0..1*
-|*is_im_infrastructure*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
+|*is_im_infrastructure*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^] +
+{default{nbsp}={nbsp}false}`
 a|True if this property was marked with info model `_im_infrastructure_` flag.
 
 h|*0..1*
-|*is_composition*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
+|*is_composition*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^] +
+{default{nbsp}={nbsp}false}`
 a|True if this property instance is a compositional sub-part of the owning class instance. Equivalent to 'composition' in UML associations (but missing from UML properties without associations) and also 'cascade-delete' semantics in ER schemas.
 
 h|*Functions*

@@ -35,7 +35,7 @@ h|*1..1*
 a|The full numeric version of this archetype consisting of 3 parts, e.g. 1.8.2. The archetype_hrid feature includes only the major version.
 
 h|*1..1*
-|*version_status*: `link:/releases/BASE/{base_release}/base_types.html#_version_status_class[VERSION_STATUS^]`
+|*version_status*: `link:/releases/BASE/{base_release}/base_types.html#_version_status_enumeration[VERSION_STATUS^]`
 a|The status of the version, i.e. released, release_candidate etc.
 
 h|*1..1*

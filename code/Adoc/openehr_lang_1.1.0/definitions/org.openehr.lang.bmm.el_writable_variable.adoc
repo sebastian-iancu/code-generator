@@ -19,6 +19,7 @@ a|Variable definition to which this reference refers.
 
 h|*1..1 +
 (effected)*
-|*is_writable*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
+|*is_writable*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^] +
+{default{nbsp}={nbsp}true}`
 a|Defined to return True in all cases.
 |===

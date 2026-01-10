@@ -8,7 +8,8 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*name*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
+|*name*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^] +
+{default{nbsp}={nbsp}"plus"}`
 a|
 
 h|*0..1*

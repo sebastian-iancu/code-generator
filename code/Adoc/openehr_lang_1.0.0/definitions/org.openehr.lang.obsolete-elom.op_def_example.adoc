@@ -14,7 +14,8 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*identifier*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`
+|*identifier*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^] +
+{default{nbsp}={nbsp}"xxx"}`
 a|
 
 h|*0..1*

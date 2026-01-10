@@ -31,7 +31,8 @@ h|*0..1*
 a|Additional non language-senstive resource meta-data, as a list of name/value pairs.
 
 h|*1..1*
-|*parent_resource*: `link:/releases/BASE/{base_release}/resource.html#_authored_resource_class[AUTHORED_RESOURCE^]`
+|*parent_resource*: `link:/releases/BASE/{base_release}/resource.html#_authored_resource_class[AUTHORED_RESOURCE^] +
+{default{nbsp}={nbsp}0..1}`
 a|Reference to owning resource.
 
 h|*1..1*

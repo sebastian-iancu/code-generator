@@ -19,7 +19,8 @@
             "name": "is_writable",
             "documentation": "Defined to return False.",
             "is_mandatory": true,
-            "type": "Boolean"
+            "type": "Boolean",
+            "default": false
         }
     }
 }

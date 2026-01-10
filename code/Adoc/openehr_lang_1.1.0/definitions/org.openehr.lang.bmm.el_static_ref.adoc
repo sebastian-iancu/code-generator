@@ -19,6 +19,7 @@ a|Constant definition (within class).
 
 h|*1..1 +
 (effected)*
-|*is_writable*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]`
+|*is_writable*: `link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^] +
+{default{nbsp}={nbsp}false}`
 a|Defined to return False.
 |===

@@ -14,31 +14,31 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*month_validity*: `link:/releases/BASE/{base_release}/base_types.html#_validity_kind_class[VALIDITY_KIND^]`
+|*month_validity*: `link:/releases/BASE/{base_release}/base_types.html#_validity_kind_enumeration[VALIDITY_KIND^]`
 a|Validity of month in constrained date.
 
 h|*0..1*
-|*day_validity*: `link:/releases/BASE/{base_release}/base_types.html#_validity_kind_class[VALIDITY_KIND^]`
+|*day_validity*: `link:/releases/BASE/{base_release}/base_types.html#_validity_kind_enumeration[VALIDITY_KIND^]`
 a|Validity of day in constrained date.
 
 h|*0..1*
-|*hour_validity*: `link:/releases/BASE/{base_release}/base_types.html#_validity_kind_class[VALIDITY_KIND^]`
+|*hour_validity*: `link:/releases/BASE/{base_release}/base_types.html#_validity_kind_enumeration[VALIDITY_KIND^]`
 a|Validity of hour in constrained time.
 
 h|*0..1*
-|*minute_validity*: `link:/releases/BASE/{base_release}/base_types.html#_validity_kind_class[VALIDITY_KIND^]`
+|*minute_validity*: `link:/releases/BASE/{base_release}/base_types.html#_validity_kind_enumeration[VALIDITY_KIND^]`
 a|Validity of minute in constrained time.
 
 h|*0..1*
-|*second_validity*: `link:/releases/BASE/{base_release}/base_types.html#_validity_kind_class[VALIDITY_KIND^]`
+|*second_validity*: `link:/releases/BASE/{base_release}/base_types.html#_validity_kind_enumeration[VALIDITY_KIND^]`
 a|Validity of second in constrained time.
 
 h|*0..1*
-|*millisecond_valdity*: `link:/releases/BASE/{base_release}/base_types.html#_validity_kind_class[VALIDITY_KIND^]`
+|*millisecond_valdity*: `link:/releases/BASE/{base_release}/base_types.html#_validity_kind_enumeration[VALIDITY_KIND^]`
 a|Validity of millisecond in constrained time.
 
 h|*0..1*
-|*timezone_valdity*: `link:/releases/BASE/{base_release}/base_types.html#_validity_kind_class[VALIDITY_KIND^]`
+|*timezone_valdity*: `link:/releases/BASE/{base_release}/base_types.html#_validity_kind_enumeration[VALIDITY_KIND^]`
 a|Validity of timezone in constrained date.
 
 h|*0..1*

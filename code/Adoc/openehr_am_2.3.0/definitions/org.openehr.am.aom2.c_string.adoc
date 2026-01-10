@@ -17,7 +17,7 @@ h|*0..1*
 |*constraint*: `link:/releases/BASE/{base_release}/foundation_types.html#_list_class[List^]<link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]>`
 a|String constraint - a list of literal strings and / or regular expression strings delimited by the ‘/’ character.
 
-To represent no constraint, use an empty list, or alternatively, a regex 'any' pattern, i.e. `/.*/`.
+To represent no constraint, use an empty list, or alternatively, a regex 'any' pattern, i.e. `/.&#42;/`.
 
 h|*0..1*
 |*default_value*: `link:/releases/BASE/{base_release}/foundation_types.html#_string_class[String^]`

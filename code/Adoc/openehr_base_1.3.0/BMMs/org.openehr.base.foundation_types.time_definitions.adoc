@@ -55,7 +55,8 @@
         "Max_days_in_year": {
             "name": "Max_days_in_year",
             "documentation": "Maximum number of days in a year, i.e. accounting for leap years.",
-            "type": "Integer"
+            "type": "Integer",
+            "value": "Days_in_leap_year"
         },
         "Days_in_week": {
             "name": "Days_in_week",
