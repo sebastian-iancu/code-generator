@@ -130,6 +130,7 @@ primitive_types:
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
+            documentation: 'Other object for comparison.'
             type: Any
         result: !P_BMM_SIMPLE_TYPE
           type: Boolean
@@ -142,6 +143,7 @@ primitive_types:
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
+            documentation: 'Other object for comparison.'
             type: Any
         result: !P_BMM_SIMPLE_TYPE
           type: Boolean
@@ -447,6 +449,7 @@ primitive_types:
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
+            documentation: 'Other object for comparison.'
             type: Integer
         result: !P_BMM_SIMPLE_TYPE
           type: Boolean
@@ -459,6 +462,7 @@ primitive_types:
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
+            documentation: 'Other object for comparison.'
             type: Integer
         result: !P_BMM_SIMPLE_TYPE
           type: Boolean
@@ -552,6 +556,7 @@ primitive_types:
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
+            documentation: 'Other object for comparison.'
             type: Double
         result: !P_BMM_SIMPLE_TYPE
           type: Boolean
@@ -564,6 +569,7 @@ primitive_types:
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
+            documentation: 'Other object for comparison.'
             type: Double
         result: !P_BMM_SIMPLE_TYPE
           type: Boolean
@@ -900,6 +906,7 @@ primitive_types:
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
+            documentation: 'Other object for comparison.'
             type: Real
         result: !P_BMM_SIMPLE_TYPE
           type: Boolean
@@ -912,6 +919,7 @@ primitive_types:
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
+            documentation: 'Other object for comparison.'
             type: Real
         result: !P_BMM_SIMPLE_TYPE
           type: Boolean
@@ -1012,6 +1020,7 @@ primitive_types:
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
+            documentation: 'Other object for comparison.'
             type: Integer64
         result: !P_BMM_SIMPLE_TYPE
           type: Boolean
@@ -1024,6 +1033,7 @@ primitive_types:
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
+            documentation: 'Other object for comparison.'
             type: Integer64
         result: !P_BMM_SIMPLE_TYPE
           type: Boolean
@@ -2604,6 +2614,7 @@ class_definitions:
         name: Max_days_in_year
         documentation: 'Maximum number of days in a year, i.e. accounting for leap years.'
         type: Integer
+        value: Days_in_leap_year
       Days_in_week:
         name: Days_in_week
         documentation: 'Number of days in a week.'
@@ -2802,6 +2813,14 @@ class_definitions:
         parameters:
           s: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: s
+            documentation: |-
+              String is a valid ISO 8601 duration, i.e. takes the form:
+
+              * `P[nnY][nnM][nnW][nnD][T[nnH][nnM][nnS]]`
+
+              Where each `nn` represents a number of years, months, etc. `nnW` represents a number of 7- day weeks.
+
+              NOTE: allowing the `W` designator in the same expression as other designators is an exception to the published standard, but necessary in clinical information (typically for representing pregnancy duration).
             type: String
         result: !P_BMM_SIMPLE_TYPE
           type: Boolean
@@ -2831,21 +2850,25 @@ class_definitions:
         documentation: 'Lower boundary open (i.e. = -infinity).'
         is_mandatory: true
         type: Boolean
+        default: false
       upper_unbounded: !P_BMM_SINGLE_PROPERTY
         name: upper_unbounded
         documentation: 'Upper boundary open (i.e. = +infinity).'
         is_mandatory: true
         type: Boolean
+        default: false
       lower_included: !P_BMM_SINGLE_PROPERTY
         name: lower_included
         documentation: 'Lower boundary value included in range if not `_lower_unbounded_`.'
         is_mandatory: true
         type: Boolean
+        default: true
       upper_included: !P_BMM_SINGLE_PROPERTY
         name: upper_included
         documentation: 'Upper boundary value included in range if not `_upper_unbounded_`.'
         is_mandatory: true
         type: Boolean
+        default: true
     invariants:
       Inv_point: 'lower = upper'
   CODE_PHRASE:
@@ -2969,6 +2992,7 @@ class_definitions:
         documentation: 'Reference to owning resource. '
         is_mandatory: true
         type: AUTHORED_RESOURCE
+        default: ''
       lifecycle_state: !P_BMM_SINGLE_PROPERTY
         name: lifecycle_state
         documentation: 'Lifecycle state of the resource, typically including states such as: initial, in_development, in_review, published, superseded, obsolete. '

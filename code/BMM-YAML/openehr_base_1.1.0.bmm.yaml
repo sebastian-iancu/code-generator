@@ -129,6 +129,7 @@ primitive_types:
         parameters:
           other: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: other
+            documentation: 'Reference equality.'
             type: Any
         result: !P_BMM_SIMPLE_TYPE
           type: Boolean
@@ -1551,6 +1552,7 @@ class_definitions:
       Max_days_in_year:
         name: Max_days_in_year
         type: Integer
+        value: Days_in_leap_year
       Nominal_days_in_year:
         name: Nominal_days_in_year
         documentation: 'Used for conversions of durations containing years to days and / or seconds.'
@@ -1739,6 +1741,14 @@ class_definitions:
         parameters:
           s: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: s
+            documentation: |-
+              String is a valid ISO 8601 duration, i.e. takes the form:
+
+              * `P[nnY][nnM][nnW][nnD][T[nnH][nnM][nnS]]`
+
+              Where each `nn` represents a number of years, months, etc. `nnW` represents a number of 7- day weeks.
+
+              NOTE: allowing the `W` designator in the same expression as other designators is an exception to the published standard, but necessary in clinical information (typically for representing pregnancy duration).
             type: String
         result: !P_BMM_SIMPLE_TYPE
           type: Boolean
@@ -1768,21 +1778,25 @@ class_definitions:
         documentation: 'lower boundary open (i.e. = -infinity)'
         is_mandatory: true
         type: Boolean
+        default: false
       upper_unbounded: !P_BMM_SINGLE_PROPERTY
         name: upper_unbounded
         documentation: 'upper boundary open (i.e. = +infinity)'
         is_mandatory: true
         type: Boolean
+        default: false
       lower_included: !P_BMM_SINGLE_PROPERTY
         name: lower_included
         documentation: 'lower boundary value included in range if not lower_unbounded.'
         is_mandatory: true
         type: Boolean
+        default: true
       upper_included: !P_BMM_SINGLE_PROPERTY
         name: upper_included
         documentation: 'upper boundary value included in range if not upper_unbounded.'
         is_mandatory: true
         type: Boolean
+        default: true
     invariants:
       Inv_point: 'lower = upper'
   AUTHORED_RESOURCE:
@@ -1883,6 +1897,7 @@ class_definitions:
         documentation: 'Reference to owning resource. '
         is_mandatory: true
         type: AUTHORED_RESOURCE
+        default: ''
       custodian_namespace: !P_BMM_SINGLE_PROPERTY
         name: custodian_namespace
         documentation: 'Namespace in reverse internet id form, of current custodian organisation.'

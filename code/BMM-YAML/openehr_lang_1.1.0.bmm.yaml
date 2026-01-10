@@ -776,6 +776,7 @@ class_definitions:
         name: is_nullable
         documentation: 'True if this element can be null (Void) at execution time. May be interpreted as optionality in subtypes..'
         type: Boolean
+        default: false
     functions:
       signature:
         name: signature
@@ -888,14 +889,17 @@ class_definitions:
         name: is_im_runtime
         documentation: 'True if this property is marked with info model `_im_runtime_` property.'
         type: Boolean
+        default: false
       is_im_infrastructure: !P_BMM_SINGLE_PROPERTY
         name: is_im_infrastructure
         documentation: 'True if this property was marked with info model `_im_infrastructure_` flag.'
         type: Boolean
+        default: false
       is_composition: !P_BMM_SINGLE_PROPERTY
         name: is_composition
         documentation: "True if this property instance is a compositional sub-part of the owning class instance. Equivalent to 'composition' in UML associations (but missing from UML properties without associations) and also 'cascade-delete' semantics in ER schemas."
         type: Boolean
+        default: false
     functions:
       existence:
         name: existence
@@ -1050,6 +1054,7 @@ class_definitions:
         documentation: 'Name of this model element.'
         is_mandatory: true
         type: String
+        default: '"Result"'
   BMM_FEATURE_EXTENSION:
     name: BMM_FEATURE_EXTENSION
     documentation: 'Abstract parent of feature extensions.'
@@ -1090,6 +1095,7 @@ class_definitions:
         documentation: "Name of this feature group; defaults to 'feature'."
         is_mandatory: true
         type: String
+        default: '"feature"'
       properties: !P_BMM_GENERIC_PROPERTY
         name: properties
         documentation: 'Set of properties of this group, represented as name/value pairs. These are understood to apply logically to all of the features contained within the group.'
@@ -1130,6 +1136,7 @@ class_definitions:
         name: is_synthesised_generic
         documentation: 'True if this feature was synthesised due to generic substitution in an inherited type, or further constraining of a formal generic parameter.'
         type: Boolean
+        default: false
       feature_extensions: !P_BMM_CONTAINER_PROPERTY
         name: feature_extensions
         documentation: 'Extensions to feature-level meta-types.'
@@ -1160,6 +1167,7 @@ class_definitions:
         documentation: 'Name of this model element.'
         is_mandatory: true
         type: String
+        default: '"Self"'
   BMM_WRITABLE_VARIABLE:
     name: BMM_WRITABLE_VARIABLE
     documentation: 'Meta-type for writable variables, including the special variable `Result`.'
@@ -1513,6 +1521,7 @@ class_definitions:
         parameters:
           a_type: !P_BMM_SINGLE_FUNCTION_PARAMETER
             name: a_type
+            documentation: 'Name of a type.'
             type: String
         result: !P_BMM_CONTAINER_TYPE
           container_type: List
@@ -1747,6 +1756,7 @@ class_definitions:
         documentation: 'Defined to return True.'
         is_mandatory: true
         type: Boolean
+        default: true
     functions:
       eval_type:
         name: eval_type
@@ -1796,6 +1806,7 @@ class_definitions:
         documentation: 'Defined to return False.'
         is_mandatory: true
         type: Boolean
+        default: false
     functions:
       eval_type:
         name: eval_type
@@ -1859,6 +1870,7 @@ class_definitions:
         name: is_writable
         is_mandatory: true
         type: Boolean
+        default: false
     functions:
       eval_type:
         name: eval_type
@@ -2005,6 +2017,7 @@ class_definitions:
         name: is_mutable
         is_mandatory: true
         type: Boolean
+        default: false
     functions:
       eval_type:
         name: eval_type
@@ -2212,6 +2225,7 @@ class_definitions:
         documentation: 'Defined to return False.'
         is_mandatory: true
         type: Boolean
+        default: false
   EL_WRITABLE_VARIABLE:
     name: EL_WRITABLE_VARIABLE
     documentation: "Meta-type of writable variables, including routine locals and the special variable 'Result'."
@@ -2228,6 +2242,7 @@ class_definitions:
         documentation: 'Defined to return True in all cases.'
         is_mandatory: true
         type: Boolean
+        default: true
   EL_READONLY_VARIABLE:
     name: EL_READONLY_VARIABLE
     documentation: "Meta-type of read-only variables, including routine parameter and the special variable 'Self'."
@@ -2244,6 +2259,7 @@ class_definitions:
         documentation: 'Defined to return False in all cases.'
         is_mandatory: true
         type: Boolean
+        default: false
   BMM_ACTION_DECISION_TABLE:
     name: BMM_ACTION_DECISION_TABLE
     documentation: 'Specialised form of Decision Table that allows only procedure call agents (lambdas) as the result of branches.'
@@ -3310,6 +3326,7 @@ class_definitions:
         name: type_name
         is_mandatory: true
         type: String
+        default: '"Boolean"'
       type_anchor: !P_BMM_SINGLE_PROPERTY
         name: type_anchor
         is_mandatory: true
@@ -3324,6 +3341,7 @@ class_definitions:
         name: type_name
         is_mandatory: true
         type: String
+        default: '"Date"'
       type_anchor: !P_BMM_SINGLE_PROPERTY
         name: type_anchor
         is_mandatory: true
@@ -3338,6 +3356,7 @@ class_definitions:
         name: type_name
         is_mandatory: true
         type: String
+        default: '"Date_time"'
       type_anchor: !P_BMM_SINGLE_PROPERTY
         name: type_anchor
         is_mandatory: true
@@ -3352,6 +3371,7 @@ class_definitions:
         name: type_name
         is_mandatory: true
         type: String
+        default: '"Duration"'
       type_anchor: !P_BMM_SINGLE_PROPERTY
         name: type_anchor
         is_mandatory: true
@@ -3366,6 +3386,7 @@ class_definitions:
         name: type_name
         is_mandatory: true
         type: String
+        default: '"Integer"'
       type_anchor: !P_BMM_SINGLE_PROPERTY
         name: type_anchor
         is_mandatory: true
@@ -3380,6 +3401,7 @@ class_definitions:
         name: type_name
         is_mandatory: true
         type: String
+        default: '"Object_ref"'
   TYPE_DEF_REAL:
     name: TYPE_DEF_REAL
     documentation: 'Rules meta-type representing the primitive type Real.'
@@ -3390,6 +3412,7 @@ class_definitions:
         name: type_name
         is_mandatory: true
         type: String
+        default: '"Real"'
       type_anchor: !P_BMM_SINGLE_PROPERTY
         name: type_anchor
         is_mandatory: true
@@ -3404,6 +3427,7 @@ class_definitions:
         name: type_name
         is_mandatory: true
         type: String
+        default: '"String"'
       type_anchor: !P_BMM_SINGLE_PROPERTY
         name: type_anchor
         is_mandatory: true
@@ -3418,6 +3442,7 @@ class_definitions:
         name: type_name
         is_mandatory: true
         type: String
+        default: '"Terminology_code"'
       type_anchor: !P_BMM_SINGLE_PROPERTY
         name: type_anchor
         is_mandatory: true
@@ -3432,6 +3457,7 @@ class_definitions:
         name: type_name
         is_mandatory: true
         type: String
+        default: '"Time"'
       type_anchor: !P_BMM_SINGLE_PROPERTY
         name: type_anchor
         is_mandatory: true
@@ -3446,6 +3472,7 @@ class_definitions:
         name: type_name
         is_mandatory: true
         type: String
+        default: '"Uri"'
       type_anchor: !P_BMM_SINGLE_PROPERTY
         name: type_anchor
         is_mandatory: true

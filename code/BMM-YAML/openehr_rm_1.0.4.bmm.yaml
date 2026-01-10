@@ -443,7 +443,6 @@ class_definitions:
         is_mandatory: true
         type: String
     invariants:
-      rm_version_valid: 'not rm_version.is_empty'
       Rm_version_valid: 'not rm_version.is_empty'
   FEEDER_AUDIT:
     name: FEEDER_AUDIT
@@ -1265,6 +1264,7 @@ class_definitions:
         documentation: 'Reference to owning resource. '
         is_mandatory: true
         type: AUTHORED_RESOURCE
+        default: 0..1
       details: !P_BMM_GENERIC_PROPERTY
         name: details
         documentation: 'Details of all parts of resource description that are natural language-dependent, keyed by language code. '
@@ -1663,7 +1663,6 @@ class_definitions:
         result: !P_BMM_SIMPLE_TYPE
           type: DV_DURATION
     invariants:
-      Offset_validity: ''
       Offset_validity1: 'offset /= Void and then offset = time.diff (parent.origin)'
   POINT_EVENT:
     name: POINT_EVENT
@@ -2750,9 +2749,6 @@ class_definitions:
           Post: 'Result = value < other.value'
         result: !P_BMM_SIMPLE_TYPE
           type: Boolean
-    invariants:
-      Limits_valid: 'limits.meaning.is_equal (“limits”)'
-      Reference_range_valid: 'other_reference_ranges.has (limits)'
   DV_DURATION:
     name: DV_DURATION
     documentation: |-
@@ -4628,9 +4624,6 @@ class_definitions:
         result: !P_BMM_SIMPLE_TYPE
           type: Boolean
     invariants:
-      Setting_valid: ''
-      unnamed2: ''
-      unnamed3: 'Terminology (Terminology_id_openehr).has_code_for_group_id (Group_id_setting, setting.defining_code)'
       Category_validity: 'terminology (Terminology_id_openehr).has_code_for_group_id (Group_id_composition_category, category.defining_code)'
       Is_persistent_validity: 'is_persistent implies context = Void'
       Territory_valid: code_set(Code_set_id_countries).has_code(territory)
