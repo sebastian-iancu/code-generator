@@ -1,0 +1,17 @@
+=== C_ATTRIBUTE_TUPLE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/c_attribute_tuple.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/c_attribute_tuple.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/c_attribute_tuple.adoc[]
+
+====

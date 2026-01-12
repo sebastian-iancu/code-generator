@@ -1,0 +1,17 @@
+=== EXTRACT_VERSION_SPEC Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/extract_version_spec.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/extract_version_spec.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/extract_version_spec.adoc[]
+
+====

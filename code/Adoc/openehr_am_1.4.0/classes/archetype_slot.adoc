@@ -1,0 +1,17 @@
+=== ARCHETYPE_SLOT Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/archetype_slot.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/archetype_slot.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/archetype_slot.adoc[]
+
+====

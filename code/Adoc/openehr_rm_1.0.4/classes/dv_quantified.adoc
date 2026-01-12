@@ -1,0 +1,17 @@
+=== DV_QUANTIFIED Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/dv_quantified.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/dv_quantified.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/dv_quantified.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== ITEM_LIST Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/item_list.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/item_list.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/item_list.adoc[]
+
+====

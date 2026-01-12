@@ -1,0 +1,17 @@
+=== BMM_CONSTANT Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/bmm_constant.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/bmm_constant.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/bmm_constant.adoc[]
+
+====

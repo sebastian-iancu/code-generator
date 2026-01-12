@@ -1,0 +1,17 @@
+=== DV_URI Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/dv_uri.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/dv_uri.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/dv_uri.adoc[]
+
+====

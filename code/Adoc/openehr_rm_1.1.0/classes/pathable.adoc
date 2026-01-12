@@ -1,0 +1,17 @@
+=== PATHABLE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/pathable.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/pathable.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/pathable.adoc[]
+
+====

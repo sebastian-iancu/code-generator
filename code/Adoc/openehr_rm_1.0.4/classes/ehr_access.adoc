@@ -1,0 +1,17 @@
+=== EHR_ACCESS Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/ehr_access.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/ehr_access.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/ehr_access.adoc[]
+
+====

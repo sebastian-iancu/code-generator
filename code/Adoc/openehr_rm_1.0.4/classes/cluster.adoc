@@ -1,0 +1,17 @@
+=== CLUSTER Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/cluster.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/cluster.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/cluster.adoc[]
+
+====

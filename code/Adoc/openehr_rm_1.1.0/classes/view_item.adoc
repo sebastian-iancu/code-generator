@@ -1,0 +1,17 @@
+=== VIEW_ITEM Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/view_item.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/view_item.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/view_item.adoc[]
+
+====

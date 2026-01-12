@@ -1,0 +1,17 @@
+=== DV_BOOLEAN Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/dv_boolean.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/dv_boolean.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/dv_boolean.adoc[]
+
+====

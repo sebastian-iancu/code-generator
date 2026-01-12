@@ -1,0 +1,17 @@
+=== PERSON Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/person.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/person.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/person.adoc[]
+
+====

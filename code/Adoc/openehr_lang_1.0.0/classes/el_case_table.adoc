@@ -1,0 +1,17 @@
+=== EL_CASE_TABLE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/el_case_table.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/el_case_table.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/el_case_table.adoc[]
+
+====

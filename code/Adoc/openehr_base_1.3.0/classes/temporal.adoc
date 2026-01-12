@@ -1,0 +1,17 @@
+=== Temporal Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/temporal.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/temporal.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/temporal.adoc[]
+
+====

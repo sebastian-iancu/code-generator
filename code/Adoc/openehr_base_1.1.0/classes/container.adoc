@@ -1,0 +1,17 @@
+=== Container Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/container.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/container.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/container.adoc[]
+
+====

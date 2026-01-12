@@ -1,0 +1,17 @@
+=== Integer Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/integer.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/integer.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/integer.adoc[]
+
+====

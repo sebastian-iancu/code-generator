@@ -1,0 +1,17 @@
+=== EL_TUPLE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/el_tuple.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/el_tuple.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/el_tuple.adoc[]
+
+====

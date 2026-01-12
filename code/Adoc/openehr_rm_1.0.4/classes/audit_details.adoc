@@ -1,0 +1,17 @@
+=== AUDIT_DETAILS Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/audit_details.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/audit_details.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/audit_details.adoc[]
+
+====

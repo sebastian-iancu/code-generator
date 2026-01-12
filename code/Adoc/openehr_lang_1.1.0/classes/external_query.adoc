@@ -1,0 +1,17 @@
+=== EXTERNAL_QUERY Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/external_query.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/external_query.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/external_query.adoc[]
+
+====

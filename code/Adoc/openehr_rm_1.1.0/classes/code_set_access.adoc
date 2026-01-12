@@ -1,0 +1,17 @@
+=== CODE_SET_ACCESS Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/code_set_access.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/code_set_access.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/code_set_access.adoc[]
+
+====

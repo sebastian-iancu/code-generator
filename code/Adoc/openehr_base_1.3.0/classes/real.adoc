@@ -1,0 +1,17 @@
+=== Real Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/real.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/real.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/real.adoc[]
+
+====

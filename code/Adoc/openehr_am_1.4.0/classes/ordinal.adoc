@@ -1,0 +1,17 @@
+=== ORDINAL Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/ordinal.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/ordinal.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/ordinal.adoc[]
+
+====

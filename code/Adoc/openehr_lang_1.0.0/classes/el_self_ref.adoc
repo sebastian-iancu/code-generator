@@ -1,0 +1,17 @@
+=== EL_SELF_REF Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/el_self_ref.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/el_self_ref.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/el_self_ref.adoc[]
+
+====

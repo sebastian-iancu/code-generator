@@ -1,0 +1,17 @@
+=== VALIDITY_KIND Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/validity_kind.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/validity_kind.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/validity_kind.adoc[]
+
+====

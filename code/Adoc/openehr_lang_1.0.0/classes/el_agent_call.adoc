@@ -1,0 +1,17 @@
+=== EL_AGENT_CALL Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/el_agent_call.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/el_agent_call.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/el_agent_call.adoc[]
+
+====

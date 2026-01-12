@@ -1,0 +1,17 @@
+=== PARTICIPATION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/participation.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/participation.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/participation.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== CONSUMABLE_USE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/consumable_use.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/consumable_use.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/consumable_use.adoc[]
+
+====

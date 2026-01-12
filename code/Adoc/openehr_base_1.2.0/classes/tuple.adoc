@@ -1,0 +1,17 @@
+=== TUPLE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/tuple.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/tuple.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/tuple.adoc[]
+
+====

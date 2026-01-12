@@ -1,0 +1,17 @@
+=== PARTY_SELF Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/party_self.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/party_self.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/party_self.adoc[]
+
+====

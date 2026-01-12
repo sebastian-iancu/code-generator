@@ -1,0 +1,17 @@
+=== FEEDER_AUDIT_DETAILS Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/feeder_audit_details.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/feeder_audit_details.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/feeder_audit_details.adoc[]
+
+====

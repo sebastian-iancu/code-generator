@@ -1,0 +1,17 @@
+=== EL_WRITABLE_VARIABLE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/el_writable_variable.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/el_writable_variable.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/el_writable_variable.adoc[]
+
+====

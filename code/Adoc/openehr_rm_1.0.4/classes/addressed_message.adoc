@@ -1,0 +1,17 @@
+=== ADDRESSED_MESSAGE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/addressed_message.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/addressed_message.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/addressed_message.adoc[]
+
+====

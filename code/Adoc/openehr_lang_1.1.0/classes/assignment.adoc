@@ -1,0 +1,17 @@
+=== ASSIGNMENT Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/assignment.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/assignment.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/assignment.adoc[]
+
+====

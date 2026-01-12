@@ -1,0 +1,17 @@
+=== EXPR_ARCHETYPE_ID_CONSTRAINT Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/expr_archetype_id_constraint.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/expr_archetype_id_constraint.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/expr_archetype_id_constraint.adoc[]
+
+====

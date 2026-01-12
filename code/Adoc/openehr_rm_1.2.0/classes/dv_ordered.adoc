@@ -1,0 +1,17 @@
+=== DV_ORDERED Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/dv_ordered.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/dv_ordered.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/dv_ordered.adoc[]
+
+====

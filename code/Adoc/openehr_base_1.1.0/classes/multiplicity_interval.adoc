@@ -1,0 +1,17 @@
+=== Multiplicity_interval Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/multiplicity_interval.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/multiplicity_interval.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/multiplicity_interval.adoc[]
+
+====

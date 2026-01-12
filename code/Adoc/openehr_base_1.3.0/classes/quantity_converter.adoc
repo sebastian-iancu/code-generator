@@ -1,0 +1,17 @@
+=== Quantity_converter Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/quantity_converter.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/quantity_converter.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/quantity_converter.adoc[]
+
+====

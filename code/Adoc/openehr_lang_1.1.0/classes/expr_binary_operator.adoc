@@ -1,0 +1,17 @@
+=== EXPR_BINARY_OPERATOR Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/expr_binary_operator.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/expr_binary_operator.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/expr_binary_operator.adoc[]
+
+====

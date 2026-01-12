@@ -1,0 +1,17 @@
+=== Math Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/math.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/math.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/math.adoc[]
+
+====

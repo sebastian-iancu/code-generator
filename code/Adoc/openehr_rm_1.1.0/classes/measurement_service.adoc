@@ -1,0 +1,17 @@
+=== MEASUREMENT_SERVICE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/measurement_service.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/measurement_service.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/measurement_service.adoc[]
+
+====

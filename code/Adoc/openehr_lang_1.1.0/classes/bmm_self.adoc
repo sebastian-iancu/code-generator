@@ -1,0 +1,17 @@
+=== BMM_SELF Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/bmm_self.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/bmm_self.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/bmm_self.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== TEMPLATE_ID Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/template_id.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/template_id.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/template_id.adoc[]
+
+====

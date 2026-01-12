@@ -1,0 +1,17 @@
+=== P_AUTHORED_RESOURCE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/p_authored_resource.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/p_authored_resource.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/p_authored_resource.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== EL_SIMPLE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/el_simple.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/el_simple.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/el_simple.adoc[]
+
+====

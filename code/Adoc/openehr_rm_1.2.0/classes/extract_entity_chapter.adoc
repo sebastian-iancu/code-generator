@@ -1,0 +1,17 @@
+=== EXTRACT_ENTITY_CHAPTER Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/extract_entity_chapter.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/extract_entity_chapter.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/extract_entity_chapter.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== DV_IDENTIFIER Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/dv_identifier.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/dv_identifier.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/dv_identifier.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== Interval Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/interval.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/interval.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/interval.adoc[]
+
+====

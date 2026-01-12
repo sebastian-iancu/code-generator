@@ -1,0 +1,17 @@
+=== RESOURCE_USE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/resource_use.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/resource_use.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/resource_use.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== Character Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/character.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/character.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/character.adoc[]
+
+====

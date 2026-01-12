@@ -1,0 +1,17 @@
+=== C_SINGLE_ATTRIBUTE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/c_single_attribute.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/c_single_attribute.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/c_single_attribute.adoc[]
+
+====

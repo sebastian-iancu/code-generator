@@ -1,0 +1,17 @@
+=== GENERIC_CONTENT_ITEM Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/generic_content_item.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/generic_content_item.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/generic_content_item.adoc[]
+
+====

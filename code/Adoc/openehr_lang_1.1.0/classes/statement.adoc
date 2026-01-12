@@ -1,0 +1,17 @@
+=== STATEMENT Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/statement.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/statement.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/statement.adoc[]
+
+====

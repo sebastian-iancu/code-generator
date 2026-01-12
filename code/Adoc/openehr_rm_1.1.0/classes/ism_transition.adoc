@@ -1,0 +1,17 @@
+=== ISM_TRANSITION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/ism_transition.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/ism_transition.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/ism_transition.adoc[]
+
+====

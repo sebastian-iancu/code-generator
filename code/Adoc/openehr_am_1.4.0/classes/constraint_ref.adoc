@@ -1,0 +1,17 @@
+=== CONSTRAINT_REF Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/constraint_ref.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/constraint_ref.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/constraint_ref.adoc[]
+
+====

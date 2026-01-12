@@ -1,0 +1,17 @@
+=== RESOURCE_DESCRIPTION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/resource_description.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/resource_description.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/resource_description.adoc[]
+
+====

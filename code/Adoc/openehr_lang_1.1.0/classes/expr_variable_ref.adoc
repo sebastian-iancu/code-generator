@@ -1,0 +1,17 @@
+=== EXPR_VARIABLE_REF Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/expr_variable_ref.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/expr_variable_ref.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/expr_variable_ref.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== ASSERTION_VARIABLE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/assertion_variable.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/assertion_variable.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/assertion_variable.adoc[]
+
+====

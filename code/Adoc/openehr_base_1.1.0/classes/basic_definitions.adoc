@@ -1,0 +1,17 @@
+=== BASIC_DEFINITIONS Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/basic_definitions.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/basic_definitions.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/basic_definitions.adoc[]
+
+====

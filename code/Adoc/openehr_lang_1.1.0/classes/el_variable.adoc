@@ -1,0 +1,17 @@
+=== EL_VARIABLE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/el_variable.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/el_variable.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/el_variable.adoc[]
+
+====

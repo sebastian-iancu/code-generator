@@ -1,0 +1,17 @@
+=== String Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/string.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/string.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/string.adoc[]
+
+====

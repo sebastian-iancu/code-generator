@@ -1,0 +1,17 @@
+=== EVALUATION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/evaluation.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/evaluation.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/evaluation.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== EL_AGENT Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/el_agent.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/el_agent.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/el_agent.adoc[]
+
+====

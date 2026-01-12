@@ -1,0 +1,17 @@
+=== EL_PROCEDURE_AGENT Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/el_procedure_agent.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/el_procedure_agent.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/el_procedure_agent.adoc[]
+
+====

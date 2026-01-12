@@ -1,0 +1,17 @@
+=== P_BMM_PACKAGE_CONTAINER Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/p_bmm_package_container.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/p_bmm_package_container.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/p_bmm_package_container.adoc[]
+
+====

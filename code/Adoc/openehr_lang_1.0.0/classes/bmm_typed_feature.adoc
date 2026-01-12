@@ -1,0 +1,17 @@
+=== BMM_TYPED_FEATURE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/bmm_typed_feature.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/bmm_typed_feature.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/bmm_typed_feature.adoc[]
+
+====

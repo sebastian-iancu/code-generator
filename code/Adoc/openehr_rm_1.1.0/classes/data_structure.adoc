@@ -1,0 +1,17 @@
+=== DATA_STRUCTURE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/data_structure.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/data_structure.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/data_structure.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== DV_PARSABLE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/dv_parsable.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/dv_parsable.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/dv_parsable.adoc[]
+
+====

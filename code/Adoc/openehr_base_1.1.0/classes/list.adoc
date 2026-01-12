@@ -1,0 +1,17 @@
+=== List Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/list.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/list.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/list.adoc[]
+
+====

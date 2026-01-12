@@ -1,0 +1,17 @@
+=== EL_BOOLEAN_EXPRESSION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/el_boolean_expression.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/el_boolean_expression.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/el_boolean_expression.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== Octet Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/octet.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/octet.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/octet.adoc[]
+
+====

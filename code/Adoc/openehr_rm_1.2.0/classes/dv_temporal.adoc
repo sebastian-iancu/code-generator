@@ -1,0 +1,17 @@
+=== DV_TEMPORAL Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/dv_temporal.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/dv_temporal.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/dv_temporal.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== DV_MULTIMEDIA Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/dv_multimedia.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/dv_multimedia.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/dv_multimedia.adoc[]
+
+====

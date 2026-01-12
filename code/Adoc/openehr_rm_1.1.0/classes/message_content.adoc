@@ -1,0 +1,17 @@
+=== MESSAGE_CONTENT Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/message_content.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/message_content.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/message_content.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== VERSION_TREE_ID Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/version_tree_id.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/version_tree_id.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/version_tree_id.adoc[]
+
+====

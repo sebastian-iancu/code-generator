@@ -1,0 +1,17 @@
+=== LOCATABLE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/locatable.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/locatable.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/locatable.adoc[]
+
+====

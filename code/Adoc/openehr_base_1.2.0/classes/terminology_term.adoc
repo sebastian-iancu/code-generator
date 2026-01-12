@@ -1,0 +1,17 @@
+=== Terminology_term Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/terminology_term.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/terminology_term.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/terminology_term.adoc[]
+
+====

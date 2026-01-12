@@ -1,9 +1,0 @@
-[source,json]
---------
-{
-    "name": "Uri",
-    "ancestors": [
-        "Any"
-    ]
-}
---------

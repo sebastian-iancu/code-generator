@@ -1,0 +1,17 @@
+=== EXPR_VALUE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/expr_value.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/expr_value.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/expr_value.adoc[]
+
+====

@@ -1,0 +1,20 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*BMM_STRING_VALUE*
+
+h|*Description*
+2+a|Meta-type for a literal String value, for which `_type_` is fixed to the `BMM_TYPE` representing `String` and `_value_` is of type `String`.
+
+h|*Inherit*
+2+|`xref:LANG:bmm:core_package.adoc#_bmm_primitive_value_class[BMM_PRIMITIVE_VALUE]`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1 +
+(effected)*
+|*value*: `link:/classes/String[String] `
+a|Native String value.
+|===

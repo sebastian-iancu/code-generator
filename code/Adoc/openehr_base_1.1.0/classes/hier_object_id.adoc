@@ -1,0 +1,17 @@
+=== HIER_OBJECT_ID Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/hier_object_id.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/hier_object_id.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/hier_object_id.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== PROPORTION_KIND Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/proportion_kind.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/proportion_kind.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/proportion_kind.adoc[]
+
+====

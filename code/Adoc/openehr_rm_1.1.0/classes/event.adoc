@@ -1,0 +1,17 @@
+=== EVENT Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/event.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/event.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/event.adoc[]
+
+====

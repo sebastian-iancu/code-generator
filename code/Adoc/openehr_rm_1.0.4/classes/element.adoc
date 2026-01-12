@@ -1,0 +1,17 @@
+=== ELEMENT Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/element.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/element.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/element.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== ITEM_TAG Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/item_tag.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/item_tag.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/item_tag.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== ADDRESS Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/address.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/address.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/address.adoc[]
+
+====

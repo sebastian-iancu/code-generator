@@ -1,0 +1,17 @@
+=== VIEW_ENTRY Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/view_entry.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/view_entry.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/view_entry.adoc[]
+
+====

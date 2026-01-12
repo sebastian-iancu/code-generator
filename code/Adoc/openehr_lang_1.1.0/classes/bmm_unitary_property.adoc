@@ -1,0 +1,17 @@
+=== BMM_UNITARY_PROPERTY Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/bmm_unitary_property.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/bmm_unitary_property.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/bmm_unitary_property.adoc[]
+
+====

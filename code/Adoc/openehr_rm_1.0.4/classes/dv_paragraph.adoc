@@ -1,0 +1,17 @@
+=== DV_PARAGRAPH Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/dv_paragraph.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/dv_paragraph.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/dv_paragraph.adoc[]
+
+====

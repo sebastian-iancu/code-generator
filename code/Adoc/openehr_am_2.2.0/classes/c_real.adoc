@@ -1,0 +1,17 @@
+=== C_REAL Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/c_real.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/c_real.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/c_real.adoc[]
+
+====

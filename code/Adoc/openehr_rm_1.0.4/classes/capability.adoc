@@ -1,0 +1,17 @@
+=== CAPABILITY Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/capability.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/capability.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/capability.adoc[]
+
+====

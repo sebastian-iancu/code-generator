@@ -1,0 +1,17 @@
+=== POINT_EVENT Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/point_event.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/point_event.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/point_event.adoc[]
+
+====

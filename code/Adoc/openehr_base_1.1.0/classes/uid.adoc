@@ -1,0 +1,17 @@
+=== UID Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/uid.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/uid.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/uid.adoc[]
+
+====

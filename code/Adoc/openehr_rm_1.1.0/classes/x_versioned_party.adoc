@@ -1,0 +1,17 @@
+=== X_VERSIONED_PARTY Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/x_versioned_party.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/x_versioned_party.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/x_versioned_party.adoc[]
+
+====

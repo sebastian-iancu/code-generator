@@ -1,0 +1,17 @@
+=== ORGANISATION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/organisation.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/organisation.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/organisation.adoc[]
+
+====

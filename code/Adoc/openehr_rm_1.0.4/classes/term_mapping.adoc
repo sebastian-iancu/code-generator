@@ -1,0 +1,17 @@
+=== TERM_MAPPING Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/term_mapping.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/term_mapping.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/term_mapping.adoc[]
+
+====

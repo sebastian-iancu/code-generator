@@ -1,0 +1,17 @@
+=== Iso8601_type Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/iso8601_type.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/iso8601_type.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/iso8601_type.adoc[]
+
+====

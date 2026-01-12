@@ -1,0 +1,17 @@
+=== P_BMM_ENUMERATION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/p_bmm_enumeration.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/p_bmm_enumeration.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/p_bmm_enumeration.adoc[]
+
+====

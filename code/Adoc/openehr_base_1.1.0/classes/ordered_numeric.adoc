@@ -1,0 +1,17 @@
+=== Ordered_Numeric Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/ordered_numeric.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/ordered_numeric.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/ordered_numeric.adoc[]
+
+====

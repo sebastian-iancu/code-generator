@@ -1,0 +1,17 @@
+=== P_C_COMPLEX_OBJECT_PROXY Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/p_c_complex_object_proxy.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/p_c_complex_object_proxy.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/p_c_complex_object_proxy.adoc[]
+
+====

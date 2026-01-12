@@ -1,0 +1,17 @@
+=== OPENEHR_DEFINITIONS Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/openehr_definitions.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/openehr_definitions.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/openehr_definitions.adoc[]
+
+====

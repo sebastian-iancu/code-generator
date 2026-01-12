@@ -1,0 +1,17 @@
+=== EL_STATIC_REF Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/el_static_ref.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/el_static_ref.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/el_static_ref.adoc[]
+
+====

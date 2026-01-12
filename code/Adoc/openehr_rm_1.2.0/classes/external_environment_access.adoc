@@ -1,0 +1,17 @@
+=== EXTERNAL_ENVIRONMENT_ACCESS Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/external_environment_access.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/external_environment_access.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/external_environment_access.adoc[]
+
+====

@@ -1,0 +1,20 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*BMM_UNITARY_PROPERTY*
+
+h|*Description*
+2+a|Meta-type of for properties of unitary type.
+
+h|*Inherit*
+2+|`xref:LANG:bmm:core_package.adoc#_bmm_property_class[BMM_PROPERTY]`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1 +
+(effected)*
+|*type*: `link:/classes/BMM_UNITARY_TYPE[BMM_UNITARY_TYPE] `
+a|Declared or inferred static type of the entity.
+|===

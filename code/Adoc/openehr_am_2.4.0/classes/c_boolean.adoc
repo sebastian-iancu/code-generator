@@ -1,0 +1,17 @@
+=== C_BOOLEAN Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/c_boolean.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/c_boolean.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/c_boolean.adoc[]
+
+====

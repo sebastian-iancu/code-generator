@@ -1,0 +1,17 @@
+=== EL_ATTACHED Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/el_attached.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/el_attached.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/el_attached.adoc[]
+
+====

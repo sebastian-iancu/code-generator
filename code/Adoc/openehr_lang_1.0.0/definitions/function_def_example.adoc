@@ -1,0 +1,27 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*FUNCTION_DEF_EXAMPLE*
+
+h|*Description*
+2+a|Example of an externally defined function of signature:
+
+    func (v: Numeric): Numeric
+
+h|*Inherit*
+2+|`xref:LANG:obsolete-elom:extension_package.adoc#_function_def_external_class[FUNCTION_DEF_EXTERNAL]`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1*
+|*identifier*: `link:/classes/String[String]  +
+{default{nbsp}={nbsp}"funny"}`
+a|
+
+h|*1..1 +
+(effected)*
+|*evaluation_agent*: `link:/classes/FUNCTION[FUNCTION] <>`
+a|
+|===

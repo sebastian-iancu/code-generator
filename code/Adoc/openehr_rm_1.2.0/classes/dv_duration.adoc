@@ -1,0 +1,17 @@
+=== DV_DURATION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/dv_duration.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/dv_duration.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/dv_duration.adoc[]
+
+====

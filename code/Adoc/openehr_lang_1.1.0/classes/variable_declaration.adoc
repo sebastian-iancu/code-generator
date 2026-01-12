@@ -1,0 +1,17 @@
+=== VARIABLE_DECLARATION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/variable_declaration.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/variable_declaration.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/variable_declaration.adoc[]
+
+====

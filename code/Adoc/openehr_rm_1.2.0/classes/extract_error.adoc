@@ -1,0 +1,17 @@
+=== EXTRACT_ERROR Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/extract_error.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/extract_error.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/extract_error.adoc[]
+
+====

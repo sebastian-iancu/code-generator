@@ -1,0 +1,17 @@
+=== EXTRACT_PARTICIPATION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/extract_participation.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/extract_participation.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/extract_participation.adoc[]
+
+====

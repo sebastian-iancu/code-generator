@@ -1,0 +1,17 @@
+=== PARTY_RELATIONSHIP Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/party_relationship.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/party_relationship.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/party_relationship.adoc[]
+
+====

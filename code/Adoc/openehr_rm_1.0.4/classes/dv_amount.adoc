@@ -1,0 +1,17 @@
+=== DV_AMOUNT Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/dv_amount.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/dv_amount.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/dv_amount.adoc[]
+
+====

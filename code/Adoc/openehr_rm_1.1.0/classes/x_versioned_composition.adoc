@@ -1,0 +1,17 @@
+=== X_VERSIONED_COMPOSITION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/x_versioned_composition.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/x_versioned_composition.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/x_versioned_composition.adoc[]
+
+====

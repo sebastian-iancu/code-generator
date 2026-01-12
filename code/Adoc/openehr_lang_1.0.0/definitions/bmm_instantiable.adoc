@@ -1,0 +1,12 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*__BMM_INSTANTIABLE (abstract)__*
+
+h|*Description*
+2+a|Meta-type representing instantiable features, i.e. features that are created as value objects.
+
+h|*Inherit*
+2+|`xref:LANG:bmm:core_package.adoc#_bmm_typed_feature_class[BMM_TYPED_FEATURE]`
+
+|===

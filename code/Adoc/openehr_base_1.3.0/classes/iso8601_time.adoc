@@ -1,0 +1,17 @@
+=== Iso8601_time Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/iso8601_time.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/iso8601_time.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/iso8601_time.adoc[]
+
+====

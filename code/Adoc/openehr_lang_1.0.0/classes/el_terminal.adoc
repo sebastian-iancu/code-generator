@@ -1,0 +1,17 @@
+=== EL_TERMINAL Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/el_terminal.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/el_terminal.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/el_terminal.adoc[]
+
+====

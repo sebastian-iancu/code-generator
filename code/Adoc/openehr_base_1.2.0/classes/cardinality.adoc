@@ -1,0 +1,17 @@
+=== Cardinality Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/cardinality.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/cardinality.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/cardinality.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== Time_Definitions Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/time_definitions.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/time_definitions.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/time_definitions.adoc[]
+
+====

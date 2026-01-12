@@ -1,0 +1,17 @@
+=== REFERENCE_RANGE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/reference_range.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/reference_range.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/reference_range.adoc[]
+
+====

@@ -1,0 +1,110 @@
+[plantuml,DV_DURATION,format=svg,svg-type="inline"]
+-----
+@startuml
+
+class DV_DURATION {
+  + value : String [1]
+  + is_strictly_comparable_to( other : DV_ORDERED [1] ) : Boolean [1]
+}
+
+abstract class DV_AMOUNT  #whitesmoke;line:gray;line.dotted;text:gray {
+  + accuracy_is_percent : Boolean [0..1]
+  + accuracy : Real [0..1]
+  + valid_percentage( number : Ordered_Numeric [1] ) : Boolean [1]
+  + infix =( source : DV_AMOUNT [1] ) : DV_AMOUNT [1]
+  + infix +( other : DV_AMOUNT [1] ) : DV_AMOUNT [1]
+  + infix -( other : DV_AMOUNT [1] ) : DV_AMOUNT [1]
+  + prefix -() : DV_AMOUNT [1]
+}
+
+abstract class DV_QUANTIFIED  #whitesmoke;line:gray;line.dotted;text:gray {
+  + magnitude_status : String [0..1]
+  + accuracy : Any [0..1]
+  + valid_magnitude_status() : Boolean [1]
+  + {abstract} magnitude() : Ordered_Numeric [1]
+  + accuracy_unknown() : Boolean [1]
+}
+
+abstract class DV_ORDERED  #whitesmoke;line:gray;line.dotted;text:gray {
+  + normal_status : CODE_PHRASE [0..1]
+  + normal_range : DV_INTERVAL [0..1]
+  + other_reference_ranges : List<REFERENCE_RANGE<DV_ORDERED>> [*]
+  + {abstract} is_strictly_comparable_to( other : DV_ORDERED [1] ) : Boolean [1]
+  + is_simple() : Boolean [1]
+  + is_normal() : Boolean [1]
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+}
+
+abstract class DATA_VALUE  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+DATA_VALUE <|-- DV_ORDERED
+
+abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+}
+
+Ordered <|-- DV_ORDERED
+
+DV_ORDERED <|-- DV_QUANTIFIED
+
+DV_QUANTIFIED <|-- DV_AMOUNT
+
+DV_AMOUNT <|-- DV_DURATION
+
+class Iso8601_duration  #whitesmoke;line:gray;line.dotted;text:gray {
+  + seconds() : Integer [1]
+  + fractional_seconds() : Real [1]
+  + is_decimal_sign_comma() : Boolean [1]
+  + is_partial() : Boolean [1]
+  + is_extended() : Boolean [1]
+  + months() : Integer [1]
+  + years() : Integer [1]
+  + weeks() : Integer [1]
+  + to_seconds() : Real [1]
+  + minutes() : Integer [1]
+  + hours() : Integer [1]
+  + days() : Integer [1]
+  + as_string() : String [1]
+}
+
+abstract class Iso8601_type  #whitesmoke;line:gray;line.dotted;text:gray {
+  + value : String [1]
+  + {abstract} is_partial() : Boolean [1]
+  + {abstract} is_extended() : Boolean [1]
+}
+
+abstract class Temporal  #whitesmoke;line:gray;line.dotted;text:gray {
+}
+
+abstract class Ordered  #whitesmoke;line:gray;line.dotted;text:gray {
+  + {abstract} infix <( other : Ordered [1] ) : Boolean [1]
+}
+
+Ordered <|-- Temporal
+
+Temporal <|-- Iso8601_type
+
+class Time_Definitions  #whitesmoke;line:gray;line.dotted;text:gray {
+  + valid_year( y : Integer [1] ) : Boolean [1]
+  + valid_month( m : Integer [1] ) : Boolean [1]
+  + valid_day( y : Integer [1], m : Integer [1], d : Integer [1] ) : Boolean [1]
+  + valid_hour( h : Integer [1], m : Integer [1], s : Integer [1] ) : Boolean [1]
+  + valid_minute( m : Integer [1] ) : Boolean [1]
+  + valid_second( s : Integer [1] ) : Boolean [1]
+  + valid_fractional_second( fs : Double [1] ) : Boolean [1]
+  + valid_iso8601_date( s : String [1] ) : Boolean [1]
+  + valid_iso8601_time( s : String [1] ) : Boolean [1]
+  + valid_iso8601_date_time( s : String [1] ) : Boolean [1]
+  + valid_iso8601_duration( s : String [1] ) : Boolean [1]
+}
+
+Time_Definitions <|-- Iso8601_type
+
+Iso8601_type <|-- Iso8601_duration
+
+Iso8601_duration <|-- DV_DURATION
+
+
+@enduml
+-----

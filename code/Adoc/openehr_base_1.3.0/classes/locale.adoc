@@ -1,0 +1,17 @@
+=== Locale Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/locale.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/locale.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/locale.adoc[]
+
+====

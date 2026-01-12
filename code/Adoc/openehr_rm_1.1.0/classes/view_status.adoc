@@ -1,0 +1,17 @@
+=== VIEW_STATUS Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/view_status.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/view_status.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/view_status.adoc[]
+
+====

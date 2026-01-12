@@ -1,0 +1,17 @@
+=== OBJECT_VERSION_ID Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/object_version_id.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/object_version_id.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/object_version_id.adoc[]
+
+====

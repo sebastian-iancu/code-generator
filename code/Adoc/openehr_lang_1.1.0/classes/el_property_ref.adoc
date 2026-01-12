@@ -1,0 +1,17 @@
+=== EL_PROPERTY_REF Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/el_property_ref.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/el_property_ref.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/el_property_ref.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== C_QUANTITY_ITEM Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/c_quantity_item.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/c_quantity_item.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/c_quantity_item.adoc[]
+
+====

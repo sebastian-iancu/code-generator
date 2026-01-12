@@ -1,0 +1,32 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*EL_FUNCTION_CALL*
+
+h|*Description*
+2+a|A call made on a closed function agent, returning a result. Equivalent to an 'application' of a function in Lambda calculus.
+
+h|*Inherit*
+2+|`xref:LANG:bmm:expression_package.adoc#_el_scoped_ref_class[EL_SCOPED_REF]`, `xref:LANG:bmm:expression_package.adoc#_el_agent_call_class[EL_AGENT_CALL]`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1 +
+(effected)*
+|*agent*: `xref:LANG:bmm:expression_package.adoc#_el_function_agent_class[EL_FUNCTION_AGENT]`
+a|The function agent being called.
+
+h|*Functions*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1 +
+(effected)*
+|*eval_type* (): `link:/classes/BMM_TYPE[BMM_TYPE] `
+a|Return `_agent.definition.type_`.
+
+h|*Invariants*
+2+a|__Inv_valid_agent__: `agent.is_callable()`
+|===

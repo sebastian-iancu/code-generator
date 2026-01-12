@@ -1,0 +1,17 @@
+=== VISIBILITY_TYPE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/visibility_type.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/visibility_type.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/visibility_type.adoc[]
+
+====

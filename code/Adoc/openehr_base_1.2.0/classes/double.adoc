@@ -1,0 +1,17 @@
+=== Double Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/double.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/double.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/double.adoc[]
+
+====

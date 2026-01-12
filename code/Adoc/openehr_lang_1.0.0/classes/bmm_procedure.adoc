@@ -1,0 +1,17 @@
+=== BMM_PROCEDURE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/bmm_procedure.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/bmm_procedure.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/bmm_procedure.adoc[]
+
+====

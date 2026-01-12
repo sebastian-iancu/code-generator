@@ -1,0 +1,17 @@
+=== EHR Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/ehr.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/ehr.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/ehr.adoc[]
+
+====

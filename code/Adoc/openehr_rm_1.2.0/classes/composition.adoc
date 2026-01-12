@@ -1,0 +1,17 @@
+=== COMPOSITION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/composition.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/composition.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/composition.adoc[]
+
+====

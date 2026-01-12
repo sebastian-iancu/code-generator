@@ -1,0 +1,17 @@
+=== ARCHETYPE_CONSTRAINT Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/archetype_constraint.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/archetype_constraint.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/archetype_constraint.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== RESOURCE_ANNOTATIONS Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/resource_annotations.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/resource_annotations.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/resource_annotations.adoc[]
+
+====

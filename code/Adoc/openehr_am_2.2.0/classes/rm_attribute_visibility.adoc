@@ -1,0 +1,17 @@
+=== RM_ATTRIBUTE_VISIBILITY Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/rm_attribute_visibility.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/rm_attribute_visibility.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/rm_attribute_visibility.adoc[]
+
+====

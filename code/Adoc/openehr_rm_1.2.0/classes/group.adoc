@@ -1,0 +1,17 @@
+=== GROUP Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/group.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/group.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/group.adoc[]
+
+====

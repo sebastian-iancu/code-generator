@@ -1,0 +1,17 @@
+=== OP_DEF_AND Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/op_def_and.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/op_def_and.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/op_def_and.adoc[]
+
+====

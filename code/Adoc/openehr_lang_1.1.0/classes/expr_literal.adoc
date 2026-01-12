@@ -1,0 +1,17 @@
+=== EXPR_LITERAL Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/expr_literal.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/expr_literal.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/expr_literal.adoc[]
+
+====

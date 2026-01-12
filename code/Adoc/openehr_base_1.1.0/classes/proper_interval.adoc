@@ -1,0 +1,17 @@
+=== Proper_interval Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/proper_interval.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/proper_interval.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/proper_interval.adoc[]
+
+====

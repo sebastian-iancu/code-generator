@@ -1,0 +1,17 @@
+=== EL_DECISION_BRANCH Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/el_decision_branch.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/el_decision_branch.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/el_decision_branch.adoc[]
+
+====

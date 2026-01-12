@@ -1,0 +1,17 @@
+=== TYPE_DEF_DURATION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/type_def_duration.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/type_def_duration.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/type_def_duration.adoc[]
+
+====

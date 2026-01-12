@@ -1,0 +1,17 @@
+=== DV_EHR_URI Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/dv_ehr_uri.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/dv_ehr_uri.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/dv_ehr_uri.adoc[]
+
+====

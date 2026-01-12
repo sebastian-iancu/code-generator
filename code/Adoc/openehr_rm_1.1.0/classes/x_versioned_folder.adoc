@@ -1,0 +1,17 @@
+=== X_VERSIONED_FOLDER Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/x_versioned_folder.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/x_versioned_folder.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/x_versioned_folder.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== Ordered Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/ordered.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/ordered.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/ordered.adoc[]
+
+====

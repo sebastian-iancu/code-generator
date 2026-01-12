@@ -1,0 +1,17 @@
+=== Comparable Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/comparable.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/comparable.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/comparable.adoc[]
+
+====

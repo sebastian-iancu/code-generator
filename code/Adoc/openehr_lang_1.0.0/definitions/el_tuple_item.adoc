@@ -1,0 +1,20 @@
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*EL_TUPLE_ITEM*
+
+h|*Description*
+2+a|A single tuple item, with an optional name.
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*0..1*
+|*item*: `xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION]`
+a|Reference to value entity. If Void, this indicates that the item in this position is Void, e.g. within a routine call parameter list.
+
+h|*0..1*
+|*name*: `link:/classes/String[String] `
+a|Optional name of tuple item.
+|===

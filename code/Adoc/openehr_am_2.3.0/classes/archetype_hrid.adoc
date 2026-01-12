@@ -1,0 +1,17 @@
+=== ARCHETYPE_HRID Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/archetype_hrid.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/archetype_hrid.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/archetype_hrid.adoc[]
+
+====

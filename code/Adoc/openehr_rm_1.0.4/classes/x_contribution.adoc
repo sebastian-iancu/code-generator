@@ -1,0 +1,17 @@
+=== X_CONTRIBUTION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/x_contribution.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/x_contribution.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/x_contribution.adoc[]
+
+====

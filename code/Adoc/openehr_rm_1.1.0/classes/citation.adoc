@@ -1,0 +1,17 @@
+=== CITATION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/citation.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/citation.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/citation.adoc[]
+
+====

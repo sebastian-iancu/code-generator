@@ -1,0 +1,17 @@
+=== C_ORDINAL Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/c_ordinal.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/c_ordinal.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/c_ordinal.adoc[]
+
+====

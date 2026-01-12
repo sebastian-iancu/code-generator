@@ -1,0 +1,17 @@
+=== ROLE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/role.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/role.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/role.adoc[]
+
+====

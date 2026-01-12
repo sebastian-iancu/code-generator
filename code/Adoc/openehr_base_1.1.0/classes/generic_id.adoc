@@ -1,0 +1,17 @@
+=== GENERIC_ID Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/generic_id.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/generic_id.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/generic_id.adoc[]
+
+====

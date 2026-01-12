@@ -1,0 +1,17 @@
+=== ACTION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/action.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/action.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/action.adoc[]
+
+====

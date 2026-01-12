@@ -1,0 +1,17 @@
+=== DV_PROPORTION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/dv_proportion.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/dv_proportion.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/dv_proportion.adoc[]
+
+====

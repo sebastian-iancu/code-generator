@@ -1,0 +1,17 @@
+=== ADL_CODE_DEFINITIONS Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/adl_code_definitions.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/adl_code_definitions.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/adl_code_definitions.adoc[]
+
+====

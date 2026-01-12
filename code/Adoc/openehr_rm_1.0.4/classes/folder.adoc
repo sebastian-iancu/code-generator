@@ -1,0 +1,17 @@
+=== FOLDER Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/folder.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/folder.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/folder.adoc[]
+
+====

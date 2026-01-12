@@ -1,0 +1,17 @@
+=== BMM_ACTION_DECISION_TABLE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/bmm_action_decision_table.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/bmm_action_decision_table.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/bmm_action_decision_table.adoc[]
+
+====

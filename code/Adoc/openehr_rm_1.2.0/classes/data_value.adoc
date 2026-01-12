@@ -1,0 +1,17 @@
+=== DATA_VALUE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/data_value.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/data_value.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/data_value.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== INSTRUCTION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/instruction.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/instruction.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/instruction.adoc[]
+
+====

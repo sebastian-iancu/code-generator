@@ -1,0 +1,17 @@
+=== EHR_STATUS Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/ehr_status.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/ehr_status.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/ehr_status.adoc[]
+
+====

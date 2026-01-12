@@ -1,0 +1,17 @@
+=== Any Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/any.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/any.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/any.adoc[]
+
+====

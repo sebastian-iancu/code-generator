@@ -1,0 +1,17 @@
+=== HISTORY Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/history.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/history.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/history.adoc[]
+
+====

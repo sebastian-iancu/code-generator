@@ -1,0 +1,17 @@
+=== VERSION_STATUS Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/version_status.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/version_status.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/version_status.adoc[]
+
+====

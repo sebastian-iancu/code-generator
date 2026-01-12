@@ -1,0 +1,17 @@
+=== ITEM_TABLE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/item_table.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/item_table.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/item_table.adoc[]
+
+====

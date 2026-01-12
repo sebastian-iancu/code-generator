@@ -1,0 +1,17 @@
+=== P_BMM_INDEXED_CONTAINER_TYPE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/p_bmm_indexed_container_type.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/p_bmm_indexed_container_type.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/p_bmm_indexed_container_type.adoc[]
+
+====

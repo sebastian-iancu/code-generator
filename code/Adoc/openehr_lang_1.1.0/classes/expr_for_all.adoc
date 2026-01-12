@@ -1,0 +1,17 @@
+=== EXPR_FOR_ALL Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/expr_for_all.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/expr_for_all.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/expr_for_all.adoc[]
+
+====

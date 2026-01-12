@@ -1,0 +1,17 @@
+=== AGENT Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/agent.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/agent.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/agent.adoc[]
+
+====

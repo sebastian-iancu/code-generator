@@ -1,0 +1,17 @@
+=== EL_PREDICATE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/el_predicate.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/el_predicate.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/el_predicate.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== CODE_PHRASE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/code_phrase.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/code_phrase.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/code_phrase.adoc[]
+
+====

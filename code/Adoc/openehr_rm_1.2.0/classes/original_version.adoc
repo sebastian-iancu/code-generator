@@ -1,0 +1,17 @@
+=== ORIGINAL_VERSION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/original_version.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/original_version.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/original_version.adoc[]
+
+====

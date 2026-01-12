@@ -1,0 +1,17 @@
+=== ARCHETYPE_ONTOLOGY Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/archetype_ontology.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/archetype_ontology.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/archetype_ontology.adoc[]
+
+====

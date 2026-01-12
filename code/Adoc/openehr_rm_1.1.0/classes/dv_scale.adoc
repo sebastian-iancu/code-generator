@@ -1,0 +1,17 @@
+=== DV_SCALE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/dv_scale.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/dv_scale.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/dv_scale.adoc[]
+
+====

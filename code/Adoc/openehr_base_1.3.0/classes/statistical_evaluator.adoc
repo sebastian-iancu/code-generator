@@ -1,0 +1,17 @@
+=== Statistical_evaluator Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/statistical_evaluator.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/statistical_evaluator.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/statistical_evaluator.adoc[]
+
+====

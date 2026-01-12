@@ -1,0 +1,17 @@
+=== INTERNET_ID Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/internet_id.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/internet_id.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/internet_id.adoc[]
+
+====

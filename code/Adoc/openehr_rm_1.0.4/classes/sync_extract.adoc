@@ -1,0 +1,17 @@
+=== SYNC_EXTRACT Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/sync_extract.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/sync_extract.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/sync_extract.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== PARTY_IDENTIFIED Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/party_identified.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/party_identified.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/party_identified.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== Numeric Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/numeric.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/numeric.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/numeric.adoc[]
+
+====

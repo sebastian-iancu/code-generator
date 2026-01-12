@@ -1,0 +1,17 @@
+=== OPERATOR_DEF_EXTERNAL Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/operator_def_external.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/operator_def_external.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/operator_def_external.adoc[]
+
+====

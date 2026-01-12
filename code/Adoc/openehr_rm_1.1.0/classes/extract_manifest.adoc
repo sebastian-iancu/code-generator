@@ -1,0 +1,17 @@
+=== EXTRACT_MANIFEST Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/extract_manifest.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/extract_manifest.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/extract_manifest.adoc[]
+
+====

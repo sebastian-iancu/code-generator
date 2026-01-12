@@ -1,0 +1,17 @@
+=== EXPRESSION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/expression.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/expression.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/expression.adoc[]
+
+====

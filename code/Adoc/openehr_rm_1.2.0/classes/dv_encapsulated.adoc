@@ -1,0 +1,17 @@
+=== DV_ENCAPSULATED Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/dv_encapsulated.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/dv_encapsulated.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/dv_encapsulated.adoc[]
+
+====

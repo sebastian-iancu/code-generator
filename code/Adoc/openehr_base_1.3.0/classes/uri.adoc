@@ -1,0 +1,17 @@
+=== Uri Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/uri.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/uri.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/uri.adoc[]
+
+====

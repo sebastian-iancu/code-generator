@@ -1,0 +1,17 @@
+=== ARCHETYPED Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/archetyped.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/archetyped.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/archetyped.adoc[]
+
+====

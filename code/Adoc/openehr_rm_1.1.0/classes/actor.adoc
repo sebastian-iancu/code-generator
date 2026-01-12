@@ -1,0 +1,17 @@
+=== ACTOR Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/actor.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/actor.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/actor.adoc[]
+
+====

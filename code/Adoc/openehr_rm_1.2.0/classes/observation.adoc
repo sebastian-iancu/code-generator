@@ -1,0 +1,17 @@
+=== OBSERVATION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/observation.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/observation.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/observation.adoc[]
+
+====

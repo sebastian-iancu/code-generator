@@ -1,0 +1,17 @@
+=== STATEMENT_SET Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/statement_set.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/statement_set.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/statement_set.adoc[]
+
+====

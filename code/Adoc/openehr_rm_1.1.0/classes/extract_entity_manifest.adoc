@@ -1,0 +1,17 @@
+=== EXTRACT_ENTITY_MANIFEST Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/extract_entity_manifest.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/extract_entity_manifest.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/extract_entity_manifest.adoc[]
+
+====

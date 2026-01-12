@@ -1,0 +1,17 @@
+=== ISO_OID Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/iso_oid.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/iso_oid.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/iso_oid.adoc[]
+
+====

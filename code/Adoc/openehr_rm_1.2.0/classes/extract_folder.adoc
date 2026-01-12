@@ -1,0 +1,17 @@
+=== EXTRACT_FOLDER Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/extract_folder.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/extract_folder.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/extract_folder.adoc[]
+
+====

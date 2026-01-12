@@ -1,0 +1,17 @@
+=== EXPR_TYPE_DEF Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/expr_type_def.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/expr_type_def.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/expr_type_def.adoc[]
+
+====

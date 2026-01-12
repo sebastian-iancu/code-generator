@@ -1,0 +1,17 @@
+=== CONTACT Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/contact.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/contact.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/contact.adoc[]
+
+====

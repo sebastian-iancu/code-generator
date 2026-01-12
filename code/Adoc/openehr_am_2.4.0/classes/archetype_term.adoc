@@ -1,0 +1,17 @@
+=== ARCHETYPE_TERM Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/archetype_term.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/archetype_term.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/archetype_term.adoc[]
+
+====

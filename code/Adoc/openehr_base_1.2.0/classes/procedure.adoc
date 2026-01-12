@@ -1,0 +1,17 @@
+=== PROCEDURE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/procedure.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/procedure.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/procedure.adoc[]
+
+====

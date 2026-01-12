@@ -1,0 +1,17 @@
+=== EL_UNARY_OPERATOR Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/el_unary_operator.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/el_unary_operator.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/el_unary_operator.adoc[]
+
+====

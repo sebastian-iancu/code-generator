@@ -1,0 +1,17 @@
+=== PARTY_PROXY Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/party_proxy.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/party_proxy.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/party_proxy.adoc[]
+
+====

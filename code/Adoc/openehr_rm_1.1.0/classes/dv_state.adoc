@@ -1,0 +1,17 @@
+=== DV_STATE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/dv_state.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/dv_state.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/dv_state.adoc[]
+
+====
