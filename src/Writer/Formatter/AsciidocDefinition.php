@@ -403,14 +403,32 @@ class AsciidocDefinition
         return $this->formatType($type->rootType, $prefix) . '<' . $genericParameters . '>';
     }
 
+    public function formatXref(string $packageQname, array &$results = []): string
+    {
+        $packageQnameSuffix = explode('org.openehr.', $packageQname)[1] ?? '';
+        if (!$packageQnameSuffix) {
+            return '';
+        }
+
+        $m = explode('.', $packageQnameSuffix);
+        $component = $m[0] ?? '';
+        $module = $m[1] ?? '';
+        $page = $m[2] ?? '';
+        $results = [strtoupper($component), $module, $page];
+
+        return implode(':', array_filter($results));
+    }
+
     public function formatType(string $type, string $prefix): string
     {
-        if (strlen($type) === 1 || $type === 'Operation') {
+        if (strlen($type) === 1 || in_array(strtolower($type), ['operation', 'void', 'null', 'false', 'true'])) {
             return $type;
         }
-        $packageQname = Globals::getClassPackageQName($type);
-        // todo adapt this once all pages are in Antora
-        if ($packageQname && preg_match('/^[\w.]+\.org\.openehr\.(\w+)\.(\w+)(?:\.\w+){0,2}$/', $packageQname, $m) === 1) {
+        $packageQname = Globals::getClassPackageQName($type) ?? '';
+        $m = [];
+        $xref = $this->formatXref($packageQname, $m);
+        //echo "XX $xref [$type] prefix $prefix\n";
+        if ($xref) {
             $class = Globals::getClass($type);
             if ($class instanceof BmmInterface) {
                 $classType = 'interface';
@@ -419,14 +437,27 @@ class AsciidocDefinition
             } else {
                 $classType = 'class';
             }
-            if (preg_match('/^org\.openehr\.(\w+)\.(\w+)(?:\.\w+){0,2}$/', $prefix, $p) && $m[2] === $p[2]) {
-                // type is on the same spec page, an example format is '<<_boolean_class,Boolean>>'
-                return '<<_' . strtolower($type) . '_' . $classType . ',' . $type . '>>';
+
+            if ($this->legacyFormat) {
+                $prefixXref = $this->formatXref($prefix);
+                if ($xref === $prefixXref) {
+                    // type is on the same spec page, an example format is '<<_boolean_class,Boolean>>'
+                    return '<<_' . strtolower($type) . '_' . $classType . ',' . $type . '>>';
+                }
+                // an example format is 'link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]'
+                return 'link:/releases/' . $m[0] . '/{' . strtolower($m[0]) . '_release}/' . $m[1] . '.html#_' . strtolower($type) . '_' . $classType . '[' . $type . ']';
             }
-            // an example format is 'link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]'
-            return 'link:/releases/' . strtoupper($m[1]) . '/{' . $m[1] . '_release}/' . $m[2] . '.html#_' . strtolower($type) . '_' . $classType . '[' . $type . '^]';
+
+            // an example format is 'xref:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]'
+            $xref = match ($xref) {
+                'BASE:foundation_types' => 'BASE:foundation_types:overview',
+                'BASE:foundation_types:time' => 'BASE:foundation_types:time_types',
+                'BASE:foundation_types:structure' => 'BASE:foundation_types:structure_types',
+                default => $xref . '_package',
+            };
+            return 'xref:' . $xref . '.adoc#_' . strtolower($type) . '_' . $classType . '[' . $type . ']';
         }
-        return 'link:/classes/' . $type . '[' . $type . '] '.$packageQname;
+        return 'link:/classes/' . $type . '[' . $type . '] ' . $packageQname;
     }
 
     public function formatText(string $text): string

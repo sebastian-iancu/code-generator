@@ -78,7 +78,11 @@ class BmmAsciidocWriter extends AbstractWriter
             if (!$class) {
                 throw new RuntimeException(sprintf('WARN: Class %s not found in schema', $className));
             }
-            $filename = $prefix . '.' . strtolower($className) . '.adoc';
+            if ($this->legacyFormat) {
+                $filename = $prefix . '.' . strtolower($className) . '.adoc';
+            } else {
+                $filename = strtolower($className) . '.adoc';
+            }
             self::log('Writing %s class ...', $filename);
             $this->writeFile($definitionsDir . $filename, $this->definition->format($class, $prefix));
             $this->writeFile($tabsDir . $filename, $this->tab->format($class, $filename));
@@ -87,7 +91,11 @@ class BmmAsciidocWriter extends AbstractWriter
         }
         $prefix = 'org.openehr.' . strtolower($schema->schemaName) . '.';
         $namePrefix = $prefix . str_replace($prefix, '', $namePrefix);
-        $packageName = rtrim($namePrefix . str_replace($namePrefix, '', $package->name), '.');
+        if ($this->legacyFormat) {
+            $packageName = rtrim($namePrefix . str_replace($namePrefix, '', $package->name), '.');
+        } else {
+            $packageName = strtoupper($schema->schemaName) . '-' . rtrim(str_replace($namePrefix, '', $package->name), '.');
+        }
         self::log('Writing %s package ...', $packageName);
         $this->writeFile($plantUmlPackagesDir . $packageName . '.adoc', $this->plantUml->format($package, $packageName));
     }

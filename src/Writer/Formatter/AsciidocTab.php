@@ -10,6 +10,7 @@ class AsciidocTab
     public function format(AbstractBmmClass $class, string $classFilename): string
     {
         $className = $class->getName();
+        $location = 'ROOT:partial$'; // '../' as legacy
 
         return <<<ASCIIDOC
 === {$className} Class
@@ -18,15 +19,15 @@ class AsciidocTab
 ====
 Definition::
 +
-include::../definitions/{$classFilename}[]
+include::{$location}definitions/{$classFilename}[]
 
 BMM::
 +
-include::../BMMs/{$classFilename}[]
+include::{$location}BMMs/{$classFilename}[]
 
 UML::
 +
-include::../plantUML/classes/{$classFilename}[]
+include::{$location}plantUML/classes/{$classFilename}[]
 
 ====
 ASCIIDOC;
