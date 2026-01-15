@@ -62,6 +62,12 @@ class BmmAsciidocWriter extends AbstractWriter
         }
         $prefix = 'org.openehr.' . strtolower($schema->schemaName) . '.';
         $prefix .= explode('.', str_replace($prefix, '', $namePrefix . $package->name))[0];
+        if (!$this->legacyFormat && $schema->schemaName === 'am') {
+            $parts = explode('.', $prefix);
+            $pkg = end($parts) . '.';
+        } else {
+            $pkg = '';
+        }
         $definitionsDir = self::DIR . $schema->getSchemaId() . '/definitions/';
         $this->assureOutputDir($definitionsDir);
         $tabsDir = self::DIR . $schema->getSchemaId() . '/classes/';
@@ -81,7 +87,7 @@ class BmmAsciidocWriter extends AbstractWriter
             if ($this->legacyFormat) {
                 $filename = $prefix . '.' . strtolower($className) . '.adoc';
             } else {
-                $filename = strtolower($className) . '.adoc';
+                $filename = $pkg . strtolower($className) . '.adoc';
             }
             self::log('Writing %s class ...', $filename);
             $this->writeFile($definitionsDir . $filename, $this->definition->format($class, $prefix));
@@ -94,7 +100,7 @@ class BmmAsciidocWriter extends AbstractWriter
         if ($this->legacyFormat) {
             $packageName = rtrim($namePrefix . str_replace($namePrefix, '', $package->name), '.');
         } else {
-            $packageName = strtoupper($schema->schemaName) . '-' . rtrim(str_replace($namePrefix, '', $package->name), '.');
+            $packageName = strtoupper($schema->schemaName) . '-' . $pkg . rtrim(str_replace($namePrefix, '', $package->name), '.');
         }
         self::log('Writing %s package ...', $packageName);
         $this->writeFile($plantUmlPackagesDir . $packageName . '.adoc', $this->plantUml->format($package, $packageName));
