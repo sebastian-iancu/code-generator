@@ -33,6 +33,7 @@ class AsciidocDefinition
         '".*"' => '".&#42;"',
         '/.*/' => '/.&#42;/',
         "'*'" => "'&#42;'",
+        " {" => " \{",
     ];
 
     public function __construct(private readonly bool $legacyFormat = false)
@@ -452,7 +453,26 @@ class AsciidocDefinition
             $xref = match ($xref) {
                 'BASE:foundation_types' => 'BASE:foundation_types:overview',
                 'BASE:foundation_types:time' => 'BASE:foundation_types:time_types',
-                'BASE:foundation_types:structure' => 'BASE:foundation_types:structure_types',
+                'BASE:foundation_types:structures', 'BASE:foundation_types:structure', 'BASE:foundation_types:structure_package' => 'BASE:foundation_types:structure_types',
+                'BASE:foundation_types:interval' => 'BASE:foundation_types:interval',
+                'BASE:foundation_types:primitive_types' => 'BASE:foundation_types:primitive_types',
+                'BASE:foundation_types:functional' => 'BASE:foundation_types:functional',
+                'BASE:foundation_types:terminology' => 'BASE:foundation_types:terminology',
+                'BASE:resource' => 'BASE:resource:resource_package',
+                'AM:aom14:archetype' => 'AM:AOM1.4:archetype_package',
+                'AM:aom14:openehr_archetype_profile' => 'AM:AOM1.4:domain_extension',
+                'AM:aom2:archetype' => 'AM:AOM2:archetype_package',
+                'AM:aom2:constraint_model' => 'AM:AOM2:constraint_model-class_definitions',
+                'AM:aom2:definitions' => 'AM:AOM2:model_overview',
+                'AM:aom2:terminology' => 'AM:AOM2:terminology_package',
+                'AM:aom2:rm_overlay', 'AM:aom2:profile' => 'AM:AOM2:rm_adaptation',
+                'AM:aom2:rules' => 'AM:AOM2:rules_package',
+                'RM:ehr_extract:sync_extract' => 'RM:ehr_extract:synchronisation_package',
+                'RM:composition' => 'RM:ehr:composition_package',
+                'RM:composition:content' => 'RM:ehr:content_package',
+                'RM:demographic' => 'RM:demographic:demographic_package',
+                'RM:data_structures' => 'RM:data_structures:item_structure_package',
+                'RM:ehr' => 'RM:ehr:ehr_package',
                 default => $xref . '_package',
             };
             return 'xref:' . $xref . '.adoc#_' . strtolower($type) . '_' . $classType . '[' . $type . ']';
@@ -462,6 +482,7 @@ class AsciidocDefinition
 
     public function formatText(string $text): string
     {
+        $text = preg_replace('/(\{[\w.]*})/', '\\\$1', $text, -1, $count);
         return str_replace(array_keys(self::TEXT_REPLACEMENT), array_values(self::TEXT_REPLACEMENT), trim($text));
     }
 
