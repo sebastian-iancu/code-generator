@@ -1,0 +1,17 @@
+=== C_SECOND_ORDER Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/aom2.c_second_order.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/aom2.c_second_order.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/aom2.c_second_order.adoc[]
+
+====

@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*cardinality*: `xref:BASE:foundation_types:interval_package.adoc#_multiplicity_interval_class[Multiplicity_interval]`
+|*cardinality*: `xref:BASE:foundation_types:interval.adoc#_multiplicity_interval_class[Multiplicity_interval]`
 a|Cardinality of this container.
 
 h|*1..1 +
@@ -28,6 +28,6 @@ h|*Functions*
 
 h|*1..1 +
 (redefined)*
-|*display_name* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*display_name* (): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Name of this property in form `name: ContainerTypeName<>`.
 |===

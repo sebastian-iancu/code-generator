@@ -30,7 +30,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*is_null* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_null* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|True if value logically not known, e.g. if indeterminate, not asked etc.
 
 h|*Invariants*

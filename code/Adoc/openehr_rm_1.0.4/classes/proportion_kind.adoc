@@ -1,4 +1,4 @@
-=== PROPORTION_KIND Class
+=== PROPORTION_KIND Enumeration
 
 [tabs]
 ====

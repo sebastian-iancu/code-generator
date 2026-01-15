@@ -28,6 +28,6 @@ a|Create appropriate `BMM_XXX` object; effected in descendants.
 
 h|*1..1 +
 (abstract)*
-|*as_type_string* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*as_type_string* (): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Formal name of the type for display.
 |===

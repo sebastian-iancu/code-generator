@@ -17,11 +17,11 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*identities*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:demographic_package.adoc#_party_identity_class[PARTY_IDENTITY]>`
+|*identities*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:demographic:demographic_package.adoc#_party_identity_class[PARTY_IDENTITY]>`
 a|Identities used by the party to identify itself, such as legal name, stage names, aliases, nicknames and so on.
 
 h|*0..1*
-|*contacts*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:demographic_package.adoc#_contact_class[CONTACT]>`
+|*contacts*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:demographic:demographic_package.adoc#_contact_class[CONTACT]>`
 a|Contacts for this party.
 
 h|*0..1*
@@ -33,7 +33,7 @@ h|*0..1*
 a|References to relationships in which this Party takes part as target.
 
 h|*0..1*
-|*relationships*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:demographic_package.adoc#_party_relationship_class[PARTY_RELATIONSHIP]>`
+|*relationships*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:demographic:demographic_package.adoc#_party_relationship_class[PARTY_RELATIONSHIP]>`
 a|Relationships in which this Party takes part as source.
 
 h|*Functions*

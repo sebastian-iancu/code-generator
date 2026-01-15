@@ -13,7 +13,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*persist_in_server*: `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*persist_in_server*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|If True, this Request is persisted in the server until further notice.
 
 h|*0..1*

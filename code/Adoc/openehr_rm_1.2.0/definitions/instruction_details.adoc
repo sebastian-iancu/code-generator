@@ -18,7 +18,7 @@ h|*1..1*
 a|Reference to causing Instruction.
 
 h|*1..1*
-|*activity_id*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*activity_id*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Identifier of Activity within Instruction, in the form of its archetype path.
 
 h|*0..1*

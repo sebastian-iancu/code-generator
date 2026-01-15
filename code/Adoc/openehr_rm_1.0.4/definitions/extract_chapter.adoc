@@ -14,6 +14,6 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*items*: `xref:BASE:foundation_types:structures_package.adoc#_list_class[List]<xref:RM:ehr_extract:common_package.adoc#_extract_item_class[EXTRACT_ITEM]>`
+|*items*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:ehr_extract:common_package.adoc#_extract_item_class[EXTRACT_ITEM]>`
 a|The information content of this chapter.
 |===

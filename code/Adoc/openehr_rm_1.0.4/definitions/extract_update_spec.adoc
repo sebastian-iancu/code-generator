@@ -13,7 +13,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*persist_in_server*: `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*persist_in_server*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|If True, this Request is persisted in the server until further notice.
 
 h|*0..1*
@@ -21,7 +21,7 @@ h|*0..1*
 a|Period for resending update Extracts in response to original Request.
 
 h|*0..1*
-|*trigger_events*: `xref:BASE:foundation_types:structures_package.adoc#_list_class[List]<xref:RM:data_types:text_package.adoc#_dv_coded_text_class[DV_CODED_TEXT]>`
+|*trigger_events*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:data_types:text_package.adoc#_dv_coded_text_class[DV_CODED_TEXT]>`
 a|Set of Event names that will cause sending of update Extracts. Event types include:   
 
 * any_change - any change in content items matched by content specification, e.g. new versions of persistent compositions. If the content list allows matching of any, or a wide range of archetypes, this event type will match any additions to the record.

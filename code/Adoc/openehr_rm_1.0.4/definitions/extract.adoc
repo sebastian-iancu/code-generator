@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*chapters*: `xref:BASE:foundation_types:structures_package.adoc#_list_class[List]<xref:RM:ehr_extract:common_package.adoc#_extract_chapter_class[EXTRACT_CHAPTER]>`
+|*chapters*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:ehr_extract:common_package.adoc#_extract_chapter_class[EXTRACT_CHAPTER]>`
 a|The content extracted and serialised from the source repository for this Extract.
 
 h|*0..1*
@@ -34,11 +34,11 @@ h|*1..1*
 a|Identifier of creating system.
 
 h|*1..1*
-|*sequence_nr*: `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*sequence_nr*: `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Number of this Extract response in sequence of responses to Extract request identified by request_id. If this is the sole response, or there was no request, value is 1.
 
 h|*0..1*
-|*participations*: `xref:BASE:foundation_types:structures_package.adoc#_list_class[List]<xref:RM:ehr_extract:common_package.adoc#_extract_participation_class[EXTRACT_PARTICIPATION]>`
+|*participations*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:ehr_extract:common_package.adoc#_extract_participation_class[EXTRACT_PARTICIPATION]>`
 a|Participations relevant to the creation of this Extract.
 
 h|*Invariants*

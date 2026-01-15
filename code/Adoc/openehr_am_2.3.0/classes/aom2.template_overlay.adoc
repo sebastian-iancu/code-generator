@@ -1,0 +1,17 @@
+=== TEMPLATE_OVERLAY Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/aom2.template_overlay.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/aom2.template_overlay.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/aom2.template_overlay.adoc[]
+
+====

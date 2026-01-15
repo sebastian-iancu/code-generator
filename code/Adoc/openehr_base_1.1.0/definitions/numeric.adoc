@@ -16,21 +16,21 @@ h|*Functions*
 h|*1..1 +
 (abstract)*
 |*infix ** ( +
-other: `xref:BASE:foundation_types:primitive_types_package.adoc#_numeric_class[Numeric][1]` +
-): `xref:BASE:foundation_types:primitive_types_package.adoc#_numeric_class[Numeric]`
+other: `xref:BASE:foundation_types:primitive_types.adoc#_numeric_class[Numeric][1]` +
+): `xref:BASE:foundation_types:primitive_types.adoc#_numeric_class[Numeric]`
 a|Product by `other'. Actual type of result depends on arithmetic balancing rules.
 
 h|*1..1 +
 (abstract)*
 |*infix +* ( +
-other: `xref:BASE:foundation_types:primitive_types_package.adoc#_numeric_class[Numeric][1]` +
-): `xref:BASE:foundation_types:primitive_types_package.adoc#_numeric_class[Numeric]`
+other: `xref:BASE:foundation_types:primitive_types.adoc#_numeric_class[Numeric][1]` +
+): `xref:BASE:foundation_types:primitive_types.adoc#_numeric_class[Numeric]`
 a|Sum with `other' (commutative). Actual type of result depends on arithmetic balancing rules.
 
 h|*1..1 +
 (abstract)*
 |*infix -* ( +
-other: `xref:BASE:foundation_types:primitive_types_package.adoc#_numeric_class[Numeric][1]` +
-): `xref:BASE:foundation_types:primitive_types_package.adoc#_numeric_class[Numeric]`
+other: `xref:BASE:foundation_types:primitive_types.adoc#_numeric_class[Numeric][1]` +
+): `xref:BASE:foundation_types:primitive_types.adoc#_numeric_class[Numeric]`
 a|Result of subtracting `other'. Actual type of result depends on arithmetic balancing rules.
 |===

@@ -20,7 +20,7 @@ a|The function agent being called.
 
 h|*1..1 +
 (effected)*
-|*is_writable*: `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean] +
+|*is_writable*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean] +
 {default{nbsp}={nbsp}false}`
 a|Defined to return False.
 
@@ -35,7 +35,7 @@ a|Return `_agent.definition.type_`.
 
 h|*1..1 +
 (redefined)*
-|*reference* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*reference* (): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Generated full reference name, consisting of any scoping elements, function name and routine parameters enclosed in parentheses.
 
 h|*Invariants*

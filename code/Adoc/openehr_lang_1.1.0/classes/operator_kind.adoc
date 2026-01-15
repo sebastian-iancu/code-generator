@@ -1,4 +1,4 @@
-=== OPERATOR_KIND Class
+=== OPERATOR_KIND Enumeration
 
 [tabs]
 ====

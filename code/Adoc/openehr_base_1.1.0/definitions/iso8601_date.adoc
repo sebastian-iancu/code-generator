@@ -20,17 +20,17 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*year* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*year* (): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Year.
 
 h|*1..1*
-|*month* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]` +
+|*month* (): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]` +
  +
 __Pre__: `not month_unknown`
 a|Month in year.
 
 h|*1..1*
-|*day* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]` +
+|*day* (): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]` +
  +
 __Pre__: `not day_unknown`
 a|Day in month.
@@ -40,25 +40,25 @@ h|*1..1*
 a|Timezone; may be Void.
 
 h|*1..1*
-|*month_unknown* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*month_unknown* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Indicates whether month in year is unknown. If so, the date is of the form `"YYYY"`.
 
 h|*1..1*
-|*day_unknown* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*day_unknown* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Indicates whether day in month is unknown. If so, and month is known, the date is of the form `"YYYY-MM"` or `"YYYYMM"`.
 
 h|*1..1 +
 (effected)*
-|*is_partial* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_partial* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|True if this date is partial, i.e. if days or more is missing.
 
 h|*1..1 +
 (effected)*
-|*is_extended* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_extended* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|True if this date uses `'-'` separators.
 
 h|*1..1*
-|*as_string* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*as_string* (): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Return string value in extended format.
 
 h|*Invariants*

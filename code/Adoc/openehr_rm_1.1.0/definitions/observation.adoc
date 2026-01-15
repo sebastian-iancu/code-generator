@@ -9,7 +9,7 @@ h|*Description*
 Not to be used for recording opinion or future statements of any kind, including instructions, intentions, plans etc.
 
 h|*Inherit*
-2+|`xref:RM:composition:content_package.adoc#_care_entry_class[CARE_ENTRY]`
+2+|`xref:RM:ehr:content_package.adoc#_care_entry_class[CARE_ENTRY]`
 
 h|*Attributes*
 ^h|*Signature*

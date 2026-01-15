@@ -9,7 +9,7 @@ h|*Description*
 Not to be used for plan items which are only specified in general terms.
 
 h|*Inherit*
-2+|`xref:RM:composition:content_package.adoc#_care_entry_class[CARE_ENTRY]`
+2+|`xref:RM:ehr:content_package.adoc#_care_entry_class[CARE_ENTRY]`
 
 h|*Attributes*
 ^h|*Signature*
@@ -28,7 +28,7 @@ h|*0..1*
 a|Optional workflow engine executable expression of the Instruction.
 
 h|*0..1*
-|*activities*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:composition:content_package.adoc#_activity_class[ACTIVITY]>`
+|*activities*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:ehr:content_package.adoc#_activity_class[ACTIVITY]>`
 a|List of all activities in Instruction.
 
 h|*Invariants*

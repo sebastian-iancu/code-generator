@@ -11,11 +11,11 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*originating_system_item_ids*: `xref:BASE:foundation_types:structures_package.adoc#_list_class[List]<xref:RM:data_types:basic_package.adoc#_dv_identifier_class[DV_IDENTIFIER]>`
+|*originating_system_item_ids*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:data_types:basic_package.adoc#_dv_identifier_class[DV_IDENTIFIER]>`
 a|Identifiers used for the item in the originating system, e.g. filler and placer ids.
 
 h|*0..1*
-|*feeder_system_item_ids*: `xref:BASE:foundation_types:structures_package.adoc#_list_class[List]<xref:RM:data_types:basic_package.adoc#_dv_identifier_class[DV_IDENTIFIER]>`
+|*feeder_system_item_ids*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:data_types:basic_package.adoc#_dv_identifier_class[DV_IDENTIFIER]>`
 a|Identifiers used for the item in the feeder system, where the feeder system is distinct from the originating system.
 
 h|*0..1*

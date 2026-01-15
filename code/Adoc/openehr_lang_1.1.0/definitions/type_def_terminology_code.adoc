@@ -15,12 +15,12 @@ h|*Attributes*
 
 h|*1..1 +
 (effected)*
-|*type_name*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String] +
+|*type_name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String] +
 {default{nbsp}={nbsp}"Terminology_code"}`
 a|
 
 h|*1..1 +
 (effected)*
-|*type_anchor*: `xref:BASE:foundation_types:terminology_package.adoc#_terminology_code_class[Terminology_code]`
+|*type_anchor*: `xref:BASE:foundation_types:terminology.adoc#_terminology_code_class[Terminology_code]`
 a|
 |===

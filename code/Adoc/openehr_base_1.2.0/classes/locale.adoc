@@ -1,4 +1,4 @@
-=== Locale Class
+=== Locale Interface
 
 [tabs]
 ====

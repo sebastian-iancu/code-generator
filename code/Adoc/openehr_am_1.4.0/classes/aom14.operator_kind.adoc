@@ -1,0 +1,17 @@
+=== OPERATOR_KIND Enumeration
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/aom14.operator_kind.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/aom14.operator_kind.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/aom14.operator_kind.adoc[]
+
+====

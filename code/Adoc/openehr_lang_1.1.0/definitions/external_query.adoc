@@ -14,17 +14,17 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*context*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*context*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Optional name of context. This allows a basic separation of query types to be done in more sophisticated environments. Possible values might be “patient”, “medications” and so on.
 Not yet standardised.
 
 h|*1..1*
-|*query_id*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*query_id*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Identifier of query in the external context, e.g. “date_of_birth”.
 Not yet standardised.
 
 h|*0..1*
-|*query_args*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]>`
+|*query_args*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]>`
 a|Optional arguments to query.
 Not yet standardised.
 |===

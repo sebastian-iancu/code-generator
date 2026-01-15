@@ -21,7 +21,7 @@ a|The unique identifier of this EHR.
 NOTE: is is strongly recommended that a UUID always be used for this field.
 
 h|*0..1*
-|*contributions*: `xref:BASE:foundation_types:structures_package.adoc#_list_class[List]<xref:BASE:base_types:identification_package.adoc#_object_ref_class[OBJECT_REF]>`
+|*contributions*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:BASE:base_types:identification_package.adoc#_object_ref_class[OBJECT_REF]>`
 a|List of contributions causing changes to this EHR. Each contribution contains a list of versions, which may include references to any number of `VERSION` instances, i.e. items of type `VERSIONED_COMPOSITION` and `VERSIONED_FOLDER`.
 
 h|*1..1*
@@ -33,7 +33,7 @@ h|*1..1*
 a|Reference to `EHR_ACCESS` object for this EHR.
 
 h|*0..1*
-|*compositions*: `xref:BASE:foundation_types:structures_package.adoc#_list_class[List]<xref:BASE:base_types:identification_package.adoc#_object_ref_class[OBJECT_REF]>`
+|*compositions*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:BASE:base_types:identification_package.adoc#_object_ref_class[OBJECT_REF]>`
 a|Master list of all Versioned Composition references in this EHR.
 
 h|*0..1*

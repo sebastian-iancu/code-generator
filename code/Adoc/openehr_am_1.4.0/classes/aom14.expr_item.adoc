@@ -1,0 +1,17 @@
+=== EXPR_ITEM Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/aom14.expr_item.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/aom14.expr_item.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/aom14.expr_item.adoc[]
+
+====

@@ -11,12 +11,12 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*name*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String] +
+|*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String] +
 {default{nbsp}={nbsp}"feature"}`
 a|Name of this feature group; defaults to 'feature'.
 
 h|*1..1*
-|*properties*: `xref:BASE:foundation_types:structure_types.adoc#_hash_class[Hash]<xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String],xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]>`
+|*properties*: `xref:BASE:foundation_types:structure_types.adoc#_hash_class[Hash]<xref:BASE:foundation_types:primitive_types.adoc#_string_class[String],xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]>`
 a|Set of properties of this group, represented as name/value pairs. These are understood to apply logically to all of the features contained within the group.
 
 h|*0..1*

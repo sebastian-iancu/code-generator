@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*type*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*type*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|If the type is a simple type, then this attribute will hold the type name. If the type is a container or generic, then type_ref will hold the type definition. The resulting type is generated in type_def.
 
 h|*0..1*

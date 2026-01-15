@@ -22,7 +22,7 @@ h|*0..1*
 a|Optional end time of the clinical session.
 
 h|*0..1*
-|*location*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*location*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|The actual location where the session occurred, e.g. 'microbiology lab 2', 'home', 'ward A3'  and so on.
 
 h|*1..1*
@@ -38,7 +38,7 @@ h|*0..1*
 a|The health care facility under whose care the event took place. This is the most specific workgroup or delivery unit within a care delivery enterprise that has an official identifier in the health system, and can be used to ensure medico-legal accountability.
 
 h|*0..1*
-|*participations*: `xref:BASE:foundation_types:structures_package.adoc#_list_class[List]<xref:RM:common:generic_package.adoc#_participation_class[PARTICIPATION]>`
+|*participations*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:common:generic_package.adoc#_participation_class[PARTICIPATION]>`
 a|Parties involved in the healthcare event. These would normally include the physician(s) and often the patient (but not the latter if the clinical session is a pathology test for example).
 
 h|*Invariants*

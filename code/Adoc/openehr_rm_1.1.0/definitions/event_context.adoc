@@ -22,7 +22,7 @@ h|*0..1*
 a|Optional end time of the clinical session.
 
 h|*0..1*
-|*location*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*location*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|The actual location where the session occurred, e.g. 'microbiology lab 2', 'home', 'ward A3'  and so on.
 
 h|*1..1*

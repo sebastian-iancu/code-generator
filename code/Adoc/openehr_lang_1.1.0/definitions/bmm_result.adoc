@@ -15,7 +15,7 @@ h|*Attributes*
 
 h|*1..1 +
 (effected)*
-|*name*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String] +
+|*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String] +
 {default{nbsp}={nbsp}"Result"}`
 a|Name of this model element.
 |===

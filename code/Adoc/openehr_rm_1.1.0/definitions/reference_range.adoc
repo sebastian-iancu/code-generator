@@ -25,7 +25,7 @@ h|*Functions*
 h|*1..1*
 |*is_in_range* ( +
 v: `xref:RM:data_types:quantity_package.adoc#_dv_ordered_class[DV_ORDERED][1]` +
-): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Indicates if the value  `_v_` is inside the range.
 
 h|*Invariants*

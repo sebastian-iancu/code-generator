@@ -4,7 +4,7 @@ h|*Class*
 2+^h|*EL_TYPE_REF*
 
 h|*Description*
-2+a|Meta-type for reference to a non-abstract type as an object. Assumed to be accessible at run-time. Typically represented syntactically as `TypeName` or `{TypeName}`.
+2+a|Meta-type for reference to a non-abstract type as an object. Assumed to be accessible at run-time. Typically represented syntactically as `TypeName` or `\{TypeName}`.
 
 May be used as a value, or as the qualifier for a function or constant access.
 
@@ -17,10 +17,10 @@ h|*Attributes*
 
 h|*1..1*
 |*type*: `link:/classes/BMM_TYPE[BMM_TYPE] `
-a|Type, directly from the name of the reference, e.g. `{SOME_TYPE}`.
+a|Type, directly from the name of the reference, e.g. `\{SOME_TYPE}`.
 
 h|*1..1*
-|*is_mutable*: `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean] +
+|*is_mutable*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean] +
 {default{nbsp}={nbsp}false}`
 a|
 

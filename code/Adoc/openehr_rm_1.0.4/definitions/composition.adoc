@@ -28,7 +28,7 @@ h|*1..1*
 a|Indicates what broad category this Composition is belogs to, e.g. persistent  - of longitudinal validity,  event ,  process  etc.
 
 h|*0..1*
-|*context*: `xref:RM:composition_package.adoc#_event_context_class[EVENT_CONTEXT]`
+|*context*: `xref:RM:ehr:composition_package.adoc#_event_context_class[EVENT_CONTEXT]`
 a|The clinical session context of this Composition, i.e. the contextual attributes of the clinical session.
 
 h|*1..1*
@@ -36,7 +36,7 @@ h|*1..1*
 a|The person primarily responsible for the content of the Composition (but not necessarily its committal into the EHR system). This is the identifier which should appear on the screen. It may or may not be the person who entered the data. When it is the patient, the special self  instance of `PARTY_PROXY` will be used.
 
 h|*0..1*
-|*content*: `xref:BASE:foundation_types:structures_package.adoc#_list_class[List]<xref:RM:composition:content_package.adoc#_content_item_class[CONTENT_ITEM]>`
+|*content*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:ehr:content_package.adoc#_content_item_class[CONTENT_ITEM]>`
 a|The content of this Composition.
 
 h|*Functions*
@@ -44,7 +44,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*is_persistent* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_persistent* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|True if category is a  persistent  type, False otherwise. Useful for finding Compositions in an EHR which are guaranteed to be of interest to most users.
 
 h|*Invariants*

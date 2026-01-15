@@ -19,6 +19,6 @@ h|*1..1*
 a|Audit of Contribution in source system.
 
 h|*0..1*
-|*versions*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:common:change_control_package.adoc#_version_class[VERSION]<xref:RM:ehr_extract:sync_extract_package.adoc#_x_contribution_class[X_CONTRIBUTION]>>`
+|*versions*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:common:change_control_package.adoc#_version_class[VERSION]<xref:RM:ehr_extract:synchronisation_package.adoc#_x_contribution_class[X_CONTRIBUTION]>>`
 a|Serialised Versions from Contribution in source system.
 |===

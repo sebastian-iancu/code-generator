@@ -16,7 +16,7 @@ h|*Functions*
 h|*1..1 +
 (abstract)*
 |*infix <* ( +
-other: `xref:BASE:foundation_types:primitive_types_package.adoc#_ordered_class[Ordered][1]` +
-): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+other: `xref:BASE:foundation_types:primitive_types.adoc#_ordered_class[Ordered][1]` +
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Arithmetic comparison. In conjunction with ‘=’, enables the definition of the operators ‘>’, ‘>=’, ‘<=’, ‘<>’. In real type systems, this operator might be defined on another class for comparability.
 |===

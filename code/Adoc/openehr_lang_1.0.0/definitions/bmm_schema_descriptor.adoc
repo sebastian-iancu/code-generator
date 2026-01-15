@@ -22,16 +22,16 @@ h|*1..1*
 |*schema_id*: `link:/classes/String[String] `
 a|Schema id, formed by 
 
-`{BMM_DEFINITIONS}.create_schema_id(
-  meta_data.item({BMM_DEFINITIONS}.Metadata_model_publisher),
-  meta_data.item({BMM_DEFINITIONS}.Metadata_schema_name),
-  meta_data.item({BMM_DEFINITIONS}.Metadata_model_release)`
+`\{BMM_DEFINITIONS}.create_schema_id(
+  meta_data.item(\{BMM_DEFINITIONS}.Metadata_model_publisher),
+  meta_data.item(\{BMM_DEFINITIONS}.Metadata_schema_name),
+  meta_data.item(\{BMM_DEFINITIONS}.Metadata_model_release)`
 
 e.g. `openehr_rm_1.0.3`, `openehr_test_1.0.1`, `iso_13606_1_2008_2.1.2`.
 
 h|*1..1*
 |*meta_data*: `link:/classes/Hash[Hash] <link:/classes/String[String] ,link:/classes/String[String] >`
-a|Table of `{key, value}` of schema meta-data, keys are string values defined by `{BMM_DEFINITIONS}.Metadata_*` constants.
+a|Table of `{key, value}` of schema meta-data, keys are string values defined by `\{BMM_DEFINITIONS}.Metadata_*` constants.
 
 h|*0..1*
 |*includes*: `link:/classes/List[List] <link:/classes/String[String] >`

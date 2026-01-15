@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*addresses*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:demographic_package.adoc#_address_class[ADDRESS]>`
+|*addresses*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:demographic:demographic_package.adoc#_address_class[ADDRESS]>`
 a|A set of address alternatives for this contact purpose and time validity combination.
 
 h|*0..1*

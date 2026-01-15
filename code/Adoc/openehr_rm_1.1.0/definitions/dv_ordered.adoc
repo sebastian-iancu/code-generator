@@ -9,7 +9,7 @@ h|*Description*
 Data value types which are to be used as limits in the `DV_INTERVAL<T>` class must inherit from this class, and implement the function `_is_strictly_comparable_to()_` to ensure that instances compare meaningfully. For example, instances of `DV_QUANTITY` can only be compared if they measure the same kind of physical quantity.
 
 h|*Inherit*
-2+|`xref:RM:data_types:basic_package.adoc#_data_value_class[DATA_VALUE]`, `xref:BASE:foundation_types:primitive_types_package.adoc#_ordered_class[Ordered]`
+2+|`xref:RM:data_types:basic_package.adoc#_data_value_class[DATA_VALUE]`, `xref:BASE:foundation_types:primitive_types.adoc#_ordered_class[Ordered]`
 
 h|*Attributes*
 ^h|*Signature*
@@ -35,15 +35,15 @@ h|*1..1 +
 (abstract)*
 |*is_strictly_comparable_to* ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_ordered_class[DV_ORDERED][1]` +
-): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Test if two instances are strictly comparable. Effected in descendants.
 
 h|*1..1*
-|*is_simple* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_simple* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|True if this quantity has no reference ranges.
 
 h|*1..1*
-|*is_normal* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]` +
+|*is_normal* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
 __Pre__: `normal_range /= Void or normal_status /= Void` +
  +
@@ -55,7 +55,7 @@ h|*1..1 +
 (abstract)*
 |*less_than* __alias__ "<" ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_ordered_class[DV_ORDERED][1]` +
-): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|True if this Ordered object is less than `_other_`. Redefined in descendants.
 
 h|*Invariants*

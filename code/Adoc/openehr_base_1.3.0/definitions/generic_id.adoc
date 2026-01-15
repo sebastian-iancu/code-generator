@@ -14,6 +14,6 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*scheme*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*scheme*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Name of the scheme to which this identifier conforms. Ideally this name will be recognisable globally but realistically it may be a local ad hoc scheme whose name is not controlled or standardised in any way.
 |===

@@ -7,7 +7,7 @@ h|*Description*
 2+a|Ancestor of all real-world types, including people and organisations. An actor is any real-world entity capable of taking on a role.
 
 h|*Inherit*
-2+|`xref:RM:demographic_package.adoc#_party_class[PARTY]`
+2+|`xref:RM:demographic:demographic_package.adoc#_party_class[PARTY]`
 
 h|*Attributes*
 ^h|*Signature*

@@ -14,6 +14,6 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*value_constraint*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*value_constraint*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|
 |===

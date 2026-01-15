@@ -1,0 +1,17 @@
+=== C_ARCHETYPE_ROOT Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/aom2.c_archetype_root.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/aom2.c_archetype_root.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/aom2.c_archetype_root.adoc[]
+
+====

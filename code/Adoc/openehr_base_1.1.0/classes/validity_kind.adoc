@@ -1,4 +1,4 @@
-=== VALIDITY_KIND Class
+=== VALIDITY_KIND Enumeration
 
 [tabs]
 ====

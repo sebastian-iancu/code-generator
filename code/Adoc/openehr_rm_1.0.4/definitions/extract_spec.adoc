@@ -32,17 +32,17 @@ a|Coded term indicating the type of content required, e.g.
 Coded by openEHR Terminology group "extract content type".
 
 h|*1..1*
-|*include_multimedia*: `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*include_multimedia*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Indicates whether inline instances of DV_MULTIMEDIA in the source data are included or not.
 
 h|*1..1*
-|*priority*: `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*priority*: `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Requested priority of this request to be handled by server. Priority schemes are likely to be local, and use values agreed by both ends.
 
 TBD: alternative is standard coded terms
 
 h|*1..1*
-|*link_depth*: `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*link_depth*: `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Degree of links to follow emanating from content items specified for inclusion. The kind of links to follow is dependent on the type of Extract.
 
 All items at the target end of followed links at the given depth are also included in the extract; EXTRACT_CONTENT_ITEM.is_primary is used to differentiate.
@@ -53,7 +53,7 @@ All items at the target end of followed links at the given depth are also includ
 - n = follow nth degree links
 
 h|*0..1*
-|*criteria*: `xref:BASE:foundation_types:structures_package.adoc#_list_class[List]<xref:RM:data_types:encapsulated_package.adoc#_dv_parsable_class[DV_PARSABLE]>`
+|*criteria*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:data_types:encapsulated_package.adoc#_dv_parsable_class[DV_PARSABLE]>`
 a|Queries specifying the contents of this Extract.
 
 h|*0..1*

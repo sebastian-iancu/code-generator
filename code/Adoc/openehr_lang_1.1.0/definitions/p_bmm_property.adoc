@@ -14,23 +14,23 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*name*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Name of this property within its class. Persisted attribute.
 
 h|*0..1*
-|*is_mandatory*: `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_mandatory*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|True if this property is mandatory in its class. Persisted attribute.
 
 h|*0..1*
-|*is_computed*: `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_computed*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|True if this property is computed rather than stored in objects of this class. Persisted Attribute.
 
 h|*0..1*
-|*is_im_infrastructure*: `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_im_infrastructure*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|True if this property is info model 'infrastructure' rather than 'data'. Persisted attribute.
 
 h|*0..1*
-|*is_im_runtime*: `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_im_runtime*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|True if this property is info model 'runtime' settable property. Persisted attribute.
 
 h|*0..1*

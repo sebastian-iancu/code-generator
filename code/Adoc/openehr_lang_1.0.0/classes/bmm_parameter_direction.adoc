@@ -1,4 +1,4 @@
-=== BMM_PARAMETER_DIRECTION Class
+=== BMM_PARAMETER_DIRECTION Enumeration
 
 [tabs]
 ====

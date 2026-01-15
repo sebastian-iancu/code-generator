@@ -1,0 +1,17 @@
+=== ASSERTION Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/aom14.assertion.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/aom14.assertion.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/aom14.assertion.adoc[]
+
+====

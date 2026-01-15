@@ -14,12 +14,12 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*accuracy_is_percent*: `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*accuracy_is_percent*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|If `True`, indicates that when this object was created, `_accuracy_` was recorded as a percent value; if `False`, as an absolute quantity value.
 
 h|*0..1 +
 (effected)*
-|*accuracy*: `xref:BASE:foundation_types:primitive_types_package.adoc#_real_class[Real]`
+|*accuracy*: `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real]`
 a|Accuracy of measurement, expressed either as a half-range percent value (`_accuracy_is_percent_` = `True`) or a half-range quantity. A value of `0` means that accuracy is 100%, i.e. no error.
 
 A value of `_unknown_accuracy_value_` means that accuracy was not recorded.
@@ -30,8 +30,8 @@ h|*Functions*
 
 h|*1..1*
 |*valid_percentage* ( +
-number: `xref:BASE:foundation_types:primitive_types_package.adoc#_ordered_numeric_class[Ordered_Numeric][1]` +
-): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+number: `xref:BASE:foundation_types:primitive_types.adoc#_ordered_numeric_class[Ordered_Numeric][1]` +
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Test whether a number is a valid percentage, i.e. between 0 and 100.
 
 h|*1..1*
@@ -62,12 +62,12 @@ h|*1..1 +
 (abstract)*
 |*is_equal* ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_amount_class[DV_AMOUNT][1]` +
-): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Return True if this `DV_AMOUNT` is considered equal to `_other_`.
 
 h|*1..1*
 |*multiply* __alias__ "&#42;" ( +
-factor: `xref:BASE:foundation_types:primitive_types_package.adoc#_real_class[Real][1]` +
+factor: `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real][1]` +
 ): `xref:RM:data_types:quantity_package.adoc#_dv_amount_class[DV_AMOUNT]`
 a|Product of this Amount and `_factor_`.
 
@@ -79,7 +79,7 @@ h|*1..1 +
 (redefined)*
 |*less_than* __alias__ "<" ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_amount_class[DV_AMOUNT][1]` +
-): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]` +
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
 __Pre_comparable__: `is_strictly_comparable()` +
  +

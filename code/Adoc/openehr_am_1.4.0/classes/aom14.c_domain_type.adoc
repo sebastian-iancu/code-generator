@@ -1,0 +1,17 @@
+=== C_DOMAIN_TYPE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/aom14.c_domain_type.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/aom14.c_domain_type.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/aom14.c_domain_type.adoc[]
+
+====

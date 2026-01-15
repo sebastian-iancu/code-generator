@@ -1,4 +1,4 @@
-=== CODE_SET_ACCESS Class
+=== CODE_SET_ACCESS Interface
 
 [tabs]
 ====

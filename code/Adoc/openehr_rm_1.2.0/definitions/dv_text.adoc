@@ -22,7 +22,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*value*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*value*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Displayable rendition of the item, regardless of its underlying structure. For `DV_CODED_TEXT`, this is the rubric of the complete term as provided by the terminology service.
 
 h|*0..1*
@@ -32,7 +32,7 @@ a|DEPRECATED: this field is deprecated; use markdown link/text in the `_value_` 
 Original usage, prior to RM Release 1.0.4: Optional link sitting behind a section of plain text or coded term item.
 
 h|*0..1*
-|*formatting*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*formatting*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|If set, contains one of the following values:
 
 * `"plain"`: use for plain text, possibly containing newlines, but otherwise unformatted (same as Void);

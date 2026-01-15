@@ -14,6 +14,6 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*specification*: `xref:RM:ehr_extract:sync_extract_package.adoc#_sync_extract_spec_class[SYNC_EXTRACT_SPEC]`
+|*specification*: `xref:RM:ehr_extract:synchronisation_package.adoc#_sync_extract_spec_class[SYNC_EXTRACT_SPEC]`
 a|Details of specification of synchronisation request.
 |===

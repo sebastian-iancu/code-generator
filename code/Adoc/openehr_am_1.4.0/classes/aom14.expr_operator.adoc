@@ -1,0 +1,17 @@
+=== EXPR_OPERATOR Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/aom14.expr_operator.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/aom14.expr_operator.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/aom14.expr_operator.adoc[]
+
+====

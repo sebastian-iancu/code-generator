@@ -16,57 +16,57 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*seconds* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*seconds* (): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Number of seconds.
 
 h|*1..1*
-|*fractional_seconds* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_real_class[Real]`
+|*fractional_seconds* (): `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real]`
 a|Fractional seconds.
 
 h|*1..1*
-|*is_decimal_sign_comma* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_decimal_sign_comma* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|True if this time has a decimal part indicated by ',' (comma) rather than '.' (period).
 
 h|*1..1 +
 (effected)*
-|*is_partial* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_partial* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Returns False.
 
 h|*1..1 +
 (effected)*
-|*is_extended* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_extended* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Returns True.
 
 h|*1..1*
-|*months* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*months* (): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Number of months.
 
 h|*1..1*
-|*years* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*years* (): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Number of years of nominal 365-day length.
 
 h|*1..1*
-|*weeks* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*weeks* (): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Number of 7 day weeks.
 
 h|*1..1*
-|*to_seconds* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_real_class[Real]`
+|*to_seconds* (): `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real]`
 a|Total number of seconds equivalent (including fractional) of entire duration.
 
 h|*1..1*
-|*minutes* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*minutes* (): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Number of 60 second minutes.
 
 h|*1..1*
-|*hours* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*hours* (): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Number of 60 minute hours.
 
 h|*1..1*
-|*days* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*days* (): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Number of 24 hour days.
 
 h|*1..1*
-|*as_string* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*as_string* (): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Return the duration string value.
 
 h|*Invariants*

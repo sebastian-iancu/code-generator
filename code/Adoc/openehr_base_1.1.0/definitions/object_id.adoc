@@ -13,6 +13,6 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*value*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*value*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|The value of the id in the form defined below.
 |===

@@ -9,7 +9,7 @@ h|*Description*
 For a periodic series of events, period will be set, and the time of each Event in the History must correspond; i.e. the `EVENT._offset_` must be a multiple of period for each Event. Missing events in a period History are however allowed.
 
 h|*Inherit*
-2+|`xref:RM:data_structures_package.adoc#_data_structure_class[DATA_STRUCTURE]`
+2+|`xref:RM:data_structures:item_structure_package.adoc#_data_structure_class[DATA_STRUCTURE]`
 
 h|*Attributes*
 ^h|*Signature*
@@ -40,7 +40,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*is_periodic* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_periodic* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Indicates whether history is periodic.
 
 h|*Invariants*

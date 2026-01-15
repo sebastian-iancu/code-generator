@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*path*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*path*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|The path to an instance, as an absolute path with respect to the object found at `VERSION._data_`. An empty path means that the object referred to by `_id_` is being specified.
 
 h|*1..1 +
@@ -27,7 +27,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*as_uri* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*as_uri* (): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|A URI form of the reference, created by concatenating the following: 
 
 * scheme, e.g. `ehr:`, derived from `_namespace_`

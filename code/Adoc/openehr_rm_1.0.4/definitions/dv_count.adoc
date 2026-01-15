@@ -16,7 +16,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*magnitude*: `xref:BASE:foundation_types:primitive_types_package.adoc#_integer64_class[Integer64]`
+|*magnitude*: `xref:BASE:foundation_types:primitive_types.adoc#_integer64_class[Integer64]`
 a|
 
 h|*0..1 +
@@ -26,6 +26,6 @@ a|Optional normal range.
 
 h|*0..1 +
 (effected)*
-|*other_reference_ranges*: `xref:BASE:foundation_types:structures_package.adoc#_list_class[List]<xref:RM:data_types:quantity_package.adoc#_reference_range_class[REFERENCE_RANGE]<xref:RM:data_types:quantity_package.adoc#_dv_count_class[DV_COUNT]>>`
+|*other_reference_ranges*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:data_types:quantity_package.adoc#_reference_range_class[REFERENCE_RANGE]<xref:RM:data_types:quantity_package.adoc#_dv_count_class[DV_COUNT]>>`
 a|Optional tagged other reference ranges for this value in its particular measurement context.
 |===

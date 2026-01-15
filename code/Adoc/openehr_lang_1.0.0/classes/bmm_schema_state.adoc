@@ -1,4 +1,4 @@
-=== BMM_SCHEMA_STATE Class
+=== BMM_SCHEMA_STATE Enumeration
 
 [tabs]
 ====

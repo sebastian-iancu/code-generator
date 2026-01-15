@@ -11,7 +11,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*source_type*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*source_type*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|
 
 h|*1..1*

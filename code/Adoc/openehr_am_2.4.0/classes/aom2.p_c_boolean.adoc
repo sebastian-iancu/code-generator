@@ -1,0 +1,17 @@
+=== P_C_BOOLEAN Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/aom2.p_c_boolean.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/aom2.p_c_boolean.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/aom2.p_c_boolean.adoc[]
+
+====

@@ -1,4 +1,4 @@
-=== Quantity_converter Class
+=== Quantity_converter Interface
 
 [tabs]
 ====

@@ -14,11 +14,11 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*name*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Name of the package from schema; this name may be qualified if it is a top-level package within the schema, or unqualified. Persistent attribute.
 
 h|*0..1*
-|*classes*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]>`
+|*classes*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]>`
 a|List of classes in this package. Persistent attribute.
 
 h|*0..1*

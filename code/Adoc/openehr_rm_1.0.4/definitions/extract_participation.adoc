@@ -25,7 +25,7 @@ h|*0..1*
 a|The mode of the performer / activity interaction, e.g. present, by telephone, by email etc.
 
 h|*1..1*
-|*performer*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*performer*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Uid of demographic entity within Extract who performed this participation.
 
 h|*Invariants*

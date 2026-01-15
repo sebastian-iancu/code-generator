@@ -28,6 +28,6 @@ h|*0..1*
 a|Obtain the set of top-level classes in this package, either from this package itself or by recursing into the structure until classes are obtained from child packages. Recurse into each child only far enough to find the first level of classes.
 
 h|*1..1*
-|*path* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*path* (): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Full path of this package back to root package.
 |===

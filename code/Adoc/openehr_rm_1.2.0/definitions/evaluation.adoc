@@ -9,7 +9,7 @@ h|*Description*
 Should not be used for actionable statements such as medication orders - these are represented using the `INSTRUCTION` type.
 
 h|*Inherit*
-2+|`xref:RM:composition:content_package.adoc#_care_entry_class[CARE_ENTRY]`
+2+|`xref:RM:ehr:content_package.adoc#_care_entry_class[CARE_ENTRY]`
 
 h|*Attributes*
 ^h|*Signature*

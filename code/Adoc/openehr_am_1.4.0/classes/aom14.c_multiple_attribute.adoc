@@ -1,0 +1,17 @@
+=== C_MULTIPLE_ATTRIBUTE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/aom14.c_multiple_attribute.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/aom14.c_multiple_attribute.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/aom14.c_multiple_attribute.adoc[]
+
+====

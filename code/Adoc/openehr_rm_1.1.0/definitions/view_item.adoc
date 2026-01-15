@@ -4,7 +4,7 @@ h|*Class*
 2+^h|*__VIEW_ITEM (abstract)__*
 
 h|*Inherit*
-2+|`xref:RM:composition:content_package.adoc#_content_item_class[CONTENT_ITEM]`
+2+|`xref:RM:ehr:content_package.adoc#_content_item_class[CONTENT_ITEM]`
 
 h|*Attributes*
 ^h|*Signature*

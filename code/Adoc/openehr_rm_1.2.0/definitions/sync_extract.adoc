@@ -11,10 +11,10 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*specification*: `xref:RM:ehr_extract:sync_extract_package.adoc#_sync_extract_spec_class[SYNC_EXTRACT_SPEC]`
+|*specification*: `xref:RM:ehr_extract:synchronisation_package.adoc#_sync_extract_spec_class[SYNC_EXTRACT_SPEC]`
 a|Details of specification of this Extract.
 
 h|*0..1*
-|*items*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:ehr_extract:sync_extract_package.adoc#_x_contribution_class[X_CONTRIBUTION]>`
+|*items*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:ehr_extract:synchronisation_package.adoc#_x_contribution_class[X_CONTRIBUTION]>`
 a|Content, in the form of a serialised Contributions.
 |===

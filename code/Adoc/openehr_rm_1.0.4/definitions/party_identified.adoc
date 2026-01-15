@@ -18,11 +18,11 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*name*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Optional human-readable name (in String form).
 
 h|*0..1*
-|*identifiers*: `xref:BASE:foundation_types:structures_package.adoc#_list_class[List]<xref:RM:data_types:basic_package.adoc#_dv_identifier_class[DV_IDENTIFIER]>`
+|*identifiers*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:data_types:basic_package.adoc#_dv_identifier_class[DV_IDENTIFIER]>`
 a|One or more formal identifiers (possibly computable).
 
 h|*Invariants*

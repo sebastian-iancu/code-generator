@@ -11,7 +11,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*type_name*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*type_name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Natural language type name of this type as used in abstract rules syntax variable declarations.
 
 h|*1..1*

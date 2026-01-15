@@ -15,7 +15,7 @@ h|*1..1*
 a|Contribution in which this version was added.
 
 h|*0..1*
-|*signature*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*signature*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|OpenPGP digital signature or digest of content committed in this Version.
 
 h|*1..1*
@@ -47,7 +47,7 @@ h|*1..1 +
 a|Lifecycle state of this version; coded by openEHR vocabulary 'version lifecycle state'.
 
 h|*1..1*
-|*canonical_form* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*canonical_form* (): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|A canonical serial form of this Version, suitable for generating reliable hashes and signatures.
 
 h|*1..1*
@@ -57,7 +57,7 @@ __Post__: `Result.value.is_equal (uid.object_id.value)`
 a|Copy of the owning `VERSIONED_OBJECT._uid_` value; extracted from the local `_uid_` property's `_object_id_`.
 
 h|*1..1*
-|*is_branch* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_branch* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|True if this Version represents a branch. Derived from `_uid_` attribute.
 
 h|*Invariants*

@@ -14,11 +14,11 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*tag*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*tag*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Expression tag, used for differentiating multiple assertions.
 
 h|*0..1*
-|*string_expression*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*string_expression*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|String form of expression, in case an expression evaluator taking String expressions is used for evaluation.
 
 h|*1..1*

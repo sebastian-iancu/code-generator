@@ -1,4 +1,4 @@
-=== VERSION_STATUS Class
+=== VERSION_STATUS Enumeration
 
 [tabs]
 ====

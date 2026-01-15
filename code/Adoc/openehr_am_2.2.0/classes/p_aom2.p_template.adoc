@@ -1,0 +1,17 @@
+=== P_TEMPLATE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/p_aom2.p_template.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/p_aom2.p_template.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/p_aom2.p_template.adoc[]
+
+====

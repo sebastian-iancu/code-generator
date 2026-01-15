@@ -11,19 +11,19 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*sender*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*sender*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Party sending the message.
 
 h|*1..1*
-|*sender_reference*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*sender_reference*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Identification of message used by sender. This will be the same no matter how many times this message is sent to these recipients.
 
 h|*1..1*
-|*addressees*: `xref:BASE:foundation_types:structures_package.adoc#_list_class[List]<xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]>`
+|*addressees*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]>`
 a|Intended recipients, in the form of internet addresses.
 
 h|*0..1*
-|*urgency*: `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*urgency*: `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Urgency with which destination should deal with message:
 
 * -1 - low

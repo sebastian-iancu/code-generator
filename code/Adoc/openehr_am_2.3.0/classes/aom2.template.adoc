@@ -1,0 +1,17 @@
+=== TEMPLATE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/aom2.template.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/aom2.template.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/aom2.template.adoc[]
+
+====

@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*value*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*value*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Representation of all descendants is a single String.
 
 h|*Functions*
@@ -23,11 +23,11 @@ h|*Functions*
 
 h|*1..1 +
 (abstract)*
-|*is_partial* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_partial* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|True if this date time is partial, i.e. if trailing end (right hand) value(s) is/are missing.
 
 h|*1..1 +
 (abstract)*
-|*is_extended* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_extended* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|True if this ISO8601 string is in the 'extended' form, i.e. uses `'-'` and / or `':'` separators. This is the preferred format.
 |===

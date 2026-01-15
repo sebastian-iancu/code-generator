@@ -1,0 +1,17 @@
+=== C_TERMINOLOGY_CODE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/aom2.c_terminology_code.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/aom2.c_terminology_code.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/aom2.c_terminology_code.adoc[]
+
+====

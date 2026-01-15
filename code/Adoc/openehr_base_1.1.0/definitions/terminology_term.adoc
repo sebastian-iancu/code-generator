@@ -14,10 +14,10 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*concept*: `xref:BASE:foundation_types:terminology_package.adoc#_terminology_code_class[Terminology_code]`
+|*concept*: `xref:BASE:foundation_types:terminology.adoc#_terminology_code_class[Terminology_code]`
 a|Refrence to the terminology concept formally representing this term.
 
 h|*1..1*
-|*text*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*text*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Text of term.
 |===

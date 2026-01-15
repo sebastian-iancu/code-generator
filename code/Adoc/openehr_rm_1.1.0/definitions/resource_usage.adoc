@@ -20,7 +20,7 @@ h|*1..1*
 a|
 
 h|*0..1*
-|*description*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*description*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|
 
 h|*0..1*

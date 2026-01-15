@@ -11,11 +11,11 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*name*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Name of this model element.
 
 h|*0..1*
-|*documentation*: `xref:BASE:foundation_types:structure_types.adoc#_hash_class[Hash]<xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String],xref:BASE:foundation_types:overview.adoc#_any_class[Any]>`
+|*documentation*: `xref:BASE:foundation_types:structure_types.adoc#_hash_class[Hash]<xref:BASE:foundation_types:primitive_types.adoc#_string_class[String],xref:BASE:foundation_types:overview.adoc#_any_class[Any]>`
 a|Optional documentation of this element, as a keyed list.
 
 It is strongly recommended to use the following key /type combinations for the relevant purposes:
@@ -33,7 +33,7 @@ h|*1..1*
 a|Model element within which an element is declared.
 
 h|*0..1*
-|*extensions*: `xref:BASE:foundation_types:structure_types.adoc#_hash_class[Hash]<xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String],xref:BASE:foundation_types:overview.adoc#_any_class[Any]>`
+|*extensions*: `xref:BASE:foundation_types:structure_types.adoc#_hash_class[Hash]<xref:BASE:foundation_types:primitive_types.adoc#_string_class[String],xref:BASE:foundation_types:overview.adoc#_any_class[Any]>`
 a|Optional meta-data of this element, as a keyed list. May be used to extend the meta-model.
 
 h|*Functions*
@@ -41,7 +41,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*is_root_scope* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]` +
+|*is_root_scope* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
 __Post_result__: `Result = (scope = self)`
 a|True if this model element is the root of a model structure hierarchy.

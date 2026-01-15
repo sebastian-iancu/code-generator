@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*root_type*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*root_type*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Root type of this generic type, e.g. `Interval` in `Interval<Integer>`.
 
 h|*1..1*
@@ -22,7 +22,7 @@ h|*1..1*
 a|Generic parameters of the root_type in this type specifier if non-simple types. The order must match the order of the owning class's formal generic parameter declarations. Persistent attribute.
 
 h|*0..1*
-|*generic_parameters*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]>`
+|*generic_parameters*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]>`
 a|Generic parameters of the `_root_type_` in this type specifier, if simple types. The order must match the order of the owning class's formal generic parameter declarations. Persistent attribute.
 
 h|*0..1 +

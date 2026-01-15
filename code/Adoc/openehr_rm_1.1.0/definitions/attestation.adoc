@@ -22,7 +22,7 @@ h|*0..1*
 a|Optional visual representation of content attested e.g. screen image.
 
 h|*0..1*
-|*proof*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*proof*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Proof of attestation.
 
 h|*0..1*
@@ -34,7 +34,7 @@ h|*1..1*
 a|Reason of this attestation. Optionally coded by the openEHR Terminology group  attestation reason ; includes values like  authorisation ,  witness  etc.
 
 h|*1..1*
-|*is_pending*: `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_pending*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|True if this attestation is outstanding; False means it has been completed.
 
 h|*Invariants*

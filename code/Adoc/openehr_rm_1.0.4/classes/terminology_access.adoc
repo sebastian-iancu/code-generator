@@ -1,4 +1,4 @@
-=== TERMINOLOGY_ACCESS Class
+=== TERMINOLOGY_ACCESS Interface
 
 [tabs]
 ====

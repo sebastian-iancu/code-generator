@@ -14,11 +14,11 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*value*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*value*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|The string, which may validly be empty in some syntaxes.
 
 h|*1..1*
-|*formalism*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*formalism*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Name of the formalism, e.g.  GLIF 1.0 ,  Proforma  etc.
 
 h|*Functions*
@@ -26,7 +26,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*size* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*size* (): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Size in bytes of value.
 
 h|*Invariants*

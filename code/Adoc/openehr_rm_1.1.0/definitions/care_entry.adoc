@@ -7,7 +7,7 @@ h|*Description*
 2+a|The abstract parent of all clinical `ENTRY` subtypes. A `CARE_ENTRY` defines protocol and guideline attributes for all clinical Entry subtypes.
 
 h|*Inherit*
-2+|`xref:RM:composition:content_package.adoc#_entry_class[ENTRY]`
+2+|`xref:RM:ehr:content_package.adoc#_entry_class[ENTRY]`
 
 h|*Attributes*
 ^h|*Signature*

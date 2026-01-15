@@ -18,8 +18,8 @@ a|Meta-type of expression entity used in type-checking and evaluation.
 Effected in descendants.
 
 h|*1..1*
-|*is_boolean* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]` +
+|*is_boolean* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
-__Post_result__: `Result = eval_type().equal( {BMM_MODEL}.boolean_type_definition())`
+__Post_result__: `Result = eval_type().equal( \{BMM_MODEL}.boolean_type_definition())`
 a|True if `_eval_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `Boolean`).
 |===

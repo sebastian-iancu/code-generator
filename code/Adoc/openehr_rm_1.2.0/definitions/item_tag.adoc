@@ -11,11 +11,11 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*key*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*key*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|The tag key. May not be empty or contain leading or trailing whitespace.
 
 h|*0..1*
-|*value*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*value*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|The value. If set, may not be empty.
 
 h|*1..1*
@@ -23,7 +23,7 @@ h|*1..1*
 a|Identifier of target, which may be a `VERSIONED_OBJECT<T>` or a `VERSION<T>`.
 
 h|*0..1*
-|*target_path*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*target_path*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Optional archetype (i.e. AQL) or RM path within `_target_`, used to tag a fine-grained element.
 
 h|*1..1*

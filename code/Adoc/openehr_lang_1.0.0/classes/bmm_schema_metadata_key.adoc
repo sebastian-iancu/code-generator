@@ -1,4 +1,4 @@
-=== BMM_SCHEMA_METADATA_KEY Class
+=== BMM_SCHEMA_METADATA_KEY Enumeration
 
 [tabs]
 ====

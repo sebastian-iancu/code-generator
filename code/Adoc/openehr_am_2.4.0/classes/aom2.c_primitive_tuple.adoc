@@ -1,0 +1,17 @@
+=== C_PRIMITIVE_TUPLE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/aom2.c_primitive_tuple.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/aom2.c_primitive_tuple.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/aom2.c_primitive_tuple.adoc[]
+
+====

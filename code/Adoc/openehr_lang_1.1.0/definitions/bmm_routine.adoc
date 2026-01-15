@@ -38,6 +38,6 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*arity* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*arity* (): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Return number of arguments of this routine.
 |===

@@ -9,7 +9,7 @@ h|*Description*
 For a periodic series of events, period will be set, and the time of each Event in the History must correspond; i.e. the `EVENT._offset_` must be a multiple of period for each Event. Missing events in a period History are however allowed.
 
 h|*Inherit*
-2+|`xref:RM:data_structures_package.adoc#_data_structure_class[DATA_STRUCTURE]`
+2+|`xref:RM:data_structures:item_structure_package.adoc#_data_structure_class[DATA_STRUCTURE]`
 
 h|*Attributes*
 ^h|*Signature*
@@ -32,7 +32,7 @@ h|*0..1*
 a|Optional summary data that aggregates, organizes, reduces and transforms the event series. This may be a text or image that presents a graphical presentation, or some data that assists with the interpretation of the data.
 
 h|*0..1*
-|*events*: `xref:BASE:foundation_types:structures_package.adoc#_list_class[List]<xref:RM:data_structures:history_package.adoc#_event_class[EVENT]<T>>`
+|*events*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:data_structures:history_package.adoc#_event_class[EVENT]<T>>`
 a|The events in the series. This attribute is of a generic type whose parameter must be a descendant of `ITEM_SUTRUCTURE`.
 
 h|*Functions*
@@ -40,7 +40,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*is_periodic* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_periodic* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Indicates whether history is periodic.
 
 h|*Invariants*

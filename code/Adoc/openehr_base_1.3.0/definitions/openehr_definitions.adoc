@@ -14,6 +14,6 @@ h|*Constants*
 ^h|*Meaning*
 
 h|*1..1*
-|*Local_terminology_id*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]{nbsp}={nbsp}"local"`
+|*Local_terminology_id*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}"local"`
 a|Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype
 |===

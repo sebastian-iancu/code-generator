@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*type*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*type*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Name of type - must be a simple class name.
 
 h|*0..1 +

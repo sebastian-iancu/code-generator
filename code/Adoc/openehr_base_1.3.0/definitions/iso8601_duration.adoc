@@ -19,56 +19,56 @@ h|*Functions*
 
 h|*1..1 +
 (effected)*
-|*is_extended* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_extended* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Returns True.
 
 h|*1..1 +
 (effected)*
-|*is_partial* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_partial* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Returns False.
 
 h|*1..1*
-|*years* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*years* (): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Number of years in the `_value_`, i.e. the number preceding the `'Y'` in the `'YMD'` part, if one exists.
 
 h|*1..1*
-|*months* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*months* (): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Number of months in the `_value_`, i.e. the value preceding the `'M'` in the `'YMD'` part, if one exists.
 
 h|*1..1*
-|*days* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*days* (): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Number of days in the `_value_`, i.e. the number preceding the `'D'` in the `'YMD'` part, if one exists.
 
 h|*1..1*
-|*hours* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*hours* (): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Number of hours in the `_value_`, i.e. the number preceding the `'H'` in the `'HMS'` part, if one exists.
 
 h|*1..1*
-|*minutes* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*minutes* (): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Number of minutes in the `_value_`, i.e. the number preceding the `'M'` in the `'HMS'` part, if one exists.
 
 h|*1..1*
-|*seconds* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*seconds* (): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Number of seconds in the `_value_`, i.e. the integer number preceding the `'S'` in the `'HMS'` part, if one exists.
 
 h|*1..1*
-|*fractional_seconds* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_real_class[Real]`
+|*fractional_seconds* (): `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real]`
 a|Fractional seconds in the `_value_`, i.e. the decimal part of the number preceding the `'S'` in the `'HMS'` part, if one exists.
 
 h|*1..1*
-|*weeks* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*weeks* (): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Number of weeks in the `_value_`, i.e. the value preceding the `W`, if one exists.
 
 h|*1..1*
-|*is_decimal_sign_comma* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_decimal_sign_comma* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|True if this time has a decimal part indicated by ',' (comma) rather than '.' (period).
 
 h|*1..1*
-|*to_seconds* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_real_class[Real]`
+|*to_seconds* (): `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real]`
 a|Total number of seconds equivalent (including fractional) of entire duration. Where non-definite elements such as year and month (i.e. 'Y' and 'M') are included, the corresponding 'average' durations from `Time_definitions` are used to compute the result.
 
 h|*1..1*
-|*as_string* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*as_string* (): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Return the duration string value.
 
 h|*1..1*
@@ -85,13 +85,13 @@ a|Arithmetic subtraction of a duration from a duration, via conversion to second
 
 h|*1..1*
 |*multiply* __alias__ "&#42;" ( +
-a_val: `xref:BASE:foundation_types:primitive_types_package.adoc#_real_class[Real][1]` +
+a_val: `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real][1]` +
 ): `xref:BASE:foundation_types:time_types.adoc#_iso8601_duration_class[Iso8601_duration]`
 a|Arithmetic multiplication a duration by a number.
 
 h|*1..1*
 |*divide* __alias__ "/" ( +
-a_val: `xref:BASE:foundation_types:primitive_types_package.adoc#_real_class[Real][1]` +
+a_val: `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real][1]` +
 ): `xref:BASE:foundation_types:time_types.adoc#_iso8601_duration_class[Iso8601_duration]`
 a|Arithmetic division of a duration by a number.
 

@@ -23,7 +23,7 @@ May be omitted if:
 * unavailable, e.g. imported legacy data; in such cases, the `INSTRUCTION._narrative_` should carry text that indicates the timing of its `_activities_`.
 
 h|*1..1*
-|*action_archetype_id*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*action_archetype_id*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Perl-compliant regular expression pattern, enclosed in  '//' delimiters, indicating the valid identifiers of archetypes for Actions corresponding to this Activity specification. 
 
 Defaults to  `/.&#42;/`, meaning any archetype.

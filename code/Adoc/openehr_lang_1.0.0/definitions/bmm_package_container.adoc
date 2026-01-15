@@ -42,5 +42,5 @@ h|*1..1*
 |*has_package_path* ( +
 a_path: `link:/classes/String[String] [1]` +
 ): `link:/classes/Boolean[Boolean] `
-a|True if there is a package at the path `_a_path_`; paths are delimited with delimiter `{BMM_DEFINITIONS}_Package_name_delimiter_`.
+a|True if there is a package at the path `_a_path_`; paths are delimited with delimiter `\{BMM_DEFINITIONS}_Package_name_delimiter_`.
 |===

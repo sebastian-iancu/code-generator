@@ -14,10 +14,10 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*meta_data*: `xref:BASE:foundation_types:structure_types.adoc#_hash_class[Hash]<xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String],xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]>`
+|*meta_data*: `xref:BASE:foundation_types:structure_types.adoc#_hash_class[Hash]<xref:BASE:foundation_types:primitive_types.adoc#_string_class[String],xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]>`
 a|External call general meta-data, including target routine name, type mapping etc.
 
 h|*0..1*
-|*argument_mapping*: `xref:BASE:foundation_types:structure_types.adoc#_hash_class[Hash]<xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String],xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]>`
+|*argument_mapping*: `xref:BASE:foundation_types:structure_types.adoc#_hash_class[Hash]<xref:BASE:foundation_types:primitive_types.adoc#_string_class[String],xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]>`
 a|Optional argument-mapping meta-data.
 |===

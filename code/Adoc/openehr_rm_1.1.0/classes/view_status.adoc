@@ -1,4 +1,4 @@
-=== VIEW_STATUS Class
+=== VIEW_STATUS Enumeration
 
 [tabs]
 ====

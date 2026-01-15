@@ -18,7 +18,7 @@ h|*1..1*
 a|Declared or inferred static type of the entity.
 
 h|*0..1*
-|*is_nullable*: `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean] +
+|*is_nullable*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean] +
 {default{nbsp}={nbsp}false}`
 a|True if this element can be null (Void) at execution time. May be interpreted as optionality in subtypes..
 
@@ -36,8 +36,8 @@ a|Formal signature of this element, in the form:
 Specific implementations in descendants.
 
 h|*1..1*
-|*is_boolean* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]` +
+|*is_boolean* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
-__Post_result__: `Result = type().equal( {BMM_MODEL}.boolean_type_definition())`
+__Post_result__: `Result = type().equal( \{BMM_MODEL}.boolean_type_definition())`
 a|True if `_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `'Boolean'`).
 |===

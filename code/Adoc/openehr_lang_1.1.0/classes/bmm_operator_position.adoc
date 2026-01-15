@@ -1,4 +1,4 @@
-=== BMM_OPERATOR_POSITION Class
+=== BMM_OPERATOR_POSITION Enumeration
 
 [tabs]
 ====

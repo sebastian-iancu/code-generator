@@ -16,7 +16,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*magnitude*: `xref:BASE:foundation_types:primitive_types_package.adoc#_integer64_class[Integer64]`
+|*magnitude*: `xref:BASE:foundation_types:primitive_types.adoc#_integer64_class[Integer64]`
 a|
 
 h|*0..1 +
@@ -50,7 +50,7 @@ a|Difference of this `DV_COUNT` and `_other_`.
 h|*1..1 +
 (redefined)*
 |*multiply* __alias__ "&#42;" ( +
-factor: `xref:BASE:foundation_types:primitive_types_package.adoc#_real_class[Real][1]` +
+factor: `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real][1]` +
 ): `xref:RM:data_types:quantity_package.adoc#_dv_count_class[DV_COUNT]`
 a|Product of this `DV_COUNT` and `_factor_`.
 
@@ -58,7 +58,7 @@ h|*1..1 +
 (redefined)*
 |*less_than* __alias__ "<" ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_count_class[DV_COUNT][1]` +
-): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]` +
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
 __Pre_comparable__: `is_strictly_comparable()` +
  +
@@ -69,6 +69,6 @@ h|*1..1 +
 (effected)*
 |*is_strictly_comparable_to* ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_ordered_class[DV_ORDERED][1]` +
-): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Return True.
 |===

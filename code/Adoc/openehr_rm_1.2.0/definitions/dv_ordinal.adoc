@@ -32,7 +32,7 @@ h|*1..1*
 a|Coded textual representation of this value in the enumeration, which may be strings made from  +  symbols, or other enumerations of terms such as  `mild`, `moderate`, `severe`, or even the same number series as the values, e.g. 1, 2, 3.
 
 h|*1..1*
-|*value*: `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*value*: `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Value in ordered enumeration of values. Any integer value can be used.
 
 h|*Functions*
@@ -43,13 +43,13 @@ h|*1..1 +
 (effected)*
 |*less_than* __alias__ "<" ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_ordinal_class[DV_ORDINAL][1]` +
-): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|True if this Ordinal value is less than `_other_`.
 
 h|*1..1 +
 (effected)*
 |*is_strictly_comparable_to* ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_ordinal_class[DV_ORDINAL][1]` +
-): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Test if this Ordinal is strictly comparable to `_other_`.
 |===

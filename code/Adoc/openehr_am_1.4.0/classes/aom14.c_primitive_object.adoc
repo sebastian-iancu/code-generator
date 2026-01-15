@@ -1,0 +1,17 @@
+=== C_PRIMITIVE_OBJECT Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/aom14.c_primitive_object.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/aom14.c_primitive_object.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/aom14.c_primitive_object.adoc[]
+
+====

@@ -1,0 +1,17 @@
+=== P_C_DEFINED_OBJECT Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/aom2.p_c_defined_object.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/aom2.p_c_defined_object.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/aom2.p_c_defined_object.adoc[]
+
+====

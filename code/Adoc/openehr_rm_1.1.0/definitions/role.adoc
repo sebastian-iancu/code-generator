@@ -7,7 +7,7 @@ h|*Description*
 2+a|Generic description of a role performed by an Actor. The role corresponds to a competency of the Party. Roles are used to define the responsibilities undertaken by a Party for a purpose. Roles should have credentials qualifying the performer to perform the role.
 
 h|*Inherit*
-2+|`xref:RM:demographic_package.adoc#_party_class[PARTY]`
+2+|`xref:RM:demographic:demographic_package.adoc#_party_class[PARTY]`
 
 h|*Attributes*
 ^h|*Signature*
@@ -22,7 +22,7 @@ h|*1..1*
 a|Reference to Version container of Actor playing the role.
 
 h|*0..1*
-|*capabilities*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:demographic_package.adoc#_capability_class[CAPABILITY]>`
+|*capabilities*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:demographic:demographic_package.adoc#_capability_class[CAPABILITY]>`
 a|The capabilities of this role.
 
 h|*Invariants*

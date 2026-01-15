@@ -1,0 +1,17 @@
+=== ARCHETYPE_INTERNAL_REF Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/aom14.archetype_internal_ref.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/aom14.archetype_internal_ref.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/aom14.archetype_internal_ref.adoc[]
+
+====

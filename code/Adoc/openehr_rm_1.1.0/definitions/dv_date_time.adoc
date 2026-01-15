@@ -17,7 +17,7 @@ h|*Attributes*
 
 h|*1..1 +
 (effected)*
-|*value*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*value*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|ISO8601 date/time string.
 
 h|*Functions*
@@ -26,7 +26,7 @@ h|*Functions*
 
 h|*1..1 +
 (effected)*
-|*magnitude* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_double_class[Double]`
+|*magnitude* (): `xref:BASE:foundation_types:primitive_types.adoc#_double_class[Double]`
 a|Numeric value of the date/time as seconds since the calendar origin date/time `0001-01-01T00:00:00Z`.
 
 h|*1..1 +
@@ -54,7 +54,7 @@ h|*1..1 +
 (redefined)*
 |*less_than* __alias__ "<" ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_date_time_class[DV_DATE_TIME][1]` +
-): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]` +
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
 __Pre_comparable__: `is_strictly_comparable()` +
  +
@@ -65,7 +65,7 @@ h|*1..1 +
 (effected)*
 |*is_strictly_comparable_to* ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_date_time_class[DV_DATE_TIME][1]` +
-): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|True, for any two Date/times.
 
 h|*Invariants*

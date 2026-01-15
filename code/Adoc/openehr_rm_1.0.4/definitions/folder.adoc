@@ -14,11 +14,11 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*items*: `xref:BASE:foundation_types:structures_package.adoc#_list_class[List]<xref:BASE:base_types:identification_package.adoc#_object_ref_class[OBJECT_REF]>`
+|*items*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:BASE:base_types:identification_package.adoc#_object_ref_class[OBJECT_REF]>`
 a|The list of references to other (usually) versioned objects logically in this folder.
 
 h|*0..1*
-|*folders*: `xref:BASE:foundation_types:structures_package.adoc#_list_class[List]<xref:RM:common:directory_package.adoc#_folder_class[FOLDER]>`
+|*folders*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:common:directory_package.adoc#_folder_class[FOLDER]>`
 a|Sub-folders of this FOLDER.
 
 h|*0..1*

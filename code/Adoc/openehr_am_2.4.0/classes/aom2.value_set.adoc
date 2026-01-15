@@ -1,0 +1,17 @@
+=== VALUE_SET Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/aom2.value_set.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/aom2.value_set.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/aom2.value_set.adoc[]
+
+====

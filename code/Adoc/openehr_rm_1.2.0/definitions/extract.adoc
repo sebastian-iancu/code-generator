@@ -34,7 +34,7 @@ h|*1..1*
 a|Identifier of creating system.
 
 h|*1..1*
-|*sequence_nr*: `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer]`
+|*sequence_nr*: `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Number of this Extract response in sequence of responses to Extract request identified by `_request_id_`. If this is the sole response, or there was no request, value is 1.
 
 h|*0..1*

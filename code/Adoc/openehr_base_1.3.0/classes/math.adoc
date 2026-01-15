@@ -1,4 +1,4 @@
-=== Math Class
+=== Math Interface
 
 [tabs]
 ====

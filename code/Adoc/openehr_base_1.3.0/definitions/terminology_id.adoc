@@ -16,10 +16,10 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*name* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*name* (): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Return the terminology id (which includes the  version  in some cases). Distinct names correspond to distinct (i.e. non-compatible) terminologies. Thus the names  `"ICD10AM"` and `"ICD10"` refer to distinct terminologies.
 
 h|*1..1*
-|*version_id* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*version_id* (): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Version of this terminology, if versioning supported, else the empty string.
 |===

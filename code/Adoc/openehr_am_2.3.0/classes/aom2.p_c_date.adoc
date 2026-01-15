@@ -1,0 +1,17 @@
+=== P_C_DATE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/aom2.p_c_date.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/aom2.p_c_date.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/aom2.p_c_date.adoc[]
+
+====

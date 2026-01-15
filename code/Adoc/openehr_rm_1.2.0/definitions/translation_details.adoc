@@ -15,15 +15,15 @@ h|*1..1*
 a|Language of the translation.
 
 h|*1..1*
-|*author*: `xref:BASE:foundation_types:structure_types.adoc#_hash_class[Hash]<xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String],xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]>`
+|*author*: `xref:BASE:foundation_types:structure_types.adoc#_hash_class[Hash]<xref:BASE:foundation_types:primitive_types.adoc#_string_class[String],xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]>`
 a|Translator name and other demographic details.
 
 h|*0..1*
-|*accreditaton*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*accreditaton*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Accreditation of translator, usually a national translator's registration or association membership id.
 
 h|*0..1*
-|*other_details*: `xref:BASE:foundation_types:structure_types.adoc#_hash_class[Hash]<xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String],xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]>`
+|*other_details*: `xref:BASE:foundation_types:structure_types.adoc#_hash_class[Hash]<xref:BASE:foundation_types:primitive_types.adoc#_string_class[String],xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]>`
 a|Any other meta-data.
 
 h|*Invariants*

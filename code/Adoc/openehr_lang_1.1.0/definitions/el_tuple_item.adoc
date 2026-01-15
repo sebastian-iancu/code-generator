@@ -15,6 +15,6 @@ h|*0..1*
 a|Reference to value entity. If Void, this indicates that the item in this position is Void, e.g. within a routine call parameter list.
 
 h|*0..1*
-|*name*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Optional name of tuple item.
 |===

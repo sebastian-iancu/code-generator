@@ -1,0 +1,17 @@
+=== CONSTRAINT_STATUS Enumeration
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/aom2.constraint_status.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/aom2.constraint_status.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/aom2.constraint_status.adoc[]
+
+====

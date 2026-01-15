@@ -15,7 +15,7 @@ h|*Functions*
 
 h|*1..1*
 |*item* __alias__ "[]" ( +
-a_key: `xref:BASE:foundation_types:primitive_types_package.adoc#_integer_class[Integer][1]` +
+a_key: `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer][1]` +
 ): `T`
 a|Return item for key  `_a_key_`.
 |===

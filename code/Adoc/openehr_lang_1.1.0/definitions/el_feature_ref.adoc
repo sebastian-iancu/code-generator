@@ -23,6 +23,6 @@ h|*Functions*
 
 h|*1..1 +
 (redefined)*
-|*reference* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*reference* (): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Generated full reference name, consisting of scoping elements and `_name_` concatenated using dot notation.
 |===

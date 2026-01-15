@@ -10,7 +10,7 @@ Used for admistrative details of admission, episode, ward location, discharge, a
 Not to be used for any clinically significant information.
 
 h|*Inherit*
-2+|`xref:RM:composition:content_package.adoc#_entry_class[ENTRY]`
+2+|`xref:RM:ehr:content_package.adoc#_entry_class[ENTRY]`
 
 h|*Attributes*
 ^h|*Signature*

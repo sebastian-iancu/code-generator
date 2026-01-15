@@ -14,11 +14,11 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*is_writable*: `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_writable*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|
 
 h|*1..1*
-|*name*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Name used to represent the reference or other entity.
 
 h|*Functions*
@@ -26,6 +26,6 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*reference* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*reference* (): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Generated full reference name, based on constituent parts of the entity. Default version outputs `_name_` field.
 |===

@@ -19,7 +19,7 @@ h|*Attributes*
 
 h|*1..1 +
 (effected)*
-|*name*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Name of the routine being called.
 
 h|*0..1*
@@ -27,7 +27,7 @@ h|*0..1*
 a|Closed arguments of a routine call as a tuple of objects.
 
 h|*0..1*
-|*open_args*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]>`
+|*open_args*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]>`
 a|Optional list of names of open arguments of the call. If not provided, and the `_name_` refers to a routine with more arguments than supplied in `_closed_args_`, the missing arguments are inferred from the `_definition_`.
 
 h|*0..1*
@@ -36,7 +36,7 @@ a|Reference to definition of a routine for which this is an agent, if one exists
 
 h|*1..1 +
 (effected)*
-|*is_writable*: `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean] +
+|*is_writable*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean] +
 {default{nbsp}={nbsp}false}`
 a|
 
@@ -52,13 +52,13 @@ __Post_result__: `Result = definition.signature`
 a|Eval type is the signature corresponding to the (remaining) open arguments and return type, if any.
 
 h|*1..1*
-|*is_callable* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]` +
+|*is_callable* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
 __Post_result_validity__: `Result = open_arguments = Void`
 a|True if there are no open arguments.
 
 h|*1..1 +
 (redefined)*
-|*reference* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*reference* (): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Generated full reference name, including scoping elements.
 |===

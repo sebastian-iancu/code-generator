@@ -9,7 +9,7 @@ h|*Description*
 Data value types which are to be used as limits in the `DV_INTERVAL<T>` class must inherit from this class, and implement the function `_is_strictly_comparable_to_` to ensure that instances compare meaningfully. For example, instances of `DV_QUANTITY` can only be compared if they measure the same kind of physical quantity.
 
 h|*Inherit*
-2+|`xref:RM:data_types:basic_package.adoc#_data_value_class[DATA_VALUE]`, `xref:BASE:foundation_types:primitive_types_package.adoc#_ordered_class[Ordered]`
+2+|`xref:RM:data_types:basic_package.adoc#_data_value_class[DATA_VALUE]`, `xref:BASE:foundation_types:primitive_types.adoc#_ordered_class[Ordered]`
 
 h|*Attributes*
 ^h|*Signature*
@@ -24,7 +24,7 @@ h|*0..1*
 a|Optional normal range.
 
 h|*0..1*
-|*other_reference_ranges*: `xref:BASE:foundation_types:structures_package.adoc#_list_class[List]<xref:RM:data_types:quantity_package.adoc#_reference_range_class[REFERENCE_RANGE]<xref:RM:data_types:quantity_package.adoc#_dv_ordered_class[DV_ORDERED]>>`
+|*other_reference_ranges*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:data_types:quantity_package.adoc#_reference_range_class[REFERENCE_RANGE]<xref:RM:data_types:quantity_package.adoc#_dv_ordered_class[DV_ORDERED]>>`
 a|Optional tagged other reference ranges for this value in its particular measurement context.
 
 h|*Functions*
@@ -35,15 +35,15 @@ h|*1..1 +
 (abstract)*
 |*is_strictly_comparable_to* ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_ordered_class[DV_ORDERED][1]` +
-): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Test if two instances are strictly comparable.
 
 h|*1..1*
-|*is_simple* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+|*is_simple* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|True if this quantity has no reference ranges.
 
 h|*1..1*
-|*is_normal* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]` +
+|*is_normal* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
 __Pre__: `normal_range /= Void or normal_status /= Void` +
  +
@@ -54,8 +54,8 @@ a|Value is in the normal range, determined by comparison of the value to the nor
 h|*1..1 +
 (abstract)*
 |*infix <* ( +
-other: `xref:BASE:foundation_types:primitive_types_package.adoc#_ordered_class[Ordered][1]` +
-): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+other: `xref:BASE:foundation_types:primitive_types.adoc#_ordered_class[Ordered][1]` +
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|
 
 h|*Invariants*

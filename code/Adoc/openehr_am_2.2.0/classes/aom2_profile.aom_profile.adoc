@@ -1,0 +1,17 @@
+=== AOM_PROFILE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/aom2_profile.aom_profile.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/aom2_profile.aom_profile.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/aom2_profile.aom_profile.adoc[]
+
+====

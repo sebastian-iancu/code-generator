@@ -14,17 +14,17 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*is_im_runtime*: `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean] +
+|*is_im_runtime*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean] +
 {default{nbsp}={nbsp}false}`
 a|True if this property is marked with info model `_im_runtime_` property.
 
 h|*0..1*
-|*is_im_infrastructure*: `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean] +
+|*is_im_infrastructure*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean] +
 {default{nbsp}={nbsp}false}`
 a|True if this property was marked with info model `_im_infrastructure_` flag.
 
 h|*0..1*
-|*is_composition*: `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean] +
+|*is_composition*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean] +
 {default{nbsp}={nbsp}false}`
 a|True if this property instance is a compositional sub-part of the owning class instance. Equivalent to 'composition' in UML associations (but missing from UML properties without associations) and also 'cascade-delete' semantics in ER schemas.
 
@@ -33,11 +33,11 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1*
-|*existence* (): `xref:BASE:foundation_types:interval_package.adoc#_multiplicity_interval_class[Multiplicity_interval]`
+|*existence* (): `xref:BASE:foundation_types:interval.adoc#_multiplicity_interval_class[Multiplicity_interval]`
 a|Interval form of `0..1`, `1..1` etc, derived from `_is_nullable_`.
 
 h|*1..1*
-|*display_name* (): `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*display_name* (): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Name of this property to display in UI.
 
 h|*Invariants*

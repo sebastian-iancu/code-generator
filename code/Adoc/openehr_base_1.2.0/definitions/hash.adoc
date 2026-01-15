@@ -16,7 +16,7 @@ h|*Functions*
 h|*1..1*
 |*has_key* ( +
 a_key: `K[1]` +
-): `xref:BASE:foundation_types:primitive_types_package.adoc#_boolean_class[Boolean]`
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Test for presence of `_a_key_`.
 
 h|*1..1*

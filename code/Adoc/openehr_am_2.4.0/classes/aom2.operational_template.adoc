@@ -1,0 +1,17 @@
+=== OPERATIONAL_TEMPLATE Class
+
+[tabs]
+====
+Definition::
++
+include::ROOT:partial$definitions/aom2.operational_template.adoc[]
+
+BMM::
++
+include::ROOT:partial$BMMs/aom2.operational_template.adoc[]
+
+UML::
++
+include::ROOT:partial$plantUML/classes/aom2.operational_template.adoc[]
+
+====

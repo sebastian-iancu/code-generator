@@ -18,7 +18,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*name*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Optional human-readable name (in String form).
 
 h|*0..1*

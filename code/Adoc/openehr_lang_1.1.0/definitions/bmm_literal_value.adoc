@@ -11,7 +11,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*value_literal*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*value_literal*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|A serial representation of the value.
 
 h|*0..1*
@@ -19,7 +19,7 @@ h|*0..1*
 a|A native representation of the value, possibly derived by deserialising `_value_literal_`.
 
 h|*0..1*
-|*syntax*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*syntax*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Optional specification of formalism of the `_value_literal_` attribute for complex values. Value may be any of `json &#124; json5 &#124; yawl &#124; xml &#124; odin &#124; rdf` or another value agreed by the user community. If not set, `json` is assumed.
 
 h|*1..1*

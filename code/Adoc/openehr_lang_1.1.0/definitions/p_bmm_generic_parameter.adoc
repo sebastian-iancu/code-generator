@@ -14,11 +14,11 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*name*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Name of the parameter, e.g. 'T' etc. Persisted attribute. Name is limited to 1 character, upper case.
 
 h|*0..1*
-|*conforms_to_type*: `xref:BASE:foundation_types:primitive_types_package.adoc#_string_class[String]`
+|*conforms_to_type*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Optional conformance constraint - the name of a type to which a concrete substitution of this generic parameter must conform. Persisted attribute.
 
 h|*0..1*
