@@ -1,4 +1,4 @@
-[plantuml,DV_QUANTIFIED,format=svg,svg-type="inline"]
+[plantuml,DV_QUANTIFIED,format=svg]
 -----
 @startuml
 

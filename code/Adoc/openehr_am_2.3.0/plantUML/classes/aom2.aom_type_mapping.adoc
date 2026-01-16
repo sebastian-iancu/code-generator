@@ -1,4 +1,4 @@
-[plantuml,AOM_TYPE_MAPPING,format=svg,svg-type="inline"]
+[plantuml,AOM_TYPE_MAPPING,format=svg,opts=inline]
 -----
 @startuml
 

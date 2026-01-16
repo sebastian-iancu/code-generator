@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*type*: `link:/classes/BMM_CONTAINER_TYPE[BMM_CONTAINER_TYPE] `
 a|Declared or inferred static type of the entity.
 |===

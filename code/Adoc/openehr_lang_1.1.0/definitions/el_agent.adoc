@@ -18,7 +18,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|Name of the routine being called.
 
@@ -35,7 +35,7 @@ h|*0..1*
 a|Reference to definition of a routine for which this is an agent, if one exists.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*is_writable*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean] +
 {default{nbsp}={nbsp}false}`
 a|
@@ -45,7 +45,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*eval_type* (): `link:/classes/BMM_ROUTINE_TYPE[BMM_ROUTINE_TYPE] ` +
  +
 __Post_result__: `Result = definition.signature`

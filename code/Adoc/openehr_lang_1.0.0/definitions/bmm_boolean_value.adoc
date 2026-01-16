@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*value*: `link:/classes/Boolean[Boolean] `
 a|Native Boolean value.
 |===

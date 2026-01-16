@@ -1,4 +1,4 @@
-[plantuml,OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS,format=svg,svg-type="inline"]
+[plantuml,OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS,format=svg,opts=inline]
 -----
 @startuml
 

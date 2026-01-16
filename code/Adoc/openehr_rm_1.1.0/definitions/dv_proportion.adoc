@@ -34,12 +34,12 @@ h|*0..1*
 a|Precision  to  which  the  `_numerator_` and `_denominator_` values of  the  proportion are expressed, in terms of number  of decimal places. The value 0 implies an integral quantity. The value -1 implies no limit, i.e. any number of decimal places.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*normal_range*: `xref:RM:data_types:quantity_package.adoc#_dv_interval_class[DV_INTERVAL]<xref:RM:data_types:quantity_package.adoc#_dv_proportion_class[DV_PROPORTION]>`
 a|Optional normal range.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*other_reference_ranges*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:data_types:quantity_package.adoc#_reference_range_class[REFERENCE_RANGE]<xref:RM:data_types:quantity_package.adoc#_dv_proportion_class[DV_PROPORTION]>>`
 a|Optional tagged other reference ranges for this value in its particular measurement context.
 
@@ -48,7 +48,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*magnitude* (): `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real]`
 a|Effective magnitude represented by ratio.
 
@@ -96,7 +96,7 @@ __Post_result__: `Result = magnitude < other.magnitude`
 a|True if this Proportion is less than  `_other_`. Only valid if `_is_strictly_comparable_to()_` is True.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*is_strictly_comparable_to* ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_ordered_class[DV_ORDERED][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`

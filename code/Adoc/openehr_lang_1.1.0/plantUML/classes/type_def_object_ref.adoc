@@ -1,4 +1,4 @@
-[plantuml,TYPE_DEF_OBJECT_REF,format=svg,svg-type="inline"]
+[plantuml,TYPE_DEF_OBJECT_REF,format=svg,opts=inline]
 -----
 @startuml
 

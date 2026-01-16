@@ -27,7 +27,7 @@ h|*1..1*
 a|Group containing this feature.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*scope*: `link:/classes/BMM_CLASS[BMM_CLASS] `
 a|Model element within which an element is declared.
 |===

@@ -25,26 +25,26 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*magnitude* (): `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real]`
 a|Numeric value of the time as seconds since the start of day, i.e. `00:00:00`.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*is_strictly_comparable_to* ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_ordered_class[DV_ORDERED][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Test if two instances are strictly comparable.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*add* ( +
 a_diff: `xref:RM:data_types:quantity_package.adoc#_dv_amount_class[DV_AMOUNT][1]` +
 ): `xref:RM:data_types:quantity_package.adoc#_dv_absolute_quantity_class[DV_ABSOLUTE_QUANTITY]`
 a|Add a time period to this time.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*subtract* ( +
 a_diif: `xref:RM:data_types:quantity_package.adoc#_dv_amount_class[DV_AMOUNT][1]` +
 ): `xref:RM:data_types:quantity_package.adoc#_dv_absolute_quantity_class[DV_ABSOLUTE_QUANTITY]`

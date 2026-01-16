@@ -29,7 +29,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*eval_type* (): `link:/classes/BMM_TYPE[BMM_TYPE] `
 a|Return `_type_`.
 

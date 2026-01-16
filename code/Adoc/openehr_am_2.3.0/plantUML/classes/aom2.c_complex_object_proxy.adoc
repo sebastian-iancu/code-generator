@@ -1,4 +1,4 @@
-[plantuml,C_COMPLEX_OBJECT_PROXY,format=svg,svg-type="inline"]
+[plantuml,C_COMPLEX_OBJECT_PROXY,format=svg,opts=inline]
 -----
 @startuml
 

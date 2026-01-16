@@ -42,7 +42,7 @@ h|*1..1*
 a|Return number of arguments of this routine.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*signature* (): `link:/classes/[] `
 a|Formal signature of this element, in the form
 

@@ -1,4 +1,4 @@
-[plantuml,ARCHETYPE_CONSTRAINT,format=svg,svg-type="inline"]
+[plantuml,ARCHETYPE_CONSTRAINT,format=svg,opts=inline]
 -----
 @startuml
 

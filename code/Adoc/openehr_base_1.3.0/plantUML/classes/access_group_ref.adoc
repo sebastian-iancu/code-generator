@@ -1,4 +1,4 @@
-[plantuml,ACCESS_GROUP_REF,format=svg,svg-type="inline"]
+[plantuml,ACCESS_GROUP_REF,format=svg,opts=inline]
 -----
 @startuml
 

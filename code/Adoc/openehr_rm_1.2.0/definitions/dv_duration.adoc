@@ -61,7 +61,7 @@ __Post_result__: `Result = magnitude < other.magnitude`
 a|True if this duration object is less than `_other_`, based on comparison of `_magnitude()_`.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*is_strictly_comparable_to* ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_duration_class[DV_DURATION][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
@@ -75,7 +75,7 @@ a|Negated version of current duration.
 Assuming the current duration is positive, the negated version represents a time prior to some origin point, or a negative age (e.g. so-called 'adjusted age' of premature infant).
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*magnitude* (): `xref:BASE:foundation_types:primitive_types.adoc#_double_class[Double]`
 a|Numeric value of the duration as a number of seconds. Computed using the method `_to_seconds()_` inherited from `Iso8601_duration`.
 

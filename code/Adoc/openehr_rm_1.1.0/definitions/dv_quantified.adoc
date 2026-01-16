@@ -57,7 +57,7 @@ other: `xref:RM:data_types:quantity_package.adoc#_dv_quantified_class[DV_QUANTIF
 a|Return True if this `DV_QUANTIFIED` is considered equal to `_other_`.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*less_than* __alias__ "<" ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_quantified_class[DV_QUANTIFIED][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +

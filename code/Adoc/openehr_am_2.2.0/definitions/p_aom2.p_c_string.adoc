@@ -19,7 +19,7 @@ h|*1..1 +
 a|String constraint - a list of literal strings and / or regular expression strings delimited by the ‘/’ character.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*default_value*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|
 

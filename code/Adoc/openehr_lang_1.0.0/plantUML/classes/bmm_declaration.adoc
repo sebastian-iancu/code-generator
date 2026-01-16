@@ -1,4 +1,4 @@
-[plantuml,BMM_DECLARATION,format=svg,svg-type="inline"]
+[plantuml,BMM_DECLARATION,format=svg,opts=inline]
 -----
 @startuml
 

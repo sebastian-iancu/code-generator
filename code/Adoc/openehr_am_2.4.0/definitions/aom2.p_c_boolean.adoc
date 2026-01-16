@@ -24,7 +24,7 @@ h|*0..1 +
 a|
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*default_value*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|
 |===

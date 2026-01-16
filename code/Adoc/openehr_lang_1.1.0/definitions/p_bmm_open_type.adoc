@@ -18,7 +18,7 @@ h|*1..1*
 a|Simple type parameter as a single letter like 'T', 'G' etc.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*bmm_type*: `xref:BASE:foundation_types:overview.adoc#_any_class[Any]`
 a|Result of `_create_bmm_type()_` call.
 |===

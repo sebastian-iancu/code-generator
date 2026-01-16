@@ -1,4 +1,4 @@
-[plantuml,interval,format=svg,svg-type="inline"]
+[plantuml,interval,format=svg]
 -----
 @startuml
 

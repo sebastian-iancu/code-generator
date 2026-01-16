@@ -1,4 +1,4 @@
-[plantuml,openehr_archetype_profile,format=svg,svg-type="inline"]
+[plantuml,openehr_archetype_profile,format=svg,opts=inline]
 -----
 @startuml
 

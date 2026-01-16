@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String] +
 {default{nbsp}={nbsp}"Self"}`
 a|Name of this model element.

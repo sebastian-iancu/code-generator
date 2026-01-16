@@ -1,4 +1,4 @@
-[plantuml,EL_VALUE_GENERATOR,format=svg,svg-type="inline"]
+[plantuml,EL_VALUE_GENERATOR,format=svg,opts=inline]
 -----
 @startuml
 

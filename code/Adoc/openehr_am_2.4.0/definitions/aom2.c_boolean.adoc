@@ -24,7 +24,7 @@ h|*0..1 +
 a|Assumed Boolean value.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*default_value*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Default Boolean value.
 
@@ -33,12 +33,12 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*prototype_value* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Prototype Boolean value.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*any_allowed* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
 __Post__: `Result = constraint.is_empty`

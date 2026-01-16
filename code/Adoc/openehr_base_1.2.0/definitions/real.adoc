@@ -18,54 +18,54 @@ h|*1..1*
 a|Return the greatest integer no greater than the value of this object.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*add* __alias__ "+" ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real]`
 a|Real number addition.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*subtract* __alias__ "-" ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real]`
 a|Real number subtraction.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*multiply* __alias__ "&#42;" ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real]`
 a|Real number multiplication.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*divide* __alias__ "/" ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_double_class[Double]`
 a|Real number division.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*exponent* __alias__ "^" ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_double_class[Double][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_double_class[Double]`
 a|Real number exponentiation.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*less_than* __alias__ "<" ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Returns True if current Real is less than `_other_`.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*negative* __alias__ "-" (): `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real]`
 a|Generate negative of current Real value.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*is_equal* ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`

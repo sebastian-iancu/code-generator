@@ -18,7 +18,7 @@ h|*0..1*
 a|Child packages; keys all in upper case for guaranteed matching.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*scope*: `xref:LANG:bmm:core_package.adoc#_bmm_package_container_class[BMM_PACKAGE_CONTAINER]`
 a|Model element within which a referenceable element is known.
 

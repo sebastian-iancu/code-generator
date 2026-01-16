@@ -1,4 +1,4 @@
-[plantuml,EXPR_BINARY_OPERATOR,format=svg,svg-type="inline"]
+[plantuml,EXPR_BINARY_OPERATOR,format=svg,opts=inline]
 -----
 @startuml
 

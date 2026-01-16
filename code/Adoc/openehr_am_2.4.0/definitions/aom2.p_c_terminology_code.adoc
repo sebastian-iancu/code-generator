@@ -28,7 +28,7 @@ h|*0..1 +
 a|
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*default_value*: `xref:BASE:foundation_types:terminology.adoc#_terminology_code_class[Terminology_code]`
 a|
 |===

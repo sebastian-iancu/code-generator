@@ -1,4 +1,4 @@
-[plantuml,EXTRACT_ENTITY_MANIFEST,format=svg,svg-type="inline"]
+[plantuml,EXTRACT_ENTITY_MANIFEST,format=svg,opts=inline]
 -----
 @startuml
 

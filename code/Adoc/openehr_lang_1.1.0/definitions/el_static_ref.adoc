@@ -18,7 +18,7 @@ h|*1..1*
 a|Constant definition (within class).
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*is_writable*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean] +
 {default{nbsp}={nbsp}false}`
 a|Defined to return False.

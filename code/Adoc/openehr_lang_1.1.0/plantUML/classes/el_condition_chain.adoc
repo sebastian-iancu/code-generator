@@ -1,4 +1,4 @@
-[plantuml,EL_CONDITION_CHAIN,format=svg,svg-type="inline"]
+[plantuml,EL_CONDITION_CHAIN,format=svg,opts=inline]
 -----
 @startuml
 

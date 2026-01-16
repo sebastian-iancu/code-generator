@@ -1,4 +1,4 @@
-[plantuml,EXPR_LEAF,format=svg,svg-type="inline"]
+[plantuml,EXPR_LEAF,format=svg,opts=inline]
 -----
 @startuml
 

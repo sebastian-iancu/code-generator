@@ -18,17 +18,17 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*constraint*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:BASE:foundation_types:interval.adoc#_interval_class[Interval]<T>>`
 a|Constraint in the form of a List of Intervals of the parameter type T. Concrete types generated in descendants via template binding.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*default_value*: `T`
 a|Default value set in a template, and present in an operational template. Generally limited to leaf and near-leaf nodes.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*assumed_value*: `T`
 a|Value to be assumed if none sent in data.
 
@@ -37,21 +37,21 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*any_allowed* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
 __Post__: `Result = constraint.is_empty`
 a|True if any value (i.e. instance) of the reference model type would be allowed. Redefined in descendants.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*c_value_conforms_to* ( +
 other: `xref:AM:AOM2:constraint_model-class_definitions.adoc#_c_ordered_class[C_ORDERED][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|True if `_other.any_allowed_` or else for every constraint in the `_constraint_` list there is a constraint in `_other.constraint_` that contains it.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*c_value_congruent_to* ( +
 other: `xref:AM:AOM2:constraint_model-class_definitions.adoc#_c_ordered_class[C_ORDERED][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`

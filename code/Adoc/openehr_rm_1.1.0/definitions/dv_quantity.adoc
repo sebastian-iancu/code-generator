@@ -35,12 +35,12 @@ If the `_units_display_name_` field is set, this may be used for display. If not
 Example values from UCUM: "kg/m^2", “mm[Hg]", "ms-1", "km/h".
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*normal_range*: `xref:RM:data_types:quantity_package.adoc#_dv_interval_class[DV_INTERVAL]<xref:RM:data_types:quantity_package.adoc#_dv_quantity_class[DV_QUANTITY]>`
 a|Optional normal range.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*other_reference_ranges*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:data_types:quantity_package.adoc#_reference_range_class[REFERENCE_RANGE]<xref:RM:data_types:quantity_package.adoc#_dv_quantity_class[DV_QUANTITY]>>`
 a|Optional tagged other reference ranges for this value in its particular measurement context.
 
@@ -99,7 +99,7 @@ h|*1..1*
 a|True if `_precision_` = 0, meaning that the `_magnitude_` is a whole number.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*is_strictly_comparable_to* ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_ordered_class[DV_ORDERED][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`

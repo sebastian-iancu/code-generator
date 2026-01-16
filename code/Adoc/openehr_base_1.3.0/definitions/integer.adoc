@@ -14,35 +14,35 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*add* __alias__ "+" ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Integer addition.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*subtract* __alias__ "-" ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Integer subtraction.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*multiply* __alias__ "&#42;" ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Integer multiplication.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*divide* __alias__ "/" ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_double_class[Double]`
 a|Integer division.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*exponent* __alias__ "^" ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_double_class[Double][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_double_class[Double]`
@@ -55,19 +55,19 @@ mod: `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer][1]
 a|Return self modulo other.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*less_than* __alias__ "<" ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Returns True if current Integer is less than `_other_`.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*negative* __alias__ "-" (): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Generate negative of current Integer value.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*is_equal* ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`

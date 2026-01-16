@@ -1,4 +1,4 @@
-[plantuml,VALIDITY_KIND,format=svg,svg-type="inline"]
+[plantuml,VALIDITY_KIND,format=svg,opts=inline]
 -----
 @startuml
 

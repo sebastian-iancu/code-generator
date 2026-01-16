@@ -1,4 +1,4 @@
-[plantuml,OPENEHR_CODE_SET_IDENTIFIERS,format=svg,svg-type="inline"]
+[plantuml,OPENEHR_CODE_SET_IDENTIFIERS,format=svg]
 -----
 @startuml
 

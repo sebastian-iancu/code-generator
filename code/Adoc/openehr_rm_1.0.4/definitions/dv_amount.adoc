@@ -18,7 +18,7 @@ h|*0..1*
 a|If `True`, indicates that when this object was created, accuracy was recorded as a percent value; if `False`, as an absolute quantity value.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*accuracy*: `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real]`
 a|Accuracy of measurement, expressed either as a half-range percent value (`_accuracy_is_percent_` = `True`) or a half-range quantity. A value of `0` means that accuracy is 100%, i.e. no error.
 

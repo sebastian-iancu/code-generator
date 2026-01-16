@@ -1,4 +1,4 @@
-[plantuml,Statistical_evaluator,format=svg,svg-type="inline"]
+[plantuml,Statistical_evaluator,format=svg,opts=inline]
 -----
 @startuml
 

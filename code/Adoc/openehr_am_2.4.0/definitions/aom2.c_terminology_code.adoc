@@ -33,7 +33,7 @@ h|*0..1 +
 a|Assumed Terminology code value.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*default_value*: `xref:BASE:foundation_types:terminology.adoc#_terminology_code_class[Terminology_code]`
 a|
 
@@ -76,19 +76,19 @@ h|*0..1*
 a|For locally defined value sets within individual code bindings: final set of external codes to which value set is resolved.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*valid_value* ( +
 a_value: `xref:BASE:foundation_types:terminology.adoc#_terminology_code_class[Terminology_code][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|True if a `_value_` is valid with respect to constraint expressed in concrete instance of this type.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*prototype_value* (): `xref:BASE:foundation_types:terminology.adoc#_terminology_code_class[Terminology_code]`
 a|A generated prototype value from this constraint object.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*any_allowed* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
 __Post__: `Result := constraint.is_empty`

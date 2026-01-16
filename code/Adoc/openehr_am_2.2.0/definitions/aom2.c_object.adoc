@@ -49,7 +49,7 @@ h|*1..1*
 a|
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*c_conforms_to* ( +
 other: `xref:AM:AOM2:constraint_model-class_definitions.adoc#_archetype_constraint_class[ARCHETYPE_CONSTRAINT][1]`, +
 rmcc: `xref:BASE:foundation_types:functional.adoc#_function_class[FUNCTION]<>[1]` +
@@ -62,7 +62,7 @@ Typically used during validation of special-ised archetype nodes.
 `_rmcc_`:: Reference Model conformance checker lambda.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*c_congruent_to* ( +
 other: `xref:AM:AOM2:constraint_model-class_definitions.adoc#_archetype_constraint_class[ARCHETYPE_CONSTRAINT][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
@@ -89,7 +89,7 @@ __Post__: `Result = codes_conformant (node_id, other.node_id)`
 a|True if this node id conforms to other.node_id, which includes the ids being identical; other is assumed to be in a flat archetype.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*is_prohibited* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
 __Post__: `Result = occurrences /= Void and then occurrences.is_prohibited`

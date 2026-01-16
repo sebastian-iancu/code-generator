@@ -26,7 +26,7 @@ h|*0..1*
 a|Generic parameters of the `_root_type_` in this type specifier, if simple types. The order must match the order of the owning class's formal generic parameter declarations. Persistent attribute.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*bmm_type*: `link:/classes/BMM_GENERIC_TYPE[BMM_GENERIC_TYPE] `
 a|Result of `_create_bmm_type()_` call.
 

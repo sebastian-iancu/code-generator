@@ -1,4 +1,4 @@
-[plantuml,EL_PROCEDURE_AGENT,format=svg,svg-type="inline"]
+[plantuml,EL_PROCEDURE_AGENT,format=svg,opts=inline]
 -----
 @startuml
 

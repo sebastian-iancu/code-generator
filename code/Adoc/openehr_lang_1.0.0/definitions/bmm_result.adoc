@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*name*: `link:/classes/String[String]  +
 {default{nbsp}={nbsp}"Result"}`
 a|Name of this model element.

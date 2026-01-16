@@ -18,7 +18,7 @@ h|*1..1*
 a|Property definition (within class).
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*is_writable*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean] +
 {default{nbsp}={nbsp}true}`
 a|Defined to return True.
@@ -28,7 +28,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*eval_type* (): `link:/classes/BMM_TYPE[BMM_TYPE] `
 a|Type definition (i.e. BMM meta-type definition object) of the constant, property or variable, inferred by inspection of the current scoping instance. Return `_definition.type_`.
 |===

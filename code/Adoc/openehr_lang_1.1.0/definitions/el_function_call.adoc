@@ -19,7 +19,7 @@ h|*1..1 +
 a|The function agent being called.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*is_writable*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean] +
 {default{nbsp}={nbsp}false}`
 a|Defined to return False.
@@ -29,7 +29,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*eval_type* (): `link:/classes/BMM_TYPE[BMM_TYPE] `
 a|Return `_agent.definition.type_`.
 

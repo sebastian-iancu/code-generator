@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*scope*: `link:/classes/BMM_CLASS[BMM_CLASS] `
 a|Class within which a referenceable element is known.
 

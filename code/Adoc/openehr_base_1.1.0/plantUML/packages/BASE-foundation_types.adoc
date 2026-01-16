@@ -1,4 +1,4 @@
-[plantuml,org.openehr.base.foundation_types,format=svg,svg-type="inline"]
+[plantuml,org.openehr.base.foundation_types,format=svg,opts=inline]
 -----
 @startuml
 

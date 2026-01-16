@@ -1,4 +1,4 @@
-[plantuml,BMM_INDEXED_CONTAINER_PROPERTY,format=svg,svg-type="inline"]
+[plantuml,BMM_INDEXED_CONTAINER_PROPERTY,format=svg,opts=inline]
 -----
 @startuml
 

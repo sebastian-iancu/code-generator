@@ -1,4 +1,4 @@
-[plantuml,org.openehr.am.aom2_profile,format=svg,svg-type="inline"]
+[plantuml,org.openehr.am.aom2_profile,format=svg,opts=inline]
 -----
 @startuml
 

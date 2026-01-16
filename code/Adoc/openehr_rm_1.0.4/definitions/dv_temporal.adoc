@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*accuracy*: `xref:RM:data_types:quantity_package.adoc#_dv_duration_class[DV_DURATION]`
 a|Time accuracy, expressed as a duration.
 
@@ -23,7 +23,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*diff* ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_temporal_class[DV_TEMPORAL][1]` +
 ): `xref:RM:data_types:quantity_package.adoc#_dv_duration_class[DV_DURATION]`

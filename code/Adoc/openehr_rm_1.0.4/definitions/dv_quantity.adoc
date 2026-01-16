@@ -29,12 +29,12 @@ h|*1..1*
 a|Stringified units, expressed in UCUM unit syntax, e.g. "kg/m2", “mm[Hg]", "ms-1", "km/h". Implemented accordingly in subtypes.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*normal_range*: `xref:RM:data_types:quantity_package.adoc#_dv_interval_class[DV_INTERVAL]<xref:RM:data_types:quantity_package.adoc#_dv_quantity_class[DV_QUANTITY]>`
 a|Optional normal range.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*other_reference_ranges*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:data_types:quantity_package.adoc#_reference_range_class[REFERENCE_RANGE]<xref:RM:data_types:quantity_package.adoc#_dv_quantity_class[DV_QUANTITY]>>`
 a|Optional tagged other reference ranges for this value in its particular measurement context.
 

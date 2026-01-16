@@ -1,4 +1,4 @@
-[plantuml,FUNCTION_DEF_EXTERNAL,format=svg,svg-type="inline"]
+[plantuml,FUNCTION_DEF_EXTERNAL,format=svg]
 -----
 @startuml
 

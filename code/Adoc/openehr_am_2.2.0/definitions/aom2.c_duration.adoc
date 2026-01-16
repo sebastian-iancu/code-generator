@@ -16,7 +16,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*constraint*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:BASE:foundation_types:interval.adoc#_interval_class[Interval]<xref:BASE:foundation_types:time_types.adoc#_iso8601_duration_class[Iso8601_duration]>>`
 a|Formal constraint on the assumed primitive `Iso8601_duration` type, in the form of one or more `Interval<Iso8601_duration>`.
 

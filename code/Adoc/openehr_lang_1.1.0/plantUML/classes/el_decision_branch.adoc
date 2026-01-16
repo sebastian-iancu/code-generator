@@ -1,4 +1,4 @@
-[plantuml,EL_DECISION_BRANCH,format=svg,svg-type="inline"]
+[plantuml,EL_DECISION_BRANCH,format=svg,opts=inline]
 -----
 @startuml
 

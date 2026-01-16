@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*value*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Native Boolean value.
 |===

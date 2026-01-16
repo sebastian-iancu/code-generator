@@ -1,4 +1,4 @@
-[plantuml,EXTERNAL_ENVIRONMENT_ACCESS,format=svg,svg-type="inline"]
+[plantuml,EXTERNAL_ENVIRONMENT_ACCESS,format=svg,opts=inline]
 -----
 @startuml
 
