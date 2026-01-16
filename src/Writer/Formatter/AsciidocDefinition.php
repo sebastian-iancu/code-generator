@@ -492,7 +492,7 @@ class AsciidocDefinition
             $ancestorClass = Globals::getClass($ancestor);
             if ($ancestorClass instanceof BmmClass) {
                 if ($ancestorClass->properties->offsetExists($property->name)) {
-                    return " +\n(" . ($ancestorClass->isAbstract ? 'effected' : 'redefined') . ')';
+                    return " +\n(" . ($ancestorClass->isAbstract && !$class->isAbstract ? 'effected' : 'redefined') . ')';
                 }
                 $parent = $this->formatPropertyOverride($ancestorClass, $property);
                 if ($parent) {
@@ -514,7 +514,7 @@ class AsciidocDefinition
                 /** @var BmmFunction $ancestorFunction */
                 $ancestorFunction = $ancestorClass->functions->get($function->name);
                 if ($ancestorFunction) {
-                    return " +\n(" . ($ancestorFunction->isAbstract ? 'effected' : 'redefined') . ')';
+                    return " +\n(" . ($ancestorFunction->isAbstract && !$class->isAbstract ? 'effected' : 'redefined') . ')';
                 }
                 $parent = $this->formatFunctionOverride($ancestorClass, $function);
                 if ($parent) {
