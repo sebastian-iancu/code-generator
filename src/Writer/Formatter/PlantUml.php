@@ -23,8 +23,12 @@ use OpenEHR\Tools\CodeGen\Model\Bmm\BmmSingleProperty;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmSinglePropertyOpen;
 use OpenEHR\Tools\CodeGen\Model\Bmm\Globals;
 
-class PlantUml
+readonly class PlantUml
 {
+    public function __construct(private bool $legacyFormat = false)
+    {
+    }
+
     public function format(AbstractBmmClass|BmmPackage $bmmItem, string $prefix): string
     {
         $content = "Unsupported *{$bmmItem->name}*, context *format-plantUML*";
@@ -144,7 +148,7 @@ EOD;
         } elseif ($property instanceof BmmGenericProperty) {
             $type = $this->formatGenericParameterType($property->typeDef);
         } elseif ($property instanceof BmmSingleProperty || $property instanceof BmmSinglePropertyOpen) {
-            $type = $property->type;
+            $type = $this->formatType($property->type);
         }
 
         return "+ " . $property->name . " : " . $type . $this->formatCardinality($minOccurs, $maxOccurs);
@@ -168,7 +172,7 @@ EOD;
         } elseif ($function->result instanceof BmmGenericType) {
             $type = $this->formatGenericParameterType($function->result);
         } elseif ($function->result instanceof BmmSimpleType) {
-            $type = $function->result->type;
+            $type = $this->formatType($function->result->type);
         }
         $arguments = '';
         if ($function->parameters->count()) {
@@ -181,7 +185,7 @@ EOD;
                     } elseif ($parameter instanceof BmmGenericFunctionParameter) {
                         return $parameter->name . ' : ' . $this->formatGenericParameterType($parameter->typeDef) . $cardinality;
                     } elseif ($parameter instanceof BmmSingleFunctionParameter || $parameter instanceof BmmSingleFunctionParameterOpen) {
-                        return $parameter->name . ' : ' . $parameter->type . $cardinality;
+                        return $parameter->name . ' : ' . $this->formatType($parameter->type) . $cardinality;
                     }
                     return '';
                 }, $function->parameters->getArrayCopy())) . ' ';
@@ -199,11 +203,11 @@ EOD;
     private function formatContainerParameterType(BmmContainerType $type): string
     {
         if ($type->typeDef instanceof BmmGenericType) {
-            return $type->containerType . '<' . $this->formatGenericParameterType($type->typeDef) . '>';
+            return $this->formatType($type->containerType) . '<' . $this->formatGenericParameterType($type->typeDef) . '>';
         } elseif ($type->typeDef instanceof BmmContainerType) {
-            return $type->containerType . '<' . $this->formatContainerParameterType($type->typeDef) . '>';
+            return $this->formatType($type->containerType) . '<' . $this->formatContainerParameterType($type->typeDef) . '>';
         }
-        return $type->containerType . '<' . $type->type . '>';
+        return $this->formatType($type->containerType) . '<' . $this->formatType($type->type ?? 'Any') . '>';
     }
 
     /**
@@ -221,14 +225,14 @@ EOD;
                 if ($t instanceof BmmGenericType) {
                     return $this->formatGenericParameterType($t);
                 } elseif ($t instanceof BmmSimpleType) {
-                    return $t->type;
+                    return $this->formatType($t->type);
                 }
                 return '';
             }, $type->genericParameterDefs->getArrayCopy()));
         } else {
             $genericParameters = '';
         }
-        return $type->rootType . '<' . $genericParameters . '>';
+        return $this->formatType($type->rootType) . '<' . $genericParameters . '>';
     }
 
     /**
@@ -312,5 +316,15 @@ EOD;
 //        }
 
         return $output;
+    }
+
+    public function formatType(string $typeName): string
+    {
+        // notice: for UML with hyperlinks, this needs to be enabled, but now is disabled because antora+kroki become very slow
+//        if (strlen($typeName) === 1 || in_array(strtolower($typeName), ['operation', 'void', 'null', 'false', 'true'])) {
+//            return $typeName;
+//        }
+//        return '[[https://specifications.openehr.org/classes/' . $typeName . ' ' . $typeName . ']]';
+        return $typeName;
     }
 }

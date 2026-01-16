@@ -23,7 +23,7 @@ use OpenEHR\Tools\CodeGen\Model\Bmm\BmmSingleProperty;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmSinglePropertyOpen;
 use OpenEHR\Tools\CodeGen\Model\Bmm\Globals;
 
-class AsciidocDefinition
+readonly class AsciidocDefinition
 {
     public const array TEXT_REPLACEMENT = [
         '|' => '&#124;',
@@ -36,7 +36,7 @@ class AsciidocDefinition
         " {" => " \{",
     ];
 
-    public function __construct(private readonly bool $legacyFormat = false)
+    public function __construct(private bool $legacyFormat = false)
     {
     }
 

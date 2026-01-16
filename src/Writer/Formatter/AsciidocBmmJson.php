@@ -4,7 +4,7 @@ namespace OpenEHR\Tools\CodeGen\Writer\Formatter;
 
 use OpenEHR\Tools\CodeGen\Model\Bmm\AbstractBmmClass;
 
-class AsciidocBmmJson
+readonly class AsciidocBmmJson
 {
     public function format(AbstractBmmClass $class): string
     {
