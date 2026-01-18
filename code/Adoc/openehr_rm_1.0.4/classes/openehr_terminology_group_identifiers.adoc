@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/openehr_terminology_group_identifiers.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/openehr_terminology_group_identifiers.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/openehr_terminology_group_identifiers.adoc[]

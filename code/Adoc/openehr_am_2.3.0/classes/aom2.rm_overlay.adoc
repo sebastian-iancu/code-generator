@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/aom2.rm_overlay.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/aom2.rm_overlay.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/aom2.rm_overlay.adoc[]

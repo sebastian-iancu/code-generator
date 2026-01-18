@@ -1,0 +1,13 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_STATEMENT_BLOCK*
+
+2+a|A statement 'block' corresponding to the programming language concept of the same name. May be used to establish scope in specific languages.
+
+2+|Inherits: xref:LANG:bmm:statement_package.adoc#_bmm_statement_item_class[BMM_STATEMENT_ITEM]
+
+2+h|*Attributes*
+
+|*items*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:LANG:bmm:statement_package.adoc#_bmm_statement_item_class[BMM_STATEMENT_ITEM]>` [0..1]
+a|Child blocks of the current block.
+|===

@@ -1,0 +1,13 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_ACTION_TABLE*
+
+2+a|Multi-branch conditional statement structure
+
+2+|Inherits: xref:LANG:bmm:statement_package.adoc#_bmm_statement_item_class[BMM_STATEMENT_ITEM], xref:LANG:bmm:statement_package.adoc#_bmm_statement_class[BMM_STATEMENT]
+
+2+h|*Attributes*
+
+|*decision_table*: `xref:LANG:bmm:statement_package.adoc#_bmm_action_decision_table_class[BMM_ACTION_DECISION_TABLE]` [1..1]
+a|A specialised decision table whose outputs can only be procedure agents. In execution, the matched agent will be invoked.
+|===

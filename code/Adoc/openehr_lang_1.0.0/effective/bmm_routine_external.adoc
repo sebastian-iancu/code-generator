@@ -1,0 +1,16 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_ROUTINE_EXTERNAL*
+
+2+a|External routine placeholder, containing sufficient meta-data to enable a routine in an external library to be called.
+
+2+|Inherits: xref:LANG:bmm:core_package.adoc#_bmm_routine_body_class[BMM_ROUTINE_BODY]
+
+2+h|*Attributes*
+
+|*meta_data*: `link:/classes/Hash[Hash] <link:/classes/String[String] ,link:/classes/String[String] >` [1..1]
+a|External call general meta-data, including target routine name, type mapping etc.
+
+|*argument_mapping*: `link:/classes/Hash[Hash] <link:/classes/String[String] ,link:/classes/String[String] >` [0..1]
+a|Optional argument-mapping meta-data.
+|===

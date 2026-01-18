@@ -1,0 +1,14 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_CONDITIONAL_ACTION*
+
+2+a|Conditional, or 'gated' statement, consisting of a Boolean-returning `_condition_` and the target `_statement_`.
+
+2+h|*Attributes*
+
+|*condition*: `xref:LANG:bmm:expression_package.adoc#_el_boolean_expression_class[EL_BOOLEAN_EXPRESSION]` [1..1]
+a|The gate condition for the target statement.
+
+|*statement*: `xref:LANG:bmm:statement_package.adoc#_bmm_statement_item_class[BMM_STATEMENT_ITEM]` [1..1]
+a|Target statement.
+|===

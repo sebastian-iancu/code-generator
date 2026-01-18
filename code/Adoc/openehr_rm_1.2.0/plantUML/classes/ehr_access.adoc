@@ -1,4 +1,4 @@
-[plantuml,EHR_ACCESS,format=svg,opts=inline]
+[plantuml,EHR_ACCESS,format=svg]
 -----
 @startuml
 

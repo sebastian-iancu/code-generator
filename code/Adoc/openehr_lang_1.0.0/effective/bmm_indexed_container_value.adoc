@@ -1,0 +1,29 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_INDEXED_CONTAINER_VALUE*
+
+2+a|Meta-type for literals whose concrete type is an indexed container, i.e. Hash table, Map etc.
+
+2+|Inherits: xref:LANG:bmm:core_package.adoc#_bmm_typed_class[BMM_TYPED], xref:LANG:bmm:core_package.adoc#_bmm_literal_value_class[BMM_LITERAL_VALUE], xref:LANG:bmm:core_package.adoc#_bmm_container_value_class[BMM_CONTAINER_VALUE]
+
+2+h|*Attributes*
+
+|*type*: `link:/classes/BMM_INDEXED_CONTAINER_TYPE[BMM_INDEXED_CONTAINER_TYPE] ` [1..1]
+a|Declared or inferred static type of the entity.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_literal_value_class[BMM_LITERAL_VALUE].*value_literal*: `link:/classes/String[String] ` [1..1]
+a|A serial representation of the value.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_literal_value_class[BMM_LITERAL_VALUE].*value*: `link:/classes/Any[Any] ` [0..1]
+a|A native representation of the value, possibly derived by deserialising `_value_literal_`.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_literal_value_class[BMM_LITERAL_VALUE].*syntax*: `link:/classes/String[String] ` [0..1]
+a|Optional specification of formalism of the `_value_literal_` attribute for complex values. Value may be any of `json &#124; yawl &#124; xml &#124; odin &#124; rdf` or another value agreed by the user community. If not set, `json` is assumed.
+
+2+h|*Functions*
+
+|xref:LANG:bmm:core_package.adoc#_bmm_typed_class[BMM_TYPED].*is_boolean* (): `link:/classes/Boolean[Boolean] ` +
+ +
+__Post_result__: `Result = type().equal( \{BMM_MODEL}.boolean_type_definition())` [1..1]
+a|True if `_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `'Boolean'`).
+|===

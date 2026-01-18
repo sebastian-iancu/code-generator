@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/interval_event.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/interval_event.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/interval_event.adoc[]

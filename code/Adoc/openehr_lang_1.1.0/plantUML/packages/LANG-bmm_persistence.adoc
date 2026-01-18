@@ -1,4 +1,4 @@
-[plantuml,org.openehr.lang.bmm_persistence,format=svg,opts=inline]
+[plantuml,org.openehr.lang.bmm_persistence,format=svg]
 -----
 @startuml
 

@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/aom2.p_c_temporal.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/aom2.p_c_temporal.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/aom2.p_c_temporal.adoc[]

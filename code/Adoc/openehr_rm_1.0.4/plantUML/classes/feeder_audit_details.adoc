@@ -1,4 +1,4 @@
-[plantuml,FEEDER_AUDIT_DETAILS,format=svg,opts=inline]
+[plantuml,FEEDER_AUDIT_DETAILS,format=svg]
 -----
 @startuml
 

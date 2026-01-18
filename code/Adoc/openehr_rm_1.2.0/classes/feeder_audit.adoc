@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/feeder_audit.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/feeder_audit.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/feeder_audit.adoc[]

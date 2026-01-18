@@ -1,0 +1,16 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*__EL_AGENT_CALL (abstract)__*
+
+2+a|A call made to a 'closed' agent, i.e. one with no remaining open arguments.
+
+2+h|*Attributes*
+
+|*agent*: `xref:LANG:bmm:expression_package.adoc#_el_agent_class[EL_AGENT]` [1..1]
+a|The agent being called.
+
+2+h|*Invariants*
+
+2+a|__Inv_valid_call__: `agent.is_callable()`
+
+|===

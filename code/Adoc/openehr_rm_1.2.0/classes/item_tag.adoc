@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/item_tag.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/item_tag.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/item_tag.adoc[]

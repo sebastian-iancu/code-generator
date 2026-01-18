@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/dv_paragraph.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/dv_paragraph.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/dv_paragraph.adoc[]

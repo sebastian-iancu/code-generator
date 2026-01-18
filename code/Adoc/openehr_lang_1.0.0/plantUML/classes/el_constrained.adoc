@@ -1,4 +1,4 @@
-[plantuml,EL_CONSTRAINED,format=svg,opts=inline]
+[plantuml,EL_CONSTRAINED,format=svg]
 -----
 @startuml
 

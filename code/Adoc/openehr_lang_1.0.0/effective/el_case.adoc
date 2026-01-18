@@ -1,0 +1,14 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*EL_CASE*
+
+2+|Inherits: xref:LANG:bmm:expression_package.adoc#_el_decision_branch_class[EL_DECISION_BRANCH]
+
+2+h|*Attributes*
+
+|xref:LANG:bmm:expression_package.adoc#_el_decision_branch_class[EL_DECISION_BRANCH].*result*: `xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION]` [1..1]
+a|Result expression of conditional, if its `_condition_` evaluates to True.
+
+|*value_constraint*: `link:/classes/C_OBJECT[C_OBJECT] ` [1..1]
+a|
+|===

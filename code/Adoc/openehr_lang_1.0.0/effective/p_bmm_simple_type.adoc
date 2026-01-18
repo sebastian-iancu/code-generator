@@ -1,0 +1,30 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*P_BMM_SIMPLE_TYPE*
+
+2+a|Persistent form of `BMM_SIMPLE_TYPE`.
+
+2+|Inherits: xref:LANG:bmm_persistence_package.adoc#_p_bmm_type_class[P_BMM_TYPE], xref:LANG:bmm_persistence_package.adoc#_p_bmm_base_type_class[P_BMM_BASE_TYPE]
+
+2+h|*Attributes*
+
+|*bmm_type*: `link:/classes/BMM_SIMPLE_TYPE[BMM_SIMPLE_TYPE] ` [0..1]
+a|Result of `_create_bmm_type()_` call.
+
+|xref:LANG:bmm_persistence_package.adoc#_p_bmm_base_type_class[P_BMM_BASE_TYPE].*value_constraint*: `link:/classes/String[String] ` [0..1]
+a|
+
+|*type*: `link:/classes/String[String] ` [1..1]
+a|Name of type - must be a simple class name.
+
+2+h|*Functions*
+
+|_(abstract)_ xref:LANG:bmm_persistence_package.adoc#_p_bmm_type_class[P_BMM_TYPE].*create_bmm_type* ( +
+a_schema: `xref:LANG:bmm:core_package.adoc#_bmm_model_class[BMM_MODEL][1]`, +
+a_class_def: `link:/classes/BMM_CLASS[BMM_CLASS] [1]` +
+): `void` [1..1]
+a|Create appropriate `BMM_XXX` object; effected in descendants.
+
+|_(abstract)_ xref:LANG:bmm_persistence_package.adoc#_p_bmm_type_class[P_BMM_TYPE].*as_type_string* (): `link:/classes/String[String] ` [1..1]
+a|Formal name of the type for display.
+|===

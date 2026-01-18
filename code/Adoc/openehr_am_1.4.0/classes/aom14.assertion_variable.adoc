@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/aom14.assertion_variable.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/aom14.assertion_variable.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/aom14.assertion_variable.adoc[]

@@ -1,0 +1,36 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*EL_PROPERTY_REF*
+
+2+a|Reference to a writable property.
+
+2+|Inherits: xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION], xref:LANG:bmm:expression_package.adoc#_el_terminal_class[EL_TERMINAL], xref:LANG:bmm:expression_package.adoc#_el_simple_class[EL_SIMPLE], xref:LANG:bmm:expression_package.adoc#_el_value_generator_class[EL_VALUE_GENERATOR], xref:LANG:bmm:expression_package.adoc#_el_feature_ref_class[EL_FEATURE_REF]
+
+2+h|*Attributes*
+
+|*is_writable*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` [1..1] +
+`{default{nbsp}={nbsp}true}`
+a|Defined to return True.
+
+|xref:LANG:bmm:expression_package.adoc#_el_value_generator_class[EL_VALUE_GENERATOR].*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` [1..1]
+a|Name used to represent the reference or other entity.
+
+|xref:LANG:bmm:expression_package.adoc#_el_feature_ref_class[EL_FEATURE_REF].*scoper*: `xref:LANG:bmm:expression_package.adoc#_el_value_generator_class[EL_VALUE_GENERATOR]` [0..1]
+a|Scoping expression, which must be a `EL_VALUE_GENERATOR`.
+
+|*definition*: `xref:LANG:bmm:core_package.adoc#_bmm_property_class[BMM_PROPERTY]` [1..1]
+a|Property definition (within class).
+
+2+h|*Functions*
+
+|*eval_type* (): `link:/classes/BMM_TYPE[BMM_TYPE] ` [1..1]
+a|Type definition (i.e. BMM meta-type definition object) of the constant, property or variable, inferred by inspection of the current scoping instance. Return `_definition.type_`.
+
+|xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION].*is_boolean* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
+ +
+__Post_result__: `Result = eval_type().equal( \{BMM_MODEL}.boolean_type_definition())` [1..1]
+a|True if `_eval_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `Boolean`).
+
+|xref:LANG:bmm:expression_package.adoc#_el_feature_ref_class[EL_FEATURE_REF].*reference* (): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` [1..1]
+a|Generated full reference name, consisting of scoping elements and `_name_` concatenated using dot notation.
+|===

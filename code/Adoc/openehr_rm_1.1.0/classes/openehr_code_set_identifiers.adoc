@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/openehr_code_set_identifiers.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/openehr_code_set_identifiers.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/openehr_code_set_identifiers.adoc[]

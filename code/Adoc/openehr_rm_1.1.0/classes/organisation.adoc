@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/organisation.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/organisation.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/organisation.adoc[]

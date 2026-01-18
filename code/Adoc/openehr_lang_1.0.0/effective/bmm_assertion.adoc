@@ -1,0 +1,18 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_ASSERTION*
+
+2+a|A statement that asserts the truth of its expression. If not, generates an exception (depending on run-time settings).
+
+May be rendered in syntax as `assert condition` or similar.
+
+2+|Inherits: xref:LANG:bmm:core_package.adoc#_bmm_routine_body_class[BMM_ROUTINE_BODY], xref:LANG:bmm:statement_package.adoc#_bmm_statement_item_class[BMM_STATEMENT_ITEM], xref:LANG:bmm:statement_package.adoc#_bmm_statement_class[BMM_STATEMENT], xref:LANG:bmm:statement_package.adoc#_bmm_simple_statement_class[BMM_SIMPLE_STATEMENT]
+
+2+h|*Attributes*
+
+|*expression*: `xref:LANG:bmm:expression_package.adoc#_el_boolean_expression_class[EL_BOOLEAN_EXPRESSION]` [1..1]
+a|
+
+|*tag*: `link:/classes/String[String] ` [0..1]
+a|Optional tag, typically used to designate design intention of the assertion, e.g. `"Inv_all_members_valid"`.
+|===

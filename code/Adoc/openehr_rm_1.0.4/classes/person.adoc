@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/person.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/person.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/person.adoc[]

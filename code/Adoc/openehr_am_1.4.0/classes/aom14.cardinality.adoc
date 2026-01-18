@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/aom14.cardinality.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/aom14.cardinality.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/aom14.cardinality.adoc[]

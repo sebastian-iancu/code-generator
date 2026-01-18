@@ -1,10 +1,10 @@
-[plantuml,P_ARCHETYPE_SLOT,format=svg,opts=inline]
+[plantuml,P_ARCHETYPE_SLOT,format=svg]
 -----
 @startuml
 
 class P_ARCHETYPE_SLOT {
-  + includes : List<> [*]
-  + excludes : List<> [*]
+  + includes : List<Any> [*]
+  + excludes : List<Any> [*]
   + is_closed : Boolean [1]
 }
 

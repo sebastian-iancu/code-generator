@@ -1,4 +1,4 @@
-[plantuml,MEASUREMENT_SERVICE,format=svg,opts=inline]
+[plantuml,MEASUREMENT_SERVICE,format=svg]
 -----
 @startuml
 

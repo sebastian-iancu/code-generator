@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/el_terminal.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/el_terminal.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/el_terminal.adoc[]

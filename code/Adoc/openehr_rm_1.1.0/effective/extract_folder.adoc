@@ -1,0 +1,117 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*EXTRACT_FOLDER*
+
+2+a|Folder in local Folder structure in an Extract. Empty Folders are allowed.
+
+2+|Inherits: xref:BASE:foundation_types:overview.adoc#_any_class[Any], xref:RM:common:archetyped_package.adoc#_pathable_class[PATHABLE], xref:RM:common:archetyped_package.adoc#_locatable_class[LOCATABLE], xref:RM:ehr_extract:common_package.adoc#_extract_item_class[EXTRACT_ITEM]
+
+2+h|*Attributes*
+
+|xref:RM:common:archetyped_package.adoc#_locatable_class[LOCATABLE].*name*: `xref:RM:data_types:text_package.adoc#_dv_text_class[DV_TEXT]` [1..1]
+a|Runtime name of this fragment, used to build runtime paths. This is the term provided via a clinical application or batch process to name this EHR construct: its retention in the EHR faithfully preserves the original label by which this entry was known to end users.
+
+|xref:RM:common:archetyped_package.adoc#_locatable_class[LOCATABLE].*archetype_node_id*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` [1..1]
+a|Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths. Always in the form of an at-code, e.g.  `at0005`. This value enables a 'standardised' name for this node to be generated, by referring to the generating archetype local terminology. 
+
+At an archetype root point, the value of this attribute is always the stringified form of the `_archetype_id_` found in the `_archetype_details_` object.
+
+|xref:RM:common:archetyped_package.adoc#_locatable_class[LOCATABLE].*uid*: `xref:BASE:base_types:identification_package.adoc#_uid_based_id_class[UID_BASED_ID]` [0..1]
+a|Optional globally unique object identifier for root points of archetyped structures.
+
+|xref:RM:common:archetyped_package.adoc#_locatable_class[LOCATABLE].*links*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:common:archetyped_package.adoc#_link_class[LINK]>` [0..1]
+a|Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions.
+
+|xref:RM:common:archetyped_package.adoc#_locatable_class[LOCATABLE].*archetype_details*: `xref:RM:common:archetyped_package.adoc#_archetyped_class[ARCHETYPED]` [0..1]
+a|Details of archetyping used on this node.
+
+|xref:RM:common:archetyped_package.adoc#_locatable_class[LOCATABLE].*feeder_audit*: `xref:RM:common:archetyped_package.adoc#_feeder_audit_class[FEEDER_AUDIT]` [0..1]
+a|Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node.
+
+|*items*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:RM:ehr_extract:common_package.adoc#_extract_item_class[EXTRACT_ITEM]>` [0..1]
+a|List of Folders and content items in this Folder.
+
+2+h|*Functions*
+
+|_(abstract)_ xref:BASE:foundation_types:overview.adoc#_any_class[Any].*is_equal* ( +
+other: `xref:BASE:foundation_types:overview.adoc#_any_class[Any][1]` +
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` [1..1]
+a|Value equality: return True if `this` and `_other_` are attached to objects considered to be equal in value.
+
+.Parameters +
+[horizontal]
+`_other_`:: Other object for comparison.
+
+|xref:BASE:foundation_types:overview.adoc#_any_class[Any].*equal* __alias__ "=", "==" ( +
+other: `xref:BASE:foundation_types:overview.adoc#_any_class[Any][1]` +
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` [1..1]
+a|Reference equality for reference types, value equality for value types.
+
+.Parameters +
+[horizontal]
+`_other_`:: Other object for comparison.
+
+|xref:BASE:foundation_types:overview.adoc#_any_class[Any].*instance_of* ( +
+a_type: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String][1]` +
+): `xref:BASE:foundation_types:overview.adoc#_any_class[Any]` [1..1]
+a|Create new instance of a type.
+
+|xref:BASE:foundation_types:overview.adoc#_any_class[Any].*type_of* ( +
+an_object: `xref:BASE:foundation_types:overview.adoc#_any_class[Any][1]` +
+): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` [1..1]
+a|Type name of an object as a string. May include generic parameters, as in `"Interval<Time>"`.
+
+|xref:BASE:foundation_types:overview.adoc#_any_class[Any].*not_equal* __alias__ "!=", "≠" ( +
+other: `xref:BASE:foundation_types:primitive_types.adoc#_ordered_class[Ordered][1]` +
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` [1..1]
+a|True if current object not equal to `_other_`. Returns not `_equal_()`.
+
+|xref:RM:common:archetyped_package.adoc#_pathable_class[PATHABLE].*parent* (): `xref:RM:common:archetyped_package.adoc#_pathable_class[PATHABLE]` [1..1]
+a|Parent of this node in a compositional hierarchy.
+
+|xref:RM:common:archetyped_package.adoc#_pathable_class[PATHABLE].*item_at_path* ( +
+a_path: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String][1]` +
+): `xref:BASE:foundation_types:overview.adoc#_any_class[Any]` +
+ +
+__Pre__: `path_unique (a_path)` [1..1]
+a|The item at a path (relative to this item); only valid for unique paths, i.e. paths that resolve to a single item.
+
+|xref:RM:common:archetyped_package.adoc#_pathable_class[PATHABLE].*items_at_path* ( +
+a_path: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String][1]` +
+): `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:BASE:foundation_types:overview.adoc#_any_class[Any]>` [0..1]
+a|List of items corresponding to a non-unique path.
+
+|xref:RM:common:archetyped_package.adoc#_pathable_class[PATHABLE].*path_exists* ( +
+a_path: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String][1]` +
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
+ +
+__Pre__: `not a_path.is_empty` [1..1]
+a|True if the path exists in the data with respect to the current item.
+
+|xref:RM:common:archetyped_package.adoc#_pathable_class[PATHABLE].*path_unique* ( +
+a_path: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String][1]` +
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
+ +
+__Pre__: `path_exists (a_path)` [1..1]
+a|True if the path corresponds to a single item in the data.
+
+|xref:RM:common:archetyped_package.adoc#_pathable_class[PATHABLE].*path_of_item* ( +
+a_loc: `xref:RM:common:archetyped_package.adoc#_pathable_class[PATHABLE][1]` +
+): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` [1..1]
+a|The path to an item relative to the root of this archetyped structure.
+
+|xref:RM:common:archetyped_package.adoc#_locatable_class[LOCATABLE].*concept* (): `xref:RM:data_types:text_package.adoc#_dv_text_class[DV_TEXT]` [1..1]
+a|Clinical concept of the archetype as a whole (= derived from the archetype_node_id' of the root node)
+
+|xref:RM:common:archetyped_package.adoc#_locatable_class[LOCATABLE].*is_archetype_root* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` [1..1]
+a|True if this node is the root of an archetyped structure.
+
+2+h|*Invariants*
+
+2+a|xref:RM:common:archetyped_package.adoc#_locatable_class[LOCATABLE].__Links_valid__: `links /= Void implies not links.is_empty`
+
+2+a|xref:RM:common:archetyped_package.adoc#_locatable_class[LOCATABLE].__Archetyped_valid__: `is_archetype_root xor archetype_details = Void`
+
+2+a|xref:RM:common:archetyped_package.adoc#_locatable_class[LOCATABLE].__Archetype_node_id_valid__: `not archetype_node_id.is_empty`
+
+|===

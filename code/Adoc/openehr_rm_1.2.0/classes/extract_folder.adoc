@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/extract_folder.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/extract_folder.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/extract_folder.adoc[]

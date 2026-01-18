@@ -1,0 +1,75 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*__BMM_ROUTINE (abstract)__*
+
+2+a|A feature defining a routine, scoped to a class.
+
+2+|Inherits: xref:LANG:bmm:core_package.adoc#_bmm_declaration_class[BMM_DECLARATION], xref:LANG:bmm:core_package.adoc#_bmm_class_entity_class[BMM_CLASS_ENTITY], xref:LANG:bmm:core_package.adoc#_bmm_class_feature_class[BMM_CLASS_FEATURE]
+
+2+h|*Attributes*
+
+|xref:LANG:bmm:core_package.adoc#_bmm_declaration_class[BMM_DECLARATION].*name*: `link:/classes/String[String] ` [1..1]
+a|Name of this model element.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_declaration_class[BMM_DECLARATION].*documentation*: `link:/classes/Hash[Hash] <link:/classes/String[String] ,link:/classes/Any[Any] >` [0..1]
+a|Optional documentation of this element, as a keyed list.
+
+It is strongly recommended to use the following key /type combinations for the relevant purposes:
+
+* `"purpose": String`
+* `"keywords": List<String>`
+* `"use": String`
+* `"misuse": String`
+* `"references": String`
+
+Other keys and value types may be freely added.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_class_feature_class[BMM_CLASS_FEATURE].*scope*: `link:/classes/BMM_CLASS[BMM_CLASS] ` [1..1]
+a|Class within which a referenceable element is known.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_declaration_class[BMM_DECLARATION].*extensions*: `link:/classes/Hash[Hash] <link:/classes/String[String] ,link:/classes/Any[Any] >` [0..1]
+a|Optional meta-data of this element, as a keyed list. May be used to extend the meta-model.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_class_entity_class[BMM_CLASS_ENTITY].*is_synthesised_generic*: `link:/classes/Boolean[Boolean] ` [0..1] +
+`{default{nbsp}={nbsp}false}`
+a|True if this feature was synthesised due to generic substitution in an inherited type, or further constraining of a formal generic parameter.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_class_feature_class[BMM_CLASS_FEATURE].*visibility*: `xref:LANG:bmm:core_package.adoc#_bmm_visibility_class[BMM_VISIBILITY]` [0..1]
+a|Visibility of this item to client entities.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_class_feature_class[BMM_CLASS_FEATURE].*feature_extensions*: `link:/classes/List[List] <xref:LANG:bmm:core_package.adoc#_bmm_feature_extension_class[BMM_FEATURE_EXTENSION]>` [0..1]
+a|Extensions to feature-level meta-types.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_class_feature_class[BMM_CLASS_FEATURE].*group*: `xref:LANG:bmm:core_package.adoc#_bmm_feature_group_class[BMM_FEATURE_GROUP]` [1..1]
+a|Group containing this feature.
+
+|*parameters*: `link:/classes/List[List] <xref:LANG:bmm:core_package.adoc#_bmm_parameter_class[BMM_PARAMETER]>` [0..1]
+a|Formal parameters of the routine.
+
+|*locals*: `link:/classes/List[List] <xref:LANG:bmm:core_package.adoc#_bmm_local_class[BMM_LOCAL]>` [0..1]
+a|Local variables of the routine.
+
+|*pre_conditions*: `link:/classes/List[List] <xref:LANG:bmm:statement_package.adoc#_bmm_assertion_class[BMM_ASSERTION]>` [0..1]
+a|
+
+|*post_conditions*: `link:/classes/List[List] <xref:LANG:bmm:statement_package.adoc#_bmm_assertion_class[BMM_ASSERTION]>` [0..1]
+a|
+
+|*body*: `xref:LANG:bmm:core_package.adoc#_bmm_routine_body_class[BMM_ROUTINE_BODY]` [0..1]
+a|Body of a routine, i.e. executable program.
+
+2+h|*Functions*
+
+|xref:LANG:bmm:core_package.adoc#_bmm_declaration_class[BMM_DECLARATION].*is_root_scope* (): `link:/classes/Boolean[Boolean] ` +
+ +
+__Post_result__: `Result = (scope = self)` [1..1]
+a|True if this declaration entity is the root of the declaration hierarchy.
+
+|*signature* (): `link:/classes/[] ` [1..1]
+a|Formal signature of this element, in the form
+
+`'[arg1_name: T_arg1, ...]:T_value'`.
+
+|*arity* (): `link:/classes/Integer[Integer] ` [1..1]
+a|Return number of arguments of this routine.
+|===

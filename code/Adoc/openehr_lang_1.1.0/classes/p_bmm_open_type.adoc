@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/p_bmm_open_type.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/p_bmm_open_type.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/p_bmm_open_type.adoc[]

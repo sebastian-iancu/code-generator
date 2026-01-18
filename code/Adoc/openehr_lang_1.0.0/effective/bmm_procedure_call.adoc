@@ -1,0 +1,18 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_PROCEDURE_CALL*
+
+2+a|A call made on a closed procedure agent.
+
+2+|Inherits: xref:LANG:bmm:core_package.adoc#_bmm_routine_body_class[BMM_ROUTINE_BODY], xref:LANG:bmm:statement_package.adoc#_bmm_statement_item_class[BMM_STATEMENT_ITEM], xref:LANG:bmm:statement_package.adoc#_bmm_statement_class[BMM_STATEMENT], xref:LANG:bmm:expression_package.adoc#_el_agent_call_class[EL_AGENT_CALL], xref:LANG:bmm:statement_package.adoc#_bmm_simple_statement_class[BMM_SIMPLE_STATEMENT]
+
+2+h|*Attributes*
+
+|*agent*: `xref:LANG:bmm:expression_package.adoc#_el_procedure_agent_class[EL_PROCEDURE_AGENT]` [1..1]
+a|The procedure agent being called.
+
+2+h|*Invariants*
+
+2+a|xref:LANG:bmm:expression_package.adoc#_el_agent_call_class[EL_AGENT_CALL].__Inv_valid_call__: `agent.is_callable()`
+
+|===

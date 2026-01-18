@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/access_group_ref.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/access_group_ref.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/access_group_ref.adoc[]

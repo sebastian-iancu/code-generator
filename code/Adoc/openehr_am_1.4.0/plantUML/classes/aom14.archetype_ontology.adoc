@@ -1,4 +1,4 @@
-[plantuml,ARCHETYPE_ONTOLOGY,format=svg,opts=inline]
+[plantuml,ARCHETYPE_ONTOLOGY,format=svg]
 -----
 @startuml
 

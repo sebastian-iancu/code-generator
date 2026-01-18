@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/ordered.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/ordered.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/ordered.adoc[]

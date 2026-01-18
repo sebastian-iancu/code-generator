@@ -1,0 +1,43 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*EL_FUNCTION_CALL*
+
+2+a|A call made on a closed function agent, returning a result. Equivalent to an 'application' of a function in Lambda calculus.
+
+2+|Inherits: xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION], xref:LANG:bmm:expression_package.adoc#_el_terminal_class[EL_TERMINAL], xref:LANG:bmm:expression_package.adoc#_el_simple_class[EL_SIMPLE], xref:LANG:bmm:expression_package.adoc#_el_value_generator_class[EL_VALUE_GENERATOR], xref:LANG:bmm:expression_package.adoc#_el_feature_ref_class[EL_FEATURE_REF], xref:LANG:bmm:expression_package.adoc#_el_agent_call_class[EL_AGENT_CALL]
+
+2+h|*Attributes*
+
+|*is_writable*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` [1..1] +
+`{default{nbsp}={nbsp}false}`
+a|Defined to return False.
+
+|xref:LANG:bmm:expression_package.adoc#_el_value_generator_class[EL_VALUE_GENERATOR].*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` [1..1]
+a|Name used to represent the reference or other entity.
+
+|xref:LANG:bmm:expression_package.adoc#_el_feature_ref_class[EL_FEATURE_REF].*scoper*: `xref:LANG:bmm:expression_package.adoc#_el_value_generator_class[EL_VALUE_GENERATOR]` [0..1]
+a|Scoping expression, which must be a `EL_VALUE_GENERATOR`.
+
+|*agent*: `xref:LANG:bmm:expression_package.adoc#_el_function_agent_class[EL_FUNCTION_AGENT]` [1..1]
+a|The function agent being called.
+
+2+h|*Functions*
+
+|*eval_type* (): `link:/classes/BMM_TYPE[BMM_TYPE] ` [1..1]
+a|Return `_agent.definition.type_`.
+
+|xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION].*is_boolean* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
+ +
+__Post_result__: `Result = eval_type().equal( \{BMM_MODEL}.boolean_type_definition())` [1..1]
+a|True if `_eval_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `Boolean`).
+
+|*reference* (): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` [1..1]
+a|Generated full reference name, consisting of any scoping elements, function name and routine parameters enclosed in parentheses.
+
+2+h|*Invariants*
+
+2+a|xref:LANG:bmm:expression_package.adoc#_el_agent_call_class[EL_AGENT_CALL].__Inv_valid_call__: `agent.is_callable()`
+
+2+a|__Inv_valid_agent__: `agent.is_callable()`
+
+|===

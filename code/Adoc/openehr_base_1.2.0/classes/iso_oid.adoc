@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/iso_oid.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/iso_oid.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/iso_oid.adoc[]

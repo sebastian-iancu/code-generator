@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/double.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/double.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/double.adoc[]

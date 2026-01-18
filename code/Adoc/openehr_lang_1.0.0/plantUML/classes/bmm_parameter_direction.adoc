@@ -1,4 +1,4 @@
-[plantuml,BMM_PARAMETER_DIRECTION,format=svg,opts=inline]
+[plantuml,BMM_PARAMETER_DIRECTION,format=svg]
 -----
 @startuml
 

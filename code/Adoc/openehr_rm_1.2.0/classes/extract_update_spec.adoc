@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/extract_update_spec.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/extract_update_spec.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/extract_update_spec.adoc[]

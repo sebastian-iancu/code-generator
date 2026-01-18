@@ -1,4 +1,4 @@
-[plantuml,DV_BOOLEAN,format=svg,opts=inline]
+[plantuml,DV_BOOLEAN,format=svg]
 -----
 @startuml
 

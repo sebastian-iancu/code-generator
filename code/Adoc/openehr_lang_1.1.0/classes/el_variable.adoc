@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/el_variable.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/el_variable.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/el_variable.adoc[]

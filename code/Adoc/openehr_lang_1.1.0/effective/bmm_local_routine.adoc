@@ -1,0 +1,16 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_LOCAL_ROUTINE*
+
+2+a|Meta-type for locally declared routine body.
+
+2+|Inherits: xref:LANG:bmm:core_package.adoc#_bmm_routine_definition_class[BMM_ROUTINE_DEFINITION]
+
+2+h|*Attributes*
+
+|*locals*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:LANG:bmm:core_package.adoc#_bmm_local_class[BMM_LOCAL]>` [0..1]
+a|Local variables of the routine, if there is a body defined.
+
+|*body*: `xref:LANG:bmm:statement_package.adoc#_bmm_statement_block_class[BMM_STATEMENT_BLOCK]` [1..1]
+a|Body of routine declaration.
+|===

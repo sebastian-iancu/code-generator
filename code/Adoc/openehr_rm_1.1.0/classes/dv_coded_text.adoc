@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/dv_coded_text.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/dv_coded_text.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/dv_coded_text.adoc[]

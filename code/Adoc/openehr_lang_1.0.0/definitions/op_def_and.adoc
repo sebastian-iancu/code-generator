@@ -14,8 +14,8 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*identifier*: `link:/classes/String[String]  +
-{default{nbsp}={nbsp}"and"}`
+|*identifier*: `link:/classes/String[String] ` +
+`{default{nbsp}={nbsp}"and"}`
 a|
 
 h|*0..1*

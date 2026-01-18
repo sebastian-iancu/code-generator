@@ -1,4 +1,4 @@
-[plantuml,OP_DEF_PLUS,format=svg,opts=inline]
+[plantuml,OP_DEF_PLUS,format=svg]
 -----
 @startuml
 

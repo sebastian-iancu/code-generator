@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/reference_range.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/reference_range.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/reference_range.adoc[]

@@ -1,0 +1,13 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_ACTION_TABLE*
+
+2+a|Multi-branch conditional statement structure
+
+2+|Inherits: xref:LANG:bmm:core_package.adoc#_bmm_routine_body_class[BMM_ROUTINE_BODY], xref:LANG:bmm:statement_package.adoc#_bmm_statement_item_class[BMM_STATEMENT_ITEM], xref:LANG:bmm:statement_package.adoc#_bmm_statement_class[BMM_STATEMENT]
+
+2+h|*Attributes*
+
+|*items*: `link:/classes/List[List] <xref:LANG:bmm:statement_package.adoc#_bmm_conditional_action_class[BMM_CONDITIONAL_ACTION]>` [1..1]
+a|Decision branches.
+|===

@@ -1,0 +1,16 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_OPERATOR_POSITION*
+
+2+a|Enumeration of possible position of operator in a syntactic representation for operators associated with 1- and 2- degree functions.
+
+2+|Inherits: link:/classes/String[String] 
+
+2+h|*Constants*
+
+|prefix
+a|Prefix operator position: operator comes before operand.
+
+|infix
+a|Infix operator position: operator comes between left and right operands.
+|===

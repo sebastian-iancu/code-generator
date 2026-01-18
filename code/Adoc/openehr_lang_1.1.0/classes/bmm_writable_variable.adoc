@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/bmm_writable_variable.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/bmm_writable_variable.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/bmm_writable_variable.adoc[]

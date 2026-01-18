@@ -1,0 +1,46 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_MODEL_ACCESS*
+
+2+a|Access to BMM models that have been loaded and validated from one or more schema sets.
+
+2+h|*Attributes*
+
+|*schema_directories*: `link:/classes/List[List] <link:/classes/String[String] >` [0..1]
+a|List of directories where all the schemas loaded here are found.
+
+|*all_schemas*: `link:/classes/List[List] <link:/classes/String[String] >` [0..1]
+a|All schemas found and loaded from `_schema_directory_`. Keyed by `_schema_id_`.
+
+|*bmm_models*: `link:/classes/Hash[Hash] <link:/classes/String[String] ,xref:LANG:bmm:core_package.adoc#_bmm_model_class[BMM_MODEL]>` [0..1]
+a|Top-level (root) models in use, keyed by `_model_id_`.
+
+|*matching_bmm_models*: `link:/classes/List[List] <link:/classes/String[String] >` [0..1]
+a|Validated models, keyed by `_model_id()_` and any shorter forms of id, with some or no versioning information. For example, the keys `"openEHR_EHR_1.0.4"`, `"openEHR_EHR_1.0"`, `"openEHR_EHR_1"`, and `"openEHR_EHR"` will all match the `"openEHR_EHR_1.0.4"` model, assuming it is the most recent version available.
+
+2+h|*Functions*
+
+|*initialise_with_load_list* ( +
+a_schema_dirs: `link:/classes/List[List] <link:/classes/String[String] >[1]`, +
+a_schema_load_list: `link:/classes/List[List] <link:/classes/String[String] >` +
+): `void` [1..1]
+a|Initialise with a specific schema load list, usually a sub-set of schemas that will be found in a specified directories `_a_schema_dirs_`.
+
+|*initialise_all* ( +
+a_schema_dirs: `link:/classes/List[List] <link:/classes/String[String] >[1]` +
+): `void` [1..1]
+a|Load all schemas found in a specified directories `_a_schema_dirs_`.
+
+|*reload_schemas* (): `void` [1..1]
+a|Reload BMM schemas.
+
+|*bmm_model* ( +
+a_model_key: `link:/classes/String[String] [1]` +
+): `xref:LANG:bmm:core_package.adoc#_bmm_model_class[BMM_MODEL]` [1..1]
+a|Return model containing the model key which is a `_model_id_` or any shorter form e.g. model id minus the version. If a shorter key is used, the `BMM_MODEL` with the most recent version will be selected. Uses `_matching_bmm_models_` table to find matches if partial version information is supplied in key.
+
+|*has_bmm_model* ( +
+a_model_key: `link:/classes/String[String] [1]` +
+): `link:/classes/Boolean[Boolean] ` [1..1]
+a|True if a model for a `_model_key_` is available. A model key is a `_model_id_` or any shorter form e.g. model id minus the version. If a shorter key is used, the Result s True if a `BMM_MODEL` with any version exists.
+|===

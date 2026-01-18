@@ -1,0 +1,32 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_SCHEMA_METADATA_KEY*
+
+2+|Inherits: link:/classes/String[String] 
+
+2+h|*Constants*
+
+|bmm_version
+a|
+
+|model_publisher
+a|
+
+|schema_name
+a|
+
+|model_release
+a|
+
+|schema_revision
+a|
+
+|schema_lifecycle_state
+a|
+
+|schema_description
+a|
+
+|schema_path
+a|
+|===

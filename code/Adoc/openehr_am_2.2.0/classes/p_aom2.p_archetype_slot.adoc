@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/p_aom2.p_archetype_slot.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/p_aom2.p_archetype_slot.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/p_aom2.p_archetype_slot.adoc[]

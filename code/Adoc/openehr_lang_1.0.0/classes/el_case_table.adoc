@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/el_case_table.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/el_case_table.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/el_case_table.adoc[]

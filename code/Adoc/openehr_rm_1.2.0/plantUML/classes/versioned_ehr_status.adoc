@@ -1,4 +1,4 @@
-[plantuml,VERSIONED_EHR_STATUS,format=svg,opts=inline]
+[plantuml,VERSIONED_EHR_STATUS,format=svg]
 -----
 @startuml
 

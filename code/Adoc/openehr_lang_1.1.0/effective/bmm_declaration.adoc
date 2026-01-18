@@ -1,0 +1,19 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_DECLARATION*
+
+2+a|Declaration of a writable variable, associating a name with a type.
+
+2+|Inherits: xref:LANG:bmm:statement_package.adoc#_bmm_statement_item_class[BMM_STATEMENT_ITEM], xref:LANG:bmm:statement_package.adoc#_bmm_statement_class[BMM_STATEMENT], xref:LANG:bmm:statement_package.adoc#_bmm_simple_statement_class[BMM_SIMPLE_STATEMENT]
+
+2+h|*Attributes*
+
+|*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` [1..1]
+a|
+
+|*result*: `xref:LANG:bmm:expression_package.adoc#_el_writable_variable_class[EL_WRITABLE_VARIABLE]` [1..1]
+a|
+
+|*type*: `link:/classes/BMM_TYPE[BMM_TYPE] ` [1..1]
+a|The declared type of the variable.
+|===

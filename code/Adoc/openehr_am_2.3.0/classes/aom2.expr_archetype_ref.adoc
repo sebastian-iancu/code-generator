@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/aom2.expr_archetype_ref.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/aom2.expr_archetype_ref.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/aom2.expr_archetype_ref.adoc[]

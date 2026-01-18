@@ -1,0 +1,97 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_CONTAINER_PROPERTY*
+
+2+a|Meta-type of for properties of linear container type, such as List<T> etc.
+
+2+|Inherits: xref:LANG:bmm:core_package.adoc#_bmm_typed_class[BMM_TYPED], xref:LANG:bmm:core_package.adoc#_bmm_typed_feature_class[BMM_TYPED_FEATURE], xref:LANG:bmm:core_package.adoc#_bmm_declaration_class[BMM_DECLARATION], xref:LANG:bmm:core_package.adoc#_bmm_class_entity_class[BMM_CLASS_ENTITY], xref:LANG:bmm:core_package.adoc#_bmm_instantiable_class[BMM_INSTANTIABLE], xref:LANG:bmm:core_package.adoc#_bmm_class_feature_class[BMM_CLASS_FEATURE], xref:LANG:bmm:core_package.adoc#_bmm_property_class[BMM_PROPERTY]
+
+2+h|*Attributes*
+
+|*type*: `link:/classes/BMM_CONTAINER_TYPE[BMM_CONTAINER_TYPE] ` [1..1]
+a|Declared or inferred static type of the entity.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_typed_feature_class[BMM_TYPED_FEATURE].*is_nullable*: `link:/classes/Boolean[Boolean] ` [0..1] +
+`{default{nbsp}={nbsp}false}`
+a|True if this element can be null (Void) at execution time. May be interpreted as optionality in subtypes..
+
+|xref:LANG:bmm:core_package.adoc#_bmm_declaration_class[BMM_DECLARATION].*name*: `link:/classes/String[String] ` [1..1]
+a|Name of this model element.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_declaration_class[BMM_DECLARATION].*documentation*: `link:/classes/Hash[Hash] <link:/classes/String[String] ,link:/classes/Any[Any] >` [0..1]
+a|Optional documentation of this element, as a keyed list.
+
+It is strongly recommended to use the following key /type combinations for the relevant purposes:
+
+* `"purpose": String`
+* `"keywords": List<String>`
+* `"use": String`
+* `"misuse": String`
+* `"references": String`
+
+Other keys and value types may be freely added.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_class_feature_class[BMM_CLASS_FEATURE].*scope*: `link:/classes/BMM_CLASS[BMM_CLASS] ` [1..1]
+a|Class within which a referenceable element is known.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_declaration_class[BMM_DECLARATION].*extensions*: `link:/classes/Hash[Hash] <link:/classes/String[String] ,link:/classes/Any[Any] >` [0..1]
+a|Optional meta-data of this element, as a keyed list. May be used to extend the meta-model.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_class_entity_class[BMM_CLASS_ENTITY].*is_synthesised_generic*: `link:/classes/Boolean[Boolean] ` [0..1] +
+`{default{nbsp}={nbsp}false}`
+a|True if this feature was synthesised due to generic substitution in an inherited type, or further constraining of a formal generic parameter.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_class_feature_class[BMM_CLASS_FEATURE].*visibility*: `xref:LANG:bmm:core_package.adoc#_bmm_visibility_class[BMM_VISIBILITY]` [0..1]
+a|Visibility of this item to client entities.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_class_feature_class[BMM_CLASS_FEATURE].*feature_extensions*: `link:/classes/List[List] <xref:LANG:bmm:core_package.adoc#_bmm_feature_extension_class[BMM_FEATURE_EXTENSION]>` [0..1]
+a|Extensions to feature-level meta-types.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_class_feature_class[BMM_CLASS_FEATURE].*group*: `xref:LANG:bmm:core_package.adoc#_bmm_feature_group_class[BMM_FEATURE_GROUP]` [1..1]
+a|Group containing this feature.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_property_class[BMM_PROPERTY].*is_im_runtime*: `link:/classes/Boolean[Boolean] ` [0..1] +
+`{default{nbsp}={nbsp}false}`
+a|True if this property is marked with info model `_im_runtime_` property.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_property_class[BMM_PROPERTY].*is_im_infrastructure*: `link:/classes/Boolean[Boolean] ` [0..1] +
+`{default{nbsp}={nbsp}false}`
+a|True if this property was marked with info model `_im_infrastructure_` flag.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_property_class[BMM_PROPERTY].*is_composition*: `link:/classes/Boolean[Boolean] ` [0..1] +
+`{default{nbsp}={nbsp}false}`
+a|True if this property instance is a compositional sub-part of the owning class instance. Equivalent to 'composition' in UML associations (but missing from UML properties without associations) and also 'cascade-delete' semantics in ER schemas.
+
+|*cardinality*: `link:/classes/Multiplicity_interval[Multiplicity_interval] ` [0..1]
+a|Cardinality of this container.
+
+2+h|*Functions*
+
+|xref:LANG:bmm:core_package.adoc#_bmm_typed_class[BMM_TYPED].*is_boolean* (): `link:/classes/Boolean[Boolean] ` +
+ +
+__Post_result__: `Result = type().equal( \{BMM_MODEL}.boolean_type_definition())` [1..1]
+a|True if `_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `'Boolean'`).
+
+|xref:LANG:bmm:core_package.adoc#_bmm_declaration_class[BMM_DECLARATION].*is_root_scope* (): `link:/classes/Boolean[Boolean] ` +
+ +
+__Post_result__: `Result = (scope = self)` [1..1]
+a|True if this declaration entity is the root of the declaration hierarchy.
+
+|_(abstract)_ xref:LANG:bmm:core_package.adoc#_bmm_class_entity_class[BMM_CLASS_ENTITY].*signature* (): `link:/classes/BMM_SIGNATURE[BMM_SIGNATURE] ` [1..1]
+a|Formal signature of this element, in the form:
+
+`name [arg1_name: T_arg1, ...][:T_value]`
+
+Specific implementations in descendants.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_property_class[BMM_PROPERTY].*existence* (): `link:/classes/Multiplicity_interval[Multiplicity_interval] ` [1..1]
+a|Interval form of `0..1`, `1..1` etc, derived from `_is_nullable_`.
+
+|*display_name* (): `link:/classes/String[String] ` [1..1]
+a|Name of this property in form `name: ContainerTypeName<>`.
+
+2+h|*Invariants*
+
+2+a|xref:LANG:bmm:core_package.adoc#_bmm_property_class[BMM_PROPERTY].__Inv_signature_no_args__: `signature.arguments = Void`
+
+|===

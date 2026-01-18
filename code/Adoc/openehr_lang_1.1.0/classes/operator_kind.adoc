@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/operator_kind.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/operator_kind.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/operator_kind.adoc[]

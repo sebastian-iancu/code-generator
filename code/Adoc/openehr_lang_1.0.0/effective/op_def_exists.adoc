@@ -1,0 +1,20 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*OP_DEF_EXISTS*
+
+2+a|Illustrative class showing what the normally built-in logical 'exists' operator looks like as an external definition.
+
+2+|Inherits: xref:LANG:obsolete-elom:extension_package.adoc#_operator_def_external_class[OPERATOR_DEF_EXTERNAL]
+
+2+h|*Attributes*
+
+|*evaluation_agent*: `link:/classes/FUNCTION[FUNCTION] <>` [1..1]
+a|
+
+|*identifier*: `link:/classes/String[String] ` [1..1] +
+`{default{nbsp}={nbsp}"exists"}`
+a|
+
+|*symbols*: `link:/classes/List[List] <link:/classes/String[String] >` [0..1]
+a|
+|===

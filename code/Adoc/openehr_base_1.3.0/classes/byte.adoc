@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/byte.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/byte.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/byte.adoc[]

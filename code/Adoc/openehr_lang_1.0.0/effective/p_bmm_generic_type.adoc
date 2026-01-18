@@ -1,0 +1,39 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*P_BMM_GENERIC_TYPE*
+
+2+a|Persistent form of `BMM_GENERIC_TYPE`.
+
+2+|Inherits: xref:LANG:bmm_persistence_package.adoc#_p_bmm_type_class[P_BMM_TYPE], xref:LANG:bmm_persistence_package.adoc#_p_bmm_base_type_class[P_BMM_BASE_TYPE]
+
+2+h|*Attributes*
+
+|*bmm_type*: `link:/classes/BMM_GENERIC_TYPE[BMM_GENERIC_TYPE] ` [0..1]
+a|Result of `_create_bmm_type()_` call.
+
+|xref:LANG:bmm_persistence_package.adoc#_p_bmm_base_type_class[P_BMM_BASE_TYPE].*value_constraint*: `link:/classes/String[String] ` [0..1]
+a|
+
+|*root_type*: `link:/classes/String[String] ` [1..1]
+a|Root type of this generic type, e.g. `Interval` in `Interval<Integer>`.
+
+|*generic_parameter_defs*: `link:/classes/List[List] <xref:LANG:bmm_persistence_package.adoc#_p_bmm_type_class[P_BMM_TYPE]>` [1..1]
+a|Generic parameters of the root_type in this type specifier if non-simple types. The order must match the order of the owning class's formal generic parameter declarations. Persistent attribute.
+
+|*generic_parameters*: `link:/classes/List[List] <link:/classes/String[String] >` [0..1]
+a|Generic parameters of the `_root_type_` in this type specifier, if simple types. The order must match the order of the owning class's formal generic parameter declarations. Persistent attribute.
+
+2+h|*Functions*
+
+|_(abstract)_ xref:LANG:bmm_persistence_package.adoc#_p_bmm_type_class[P_BMM_TYPE].*create_bmm_type* ( +
+a_schema: `xref:LANG:bmm:core_package.adoc#_bmm_model_class[BMM_MODEL][1]`, +
+a_class_def: `link:/classes/BMM_CLASS[BMM_CLASS] [1]` +
+): `void` [1..1]
+a|Create appropriate `BMM_XXX` object; effected in descendants.
+
+|_(abstract)_ xref:LANG:bmm_persistence_package.adoc#_p_bmm_type_class[P_BMM_TYPE].*as_type_string* (): `link:/classes/String[String] ` [1..1]
+a|Formal name of the type for display.
+
+|*generic_parameter_refs* (): `link:/classes/List[List] <xref:LANG:bmm_persistence_package.adoc#_p_bmm_type_class[P_BMM_TYPE]>` [0..1]
+a|Generic parameters of the root_type in this type specifier. The order must match the order of the owning class's formal generic parameter declarations
+|===

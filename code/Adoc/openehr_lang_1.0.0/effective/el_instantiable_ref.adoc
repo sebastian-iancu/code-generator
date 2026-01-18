@@ -1,0 +1,26 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*EL_INSTANTIABLE_REF<T>*
+
+2+a|Terminal item corresponding to a reference to a directly instantiable entity, i.e. a variable, constant, or property.
+
+2+|Inherits: xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION], xref:LANG:bmm:expression_package.adoc#_el_simple_class[EL_SIMPLE], xref:LANG:bmm:expression_package.adoc#_el_terminal_class[EL_TERMINAL], xref:LANG:bmm:expression_package.adoc#_el_instance_ref_class[EL_INSTANCE_REF], xref:LANG:bmm:expression_package.adoc#_el_scoped_ref_class[EL_SCOPED_REF]
+
+2+h|*Attributes*
+
+|xref:LANG:bmm:expression_package.adoc#_el_scoped_ref_class[EL_SCOPED_REF].*scope*: `xref:LANG:bmm:expression_package.adoc#_el_instance_ref_class[EL_INSTANCE_REF]` [0..1]
+a|Reference to an owning object for this terminal element, if it is not the current scope.
+
+|*definition*: `T` [0..1]
+a|Definition of the constant, property or variable, inferred by inspection of the current scoping instance.
+
+2+h|*Functions*
+
+|*eval_type* (): `link:/classes/BMM_TYPE[BMM_TYPE] ` [1..1]
+a|Type definition (i.e. BMM meta-type definition object) of the constant, property or variable, inferred by inspection of the current scoping instance. Return `_definition.type_`.
+
+|xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION].*is_boolean* (): `link:/classes/Boolean[Boolean] ` +
+ +
+__Post_result__: `Result = eval_type().equal( \{BMM_MODEL}.boolean_type_definition())` [1..1]
+a|True if `_eval_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `Boolean`).
+|===

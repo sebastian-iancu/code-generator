@@ -1,0 +1,48 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*EL_BINARY_OPERATOR*
+
+2+a|Binary operator expression node.
+
+2+|Inherits: xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION], xref:LANG:bmm:expression_package.adoc#_el_operator_class[EL_OPERATOR]
+
+2+h|*Attributes*
+
+|xref:LANG:bmm:expression_package.adoc#_el_operator_class[EL_OPERATOR].*precedence_overridden*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` [0..1]
+a|True if the natural precedence of operators is overridden in the expression represented by this node of the expression tree. If True, parentheses should be introduced around the totality of the syntax expression corresponding to this operator node and its operands.
+
+|xref:LANG:bmm:expression_package.adoc#_el_operator_class[EL_OPERATOR].*symbol*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` [0..1]
+a|The symbol actually used in the expression, or intended to be used for serialisation. Must be a member of `OPERATOR_DEF._symbols_`.
+
+|xref:LANG:bmm:expression_package.adoc#_el_operator_class[EL_OPERATOR].*call*: `xref:LANG:bmm:expression_package.adoc#_el_function_call_class[EL_FUNCTION_CALL]` [1..1]
+a|Function call equivalent to this operator expression, inferred by matching operator against functions defined in interface of principal operand.
+
+|*left_operand*: `xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION]` [1..1]
+a|Left operand node.
+
+|*right_operand*: `xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION]` [1..1]
+a|Right operand node.
+
+2+h|*Functions*
+
+|_(abstract)_ xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION].*eval_type* (): `link:/classes/BMM_TYPE[BMM_TYPE] ` [1..1]
+a|Meta-type of expression entity used in type-checking and evaluation. 
+
+Effected in descendants.
+
+|xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION].*is_boolean* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
+ +
+__Post_result__: `Result = eval_type().equal( \{BMM_MODEL}.boolean_type_definition())` [1..1]
+a|True if `_eval_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `Boolean`).
+
+|xref:LANG:bmm:expression_package.adoc#_el_operator_class[EL_OPERATOR].*operator_definition* (): `xref:LANG:bmm:core_package.adoc#_bmm_operator_class[BMM_OPERATOR]` [1..1]
+a|Operator definition derived from `_definition.operator_definition()_`.
+
+|xref:LANG:bmm:expression_package.adoc#_el_operator_class[EL_OPERATOR].*equivalent_call* (): `xref:LANG:bmm:expression_package.adoc#_el_function_call_class[EL_FUNCTION_CALL]` [1..1]
+a|Function call equivalent to this operator.
+
+2+h|*Invariants*
+
+2+a|xref:LANG:bmm:expression_package.adoc#_el_operator_class[EL_OPERATOR].__Symbol_validity__: `symbol /= Void implies operator_def.symbols.has (symbol)`
+
+|===

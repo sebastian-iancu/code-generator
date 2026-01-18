@@ -36,8 +36,8 @@ a|Reference to definition of a routine for which this is an agent, if one exists
 
 h|*1..1 +
 (redefined)*
-|*is_writable*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean] +
-{default{nbsp}={nbsp}false}`
+|*is_writable*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
+`{default{nbsp}={nbsp}false}`
 a|
 
 h|*Functions*

@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/dv_amount.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/dv_amount.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/dv_amount.adoc[]

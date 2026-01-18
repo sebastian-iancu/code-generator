@@ -1,4 +1,4 @@
-[plantuml,P_C_PRIMITIVE_OBJECT,format=svg,opts=inline]
+[plantuml,P_C_PRIMITIVE_OBJECT,format=svg]
 -----
 @startuml
 

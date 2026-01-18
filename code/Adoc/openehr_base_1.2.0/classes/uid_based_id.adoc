@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/uid_based_id.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/uid_based_id.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/uid_based_id.adoc[]

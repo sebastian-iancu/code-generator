@@ -16,8 +16,8 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*identifier*: `link:/classes/String[String]  +
-{default{nbsp}={nbsp}"funny"}`
+|*identifier*: `link:/classes/String[String] ` +
+`{default{nbsp}={nbsp}"funny"}`
 a|
 
 h|*1..1 +

@@ -1,4 +1,4 @@
-[plantuml,C_SECOND_ORDER,format=svg,opts=inline]
+[plantuml,C_SECOND_ORDER,format=svg]
 -----
 @startuml
 

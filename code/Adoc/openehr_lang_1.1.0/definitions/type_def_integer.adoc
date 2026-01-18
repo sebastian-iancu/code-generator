@@ -15,8 +15,8 @@ h|*Attributes*
 
 h|*1..1 +
 (effected)*
-|*type_name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String] +
-{default{nbsp}={nbsp}"Integer"}`
+|*type_name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` +
+`{default{nbsp}={nbsp}"Integer"}`
 a|
 
 h|*1..1 +

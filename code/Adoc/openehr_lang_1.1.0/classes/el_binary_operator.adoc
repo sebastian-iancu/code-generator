@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/el_binary_operator.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/el_binary_operator.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/el_binary_operator.adoc[]

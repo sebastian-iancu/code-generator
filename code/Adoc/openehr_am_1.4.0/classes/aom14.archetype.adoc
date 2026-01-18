@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/aom14.archetype.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/aom14.archetype.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/aom14.archetype.adoc[]

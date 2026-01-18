@@ -1,0 +1,14 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*EL_TUPLE_ITEM*
+
+2+a|A single tuple item, with an optional name.
+
+2+h|*Attributes*
+
+|*item*: `xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION]` [0..1]
+a|Reference to value entity. If Void, this indicates that the item in this position is Void, e.g. within a routine call parameter list.
+
+|*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` [0..1]
+a|Optional name of tuple item.
+|===

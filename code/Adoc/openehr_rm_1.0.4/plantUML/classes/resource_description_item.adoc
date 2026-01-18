@@ -1,4 +1,4 @@
-[plantuml,RESOURCE_DESCRIPTION_ITEM,format=svg,opts=inline]
+[plantuml,RESOURCE_DESCRIPTION_ITEM,format=svg]
 -----
 @startuml
 

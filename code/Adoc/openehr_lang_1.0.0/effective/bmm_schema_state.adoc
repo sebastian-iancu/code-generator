@@ -1,0 +1,22 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_SCHEMA_STATE*
+
+2+a|Enumeration of processing states of a `BMM_SCHEMA` used by creation and validation routines in `BMM_SCHEMA`.
+
+2+|Inherits: link:/classes/String[String] 
+
+2+h|*Constants*
+
+|State_created
+a|Initial state directly after instantiation of schema.
+
+|State_validated_created
+a|Initial validation pass after instantiation.
+
+|State_includes_pending
+a|State of schema processing if there are still included schemas to process.
+
+|State_includes_processed
+a|State when all included schemas have been processed.
+|===

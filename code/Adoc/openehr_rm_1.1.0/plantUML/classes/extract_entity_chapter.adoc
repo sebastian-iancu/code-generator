@@ -1,4 +1,4 @@
-[plantuml,EXTRACT_ENTITY_CHAPTER,format=svg,opts=inline]
+[plantuml,EXTRACT_ENTITY_CHAPTER,format=svg]
 -----
 @startuml
 

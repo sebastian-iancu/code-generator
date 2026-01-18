@@ -15,26 +15,26 @@ h|*Attributes*
 
 h|*1..1 +
 (effected)*
-|*lower_unbounded*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean] +
-{default{nbsp}={nbsp}false}`
+|*lower_unbounded*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
+`{default{nbsp}={nbsp}false}`
 a|Lower boundary open (i.e. = -infinity).
 
 h|*1..1 +
 (effected)*
-|*upper_unbounded*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean] +
-{default{nbsp}={nbsp}false}`
+|*upper_unbounded*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
+`{default{nbsp}={nbsp}false}`
 a|Upper boundary open (i.e. = +infinity).
 
 h|*1..1 +
 (effected)*
-|*lower_included*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean] +
-{default{nbsp}={nbsp}true}`
+|*lower_included*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
+`{default{nbsp}={nbsp}true}`
 a|Lower boundary value included in range if not `_lower_unbounded_`.
 
 h|*1..1 +
 (effected)*
-|*upper_included*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean] +
-{default{nbsp}={nbsp}true}`
+|*upper_included*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
+`{default{nbsp}={nbsp}true}`
 a|Upper boundary value included in range if not `_upper_unbounded_`.
 
 h|*Invariants*

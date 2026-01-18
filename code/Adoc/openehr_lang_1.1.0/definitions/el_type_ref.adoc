@@ -20,8 +20,8 @@ h|*1..1*
 a|Type, directly from the name of the reference, e.g. `\{SOME_TYPE}`.
 
 h|*1..1*
-|*is_mutable*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean] +
-{default{nbsp}={nbsp}false}`
+|*is_mutable*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
+`{default{nbsp}={nbsp}false}`
 a|
 
 h|*Functions*

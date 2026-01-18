@@ -1,0 +1,42 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*__EL_OPERATOR (abstract)__*
+
+2+a|Abstract parent of operator types.
+
+2+|Inherits: xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION]
+
+2+h|*Attributes*
+
+|*precedence_overridden*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` [0..1]
+a|True if the natural precedence of operators is overridden in the expression represented by this node of the expression tree. If True, parentheses should be introduced around the totality of the syntax expression corresponding to this operator node and its operands.
+
+|*symbol*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` [0..1]
+a|The symbol actually used in the expression, or intended to be used for serialisation. Must be a member of `OPERATOR_DEF._symbols_`.
+
+|*call*: `xref:LANG:bmm:expression_package.adoc#_el_function_call_class[EL_FUNCTION_CALL]` [1..1]
+a|Function call equivalent to this operator expression, inferred by matching operator against functions defined in interface of principal operand.
+
+2+h|*Functions*
+
+|_(abstract)_ xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION].*eval_type* (): `link:/classes/BMM_TYPE[BMM_TYPE] ` [1..1]
+a|Meta-type of expression entity used in type-checking and evaluation. 
+
+Effected in descendants.
+
+|xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION].*is_boolean* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
+ +
+__Post_result__: `Result = eval_type().equal( \{BMM_MODEL}.boolean_type_definition())` [1..1]
+a|True if `_eval_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `Boolean`).
+
+|*operator_definition* (): `xref:LANG:bmm:core_package.adoc#_bmm_operator_class[BMM_OPERATOR]` [1..1]
+a|Operator definition derived from `_definition.operator_definition()_`.
+
+|*equivalent_call* (): `xref:LANG:bmm:expression_package.adoc#_el_function_call_class[EL_FUNCTION_CALL]` [1..1]
+a|Function call equivalent to this operator.
+
+2+h|*Invariants*
+
+2+a|__Symbol_validity__: `symbol /= Void implies operator_def.symbols.has (symbol)`
+
+|===

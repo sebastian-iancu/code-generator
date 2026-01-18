@@ -1,4 +1,4 @@
-[plantuml,BMM_VISIBILITY,format=svg,opts=inline]
+[plantuml,BMM_VISIBILITY,format=svg]
 -----
 @startuml
 

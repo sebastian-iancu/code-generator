@@ -11,8 +11,8 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*name*: `link:/classes/String[String]  +
-{default{nbsp}={nbsp}"feature"}`
+|*name*: `link:/classes/String[String] ` +
+`{default{nbsp}={nbsp}"feature"}`
 a|Name of this feature group; defaults to 'feature'.
 
 h|*1..1*

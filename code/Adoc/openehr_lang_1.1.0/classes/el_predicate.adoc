@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/el_predicate.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/el_predicate.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/el_predicate.adoc[]

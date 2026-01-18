@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/el_tuple_item.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/el_tuple_item.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/el_tuple_item.adoc[]

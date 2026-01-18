@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/el_decision_branch.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/el_decision_branch.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/el_decision_branch.adoc[]

@@ -1,0 +1,22 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_CONTAINER_VALUE*
+
+2+a|Meta-type for literals whose concrete type is a linear container type, i.e. array, list or set.
+
+2+|Inherits: xref:LANG:bmm:core_package.adoc#_bmm_literal_value_class[BMM_LITERAL_VALUE]
+
+2+h|*Attributes*
+
+|xref:LANG:bmm:core_package.adoc#_bmm_literal_value_class[BMM_LITERAL_VALUE].*value_literal*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` [1..1]
+a|A serial representation of the value.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_literal_value_class[BMM_LITERAL_VALUE].*value*: `xref:BASE:foundation_types:overview.adoc#_any_class[Any]` [0..1]
+a|A native representation of the value, possibly derived by deserialising `_value_literal_`.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_literal_value_class[BMM_LITERAL_VALUE].*syntax*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` [0..1]
+a|Optional specification of formalism of the `_value_literal_` attribute for complex values. Value may be any of `json &#124; json5 &#124; yawl &#124; xml &#124; odin &#124; rdf` or another value agreed by the user community. If not set, `json` is assumed.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_literal_value_class[BMM_LITERAL_VALUE].*type*: `T` [1..1]
+a|Concrete type of this literal.
+|===

@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/resource_description.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/resource_description.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/resource_description.adoc[]

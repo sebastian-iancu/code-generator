@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/dv_scale.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/dv_scale.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/dv_scale.adoc[]

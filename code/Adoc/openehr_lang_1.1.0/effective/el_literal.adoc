@@ -1,0 +1,28 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*EL_LITERAL*
+
+2+a|Literal value of any type known in the model, including primitive types. Defined via a `BMM_LITERAL_VALUE`.
+
+2+|Inherits: xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION], xref:LANG:bmm:expression_package.adoc#_el_terminal_class[EL_TERMINAL], xref:LANG:bmm:expression_package.adoc#_el_simple_class[EL_SIMPLE]
+
+2+h|*Attributes*
+
+|*value*: `xref:LANG:bmm:core_package.adoc#_bmm_literal_value_class[BMM_LITERAL_VALUE]<link:/classes/BMM_TYPE[BMM_TYPE] >` [1..1]
+a|The reference item from which the value of this node can be computed.
+
+2+h|*Functions*
+
+|*eval_type* (): `link:/classes/BMM_TYPE[BMM_TYPE] ` [1..1]
+a|Return `_value.type_`.
+
+|xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION].*is_boolean* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
+ +
+__Post_result__: `Result = eval_type().equal( \{BMM_MODEL}.boolean_type_definition())` [1..1]
+a|True if `_eval_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `Boolean`).
+
+2+h|*Invariants*
+
+2+a|__Post_manifest_effective_type__: `Result = definition.type`
+
+|===

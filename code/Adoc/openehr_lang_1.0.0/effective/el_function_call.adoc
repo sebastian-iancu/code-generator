@@ -1,0 +1,33 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*EL_FUNCTION_CALL*
+
+2+a|A call made on a closed function agent, returning a result. Equivalent to an 'application' of a function in Lambda calculus.
+
+2+|Inherits: xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION], xref:LANG:bmm:expression_package.adoc#_el_simple_class[EL_SIMPLE], xref:LANG:bmm:expression_package.adoc#_el_terminal_class[EL_TERMINAL], xref:LANG:bmm:expression_package.adoc#_el_instance_ref_class[EL_INSTANCE_REF], xref:LANG:bmm:expression_package.adoc#_el_scoped_ref_class[EL_SCOPED_REF], xref:LANG:bmm:expression_package.adoc#_el_agent_call_class[EL_AGENT_CALL]
+
+2+h|*Attributes*
+
+|xref:LANG:bmm:expression_package.adoc#_el_scoped_ref_class[EL_SCOPED_REF].*scope*: `xref:LANG:bmm:expression_package.adoc#_el_instance_ref_class[EL_INSTANCE_REF]` [0..1]
+a|Reference to an owning object for this terminal element, if it is not the current scope.
+
+|*agent*: `xref:LANG:bmm:expression_package.adoc#_el_function_agent_class[EL_FUNCTION_AGENT]` [1..1]
+a|The function agent being called.
+
+2+h|*Functions*
+
+|*eval_type* (): `link:/classes/BMM_TYPE[BMM_TYPE] ` [1..1]
+a|Return `_agent.definition.type_`.
+
+|xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION].*is_boolean* (): `link:/classes/Boolean[Boolean] ` +
+ +
+__Post_result__: `Result = eval_type().equal( \{BMM_MODEL}.boolean_type_definition())` [1..1]
+a|True if `_eval_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `Boolean`).
+
+2+h|*Invariants*
+
+2+a|xref:LANG:bmm:expression_package.adoc#_el_agent_call_class[EL_AGENT_CALL].__Inv_valid_call__: `agent.is_callable()`
+
+2+a|__Inv_valid_agent__: `agent.is_callable()`
+
+|===

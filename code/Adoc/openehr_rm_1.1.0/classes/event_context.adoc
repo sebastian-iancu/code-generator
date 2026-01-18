@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/event_context.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/event_context.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/event_context.adoc[]

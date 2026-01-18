@@ -15,7 +15,7 @@ h|*Attributes*
 
 h|*1..1 +
 (redefined)*
-|*name*: `link:/classes/String[String]  +
-{default{nbsp}={nbsp}"Result"}`
+|*name*: `link:/classes/String[String] ` +
+`{default{nbsp}={nbsp}"Result"}`
 a|Name of this model element.
 |===

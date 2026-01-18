@@ -14,8 +14,8 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*is_synthesised_generic*: `link:/classes/Boolean[Boolean]  +
-{default{nbsp}={nbsp}false}`
+|*is_synthesised_generic*: `link:/classes/Boolean[Boolean] ` +
+`{default{nbsp}={nbsp}false}`
 a|True if this feature was synthesised due to generic substitution in an inherited type, or further constraining of a formal generic parameter.
 
 h|*Functions*

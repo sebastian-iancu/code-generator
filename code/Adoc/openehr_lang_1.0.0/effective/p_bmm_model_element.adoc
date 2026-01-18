@@ -1,0 +1,11 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*__P_BMM_MODEL_ELEMENT (abstract)__*
+
+2+a|Persistent form of `BMM_MODEL_ELEMENT`.
+
+2+h|*Attributes*
+
+|*documentation*: `link:/classes/String[String] ` [0..1]
+a|Optional documentation of this element.
+|===

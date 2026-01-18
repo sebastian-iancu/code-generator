@@ -1,0 +1,19 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_PARAMETER_DIRECTION*
+
+2+a|Enumeration of parameter read/write direction values.
+
+2+|Inherits: link:/classes/String[String] 
+
+2+h|*Constants*
+
+|in
+a|Parameter is an input parameter, and treated as readonly by the receiving routine.
+
+|out
+a|Parameter is an output parameter, and treated as a reference to an entity writeable by the receiving routine.
+
+|in_out
+a|Parameter is an input and output parameter, and treated as a reference to an entity readable and writeable by the receiving routine.
+|===

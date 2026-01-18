@@ -1,0 +1,17 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_OPERATOR*
+
+2+a|Definition of a symbolic operator associated with a function.
+
+2+h|*Attributes*
+
+|*position*: `xref:LANG:bmm:core_package.adoc#_bmm_operator_position_enumeration[BMM_OPERATOR_POSITION]` [1..1]
+a|Position of operator in syntactic representation.
+
+|*symbols*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]>` [1..1]
+a|Set of `String` symbols that may be used to represent this operator in a textual representation of a BMM model.
+
+|*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` [1..1]
+a|Formal name of the operator, e.g. 'minus' etc.
+|===

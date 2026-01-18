@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/party_ref.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/party_ref.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/party_ref.adoc[]

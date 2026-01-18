@@ -1,4 +1,4 @@
-[plantuml,P_BMM_ENUMERATION,format=svg,opts=inline]
+[plantuml,P_BMM_ENUMERATION,format=svg]
 -----
 @startuml
 

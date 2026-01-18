@@ -1,0 +1,17 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*TYPE_DEF_URI*
+
+2+a|Rules meta-type representing the primitive type Uri.
+
+2+|Inherits: xref:LANG:obsolete-elom:types_package.adoc#_el_type_def_class[EL_TYPE_DEF]
+
+2+h|*Attributes*
+
+|*type_name*: `link:/classes/String[String] ` [1..1] +
+`{default{nbsp}={nbsp}"Uri"}`
+a|
+
+|*type_anchor*: `link:/classes/Integer[Integer] ` [1..1]
+a|
+|===

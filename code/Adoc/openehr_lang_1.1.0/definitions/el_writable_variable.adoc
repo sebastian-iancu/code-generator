@@ -19,7 +19,7 @@ a|Variable definition to which this reference refers.
 
 h|*1..1 +
 (redefined)*
-|*is_writable*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean] +
-{default{nbsp}={nbsp}true}`
+|*is_writable*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
+`{default{nbsp}={nbsp}true}`
 a|Defined to return True in all cases.
 |===

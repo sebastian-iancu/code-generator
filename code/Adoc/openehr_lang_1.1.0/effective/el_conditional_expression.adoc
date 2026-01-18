@@ -1,0 +1,21 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*EL_CONDITIONAL_EXPRESSION<T>*
+
+2+a|Conditional structure used in condition chain expressions. Evaluated by evaluating its `_condition_`, which is a Boolean-returning expression, and if this returns True, the result is the evaluation result of `_expression_`.
+
+2+|Inherits: xref:LANG:bmm:expression_package.adoc#_el_decision_branch_class[EL_DECISION_BRANCH]
+
+2+h|*Attributes*
+
+|xref:LANG:bmm:expression_package.adoc#_el_decision_branch_class[EL_DECISION_BRANCH].*result*: `T` [1..1]
+a|Result expression of conditional, if its `_condition_` evaluates to True.
+
+|*condition*: `xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION]` [1..1]
+a|Boolean expression defining the condition of this decision branch.
+
+2+h|*Invariants*
+
+2+a|__Inv_condition_boolean__: `condition.is_boolean()`
+
+|===

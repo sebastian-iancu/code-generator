@@ -1,0 +1,26 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*EL_TUPLE*
+
+2+a|Defines an array of optionally named items each of any type.
+
+2+|Inherits: xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION]
+
+2+h|*Attributes*
+
+|*items*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:LANG:bmm:expression_package.adoc#_el_tuple_item_class[EL_TUPLE_ITEM]>` [0..1]
+a|Items in the tuple, potentially with names. Typical use is to represent an argument list to routine call.
+
+|*type*: `link:/classes/BMM_TUPLE_TYPE[BMM_TUPLE_TYPE] ` [1..1]
+a|Static type inferred from literal value.
+
+2+h|*Functions*
+
+|*eval_type* (): `link:/classes/BMM_TYPE[BMM_TYPE] ` [1..1]
+a|Return `_type_`.
+
+|xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION].*is_boolean* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
+ +
+__Post_result__: `Result = eval_type().equal( \{BMM_MODEL}.boolean_type_definition())` [1..1]
+a|True if `_eval_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `Boolean`).
+|===

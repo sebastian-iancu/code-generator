@@ -1,0 +1,18 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*__BMM_TYPED (abstract)__*
+
+2+a|Any entity that has a declared or inferred static type, and that can therefore be generate a value.
+
+2+h|*Attributes*
+
+|*type*: `link:/classes/BMM_TYPE[BMM_TYPE] ` [1..1]
+a|Declared or inferred static type of the entity.
+
+2+h|*Functions*
+
+|*is_boolean* (): `link:/classes/Boolean[Boolean] ` +
+ +
+__Post_result__: `Result = type().equal( \{BMM_MODEL}.boolean_type_definition())` [1..1]
+a|True if `_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `'Boolean'`).
+|===

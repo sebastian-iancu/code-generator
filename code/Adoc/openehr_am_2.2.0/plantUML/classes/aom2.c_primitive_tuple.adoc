@@ -1,4 +1,4 @@
-[plantuml,C_PRIMITIVE_TUPLE,format=svg,opts=inline]
+[plantuml,C_PRIMITIVE_TUPLE,format=svg]
 -----
 @startuml
 

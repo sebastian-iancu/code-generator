@@ -1,0 +1,43 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*EL_TYPE_REF*
+
+2+a|Meta-type for reference to a non-abstract type as an object. Assumed to be accessible at run-time. Typically represented syntactically as `TypeName` or `\{TypeName}`.
+
+May be used as a value, or as the qualifier for a function or constant access.
+
+2+|Inherits: xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION], xref:LANG:bmm:expression_package.adoc#_el_terminal_class[EL_TERMINAL], xref:LANG:bmm:expression_package.adoc#_el_simple_class[EL_SIMPLE], xref:LANG:bmm:expression_package.adoc#_el_value_generator_class[EL_VALUE_GENERATOR]
+
+2+h|*Attributes*
+
+|xref:LANG:bmm:expression_package.adoc#_el_value_generator_class[EL_VALUE_GENERATOR].*is_writable*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` [1..1]
+a|
+
+|xref:LANG:bmm:expression_package.adoc#_el_value_generator_class[EL_VALUE_GENERATOR].*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` [1..1]
+a|Name used to represent the reference or other entity.
+
+|*type*: `link:/classes/BMM_TYPE[BMM_TYPE] ` [1..1]
+a|Type, directly from the name of the reference, e.g. `\{SOME_TYPE}`.
+
+|*is_mutable*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` [1..1] +
+`{default{nbsp}={nbsp}false}`
+a|
+
+2+h|*Functions*
+
+|*eval_type* (): `link:/classes/BMM_TYPE[BMM_TYPE] ` [1..1]
+a|Return `_type_`.
+
+|xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION].*is_boolean* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
+ +
+__Post_result__: `Result = eval_type().equal( \{BMM_MODEL}.boolean_type_definition())` [1..1]
+a|True if `_eval_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `Boolean`).
+
+|xref:LANG:bmm:expression_package.adoc#_el_value_generator_class[EL_VALUE_GENERATOR].*reference* (): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` [1..1]
+a|Generated full reference name, based on constituent parts of the entity. Default version outputs `_name_` field.
+
+2+h|*Invariants*
+
+2+a|__Inv_no_context__: `context = Void`
+
+|===

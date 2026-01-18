@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/type_def_time.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/type_def_time.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/type_def_time.adoc[]

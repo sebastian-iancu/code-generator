@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/versioned_folder.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/versioned_folder.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/versioned_folder.adoc[]

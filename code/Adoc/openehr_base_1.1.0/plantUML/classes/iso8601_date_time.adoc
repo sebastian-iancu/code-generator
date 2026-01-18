@@ -1,4 +1,4 @@
-[plantuml,Iso8601_date_time,format=svg,opts=inline]
+[plantuml,Iso8601_date_time,format=svg]
 -----
 @startuml
 

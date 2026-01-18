@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/terminology_service.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/terminology_service.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/terminology_service.adoc[]

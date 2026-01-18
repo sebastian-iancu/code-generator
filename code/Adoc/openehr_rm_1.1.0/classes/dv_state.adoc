@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/dv_state.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/dv_state.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/dv_state.adoc[]

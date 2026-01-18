@@ -1,0 +1,16 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_EXTERNAL_ROUTINE*
+
+2+a|External routine meta-type, containing sufficient meta-data to enable a routine in an external library to be called.
+
+2+|Inherits: xref:LANG:bmm:core_package.adoc#_bmm_routine_definition_class[BMM_ROUTINE_DEFINITION]
+
+2+h|*Attributes*
+
+|*meta_data*: `xref:BASE:foundation_types:structure_types.adoc#_hash_class[Hash]<xref:BASE:foundation_types:primitive_types.adoc#_string_class[String],xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]>` [1..1]
+a|External call general meta-data, including target routine name, type mapping etc.
+
+|*argument_mapping*: `xref:BASE:foundation_types:structure_types.adoc#_hash_class[Hash]<xref:BASE:foundation_types:primitive_types.adoc#_string_class[String],xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]>` [0..1]
+a|Optional argument-mapping meta-data.
+|===

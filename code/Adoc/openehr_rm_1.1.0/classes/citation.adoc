@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/citation.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/citation.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/citation.adoc[]

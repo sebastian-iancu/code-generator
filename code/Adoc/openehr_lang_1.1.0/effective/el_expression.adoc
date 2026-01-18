@@ -1,0 +1,18 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*__EL_EXPRESSION (abstract)__*
+
+2+a|Abstract parent of all typed expression meta-types.
+
+2+h|*Functions*
+
+|_(abstract)_ *eval_type* (): `link:/classes/BMM_TYPE[BMM_TYPE] ` [1..1]
+a|Meta-type of expression entity used in type-checking and evaluation. 
+
+Effected in descendants.
+
+|*is_boolean* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
+ +
+__Post_result__: `Result = eval_type().equal( \{BMM_MODEL}.boolean_type_definition())` [1..1]
+a|True if `_eval_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `Boolean`).
+|===

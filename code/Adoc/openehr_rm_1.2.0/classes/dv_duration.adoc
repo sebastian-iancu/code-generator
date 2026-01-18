@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/dv_duration.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/dv_duration.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/dv_duration.adoc[]

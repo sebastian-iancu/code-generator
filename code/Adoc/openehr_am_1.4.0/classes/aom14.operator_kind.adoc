@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/aom14.operator_kind.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/aom14.operator_kind.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/aom14.operator_kind.adoc[]

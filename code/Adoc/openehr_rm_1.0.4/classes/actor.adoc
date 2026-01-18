@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/actor.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/actor.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/actor.adoc[]

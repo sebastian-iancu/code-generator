@@ -1,0 +1,7 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*__BMM_FEATURE_EXTENSION (abstract)__*
+
+2+a|Abstract parent of feature extensions.
+
+|===

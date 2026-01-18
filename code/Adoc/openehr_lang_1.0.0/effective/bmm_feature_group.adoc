@@ -1,0 +1,21 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_FEATURE_GROUP*
+
+2+a|A logical group of features, with a name and set of properties that applies to the group.
+
+2+h|*Attributes*
+
+|*name*: `link:/classes/String[String] ` [1..1] +
+`{default{nbsp}={nbsp}"feature"}`
+a|Name of this feature group; defaults to 'feature'.
+
+|*properties*: `link:/classes/Hash[Hash] <link:/classes/String[String] ,link:/classes/String[String] >` [1..1]
+a|Set of properties of this group, represented as name/value pairs. These are understood to apply logically to all of the features contained within the group.
+
+|*features*: `link:/classes/List[List] <xref:LANG:bmm:core_package.adoc#_bmm_class_feature_class[BMM_CLASS_FEATURE]>` [0..1]
+a|Set of features in this group.
+
+|*visibility*: `xref:LANG:bmm:core_package.adoc#_bmm_visibility_class[BMM_VISIBILITY]` [0..1]
+a|Optional visibility to apply to all features in this group.
+|===

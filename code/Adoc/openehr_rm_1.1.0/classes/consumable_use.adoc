@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/consumable_use.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/consumable_use.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/consumable_use.adoc[]

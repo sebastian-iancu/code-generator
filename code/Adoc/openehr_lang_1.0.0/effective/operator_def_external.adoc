@@ -1,0 +1,11 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*__OPERATOR_DEF_EXTERNAL (abstract)__*
+
+2+a|Ancestor of concrete operator definition types. Adds an optional execution agent, typically implemented by closures / lambdas/ agents in languages supporting functional programming.
+
+2+h|*Attributes*
+
+|*evaluation_agent*: `link:/classes/FUNCTION[FUNCTION] <link:/classes/TUPLE,Any[TUPLE,Any] >` [1..1]
+a|
+|===

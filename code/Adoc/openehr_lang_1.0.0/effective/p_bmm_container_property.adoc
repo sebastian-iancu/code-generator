@@ -1,0 +1,45 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*P_BMM_CONTAINER_PROPERTY*
+
+2+a|Persistent form of `BMM_CONTAINER_PROPERTY`.
+
+2+|Inherits: xref:LANG:bmm_persistence_package.adoc#_p_bmm_model_element_class[P_BMM_MODEL_ELEMENT], xref:LANG:bmm_persistence_package.adoc#_p_bmm_property_class[P_BMM_PROPERTY]
+
+2+h|*Attributes*
+
+|xref:LANG:bmm_persistence_package.adoc#_p_bmm_model_element_class[P_BMM_MODEL_ELEMENT].*documentation*: `link:/classes/String[String] ` [0..1]
+a|Optional documentation of this element.
+
+|xref:LANG:bmm_persistence_package.adoc#_p_bmm_property_class[P_BMM_PROPERTY].*name*: `link:/classes/String[String] ` [1..1]
+a|Name of this property within its class. Persisted attribute.
+
+|xref:LANG:bmm_persistence_package.adoc#_p_bmm_property_class[P_BMM_PROPERTY].*is_mandatory*: `link:/classes/Boolean[Boolean] ` [0..1]
+a|True if this property is mandatory in its class. Persisted attribute.
+
+|xref:LANG:bmm_persistence_package.adoc#_p_bmm_property_class[P_BMM_PROPERTY].*is_computed*: `link:/classes/Boolean[Boolean] ` [0..1]
+a|True if this property is computed rather than stored in objects of this class. Persisted Attribute.
+
+|xref:LANG:bmm_persistence_package.adoc#_p_bmm_property_class[P_BMM_PROPERTY].*is_im_infrastructure*: `link:/classes/Boolean[Boolean] ` [0..1]
+a|True if this property is info model 'infrastructure' rather than 'data'. Persisted attribute.
+
+|xref:LANG:bmm_persistence_package.adoc#_p_bmm_property_class[P_BMM_PROPERTY].*is_im_runtime*: `link:/classes/Boolean[Boolean] ` [0..1]
+a|True if this property is info model 'runtime' settable property. Persisted attribute.
+
+|*type_def*: `xref:LANG:bmm_persistence_package.adoc#_p_bmm_container_type_class[P_BMM_CONTAINER_TYPE]` [0..1]
+a|Type definition of this property, if not a simple String type reference. Persistent attribute.
+
+|*bmm_property*: `xref:LANG:bmm:core_package.adoc#_bmm_container_property_class[BMM_CONTAINER_PROPERTY]` [0..1]
+a|`BMM_PROPERTY` created by `_create_bmm_property_`.
+
+|*cardinality*: `link:/classes/Interval[Interval] <link:/classes/Integer[Integer] >` [0..1]
+a|Cardinality of this property in its class. Persistent attribute.
+
+2+h|*Functions*
+
+|*create_bmm_property* ( +
+a_bmm_schema: `xref:LANG:bmm:core_package.adoc#_bmm_model_class[BMM_MODEL][1]`, +
+a_class_def: `link:/classes/BMM_CLASS[BMM_CLASS] [1]` +
+): `void` [1..1]
+a|Create `_bmm_property_definition_`.
+|===

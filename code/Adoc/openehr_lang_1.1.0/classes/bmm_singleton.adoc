@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/bmm_singleton.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/bmm_singleton.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/bmm_singleton.adoc[]

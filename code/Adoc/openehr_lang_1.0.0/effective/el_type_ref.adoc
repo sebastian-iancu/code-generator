@@ -1,0 +1,30 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*EL_TYPE_REF*
+
+2+a|Meta-type for reference to a non-abstract type as an object. Assumed to be accessible at run-time. Typically represented syntactically as `TypeName` or `\{TypeName}`.
+
+May be used as a value, or as the qualifier for a function or constant access.
+
+2+|Inherits: xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION], xref:LANG:bmm:expression_package.adoc#_el_simple_class[EL_SIMPLE], xref:LANG:bmm:expression_package.adoc#_el_terminal_class[EL_TERMINAL], xref:LANG:bmm:expression_package.adoc#_el_instance_ref_class[EL_INSTANCE_REF]
+
+2+h|*Attributes*
+
+|*type*: `link:/classes/BMM_TYPE[BMM_TYPE] ` [1..1]
+a|Type, directly from the name of the reference, e.g. `\{SOME_TYPE}`.
+
+2+h|*Functions*
+
+|*eval_type* (): `link:/classes/BMM_TYPE[BMM_TYPE] ` [1..1]
+a|Return `_type_`.
+
+|xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION].*is_boolean* (): `link:/classes/Boolean[Boolean] ` +
+ +
+__Post_result__: `Result = eval_type().equal( \{BMM_MODEL}.boolean_type_definition())` [1..1]
+a|True if `_eval_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `Boolean`).
+
+2+h|*Invariants*
+
+2+a|__Inv_no_context__: `context = Void`
+
+|===

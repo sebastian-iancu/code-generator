@@ -1,0 +1,9 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*__BMM_VISIBILITY (abstract)__*
+
+2+a|Abstract parent of visibility representation.
+
+TODO: define schemes; probably need to support C++/Java scheme as well as better type-based schemes.
+
+|===

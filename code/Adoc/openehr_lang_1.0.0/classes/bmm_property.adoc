@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/bmm_property.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/bmm_property.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/bmm_property.adoc[]

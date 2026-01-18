@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/sync_extract.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/sync_extract.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/sync_extract.adoc[]

@@ -1,4 +1,4 @@
-[plantuml,EL_AGENT_CALL,format=svg,opts=inline]
+[plantuml,EL_AGENT_CALL,format=svg]
 -----
 @startuml
 

@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/resource_annotations.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/resource_annotations.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/resource_annotations.adoc[]

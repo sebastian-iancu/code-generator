@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/locale.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/locale.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/locale.adoc[]

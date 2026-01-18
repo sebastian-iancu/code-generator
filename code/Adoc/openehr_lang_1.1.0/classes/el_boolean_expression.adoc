@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/el_boolean_expression.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/el_boolean_expression.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/el_boolean_expression.adoc[]

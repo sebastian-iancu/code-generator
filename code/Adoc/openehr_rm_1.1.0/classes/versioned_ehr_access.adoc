@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/versioned_ehr_access.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/versioned_ehr_access.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/versioned_ehr_access.adoc[]

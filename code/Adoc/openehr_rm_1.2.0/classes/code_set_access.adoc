@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/code_set_access.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/code_set_access.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/code_set_access.adoc[]

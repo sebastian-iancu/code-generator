@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/el_unary_operator.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/el_unary_operator.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/el_unary_operator.adoc[]

@@ -1,4 +1,4 @@
-[plantuml,SYNC_EXTRACT_SPEC,format=svg,opts=inline]
+[plantuml,SYNC_EXTRACT_SPEC,format=svg]
 -----
 @startuml
 

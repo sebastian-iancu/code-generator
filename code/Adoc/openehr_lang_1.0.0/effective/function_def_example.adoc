@@ -1,0 +1,19 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*FUNCTION_DEF_EXAMPLE*
+
+2+a|Example of an externally defined function of signature:
+
+    func (v: Numeric): Numeric
+
+2+|Inherits: xref:LANG:obsolete-elom:extension_package.adoc#_function_def_external_class[FUNCTION_DEF_EXTERNAL]
+
+2+h|*Attributes*
+
+|*evaluation_agent*: `link:/classes/FUNCTION[FUNCTION] <>` [1..1]
+a|
+
+|*identifier*: `link:/classes/String[String] ` [1..1] +
+`{default{nbsp}={nbsp}"funny"}`
+a|
+|===

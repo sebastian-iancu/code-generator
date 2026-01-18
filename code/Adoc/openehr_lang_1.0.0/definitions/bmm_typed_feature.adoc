@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*is_nullable*: `link:/classes/Boolean[Boolean]  +
-{default{nbsp}={nbsp}false}`
+|*is_nullable*: `link:/classes/Boolean[Boolean] ` +
+`{default{nbsp}={nbsp}false}`
 a|True if this element can be null (Void) at execution time. May be interpreted as optionality in subtypes..
 |===

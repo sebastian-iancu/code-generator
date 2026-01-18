@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/aom2.constraint_status.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/aom2.constraint_status.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/aom2.constraint_status.adoc[]

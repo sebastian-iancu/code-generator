@@ -1,0 +1,7 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_ACTION_DECISION_TABLE*
+
+2+a|Specialised form of Decision Table that allows only procedure call agents (lambdas) as the result of branches.
+
+|===

@@ -14,8 +14,8 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*identifier*: `link:/classes/String[String]  +
-{default{nbsp}={nbsp}"exists"}`
+|*identifier*: `link:/classes/String[String] ` +
+`{default{nbsp}={nbsp}"exists"}`
 a|
 
 h|*0..1*

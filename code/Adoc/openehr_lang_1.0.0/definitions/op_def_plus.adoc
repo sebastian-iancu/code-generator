@@ -8,8 +8,8 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*name*: `link:/classes/String[String]  +
-{default{nbsp}={nbsp}"plus"}`
+|*name*: `link:/classes/String[String] ` +
+`{default{nbsp}={nbsp}"plus"}`
 a|
 
 h|*0..1*

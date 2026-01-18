@@ -1,0 +1,9 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*__BMM_SIMPLE_STATEMENT (abstract)__*
+
+2+a|Simple statement, i.e. statement with one logical element - a single expression, procedure call etc.
+
+2+|Inherits: xref:LANG:bmm:statement_package.adoc#_bmm_statement_item_class[BMM_STATEMENT_ITEM], xref:LANG:bmm:statement_package.adoc#_bmm_statement_class[BMM_STATEMENT]
+
+|===

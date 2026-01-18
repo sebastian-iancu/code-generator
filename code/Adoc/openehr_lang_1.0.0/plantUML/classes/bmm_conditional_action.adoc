@@ -1,4 +1,4 @@
-[plantuml,BMM_CONDITIONAL_ACTION,format=svg,opts=inline]
+[plantuml,BMM_CONDITIONAL_ACTION,format=svg]
 -----
 @startuml
 

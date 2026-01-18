@@ -1,0 +1,28 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*__EL_DECISION_TABLE (abstract)__*
+
+2+a|Complex expression structure representing a logical decision table.
+
+2+|Inherits: xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION]
+
+2+h|*Attributes*
+
+|*else*: `xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION]` [1..1]
+a|Result expression of the chain if no member of `_items_` succeeds in evaluation.
+
+|*items*: `link:/classes/List[List] <xref:LANG:bmm:expression_package.adoc#_el_decision_branch_class[EL_DECISION_BRANCH]>` [1..1]
+a|Members of the chain, equivalent to branches in an if/then/else chain and cases in a case statement.
+
+2+h|*Functions*
+
+|_(abstract)_ xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION].*eval_type* (): `link:/classes/BMM_TYPE[BMM_TYPE] ` [1..1]
+a|Meta-type of expression entity used in type-checking and evaluation. 
+
+Effected in descendants.
+
+|xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION].*is_boolean* (): `link:/classes/Boolean[Boolean] ` +
+ +
+__Post_result__: `Result = eval_type().equal( \{BMM_MODEL}.boolean_type_definition())` [1..1]
+a|True if `_eval_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `Boolean`).
+|===

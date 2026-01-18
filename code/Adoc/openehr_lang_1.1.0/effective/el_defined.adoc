@@ -1,0 +1,25 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*EL_DEFINED*
+
+2+a|A predicate taking one external variable reference argument, that returns true if the reference is resolvable, i.e. the external value is obtainable.
+
+NOTE: probably to be removed.
+
+2+|Inherits: xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION], xref:LANG:bmm:expression_package.adoc#_el_terminal_class[EL_TERMINAL], xref:LANG:bmm:expression_package.adoc#_el_simple_class[EL_SIMPLE], xref:LANG:bmm:expression_package.adoc#_el_predicate_class[EL_PREDICATE]
+
+2+h|*Attributes*
+
+|xref:LANG:bmm:expression_package.adoc#_el_predicate_class[EL_PREDICATE].*operand*: `xref:LANG:bmm:expression_package.adoc#_el_value_generator_class[EL_VALUE_GENERATOR]` [1..1]
+a|The target instance of this predicate.
+
+2+h|*Functions*
+
+|xref:LANG:bmm:expression_package.adoc#_el_predicate_class[EL_PREDICATE].*eval_type* (): `link:/classes/BMM_SIMPLE_TYPE[BMM_SIMPLE_TYPE] ` [1..1]
+a|Return `\{BMM_MODEL}._boolean_type_definition_()`.
+
+|xref:LANG:bmm:expression_package.adoc#_el_expression_class[EL_EXPRESSION].*is_boolean* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
+ +
+__Post_result__: `Result = eval_type().equal( \{BMM_MODEL}.boolean_type_definition())` [1..1]
+a|True if `_eval_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `Boolean`).
+|===

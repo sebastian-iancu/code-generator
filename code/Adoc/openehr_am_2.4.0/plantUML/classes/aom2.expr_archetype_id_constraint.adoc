@@ -1,4 +1,4 @@
-[plantuml,EXPR_ARCHETYPE_ID_CONSTRAINT,format=svg,opts=inline]
+[plantuml,EXPR_ARCHETYPE_ID_CONSTRAINT,format=svg]
 -----
 @startuml
 

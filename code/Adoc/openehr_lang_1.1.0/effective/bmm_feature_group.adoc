@@ -1,0 +1,21 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_FEATURE_GROUP*
+
+2+a|A logical group of features, with a name and set of properties that applies to the group.
+
+2+h|*Attributes*
+
+|*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` [1..1] +
+`{default{nbsp}={nbsp}"feature"}`
+a|Name of this feature group; defaults to 'feature'.
+
+|*properties*: `xref:BASE:foundation_types:structure_types.adoc#_hash_class[Hash]<xref:BASE:foundation_types:primitive_types.adoc#_string_class[String],xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]>` [1..1]
+a|Set of properties of this group, represented as name/value pairs. These are understood to apply logically to all of the features contained within the group.
+
+|*features*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:LANG:bmm:core_package.adoc#_bmm_feature_class[BMM_FEATURE]>` [0..1]
+a|Set of features in this group.
+
+|*visibility*: `xref:LANG:bmm:core_package.adoc#_bmm_visibility_class[BMM_VISIBILITY]` [0..1]
+a|Optional visibility to apply to all features in this group.
+|===

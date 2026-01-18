@@ -1,0 +1,24 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*__BMM_INSTANTIABLE (abstract)__*
+
+2+a|Meta-type representing instantiable features, i.e. features that are created as value objects.
+
+2+|Inherits: xref:LANG:bmm:core_package.adoc#_bmm_typed_class[BMM_TYPED], xref:LANG:bmm:core_package.adoc#_bmm_typed_feature_class[BMM_TYPED_FEATURE]
+
+2+h|*Attributes*
+
+|xref:LANG:bmm:core_package.adoc#_bmm_typed_class[BMM_TYPED].*type*: `link:/classes/BMM_TYPE[BMM_TYPE] ` [1..1]
+a|Declared or inferred static type of the entity.
+
+|xref:LANG:bmm:core_package.adoc#_bmm_typed_feature_class[BMM_TYPED_FEATURE].*is_nullable*: `link:/classes/Boolean[Boolean] ` [0..1] +
+`{default{nbsp}={nbsp}false}`
+a|True if this element can be null (Void) at execution time. May be interpreted as optionality in subtypes..
+
+2+h|*Functions*
+
+|xref:LANG:bmm:core_package.adoc#_bmm_typed_class[BMM_TYPED].*is_boolean* (): `link:/classes/Boolean[Boolean] ` +
+ +
+__Post_result__: `Result = type().equal( \{BMM_MODEL}.boolean_type_definition())` [1..1]
+a|True if `_type_` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `_type_name()_` = `'Boolean'`).
+|===

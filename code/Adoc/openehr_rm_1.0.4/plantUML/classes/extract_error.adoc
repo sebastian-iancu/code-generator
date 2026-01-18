@@ -1,4 +1,4 @@
-[plantuml,EXTRACT_ERROR,format=svg,opts=inline]
+[plantuml,EXTRACT_ERROR,format=svg]
 -----
 @startuml
 

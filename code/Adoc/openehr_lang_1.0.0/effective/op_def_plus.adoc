@@ -1,0 +1,13 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*OP_DEF_PLUS*
+
+2+h|*Attributes*
+
+|*name*: `link:/classes/String[String] ` [1..1] +
+`{default{nbsp}={nbsp}"plus"}`
+a|
+
+|*symbols*: `link:/classes/List[List] <link:/classes/String[String] >` [0..1]
+a|
+|===

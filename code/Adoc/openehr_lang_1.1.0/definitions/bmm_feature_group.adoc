@@ -11,8 +11,8 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String] +
-{default{nbsp}={nbsp}"feature"}`
+|*name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` +
+`{default{nbsp}={nbsp}"feature"}`
 a|Name of this feature group; defaults to 'feature'.
 
 h|*1..1*

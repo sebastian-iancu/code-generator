@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/capability.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/capability.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/capability.adoc[]

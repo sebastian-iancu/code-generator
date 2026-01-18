@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/bmm_interval_value.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/bmm_interval_value.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/bmm_interval_value.adoc[]

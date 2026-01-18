@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/pathable.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/pathable.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/pathable.adoc[]

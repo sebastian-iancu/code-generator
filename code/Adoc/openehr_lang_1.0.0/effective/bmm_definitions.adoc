@@ -1,0 +1,98 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*BMM_DEFINITIONS*
+
+2+a|Definitions used by all BMM packages.
+
+2+|Inherits: link:/classes/BASIC_DEFINITIONS[BASIC_DEFINITIONS] 
+
+2+h|*Constants*
+
+|*Bmm_internal_version*: `link:/classes/String[String] {nbsp}={nbsp}` [1..1]
+a|Current internal version of BMM meta-model, used to determine if a given schema can be processed by a given implementation of the model.
+
+|*Schema_name_delimiter*: `link:/classes/String[String] {nbsp}={nbsp}"::"` [1..1]
+a|Delimiter used to separate schema id from package path in a fully qualified path.
+
+|*Package_name_delimiter*: `link:/classes/String[String] {nbsp}={nbsp}"."` [1..1]
+a|Delimiter used to separate package names in a package path.
+
+|*Bmm_schema_file_extension*: `link:/classes/String[String] {nbsp}={nbsp}".bmm"` [1..1]
+a|Extension used for BMM files.
+
+|*Type_delimiter*: `link:/classes/Character[Character] {nbsp}={nbsp}':'` [1..1]
+a|Appears between a name and a type in a declaration or type signature.
+
+|*Generic_left_delimiter*: `link:/classes/Character[Character] {nbsp}={nbsp}'<'` [1..1]
+a|Left delimiter for generic class and generic type names, as used in `List<T>`.
+
+|*Generic_right_delimiter*: `link:/classes/Character[Character] {nbsp}={nbsp}'>'` [1..1]
+a|Right delimiter for generic class and generic type names, as used in `List<T>`.
+
+|*Generic_separator*: `link:/classes/Character[Character] {nbsp}={nbsp}','` [1..1]
+a|Separator used in Generic types.
+
+|*Generic_constraint_delimiter*: `link:/classes/Character[Character] {nbsp}={nbsp}':'` [1..1]
+a|Delimiter between formal type parameter and constraint type, as used in `Sortable<T: Ordered>`.
+
+|*Tuple_left_delim*: `link:/classes/Character[Character] {nbsp}={nbsp}'['` [1..1]
+a|Left delimiter of a Tuple type and also instance. Example:
+
+* `[Integer, String]` - a tuple type;
+* `[3, "Quixote"]` - a tuple.
+
+|*Tuple_right_delim*: `link:/classes/Character[Character] {nbsp}={nbsp}']'` [1..1]
+a|Right delimiter of a Tuple type and also instance.
+
+|*Tuple_separator*: `link:/classes/Character[Character] {nbsp}={nbsp}','` [1..1]
+a|Separator used in Tuple types and instances.
+
+|*Constraint_left_delim*: `link:/classes/Character[Character] {nbsp}={nbsp}'«'` [1..1]
+a|Left delimiter used in serial form of instance constrained enumeration.
+
+|*Constraint_right_delim*: `link:/classes/Character[Character] {nbsp}={nbsp}'»'` [1..1]
+a|Right delimiter used in serial form of instance constrained enumeration.
+
+|*Metadata_bmm_version*: `link:/classes/String[String] {nbsp}={nbsp}"bmm_version"` [1..1]
+a|Attribute name of logical attribute 'bmm_version' in .bmm schema file.
+
+|*Metadata_schema_name*: `link:/classes/String[String] {nbsp}={nbsp}"schema_name"` [1..1]
+a|Attribute name of logical attribute 'schema_name' in .bmm schema file.
+
+|*Metadata_rm_publisher*: `link:/classes/String[String] {nbsp}={nbsp}"rm_publisher"` [1..1]
+a|Attribute name of logical attribute 'rm_publisher' in .bmm schema file.
+
+|*Metadata_rm_release*: `link:/classes/String[String] {nbsp}={nbsp}"rm_release"` [1..1]
+a|Attribute name of logical attribute 'rm_release' in .bmm schema file.
+
+|*Metadata_schema_revision*: `link:/classes/String[String] {nbsp}={nbsp}"schema_revision"` [1..1]
+a|Attribute name of logical attribute 'schema_revision' in .bmm schema file.
+
+|*Metadata_schema_lifecycle_state*: `link:/classes/String[String] {nbsp}={nbsp}"schema_lifecycle_state"` [1..1]
+a|Attribute name of logical attribute 'schema_lifecycle_state' in .bmm schema file.
+
+|*Metadata_schema_description*: `link:/classes/String[String] {nbsp}={nbsp}"schema_description"` [1..1]
+a|Attribute name of logical attribute 'schema_description' in .bmm schema file.
+
+|*Metadata_schema_path*: `link:/classes/String[String] {nbsp}={nbsp}"schema_path"` [1..1]
+a|Path of schema file.
+
+2+h|*Functions*
+
+|*Any_class* (): `link:/classes/BMM_SIMPLE_CLASS[BMM_SIMPLE_CLASS] ` [1..1]
+a|built-in class definition corresponding to the top `Any' class.
+
+|*Any_type* (): `link:/classes/BMM_SIMPLE_TYPE[BMM_SIMPLE_TYPE] ` [1..1]
+a|Built-in type definition corresponding to the top `Any' type.
+
+|*create_schema_id* ( +
+a_model_publisher: `link:/classes/Any[Any] [1]`, +
+a_schema_name: `link:/classes/Any[Any] [1]`, +
+a_model_release: `link:/classes/String[String] [1]` +
+): `link:/classes/String[String] ` [1..1]
+a|Create schema id, formed from:
+
+`a_model_publisher '-' a_schema_name '-' a_model_release`
+
+e.g. `openehr_rm_1.0.3`, `openehr_test_1.0.1`, `iso_13606_1_2008_2.1.2`.
+|===

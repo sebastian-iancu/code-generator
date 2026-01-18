@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/aom2.c_date_time.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/aom2.c_date_time.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/aom2.c_date_time.adoc[]

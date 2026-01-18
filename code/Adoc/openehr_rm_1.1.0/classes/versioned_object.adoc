@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/versioned_object.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/versioned_object.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/versioned_object.adoc[]

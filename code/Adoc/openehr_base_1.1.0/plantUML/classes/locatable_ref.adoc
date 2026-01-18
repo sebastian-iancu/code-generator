@@ -1,4 +1,4 @@
-[plantuml,LOCATABLE_REF,format=svg,opts=inline]
+[plantuml,LOCATABLE_REF,format=svg]
 -----
 @startuml
 

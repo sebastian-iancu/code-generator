@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/el_expression.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/el_expression.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/el_expression.adoc[]

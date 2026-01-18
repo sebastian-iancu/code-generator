@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/ism_transition.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/ism_transition.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/ism_transition.adoc[]

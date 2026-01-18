@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/code_phrase.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/code_phrase.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/code_phrase.adoc[]

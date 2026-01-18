@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/el_instance_ref.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/el_instance_ref.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/el_instance_ref.adoc[]

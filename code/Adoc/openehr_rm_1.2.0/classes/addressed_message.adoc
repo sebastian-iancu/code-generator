@@ -6,6 +6,10 @@ Definition::
 +
 include::ROOT:partial$definitions/addressed_message.adoc[]
 
+Effective::
++
+include::ROOT:partial$effective/addressed_message.adoc[]
+
 BMM::
 +
 include::ROOT:partial$BMMs/addressed_message.adoc[]

@@ -1,0 +1,9 @@
+[cols="2,3", frame=none, grid=rows]
+|===
+2+^h|*__BMM_STATEMENT (abstract)__*
+
+2+a|Abstract parent of 'statement' types that may be defined to implement BMM Routines.
+
+2+|Inherits: xref:LANG:bmm:core_package.adoc#_bmm_routine_body_class[BMM_ROUTINE_BODY], xref:LANG:bmm:statement_package.adoc#_bmm_statement_item_class[BMM_STATEMENT_ITEM]
+
+|===
