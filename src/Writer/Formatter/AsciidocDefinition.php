@@ -36,7 +36,7 @@ readonly class AsciidocDefinition
         " {" => " \{",
     ];
 
-    public function __construct(private bool $legacyFormat = false)
+    public function __construct(protected bool $legacyFormat = false)
     {
     }
 
@@ -54,7 +54,7 @@ readonly class AsciidocDefinition
         return "Unsupported *{$class->name}*, context *as-definition*";
     }
 
-    private function formatEnum(BmmEnumerationString|BmmEnumerationInteger $enum, string $prefix): string
+    protected function formatEnum(BmmEnumerationString|BmmEnumerationInteger $enum, string $prefix): string
     {
         $rows = [];
 
@@ -117,7 +117,7 @@ readonly class AsciidocDefinition
         return implode("\n", $rows) . "\n";
     }
 
-    private function formatClass(BmmClass $class, string $prefix): string
+    protected function formatClass(BmmClass $class, string $prefix): string
     {
         $rows = [];
 
@@ -180,11 +180,11 @@ readonly class AsciidocDefinition
 
             /** @var AbstractBmmProperty $property */
             foreach ($class->properties as $property) {
-                [$card, $signature] = $this->formatPropertySignature($property, $prefix);
+                [$card, $signature, $default] = $this->formatPropertySignature($property, $prefix);
                 $override = $this->formatPropertyOverride($class, $property);
                 $rows[] = '';
                 $rows[] = 'h|*' . $card . $override . '*';
-                $rows[] = '|' . $signature;
+                $rows[] = '|' . $signature . $default;
                 $doc = property_exists($property, 'documentation') ? $this->formatText($property->documentation ?? '') : '';
                 $rows[] = 'a|' . $doc;
             }
@@ -240,7 +240,7 @@ readonly class AsciidocDefinition
         return implode("\n", $rows) . "\n";
     }
 
-    private function formatInterface(BmmInterface $class, string $prefix): string
+    protected function formatInterface(BmmInterface $class, string $prefix): string
     {
         $rows = [];
 
@@ -285,7 +285,7 @@ readonly class AsciidocDefinition
     /**
      * @return array{0:string,1:string} [cardinality, signature]
      */
-    private function formatConstantSignature(BmmConstant $constant, string $prefix): array
+    protected function formatConstantSignature(BmmConstant $constant, string $prefix): array
     {
         $minOccurs = 1;
         $maxOccurs = 1;
@@ -296,9 +296,9 @@ readonly class AsciidocDefinition
     }
 
     /**
-     * @return array{0:string,1:string} [cardinality, signature]
+     * @return array{0:string,1:string} [cardinality, signature, $default]
      */
-    private function formatPropertySignature(AbstractBmmProperty $property, string $prefix): array
+    protected function formatPropertySignature(AbstractBmmProperty $property, string $prefix): array
     {
         $type = '';
         $minOccurs = (int)($property->isMandatory ?? 0);
@@ -312,18 +312,19 @@ readonly class AsciidocDefinition
             $type = $this->formatType($property->type, $prefix);
         }
         $card = $minOccurs . '..' . $maxOccurs;
+        $default = '';
         if (isset($property->default)) {
             $default = is_bool($property->default) ? ($property->default ? 'true' : 'false') : $property->default;
-            $type .= " +\n" . '{default{nbsp}={nbsp}' . $default . '}';
+            $default = " +\n" . '`{default{nbsp}={nbsp}' . $default . '}`';
         }
         $signature = '*' . $property->name . '*: `' . $type . '`';
-        return [$card, $signature];
+        return [$card, $signature, $default];
     }
 
     /**
      * @return array{0:string,1:string}
      */
-    private function formatFunctionSignature(BmmFunction $function, string $prefix): array
+    protected function formatFunctionSignature(BmmFunction $function, string $prefix): array
     {
         $type = '';
         $minOccurs = $function->isNullable ? 0 : 1;
@@ -373,7 +374,7 @@ readonly class AsciidocDefinition
         return [$card, $signature, $parameterDocs];
     }
 
-    private function formatContainerType(BmmContainerType $type, string $prefix): string
+    protected function formatContainerType(BmmContainerType $type, string $prefix): string
     {
         if ($type->typeDef instanceof BmmGenericType) {
             return $this->formatType($type->containerType, $prefix) . '<' . $this->formatGenericType($type->typeDef, $prefix) . '>';
@@ -383,7 +384,7 @@ readonly class AsciidocDefinition
         return $this->formatType($type->containerType, $prefix) . '<' . $this->formatType($type->type ?? 'Any', $prefix) . '>';
     }
 
-    private function formatGenericType(BmmGenericType $type, string $prefix): string
+    protected function formatGenericType(BmmGenericType $type, string $prefix): string
     {
         if (!empty($type->genericParameters)) {
             $genericParameters = implode(',', array_map(function ($t) use ($prefix) {

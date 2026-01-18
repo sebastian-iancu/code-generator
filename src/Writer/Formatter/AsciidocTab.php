@@ -32,6 +32,10 @@ Definition::
 +
 include::{$location}definitions/{$classFilename}[]
 
+Effective::
++
+include::{$location}effective/{$classFilename}[]
+
 BMM::
 +
 include::{$location}BMMs/{$classFilename}[]

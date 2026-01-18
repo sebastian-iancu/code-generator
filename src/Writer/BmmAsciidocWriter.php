@@ -7,6 +7,7 @@ use OpenEHR\Tools\CodeGen\Model\Bmm\BmmPackage;
 use OpenEHR\Tools\CodeGen\Model\Bmm\BmmSchema;
 use OpenEHR\Tools\CodeGen\Writer\Formatter\AsciidocBmmJson;
 use OpenEHR\Tools\CodeGen\Writer\Formatter\AsciidocDefinition;
+use OpenEHR\Tools\CodeGen\Writer\Formatter\AsciidocEffective;
 use OpenEHR\Tools\CodeGen\Writer\Formatter\AsciidocPlantUml;
 use OpenEHR\Tools\CodeGen\Writer\Formatter\AsciidocTab;
 use RuntimeException;
@@ -21,6 +22,7 @@ class BmmAsciidocWriter extends AbstractWriter
 
     private AsciidocTab $tab;
     private AsciidocDefinition $definition;
+    private AsciidocEffective $effective;
     private AsciidocBmmJson $bmmJson;
     private AsciidocPlantUml $plantUml;
 
@@ -28,6 +30,7 @@ class BmmAsciidocWriter extends AbstractWriter
     {
         $this->tab = new AsciidocTab($this->legacyFormat);
         $this->definition = new AsciidocDefinition($this->legacyFormat);
+        $this->effective = new AsciidocEffective($this->legacyFormat);
         $this->bmmJson = new AsciidocBmmJson();
         $this->plantUml = new AsciidocPlantUml($this->legacyFormat);
     }
@@ -70,6 +73,8 @@ class BmmAsciidocWriter extends AbstractWriter
         }
         $definitionsDir = self::DIR . $schema->getSchemaId() . '/definitions/';
         $this->assureOutputDir($definitionsDir);
+        $effectiveDir = self::DIR . $schema->getSchemaId() . '/effective/';
+        $this->assureOutputDir($effectiveDir);
         $tabsDir = self::DIR . $schema->getSchemaId() . '/classes/';
         $this->assureOutputDir($tabsDir);
         $bmmJsonDir = self::DIR . $schema->getSchemaId() . '/BMMs/';
@@ -91,6 +96,7 @@ class BmmAsciidocWriter extends AbstractWriter
             }
             self::log('Writing %s class ...', $filename);
             $this->writeFile($definitionsDir . $filename, $this->definition->format($class, $prefix));
+            $this->writeFile($effectiveDir . $filename, $this->effective->format($class, $prefix));
             $this->writeFile($tabsDir . $filename, $this->tab->format($class, $filename));
             $this->writeFile($bmmJsonDir . $filename, $this->bmmJson->format($class));
             $this->writeFile($plantUmlClassesDir . $filename, $this->plantUml->format($class, $prefix));
