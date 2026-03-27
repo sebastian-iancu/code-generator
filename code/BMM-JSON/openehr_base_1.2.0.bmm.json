@@ -1206,6 +1206,9 @@
                 },
                 "less_than": {
                     "name": "less_than",
+                    "aliases": [
+                        "<"
+                    ],
                     "documentation": "Lexical comparison of string content based on ordering in relevant character set.",
                     "parameters": {
                         "other": {
@@ -2570,7 +2573,7 @@
                     "name": "Multiplicity_unbounded_marker",
                     "documentation": "Symbol to use to indicate upper limit unbounded.",
                     "type": "Character",
-                    "value": "'*'"
+                    "value": "'&#42;'"
                 }
             },
             "functions": {
@@ -3276,7 +3279,7 @@
                 "Regex_any_pattern": {
                     "name": "Regex_any_pattern",
                     "type": "String",
-                    "value": "\".*\""
+                    "value": "\".&#42;\""
                 },
                 "Default_encoding": {
                     "name": "Default_encoding",
@@ -4238,17 +4241,6 @@
                 }
             },
             "functions": {
-                "current_revision": {
-                    "name": "current_revision",
-                    "documentation": "Most recent revision in revision_history if is_controlled else  (uncontrolled) . ",
-                    "post_conditions": {
-                        "Post": "Result = revision_history.most_recent_version"
-                    },
-                    "result": {
-                        "_type": "P_BMM_SIMPLE_TYPE",
-                        "type": "String"
-                    }
-                },
                 "languages_available": {
                     "name": "languages_available",
                     "documentation": "Total list of languages available in this resource, derived from original_language and translations. ",
@@ -4261,11 +4253,9 @@
             },
             "invariants": {
                 "Original_language_valid": "code_set (Code_set_id_languages).has_code (original_language.as_string)",
-                "Current_revision_valid": "(current_revision \/= Void and not is_controlled) implies current_revision.is_equal (\"(uncontrolled)\")",
                 "Translations_valid": "translations \/= Void implies (not translations.is_empty and not translations.has (orginal_language.code_string))",
                 "Description_valid": "translations \/= Void implies (description.details.for_all (d &#124;\ntranslations.has_key (d.language.code_string)))",
-                "Languages_available_valid": "languages_available.has (original_language)",
-                "Revision_history_valid": "is_controlled xor revision_history = Void"
+                "Languages_available_valid": "languages_available.has (original_language)"
             }
         },
         "RESOURCE_DESCRIPTION": {

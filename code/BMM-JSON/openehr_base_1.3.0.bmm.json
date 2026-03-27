@@ -1208,6 +1208,9 @@
                 },
                 "less_than": {
                     "name": "less_than",
+                    "aliases": [
+                        "<"
+                    ],
                     "documentation": "Lexical comparison of string content based on ordering in relevant character set.",
                     "parameters": {
                         "other": {
@@ -2578,7 +2581,7 @@
                     "name": "Multiplicity_unbounded_marker",
                     "documentation": "Symbol to use to indicate upper limit unbounded.",
                     "type": "Character",
-                    "value": "'*'"
+                    "value": "'&#42;'"
                 }
             },
             "functions": {
@@ -2862,7 +2865,7 @@
     "class_definitions": {
         "ARCHETYPE_ID": {
             "name": "ARCHETYPE_ID",
-            "documentation": "Identifier for archetypes. Ideally these would identify globally unique archetypes.\n\nLexical form: `rm_originator  '-' rm_name  '-' rm_entity  '.' concept_name {  '-' specialisation }*  '.v' number`.",
+            "documentation": "Identifier or reference for archetypes. Ideally, these identify globally unique archetypes. When used as a reference, only partial version information is included (major version only), and the namespace is omitted.\n\nLexical form: `rm_originator  '-' rm_name  '-' rm_entity  '.' concept_name {  '-' specialisation }*  '.v' version_id`.",
             "ancestors": [
                 "OBJECT_ID"
             ],
@@ -2917,7 +2920,7 @@
                 },
                 "version_id": {
                     "name": "version_id",
-                    "documentation": "Version of this archetype. \n",
+                    "documentation": "Version identification of this archetype, representing the major version, e.g. `\"1\"`.",
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "String"
@@ -3126,6 +3129,14 @@
                         "type": "Boolean"
                     }
                 },
+                "is_first": {
+                    "name": "is_first",
+                    "documentation": "True if this version identifier corresponds to the first version, i.e. `_trunk_version_` is 1.",
+                    "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
+                        "type": "Boolean"
+                    }
+                },
                 "branch_number": {
                     "name": "branch_number",
                     "documentation": "Number of branch from the trunk point; numbering starts at 1. ",
@@ -3284,7 +3295,7 @@
                 "Regex_any_pattern": {
                     "name": "Regex_any_pattern",
                     "type": "String",
-                    "value": "\".*\""
+                    "value": "\".&#42;\""
                 },
                 "Default_encoding": {
                     "name": "Default_encoding",
@@ -3308,12 +3319,14 @@
             "item_names": [
                 "mandatory",
                 "optional",
-                "prohibited"
+                "prohibited",
+                "disallowed"
             ],
             "item_documentations": [
                 "Constant to indicate mandatory presence of something.",
                 "Constant to indicate optional presence of something.",
-                "Constant to indicate disallowed presence of something."
+                "Constant to indicate disallowed presence of something.",
+                "(DEPRECATED) Constant to indicate disallowed presence of something.\n\nNOTE: This is only used by AOM 1.4, while AOM 2 is using the `prohibited` alternative value."
             ]
         },
         "VERSION_STATUS": {
@@ -4268,24 +4281,13 @@
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
-                            "Any",
+                            "String",
                             "TRANSLATION_DETAILS"
                         ]
                     }
                 }
             },
             "functions": {
-                "current_revision": {
-                    "name": "current_revision",
-                    "documentation": "Most recent revision in revision_history if is_controlled else  (uncontrolled) . ",
-                    "post_conditions": {
-                        "Post": "Result = revision_history.most_recent_version"
-                    },
-                    "result": {
-                        "_type": "P_BMM_SIMPLE_TYPE",
-                        "type": "String"
-                    }
-                },
                 "languages_available": {
                     "name": "languages_available",
                     "documentation": "Total list of languages available in this resource, derived from original_language and translations. ",
@@ -4298,11 +4300,9 @@
             },
             "invariants": {
                 "Original_language_valid": "code_set (Code_set_id_languages).has_code (original_language.as_string)",
-                "Current_revision_valid": "(current_revision \/= Void and not is_controlled) implies current_revision.is_equal (\"(uncontrolled)\")",
                 "Translations_valid": "translations \/= Void implies (not translations.is_empty and not translations.has (orginal_language.code_string))",
                 "Description_valid": "translations \/= Void implies (description.details.for_all (d &#124;\ntranslations.has_key (d.language.code_string)))",
-                "Languages_available_valid": "languages_available.has (original_language)",
-                "Revision_history_valid": "is_controlled xor revision_history = Void"
+                "Languages_available_valid": "languages_available.has (original_language)"
             }
         },
         "RESOURCE_DESCRIPTION": {
@@ -4441,7 +4441,7 @@
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameters": [
-                            "Any",
+                            "String",
                             "RESOURCE_DESCRIPTION_ITEM"
                         ]
                     }
@@ -4467,7 +4467,7 @@
                 "language": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "language",
-                    "documentation": "Language of the translation, coded using ISO 639-1 (2 character) language codes.",
+                    "documentation": "Language of the translation, encoded following the RFC 5646 standard, using ISO 639-1 (two-character) language codes, e.g. \"en\". It may include a region subtag conforming to ISO 3166-1 alpha-2 (two-character country codes), e.g. \"pt-br\" for Brazilian Portuguese.",
                     "is_mandatory": true,
                     "type": "Terminology_code"
                 },
@@ -4530,7 +4530,7 @@
                 "language": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "language",
-                    "documentation": "The localised language in which the items in this description item are written. Coded using ISO 639-1 (2 character) language codes.",
+                    "documentation": "The localised language in which the items in this description item are written. Encoded following the RFC 5646 standard, using ISO 639-1 (two-character) language codes, e.g. \"en\". It may include a region subtag conforming to ISO 3166-1 alpha-2 (two-character country codes), e.g. \"pt-br\" for Brazilian Portuguese.",
                     "is_mandatory": true,
                     "type": "Terminology_code"
                 },
