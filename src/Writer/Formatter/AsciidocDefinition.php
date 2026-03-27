@@ -442,12 +442,12 @@ readonly class AsciidocDefinition
 
             if ($this->legacyFormat) {
                 $prefixXref = $this->formatXref($prefix);
-                if ($xref === $prefixXref) {
+                if (str_contains($xref,  $prefixXref)) {
                     // type is on the same spec page, an example format is '<<_boolean_class,Boolean>>'
                     return '<<_' . strtolower($type) . '_' . $classType . ',' . $type . '>>';
                 }
                 // an example format is 'link:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]'
-                return 'link:/releases/' . $m[0] . '/{' . strtolower($m[0]) . '_release}/' . $m[1] . '.html#_' . strtolower($type) . '_' . $classType . '[' . $type . ']';
+                return 'link:/releases/' . $m[0] . '/{' . strtolower($m[0]) . '_release}/' . $m[1] . '.html#_' . strtolower($type) . '_' . $classType . '[' . $type . '^]';
             }
 
             // an example format is 'xref:/releases/BASE/{base_release}/foundation_types.html#_boolean_class[Boolean^]'
@@ -492,8 +492,11 @@ readonly class AsciidocDefinition
         foreach ($class->ancestors as $ancestor) {
             $ancestorClass = Globals::getClass($ancestor);
             if ($ancestorClass instanceof BmmClass) {
-                if ($ancestorClass->properties->offsetExists($property->name)) {
-                    return " +\n(" . ($ancestorClass->isAbstract && !$class->isAbstract ? 'effected' : 'redefined') . ')';
+                $ancestorProperty = $ancestorClass->properties->offsetExists($property->name)
+                    ? $ancestorClass->properties->offsetGet($property->name)
+                    : null;
+                if ($ancestorProperty) {
+                    return " +\n(" . ($ancestorProperty instanceof BmmSinglePropertyOpen ? 'effected' : 'redefined') . ')';
                 }
                 $parent = $this->formatPropertyOverride($ancestorClass, $property);
                 if ($parent) {
@@ -515,7 +518,7 @@ readonly class AsciidocDefinition
                 /** @var BmmFunction $ancestorFunction */
                 $ancestorFunction = $ancestorClass->functions->get($function->name);
                 if ($ancestorFunction) {
-                    return " +\n(" . ($ancestorFunction->isAbstract && !$class->isAbstract ? 'effected' : 'redefined') . ')';
+                    return " +\n(" . ($ancestorFunction->isAbstract ? 'effected' : 'redefined') . ')';
                 }
                 $parent = $this->formatFunctionOverride($ancestorClass, $function);
                 if ($parent) {
