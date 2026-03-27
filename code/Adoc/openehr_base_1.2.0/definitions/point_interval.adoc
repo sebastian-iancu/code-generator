@@ -14,25 +14,25 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*lower_unbounded*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
 `{default{nbsp}={nbsp}false}`
 a|Lower boundary open (i.e. = -infinity).
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*upper_unbounded*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
 `{default{nbsp}={nbsp}false}`
 a|Upper boundary open (i.e. = +infinity).
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*lower_included*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
 `{default{nbsp}={nbsp}true}`
 a|Lower boundary value included in range if not `_lower_unbounded_`.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*upper_included*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
 `{default{nbsp}={nbsp}true}`
 a|Upper boundary value included in range if not `_upper_unbounded_`.

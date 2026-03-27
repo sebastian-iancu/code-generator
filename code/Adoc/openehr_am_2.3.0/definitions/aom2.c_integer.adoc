@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*constraint*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:BASE:foundation_types:interval.adoc#_interval_class[Interval]<xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]>>`
 a|Formal constraint on `Integer`, in the form of one or more `Interval<Integer>`.
 

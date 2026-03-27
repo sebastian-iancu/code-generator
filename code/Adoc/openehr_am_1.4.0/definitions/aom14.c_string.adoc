@@ -26,7 +26,7 @@ h|*1..1*
 a|True if the list is being used to specify the constraint but is not considered exhaustive.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*assumed_value*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|The value to assume if this item is not included in data, due to being part of an optional structure.
 

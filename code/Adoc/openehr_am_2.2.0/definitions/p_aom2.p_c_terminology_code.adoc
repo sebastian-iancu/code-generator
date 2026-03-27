@@ -18,12 +18,12 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*constraint*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*assumed_value*: `xref:BASE:foundation_types:terminology.adoc#_terminology_code_class[Terminology_code]`
 a|
 

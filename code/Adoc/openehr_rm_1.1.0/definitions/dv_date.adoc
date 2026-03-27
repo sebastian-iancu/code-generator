@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*value*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|ISO8601 date string.
 
@@ -23,12 +23,12 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*magnitude* (): `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer]`
 a|Numeric value of the date as days since the calendar origin date `0001-01-01`.
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*is_equal* ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_quantified_class[DV_QUANTIFIED][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
@@ -61,13 +61,13 @@ h|*1..1 +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_date_class[DV_DATE][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
-__Pre_comparable__: `is_strictly_comparable()` +
+__Pre_comparable__: `is_strictly_comparable_to (other)` +
  +
 __Post_result__: `Result = magnitude > other.magnitude`
 a|True if `_other_` is less than this Quantified object. Based on comparison of `_magnitude_`.
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*is_strictly_comparable_to* ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_date_class[DV_DATE][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`

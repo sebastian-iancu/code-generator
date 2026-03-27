@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*item*: `xref:LANG:beom:core_package.adoc#_variable_declaration_class[VARIABLE_DECLARATION]`
 a|The variable referred to.
 |===

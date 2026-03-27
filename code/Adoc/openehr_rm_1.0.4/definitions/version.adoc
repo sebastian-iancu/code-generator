@@ -48,7 +48,7 @@ a|Lifecycle state of this version; coded by openEHR vocabulary 'version lifecycl
 
 h|*1..1*
 |*canonical_form* (): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
-a|A canonical serial form of this Version, suitable for generating reliable hashes and signatures.
+a|A canonical serial form of this Version, created by serialising all attributes except signature, suitable for generating reliable hashes and signatures.
 
 h|*1..1*
 |*owner_id* (): `xref:BASE:base_types:identification_package.adoc#_hier_object_id_class[HIER_OBJECT_ID]` +

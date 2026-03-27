@@ -8,8 +8,7 @@ abstract class AUTHORED_RESOURCE {
   + description : RESOURCE_DESCRIPTION [0..1]
   + is_controlled : Boolean [0..1]
   + annotations : RESOURCE_ANNOTATIONS [0..1]
-  + translations : Hash<Any,TRANSLATION_DETAILS> [0..1]
-  + current_revision() : String [1]
+  + translations : Hash<String,TRANSLATION_DETAILS> [0..1]
   + languages_available() : List<String> [1..*]
 }
 
@@ -29,7 +28,7 @@ class RESOURCE_DESCRIPTION {
   + references : Hash<String,String> [0..1]
   + resource_package_uri : String [0..1]
   + conversion_details : Hash<String,String> [0..1]
-  + details : Hash<Any,RESOURCE_DESCRIPTION_ITEM> [0..1]
+  + details : Hash<String,RESOURCE_DESCRIPTION_ITEM> [0..1]
   + other_details : Hash<String,String> [0..1]
 }
 

@@ -81,7 +81,7 @@ h|*1..1 +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_amount_class[DV_AMOUNT][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
-__Pre_comparable__: `is_strictly_comparable()` +
+__Pre_comparable__: `is_strictly_comparable_to (other)` +
  +
 __Post_result__: `Result = magnitude < other.magnitude`
 a|True if this object is less than `_other_`. Based on comparison of `_magnitude_`.

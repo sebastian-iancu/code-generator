@@ -23,7 +23,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*diff* ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_temporal_class[DV_TEMPORAL][1]` +
 ): `xref:RM:data_types:quantity_package.adoc#_dv_duration_class[DV_DURATION]`

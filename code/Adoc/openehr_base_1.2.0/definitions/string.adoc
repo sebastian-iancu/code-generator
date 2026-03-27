@@ -33,7 +33,7 @@ a|Concatenation operator - causes `_other_` to be appended to this string.
 
 h|*1..1 +
 (effected)*
-|*less_than* ( +
+|*less_than* __alias__ "<" ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Lexical comparison of string content based on ordering in relevant character set.

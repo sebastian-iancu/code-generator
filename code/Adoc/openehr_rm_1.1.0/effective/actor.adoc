@@ -151,6 +151,4 @@ a|Type of party, such as  `PERSON`,  `ORGANISATION`, etc. Role name, e.g.  gener
 
 2+a|__Roles_valid__: `roles /= Void implies not roles.is_empty`
 
-2+a|__Legal_identity_exists__: `has_legal_identity`
-
 |===

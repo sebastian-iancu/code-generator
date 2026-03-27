@@ -26,7 +26,7 @@ h|*0..1*
 a|The target type; this converts to the first parameter in `_generic_parameters_` in `BMM_GENERIC_TYPE`. Persisted attribute.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*bmm_type*: `link:/classes/BMM_CONTAINER_TYPE[BMM_CONTAINER_TYPE] `
 a|Result of `_create_bmm_type()_` call.
 

@@ -24,7 +24,4 @@ a|Sub-folders of this FOLDER.
 h|*0..1*
 |*details*: `xref:RM:data_structures:item_structure_package.adoc#_item_structure_class[ITEM_STRUCTURE]`
 a|Archetypable extra meta-data for `FOLDER`.
-
-h|*Invariants*
-2+a|__Folders_valid__: `not folders.is_empty`
 |===

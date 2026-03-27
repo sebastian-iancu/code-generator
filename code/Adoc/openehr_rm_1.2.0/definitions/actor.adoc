@@ -23,7 +23,4 @@ a|Identifiers of the Version container for each Role played by this Party.
 
 h|*Invariants*
 2+a|__Roles_valid__: `roles /= Void implies not roles.is_empty`
-
-h|
-2+a|__Legal_identity_exists__: `has_legal_identity`
 |===

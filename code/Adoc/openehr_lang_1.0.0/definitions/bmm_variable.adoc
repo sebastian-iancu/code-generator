@@ -23,7 +23,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*signature* (): `link:/classes/[] `
 a|Formal signature of this element, in the form `'name [arg1_name: T_arg1, ...][:T_value]'`.
 |===

@@ -50,7 +50,9 @@ If the accuracy value is a percentage in one operand and not in the other, the f
 h|*1..1*
 |*subtract* __alias__ "-" ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_amount_class[DV_AMOUNT][1]` +
-): `xref:RM:data_types:quantity_package.adoc#_dv_amount_class[DV_AMOUNT]`
+): `xref:RM:data_types:quantity_package.adoc#_dv_amount_class[DV_AMOUNT]` +
+ +
+__Pre_comparable__: `is_strictly_comparable_to (other)`
 a|Difference of this amount and another. The value of `_accuracy_` in the result is either:
 
 * the sum of the accuracies of the operands, if both present, or;
@@ -81,7 +83,7 @@ h|*1..1 +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_amount_class[DV_AMOUNT][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
-__Pre_comparable__: `is_strictly_comparable()` +
+__Pre_comparable__: `is_strictly_comparable_to (other)` +
  +
 __Post_result__: `Result = magnitude < other.magnitude`
 a|True if this object is less than `_other_`. Based on comparison of `_magnitude_`.

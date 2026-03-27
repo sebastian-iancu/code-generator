@@ -39,9 +39,6 @@
             "documentation": "Archetypable meta-data for `FOLDER`.",
             "type": "ITEM_STRUCTURE"
         }
-    },
-    "invariants": {
-        "Folders_valid": "not folders.is_empty"
     }
 }
 --------

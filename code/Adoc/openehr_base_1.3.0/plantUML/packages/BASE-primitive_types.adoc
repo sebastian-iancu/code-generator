@@ -104,9 +104,6 @@ abstract class Ordered {
   + greater_than_or_equal( other : Ordered [1] ) : Boolean [1]
 }
 
-class Byte {
-}
-
 String <|-- Uri
 Ordered <|-- Ordered_Numeric
 Numeric <|-- Ordered_Numeric
@@ -117,7 +114,6 @@ Ordered <|-- Character
 Ordered <|-- String
 Ordered_Numeric <|-- Real
 Ordered_Numeric <|-- Integer64
-Ordered <|-- Byte
 
 @enduml
 -----

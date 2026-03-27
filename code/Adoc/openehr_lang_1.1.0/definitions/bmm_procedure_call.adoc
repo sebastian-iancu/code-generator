@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*agent*: `xref:LANG:bmm:expression_package.adoc#_el_procedure_agent_class[EL_PROCEDURE_AGENT]`
 a|The procedure agent being called.
 |===

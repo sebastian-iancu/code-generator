@@ -82,8 +82,7 @@
                         "String",
                         "Real",
                         "Integer64",
-                        "Ordered",
-                        "Byte"
+                        "Ordered"
                     ]
                 },
                 "functional": {
@@ -1689,12 +1688,6 @@
                     }
                 }
             }
-        },
-        "Byte": {
-            "name": "Byte",
-            "ancestors": [
-                "Ordered"
-            ]
         },
         "Iso8601_date_time": {
             "name": "Iso8601_date_time",

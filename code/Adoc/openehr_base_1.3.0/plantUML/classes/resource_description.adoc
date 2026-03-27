@@ -18,7 +18,7 @@ class RESOURCE_DESCRIPTION {
   + references : Hash<String,String> [0..1]
   + resource_package_uri : String [0..1]
   + conversion_details : Hash<String,String> [0..1]
-  + details : Hash<Any,RESOURCE_DESCRIPTION_ITEM> [0..1]
+  + details : Hash<String,RESOURCE_DESCRIPTION_ITEM> [0..1]
   + other_details : Hash<String,String> [0..1]
 }
 

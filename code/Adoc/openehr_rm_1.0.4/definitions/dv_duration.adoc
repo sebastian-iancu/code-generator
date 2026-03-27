@@ -20,7 +20,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*value*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|ISO8601 duration string.
 
@@ -29,7 +29,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*is_strictly_comparable_to* ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_ordered_class[DV_ORDERED][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`

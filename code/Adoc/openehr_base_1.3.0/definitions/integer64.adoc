@@ -14,35 +14,35 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*add* __alias__ "+" ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_integer64_class[Integer64]`
 a|Large integer addition.
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*subtract* __alias__ "-" ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_integer64_class[Integer64]`
 a|Large integer subtraction.
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*multiply* __alias__ "&#42;" ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_integer64_class[Integer64]`
 a|Large integer multiplication.
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*divide* __alias__ "/" ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_double_class[Double]`
 a|Large integer division.
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*exponent* __alias__ "^" ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_double_class[Double][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_double_class[Double]`
@@ -55,19 +55,19 @@ mod: `xref:BASE:foundation_types:primitive_types.adoc#_integer_class[Integer][1]
 a|Large integer modulus.
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*less_than* __alias__ "<" ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_integer64_class[Integer64][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|Returns True if current Integer is less than `_other_`.
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*negative* __alias__ "-" (): `xref:BASE:foundation_types:primitive_types.adoc#_integer64_class[Integer64]`
 a|Generate negative of current Integer value.
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*is_equal* ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_integer64_class[Integer64][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`

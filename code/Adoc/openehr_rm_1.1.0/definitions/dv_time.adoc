@@ -16,7 +16,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*value*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|ISO8601 time string
 
@@ -25,7 +25,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*magnitude* (): `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real]`
 a|Numeric value of the time as seconds since the start of day, i.e. `00:00:00`.
 
@@ -56,13 +56,13 @@ h|*1..1 +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_time_class[DV_TIME][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
-__Pre_comparable__: `is_strictly_comparable()` +
+__Pre_comparable__: `is_strictly_comparable_to (other)` +
  +
 __Post_result__: `Result = magnitude > other.magnitude`
 a|True if `_other_` is less than this Quantified object. Based on comparison of `_magnitude_`.
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*is_strictly_comparable_to* ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_time_class[DV_TIME][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`

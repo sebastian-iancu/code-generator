@@ -34,12 +34,6 @@ a|Optional identifier type, such as  prescription , or  Social Security Number .
 
 2+h|*Invariants*
 
-2+a|__Issuer_valid__: `not issuer.is_empty`
-
-2+a|__Assigner_valid__: `not assigner.is_empty`
-
 2+a|__Id_valid__: `not id.is_empty`
-
-2+a|__Type_valid__: `not type.is_empty`
 
 |===

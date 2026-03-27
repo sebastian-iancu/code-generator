@@ -15,7 +15,7 @@ a|Line feed character.
 |*Any_type_name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}"Any"` [1..1]
 a|
 
-|*Regex_any_pattern*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}".*"` [1..1]
+|*Regex_any_pattern*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}".&#42;"` [1..1]
 a|
 
 |*Default_encoding*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}"UTF-8"` [1..1]

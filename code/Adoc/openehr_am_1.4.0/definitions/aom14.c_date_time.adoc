@@ -46,7 +46,7 @@ h|*0..1*
 a|Range of Date_times specifying constraint.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*assumed_value*: `xref:BASE:foundation_types:time_types.adoc#_iso8601_date_time_class[Iso8601_date_time]`
 a|The value to assume if this item is not included in data, due to being part of an optional structure.
 

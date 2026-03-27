@@ -14,13 +14,13 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*type_name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` +
 `{default{nbsp}={nbsp}"String"}`
 a|
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*type_anchor*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|
 |===

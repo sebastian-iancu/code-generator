@@ -28,12 +28,12 @@ a|Formal constraint on the assumed primitive `Iso8601_duration` type, in the for
 For a pattern constraint or no constraint, use an empty list.
 
 h|*0..1 +
-(redefined)*
+(effected)*
 |*default_value*: `xref:BASE:foundation_types:time_types.adoc#_iso8601_duration_class[Iso8601_duration]`
 a|Default value set in a template, and present in an operational template. Generally limited to leaf and near-leaf nodes.
 
 h|*0..1 +
-(redefined)*
+(effected)*
 |*assumed_value*: `xref:BASE:foundation_types:time_types.adoc#_iso8601_duration_class[Iso8601_duration]`
 a|Value to be assumed if none sent in data.
 

@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*item*: `xref:RM:ehr_extract:openehr_extract_package.adoc#_x_versioned_object_class[X_VERSIONED_OBJECT]`
 a|Content object.
 |===

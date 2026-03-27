@@ -30,8 +30,7 @@ abstract class AUTHORED_RESOURCE  #whitesmoke;line:gray;line.dotted;text:gray {
   + description : RESOURCE_DESCRIPTION [0..1]
   + is_controlled : Boolean [0..1]
   + annotations : RESOURCE_ANNOTATIONS [0..1]
-  + translations : Hash<Any,TRANSLATION_DETAILS> [0..1]
-  + current_revision() : String [1]
+  + translations : Hash<String,TRANSLATION_DETAILS> [0..1]
   + languages_available() : List<String> [1..*]
 }
 

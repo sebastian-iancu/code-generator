@@ -30,7 +30,7 @@ h|*1..1*
 a|Multi-axial identifier of this archetype in archetype space.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*uid*: `xref:BASE:base_types:identification_package.adoc#_hier_object_id_class[HIER_OBJECT_ID]`
 a|OID identifier of this archetype.
 

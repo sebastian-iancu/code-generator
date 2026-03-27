@@ -34,14 +34,5 @@ h|*0..1*
 a|Optional identifier type, such as  prescription , or  Social Security Number . One day a controlled vocabulary might be possible for this.
 
 h|*Invariants*
-2+a|__Issuer_valid__: `not issuer.is_empty`
-
-h|
-2+a|__Assigner_valid__: `not assigner.is_empty`
-
-h|
 2+a|__Id_valid__: `not id.is_empty`
-
-h|
-2+a|__Type_valid__: `not type.is_empty`
 |===

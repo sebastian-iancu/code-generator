@@ -111,6 +111,4 @@ a|True if this node is the root of an archetyped structure.
 
 2+a|xref:RM:common:archetyped_package.adoc#_locatable_class[LOCATABLE].__Archetype_node_id_valid__: `not archetype_node_id.is_empty`
 
-2+a|__Folders_valid__: `not folders.is_empty`
-
 |===

@@ -89,7 +89,7 @@ h|*1..1 +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_quantity_class[DV_QUANTITY][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
-__Pre_comparable__: `is_strictly_comparable()` +
+__Pre_comparable__: `is_strictly_comparable_to (other)` +
  +
 __Post_result__: `Result = magnitude < other.magnitude`
 a|True if this Quantity object is less than `_other_`, based on comparison of `_magnitude_`. Only valid if `_is_strictly_comparable_to()_` is True.
@@ -99,7 +99,7 @@ h|*1..1*
 a|True if `_precision_` = 0, meaning that the `_magnitude_` is a whole number.
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*is_strictly_comparable_to* ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_ordered_class[DV_ORDERED][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`

@@ -18,7 +18,7 @@ h|*0..1*
 a|Tuple definitions.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*members*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:AM:AOM2:constraint_model-class_definitions.adoc#_c_attribute_class[C_ATTRIBUTE]>`
 a|List of `C_ATTRIBUTEs` forming the definition of the tuple.
 

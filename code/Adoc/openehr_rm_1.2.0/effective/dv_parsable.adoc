@@ -17,7 +17,7 @@ a|Line feed character.
 |xref:BASE:base_types:definitions_package.adoc#_basic_definitions_class[BASIC_DEFINITIONS].*Any_type_name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}"Any"` [1..1]
 a|
 
-|xref:BASE:base_types:definitions_package.adoc#_basic_definitions_class[BASIC_DEFINITIONS].*Regex_any_pattern*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}".*"` [1..1]
+|xref:BASE:base_types:definitions_package.adoc#_basic_definitions_class[BASIC_DEFINITIONS].*Regex_any_pattern*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}".&#42;"` [1..1]
 a|
 
 |xref:BASE:base_types:definitions_package.adoc#_basic_definitions_class[BASIC_DEFINITIONS].*Default_encoding*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}"UTF-8"` [1..1]
@@ -50,12 +50,12 @@ a|Size in bytes of value.
 
 2+h|*Invariants*
 
-2+a|__Size_valid__: `size >= 0`
-
 2+a|xref:RM:data_types:encapsulated_package.adoc#_dv_encapsulated_class[DV_ENCAPSULATED].__Language_valid__: `language /= Void implies code_set (Code_set_id_languages).has_code (language)`
 
 2+a|xref:RM:data_types:encapsulated_package.adoc#_dv_encapsulated_class[DV_ENCAPSULATED].__Charset_valid__: `charset /= Void implies code_set (Code_set_id_character_sets).has_code (charset)`
 
 2+a|__Formalism_valid__: `not formalism.is_empty`
+
+2+a|__Size_valid__: `size >= 0`
 
 |===

@@ -142,6 +142,4 @@ a|Type of party, such as  `PERSON`,  `ORGANISATION`, etc. Role name, e.g.  gener
 
 2+a|xref:RM:demographic:demographic_package.adoc#_actor_class[ACTOR].__Roles_valid__: `roles /= Void implies not roles.is_empty`
 
-2+a|xref:RM:demographic:demographic_package.adoc#_actor_class[ACTOR].__Legal_identity_exists__: `has_legal_identity`
-
 |===

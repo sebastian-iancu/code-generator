@@ -19,7 +19,7 @@ a|Line feed character.
 |xref:BASE:base_types:definitions_package.adoc#_basic_definitions_class[BASIC_DEFINITIONS].*Any_type_name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}"Any"` [1..1]
 a|
 
-|xref:BASE:base_types:definitions_package.adoc#_basic_definitions_class[BASIC_DEFINITIONS].*Regex_any_pattern*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}".*"` [1..1]
+|xref:BASE:base_types:definitions_package.adoc#_basic_definitions_class[BASIC_DEFINITIONS].*Regex_any_pattern*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}".&#42;"` [1..1]
 a|
 
 |xref:BASE:base_types:definitions_package.adoc#_basic_definitions_class[BASIC_DEFINITIONS].*Default_encoding*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}"UTF-8"` [1..1]

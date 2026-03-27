@@ -36,8 +36,7 @@
         }
     },
     "invariants": {
-        "Roles_valid": "roles /= Void implies not roles.is_empty",
-        "Legal_identity_exists": "has_legal_identity"
+        "Roles_valid": "roles /= Void implies not roles.is_empty"
     }
 }
 --------

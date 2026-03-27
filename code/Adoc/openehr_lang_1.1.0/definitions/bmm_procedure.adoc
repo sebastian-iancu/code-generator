@@ -23,7 +23,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*signature* (): `link:/classes/BMM_PROCEDURE_TYPE[BMM_PROCEDURE_TYPE] `
 a|Formal signature of this element, in the form:
 

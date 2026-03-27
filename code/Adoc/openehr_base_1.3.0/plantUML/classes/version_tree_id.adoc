@@ -6,6 +6,7 @@ class VERSION_TREE_ID {
   + value : String [1]
   + trunk_version() : String [1]
   + is_branch() : Boolean [1]
+  + is_first() : Boolean [1]
   + branch_number() : String [1]
   + branch_version() : String [1]
 }

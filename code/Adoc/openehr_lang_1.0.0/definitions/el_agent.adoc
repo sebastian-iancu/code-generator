@@ -36,7 +36,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*eval_type* (): `link:/classes/BMM_SIGNATURE[BMM_SIGNATURE] ` +
  +
 __Post_result__: `Result = definition.signature`

@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*definition*: `xref:LANG:bmm:core_package.adoc#_bmm_procedure_class[BMM_PROCEDURE]`
 a|Reference to definition of routine for which this is a call instance.
 

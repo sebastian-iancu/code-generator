@@ -6,6 +6,7 @@ enum VALIDITY_KIND {
   mandatory 
   optional 
   prohibited 
+  disallowed 
 }
 
 

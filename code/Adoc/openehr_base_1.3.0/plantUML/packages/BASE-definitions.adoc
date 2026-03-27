@@ -12,6 +12,7 @@ enum VALIDITY_KIND {
   mandatory 
   optional 
   prohibited 
+  disallowed 
 }
 
 enum VERSION_STATUS {

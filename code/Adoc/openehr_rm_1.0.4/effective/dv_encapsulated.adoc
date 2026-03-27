@@ -24,8 +24,6 @@ a|Optional indicator of the localised language in which the data is written, if 
 
 2+h|*Invariants*
 
-2+a|__Size_valid__: `size >= 0`
-
 2+a|__Language_valid__: `language /= Void implies code_set (Code_set_id_languages).has_code (language)`
 
 2+a|__Charset_valid__: `charset /= Void implies code_set (Code_set_id_character_sets).has_code (charset)`

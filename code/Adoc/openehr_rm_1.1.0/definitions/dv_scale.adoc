@@ -58,6 +58,8 @@ h|*1..1 +
 (effected)*
 |*less_than* __alias__ "<" ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_scale_class[DV_SCALE][1]` +
-): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
+): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
+ +
+__Pre_comparable__: `is_strictly_comparable_to (other)`
 a|True if this Scale value is less than `_other_`.
 |===

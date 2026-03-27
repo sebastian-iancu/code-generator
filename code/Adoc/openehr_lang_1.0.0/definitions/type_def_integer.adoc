@@ -14,13 +14,13 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*type_name*: `link:/classes/String[String] ` +
 `{default{nbsp}={nbsp}"Integer"}`
 a|
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*type_anchor*: `link:/classes/Integer[Integer] `
 a|
 |===

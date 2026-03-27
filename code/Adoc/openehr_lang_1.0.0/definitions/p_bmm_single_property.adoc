@@ -22,7 +22,7 @@ h|*0..1*
 a|Type definition of this property computed from `_type_` for later use in `_bmm_property_`.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*bmm_property*: `xref:LANG:bmm:core_package.adoc#_bmm_unitary_property_class[BMM_UNITARY_PROPERTY]`
 a|`BMM_PROPERTY` created by `_create_bmm_property_definition_`.
 

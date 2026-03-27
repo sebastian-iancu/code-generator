@@ -16,7 +16,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*value*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]`
 a|ISO8601 date/time string.
 
@@ -25,7 +25,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*magnitude* (): `xref:BASE:foundation_types:primitive_types.adoc#_double_class[Double]`
 a|Numeric value of the date/time as seconds since the calendar origin date/time `0001-01-01T00:00:00Z`.
 
@@ -56,13 +56,13 @@ h|*1..1 +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_date_time_class[DV_DATE_TIME][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
-__Pre_comparable__: `is_strictly_comparable()` +
+__Pre_comparable__: `is_strictly_comparable_to (other)` +
  +
 __Post_result__: `Result = magnitude < other.magnitude`
 a|True if this date-time object is less than `_other_`, based on comparison of `_magnitude()_`.
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*is_strictly_comparable_to* ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_date_time_class[DV_DATE_TIME][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`

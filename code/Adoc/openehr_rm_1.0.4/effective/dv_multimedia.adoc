@@ -65,8 +65,6 @@ a|Computed from the value of the `_integrity_check_algorithm_` attribute: True i
 
 2+h|*Invariants*
 
-2+a|__Size_valid__: `size >= 0`
-
 2+a|xref:RM:data_types:encapsulated_package.adoc#_dv_encapsulated_class[DV_ENCAPSULATED].__Language_valid__: `language /= Void implies code_set (Code_set_id_languages).has_code (language)`
 
 2+a|xref:RM:data_types:encapsulated_package.adoc#_dv_encapsulated_class[DV_ENCAPSULATED].__Charset_valid__: `charset /= Void implies code_set (Code_set_id_character_sets).has_code (charset)`
@@ -80,5 +78,7 @@ a|Computed from the value of the `_integrity_check_algorithm_` attribute: True i
 2+a|__Integrity_check_validity__: `integrity_check /= Void implies integrity_check_algorithm /= Void`
 
 2+a|__Integrity_check_algorithm_validity__: `integrity_check_algorithm /= Void implies code_set (Code_set_id_integrity_check_algorithms).has_code (integrity_check_algorithm)`
+
+2+a|__Size_valid__: `size >= 0`
 
 |===

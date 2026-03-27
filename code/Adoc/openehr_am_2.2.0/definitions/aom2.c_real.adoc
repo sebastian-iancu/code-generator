@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*constraint*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:BASE:foundation_types:interval.adoc#_interval_class[Interval]<xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real]>>`
 a|Formal constraint on `Real`, in the form of `List<Interval<Real>>`.
 |===

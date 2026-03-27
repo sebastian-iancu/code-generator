@@ -45,7 +45,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*eval_type* (): `link:/classes/BMM_ROUTINE_TYPE[BMM_ROUTINE_TYPE] ` +
  +
 __Post_result__: `Result = definition.signature`

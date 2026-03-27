@@ -17,7 +17,7 @@ a|Line feed character.
 |xref:BASE:base_types:definitions_package.adoc#_basic_definitions_class[BASIC_DEFINITIONS].*Any_type_name*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}"Any"` [1..1]
 a|
 
-|xref:BASE:base_types:definitions_package.adoc#_basic_definitions_class[BASIC_DEFINITIONS].*Regex_any_pattern*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}".*"` [1..1]
+|xref:BASE:base_types:definitions_package.adoc#_basic_definitions_class[BASIC_DEFINITIONS].*Regex_any_pattern*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}".&#42;"` [1..1]
 a|
 
 |xref:BASE:base_types:definitions_package.adoc#_basic_definitions_class[BASIC_DEFINITIONS].*Default_encoding*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}"UTF-8"` [1..1]
@@ -90,7 +90,7 @@ a|True if current object not equal to `_other_`. Returns not `_equal_()`.
 other: `xref:RM:data_types:quantity_package.adoc#_dv_quantified_class[DV_QUANTIFIED][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
-__Pre_comparable__: `is_strictly_comparable()` +
+__Pre_comparable__: `is_strictly_comparable_to (other)` +
  +
 __Post_result__: `Result = magnitude < other.magnitude` [1..1]
 a|True if `_other_` is less than this Quantified object. Based on comparison of `_magnitude_`.

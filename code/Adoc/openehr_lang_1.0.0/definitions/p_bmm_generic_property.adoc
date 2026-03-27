@@ -14,12 +14,12 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*type_def*: `xref:LANG:bmm_persistence_package.adoc#_p_bmm_generic_type_class[P_BMM_GENERIC_TYPE]`
 a|Type definition of this property, if not a simple String type reference. Persistent attribute.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*bmm_property*: `xref:LANG:bmm:core_package.adoc#_bmm_unitary_property_class[BMM_UNITARY_PROPERTY]`
 a|`BMM_PROPERTY` created by `_create_bmm_property_definition_`.
 |===

@@ -21,7 +21,7 @@ h|*1..1*
 a|The path to the archetype node.
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*item*: `xref:AM:AOM2:constraint_model-class_definitions.adoc#_archetype_constraint_class[ARCHETYPE_CONSTRAINT]`
 a|
 |===

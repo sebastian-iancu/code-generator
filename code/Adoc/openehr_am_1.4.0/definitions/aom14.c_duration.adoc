@@ -57,7 +57,7 @@ h|*0..1*
 a|Range of Durations specifying constraint.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*assumed_value*: `xref:BASE:foundation_types:time_types.adoc#_iso8601_duration_class[Iso8601_duration]`
 a|The value to assume if this item is not included in data, due to being part of an optional structure.
 |===

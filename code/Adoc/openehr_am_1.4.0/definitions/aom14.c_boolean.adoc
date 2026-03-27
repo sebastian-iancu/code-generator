@@ -22,7 +22,7 @@ h|*1..1*
 a|True if the value False is allowed.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*assumed_value*: `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
 a|The value to assume if this item is not included in data, due to being part of an optional structure.
 |===

@@ -9,7 +9,6 @@ abstract class AUTHORED_RESOURCE {
   + is_controlled : Boolean [0..1]
   + annotations : RESOURCE_ANNOTATIONS [0..1]
   + translations : Hash<String,TRANSLATION_DETAILS> [0..1]
-  + current_revision() : String [1]
   + languages_available() : List<String> [1..*]
 }
 

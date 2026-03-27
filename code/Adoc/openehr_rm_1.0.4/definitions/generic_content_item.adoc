@@ -58,7 +58,7 @@ h|*0..1*
 a|Other details about the content item.
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*item*: `xref:RM:common:archetyped_package.adoc#_locatable_class[LOCATABLE]`
 a|Content object.
 |===

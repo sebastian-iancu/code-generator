@@ -95,7 +95,7 @@ other: `xref:BASE:foundation_types:primitive_types.adoc#_ordered_class[Ordered][
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` [1..1]
 a|True if current object not equal to `_other_`. Returns not `_equal_()`.
 
-|xref:BASE:foundation_types:primitive_types.adoc#_string_class[String].*less_than* ( +
+|xref:BASE:foundation_types:primitive_types.adoc#_string_class[String].*less_than* __alias__ "<" ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` [1..1]
 a|Lexical comparison of string content based on ordering in relevant character set.

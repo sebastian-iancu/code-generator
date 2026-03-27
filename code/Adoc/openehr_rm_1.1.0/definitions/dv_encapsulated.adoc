@@ -22,9 +22,6 @@ h|*0..1*
 a|Optional indicator of the localised language in which the data is written, if relevant. Coded from openEHR Code Set `languages`.
 
 h|*Invariants*
-2+a|__Size_valid__: `size >= 0`
-
-h|
 2+a|__Language_valid__: `language /= Void implies code_set (Code_set_id_languages).has_code (language)`
 
 h|

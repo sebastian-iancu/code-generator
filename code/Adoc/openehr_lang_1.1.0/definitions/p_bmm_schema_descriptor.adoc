@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1 +
-(effected)*
+(redefined)*
 |*bmm_schema*: `xref:LANG:bmm_persistence_package.adoc#_p_bmm_schema_class[P_BMM_SCHEMA]`
 a|Persistent form of model.
 |===

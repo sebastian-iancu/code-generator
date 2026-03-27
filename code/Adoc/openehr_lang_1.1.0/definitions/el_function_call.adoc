@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*agent*: `xref:LANG:bmm:expression_package.adoc#_el_function_agent_class[EL_FUNCTION_AGENT]`
 a|The function agent being called.
 
@@ -29,7 +29,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*eval_type* (): `link:/classes/BMM_TYPE[BMM_TYPE] `
 a|Return `_agent.definition.type_`.
 

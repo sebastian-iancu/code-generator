@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*members*: `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:AM:AOM2:constraint_model-class_definitions.adoc#_c_primitive_object_class[C_PRIMITIVE_OBJECT]>`
 a|Object constraint members of this tuple group.
 

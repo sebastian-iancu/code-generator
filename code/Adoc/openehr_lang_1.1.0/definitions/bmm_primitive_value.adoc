@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*type*: `link:/classes/BMM_SIMPLE_TYPE[BMM_SIMPLE_TYPE] `
 a|Concrete type of this literal.
 |===

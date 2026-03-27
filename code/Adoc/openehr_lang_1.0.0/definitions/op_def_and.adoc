@@ -23,7 +23,7 @@ h|*0..1*
 a|
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*evaluation_agent*: `link:/classes/FUNCTION[FUNCTION] <>`
 a|
 |===

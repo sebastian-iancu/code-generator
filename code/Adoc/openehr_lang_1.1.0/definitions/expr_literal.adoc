@@ -14,7 +14,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1 +
-(effected)*
+(redefined)*
 |*item*: `xref:BASE:foundation_types:overview.adoc#_any_class[Any]`
 a|A statically set constant value of a primitive type.
 |===

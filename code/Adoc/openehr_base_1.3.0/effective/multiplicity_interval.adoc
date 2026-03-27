@@ -11,7 +11,7 @@
 |*Multiplicity_range_marker*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}".."` [1..1]
 a|Marker to use in string form of interval between limits.
 
-|*Multiplicity_unbounded_marker*: `xref:BASE:foundation_types:primitive_types.adoc#_character_class[Character]{nbsp}={nbsp}'*'` [1..1]
+|*Multiplicity_unbounded_marker*: `xref:BASE:foundation_types:primitive_types.adoc#_character_class[Character]{nbsp}={nbsp}'&#42;'` [1..1]
 a|Symbol to use to indicate upper limit unbounded.
 
 2+h|*Attributes*

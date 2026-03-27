@@ -48,7 +48,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*magnitude* (): `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real]`
 a|Effective magnitude represented by ratio.
 

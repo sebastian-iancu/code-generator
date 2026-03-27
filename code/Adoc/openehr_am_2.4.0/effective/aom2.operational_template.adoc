@@ -46,7 +46,7 @@ a|True if this resource is under any kind of change control (even file copying),
 |xref:BASE:resource:resource_package.adoc#_authored_resource_class[AUTHORED_RESOURCE].*annotations*: `xref:BASE:resource:resource_package.adoc#_resource_annotations_class[RESOURCE_ANNOTATIONS]` [0..1]
 a|Annotations on individual items within the resource, keyed by path. The inner table takes the form of a Hash table of String values keyed by String tags.
 
-|xref:BASE:resource:resource_package.adoc#_authored_resource_class[AUTHORED_RESOURCE].*translations*: `xref:BASE:foundation_types:structure_types.adoc#_hash_class[Hash]<xref:BASE:foundation_types:overview.adoc#_any_class[Any],xref:BASE:resource:resource_package.adoc#_translation_details_class[TRANSLATION_DETAILS]>` [0..1]
+|xref:BASE:resource:resource_package.adoc#_authored_resource_class[AUTHORED_RESOURCE].*translations*: `xref:BASE:foundation_types:structure_types.adoc#_hash_class[Hash]<xref:BASE:foundation_types:primitive_types.adoc#_string_class[String],xref:BASE:resource:resource_package.adoc#_translation_details_class[TRANSLATION_DETAILS]>` [0..1]
 a|List of details for each natural translation made of this resource, keyed by language code. For each translation listed here, there must be corresponding sections in all language-dependent parts of the resource. The `_original_language_` does not appear in this list.
 
 |xref:AM:AOM2:archetype_package.adoc#_authored_archetype_class[AUTHORED_ARCHETYPE].*adl_version*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` [0..1]
@@ -95,11 +95,6 @@ a|Specialisation depth of this archetype; larger than 0 if this archetype has a 
 __post-condition__: `Result implies parent_archetype_hrid /= Void` [1..1]
 a|True if this archetype is a specialisation of another.
 
-|xref:BASE:resource:resource_package.adoc#_authored_resource_class[AUTHORED_RESOURCE].*current_revision* (): `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` +
- +
-__Post__: `Result = revision_history.most_recent_version` [1..1]
-a|Most recent revision in revision_history if is_controlled else  (uncontrolled) .
-
 |xref:BASE:resource:resource_package.adoc#_authored_resource_class[AUTHORED_RESOURCE].*languages_available* (): `xref:BASE:foundation_types:structure_types.adoc#_list_class[List]<xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]>` [1..1]
 a|Total list of languages available in this resource, derived from original_language and translations.
 
@@ -118,16 +113,12 @@ a|
 
 2+a|xref:BASE:resource:resource_package.adoc#_authored_resource_class[AUTHORED_RESOURCE].__Original_language_valid__: `code_set (Code_set_id_languages).has_code (original_language.as_string)`
 
-2+a|xref:BASE:resource:resource_package.adoc#_authored_resource_class[AUTHORED_RESOURCE].__Current_revision_valid__: `(current_revision /= Void and not is_controlled) implies current_revision.is_equal ("(uncontrolled)")`
-
 2+a|xref:BASE:resource:resource_package.adoc#_authored_resource_class[AUTHORED_RESOURCE].__Translations_valid__: `translations /= Void implies (not translations.is_empty and not translations.has (orginal_language.code_string))`
 
 2+a|xref:BASE:resource:resource_package.adoc#_authored_resource_class[AUTHORED_RESOURCE].__Description_valid__: `translations /= Void implies (description.details.for_all (d &#124;
 translations.has_key (d.language.code_string)))`
 
 2+a|xref:BASE:resource:resource_package.adoc#_authored_resource_class[AUTHORED_RESOURCE].__Languages_available_valid__: `languages_available.has (original_language)`
-
-2+a|xref:BASE:resource:resource_package.adoc#_authored_resource_class[AUTHORED_RESOURCE].__Revision_history_valid__: `is_controlled xor revision_history = Void`
 
 2+a|xref:AM:AOM2:archetype_package.adoc#_authored_archetype_class[AUTHORED_ARCHETYPE].__Invariant_adl_version_validity__: `valid_version_id (adl_version)`
 

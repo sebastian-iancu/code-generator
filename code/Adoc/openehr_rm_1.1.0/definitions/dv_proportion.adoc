@@ -48,7 +48,7 @@ h|*Functions*
 ^h|*Meaning*
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*magnitude* (): `xref:BASE:foundation_types:primitive_types.adoc#_real_class[Real]`
 a|Effective magnitude represented by ratio.
 
@@ -90,13 +90,13 @@ h|*1..1 +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_proportion_class[DV_PROPORTION][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
-__Pre_comparable__: `is_strictly_comparable()` +
+__Pre_comparable__: `is_strictly_comparable_to (other)` +
  +
 __Post_result__: `Result = magnitude < other.magnitude`
 a|True if this Proportion is less than  `_other_`. Only valid if `_is_strictly_comparable_to()_` is True.
 
 h|*1..1 +
-(redefined)*
+(effected)*
 |*is_strictly_comparable_to* ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_ordered_class[DV_ORDERED][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
