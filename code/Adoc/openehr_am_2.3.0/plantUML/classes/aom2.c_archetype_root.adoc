@@ -10,7 +10,7 @@ class C_COMPLEX_OBJECT  #whitesmoke;line:gray;line.dotted;text:gray {
   + attributes : List<C_ATTRIBUTE> [*]
   + attribute_tuples : List<C_ATTRIBUTE_TUPLE> [*]
   + any_allowed() : Boolean [1]
-  + c_conforms_to( other : C_COMPLEX_OBJECT [1], rmcc : FUNCTION<> [1] ) : Boolean [1]
+  + c_conforms_to( other : C_COMPLEX_OBJECT [1], rmcc : FUNCTION<Boolean,TUPLE2<String,String>> [1] ) : Boolean [1]
   + c_congruent_to( other : C_COMPLEX_OBJECT [1] ) : Boolean [1]
 }
 
@@ -30,7 +30,7 @@ abstract class C_OBJECT  #whitesmoke;line:gray;line.dotted;text:gray {
   + sibling_order : SIBLING_ORDER [0..1]
   + specialisation_depth() : Integer [1]
   + effective_occurrences() : Multiplicity_interval [1]
-  + c_conforms_to( other : C_OBJECT [1], rmcc : FUNCTION<> [1] ) : Boolean [1]
+  + c_conforms_to( other : C_OBJECT [1], rmcc : FUNCTION<Boolean,TUPLE2<String,String>> [1] ) : Boolean [1]
   + c_congruent_to( other : ARCHETYPE_CONSTRAINT [1] ) : Boolean [1]
   + occurrences_conforms_to( other : C_OBJECT [1] ) : Boolean [1]
   + node_id_conforms_to( other : C_OBJECT [1] ) : Boolean [1]
@@ -43,7 +43,7 @@ abstract class ARCHETYPE_CONSTRAINT  #whitesmoke;line:gray;line.dotted;text:gray
   + {abstract} is_prohibited() : Boolean [1]
   + has_path( a_path : String [1] ) : Boolean [1]
   + path() : String [1]
-  + {abstract} c_conforms_to( other : ARCHETYPE_CONSTRAINT [1], rmcc : FUNCTION<> [1] ) : Boolean [1]
+  + {abstract} c_conforms_to( other : ARCHETYPE_CONSTRAINT [1], rmcc : FUNCTION<Boolean,TUPLE2<String,String>> [1] ) : Boolean [1]
   + {abstract} c_congruent_to( other : ARCHETYPE_CONSTRAINT [1] ) : Boolean [1]
   + is_second_order_constrained() : Boolean [1]
   + is_root() : Boolean [1]

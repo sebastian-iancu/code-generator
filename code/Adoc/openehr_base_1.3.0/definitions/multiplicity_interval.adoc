@@ -27,7 +27,7 @@ h|*Functions*
 
 h|*1..1*
 |*is_open* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
-a|True if this interval imposes no constraints, i.e. is set to `0..*`.
+a|True if this interval imposes no constraints, i.e. is set to `0..&#42;`.
 
 h|*1..1*
 |*is_optional* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`

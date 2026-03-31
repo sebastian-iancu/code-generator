@@ -11,6 +11,6 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*evaluation_agent*: `link:/classes/FUNCTION[FUNCTION] <link:/classes/TUPLE,Any[TUPLE,Any] >`
+|*evaluation_agent*: `link:/classes/FUNCTION[FUNCTION] <link:/classes/TUPLE[TUPLE] ,link:/classes/Any[Any] >`
 a|
 |===

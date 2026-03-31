@@ -18,7 +18,7 @@ h|*1..1*
 a|Marker to use in string form of interval between limits.
 
 h|*1..1*
-|*Multiplicity_unbounded_marker*: `xref:BASE:foundation_types:primitive_types.adoc#_character_class[Character]{nbsp}={nbsp}'*'`
+|*Multiplicity_unbounded_marker*: `xref:BASE:foundation_types:primitive_types.adoc#_character_class[Character]{nbsp}={nbsp}'&#42;'`
 a|Symbol to use to indicate upper limit unbounded.
 
 h|*Functions*
@@ -27,7 +27,7 @@ h|*Functions*
 
 h|*1..1*
 |*is_open* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`
-a|True if this interval imposes no constraints, i.e. is set to `0..*`.
+a|True if this interval imposes no constraints, i.e. is set to `0..&#42;`.
 
 h|*1..1*
 |*is_optional* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]`

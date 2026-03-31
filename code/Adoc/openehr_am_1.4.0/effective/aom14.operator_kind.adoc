@@ -90,7 +90,7 @@ a|Type name of an object as a string. May include generic parameters, as in "Int
 |xref:BASE:foundation_types:primitive_types.adoc#_ordered_class[Ordered].*infix <* ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_ordered_class[Ordered][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` [1..1]
-a|Arithmetic comparison. In conjunction with ‘=’, enables the definition of the operators ‘>’, ‘>=’, ‘<=’, ‘<>’. In real type systems, this operator might be defined on another class for comparability.
+a|Arithmetic comparison. In conjunction with ‘=’, enables the definition of the operators ‘>’, ‘>=’, ‘\<=’, ‘<>’. In real type systems, this operator might be defined on another class for comparability.
 
 |xref:BASE:foundation_types:primitive_types.adoc#_string_class[String].*infix +* ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String][1]` +

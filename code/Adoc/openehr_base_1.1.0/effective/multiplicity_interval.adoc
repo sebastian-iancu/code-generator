@@ -11,7 +11,7 @@
 |*Multiplicity_range_marker*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}".."` [1..1]
 a|Marker to use in string form of interval between limits.
 
-|*Multiplicity_unbounded_marker*: `xref:BASE:foundation_types:primitive_types.adoc#_character_class[Character]{nbsp}={nbsp}'*'` [1..1]
+|*Multiplicity_unbounded_marker*: `xref:BASE:foundation_types:primitive_types.adoc#_character_class[Character]{nbsp}={nbsp}'&#42;'` [1..1]
 a|Symbol to use to indicate upper limit unbounded.
 
 2+h|*Attributes*
@@ -76,7 +76,7 @@ other: `xref:BASE:foundation_types:interval.adoc#_interval_class[Interval][1]` +
 a|True if current interval properly contains `other`? True if all points of `other` are inside the current interval.
 
 |*is_open* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` [1..1]
-a|True if this interval imposes no constraints, i.e. is set to `0..*`.
+a|True if this interval imposes no constraints, i.e. is set to `0..&#42;`.
 
 |*is_optional* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` [1..1]
 a|True if this interval expresses optionality, i.e. `0..1`.

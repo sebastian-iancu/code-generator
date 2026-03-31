@@ -47,9 +47,6 @@
         "timezone_validity": {
             "name": "timezone_validity",
             "documentation": "Validity of timezone in constrained date.",
-            "post_conditions": {
-                "": ""
-            },
             "result": {
                 "_type": "P_BMM_SIMPLE_TYPE",
                 "type": "VALIDITY_KIND"

@@ -34,11 +34,11 @@ h|*0..1*
 a|Validity of second in constrained time.
 
 h|*0..1*
-|*millisecond_valdity*: `xref:BASE:base_types:definitions_package.adoc#_validity_kind_enumeration[VALIDITY_KIND]`
+|*millisecond_validity*: `xref:BASE:base_types:definitions_package.adoc#_validity_kind_enumeration[VALIDITY_KIND]`
 a|Validity of millisecond in constrained time.
 
 h|*0..1*
-|*timezone_valdity*: `xref:BASE:base_types:definitions_package.adoc#_validity_kind_enumeration[VALIDITY_KIND]`
+|*timezone_validity*: `xref:BASE:base_types:definitions_package.adoc#_validity_kind_enumeration[VALIDITY_KIND]`
 a|Validity of timezone in constrained date.
 
 h|*0..1*

@@ -113,7 +113,7 @@ a|Type name of an object as a string. May include generic parameters, as in "Int
 |_(abstract)_ xref:BASE:foundation_types:primitive_types.adoc#_ordered_class[Ordered].*infix <* ( +
 other: `xref:BASE:foundation_types:primitive_types.adoc#_ordered_class[Ordered][1]` +
 ): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` [1..1]
-a|Arithmetic comparison. In conjunction with ‘=’, enables the definition of the operators ‘>’, ‘>=’, ‘<=’, ‘<>’. In real type systems, this operator might be defined on another class for comparability.
+a|Arithmetic comparison. In conjunction with ‘=’, enables the definition of the operators ‘>’, ‘>=’, ‘\<=’, ‘<>’. In real type systems, this operator might be defined on another class for comparability.
 
 |*is_strictly_comparable_to* ( +
 other: `xref:RM:data_types:quantity_package.adoc#_dv_ordered_class[DV_ORDERED][1]` +
@@ -133,7 +133,7 @@ a|Value is in the normal range, determined by comparison of the value to the nor
 
 |xref:RM:data_types:quantity_package.adoc#_dv_quantified_class[DV_QUANTIFIED].*valid_magnitude_status* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
-__Post__: `Result = s.is_equal (“=”) or s.is_equal (“<”) or s.is_equal (“>”) or s.is_equal (“<=”) or s.is_equal (“>=”) or s.is_equal (“~”)` [1..1]
+__Post__: `Result = s.is_equal (“=”) or s.is_equal (“<”) or s.is_equal (“>”) or s.is_equal (“\<=”) or s.is_equal (“>=”) or s.is_equal (“~”)` [1..1]
 a|Test whether a string value is one of the valid values for the magnitude_status attribute.
 
 |*magnitude* (): `xref:BASE:foundation_types:primitive_types.adoc#_double_class[Double]` [1..1]

@@ -12,7 +12,8 @@
             "type_def": {
                 "root_type": "FUNCTION",
                 "generic_parameters": [
-                    "TUPLE,Any"
+                    "TUPLE",
+                    "Any"
                 ]
             }
         }

@@ -23,7 +23,7 @@ h|*1..1*
 a|
 
 h|*1..1*
-|*Regex_any_pattern*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}".*"`
+|*Regex_any_pattern*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}".&#42;"`
 a|
 
 h|*1..1*

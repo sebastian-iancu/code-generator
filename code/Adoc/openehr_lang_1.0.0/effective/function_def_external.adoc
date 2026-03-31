@@ -6,6 +6,6 @@
 
 2+h|*Attributes*
 
-|*evaluation_agent*: `link:/classes/FUNCTION[FUNCTION] <link:/classes/TUPLE,Any[TUPLE,Any] >` [1..1]
+|*evaluation_agent*: `link:/classes/FUNCTION[FUNCTION] <link:/classes/TUPLE[TUPLE] ,link:/classes/Any[Any] >` [1..1]
 a|
 |===

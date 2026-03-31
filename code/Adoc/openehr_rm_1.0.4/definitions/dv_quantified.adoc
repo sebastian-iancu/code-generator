@@ -37,7 +37,7 @@ h|*Functions*
 h|*1..1*
 |*valid_magnitude_status* (): `xref:BASE:foundation_types:primitive_types.adoc#_boolean_class[Boolean]` +
  +
-__Post__: `Result = s.is_equal (“=”) or s.is_equal (“<”) or s.is_equal (“>”) or s.is_equal (“<=”) or s.is_equal (“>=”) or s.is_equal (“~”)`
+__Post__: `Result = s.is_equal (“=”) or s.is_equal (“<”) or s.is_equal (“>”) or s.is_equal (“\<=”) or s.is_equal (“>=”) or s.is_equal (“~”)`
 a|Test whether a string value is one of the valid values for the magnitude_status attribute.
 
 h|*1..1 +

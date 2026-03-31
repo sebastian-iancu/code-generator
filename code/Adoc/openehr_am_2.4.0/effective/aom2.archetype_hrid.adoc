@@ -22,7 +22,7 @@ a|Name of the root class of this archetype.
 a|The short concept name of the archetype as used in the multi-axial `_archetype_hrid_`.
 
 |*release_version*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]` [1..1]
-a|The full numeric version of this archetype consisting of 3 parts, e.g. `"1.8.2"`. The `_archetype_hrid_` feature includes only the major version.
+a|The full numeric version of this archetype consisting of 3 parts, e.g. `"1.8.2"`.
 
 |*version_status*: `xref:BASE:base_types:definitions_package.adoc#_version_status_enumeration[VERSION_STATUS]` [1..1]
 a|The status of the version, i.e.:

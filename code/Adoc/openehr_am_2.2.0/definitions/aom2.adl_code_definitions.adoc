@@ -27,11 +27,11 @@ h|*1..1*
 a|Character used to separate numeric parts of codes belonging to different specialisation levels.
 
 h|*1..1*
-|*Code_regex_pattern*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}"(0|[1-9][0-9]*)(\.(0|[1-9][0-9]*))*"`
+|*Code_regex_pattern*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}"(0&#124;[1-9][0-9]&#42;)(\.(0&#124;[1-9][0-9]&#42;))&#42;"`
 a|Regex used to define the legal numeric part of any archetype code. Corresponds to the simple pattern of dotted numbers, as used in typical multi-level numbering schemes.
 
 h|*1..1*
-|*Root_code_regex_pattern*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}"^id1(\.1)*$"`
+|*Root_code_regex_pattern*: `xref:BASE:foundation_types:primitive_types.adoc#_string_class[String]{nbsp}={nbsp}"^id1(\.1)&#42;$"`
 a|Regex pattern of the root id code of any archetype. Corresponds to codes of the form id1, id1.1, id1.1.1 etc..
 
 h|*1..1*

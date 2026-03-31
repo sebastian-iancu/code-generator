@@ -14,7 +14,7 @@ class C_ATTRIBUTE {
   + rm_attribute_path() : String [1]
   + is_single() : Boolean [1]
   + c_congruent_to( other : ARCHETYPE_CONSTRAINT [1] ) : Boolean [1]
-  + c_conforms_to( other : ARCHETYPE_CONSTRAINT [1], rmcc : FUNCTION<> [1] ) : Boolean [1]
+  + c_conforms_to( other : ARCHETYPE_CONSTRAINT [1], rmcc : FUNCTION<Boolean,TUPLE2<String,String>> [1] ) : Boolean [1]
   + is_prohibited() : Boolean [1]
 }
 
@@ -24,7 +24,7 @@ abstract class ARCHETYPE_CONSTRAINT  #whitesmoke;line:gray;line.dotted;text:gray
   + {abstract} is_prohibited() : Boolean [1]
   + has_path( a_path : String [1] ) : Boolean [1]
   + path() : String [1]
-  + {abstract} c_conforms_to( other : ARCHETYPE_CONSTRAINT [1], rmcc : FUNCTION<> [1] ) : Boolean [1]
+  + {abstract} c_conforms_to( other : ARCHETYPE_CONSTRAINT [1], rmcc : FUNCTION<Boolean,TUPLE2<String,String>> [1] ) : Boolean [1]
   + {abstract} c_congruent_to( other : ARCHETYPE_CONSTRAINT [1] ) : Boolean [1]
   + is_second_order_constrained() : Boolean [1]
   + is_root() : Boolean [1]
@@ -34,6 +34,7 @@ abstract class ARCHETYPE_CONSTRAINT  #whitesmoke;line:gray;line.dotted;text:gray
 class ADL_CODE_DEFINITIONS  #whitesmoke;line:gray;line.dotted;text:gray {
   + codes_conformant( a_child_code : String [1], a_parent_code : String [1] ) : Boolean [1]
   + is_adl_code( a_code : String [1] ) : Boolean [1]
+  + is_at_code( a_code : String [1] ) : Boolean [1]
   + is_id_code( a_code : String [1] ) : Boolean [1]
   + is_value_code( a_code : String [1] ) : Boolean [1]
   + is_value_set_code( a_code : String [1] ) : Boolean [1]
