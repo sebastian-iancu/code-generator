@@ -27,12 +27,11 @@ readonly class AsciidocDefinition
 {
     public const array TEXT_REPLACEMENT = [
         '|' => '&#124;',
-        '"<="' => '"\<="',
-        ' <=' => ' \<=',
-        '(<=)' => '(\<=)',
-        '".*"' => '".&#42;"',
-        '/.*/' => '/.&#42;/',
+        '<=' => '\<=',
+        '.*' => '.&#42;',
         "'*'" => "'&#42;'",
+        ")*" => ")&#42;",
+        "]*" => "]&#42;",
         " {" => " \{",
     ];
 
@@ -291,7 +290,8 @@ readonly class AsciidocDefinition
         $maxOccurs = 1;
         $type = $this->formatType($constant->type, $prefix);
         $card = $minOccurs . '..' . $maxOccurs;
-        $signature = '*' . $constant->name . '*: `' . $type . '{nbsp}={nbsp}' . $constant->value . '`';
+        $value = $constant->value !== null ? $this->formatText($constant->value) : '';
+        $signature = '*' . $constant->name . '*: `' . $type . '{nbsp}={nbsp}' . $value . '`';
         return [$card, $signature];
     }
 
