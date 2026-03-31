@@ -219,7 +219,14 @@ EOD;
     private function formatGenericParameterType(BmmGenericType $type): string
     {
         if (!empty($type->genericParameters)) {
-            $genericParameters = implode(',', $type->genericParameters);
+            $genericParameters = implode(',', array_map(function ($t) {
+                if (is_string($t)) {
+                    return $t;
+                } elseif ($t instanceof BmmGenericType) {
+                    return $this->formatGenericParameterType($t);
+                }
+                return '';
+            }, $type->genericParameters));
         } elseif (!empty($type->genericParameterDefs)) {
             $genericParameters = implode(',', array_map(function ($t) {
                 if ($t instanceof BmmGenericType) {

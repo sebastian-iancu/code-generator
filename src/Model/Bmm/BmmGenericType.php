@@ -58,10 +58,16 @@ readonly class BmmGenericType extends AbstractBmmType implements JsonSerializabl
      */
     public static function fromArray(array $data): self
     {
+        $genericParameters = array_map(function ($genericParameter) {
+            if (is_array($genericParameter)) {
+                return AbstractBmmType::fromArray($genericParameter);
+            }
+            return $genericParameter;
+        }, $data['generic_parameters'] ?? []);
         $instance = new self(
             rootType: $data['root_type'],
             genericParameterDefs: new Collection(),
-            genericParameters: $data['generic_parameters'] ?? [],
+            genericParameters: $genericParameters,
         );
         if (!empty($data['generic_parameter_defs']) && is_iterable($data['generic_parameter_defs'])) {
             array_walk($data['generic_parameter_defs'], function ($genericParameterDefData, $key) use ($instance) {

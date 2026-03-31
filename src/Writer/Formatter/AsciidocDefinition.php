@@ -388,7 +388,12 @@ readonly class AsciidocDefinition
     {
         if (!empty($type->genericParameters)) {
             $genericParameters = implode(',', array_map(function ($t) use ($prefix) {
-                return $this->formatType($t, $prefix);
+                if (is_string($t)) {
+                    return $this->formatType($t, $prefix);
+                } elseif ($t instanceof BmmGenericType) {
+                    return $this->formatGenericType($t, $prefix);
+                }
+                return '';
             }, $type->genericParameters));
         } elseif (!empty($type->genericParameterDefs)) {
             $genericParameters = implode(',', array_map(function ($t) use ($prefix) {

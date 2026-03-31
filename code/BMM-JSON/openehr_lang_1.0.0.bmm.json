@@ -494,7 +494,8 @@
                     "type_def": {
                         "root_type": "FUNCTION",
                         "generic_parameters": [
-                            "TUPLE,Any"
+                            "TUPLE",
+                            "Any"
                         ]
                     }
                 }
@@ -644,7 +645,8 @@
                     "type_def": {
                         "root_type": "FUNCTION",
                         "generic_parameters": [
-                            "TUPLE,Any"
+                            "TUPLE",
+                            "Any"
                         ]
                     }
                 }
