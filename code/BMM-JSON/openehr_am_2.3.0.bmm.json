@@ -699,7 +699,7 @@
                 "node_id": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "node_id",
-                    "documentation": "Semantic identifier of this node, used to dis-tinguish sibling nodes. All nodes must have a `_node_id_`; for nodes under a container `C_ATTRIBUTE`, the id must be an id-code must be defined in the archetype terminology. For valid structures, all node ids are id-codes.\n\nFor `C_PRIMITIVE_OBJECTs` represented in ADL inline form, this attribute will have the special value `Primitive_node_id`; otherwise it will have the node id read during parsing.",
+                    "documentation": "Semantic identifier of this node, used to distinguish sibling nodes. All nodes must have a `_node_id_`; for nodes under a container `C_ATTRIBUTE`, the id must be an id-code must be defined in the archetype terminology. For valid structures, all node ids are id-codes.\n\nFor `C_PRIMITIVE_OBJECTs` represented in ADL inline form, this attribute will have the special value `Primitive_node_id`; otherwise it will have the node id read during parsing.",
                     "is_mandatory": true,
                     "type": "String"
                 },
@@ -2518,9 +2518,6 @@
                 "timezone_validity": {
                     "name": "timezone_validity",
                     "documentation": "Validity of timezone in constrained date\/time.",
-                    "post_conditions": {
-                        "": ""
-                    },
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "VALIDITY_KIND"
@@ -2571,24 +2568,24 @@
                 }
             },
             "functions": {
-                "years_allowed:": {
-                    "name": "years_allowed:",
+                "years_allowed": {
+                    "name": "years_allowed",
                     "documentation": "True if years are allowed in the constrained Duration.",
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
-                "months_allowed:": {
-                    "name": "months_allowed:",
+                "months_allowed": {
+                    "name": "months_allowed",
                     "documentation": "True if months are allowed in the constrained Duration.",
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
-                "weeks_allowed:": {
-                    "name": "weeks_allowed:",
+                "weeks_allowed": {
+                    "name": "weeks_allowed",
                     "documentation": "True if weeks are allowed in the constrained Duration.",
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",

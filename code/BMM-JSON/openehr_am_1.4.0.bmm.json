@@ -720,7 +720,7 @@
                 "node_id": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "node_id",
-                    "documentation": "Semantic identifier of this node, used to dis-tinguish sibling nodes. All nodes must have a node_id; for nodes under a container C_ATTRIBUTE, the id must be an id-code must be defined in the archetype terminolo-gy. For valid structures, all node ids are id-codes.\nFor C_PRIMITIVE_OBJECTs, it will have the special value Primitive_node_id.\n",
+                    "documentation": "Semantic identifier of this node, used to distinguish sibling nodes. All nodes must have a node_id; for nodes under a container C_ATTRIBUTE, the id must be an id-code must be defined in the archetype terminology. For valid structures, all node ids are at-codes.\nFor C_PRIMITIVE_OBJECTs, it will have the special value Primitive_node_id.",
                     "is_mandatory": true,
                     "type": "String"
                 }
@@ -1670,12 +1670,6 @@
                     "documentation": "Validity of month in constrained date.",
                     "type": "VALIDITY_KIND"
                 },
-                "timezone_validity": {
-                    "_type": "P_BMM_SINGLE_PROPERTY",
-                    "name": "timezone_validity",
-                    "documentation": "Validity of timezone in constrained date.",
-                    "type": "VALIDITY_KIND"
-                },
                 "range": {
                     "_type": "P_BMM_GENERIC_PROPERTY",
                     "name": "range",
@@ -1738,15 +1732,15 @@
                     "documentation": "Validity of second in constrained time.",
                     "type": "VALIDITY_KIND"
                 },
-                "millisecond_valdity": {
+                "millisecond_validity": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
-                    "name": "millisecond_valdity",
+                    "name": "millisecond_validity",
                     "documentation": "Validity of millisecond in constrained time.",
                     "type": "VALIDITY_KIND"
                 },
-                "timezone_valdity": {
+                "timezone_validity": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
-                    "name": "timezone_valdity",
+                    "name": "timezone_validity",
                     "documentation": "Validity of timezone in constrained date.",
                     "type": "VALIDITY_KIND"
                 },

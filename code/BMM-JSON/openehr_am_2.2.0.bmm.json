@@ -2545,9 +2545,6 @@
                 "timezone_validity": {
                     "name": "timezone_validity",
                     "documentation": "Validity of timezone in constrained date.",
-                    "post_conditions": {
-                        "": ""
-                    },
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "VALIDITY_KIND"
@@ -2605,9 +2602,6 @@
                 "timezone_validity": {
                     "name": "timezone_validity",
                     "documentation": "Validity of timezone in constrained date.",
-                    "post_conditions": {
-                        "": ""
-                    },
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "VALIDITY_KIND"
@@ -2670,24 +2664,24 @@
                 }
             },
             "functions": {
-                "years_allowed:": {
-                    "name": "years_allowed:",
+                "years_allowed": {
+                    "name": "years_allowed",
                     "documentation": "True if years are allowed in the constrained Duration.",
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
-                "months_allowed:": {
-                    "name": "months_allowed:",
+                "months_allowed": {
+                    "name": "months_allowed",
                     "documentation": "True if months are allowed in the constrained Duration.",
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
-                "weeks_allowed:": {
-                    "name": "weeks_allowed:",
+                "weeks_allowed": {
+                    "name": "weeks_allowed",
                     "documentation": "True if weeks are allowed in the constrained Duration.",
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",

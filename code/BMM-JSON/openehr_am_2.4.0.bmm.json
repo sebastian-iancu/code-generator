@@ -473,7 +473,7 @@
                 "release_version": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "release_version",
-                    "documentation": "The full numeric version of this archetype consisting of 3 parts, e.g. `\"1.8.2\"`. The `_archetype_hrid_` feature includes only the major version.",
+                    "documentation": "The full numeric version of this archetype consisting of 3 parts, e.g. `\"1.8.2\"`.",
                     "is_mandatory": true,
                     "type": "String"
                 },
@@ -699,9 +699,22 @@
                 "node_id": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "node_id",
-                    "documentation": "Semantic identifier of this node, used to dis-tinguish sibling nodes. All nodes must have a `_node_id_`; for nodes under a container `C_ATTRIBUTE`, the id must be an id-code must be defined in the archetype terminology. For valid structures, all node ids are id-codes.\n\nFor `C_PRIMITIVE_OBJECTs` represented in ADL inline form, this attribute will have the special value `Primitive_node_id`; otherwise it will have the node id read during parsing.",
+                    "documentation": "Semantic identifier of this node, used to distinguish sibling nodes. All nodes must have a `_node_id_`; for nodes under a container `C_ATTRIBUTE`. For at-coded archetypes `_node_id_` must be an at-code defined in the archetype terminology and for valid structures all node ids are at-codes. For id-coded archetypes  `_node_id_` must be an id-code defined in the archetype terminology and for valid structures all node ids are id-codes.\n\nFor `C_PRIMITIVE_OBJECTs` represented in ADL inline form, this attribute will have the special value `Primitive_node_id`; otherwise it will have the node id read during parsing.\n\n",
                     "is_mandatory": true,
                     "type": "String"
+                },
+                "alternative_ids": {
+                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "name": "alternative_ids",
+                    "documentation": "Additional identifiers of this node. openEHR archetypes can carry original ALD2 id-codes in this attribute and it can also carry human readable codes for future use. Alternative ids must be unique within the archetype.",
+                    "type_def": {
+                        "container_type": "List",
+                        "type": "String"
+                    },
+                    "cardinality": {
+                        "lower": 0,
+                        "upper_unbounded": true
+                    }
                 },
                 "is_deprecated": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
@@ -1478,7 +1491,7 @@
         },
         "C_ARCHETYPE_ROOT": {
             "name": "C_ARCHETYPE_ROOT",
-            "documentation": "A specialisation of `C_COMPLEX_OBJECT` whose node_id attribute is an archetype identifier rather than the normal internal node code (i.e. id-code).\n\nUsed in two situations. The first is to represent an 'external reference' to an archetype from within another archetype or template. This supports re-use. The second use is within a template, where it is used as a slot-filler. \n\nFor a new external reference, the `_node_id_` is set in the normal way, i.e. with a new code at the specialisation level of the archetype.\n\nFor a slot-filler or a redefined external reference, the `_node_id_` is set to a specialised version of the `_node_id_` of the node being specialised, allowing matching to occur during flattening.\n\nIn all uses within source archetypes and templates, the `_children_` attribute is `Void`.\n\nIn an operational template, the `_node_id_` is converted to the `_archetype_ref_`, and the structure contains the result of flattening any template overlay structure and the underlying flat archetype.\n",
+            "documentation": "A specialisation of `C_COMPLEX_OBJECT` whose node_id attribute is an archetype identifier rather than the normal internal node code (i.e. at-code/id-code).\n\nUsed in two situations: the first is to represent an 'external reference' to an archetype from within another archetype or template - this supports re-use. The second use is within a template, where it is used as a slot-filler.\n\nFor a new external reference, the `_node_id_` is set in the normal way, i.e. with a new code at the specialisation level of the archetype.\n\nFor a slot-filler or a redefined external reference, the `_node_id_` is set to a specialised version of the `_node_id_` of the node being specialised, allowing matching to occur during flattening.\n\nIn all uses within source archetypes and templates, the `_children_` attribute is `Void`.\n\nIn an operational template, the `_node_id_` is converted to the `_archetype_ref_`, and the structure contains the result of flattening any template overlay structure and the underlying flat archetype.",
             "ancestors": [
                 "C_COMPLEX_OBJECT"
             ],
@@ -2518,9 +2531,6 @@
                 "timezone_validity": {
                     "name": "timezone_validity",
                     "documentation": "Validity of timezone in constrained date\/time.",
-                    "post_conditions": {
-                        "": ""
-                    },
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "VALIDITY_KIND"
@@ -2571,24 +2581,24 @@
                 }
             },
             "functions": {
-                "years_allowed:": {
-                    "name": "years_allowed:",
+                "years_allowed": {
+                    "name": "years_allowed",
                     "documentation": "True if years are allowed in the constrained Duration.",
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
-                "months_allowed:": {
-                    "name": "months_allowed:",
+                "months_allowed": {
+                    "name": "months_allowed",
                     "documentation": "True if months are allowed in the constrained Duration.",
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",
                         "type": "Boolean"
                     }
                 },
-                "weeks_allowed:": {
-                    "name": "weeks_allowed:",
+                "weeks_allowed": {
+                    "name": "weeks_allowed",
                     "documentation": "True if weeks are allowed in the constrained Duration.",
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",
@@ -2981,14 +2991,14 @@
                 "concept_code": {
                     "_type": "P_BMM_SINGLE_PROPERTY",
                     "name": "concept_code",
-                    "documentation": "Term code defining the meaning of the artefact as a whole, and always used as the id-code on the root node of the artefact. Must be defined in the `_term_definitions_` property.",
+                    "documentation": "Term code defining the meaning of the artefact as a whole, and always used as the at-code (at-coded archetypes) or id-code (id-coded archetypes) on the root node of the artefact. Must be defined in the `_term_definitions_` property.",
                     "is_mandatory": true,
                     "type": "String"
                 },
                 "term_definitions": {
                     "_type": "P_BMM_GENERIC_PROPERTY",
                     "name": "term_definitions",
-                    "documentation": "Directory of term definitions as a two-level table. The outer hash keys are language codes, e.g. `\"en\"`, `\"de\"`, while the inner hash keys are term codes, e.g. `\"id17\"`, `\"at4\"`.",
+                    "documentation": "Directory of term definitions as a two-level table. The outer hash keys are language codes, e.g. `\"en\"`, `\"de\"`, while the inner hash keys are term codes, e.g. `\"at0017\"`, `\"at0004\"` (at-coded archetypes) or `\"id17\"`, `\"at4\"` (id-coded archetypes).",
                     "is_mandatory": true,
                     "type_def": {
                         "root_type": "Hash",
@@ -3011,7 +3021,7 @@
                 "term_bindings": {
                     "_type": "P_BMM_GENERIC_PROPERTY",
                     "name": "term_bindings",
-                    "documentation": "Directory of bindings to external terminology codes and value sets, as a two-level table. The outer hash keys are terminology ids, e.g. `\"SNOMED_CT\"`, and the inner hash keys are constraint codes, e.g. `\"at4\"`, `\"ac13\"` or paths. The indexed `Uri` objects represent references to externally defined resources, either terms, ontology concepts, or terminology subsets \/ ref-sets.",
+                    "documentation": "Directory of bindings to external terminology codes and value sets, as a two-level table. The outer hash keys are terminology ids, e.g. `\"SNOMED_CT\"`, and the inner hash keys are constraint codes, e.g. `\"at0004\"`, `\"at4\"`, \"ac13\"` or paths. The indexed `Uri` objects represent references to externally defined resources, either terms, ontology concepts, or terminology subsets \/ ref-sets.",
                     "type_def": {
                         "root_type": "Hash",
                         "generic_parameter_defs": {
@@ -3038,12 +3048,15 @@
                     "type": "ARCHETYPE"
                 },
                 "value_sets": {
-                    "_type": "P_BMM_CONTAINER_PROPERTY",
+                    "_type": "P_BMM_GENERIC_PROPERTY",
                     "name": "value_sets",
                     "documentation": "Archetype-local value sets, each keyed by value-set id, i.e. an ac-code.",
                     "type_def": {
-                        "container_type": "List",
-                        "type": "String"
+                        "root_type": "Hash",
+                        "generic_parameters": [
+                            "String",
+                            "VALUE_SET"
+                        ]
                     },
                     "cardinality": {
                         "lower": 0,
@@ -3082,9 +3095,9 @@
                         "type": "Integer"
                     }
                 },
-                "id_codes": {
-                    "name": "id_codes",
-                    "documentation": "List of all id codes in the terminology., i.e. the 'id' codes in an ADL archetype, which are the `_node_id_` values on `C_OBJECT` descendants.",
+                "node_codes": {
+                    "name": "node_codes",
+                    "documentation": "For at-coded archetypes: list of all at codes in the terminology., i.e. the 'at' codes in an ADL archetype, which are the `_node_id_` values on `C_OBJECT` descendants. For id-coded archetypes: list of all id codes in the terminology., i.e. the 'id' codes in an ADL archetype, which are the `_node_id_` values on `C_OBJECT` descendants.",
                     "result": {
                         "_type": "P_BMM_CONTAINER_TYPE",
                         "container_type": "List",
@@ -3268,23 +3281,29 @@
         },
         "ADL_CODE_DEFINITIONS": {
             "name": "ADL_CODE_DEFINITIONS",
-            "documentation": "Definitions relating to the internal code system of archetypes.",
+            "documentation": "Definitions relating to the internal code system of archetypes.\n\nNOTE: ADL2 was initially released with code system using id-codes (for nodes), at-codes (for values only) and ac-codes (for value sets). As this proved to hinder its widespread use in the openEHR community (due to its impact on existing openEHR RM data), a code system matching the one used in ADL1.4 was introduced as the openEHR primary code system.\n\nopenEHR systems must support at least the at-coded ADL2 archetypes.",
             "constants": {
+                "At_code_leader": {
+                    "name": "At_code_leader",
+                    "documentation": "String leader of ‘identifier’ codes, i.e. codes used to identify at-coded archetype nodes.",
+                    "type": "String",
+                    "value": "\"at\""
+                },
                 "Id_code_leader": {
                     "name": "Id_code_leader",
-                    "documentation": "String leader of \u2018identifier\u2019 codes, i.e. codes used to identify archetype nodes.",
+                    "documentation": "String leader of ‘identifier’ codes, i.e. codes used to identify id-coded archetype nodes.",
                     "type": "String",
                     "value": "\"id\""
                 },
                 "Value_code_leader": {
                     "name": "Value_code_leader",
-                    "documentation": "String leader of \u2018value\u2019 codes, i.e. codes used to identify codes values, including value set members.",
+                    "documentation": "String leader of ‘value’ codes, i.e. codes used to identify codes values, including value set members.",
                     "type": "String",
                     "value": "\"at\""
                 },
                 "Value_set_code_leader": {
                     "name": "Value_set_code_leader",
-                    "documentation": "String leader of \u2018value set\u2019 codes, i.e. codes used to identify value sets.",
+                    "documentation": "String leader of ‘value set’ codes, i.e. codes used to identify value sets.",
                     "type": "String",
                     "value": "\"ac\""
                 },
@@ -3302,15 +3321,15 @@
                 },
                 "Root_code_regex_pattern": {
                     "name": "Root_code_regex_pattern",
-                    "documentation": "Regex pattern of the root id code of any archetype. Corresponds to codes of the form `id1`, `id1.1`, `id1.1.1` etc..",
+                    "documentation": "Regex pattern of the root code of any archetype. Corresponds to at-codes of the form `at0000`, `at0000.1`, `at0000.1.1` etc, and id-codes of the form `id1`, `id1.1`, `id1.1.1` etc. For at-coded ADL2 numbering starts with zero (i.e. `at0000`) while the id-coded ADL2 numbering starts with one (i.e. `id1`).",
                     "type": "String",
-                    "value": "\"^id1(\\.1)*$\""
+                    "value": "\"^(id1|at0000)(\\.1)*$\""
                 },
                 "Primitive_node_id": {
                     "name": "Primitive_node_id",
-                    "documentation": "Code id used for `C_PRIMITIVE_OBJECT` nodes on creation.",
+                    "documentation": "Code id used for `C_PRIMITIVE_OBJECT` nodes on creation.\n\nNOTE: For id-coded archetypes this is `\"id9999\"`.",
                     "type": "String",
-                    "value": "\"id9999\""
+                    "value": "\"at9999\""
                 }
             },
             "functions": {
@@ -3345,7 +3364,25 @@
                         }
                     },
                     "post_conditions": {
-                        "Post": "Result = is_id_code (a_code) or else is_value_code (a_code) or else is_value_set_code (a_code)"
+                        "Post": "Result = is_at_code (a_code) or else is_id_code (a_code) or else is_value_code (a_code) or else is_value_set_code (a_code)"
+                    },
+                    "result": {
+                        "_type": "P_BMM_SIMPLE_TYPE",
+                        "type": "Boolean"
+                    }
+                },
+                "is_at_code": {
+                    "name": "is_at_code",
+                    "documentation": "True if `_a_code_` is an ‘at’ code.",
+                    "parameters": {
+                        "a_code": {
+                            "_type": "P_BMM_SINGLE_FUNCTION_PARAMETER",
+                            "name": "a_code",
+                            "type": "String"
+                        }
+                    },
+                    "post_conditions": {
+                        "Post": "Result = a_code.starts_with (At_code_leader)"
                     },
                     "result": {
                         "_type": "P_BMM_SIMPLE_TYPE",
