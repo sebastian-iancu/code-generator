@@ -36,13 +36,14 @@ class AllXmi extends Command
                 // BASE_v1.0.4_and_RM-v1.0.4
                 $reader = new XmiReader();
                 $writer = new CodeGenerator($reader);
-                $reader->read('BASE-v1.0.4.xmi');
-                $writer->addWriter(new InternalModel('BASE-v1.0.4'));
+                $reader->read('BASE-v1.0.2.xmi');
+                $writer->addWriter(new InternalModel('BASE-v1.0.2'));
                 $writer->generate();
-                $reader->read('RM-v1.0.4.xmi');
+                $reader->read('RM-v1.0.2.xmi');
                 $writer = new CodeGenerator($reader);
-                $writer->addWriter(new InternalModel('BASE_v1.0.4_and_RM-v1.0.4'));
+                $writer->addWriter(new InternalModel('BASE_v1.0.2_and_RM-v1.0.2'));
                 $writer->generate();
+                return Command::SUCCESS;
                 // BASE-v1.1.0
                 $reader = new XmiReader();
                 $writer = new CodeGenerator($reader);
@@ -108,47 +109,65 @@ class AllXmi extends Command
                 $writer->addWriter(new InternalModel('TERM-v3.1.0-dev'));
                 $writer->generate();
             } else {
+//                $reader = new XmiReader();
+//                $writer = new CodeGenerator($reader);
+//                $reader->read('BASE-v1.0.2.xmi');
+//                $writer->addWriter(new InternalModel('BASE-v1.0.2'));
+//                $writer->generate();
+//                $reader = new XmiReader();
+//                $writer = new CodeGenerator($reader);
+//                $reader->read('BASE-v1.0.2.xmi');
+//                $writer->addWriter(new InternalModel('BASE-v1.0.2'));
+//                $writer->generate();
+
                 //
                 $reader = new XmiReader();
                 $writer = new CodeGenerator($reader);
-                $reader->read('BASE-v1.0.4.xmi');
-                $reader->read('RM-v1.0.4.xmi');
+                $reader->read('BASE-v1.0.2.xmi');
+//                $reader->read('RM-v1.0.3.xmi');
                 $writer->addWriter(new UmlToBmmWriter());
                 $writer->generate();
-                //
-                $reader = new XmiReader();
-                $writer = new CodeGenerator($reader);
-                $reader->read('BASE-v1.1.0.xmi');
-                $reader->read('AM-v2.2.0.xmi');
-                $writer->addWriter(new UmlToBmmWriter(['aom14']));
-                $writer->generate();
-                //
-                $reader = new XmiReader();
-                $writer = new CodeGenerator($reader);
-                $reader->read('BASE-v1.2.0.xmi');
-                $reader->read('LANG-v1.0.0.xmi');
-                $reader->read('TERM-v3.0.0.xmi');
-                $reader->read('RM-v1.1.0.xmi');
-                $reader->read('AM-v2.3.0.xmi');
-                $writer->addWriter(new UmlToBmmWriter(['aom14']));
-                $writer->generate();
-                //
-                $reader = new XmiReader();
-                $writer = new CodeGenerator($reader);
-                $reader->read('BASE-v1.3.0-dev.xmi');
-                $reader->read('LANG-v1.1.0-dev.xmi');
-                $reader->read('TERM-v3.1.0-dev.xmi');
-                $reader->read('AM-v2.4.0-dev.xmi');
-                $writer->addWriter(new UmlToBmmWriter(['aom14']));
-                $writer->generate();
-                // AOM14
-                $reader = new XmiReader();
-                $writer = new CodeGenerator($reader);
-                $reader->read('BASE-v1.3.0-dev.xmi');
-                $reader->read('RM-v1.2.0-dev.xmi');
-                $reader->read('AM-v1.4.0-dev.xmi');
-                $writer->addWriter(new UmlToBmmWriter(['aom2']));
-                $writer->generate();
+//                //
+//                $reader = new XmiReader();
+//                $writer = new CodeGenerator($reader);
+//                $reader->read('BASE-v1.0.4.xmi');
+//                $reader->read('RM-v1.0.4.xmi');
+//                $writer->addWriter(new UmlToBmmWriter());
+//                $writer->generate();
+//                //
+//                $reader = new XmiReader();
+//                $writer = new CodeGenerator($reader);
+//                $reader->read('BASE-v1.1.0.xmi');
+//                $reader->read('AM-v2.2.0.xmi');
+//                $writer->addWriter(new UmlToBmmWriter(['aom14']));
+//                $writer->generate();
+//                //
+//                $reader = new XmiReader();
+//                $writer = new CodeGenerator($reader);
+//                $reader->read('BASE-v1.2.0.xmi');
+//                $reader->read('LANG-v1.0.0.xmi');
+//                $reader->read('TERM-v3.0.0.xmi');
+//                $reader->read('RM-v1.1.0.xmi');
+//                $reader->read('AM-v2.3.0.xmi');
+//                $writer->addWriter(new UmlToBmmWriter(['aom14']));
+//                $writer->generate();
+//                //
+//                $reader = new XmiReader();
+//                $writer = new CodeGenerator($reader);
+//                $reader->read('BASE-v1.3.0-dev.xmi');
+//                $reader->read('LANG-v1.1.0-dev.xmi');
+//                $reader->read('TERM-v3.1.0-dev.xmi');
+//                $reader->read('AM-v2.4.0-dev.xmi');
+//                $writer->addWriter(new UmlToBmmWriter(['aom14']));
+//                $writer->generate();
+//                // AOM14
+//                $reader = new XmiReader();
+//                $writer = new CodeGenerator($reader);
+//                $reader->read('BASE-v1.3.0-dev.xmi');
+//                $reader->read('RM-v1.2.0-dev.xmi');
+//                $reader->read('AM-v1.4.0-dev.xmi');
+//                $writer->addWriter(new UmlToBmmWriter(['aom2']));
+//                $writer->generate();
             }
 
         } catch (\UnhandledMatchError $e) {

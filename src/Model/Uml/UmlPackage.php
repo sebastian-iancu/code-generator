@@ -23,7 +23,7 @@ class UmlPackage implements CollectableInterface
     public function __construct(SimpleXMLElement $xmlNode)
     {
         $this->id = (string)$xmlNode->attributes('xmi', true)?->id;
-        $this->name = (string)$xmlNode['name'];
+        $this->name = strtolower((string)$xmlNode['name']);
         $this->description = (string)$xmlNode->ownedComment['body'];
         // collecting all subPackages
         $this->umlPackages = new Collection();
@@ -79,7 +79,7 @@ class UmlPackage implements CollectableInterface
             $parts = explode('::', $prefix);
             $packageId = array_shift($parts);
             /** @var UmlPackage|null $umlPackage */
-            $umlPackage = $this->umlPackages->get($packageId);
+            $umlPackage = $this->umlPackages->get($packageId) ?? $this->umlPackages->get(strtoupper($packageId));
             if ($umlPackage) {
                 self::log('Found [%s](%s) umlPackage.', $umlPackage->id, $this->name);
                 if (!$parts) {
